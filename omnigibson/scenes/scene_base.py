@@ -178,7 +178,32 @@ class Scene(Serializable, Registerable, Recreatable, ABC):
             light_prim = self._skybox.light_link.prim
             light_prim.GetAttribute("color").Set(Gf.Vec3f(1.07, 0.85, 0.61))
             light_prim.GetAttribute("texture:file").Set(Sdf.AssetPath(m.DEFAULT_SKYBOX_TEXTURE))
-
+    def write_scene(): #choiszt
+        import os
+        path="/shared/liushuai/OmniGibson/omnigibson/data/og_dataset/scenes/"
+        files=[path+a+"/json/"+a+"_best.json" for a in os.listdir(path)]
+        for file in files:
+            with open(file, "r") as f:
+                scene_info = json.load(f)
+            init_state = scene_info["state"]["object_registry"]
+            init_info = scene_info["objects_info"]["init_info"]
+            scenename=file.split("/")[-1][:-10]
+            # with open(f"/shared/liushuai/OmniGibson/scene_data/{scenename}.txt","w")as g:
+            #     things=list(init_state.keys())
+            #     for thing in things:
+            #         # g.write(thing+"    "+str(init_state[thing])+"\n")
+            #         # g.write(str(init_info[thing])+"\n")
+            #         # g.write("\n")
+            #         g.write(thing+"\n")
+            with open(f"/shared/liushuai/OmniGibson/scene_data/total.txt","a+")as g:
+                things=list(init_state.keys())
+                g.write(scenename+"\n")
+                for thing in things:
+                    # g.write(thing+"    "+str(init_state[thing])+"\n")
+                    # g.write(str(init_info[thing])+"\n")
+                    # g.write("\n")
+                    g.write(thing+"\n")    
+                g.write("*"*100+"\n")                
     def _load_objects_from_scene_file(self):
         """
         Loads scene objects based on metadata information found in the current USD stage's scene info
@@ -242,7 +267,7 @@ class Scene(Serializable, Registerable, Recreatable, ABC):
 
         # If we have any scene file specified, use it to load the objects within it and also update the initial state
         if self.scene_file is not None:
-            self._load_objects_from_scene_file()#choiszt load scene from json
+            self._load_objects_from_scene_file() #choiszt load scene from json
 
         # We're now loaded
         self._loaded = True

@@ -117,7 +117,20 @@ class StatefulObject(BaseObject):
                     with open("/shared/liushuai/OmniGibson/ability.txt","a+") as f:
                         f.write(cate+"\n"+str(abilities)+"\n")
                         f.write("-"*200+"\n")
+        def allability():# write allability of objects in a txt file.
+            import os;catelist=os.listdir("/shared/liushuai/OmniGibson/omnigibson/data/og_dataset/objects")
+            templist=[]
+            for cate in catelist:
+                taxonomy_class = OBJECT_TAXONOMY.get_class_name_from_igibson_category(cate)
+                if taxonomy_class is not None:
+                    abilities = OBJECT_TAXONOMY.get_abilities(taxonomy_class)
                     
+
+                    with open("/shared/liushuai/OmniGibson/allability.txt","a+") as f:
+                        for abilitiy in list(abilities.keys()):
+                            if abilitiy not in templist:
+                                templist.append(abilitiy)
+                                f.write(str(abilitiy)+"\n")          
                 
         # Load abilities from taxonomy if needed & possible
         if abilities is None:
