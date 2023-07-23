@@ -123,7 +123,7 @@ class BaseObject(EntityPrim, Registerable, metaclass=ABCMeta):
         if self.loaded:
             prim = self._prim
         else:
-            prim = super().load()
+            prim = super().load() #choiszt get usd in prim
             log.info(f"Loaded {self.name} at {self.prim_path}")
         return prim
 
