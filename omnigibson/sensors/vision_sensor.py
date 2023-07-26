@@ -228,7 +228,8 @@ class VisionSensor(BaseSensor):
             mod_kwargs = dict()
             mod_kwargs["viewport"] = self._viewport.viewport_api
             if modality == "seg_instance":
-                mod_kwargs.update({"parsed": True, "return_mapping": False})
+                #choiszt default is False, edit to True to also return the seg map
+                mod_kwargs.update({"parsed": True, "return_mapping": True})
             elif modality == "bbox_3d":
                 mod_kwargs.update({"parsed": True, "return_corners": True})
             obs[modality] = self._SENSOR_HELPERS[modality](**mod_kwargs)

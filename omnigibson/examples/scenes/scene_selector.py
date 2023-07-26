@@ -32,7 +32,7 @@ def main(random_selection=False, headless=False, short_exec=False):
     cfg = {
         "scene": {
             "type": scene_type,
-            "scene_model": scene_model,
+            "scene_model": scene_model, #Merom_1_int
         },
         "robots": [
             {

@@ -21,7 +21,8 @@ import carb
 import random
 import imageio
 from IPython import embed
-
+import sys;sys.path.append("/shared/liushuai/OmniGibson/project")
+from robot_action import *
 
 def dock_window(space, name, location, ratio=0.5):
     """
@@ -546,7 +547,7 @@ class KeyboardRobotController:
         self.current_keypress = None    # Current key that is being pressed
         self.active_action = None       # Current action information based on the current keypress
         self.toggling_gripper = False   # Whether we should toggle the gripper during the next action
-
+        self.iter=0
         # Populate the keypress mapping dictionary
         self.populate_keypress_mapping()
 
@@ -671,7 +672,10 @@ class KeyboardRobotController:
 
             elif event.input == carb.input.KeyboardInput.R:
                 # Render the sensors from the robot's camera and lidar
-                self.robot.visualize_sensors()
+                # self.robot.visualize_sensors()
+
+                Capture(self.robot,iter=self.iter)
+                self.iter+=1
 
             elif event.input == carb.input.KeyboardInput.ESCAPE:
                 # Terminate immediately
