@@ -6,20 +6,22 @@ render:
   viewer_height: 720
 
 scene:
-  type: InteractiveTraversableScene
-  scene_model: Rs_int
-  trav_map_resolution: 0.1
-  trav_map_erosion: 2
-  trav_map_with_objects: true
-  build_graph: true
-  num_waypoints: 1
-  waypoint_resolution: 0.2
-  not_load_object_categories: null
-  load_room_types: null
-  load_room_instances: null
-  seg_map_resolution: 0.1
-  scene_source: OG
-  include_robots: true
+  type: "Scene"
+# scene:
+#   type: InteractiveTraversableScene
+#   scene_model: Rs_int
+#   trav_map_resolution: 0.1
+#   trav_map_erosion: 2
+#   trav_map_with_objects: true
+#   build_graph: true
+#   num_waypoints: 1
+#   waypoint_resolution: 0.2
+#   not_load_object_categories: null
+#   load_room_types: null
+#   load_room_instances: null
+#   seg_map_resolution: 0.1
+#   scene_source: OG
+#   include_robots: true
 
 robots:
   - type: Fetch

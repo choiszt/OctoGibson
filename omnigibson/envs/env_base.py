@@ -169,7 +169,7 @@ class Environment(gym.Env, GymObservable, Recreatable):
         assert_valid_key(key=task_type, valid_keys=REGISTERED_TASKS, name="task type")
 
         # Grab the kwargs relevant for the specific task and create the task
-        self._task = create_class_from_registry_and_config(
+        self._task = create_class_from_registry_and_config( #choiszt  instantized behaviortask 
             cls_name=self.task_config["type"],
             cls_registry=REGISTERED_TASKS,
             cfg=self.task_config,

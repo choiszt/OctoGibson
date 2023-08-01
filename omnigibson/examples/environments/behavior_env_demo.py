@@ -29,6 +29,8 @@ def main(random_selection=False, headless=False, short_exec=False):
     # Load the pre-selected configuration and set the online_sampling flag
     config_filename = os.path.join(og.example_config_path, "fetch_behavior.yaml")
     cfg = yaml.load(open(config_filename, "r"), Loader=yaml.FullLoader)
+    #1. layout can be transfer based on bddl
+    #2. wherther the scene are in accordance with task
     cfg["task"]["online_object_sampling"] = should_sample
 
     # Load the environment

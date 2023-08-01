@@ -195,7 +195,7 @@ class BehaviorTask(BaseTask):
         )
 
         # Object info
-        self.object_scope = get_object_scope(self.activity_conditions)
+        self.object_scope = get_object_scope(self.activity_conditions) #choiszt parsed all bddl object(instance)
         self.object_instance_to_category = {
             obj_inst: obj_cat
             for obj_cat in self.activity_conditions.parsed_objects
@@ -203,6 +203,7 @@ class BehaviorTask(BaseTask):
         }
 
         # Generate initial and goal conditions
+        
         self.activity_initial_conditions = get_initial_conditions(self.activity_conditions, self.backend, self.object_scope)
         self.activity_goal_conditions = get_goal_conditions(self.activity_conditions, self.backend, self.object_scope)
         self.ground_goal_state_options = get_ground_goal_state_options(

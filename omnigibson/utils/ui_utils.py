@@ -673,8 +673,8 @@ class KeyboardRobotController:
             elif event.input == carb.input.KeyboardInput.R:
                 # Render the sensors from the robot's camera and lidar
                 # self.robot.visualize_sensors()
-
-                Capture(self.robot,iter=self.iter)
+                cam=og.sim.viewer_camera
+                FlyingCapture(cam,iter=self.iter)
                 self.iter+=1
 
             elif event.input == carb.input.KeyboardInput.ESCAPE:
