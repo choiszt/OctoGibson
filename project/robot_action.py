@@ -74,7 +74,106 @@ def Turn_90_PO(robot,pos):
     ori = robot.get_orientation()
     new_ori = rotate_quaternion_xy(ori)
     robot.set_position_orientation(pos,new_ori)
-    
+
+class Camera():
+    def __init__(self,camera,position=np.array([-2.48302418,  1.55655398,  2.22882511]),orientation=np.array([ 0.56621324, -0.0712958 , -0.10258276,  0.81473692])):
+        self.camera=camera
+        self.camera.set_position_orientation(
+        position=position,
+        orientation=orientation)
+        
+    def setposition(self,position=None,orientation=None):
+        if type(orientation)==np.ndarray and type(position)!=np.ndarray:
+            self.camera.set_position(orientation)
+        if type(orientation)!=np.ndarray and type(position)==np.ndarray:
+            self.camera.set_position(position)
+        if  type(orientation)==np.ndarray and type(position)==np.ndarray:
+            self.camera.set_position_orientation(position=position,orientation=orientation)
+        else:
+            raise TypeError
+    def turn_90(self):
+        ori = self.camera.get_orientation()
+        new_ori = rotate_quaternion_xy(ori)
+        self.camera.set_orientation(new_ori)
+    def FlyingCapture(self,iter,file_name=None):
+        obs_dict = self.camera._get_obs()
+        for modality in ["rgb", "depth", "seg_instance"]:
+            query_name =modality
+            if query_name in obs_dict:
+                # if modality == "rgb":
+                #     # Ignore alpha channel, map to floats
+                #     obs_dict[query_name] = obs_dict[query_name][:, :, :3] / 255.0
+                # elif modality == "seg_instance":
+                #     # Map IDs to rgb
+                #     obs_dict[query_name] = segmentation_to_rgb(obs_dict[query_name], N=256) / 255.0
+                # elif modality == "normal":
+                #     # Re-map to 0 - 1 range
+                #     obs_dict[query_name] = (obs_dict[query_name] + 1.0) / 2.0
+                # else:
+                #     # Depth, nothing to do here
+                #     pass
+                if modality == "rgb":
+                    pass
+                elif modality == "seg_instance":
+                    # Map IDs to rgb
+                    segimg = segmentation_to_rgb(obs_dict[query_name][0], N=256)
+                    instancemap=obs_dict[query_name][1]
+                elif modality == "normal":
+                    # Re-map to 0 - 1 range
+                    pass
+                else:
+                    # Depth, nothing to do here
+                    pass
+                if(modality == "seg_instance"):
+                    rgbimg=cv2.cvtColor(segimg, cv2.COLOR_BGR2RGB)
+                else:
+                    rgbimg=cv2.cvtColor(obs_dict[query_name], cv2.COLOR_BGR2RGB)
+                if file_name is not None:
+                    cv2.imwrite(query_name + str(file_name) + '.png', rgbimg)
+                else:
+                    cv2.imwrite("/shared/liushuai/OmniGibson/pic2/"+query_name + f'{iter}.png', rgbimg)
+                    print(f"save as:{query_name + f'{iter}.png'}")
+
+
+def FlyingCapture(camera,iter,file_name=None):
+    obs_dict = camera._get_obs()
+    for modality in ["rgb", "depth", "normal", "seg_instance"]:
+        query_name =modality
+        if query_name in obs_dict:
+            # if modality == "rgb":
+            #     # Ignore alpha channel, map to floats
+            #     obs_dict[query_name] = obs_dict[query_name][:, :, :3] / 255.0
+            # elif modality == "seg_instance":
+            #     # Map IDs to rgb
+            #     obs_dict[query_name] = segmentation_to_rgb(obs_dict[query_name], N=256) / 255.0
+            # elif modality == "normal":
+            #     # Re-map to 0 - 1 range
+            #     obs_dict[query_name] = (obs_dict[query_name] + 1.0) / 2.0
+            # else:
+            #     # Depth, nothing to do here
+            #     pass
+            if modality == "rgb":
+                pass
+            elif modality == "seg_instance":
+                # Map IDs to rgb
+                segimg = segmentation_to_rgb(obs_dict[query_name][0], N=256)
+                instancemap=obs_dict[query_name][1]
+            elif modality == "normal":
+                # Re-map to 0 - 1 range
+                pass
+            else:
+                # Depth, nothing to do here
+                pass
+            if(modality == "seg_instance"):
+                rgbimg=cv2.cvtColor(segimg, cv2.COLOR_BGR2RGB)
+            else:
+                rgbimg=cv2.cvtColor(obs_dict[query_name], cv2.COLOR_BGR2RGB)
+            if file_name is not None:
+                cv2.imwrite(query_name + str(file_name) + '.png', rgbimg)
+            else:
+                cv2.imwrite("/shared/liushuai/OmniGibson/pic2/"+query_name + f'{iter}.png', rgbimg)
+                print(f"save as:{query_name + f'{iter}.png'}")
+
 def Capture(robot,iter,file_name=None):
     obs_dict = robot.get_obs()
     for sensor_name, _ in robot._sensors.items():

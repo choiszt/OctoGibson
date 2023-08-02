@@ -71,10 +71,14 @@ def main(random_selection=False, headless=False, short_exec=False):
             sensor.image_width = 720
     # Print out relevant keyboard info if using keyboard teleop
     action_generator.print_keyboard_teleop_info()   
-    og.sim.viewer_camera.set_position_orientation(
-        position=np.array([-2.48302418,  1.55655398,  2.22882511]),
-        orientation=np.array([ 0.56621324, -0.0712958 , -0.10258276,  0.81473692]),
-    )   
+    # og.sim.viewer_camera.set_position_orientation(
+    #     position=np.array([-2.48302418,  1.55655398,  2.22882511]),
+    #     orientation=np.array([ 0.56621324, -0.0712958 , -0.10258276,  0.81473692]),
+    # )
+    camera= og.sim.viewer_camera 
+    cam=Camera(camera=camera) #initiated camera
+
+
     def donothing(navi):
         dumbact=OrderedDict([('robot0', navi)])
         step=0
@@ -101,18 +105,21 @@ def main(random_selection=False, headless=False, short_exec=False):
     step=0
     iter=0
     while step != max_steps:
+        ppposition=robot.get_position()
+        cam.setposition(ppposition,robot.get_orientation())
 
         # sequentially check the function
         # TODO: how to use the existing object in the scene
         action=np.zeros(11)
+        cam.turn_90()
         donothing(action)
         print("detect surroundings!!")
-        for i in range(4):
-            Capture(robot,f'{iter}_detect_surroundings')   
-            iter+=1   
-            donothing(action)
-            Turn_90(robot)
-            donothing(action)  
+        # for i in range(4):
+        #     Capture(robot,f'{iter}_detect_surroundings')   
+        #     iter+=1   
+        #     donothing(action)
+        #     Turn_90(robot)
+        #     donothing(action)  
         donothing(action)         
         # donothing(action)
         # EasyJoint(robot)
@@ -137,14 +144,14 @@ def main(random_selection=False, headless=False, short_exec=False):
         print("move to fridge")
         MoveBot(robot,fridgepos)
         donothing(action)
-        Capture(robot,f'{iter}_move_to_fridge')  
+        cam.FlyingCapture(f'{iter}_move_to_fridge')  
         iter+=1     
         
         donothing(action)
         print("open the fridge")  
         fridge.states[object_states.Open].set_value(True)
         donothing(action)
-        Capture(robot,f'{iter}_open_the_fridge')  
+        cam.FlyingCapture(f'{iter}_open_the_fridge')  
         iter+=1             
         # donothing()
         # print("open the sinkkkkkk!!!!")  
@@ -153,28 +160,28 @@ def main(random_selection=False, headless=False, short_exec=False):
         print("start grasp")   
         EasyGrasp(robot, pork, 100)
         donothing(action)
-        Capture(robot,f'{iter}_start_grasp')  
+        cam.FlyingCapture(f'{iter}_start_grasp')  
         iter+=1             
         
         donothing(action)
         print("close the fridge")
         fridge.states[object_states.Open].set_value(False)
         donothing(action)
-        Capture(robot,f'{iter}_close_the_fridge')   
+        cam.FlyingCapture(f'{iter}_close_the_fridge')   
         iter+=1             
         
         donothing(action)
         print("move to the table")
         Teleport(robot, pork,tablepos_bot)
         donothing(action)
-        Capture(robot,f'{iter}_move_to_the_table')  
+        cam.FlyingCapture(f'{iter}_move_to_the_table')  
         iter+=1             
 
         donothing(action)
         print("put the pork on the table")
         pork.set_position(tablepos)
         donothing(action)
-        Capture(robot,f'{iter}_put_the_pork_on_the_table')   
+        cam.FlyingCapture(f'{iter}_put_the_pork_on_the_table')   
         iter+=1             
         
 
@@ -182,14 +189,14 @@ def main(random_selection=False, headless=False, short_exec=False):
         print("move to the stove")
         MoveBot(robot,stove_bot)
         donothing(action)
-        Capture(robot,f'{iter}_move_to_the_stove')   
+        cam.FlyingCapture(f'{iter}_move_to_the_stove')   
         iter+=1    
 
         donothing(action)   
         print("open the stove")
         stove.states[object_states.Open].set_value(True)
         donothing(action)
-        Capture(robot,f'{iter}_open_the_stove')   
+        cam.FlyingCapture(f'{iter}_open_the_stove')   
         iter+=1    
 
         donothing(action)
@@ -197,49 +204,49 @@ def main(random_selection=False, headless=False, short_exec=False):
         # pan.set_position(stove_pan)
         Turn_90_PO(pan,stove_pan)
         donothing(action)
-        Capture(robot,f'{iter}_put_the_pan_on_the_stove')   
+        cam.FlyingCapture(f'{iter}_put_the_pan_on_the_stove')   
         iter+=1    
 
         donothing(action)   
         print("close the stove")
         stove.states[object_states.Open].set_value(False)
         donothing(action)
-        Capture(robot,f'{iter}_close_the_stove')   
+        cam.FlyingCapture(f'{iter}_close_the_stove')   
         iter+=1    
 
         donothing(action)
         print("set the fire of stove")
         stove.states[object_states.ToggledOn].set_value(True)
         donothing(action)
-        Capture(robot,f'{iter}_set_the_fire_of_stove')   
+        cam.FlyingCapture(f'{iter}_set_the_fire_of_stove')   
         iter+=1    
 
         donothing(action)
         print("move to the table")
         MoveBot(robot,tablepos_bot)
         donothing(action)
-        Capture(robot,f'{iter}_move_to_the_table')   
+        cam.FlyingCapture(f'{iter}_move_to_the_table')   
         iter+=1    
 
         donothing(action)
         print("pick the pork")
         EasyGrasp(robot, pork, 100)
         donothing(action)
-        Capture(robot,f'{iter}_pick_the_pork')   
+        cam.FlyingCapture(f'{iter}_pick_the_pork')   
         iter+=1    
 
         donothing(action)
         print("move to the stove")
         Teleport(robot, pork,stove_bot)
         donothing(action)
-        Capture(robot,f'{iter}_move_to_the_stove')   
+        cam.FlyingCapture(f'{iter}_move_to_the_stove')   
         iter+=1    
 
         donothing(action)        
         print("put pork on the pan")
         pork.set_position(stovepos)
         donothing(action)
-        Capture(robot,f'{iter}_put_pork_on_the_pan')   
+        cam.FlyingCapture(f'{iter}_put_pork_on_the_pan')   
         iter+=1            
         env.close()
         # donothing(action)
