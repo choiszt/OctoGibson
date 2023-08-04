@@ -70,12 +70,13 @@ def Turn_90(robot, pos=None):
 
 # class of flying camera
 class Camera():
-    def __init__(self,camera,position=np.array([-2.48302418,  1.55655398,  2.22882511]),orientation=np.array([ 0.56621324, -0.0712958 , -0.10258276,  0.81473692])):
+    def __init__(self,camera,env,position=np.array([-2.48302418,  1.55655398,  2.22882511]),orientation=np.array([ 0.56621324, -0.0712958 , -0.10258276,  0.81473692])):
         self.camera=camera
+        self.env=env
         self.camera.set_position_orientation(
         position=position,
         orientation=orientation)
-        self.seglist=[]  #{seg_file_id:(obejct_name,objectclass,instance_id)}
+        self.seglist=[]  #(seg_file_id,object_name,objectclass,instance_id,2d_bbox,3d_bbox)
         self.instancemap=[]
         
     def setposition(self,position=None,orientation=None):
@@ -106,8 +107,20 @@ class Camera():
                     segimg = segmentation_to_rgb(obs_dict[query_name][0], N=256)
                     instancemap = obs_dict[query_name][1]
                     for item in instancemap:
-                        quaternion=["/shared/liushuai/OmniGibson/pic2/"+query_name + f'{iter}.png',item[1].split("/")[-1],item[3],item[0]]
-                        self.seglist.append(quaternion)
+                        bbox_3ds=obs_dict['bbox_3d']
+                        bbox_2ds=obs_dict["bbox_2d_loose"] #
+                        hextuple=["/shared/liushuai/OmniGibson/pic2/"+query_name + f'{iter}.png',item[1].split("/")[-1],item[3],item[0],'','']
+                        for bbox_2d in bbox_2ds:
+                            if bbox_2d[0]==item[0]:
+                                bbox2d_info=[bbox_2d[i] for i in range(6,10,1)]
+                                hextuple[4]=bbox2d_info
+                                break
+                        for bbox_3d in bbox_3ds:
+                            if bbox_3d[0]==item[0]:
+                                bbox3d_info=[bbox_3d[i] for i in range(6,14,1)]
+                                hextuple[5]=bbox3d_info
+                                break
+                        self.seglist.append(hextuple)
                 elif modality == "normal":
                     # Re-map to 0 - 1 range
                     pass
@@ -131,7 +144,7 @@ class Camera():
         seglists=self.seglist
         instancemaps=self.instancemap
         parse=lambda path:list(path.keys())[0]
-        nowwehave=[]
+        self.nowwehave=[]
         for ele in instancemaps:
             path=parse(ele)
             templist=[]
@@ -145,8 +158,42 @@ class Camera():
                     if instance_id in instance:
                         templist.append(seglist[1])
             tempdict[path]=templist
-            nowwehave.append(tempdict)
-        print("now begin to parsing segmentation data")
+            self.nowwehave.append(tempdict) #dict{path:object_name}
+        print("now begin to parse segmentation data")
+        return self.nowwehave
+    
+    def collectdata(self):
+        seglists=self.seglist
+        result_json={}
+        obj_metadata={} #get the object metadata
+        for ele in self.nowwehave:
+            picpath=list(ele.keys())[0]
+            objects=list(ele.values())[0]
+            # result_json.clear()
+            obj_metadata.clear()
+            for obj_name in objects:
+                object=self.env.scene.object_registry("name",obj_name)
+                position={"position":object.get_position().tolist()}
+                result_json[picpath]={}
+                obj_metadata[obj_name]={}
+                obj_metadata[obj_name].update(position)
+                orientation={"orientation":object.get_orientation().tolist()}
+                obj_metadata[obj_name].update(orientation)
+                path={"path":picpath}
+                obj_metadata[obj_name].update(path)
+                for hextuple in seglists:
+                    if hextuple[0]==picpath:
+                        if(obj_name==hextuple[1]):
+                            bbox2d={"bbox2d":np.array(hextuple[4]).astype(float).tolist()}
+                            bbox3d={"bbox3d":np.array(hextuple[5][0:6]).astype(float).tolist(),"transform":hextuple[5][6].tolist(),"corners":hextuple[5][7].tolist()}
+                            obj_metadata[obj_name].update(bbox2d)
+                            obj_metadata[obj_name].update(bbox3d)
+                            break
+                result_json[picpath].update(obj_metadata)
+        with open("./task.json","w")as f:
+            json.dump(result_json,f)
+        return result_json
+
 
 
     def Update_camera_pos(self, robot):

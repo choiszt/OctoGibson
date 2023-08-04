@@ -80,11 +80,12 @@ def main(random_selection=False, headless=False, short_exec=False):
     #     orientation=np.array([ 0.56621324, -0.0712958 , -0.10258276,  0.81473692]),
     # )
     camera= og.sim.viewer_camera 
+    bbox_modalities = ["bbox_3d", "bbox_2d_loose"]# "bbox_2d_tight" not use 
+    for bbox_modality in bbox_modalities:
+        camera.add_modality(bbox_modality)
     camera.focal_length = 10.
-    cam=Camera(camera=camera) #initiated camera
+    cam=Camera(camera=camera,env=env) #initiated camera
 
-
-    
     getpos=lambda objectinfo,name: objectinfo[name]['root_link']['pos']
 #pan pos
     stove_pan=adjust_position(stove,[-0.16,-0.17,0.5])
@@ -127,8 +128,9 @@ def main(random_selection=False, headless=False, short_exec=False):
             rs_o = ra.trans_camera(rs_o)
             cam.setposition(cam_position, rs_o)
 
-            donothing(env, action)  
-
+            donothing(env, action) 
+        # cam.parsing_segmentdata() 
+        # cam.collectdata()
         donothing(env, action)  
 
         donothing(env, action)
@@ -173,7 +175,8 @@ def main(random_selection=False, headless=False, short_exec=False):
         pork.set_position(tablepos)
         donothing(env, action)
         cam.FlyingCapture(f'{iter}_put_the_pork_on_the_table')   
-        iter+=1             
+        iter+=1       
+ 
         
         donothing(env, action)
         print("move to the stove")
@@ -240,7 +243,11 @@ def main(random_selection=False, headless=False, short_exec=False):
         pork.set_position(stovepos)
         donothing(env, action)
         cam.FlyingCapture(f'{iter}_put_pork_on_the_pan')   
-        iter+=1            
+        iter+=1         
+
+        cam.parsing_segmentdata() 
+        cam.collectdata()    
+
         env.close()
 
     # Always close the environment at the end
