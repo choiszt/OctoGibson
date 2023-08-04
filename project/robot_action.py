@@ -3,11 +3,16 @@ from omnigibson.utils.vision_utils import segmentation_to_rgb
 import cv2
 from omnigibson.utils.control_utils import IKSolver
 import omnigibson as og
+import math
+import omnigibson.utils.transform_utils as T
+from scipy.spatial.transform import Rotation as R
 
 def cal_dis(pos1, pos2):
+    #calculate the distance between the two position
     return np.linalg.norm(pos1 - pos2)
 
 def EasyGrasp(robot, obj, dis_threshold):
+    #Grasp the robot within the distance threshold
     robot_pos = robot.get_position()
     obj_pose = obj.get_position()
     dis = cal_dis(robot_pos, obj_pose)
@@ -20,27 +25,22 @@ def EasyGrasp(robot, obj, dis_threshold):
         return False
 
 def Hold(robot, obj):
+    # Hold the objects
     robot_pos = robot.get_position()
     robot_pos[2] += robot.aabb_center[2]
     robot_pos[2] -=0.2
     obj.set_position(robot_pos)
 
 def Teleport(robot, obj, pos):
+    # Teleport the robot and the objects within its hands
     robot.set_position(pos)
     Hold(robot, obj)
-    # TODO: robot orientation, need another obj to represent the scene we want to capture
-    _, orientation = robot.get_position_orientation()
-    new_orientation = orientation
-    robot.set_orientation(new_orientation)
 
 def MoveBot(robot, pos):
     robot.set_position(pos)
-    # TODO: robot orientation, need another obj to represent the scene we want to capture
-    _, orientation = robot.get_position_orientation()
-    new_orientation = orientation
-    robot.set_orientation(new_orientation)
 
 def EasyDrop(obj, pos, dis_threshold):
+    # Drop the objects within robot's hands
     obj_pos = obj.get_position()
     dis = cal_dis(obj_pos, pos)
     if dis < dis_threshold:
@@ -50,6 +50,7 @@ def EasyDrop(obj, pos, dis_threshold):
         return False
 
 def quaternion_multiply(q1, q2):
+    # calculate the multiply of two quaternion
     x1, y1, z1, w1 = q1
     x2, y2, z2, w2 = q2
     w = w1 * w2 - x1 * x2 - y1 * y2 - z1 * z2
@@ -58,23 +59,16 @@ def quaternion_multiply(q1, q2):
     z = w1 * z2 + x1 * y2 - y1 * x2 + z1 * w2
     return np.array([x, y, z, w])
 
-def rotate_quaternion_xy(q):
-    # Construct a quaternion representing a 90 degree rotation about the z-axis
-    q_z = np.array([0, 0, np.sin(np.pi/4), np.cos(np.pi/4)])
-    # Rotate the input quaternion by the z-axis quaternion
-    q_rotated = quaternion_multiply(q, q_z)
-    return q_rotated
-
-def Turn_90(robot):
+def Turn_90(robot, pos=None):
+    # turn around with 90 degrees
     ori = robot.get_orientation()
-    new_ori = rotate_quaternion_xy(ori)
-    robot.set_orientation(new_ori)
+    new_ori = trans_camera(ori)
+    if pos:
+        robot.set_position_orientation(pos, new_ori)
+    else:
+        robot.set_orientation(new_ori)
 
-def Turn_90_PO(robot,pos):
-    ori = robot.get_orientation()
-    new_ori = rotate_quaternion_xy(ori)
-    robot.set_position_orientation(pos,new_ori)
-
+# class of flying camera
 class Camera():
     def __init__(self,camera,position=np.array([-2.48302418,  1.55655398,  2.22882511]),orientation=np.array([ 0.56621324, -0.0712958 , -0.10258276,  0.81473692])):
         self.camera=camera
@@ -84,184 +78,73 @@ class Camera():
         
     def setposition(self,position=None,orientation=None):
         if type(orientation)==np.ndarray and type(position)!=np.ndarray:
-            self.camera.set_position(orientation)
+            self.camera.set_orientation(orientation)
         if type(orientation)!=np.ndarray and type(position)==np.ndarray:
             self.camera.set_position(position)
         if  type(orientation)==np.ndarray and type(position)==np.ndarray:
             self.camera.set_position_orientation(position=position,orientation=orientation)
         else:
             raise TypeError
+        
     def turn_90(self):
         ori = self.camera.get_orientation()
-        new_ori = rotate_quaternion_xy(ori)
+        new_ori = trans_camera(ori)
         self.camera.set_orientation(new_ori)
+
     def FlyingCapture(self,iter,file_name=None):
         obs_dict = self.camera._get_obs()
         for modality in ["rgb", "depth", "seg_instance"]:
-            query_name =modality
+            query_name = modality
             if query_name in obs_dict:
-                # if modality == "rgb":
-                #     # Ignore alpha channel, map to floats
-                #     obs_dict[query_name] = obs_dict[query_name][:, :, :3] / 255.0
-                # elif modality == "seg_instance":
-                #     # Map IDs to rgb
-                #     obs_dict[query_name] = segmentation_to_rgb(obs_dict[query_name], N=256) / 255.0
-                # elif modality == "normal":
-                #     # Re-map to 0 - 1 range
-                #     obs_dict[query_name] = (obs_dict[query_name] + 1.0) / 2.0
-                # else:
-                #     # Depth, nothing to do here
-                #     pass
                 if modality == "rgb":
                     pass
                 elif modality == "seg_instance":
                     # Map IDs to rgb
                     segimg = segmentation_to_rgb(obs_dict[query_name][0], N=256)
-                    instancemap=obs_dict[query_name][1]
+
+                    instancemap = obs_dict[query_name][1]
                 elif modality == "normal":
                     # Re-map to 0 - 1 range
                     pass
                 else:
                     # Depth, nothing to do here
                     pass
-                if(modality == "seg_instance"):
-                    rgbimg=cv2.cvtColor(segimg, cv2.COLOR_BGR2RGB)
+                if modality == "seg_instance":
+                    rgbimg = cv2.cvtColor(segimg, cv2.COLOR_BGR2RGB)
+                elif modality == "rgb":
+                    rgbimg = cv2.cvtColor(obs_dict[query_name], cv2.COLOR_BGR2RGB)
                 else:
-                    rgbimg=cv2.cvtColor(obs_dict[query_name], cv2.COLOR_BGR2RGB)
+                    rgbimg = obs_dict[query_name]
+
                 if file_name is not None:
                     cv2.imwrite(query_name + str(file_name) + '.png', rgbimg)
                 else:
-                    cv2.imwrite("/shared/liushuai/OmniGibson/pic2/"+query_name + f'{iter}.png', rgbimg)
+                    cv2.imwrite("./"+query_name + f'{iter}.png', rgbimg)
                     print(f"save as:{query_name + f'{iter}.png'}")
+        
+    def Update_camera_pos(self, robot):
+        pos = robot.get_position()
+        cam_pos = get_camera_position(pos)
+        self.camera.set_position(cam_pos)
 
+    def Update_camera_pos_bev(self, robot):
+        pos = robot.get_position()
+        cam_pos = get_camera_position_bev(pos)
+        self.camera.set_position(cam_pos)
 
-def FlyingCapture(camera,iter,file_name=None):
-    obs_dict = camera._get_obs()
-    for modality in ["rgb", "depth", "normal", "seg_instance"]:
-        query_name =modality
-        if query_name in obs_dict:
-            # if modality == "rgb":
-            #     # Ignore alpha channel, map to floats
-            #     obs_dict[query_name] = obs_dict[query_name][:, :, :3] / 255.0
-            # elif modality == "seg_instance":
-            #     # Map IDs to rgb
-            #     obs_dict[query_name] = segmentation_to_rgb(obs_dict[query_name], N=256) / 255.0
-            # elif modality == "normal":
-            #     # Re-map to 0 - 1 range
-            #     obs_dict[query_name] = (obs_dict[query_name] + 1.0) / 2.0
-            # else:
-            #     # Depth, nothing to do here
-            #     pass
-            if modality == "rgb":
-                pass
-            elif modality == "seg_instance":
-                # Map IDs to rgb
-                segimg = segmentation_to_rgb(obs_dict[query_name][0], N=256)
-                instancemap=obs_dict[query_name][1]
-            elif modality == "normal":
-                # Re-map to 0 - 1 range
-                pass
-            else:
-                # Depth, nothing to do here
-                pass
-            if(modality == "seg_instance"):
-                rgbimg=cv2.cvtColor(segimg, cv2.COLOR_BGR2RGB)
-            else:
-                rgbimg=cv2.cvtColor(obs_dict[query_name], cv2.COLOR_BGR2RGB)
-            if file_name is not None:
-                cv2.imwrite(query_name + str(file_name) + '.png', rgbimg)
-            else:
-                cv2.imwrite("/shared/liushuai/OmniGibson/pic2/"+query_name + f'{iter}.png', rgbimg)
-                print(f"save as:{query_name + f'{iter}.png'}")
+def get_camera_position(p):
+    p[2] += 1.2
+    # p[0] += 0.2
+    return p
 
-def Capture(robot,iter,file_name=None):
-    obs_dict = robot.get_obs()
-    for sensor_name, _ in robot._sensors.items():
-        for modality in ["rgb", "depth", "normal", "seg_instance"]:
-            query_name = str(sensor_name)+ '_' + modality
-            
-            if query_name in obs_dict:
-                
-                # if modality == "rgb":
-                #     # Ignore alpha channel, map to floats
-                #     obs_dict[query_name] = obs_dict[query_name][:, :, :3] / 255.0
-                # elif modality == "seg_instance":
-                #     # Map IDs to rgb
-                #     obs_dict[query_name] = segmentation_to_rgb(obs_dict[query_name], N=256) / 255.0
-                # elif modality == "normal":
-                #     # Re-map to 0 - 1 range
-                #     obs_dict[query_name] = (obs_dict[query_name] + 1.0) / 2.0
-                # else:
-                #     # Depth, nothing to do here
-                #     pass
+def get_camera_position_bev(p):
+    p[2] += 3
+    return p
 
-                if modality == "rgb":
-                    pass
-                elif modality == "seg_instance":
-                    # Map IDs to rgb
-                    segimg = segmentation_to_rgb(obs_dict[query_name][0], N=256)
-                    instancemap=obs_dict[query_name][1]
-                elif modality == "normal":
-                    # Re-map to 0 - 1 range
-                    pass
-                else:
-                    # Depth, nothing to do here
-                    pass
-                if(modality == "seg_instance"):
-                    rgbimg=cv2.cvtColor(segimg, cv2.COLOR_BGR2RGB)
-                else:
-                    rgbimg=cv2.cvtColor(obs_dict[query_name], cv2.COLOR_BGR2RGB)
-                if file_name is not None:
-                    cv2.imwrite(query_name + str(file_name) + '.png', rgbimg)
-                else:
-                    cv2.imwrite("/shared/liushuai/OmniGibson/pic1/"+query_name + f'{iter}.png', rgbimg)
-                    print(f"save as:{query_name + f'{iter}.png'}")
-
-def EasyJoint(robot, max_iter=100):
-    control_idx = np.concatenate([robot.trunk_control_idx, robot.arm_control_idx[robot.default_arm]]) 
-    ik_solver = IKSolver(
-        robot_description_path=robot.robot_arm_descriptor_yamls[robot.default_arm],
-        robot_urdf_path=robot.urdf_path,
-        default_joint_pos=robot.get_joint_positions()[control_idx],
-        eef_name=robot.eef_link_names[robot.default_arm],
-    ) 
-
-    robot_pos = robot.get_position()
-    robot_pos[0] += 2 * robot.aabb_center[0]
-    joint_pos = ik_solver.solve(target_pos=robot_pos, max_iterations=max_iter)
-    if joint_pos is not None:
-        og.log.info("Solution found. Setting new arm configuration.")
-        robot.set_joint_positions(joint_pos, indices=control_idx)
-    else:
-        og.log.info("EE position not reachable.")
-    og.sim.step()
-    return joint_pos,control_idx
-
-
-def EasyCamera(robot, camera_pos):
-    # For FETCH robot, the camera control idx is [3,5]
-    control_idx = np.array([3,5])
-    #camera pose needs to be an ndarray
-    assert isinstance(camera_pos, np.ndarray)
-    robot.set_joint_positions(camera_pos, indices=control_idx, drive=True)
-
-def quaternion_to_rotation_matrix(q):
-    x, y, z, w = q
-    return np.array([[1 - 2*y*y - 2*z*z, 2*x*y - 2*w*z, 2*x*z + 2*w*y],
-                     [2*x*y + 2*w*z, 1 - 2*x*x - 2*z*z, 2*y*z - 2*w*x],
-                     [2*x*z - 2*w*y, 2*y*z + 2*w*x, 1 - 2*x*x - 2*y*y]])
-
-def rotate_vector(v, R):
-    return np.dot(R, np.array(v).reshape(-1,1)).flatten()
-
-def EasyTeleport(robot, obj):
-    obj_ori = obj.get_orientation()
-    obj_R = quaternion_to_rotation_matrix(obj_ori)
-    unit_z = np.array([0, 0, 1])
-    obj_direction = rotate_vector(unit_z, obj_R)
-    obj_direction /= np.linalg.norm(obj_direction)
-    obj_pos = obj.get_position()
-    new_pos = obj_pos + obj_direction * 1.0  # 1 meter far away
-    obj_ori[:3] *= -1
-    new_ori = obj_ori
-    robot.set_position_orientation(position=new_pos, orientation=new_ori)
+from scipy.spatial.transform import Rotation as R
+def trans_camera(q):
+    random_yaw = np.pi / 2
+    yaw_orn = R.from_euler("Z", random_yaw)
+    new_camera_orn = quaternion_multiply(yaw_orn.as_quat(), q)
+    print(new_camera_orn)
+    return new_camera_orn
