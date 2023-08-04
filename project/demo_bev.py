@@ -7,6 +7,7 @@ from collections import OrderedDict
 from omnigibson import object_states
 import numpy as np
 import json
+import robot_action as ra
 # Configure macros for maximum performance
 gm.USE_GPU_DYNAMICS = True
 gm.ENABLE_FLATCACHE = True
@@ -14,6 +15,8 @@ gm.ENABLE_OBJECT_STATES = False
 gm.ENABLE_TRANSITION_RULES = False
 import time
 from robot_action import *
+from scipy.spatial.transform import Rotation as R
+
 def adjust_position(obj,offset):
     pos=obj.get_position()
     pos_x=pos[0]+offset[0]
@@ -29,6 +32,7 @@ def main(random_selection=False, headless=False, short_exec=False):
         obs_modalities=["rgb","depth","normal","seg_instance"],     # we're just doing a grasping demo so we don't need all observation modalities
         action_type="continuous",
         action_normalize=True,
+        visible=True,
     )    
     pork_cfg=dict(
         type="DatasetObject",
@@ -76,6 +80,7 @@ def main(random_selection=False, headless=False, short_exec=False):
     #     orientation=np.array([ 0.56621324, -0.0712958 , -0.10258276,  0.81473692]),
     # )
     camera= og.sim.viewer_camera 
+    camera.focal_length = 10.
     cam=Camera(camera=camera) #initiated camera
 
 
@@ -88,7 +93,7 @@ def main(random_selection=False, headless=False, short_exec=False):
             step += 1
     getpos=lambda objectinfo,name: objectinfo[name]['root_link']['pos']
 #pan pos
-    stove_pan=adjust_position(stove,[-0.16,-0.17,0.57])
+    stove_pan=adjust_position(stove,[-0.16,-0.17,0.5])
 #pork pos
     tablepos=adjust_position(table,[0,0,0.7])
     stovepos=adjust_position(stove,[-0.13,-0.2,0.76])
@@ -105,44 +110,58 @@ def main(random_selection=False, headless=False, short_exec=False):
     step=0
     iter=0
     while step != max_steps:
+        action=np.zeros(11)
         ppposition=robot.get_position()
-        cam.setposition(ppposition,robot.get_orientation())
+        cam_position=ra.get_camera_position_bev(ppposition)
+        cam.setposition(cam_position, ra.rotate_quaternion_xy(robot.get_orientation()))
+        # quat = rotate_camera_euler()
+        # cam.setposition(cam_position, quat)
 
         # sequentially check the function
         # TODO: how to use the existing object in the scene
-        action=np.zeros(11)
-        cam.turn_90()
+        
+        # cam.turn_90()
         donothing(action)
         print("detect surroundings!!")
-        # for i in range(4):
-        #     Capture(robot,f'{iter}_detect_surroundings')   
-        #     iter+=1   
-        #     donothing(action)
-        #     Turn_90(robot)
-        #     donothing(action)  
-        donothing(action)         
+        for i in range(4):
+            cam.FlyingCapture(f'{iter}_detect_surroundings')   
+            iter+=1   
+            # donothing(action)
+            Turn_90(robot)
+            
+            # rs_o = ra.rotate_camera(rs_o)
+            # cam.setposition(cam_position, rs_o)
+
+            donothing(action)  
+
+        donothing(action)  
+
         # donothing(action)
         # EasyJoint(robot)
         # print("joint")
         # joint_pos,control_idx=EasyJoint(robot)
-        def to_check():
-            EasyCamera(robot,np.array([1,2]))
-            print("set cam")
-            og.sim.step()
-            control_idx=[3,5]
-            joint_pos=[1,1]
-            print(joint_pos)
-            for idx,value in enumerate(control_idx):
-                action[value-1]=joint_pos[idx]
-            print(action)
-            for i in range(500):
-                obs, reward, done, info=env.step(action)
-                if(done==True):
-                    print("finish",i)
-                    break
+
+
+        # def to_check():
+        #     EasyCamera(robot,np.array([1,2]))
+        #     print("set cam")
+        #     og.sim.step()
+        #     control_idx=[3,5]
+        #     joint_pos=[1,1]
+        #     print(joint_pos)
+        #     for idx,value in enumerate(control_idx):
+        #         action[value-1]=joint_pos[idx]
+        #     print(action)
+        #     for i in range(500):
+        #         obs, reward, done, info=env.step(action)
+        #         if(done==True):
+        #             print("finish",i)
+        #             break
+
         donothing(action)
         print("move to fridge")
         MoveBot(robot,fridgepos)
+        cam.Update_camera_pos_bev(robot)
         donothing(action)
         cam.FlyingCapture(f'{iter}_move_to_fridge')  
         iter+=1     
@@ -153,9 +172,7 @@ def main(random_selection=False, headless=False, short_exec=False):
         donothing(action)
         cam.FlyingCapture(f'{iter}_open_the_fridge')  
         iter+=1             
-        # donothing()
-        # print("open the sinkkkkkk!!!!")  
-        # sink.states[object_states.ToggledOn].set_value(True)
+
         donothing(action)
         print("start grasp")   
         EasyGrasp(robot, pork, 100)
@@ -173,6 +190,7 @@ def main(random_selection=False, headless=False, short_exec=False):
         donothing(action)
         print("move to the table")
         Teleport(robot, pork,tablepos_bot)
+        cam.Update_camera_pos_bev(robot)
         donothing(action)
         cam.FlyingCapture(f'{iter}_move_to_the_table')  
         iter+=1             
@@ -184,10 +202,10 @@ def main(random_selection=False, headless=False, short_exec=False):
         cam.FlyingCapture(f'{iter}_put_the_pork_on_the_table')   
         iter+=1             
         
-
         donothing(action)
         print("move to the stove")
         MoveBot(robot,stove_bot)
+        cam.Update_camera_pos_bev(robot)
         donothing(action)
         cam.FlyingCapture(f'{iter}_move_to_the_stove')   
         iter+=1    
@@ -224,6 +242,7 @@ def main(random_selection=False, headless=False, short_exec=False):
         donothing(action)
         print("move to the table")
         MoveBot(robot,tablepos_bot)
+        cam.Update_camera_pos_bev(robot)
         donothing(action)
         cam.FlyingCapture(f'{iter}_move_to_the_table')   
         iter+=1    
@@ -238,6 +257,7 @@ def main(random_selection=False, headless=False, short_exec=False):
         donothing(action)
         print("move to the stove")
         Teleport(robot, pork,stove_bot)
+        cam.Update_camera_pos_bev(robot)
         donothing(action)
         cam.FlyingCapture(f'{iter}_move_to_the_stove')   
         iter+=1    
@@ -249,23 +269,6 @@ def main(random_selection=False, headless=False, short_exec=False):
         cam.FlyingCapture(f'{iter}_put_pork_on_the_pan')   
         iter+=1            
         env.close()
-        # donothing(action)
-        # for i in range(4):
-        #     donothing(action)
-        #     print(f"Capture the pic:{i+1}")
-        #     Turn_90(robot)
-        #     Capture(robot)
-        # action = Capture(robot)
-        # for _ in range(50):
-        #     obs, rew, done, info = env.step(dumbact)
-        #     step += 1
-        
-        # for i in range(4):
-        #     print(f"start capture pic:{i+1}")
-        #     for _ in range(50):
-        #         obs, rew, done, info = env.step(dumbact)            
-        #     Turn_90(robot)
-        #     Capture(robot, i)
 
     # Always close the environment at the end
     env.close()
