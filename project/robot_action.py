@@ -6,7 +6,7 @@ import omnigibson as og
 import math
 import omnigibson.utils.transform_utils as T
 from scipy.spatial.transform import Rotation as R
-
+import json
 def cal_dis(pos1, pos2):
     #calculate the distance between the two position
     return np.linalg.norm(pos1 - pos2)
@@ -137,7 +137,7 @@ class Camera():
                 if file_name is not None:
                     cv2.imwrite(query_name + str(file_name) + '.png', rgbimg)
                 else:
-                    cv2.imwrite("/shared/liushuai/OmniGibson/pic2/"+query_name + f'{iter}.png', rgbimg)
+                    cv2.imwrite("/shared/liushuai/OmniGibson/pipeline_bev/"+query_name + f'{iter}.png', rgbimg)
                     print(f"save as:{query_name + f'{iter}.png'}")
         
     def parsing_segmentdata(self): #parse all data from the files that we have collected
@@ -169,12 +169,13 @@ class Camera():
         for ele in self.nowwehave:
             picpath=list(ele.keys())[0]
             objects=list(ele.values())[0]
+            action=picpath.split("/")[-1].rstrip('.png').lstrip("seg_instance")
             # result_json.clear()
             obj_metadata.clear()
             for obj_name in objects:
                 object=self.env.scene.object_registry("name",obj_name)
                 position={"position":object.get_position().tolist()}
-                result_json[picpath]={}
+                result_json[action]={}
                 obj_metadata[obj_name]={}
                 obj_metadata[obj_name].update(position)
                 orientation={"orientation":object.get_orientation().tolist()}
@@ -189,8 +190,8 @@ class Camera():
                             obj_metadata[obj_name].update(bbox2d)
                             obj_metadata[obj_name].update(bbox3d)
                             break
-                result_json[picpath].update(obj_metadata)
-        with open("./task.json","w")as f:
+                result_json[action].update(obj_metadata)
+        with open("/shared/liushuai/OmniGibson/pipeline_bev/task.json","w")as f:
             json.dump(result_json,f)
         return result_json
 
