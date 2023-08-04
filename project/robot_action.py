@@ -75,6 +75,7 @@ class Camera():
         self.camera.set_position_orientation(
         position=position,
         orientation=orientation)
+        self.seglist=[]  #{seg_file_id:(obejct_name,objectclass,instance_id)}
         
     def setposition(self,position=None,orientation=None):
         if type(orientation)==np.ndarray and type(position)!=np.ndarray:
@@ -101,8 +102,12 @@ class Camera():
                 elif modality == "seg_instance":
                     # Map IDs to rgb
                     segimg = segmentation_to_rgb(obs_dict[query_name][0], N=256)
-
                     instancemap = obs_dict[query_name][1]
+                    for item in instancemap:
+                        triplet=(item[1].split("/")[-1],item[3],item[4])
+                        task={iter:triplet}
+                        self.seglist.append(task)
+                        print(f"save{task}")
                 elif modality == "normal":
                     # Re-map to 0 - 1 range
                     pass
