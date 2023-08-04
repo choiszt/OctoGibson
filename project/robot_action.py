@@ -76,6 +76,7 @@ class Camera():
         position=position,
         orientation=orientation)
         self.seglist=[]  #{seg_file_id:(obejct_name,objectclass,instance_id)}
+        self.instancemap=[]
         
     def setposition(self,position=None,orientation=None):
         if type(orientation)==np.ndarray and type(position)!=np.ndarray:
@@ -101,13 +102,12 @@ class Camera():
                     pass
                 elif modality == "seg_instance":
                     # Map IDs to rgb
+                    self.instancemap.append({"/shared/liushuai/OmniGibson/pic2/"+query_name + f'{iter}.png':obs_dict[query_name][0]})
                     segimg = segmentation_to_rgb(obs_dict[query_name][0], N=256)
                     instancemap = obs_dict[query_name][1]
                     for item in instancemap:
-                        triplet=(item[1].split("/")[-1],item[3],item[4])
-                        task={iter:triplet}
-                        self.seglist.append(task)
-                        print(f"save{task}")
+                        quaternion=["/shared/liushuai/OmniGibson/pic2/"+query_name + f'{iter}.png',item[1].split("/")[-1],item[3],item[0]]
+                        self.seglist.append(quaternion)
                 elif modality == "normal":
                     # Re-map to 0 - 1 range
                     pass
@@ -124,9 +124,31 @@ class Camera():
                 if file_name is not None:
                     cv2.imwrite(query_name + str(file_name) + '.png', rgbimg)
                 else:
-                    cv2.imwrite("./"+query_name + f'{iter}.png', rgbimg)
+                    cv2.imwrite("/shared/liushuai/OmniGibson/pic2/"+query_name + f'{iter}.png', rgbimg)
                     print(f"save as:{query_name + f'{iter}.png'}")
         
+    def parsing_segmentdata(self): #parse all data from the files that we have collected
+        seglists=self.seglist
+        instancemaps=self.instancemap
+        parse=lambda path:list(path.keys())[0]
+        nowwehave=[]
+        for ele in instancemaps:
+            path=parse(ele)
+            templist=[]
+            tempdict={}
+            map=ele[path]
+            instance=list(np.unique(map))
+
+            for seglist in seglists:
+                if seglist[0]==path:
+                    instance_id=seglist[3]
+                    if instance_id in instance:
+                        templist.append(seglist[1])
+            tempdict[path]=templist
+            nowwehave.append(tempdict)
+        print("now begin to parsing segmentation data")
+
+
     def Update_camera_pos(self, robot):
         pos = robot.get_position()
         cam_pos = get_camera_position(pos)
@@ -145,6 +167,15 @@ def get_camera_position(p):
 def get_camera_position_bev(p):
     p[2] += 3
     return p
+
+from collections import OrderedDict
+def donothing(env, navi):
+    dumbact=OrderedDict([('robot0', navi)])
+    step=0
+    for _ in range(30):
+        # og.sim.step()
+        env.step(dumbact)
+        step += 1
 
 from scipy.spatial.transform import Rotation as R
 def trans_camera(q):
