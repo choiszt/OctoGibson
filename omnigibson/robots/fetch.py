@@ -65,6 +65,9 @@ class Fetch(ManipulationRobot, TwoWheelRobot, ActiveCameraRobot):
         default_trunk_offset=0.365,
         default_arm_pose="vertical",
 
+        # Create Inventory
+        inventory=True,
+
         **kwargs,
     ):
         """
@@ -111,6 +114,8 @@ class Fetch(ManipulationRobot, TwoWheelRobot, ActiveCameraRobot):
             default_trunk_offset (float): sets the default height of the robot's trunk
             default_arm_pose (str): Default pose for the robot arm. Should be one of:
                 {"vertical", "diagonal15", "diagonal30", "diagonal45", "horizontal"}
+            inventory (bool): if the robot have an inventory to memorize what is in its hand, default true.
+                If True, currently only one object in hand is supported.
             kwargs (dict): Additional keyword arguments that are used for other super() calls from subclasses, allowing
                 for flexible compositions of various object subclasses (e.g.: Robot is USDObject + ControllableObject).
         """
@@ -119,6 +124,9 @@ class Fetch(ManipulationRobot, TwoWheelRobot, ActiveCameraRobot):
         self.default_trunk_offset = default_trunk_offset
         assert_valid_key(key=default_arm_pose, valid_keys=DEFAULT_ARM_POSES, name="default_arm_pose")
         self.default_arm_pose = default_arm_pose
+
+        if inventory:
+            self.Inventory = []
 
         # Parse reset joint pos if specifying special string
         if isinstance(reset_joint_pos, str):

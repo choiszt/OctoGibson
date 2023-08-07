@@ -164,7 +164,7 @@ def main(random_selection=False, headless=False, short_exec=False):
         
         donothing(env, action)
         print("move to the table")
-        Teleport(robot, pork,tablepos_bot)
+        MoveBot(robot, pork,tablepos_bot)
         cam.Update_camera_pos(robot)
         donothing(env, action)
         cam.FlyingCapture(f'{iter}_move_to_the_table')  
@@ -232,7 +232,7 @@ def main(random_selection=False, headless=False, short_exec=False):
 
         donothing(env, action)
         print("move to the stove")
-        Teleport(robot, pork,stove_bot)
+        MoveBot(robot, pork,stove_bot)
         cam.Update_camera_pos(robot)
         donothing(env, action)
         cam.FlyingCapture(f'{iter}_move_to_the_stove')   

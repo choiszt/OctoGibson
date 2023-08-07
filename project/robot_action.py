@@ -20,6 +20,7 @@ def EasyGrasp(robot, obj, dis_threshold):
         robot_pos[2] += robot.aabb_center[2]
         robot_pos[2] -=0.2
         obj.set_position(robot_pos)
+        robot.Inventory.append(obj)
         return True
     else:
         return False
@@ -31,20 +32,25 @@ def Hold(robot, obj):
     robot_pos[2] -=0.2
     obj.set_position(robot_pos)
 
-def Teleport(robot, obj, pos):
-    # Teleport the robot and the objects within its hands
-    robot.set_position(pos)
-    Hold(robot, obj)
+# def Teleport(robot, obj, pos):
+#     # Teleport the robot and the objects within its hands
+#     robot.set_position(pos)
+#     Hold(robot, obj)
 
 def MoveBot(robot, pos):
     robot.set_position(pos)
+    if robot.Inventory:
+        # relationship between name and variable.
+        obj = robot.Inventory[0]
+        Hold(robot, obj)
 
-def EasyDrop(obj, pos, dis_threshold):
+def EasyDrop(robot, obj, pos, dis_threshold):
     # Drop the objects within robot's hands
     obj_pos = obj.get_position()
     dis = cal_dis(obj_pos, pos)
     if dis < dis_threshold:
         obj.set_position(pos)
+        robot.Invenroty.pop()
         return True
     else:
         return False
