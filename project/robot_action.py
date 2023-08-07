@@ -201,8 +201,6 @@ class Camera():
             json.dump(result_json,f)
         return result_json
 
-
-
     def Update_camera_pos(self, robot):
         pos = robot.get_position()
         cam_pos = get_camera_position(pos)
@@ -238,3 +236,19 @@ def trans_camera(q):
     new_camera_orn = quaternion_multiply(yaw_orn.as_quat(), q)
     print(new_camera_orn)
     return new_camera_orn
+
+def change_states(obj, states, oper):
+    '''
+    obj (Objects): The object that the states are needed to be changed.
+    states (str): The specific states to be changed.
+    oper (int): 0 or 1, meaning the False or True of the states.
+    '''
+
+    # TODO: get the states we can edit @Choizst
+    # TODO: translate the states to class, for example: open
+    all_states = []
+    black_list = [] # the states that cannot be set to True or False
+
+    assert states in all_states and states not in black_list
+
+    obj.states[CLASS(states)].set_value(oper)
