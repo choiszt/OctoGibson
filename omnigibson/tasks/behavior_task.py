@@ -210,6 +210,8 @@ class BehaviorTask(BaseTask):
             self.activity_conditions, self.backend, self.object_scope, self.activity_goal_conditions
         )
 
+        print(self.activity_initial_conditions, self.activity_goal_conditions, self.ground_goal_state_options)
+
         # Demo attributes
         self.instruction_order = np.arange(len(self.activity_conditions.parsed_goal_conditions))
         np.random.shuffle(self.instruction_order)
