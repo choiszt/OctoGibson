@@ -13,13 +13,6 @@ from bddl.object_taxonomy import ObjectTaxonomy
 OBJECT_TAXONOMY = ObjectTaxonomy()
 
 
-def align_coord(obj,rob):
-    obj_in_world = T.pose2mat(obj.get_position_orientation())
-    rob_in_world = T.pose2mat(rob.get_position_orientation())
-    world_in_rob = T.pose_inv(rob_in_world)
-    obj_in_rob = T.pose_in_A_to_pose_in_B(obj_in_world, world_in_rob)
-    obj2rob =T.mat2pose(obj_in_rob)
-
 def cal_dis(pos1, pos2):
     #calculate the distance between the two position
     return np.linalg.norm(pos1 - pos2)
@@ -29,14 +22,14 @@ def EasyGrasp(robot, obj, dis_threshold):
     robot_pos = robot.get_position()
     obj_pose = obj.get_position()
     dis = cal_dis(robot_pos, obj_pose)
-    if dis < dis_threshold:
-        robot_pos[2] += robot.aabb_center[2]
-        robot_pos[2] -=0.2
-        obj.set_position(robot_pos)
-        robot.Inventory.append(obj)
-        return True
-    else:
-        return False
+    # if dis < dis_threshold:
+    robot_pos[2] += robot.aabb_center[2]
+    robot_pos[2] -=0.2
+    obj.set_position(robot_pos)
+    #     robot.Inventory.append(obj)
+    #     return True
+    # else:
+    #     return False
 
 def Hold(robot, obj):
     # Hold the objects
@@ -50,23 +43,24 @@ def Hold(robot, obj):
 #     robot.set_position(pos)
 #     Hold(robot, obj)
 
-def MoveBot(robot, pos):
-    robot.set_position(pos)
-    if robot.Inventory:
-        # relationship between name and variable.
-        obj = robot.Inventory[0]
-        Hold(robot, obj)
+def MoveBot(robot, obj):
+    robot.set_position(obj)
+    # if robot.Inventory:
+    #     # relationship between name and variable.
+    #     obj = robot.Inventory[0]
+    #     Hold(robot, obj)
 
 def EasyDrop(obj, pos, dis_threshold):
     # Drop the objects within robot's hands
     obj_pos = obj.get_position()
     dis = cal_dis(obj_pos, pos)
-    if dis < dis_threshold:
-        obj.set_position(pos)
-        robot.Invenroty.pop()        
-        return True
-    else:
-        return False
+    obj.set_position(pos)
+    # if dis < dis_threshold:
+    #     obj.set_position(pos)
+    #     robot.Inventory.pop()        
+    #     return True
+    # else:
+    #     return False
 
 def quaternion_multiply(q1, q2):
     # calculate the multiply of two quaternion
@@ -98,7 +92,18 @@ class Camera():
         self.seglist=[]  #(seg_file_id,object_name,objectclass,instance_id,2d_bbox,3d_bbox)
         self.instancemap=[]
         self.FILENAME=filename
-        
+        self.allobject=self._getallobject()
+        self.result_json={}
+        self.actionlist=[] #check the action to appear only once
+    def _getallobject(self):
+        allobject=[]
+        try:
+            objectlist=[i['name'] for i in self.env.objects_config]
+        except:
+            pass
+        scenedict=self.env.scene.get_objects_info()
+        scenelist=list(scenedict['init_info'].keys())
+        return list(set(objectlist+scenelist))
     def setposition(self,position=None,orientation=None):
         if type(orientation)==np.ndarray and type(position)!=np.ndarray:
             self.camera.set_orientation(orientation)
@@ -109,6 +114,35 @@ class Camera():
         else:
             raise TypeError
         
+    def xyz2spherical(self,position):
+        x,y,z=[position[i] for i in range(3)]
+        rho=math.sqrt(x**2+y**2+z**2)
+        theta=math.atan2(y,x)
+        phi=math.acos(z/rho)
+
+        #convert to degree
+        theta_deg=math.degrees(theta)
+        phi_deg=math.degrees(phi)
+        return {"rho":rho,"theta_deg":theta_deg,"phi_deg":phi_deg}
+
+    def set_in_rob(self,robot):
+        obj_in_rob={}
+        for object_name in self.allobject:
+            tempobj=self.env.scene.object_registry("name",object_name)
+            pose_in_rob=self.align_coord(tempobj,robot)
+            obj_in_rob[object_name]=(self.xyz2spherical(pose_in_rob[0]),pose_in_rob[1])
+        return obj_in_rob
+                
+    def align_coord(self,obj,rob):
+        #choiszt convert world2bot coord
+        obj_in_world = T.pose2mat(obj.get_position_orientation())
+        rob_in_world = T.pose2mat(rob.get_position_orientation())
+        world_in_rob = T.pose_inv(rob_in_world)
+        #same with T.relative_pose_transform(tempobj.get_position(),tempobj.get_orientation(),robot.get_position(),robot.get_orientation()) ## choiszt have varified this 
+        obj_in_rob = T.pose_in_A_to_pose_in_B(obj_in_world, world_in_rob)
+        obj2rob =T.mat2pose(obj_in_rob)
+        return obj2rob
+
     def turn_90(self):
         ori = self.camera.get_orientation()
         new_ori = trans_camera(ori)
@@ -182,6 +216,49 @@ class Camera():
         print("now begin to parse segmentation data")
         return self.nowwehave
     
+    def collectdata_v2(self,robot): #each time change the robot position need to collectdata
+        nowwehave=self.parsing_segmentdata()
+        sub_nowwehave=[]
+        for key in nowwehave:
+            if list(key.keys())[0].split("/")[-1].rstrip('.png').lstrip("seg_instance") not in self.actionlist:
+                sub_nowwehave.append(key)
+        seglists=self.seglist
+        obj_in_robs=self.set_in_rob(robot) #the object in now robot_pos
+        obj_metadata={} #get the object metadata
+        robot_pose=robot.get_position()
+        for ele in sub_nowwehave:
+            picpath=list(ele.keys())[0]
+            objects=list(ele.values())[0]
+            action=picpath.split("/")[-1].rstrip('.png').lstrip("seg_instance")
+            if action not in self.actionlist:
+                self.actionlist.append(action)
+            obj_metadata.clear()
+            for obj_name in objects:
+                object=self.env.scene.object_registry("name",obj_name)
+                obj_in_rob=obj_in_robs[obj_name]
+                position={"position_in_bot":obj_in_rob[0]}
+                self.result_json[action]={}
+                obj_metadata[obj_name]={}
+                obj_metadata[obj_name].update(position)
+                orientation={"orientation_in_bot":obj_in_rob[1].tolist()}
+                obj_metadata[obj_name].update(orientation)
+                bot_pose={"bot_in_world":robot_pose.tolist()}
+                obj_metadata[obj_name].update(bot_pose)
+                path={"path":picpath}
+                obj_metadata[obj_name].update(path)
+                for hextuple in seglists:
+                    if hextuple[0]==picpath:
+                        if(obj_name==hextuple[1]):
+                            bbox2d={"bbox2d":np.array(hextuple[4]).astype(float).tolist()}
+                            obj_metadata[obj_name].update(bbox2d)
+                            break
+                self.result_json[action].update(obj_metadata)
+        return self.result_json
+
+    def writejson(self):
+        with open(f"/shared/liushuai/OmniGibson/{self.FILENAME}/task.json","w")as f:
+            json.dump(self.result_json,f)
+
     def collectdata(self):
         seglists=self.seglist
         result_json={}

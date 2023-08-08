@@ -94,18 +94,16 @@ def main(random_selection=False, headless=False, short_exec=False):
     stovepos=adjust_position(stove,[-0.13,-0.2,0.76])
     #[-0.36728,5.76531,1.29481]
 #robot pos
-    # tablepos_bot=np.array([-1.53887291 ,4.79978561 ,0.01504258])
-    # fridgepos=np.array([-1.53887291 ,4.22978561 ,0.01504258])
-    # stove_bot=np.array([-1.53887291 ,5.69978561 ,0.01504258])
+
     tablepos_bot=adjust_position(robot,[0,0,0])
     fridgepos=adjust_position(robot,[0,-0.5,0])
     stove_bot=adjust_position(robot,[0,0.9,0])
-    # dumbact=OrderedDict([('robot0', np.zeros(11))])
+
     max_steps = -1 if not short_exec else 100    
     step=0
     iter=0
     while step != max_steps:
-        align_coord(obj=stove,rob=robot)
+
         action=np.zeros(11)
         ppposition=robot.get_position()
         cam_position=ra.get_camera_position(ppposition)
@@ -130,46 +128,51 @@ def main(random_selection=False, headless=False, short_exec=False):
             cam.setposition(cam_position, rs_o)
 
             donothing(env, action) 
-        cam.parsing_segmentdata() 
-        cam.collectdata()
-        donothing(env, action)  
-
+        
+        cam.collectdata_v2(robot)
         donothing(env, action)
+        
+
         print("move to fridge")
         MoveBot(robot,fridgepos)
         cam.Update_camera_pos(robot)
         donothing(env, action)
         cam.FlyingCapture(f'{iter}_move_to_fridge')  
-        iter+=1     
+        iter+=1
+        cam.collectdata_v2(robot)        
         
         donothing(env, action)
         print("open the fridge")  
         fridge.states[object_states.Open].set_value(True)
         donothing(env, action)
         cam.FlyingCapture(f'{iter}_open_the_fridge')  
-        iter+=1             
+        iter+=1
+        cam.collectdata_v2(robot)                 
 
         donothing(env, action)
         print("start grasp")   
         EasyGrasp(robot, pork, 100)
         donothing(env, action)
         cam.FlyingCapture(f'{iter}_start_grasp')  
-        iter+=1             
+        iter+=1  
+        cam.collectdata_v2(robot)               
         
         donothing(env, action)
         print("close the fridge")
         fridge.states[object_states.Open].set_value(False)
         donothing(env, action)
         cam.FlyingCapture(f'{iter}_close_the_fridge')   
-        iter+=1             
+        iter+=1  
+        cam.collectdata_v2(robot)               
         
         donothing(env, action)
         print("move to the table")
-        MoveBot(robot, pork,tablepos_bot)
+        MoveBot(robot,tablepos_bot)
         cam.Update_camera_pos(robot)
         donothing(env, action)
         cam.FlyingCapture(f'{iter}_move_to_the_table')  
-        iter+=1             
+        iter+=1       
+        cam.collectdata_v2(robot)          
 
         donothing(env, action)
         print("put the pork on the table")
@@ -177,6 +180,7 @@ def main(random_selection=False, headless=False, short_exec=False):
         donothing(env, action)
         cam.FlyingCapture(f'{iter}_put_the_pork_on_the_table')   
         iter+=1       
+        cam.collectdata_v2(robot)    
  
         
         donothing(env, action)
@@ -185,14 +189,16 @@ def main(random_selection=False, headless=False, short_exec=False):
         cam.Update_camera_pos(robot)
         donothing(env, action)
         cam.FlyingCapture(f'{iter}_move_to_the_stove')   
-        iter+=1    
+        iter+=1  
+        cam.collectdata_v2(robot)      
 
         donothing(env, action)   
         print("open the stove")
-        stove.states[object_states.Open].set_value(True)
+        stove.states[object_states.ToggledOn].set_value(True)
         donothing(env, action)
         cam.FlyingCapture(f'{iter}_open_the_stove')   
         iter+=1    
+        cam.collectdata_v2(robot)    
 
         donothing(env, action)
         print("put the pan on the stove")
@@ -201,13 +207,15 @@ def main(random_selection=False, headless=False, short_exec=False):
         donothing(env, action)
         cam.FlyingCapture(f'{iter}_put_the_pan_on_the_stove')   
         iter+=1    
+        cam.collectdata_v2(robot)    
 
         donothing(env, action)   
         print("close the stove")
-        stove.states[object_states.Open].set_value(False)
+        stove.states[object_states.ToggledOn].set_value(False)
         donothing(env, action)
         cam.FlyingCapture(f'{iter}_close_the_stove')   
         iter+=1    
+        cam.collectdata_v2(robot)    
 
         donothing(env, action)
         print("set the fire of stove")
@@ -215,6 +223,7 @@ def main(random_selection=False, headless=False, short_exec=False):
         donothing(env, action)
         cam.FlyingCapture(f'{iter}_set_the_fire_of_stove')   
         iter+=1    
+        cam.collectdata_v2(robot)    
 
         donothing(env, action)
         print("move to the table")
@@ -223,6 +232,7 @@ def main(random_selection=False, headless=False, short_exec=False):
         donothing(env, action)
         cam.FlyingCapture(f'{iter}_move_to_the_table')   
         iter+=1    
+        cam.collectdata_v2(robot)    
 
         donothing(env, action)
         print("pick the pork")
@@ -230,26 +240,27 @@ def main(random_selection=False, headless=False, short_exec=False):
         donothing(env, action)
         cam.FlyingCapture(f'{iter}_pick_the_pork')   
         iter+=1    
+        cam.collectdata_v2(robot)    
 
         donothing(env, action)
         print("move to the stove")
-        MoveBot(robot, pork,stove_bot)
+        MoveBot(robot,stove_bot)
         cam.Update_camera_pos(robot)
         donothing(env, action)
         cam.FlyingCapture(f'{iter}_move_to_the_stove')   
         iter+=1    
+        cam.collectdata_v2(robot)    
 
         donothing(env, action)        
         print("put pork on the pan")
         pork.set_position(stovepos)
         donothing(env, action)
         cam.FlyingCapture(f'{iter}_put_pork_on_the_pan')   
-        iter+=1         
+        iter+=1       
+        cam.collectdata_v2(robot)      
 
-        cam.parsing_segmentdata() 
-        cam.collectdata()    
+        cam.writejson()
 
-        env.close()
 
     # Always close the environment at the end
     env.close()
