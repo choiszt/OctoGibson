@@ -5,10 +5,24 @@ from omnigibson.utils.control_utils import IKSolver
 import omnigibson as og
 import math
 from omnigibson import object_states
+import random
 import omnigibson.utils.transform_utils as T
 from scipy.spatial.transform import Rotation as R
 import json
 from bddl.object_taxonomy import ObjectTaxonomy
+from omnigibson.object_states.factory import (
+    get_default_states,
+    get_state_name,
+    get_states_for_ability,
+    get_states_by_dependency_order,
+    get_texture_change_states,
+    get_fire_states,
+    get_steam_states,
+    get_visual_states,
+    get_texture_change_priority,
+)
+
+
 
 OBJECT_TAXONOMY = ObjectTaxonomy()
 
@@ -216,6 +230,48 @@ class Camera():
         print("now begin to parse segmentation data")
         return self.nowwehave
     
+    def parseSG(self,objects):
+        pairs=[]
+        SG=[]
+        for i in range(len(objects)):
+            for j in range(len(objects)):
+                if(objects[i]!=objects[j]):
+                    pairs.append((objects[i],objects[j]))
+        for pair in pairs:
+            obj0=self.env.scene.object_registry("name",pair[0])
+            obj1=self.env.scene.object_registry("name",pair[1])
+            try:
+                is_inside=obj0.states[object_states.Inside].get_value(obj1)
+                if is_inside:
+                    SG.append((obj0._name,"inside",obj1._name))
+            except:
+                pass
+            try:
+                is_nextto=obj0.states[object_states.NextTo].get_value(obj1)
+                if is_nextto:
+                    SG.append((obj0._name,"nextto",obj1._name))                
+            except:
+                pass            
+            try:
+                is_ontop=obj0.states[object_states.OnTop].get_value(obj1)
+                if is_ontop:
+                    SG.append((obj0._name,"ontop",obj1._name))                   
+            except:
+                pass        
+            try:
+                is_overlaid=obj0.states[object_states.Overlaid].get_value(obj1)
+                if is_overlaid:
+                    SG.append((obj0._name,"overlaid",obj1._name))                   
+            except:
+                pass        
+            try:
+                is_under=obj0.states[object_states.Under].get_value(obj1)
+                if is_under:
+                    SG.append((obj0._name,"under",obj1._name))                   
+            except:
+                pass                                
+        return {"scene_graph":SG}
+
     def collectdata_v2(self,robot): #each time change the robot position need to collectdata
         nowwehave=self.parsing_segmentdata()
         sub_nowwehave=[]
@@ -226,19 +282,26 @@ class Camera():
         obj_in_robs=self.set_in_rob(robot) #the object in now robot_pos
         obj_metadata={} #get the object metadata
         robot_pose=robot.get_position()
+
         for ele in sub_nowwehave:
             picpath=list(ele.keys())[0]
             objects=list(ele.values())[0]
             action=picpath.split("/")[-1].rstrip('.png').lstrip("seg_instance")
+            scene_graph=self.parseSG(objects)
             if action not in self.actionlist:
                 self.actionlist.append(action)
             obj_metadata.clear()
             for obj_name in objects:
+                obj_metadata[obj_name]={}
+                # ability=OBJECT_TAXONOMY.get_abilities(OBJECT_TAXONOMY.get_synset_from_category(obj_name.split("_")[0]))
                 object=self.env.scene.object_registry("name",obj_name)
+                states={"ability":[get_state_name(sta)for sta in list(object.states.keys())]}
+                obj_metadata[obj_name].update(states)
+
                 obj_in_rob=obj_in_robs[obj_name]
                 position={"position_in_bot":obj_in_rob[0]}
                 self.result_json[action]={}
-                obj_metadata[obj_name]={}
+                
                 obj_metadata[obj_name].update(position)
                 orientation={"orientation_in_bot":obj_in_rob[1].tolist()}
                 obj_metadata[obj_name].update(orientation)
@@ -253,6 +316,7 @@ class Camera():
                             obj_metadata[obj_name].update(bbox2d)
                             break
                 self.result_json[action].update(obj_metadata)
+                self.result_json[action].update(scene_graph)
         return self.result_json
 
     def writejson(self):
