@@ -30,51 +30,66 @@ OBJECT_TAXONOMY = ObjectTaxonomy()
 def cal_dis(pos1, pos2):
     #calculate the distance between the two position
     return np.linalg.norm(pos1 - pos2)
-
-def EasyGrasp(robot, obj, dis_threshold):
-    #Grasp the robot within the distance threshold
-    robot_pos = robot.get_position()
-    obj_pose = obj.get_position()
-    dis = cal_dis(robot_pos, obj_pose)
-    # if dis < dis_threshold:
-    robot_pos[2] += robot.aabb_center[2]
-    robot_pos[2] -=0.2
-    obj.set_position(robot_pos)
-    #     robot.Inventory.append(obj)
+class ROBOT():
+    def __init__(self,robot,env):
+        self.robot=robot
+        self.env=env
+        self.inventory=[]
+    def get_invent(self):
+        return self.inventory
+    def EasyGrasp(self, obj, dis_threshold):
+        #Grasp the robot within the distance threshold
+        robot_pos = self.robot.get_position()
+        obj_pose = obj.get_position()
+        dis = cal_dis(robot_pos, obj_pose)
+        # if dis < dis_threshold:
+        robot_pos[2] += self.robot.aabb_center[2]
+        robot_pos[2] -=0.2
+        obj.set_position(robot_pos)
+        if len(self.inventory)>1:
+            raise Exception("robot carries more than 1 object!")
+        self.inventory.append(obj._name)
+        print(f"now we have:{self.inventory}")
     #     return True
     # else:
     #     return False
 
-def Hold(robot, obj):
-    # Hold the objects
-    robot_pos = robot.get_position()
-    robot_pos[2] += robot.aabb_center[2]
-    robot_pos[2] -=0.2
-    obj.set_position(robot_pos)
+    def Hold(self, obj_name):
+        # Hold the objects
+        robot_pos = self.robot.get_position()
+        robot_pos[2] += self.robot.aabb_center[2]
+        robot_pos[2] -=0.2
+        obj=self.env.scene.object_registry("name",obj_name)  
+        obj.set_position(robot_pos)
+
+    def MoveBot(self, obj):
+        self.robot.set_position(obj)
+        if self.inventory:
+            # relationship between name and variable.
+            obj = self.inventory[0]
+            self.Hold(obj)
+    
+    def EasyDrop(self,obj, pos, dis_threshold): #TODO possible function  EasyDrop_V2(robot,obj1, obj2, dis_threshold) (put the OBJ1 <predicate> OBJ2)
+        # Drop the objects within robot's hands
+        obj_pos = obj.get_position()
+        dis = cal_dis(obj_pos, pos)
+        obj.set_position(pos)
+        if dis < dis_threshold:
+            obj.set_position(pos)
+            a=self.inventory.pop()        
+            print(f"the robot throw {a},now we have:{self.inventory}")
+        #     return True
+        # else:
+        #     return False
 
 # def Teleport(robot, obj, pos):
 #     # Teleport the robot and the objects within its hands
 #     robot.set_position(pos)
 #     Hold(robot, obj)
 
-def MoveBot(robot, obj):
-    robot.set_position(obj)
-    # if robot.Inventory:
-    #     # relationship between name and variable.
-    #     obj = robot.Inventory[0]
-    #     Hold(robot, obj)
 
-def EasyDrop(obj, pos, dis_threshold):
-    # Drop the objects within robot's hands
-    obj_pos = obj.get_position()
-    dis = cal_dis(obj_pos, pos)
-    obj.set_position(pos)
-    # if dis < dis_threshold:
-    #     obj.set_position(pos)
-    #     robot.Inventory.pop()        
-    #     return True
-    # else:
-    #     return False
+
+
 
 def quaternion_multiply(q1, q2):
     # calculate the multiply of two quaternion
@@ -96,8 +111,9 @@ def Turn_90(robot, pos=None):
         robot.set_orientation(new_ori)
 
 # class of flying camera
-class Camera():
-    def __init__(self,camera,env,filename,position=np.array([-2.48302418,  1.55655398,  2.22882511]),orientation=np.array([ 0.56621324, -0.0712958 , -0.10258276,  0.81473692])):
+class Camera(ROBOT):
+    def __init__(self,robot,camera,env,filename,position=np.array([-2.48302418,  1.55655398,  2.22882511]),orientation=np.array([ 0.56621324, -0.0712958 , -0.10258276,  0.81473692])):
+        super().__init__(robot,env)
         self.camera=camera
         self.env=env
         self.camera.set_position_orientation(
@@ -301,10 +317,11 @@ class Camera():
                 obj_in_rob=obj_in_robs[obj_name]
                 position={"position_in_bot":obj_in_rob[0]}
                 self.result_json[action]={}
-                
                 obj_metadata[obj_name].update(position)
                 orientation={"orientation_in_bot":obj_in_rob[1].tolist()}
                 obj_metadata[obj_name].update(orientation)
+                position={"position_in_world":object.get_position().tolist()}
+
                 bot_pose={"bot_in_world":robot_pose.tolist()}
                 obj_metadata[obj_name].update(bot_pose)
                 path={"path":picpath}
@@ -315,8 +332,10 @@ class Camera():
                             bbox2d={"bbox2d":np.array(hextuple[4]).astype(float).tolist()}
                             obj_metadata[obj_name].update(bbox2d)
                             break
+                inventory={"inventory":self.inventory}
                 self.result_json[action].update(obj_metadata)
                 self.result_json[action].update(scene_graph)
+                self.result_json[action].update(inventory)
         return self.result_json
 
     def writejson(self):
