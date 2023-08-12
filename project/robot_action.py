@@ -34,9 +34,6 @@ class ROBOT():
     def __init__(self,robot,env):
         self.robot=robot
         self.env=env
-        self.inventory=[]
-    def get_invent(self):
-        return self.inventory
     def EasyGrasp(self, obj, dis_threshold):
         #Grasp the robot within the distance threshold
         robot_pos = self.robot.get_position()
@@ -46,10 +43,10 @@ class ROBOT():
         robot_pos[2] += self.robot.aabb_center[2]
         robot_pos[2] -=0.2
         obj.set_position(robot_pos)
-        if len(self.inventory)>1:
+        if len(self.robot.inventory)>1:
             raise Exception("robot carries more than 1 object!")
-        self.inventory.append(obj._name)
-        print(f"now we have:{self.inventory}")
+        self.robot.inventory.append(obj._name)
+        print(f"now we have:{self.robot.inventory}")
     #     return True
     # else:
     #     return False
@@ -64,9 +61,9 @@ class ROBOT():
 
     def MoveBot(self, obj):
         self.robot.set_position(obj)
-        if self.inventory:
+        if self.robot.inventory:
             # relationship between name and variable.
-            obj = self.inventory[0]
+            obj = self.robot.inventory[0]
             self.Hold(obj)
     
     def EasyDrop(self,obj, pos, dis_threshold): #TODO possible function  EasyDrop_V2(robot,obj1, obj2, dis_threshold) (put the OBJ1 <predicate> OBJ2)
@@ -76,8 +73,8 @@ class ROBOT():
         obj.set_position(pos)
         if dis < dis_threshold:
             obj.set_position(pos)
-            a=self.inventory.pop()        
-            print(f"the robot throw {a},now we have:{self.inventory}")
+            a=self.robot.inventory.pop()        
+            print(f"the robot throw {a},now we have:{self.robot.inventory}")
         #     return True
         # else:
         #     return False
@@ -111,9 +108,9 @@ def Turn_90(robot, pos=None):
         robot.set_orientation(new_ori)
 
 # class of flying camera
-class Camera(ROBOT):
+class Camera():
     def __init__(self,robot,camera,env,filename,position=np.array([-2.48302418,  1.55655398,  2.22882511]),orientation=np.array([ 0.56621324, -0.0712958 , -0.10258276,  0.81473692])):
-        super().__init__(robot,env)
+        self.robot=robot
         self.camera=camera
         self.env=env
         self.camera.set_position_orientation(
@@ -290,6 +287,7 @@ class Camera(ROBOT):
 
     def collectdata_v2(self,robot): #each time change the robot position need to collectdata
         nowwehave=self.parsing_segmentdata()
+        inventory=self.robot.inventory
         sub_nowwehave=[]
         for key in nowwehave:
             if list(key.keys())[0].split("/")[-1].rstrip('.png').lstrip("seg_instance") not in self.actionlist:
@@ -302,7 +300,7 @@ class Camera(ROBOT):
         for ele in sub_nowwehave:
             picpath=list(ele.keys())[0]
             objects=list(ele.values())[0]
-            action=picpath.split("/")[-1].rstrip('.png').lstrip("seg_instance")
+            action=picpath.split("/")[-1][12:-4]
             scene_graph=self.parseSG(objects)
             if action not in self.actionlist:
                 self.actionlist.append(action)
@@ -332,10 +330,10 @@ class Camera(ROBOT):
                             bbox2d={"bbox2d":np.array(hextuple[4]).astype(float).tolist()}
                             obj_metadata[obj_name].update(bbox2d)
                             break
-                inventory={"inventory":self.inventory}
                 self.result_json[action].update(obj_metadata)
                 self.result_json[action].update(scene_graph)
-                self.result_json[action].update(inventory)
+            inventory_dict={"inventory":inventory}
+            self.result_json[action].update(inventory_dict)
         return self.result_json
 
     def writejson(self):
