@@ -196,7 +196,7 @@ class Camera():
                                 break
                         for bbox_3d in bbox_3ds:
                             if bbox_3d[0]==item[0]:
-                                bbox3d_info=[bbox_3d[i] for i in range(6,14,1)]
+                                bbox3d_info=[bbox_3d[i] for i in range(2,9,1)]
                                 hextuple[5]=bbox3d_info
                                 break
                         self.seglist.append(hextuple)
