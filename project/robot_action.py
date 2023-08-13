@@ -1,8 +1,6 @@
 import numpy as np
 from omnigibson.utils.vision_utils import segmentation_to_rgb
 import cv2
-from omnigibson.utils.control_utils import IKSolver
-import omnigibson as og
 import math
 from omnigibson import object_states
 import random
