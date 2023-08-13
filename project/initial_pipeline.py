@@ -70,7 +70,16 @@ def main(random_selection=False, headless=False, short_exec=False):
         cam.collectdata_v2(robot.robot)
         donothing(env, action)
 
-
+        robot.robot.visible=True
+        robot.robot.set_position([-1.53887291 ,4.79978561 ,0.01504258])
+        ppposition=robot.robot.get_position()
+        cam_position=ra.get_camera_position_bev(ppposition)
+        cam.setposition(cam_position, ra.trans_camera(robot.robot.get_orientation()))
+        donothing(env, action)
+        cam.FlyingCapture(f'{iter}_BEV_surroundings')   
+        iter+=1  
+        donothing(env, action)
+        cam.collectdata_v2(robot.robot)
         cam.writejson()
 
 
