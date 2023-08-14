@@ -242,12 +242,20 @@ class Camera():
         return self.nowwehave
     
     def parseSG(self,objects):
+        blacklist=["walls","electric_switch","floors","ceilings","window"]
         pairs=[]
         SG=[]
         for i in range(len(objects)):
             for j in range(len(objects)):
+                cnt=0
                 if(objects[i]!=objects[j]):
-                    pairs.append((objects[i],objects[j]))
+                    for blackele in blacklist:
+                        if blackele in objects[i]:
+                            cnt+=1
+                        if blackele in objects[j]:
+                            cnt+=1
+                    if cnt!=2:
+                        pairs.append((objects[i],objects[j]))
         for pair in pairs:
             obj0=self.env.scene.object_registry("name",pair[0])
             obj1=self.env.scene.object_registry("name",pair[1])
@@ -294,6 +302,8 @@ class Camera():
         obj_in_robs=self.set_in_rob(robot) #the object in now robot_pos
         obj_metadata={} #get the object metadata
         robot_pose=robot.get_position()
+        editable_states={object_states.Cooked:"cooked",object_states.Burnt:"burnt",object_states.Frozen:"frozen",object_states.Heated:"hot",
+                         object_states.Open:"open",object_states.ToggledOn:"toggled_on",object_states.Folded:"folded",object_states.Unfolded:"unfolded"}
 
         for ele in sub_nowwehave:
             picpath=list(ele.keys())[0]
@@ -307,16 +317,19 @@ class Camera():
                 obj_metadata[obj_name]={}
                 # ability=OBJECT_TAXONOMY.get_abilities(OBJECT_TAXONOMY.get_synset_from_category(obj_name.split("_")[0]))
                 object=self.env.scene.object_registry("name",obj_name)
-                states={"ability":[get_state_name(sta)for sta in list(object.states.keys())]}
+                states={"ability":[editable_states[sta] for sta in list(object.states.keys()) if sta in editable_states.keys()]}
                 obj_metadata[obj_name].update(states)
 
+
                 obj_in_rob=obj_in_robs[obj_name]
-                position={"position_in_bot":obj_in_rob[0]}
+                position_in_bot={"position_in_bot":obj_in_rob[0]}
                 self.result_json[action]={}
-                obj_metadata[obj_name].update(position)
+                obj_metadata[obj_name].update(position_in_bot)
                 orientation={"orientation_in_bot":obj_in_rob[1].tolist()}
+
                 obj_metadata[obj_name].update(orientation)
-                position={"position_in_world":object.get_position().tolist()}
+                position_in_world={"position_in_world":object.get_position().tolist()}
+                obj_metadata[obj_name].update(position_in_world)
 
                 bot_pose={"bot_in_world":robot_pose.tolist()}
                 obj_metadata[obj_name].update(bot_pose)

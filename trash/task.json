@@ -2,21 +2,8 @@
     "0_detect_surroundings": {
         "hamper_clziqw_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 7.0777807315375965,
@@ -28,6 +15,11 @@
                 0.0020625447810652866,
                 0.9953658089499203,
                 0.0935886080066748
+            ],
+            "position_in_world": [
+                1.5209037065505981,
+                -1.5757333040237427,
+                0.27213987708091736
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -44,21 +36,8 @@
         },
         "hamper_wdsnjy_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 6.602782433449314,
@@ -70,6 +49,11 @@
                 0.0020040322354816075,
                 0.995675170150992,
                 0.09023144233141576
+            ],
+            "position_in_world": [
+                1.5091522932052612,
+                -1.0515049695968628,
+                0.24130532145500183
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -84,66 +68,11 @@
                 348.0
             ]
         },
-        "bed_zrumze_0": {
-            "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
-            ],
-            "position_in_bot": {
-                "rho": 5.668513640110946,
-                "theta_deg": -15.403077409262078,
-                "phi_deg": 88.74355861026596
-            },
-            "orientation_in_bot": [
-                0.017016357428036016,
-                -0.014162605209570673,
-                0.7681860814882923,
-                -0.6398437374869133
-            ],
-            "bot_in_world": [
-                -1.538582682609558,
-                4.801025390625,
-                0.004799455404281616
-            ],
-            "path": "/shared/liushuai/OmniGibson/trash/seg_instance0_detect_surroundings.png",
-            "bbox2d": [
-                742.0,
-                238.0,
-                905.0,
-                392.0
-            ]
-        },
         "bottom_cabinet_dajebq_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 3.665377595441036,
@@ -156,6 +85,11 @@
                 0.6398305643334586,
                 0.7681976177007751
             ],
+            "position_in_world": [
+                -0.34456777572631836,
+                1.383887529373169,
+                0.5814189314842224
+            ],
             "bot_in_world": [
                 -1.538582682609558,
                 4.801025390625,
@@ -163,30 +97,17 @@
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance0_detect_surroundings.png",
             "bbox2d": [
-                0.0,
-                228.0,
+                486.0,
+                230.0,
                 609.0,
                 436.0
             ]
         },
         "bottom_cabinet_jhymlr_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 5.822040448871693,
@@ -199,6 +120,11 @@
                 0.6398492315817187,
                 0.7681821033296995
             ],
+            "position_in_world": [
+                0.9149700999259949,
+                10.069914817810059,
+                0.3439715504646301
+            ],
             "bot_in_world": [
                 -1.538582682609558,
                 4.801025390625,
@@ -206,30 +132,52 @@
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance0_detect_surroundings.png",
             "bbox2d": [
-                175.0,
-                230.0,
+                560.0,
+                318.0,
                 609.0,
                 419.0
             ]
         },
+        "bottom_cabinet_jrhgeu_0": {
+            "ability": [
+                "open",
+                "hot",
+                "frozen"
+            ],
+            "position_in_bot": {
+                "rho": 5.253374546174051,
+                "theta_deg": 24.57392232192685,
+                "phi_deg": 86.95612380357059
+            },
+            "orientation_in_bot": [
+                0.025634088916732613,
+                -0.021040316704163422,
+                0.9952773074933304,
+                0.09123201054029413
+            ],
+            "position_in_world": [
+                1.466504693031311,
+                0.5199542045593262,
+                0.4945165514945984
+            ],
+            "bot_in_world": [
+                -1.538582682609558,
+                4.801025390625,
+                0.004799455404281616
+            ],
+            "path": "/shared/liushuai/OmniGibson/trash/seg_instance0_detect_surroundings.png",
+            "bbox2d": [
+                298.0,
+                254.0,
+                414.0,
+                392.0
+            ]
+        },
         "bottom_cabinet_jrhgeu_1": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 5.949233313851672,
@@ -241,6 +189,11 @@
                 -0.02104296802697282,
                 0.9952779925927472,
                 0.09122358306334974
+            ],
+            "position_in_world": [
+                1.4664978981018066,
+                -0.3100453317165375,
+                0.494516521692276
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -255,24 +208,45 @@
                 367.0
             ]
         },
+        "bottom_cabinet_slgzfc_1": {
+            "ability": [
+                "open",
+                "hot",
+                "frozen"
+            ],
+            "position_in_bot": {
+                "rho": 7.516897504979801,
+                "theta_deg": 48.60124640109018,
+                "phi_deg": 89.81131743039415
+            },
+            "orientation_in_bot": [
+                -0.0020154567704854212,
+                0.022026584359056276,
+                -0.09074515948489821,
+                0.9956284867085413
+            ],
+            "position_in_world": [
+                4.904673099517822,
+                0.9373044371604919,
+                0.2494642585515976
+            ],
+            "bot_in_world": [
+                -1.538582682609558,
+                4.801025390625,
+                0.004799455404281616
+            ],
+            "path": "/shared/liushuai/OmniGibson/trash/seg_instance0_detect_surroundings.png",
+            "bbox2d": [
+                0.0,
+                238.0,
+                905.0,
+                392.0
+            ]
+        },
         "pot_plant_udqjui_0": {
             "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "Inside",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnFire",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 6.2322022802409345,
@@ -284,6 +258,11 @@
                 -0.007914018765396496,
                 0.6345812804075535,
                 0.7717094038500248
+            ],
+            "position_in_world": [
+                1.4627552032470703,
+                -0.5188025236129761,
+                1.2424368858337402
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -298,35 +277,27 @@
                 251.0
             ]
         },
-        "table_lamp_xbfgjc_0": {
+        "table_lamp_xbfgjc_1": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "ToggledOn",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "toggled_on",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 6.400548251111386,
-                "theta_deg": -7.753369646412798,
-                "phi_deg": 85.16828524015757
+                "rho": 7.458729051121817,
+                "theta_deg": 48.09932698424102,
+                "phi_deg": 86.7216777799047
             },
             "orientation_in_bot": [
-                0.013969290115968402,
-                0.018004585583066574,
-                0.638955314953808,
-                0.7689062357166302
+                0.014361006782861788,
+                0.01747120305142606,
+                0.657617181846137,
+                0.7530127227934885
+            ],
+            "position_in_world": [
+                4.807330131530762,
+                0.9352117776870728,
+                0.6509513258934021
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -335,30 +306,17 @@
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance0_detect_surroundings.png",
             "bbox2d": [
-                558.0,
-                227.0,
-                738.0,
-                318.0
+                405.0,
+                372.0,
+                433.0,
+                402.0
             ]
         },
         "table_lamp_xbfgjc_3": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "ToggledOn",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "toggled_on",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 4.148009743991885,
@@ -371,6 +329,11 @@
                 0.6946713314833362,
                 0.28201914965690517
             ],
+            "position_in_world": [
+                0.536471962928772,
+                1.2104945182800293,
+                0.0954679623246193
+            ],
             "bot_in_world": [
                 -1.538582682609558,
                 4.801025390625,
@@ -378,32 +341,16 @@
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance0_detect_surroundings.png",
             "bbox2d": [
-                382.0,
-                360.0,
+                187.0,
+                269.0,
                 441.0,
                 404.0
             ]
         },
         "trash_can_zotrbg_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "ContainedParticles",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "Contains",
-                "Filled",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 1.8732453474117847,
@@ -415,6 +362,11 @@
                 0.014679218526638504,
                 0.6397332511006766,
                 0.768375172195245
+            ],
+            "position_in_world": [
+                -0.4048577547073364,
+                3.3319053649902344,
+                0.2605379521846771
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -431,22 +383,9 @@
         },
         "bottom_cabinet_slgzfc_4": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 1.4987523858320857,
@@ -458,6 +397,11 @@
                 0.0020156020022943093,
                 0.9956284022418753,
                 0.09074603791920707
+            ],
+            "position_in_world": [
+                -2.379021644592285,
+                3.642699956893921,
+                0.4499996602535248
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -472,39 +416,26 @@
                 719.0
             ]
         },
-        "carpet_ctclvd_2": {
+        "carpet_ctclvd_0": {
             "ability": [
-                "ContactBodies",
-                "Pose",
-                "AABB",
-                "ContactParticles",
-                "ModifiedParticles",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "Covered",
-                "Saturated",
-                "Temperature",
-                "Inside",
-                "Touching",
-                "ParticleRemover",
-                "Heated",
-                "Frozen",
-                "OnFire",
-                "Overlaid",
-                "OnTop",
-                "Under",
-                "NextTo"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 5.939756060527039,
-                "theta_deg": 109.95128277972096,
-                "phi_deg": 89.15884840138065
+                "rho": 5.250912400253549,
+                "theta_deg": -1.4893799895687074,
+                "phi_deg": 92.56043465262711
             },
             "orientation_in_bot": [
-                -0.0019431168750438169,
-                0.022033281781077246,
-                -0.08746948468856125,
-                0.9959216073763452
+                0.02202225777807651,
+                0.0020643089821834213,
+                0.9954252995199702,
+                0.09294746831603128
+            ],
+            "position_in_world": [
+                -0.723709938184135,
+                -0.38627230814685576,
+                0.002372729955
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -521,23 +452,10 @@
         },
         "dishwasher_dngvvi_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "ToggledOn",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "toggled_on",
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 1.1596635336673848,
@@ -549,6 +467,11 @@
                 0.001986398782520539,
                 0.9957479144586735,
                 0.08942510108473795
+            ],
+            "position_in_world": [
+                -2.3353991508483887,
+                4.092134475708008,
+                0.46018579602241516
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -565,22 +488,9 @@
         },
         "door_lvgliq_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 2.4768287486850475,
@@ -592,6 +502,11 @@
                 0.002015589997400903,
                 0.995628467296898,
                 0.09074532447139236
+            ],
+            "position_in_world": [
+                -2.670013666152954,
+                2.9193928241729736,
+                1.1510993242263794
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -608,22 +523,9 @@
         },
         "door_lvgliq_3": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 3.5225662011117516,
@@ -635,6 +537,11 @@
                 0.017000513317544,
                 0.6398491386727295,
                 0.7681821649373278
+            ],
+            "position_in_world": [
+                0.6894515156745911,
+                2.3250746726989746,
+                1.1510995626449585
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -651,22 +558,9 @@
         },
         "door_ohagsq_1": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 3.366309340624832,
@@ -678,6 +572,11 @@
                 0.017000513317544,
                 0.6398491386727295,
                 0.7681821649373278
+            ],
+            "position_in_world": [
+                -1.5204061269760132,
+                1.5809431076049805,
+                0.9860121011734009
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -694,23 +593,9 @@
         },
         "fridge_xyejdx_0": {
             "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Inside",
-                "Open",
-                "HeatSourceOrSink",
-                "Temperature",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 1.8155932933962928,
@@ -722,6 +607,11 @@
                 0.022021858244739102,
                 -0.09313890236548741,
                 0.9954074059059516
+            ],
+            "position_in_world": [
+                -0.1851631999015808,
+                3.9132142066955566,
+                0.827250599861145
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -736,164 +626,26 @@
                 719.0
             ]
         },
-        "picture_fanvpf_0": {
+        "picture_cltbty_0": {
             "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "Inside",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnFire",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 6.863011717995853,
-                "theta_deg": 14.817723840151968,
-                "phi_deg": 79.00815383232377
-            },
-            "orientation_in_bot": [
-                0.022026977132006628,
-                0.0020133275071277422,
-                0.9956377825730233,
-                0.0906430620833637
-            ],
-            "bot_in_world": [
-                -1.538582682609558,
-                4.801025390625,
-                0.004799455404281616
-            ],
-            "path": "/shared/liushuai/OmniGibson/trash/seg_instance0_detect_surroundings.png",
-            "bbox2d": [
-                458.0,
-                163.0,
-                489.0,
-                206.0
-            ]
-        },
-        "picture_hhxttu_0": {
-            "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "Inside",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnFire",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
-            ],
-            "position_in_bot": {
-                "rho": 8.476440597280183,
-                "theta_deg": 42.09978009687401,
-                "phi_deg": 79.82049350809156
-            },
-            "orientation_in_bot": [
-                -0.0019743347219627213,
-                0.022030506386278237,
-                -0.08888055618261326,
-                0.995796668764984
-            ],
-            "bot_in_world": [
-                -1.538582682609558,
-                4.801025390625,
-                0.004799455404281616
-            ],
-            "path": "/shared/liushuai/OmniGibson/trash/seg_instance0_detect_surroundings.png",
-            "bbox2d": [
-                332.0,
-                117.0,
-                390.0,
-                185.0
-            ]
-        },
-        "picture_qjkajj_0": {
-            "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "Inside",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnFire",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
-            ],
-            "position_in_bot": {
-                "rho": 5.727603772334826,
-                "theta_deg": 20.698582952652504,
-                "phi_deg": 75.93583811951527
-            },
-            "orientation_in_bot": [
-                0.022029396957193286,
-                0.001986675346130269,
-                0.9957467238817856,
-                0.08943836240373775
-            ],
-            "bot_in_world": [
-                -1.538582682609558,
-                4.801025390625,
-                0.004799455404281616
-            ],
-            "path": "/shared/liushuai/OmniGibson/trash/seg_instance0_detect_surroundings.png",
-            "bbox2d": [
-                314.0,
-                174.0,
-                354.0,
-                191.0
-            ]
-        },
-        "picture_qtvjzk_0": {
-            "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "Inside",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnFire",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
-            ],
-            "position_in_bot": {
-                "rho": 8.977251916289823,
-                "theta_deg": 30.705790768989193,
-                "phi_deg": 81.29173687047123
+                "rho": 2.9705486943196586,
+                "theta_deg": -4.762931317742427,
+                "phi_deg": 55.941321096655194
             },
             "orientation_in_bot": [
                 0.017000516072658605,
                 -0.014150041174121632,
                 0.7681822895205177,
                 -0.6398489891021548
+            ],
+            "position_in_world": [
+                -1.3099466705460328,
+                2.426717933463275,
+                1.7752653806623204
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -908,24 +660,146 @@
                 161.0
             ]
         },
+        "picture_fanvpf_0": {
+            "ability": [
+                "hot",
+                "frozen"
+            ],
+            "position_in_bot": {
+                "rho": 6.863011717995853,
+                "theta_deg": 14.817723840151968,
+                "phi_deg": 79.00815383232377
+            },
+            "orientation_in_bot": [
+                0.022026977132006628,
+                0.0020133275071277422,
+                0.9956377825730233,
+                0.0906430620833637
+            ],
+            "position_in_world": [
+                1.321834660091134,
+                -1.2300404308069282,
+                1.6001635715016966
+            ],
+            "bot_in_world": [
+                -1.538582682609558,
+                4.801025390625,
+                0.004799455404281616
+            ],
+            "path": "/shared/liushuai/OmniGibson/trash/seg_instance0_detect_surroundings.png",
+            "bbox2d": [
+                332.0,
+                117.0,
+                390.0,
+                185.0
+            ]
+        },
+        "picture_fhkzlm_0": {
+            "ability": [
+                "hot",
+                "frozen"
+            ],
+            "position_in_bot": {
+                "rho": 4.25107759523321,
+                "theta_deg": -178.67685764595163,
+                "phi_deg": 63.9621227320874
+            },
+            "orientation_in_bot": [
+                0.014150044484243547,
+                0.017000513317544,
+                0.6398491386727295,
+                0.7681821649373278
+            ],
+            "position_in_world": [
+                -2.3299468336350873,
+                8.618242386569612,
+                1.700163398423771
+            ],
+            "bot_in_world": [
+                -1.538582682609558,
+                4.801025390625,
+                0.004799455404281616
+            ],
+            "path": "/shared/liushuai/OmniGibson/trash/seg_instance0_detect_surroundings.png",
+            "bbox2d": [
+                458.0,
+                163.0,
+                489.0,
+                206.0
+            ]
+        },
+        "picture_qjkajj_0": {
+            "ability": [
+                "hot",
+                "frozen"
+            ],
+            "position_in_bot": {
+                "rho": 5.727603772334826,
+                "theta_deg": 20.698582952652504,
+                "phi_deg": 75.93583811951527
+            },
+            "orientation_in_bot": [
+                0.022029396957193286,
+                0.001986675346130269,
+                0.9957467238817856,
+                0.08943836240373775
+            ],
+            "position_in_world": [
+                1.3203303937730673,
+                0.1099258060318992,
+                1.6251836520724243
+            ],
+            "bot_in_world": [
+                -1.538582682609558,
+                4.801025390625,
+                0.004799455404281616
+            ],
+            "path": "/shared/liushuai/OmniGibson/trash/seg_instance0_detect_surroundings.png",
+            "bbox2d": [
+                365.0,
+                137.0,
+                429.0,
+                202.0
+            ]
+        },
+        "picture_qtvjzk_0": {
+            "ability": [
+                "hot",
+                "frozen"
+            ],
+            "position_in_bot": {
+                "rho": 8.977251916289823,
+                "theta_deg": 30.705790768989193,
+                "phi_deg": 81.29173687047123
+            },
+            "orientation_in_bot": [
+                0.017000516072658605,
+                -0.014150041174121632,
+                0.7681822895205177,
+                -0.6398489891021548
+            ],
+            "position_in_world": [
+                4.285053325688381,
+                -1.8172867489938171,
+                1.7001633999170787
+            ],
+            "bot_in_world": [
+                -1.538582682609558,
+                4.801025390625,
+                0.004799455404281616
+            ],
+            "path": "/shared/liushuai/OmniGibson/trash/seg_instance0_detect_surroundings.png",
+            "bbox2d": [
+                440.0,
+                149.0,
+                475.0,
+                199.0
+            ]
+        },
         "picture_tlwjpv_0": {
             "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "Inside",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnFire",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 5.753503875251384,
@@ -937,6 +811,11 @@
                 0.022026770904703088,
                 -0.09074498877257947,
                 0.9956284978863551
+            ],
+            "position_in_world": [
+                1.19834222172642,
+                -0.009997493922749612,
+                1.5751838516833736
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -953,22 +832,8 @@
         },
         "picture_wfdvzv_0": {
             "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "Inside",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnFire",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 8.39986900908033,
@@ -981,6 +846,11 @@
                 0.7681822895205177,
                 -0.6398489891021548
             ],
+            "position_in_world": [
+                3.3500532962007243,
+                -1.8172822260591048,
+                1.695077700980354
+            ],
             "bot_in_world": [
                 -1.538582682609558,
                 4.801025390625,
@@ -988,30 +858,16 @@
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance0_detect_surroundings.png",
             "bbox2d": [
-                365.0,
-                137.0,
-                429.0,
-                202.0
+                314.0,
+                174.0,
+                354.0,
+                191.0
             ]
         },
         "picture_ytxhyl_0": {
             "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "Inside",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnFire",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 5.510431239403738,
@@ -1023,6 +879,11 @@
                 0.00201558990752567,
                 0.9956284672893766,
                 0.09074532447339766
+            ],
+            "position_in_world": [
+                -2.6506866006250194,
+                -0.36249765305431125,
+                1.5751838461168353
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -1037,67 +898,11 @@
                 207.0
             ]
         },
-        "picture_zsirgc_0": {
-            "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "Inside",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnFire",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
-            ],
-            "position_in_bot": {
-                "rho": 6.32875728863328,
-                "theta_deg": 16.002012265327163,
-                "phi_deg": 77.31991386290693
-            },
-            "orientation_in_bot": [
-                -0.0020904968347371204,
-                0.022019787287763912,
-                -0.09413118237945352,
-                0.9953140606334423
-            ],
-            "bot_in_world": [
-                -1.538582682609558,
-                4.801025390625,
-                0.004799455404281616
-            ],
-            "path": "/shared/liushuai/OmniGibson/trash/seg_instance0_detect_surroundings.png",
-            "bbox2d": [
-                440.0,
-                149.0,
-                475.0,
-                199.0
-            ]
-        },
         "top_cabinet_dmwxyl_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 2.2910941492712062,
@@ -1109,6 +914,11 @@
                 0.0020156092558569457,
                 0.995628402872303,
                 0.09074603775850096
+            ],
+            "position_in_world": [
+                -2.512604236602783,
+                3.938934803009033,
+                1.8908519744873047
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -1123,28 +933,15 @@
                 111.0
             ]
         },
-        "floors_aafddg_0": {
+        "floors_nuacoz_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 2.4172335413202153,
-                "theta_deg": 99.95345515443529,
-                "phi_deg": 93.2377036959428
+                "rho": 4.9254393838425585,
+                "theta_deg": 0.37178602730031896,
+                "phi_deg": 94.33580718031727
             },
             "orientation_in_bot": [
                 0.014150044484243547,
@@ -1152,47 +949,10 @@
                 0.6398491386727295,
                 0.7681821649373278
             ],
-            "bot_in_world": [
-                -1.538582682609558,
-                4.801025390625,
-                0.004799455404281616
-            ],
-            "path": "/shared/liushuai/OmniGibson/trash/seg_instance0_detect_surroundings.png",
-            "bbox2d": [
-                384.0,
-                432.0,
-                1034.0,
-                604.0
-            ]
-        },
-        "floors_ekqfhr_0": {
-            "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
-            ],
-            "position_in_bot": {
-                "rho": 2.764356824019661,
-                "theta_deg": 165.01810721907,
-                "phi_deg": 90.76182199630694
-            },
-            "orientation_in_bot": [
-                0.014150044484243547,
-                0.017000513317544,
-                0.6398491386727295,
-                0.7681821649373278
+            "position_in_world": [
+                -0.6172459283452357,
+                -0.03499866556777487,
+                -0.15000000000000002
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -1207,34 +967,26 @@
                 538.0
             ]
         },
-        "floors_nuacoz_0": {
+        "floors_rqcmwl_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 4.9254393838425585,
-                "theta_deg": 0.37178602730031896,
-                "phi_deg": 94.33580718031727
+                "rho": 6.603240596891063,
+                "theta_deg": 35.55152651252178,
+                "phi_deg": 93.40705709349155
             },
             "orientation_in_bot": [
                 0.014150044484243547,
                 0.017000513317544,
                 0.6398491386727295,
                 0.7681821649373278
+            ],
+            "position_in_world": [
+                3.2025531921424975,
+                0.2075025751915183,
+                -0.15
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -1249,34 +1001,57 @@
                 719.0
             ]
         },
-        "floors_rqcmwl_0": {
+        "floors_tcsswg_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 6.603240596891063,
-                "theta_deg": 35.55152651252178,
-                "phi_deg": 93.40705709349155
+                "rho": 2.3465379791383123,
+                "theta_deg": 64.9473726705749,
+                "phi_deg": 94.86033033021312
             },
             "orientation_in_bot": [
                 0.014150044484243547,
                 0.017000513317544,
                 0.6398491386727295,
                 0.7681821649373278
+            ],
+            "position_in_world": [
+                0.725053161625,
+                4.202502319340001,
+                -0.15000000000000002
+            ],
+            "bot_in_world": [
+                -1.538582682609558,
+                4.801025390625,
+                0.004799455404281616
+            ],
+            "path": "/shared/liushuai/OmniGibson/trash/seg_instance0_detect_surroundings.png",
+            "bbox2d": [
+                384.0,
+                432.0,
+                1034.0,
+                604.0
+            ]
+        },
+        "robot0": {
+            "ability": [],
+            "position_in_bot": {
+                "rho": 0.0,
+                "theta_deg": 0.0,
+                "phi_deg": NaN
+            },
+            "orientation_in_bot": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "position_in_world": [
+                -1.538582682609558,
+                4.801025390625,
+                0.004799380898475647
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -1318,16 +1093,6 @@
                 "floors_rqcmwl_0"
             ],
             [
-                "bed_zrumze_0",
-                "nextto",
-                "table_lamp_xbfgjc_0"
-            ],
-            [
-                "bed_zrumze_0",
-                "ontop",
-                "floors_nuacoz_0"
-            ],
-            [
                 "bottom_cabinet_dajebq_0",
                 "nextto",
                 "door_ohagsq_1"
@@ -1338,12 +1103,37 @@
                 "floors_nuacoz_0"
             ],
             [
+                "bottom_cabinet_jrhgeu_0",
+                "nextto",
+                "bottom_cabinet_jrhgeu_1"
+            ],
+            [
+                "bottom_cabinet_jrhgeu_0",
+                "ontop",
+                "floors_rqcmwl_0"
+            ],
+            [
                 "bottom_cabinet_jrhgeu_1",
                 "nextto",
                 "hamper_wdsnjy_0"
             ],
             [
                 "bottom_cabinet_jrhgeu_1",
+                "nextto",
+                "bottom_cabinet_jrhgeu_0"
+            ],
+            [
+                "bottom_cabinet_jrhgeu_1",
+                "ontop",
+                "floors_rqcmwl_0"
+            ],
+            [
+                "bottom_cabinet_slgzfc_1",
+                "under",
+                "table_lamp_xbfgjc_1"
+            ],
+            [
+                "bottom_cabinet_slgzfc_1",
                 "ontop",
                 "floors_rqcmwl_0"
             ],
@@ -1353,9 +1143,9 @@
                 "bottom_cabinet_jrhgeu_1"
             ],
             [
-                "table_lamp_xbfgjc_0",
-                "nextto",
-                "bed_zrumze_0"
+                "table_lamp_xbfgjc_1",
+                "ontop",
+                "bottom_cabinet_slgzfc_1"
             ],
             [
                 "table_lamp_xbfgjc_3",
@@ -1383,6 +1173,11 @@
                 "bottom_cabinet_slgzfc_4"
             ],
             [
+                "dishwasher_dngvvi_0",
+                "nextto",
+                "robot0"
+            ],
+            [
                 "door_lvgliq_0",
                 "nextto",
                 "bottom_cabinet_slgzfc_4"
@@ -1398,11 +1193,6 @@
                 "trash_can_zotrbg_0"
             ],
             [
-                "picture_fanvpf_0",
-                "nextto",
-                "picture_zsirgc_0"
-            ],
-            [
                 "picture_qjkajj_0",
                 "nextto",
                 "picture_tlwjpv_0"
@@ -1413,105 +1203,24 @@
                 "picture_qjkajj_0"
             ],
             [
-                "picture_tlwjpv_0",
-                "nextto",
-                "picture_zsirgc_0"
-            ],
-            [
-                "picture_zsirgc_0",
-                "nextto",
-                "picture_fanvpf_0"
-            ],
-            [
-                "picture_zsirgc_0",
-                "nextto",
-                "picture_tlwjpv_0"
-            ],
-            [
-                "floors_aafddg_0",
-                "nextto",
-                "floors_ekqfhr_0"
-            ],
-            [
-                "floors_ekqfhr_0",
-                "nextto",
-                "floors_aafddg_0"
-            ],
-            [
                 "floors_nuacoz_0",
-                "nextto",
-                "floors_rqcmwl_0"
+                "under",
+                "carpet_ctclvd_0"
             ],
             [
-                "floors_rqcmwl_0",
+                "robot0",
                 "nextto",
-                "floors_nuacoz_0"
+                "dishwasher_dngvvi_0"
             ]
         ],
         "inventory": []
     },
     "1_detect_surroundings": {
-        "armchair_qplklw_1": {
-            "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "Inside",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnFire",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
-            ],
-            "position_in_bot": {
-                "rho": 3.4787339840646028,
-                "theta_deg": 162.10153316256194,
-                "phi_deg": 80.07292979852551
-            },
-            "orientation_in_bot": [
-                0.014150243819808337,
-                0.017000598000370046,
-                0.6398490142800247,
-                0.7681822630029612
-            ],
-            "bot_in_world": [
-                -1.538582682609558,
-                4.801025390625,
-                0.004799455404281616
-            ],
-            "path": "/shared/liushuai/OmniGibson/trash/seg_instance1_detect_surroundings.png",
-            "bbox2d": [
-                892.0,
-                306.0,
-                893.0,
-                306.0
-            ]
-        },
         "floor_lamp_vdxlda_1": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "ToggledOn",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "toggled_on",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 6.497479212484044,
@@ -1523,6 +1232,11 @@
                 0.016913166338520202,
                 0.642275750649573,
                 0.7661526690560958
+            ],
+            "position_in_world": [
+                4.8092942237854,
+                5.9115777015686035,
+                0.8344779014587402
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -1539,22 +1253,8 @@
         },
         "pot_plant_udqjui_2": {
             "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "Inside",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnFire",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 6.708402764835964,
@@ -1566,6 +1266,11 @@
                 0.015914395453005794,
                 0.6392200420807208,
                 0.7687471965163574
+            ],
+            "position_in_world": [
+                4.7966437339782715,
+                6.9397783279418945,
+                0.5463782548904419
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -1580,69 +1285,10 @@
                 338.0
             ]
         },
-        "table_lamp_xbfgjc_2": {
-            "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "ToggledOn",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
-            ],
-            "position_in_bot": {
-                "rho": 9.274514549088993,
-                "theta_deg": 38.92308246472743,
-                "phi_deg": 91.165266224616
-            },
-            "orientation_in_bot": [
-                0.7614901026987003,
-                -0.30607078938796256,
-                0.17077508977424652,
-                0.5452424819178622
-            ],
-            "bot_in_world": [
-                -1.538582682609558,
-                4.801025390625,
-                0.004799455404281616
-            ],
-            "path": "/shared/liushuai/OmniGibson/trash/seg_instance1_detect_surroundings.png",
-            "bbox2d": [
-                643.0,
-                256.0,
-                653.0,
-                268.0
-            ]
-        },
         "trash_can_zotrbg_1": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "ContainedParticles",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "Contains",
-                "Filled",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 4.158095915110925,
@@ -1654,6 +1300,11 @@
                 0.014910838838051912,
                 0.6139295919236338,
                 0.7891555346883775
+            ],
+            "position_in_world": [
+                2.5882506370544434,
+                4.361018180847168,
+                0.2605358362197876
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -1670,23 +1321,8 @@
         },
         "bathtub_fdjykf_0": {
             "ability": [
-                "ContactBodies",
-                "Pose",
-                "AABB",
-                "ContactParticles",
-                "ModifiedParticles",
-                "Covered",
-                "Saturated",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 6.180798449321263,
@@ -1698,6 +1334,11 @@
                 0.0220230656206936,
                 -0.09255531512083554,
                 0.995461838863375
+            ],
+            "position_in_world": [
+                4.612729549407959,
+                4.226726055145264,
+                0.1886620819568634
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -1712,39 +1353,26 @@
                 363.0
             ]
         },
-        "carpet_ctclvd_0": {
+        "carpet_ctclvd_1": {
             "ability": [
-                "ContactBodies",
-                "Pose",
-                "AABB",
-                "ContactParticles",
-                "ModifiedParticles",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "Covered",
-                "Saturated",
-                "Temperature",
-                "Inside",
-                "Touching",
-                "ParticleRemover",
-                "Heated",
-                "Frozen",
-                "OnFire",
-                "Overlaid",
-                "OnTop",
-                "Under",
-                "NextTo"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 5.250912400253549,
-                "theta_deg": -1.4893799895687074,
-                "phi_deg": 92.56043465262711
+                "rho": 4.922728089808143,
+                "theta_deg": 146.04569974607077,
+                "phi_deg": 87.9257315587184
             },
             "orientation_in_bot": [
-                0.02202225777807651,
-                0.0020643089821834213,
-                0.9954252995199702,
-                0.09294746831603128
+                0.02202677022509822,
+                0.00201558990752567,
+                0.9956284672893766,
+                0.09074532447339766
+            ],
+            "position_in_world": [
+                0.4254139785774999,
+                9.314999511718668,
+                0.0023727299549999997
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -1761,22 +1389,9 @@
         },
         "door_lvgliq_1": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 2.996238146080463,
@@ -1788,6 +1403,11 @@
                 -0.014150041174006828,
                 0.7681822895188839,
                 -0.6398489891041232
+            ],
+            "position_in_world": [
+                0.7105916142463684,
+                6.414919376373291,
+                1.1510995626449585
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -1804,22 +1424,9 @@
         },
         "door_lvgliq_4": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 4.152694177967766,
@@ -1831,6 +1438,11 @@
                 0.002015590145829894,
                 0.9956284672828747,
                 0.09074532446812769
+            ],
+            "position_in_world": [
+                2.280008554458618,
+                3.6394639015197754,
+                1.1510995626449585
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -1847,22 +1459,9 @@
         },
         "door_lvgliq_6": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 4.005995003985172,
@@ -1874,6 +1473,11 @@
                 0.02201988249188738,
                 -0.0940858333499051,
                 0.9953183484469673
+            ],
+            "position_in_world": [
+                2.2801008224487305,
+                5.190445899963379,
+                1.1510992050170898
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -1890,23 +1494,9 @@
         },
         "fridge_xyejdx_0": {
             "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Inside",
-                "Open",
-                "HeatSourceOrSink",
-                "Temperature",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 1.8155932933962928,
@@ -1918,6 +1508,11 @@
                 0.022021858244739102,
                 -0.09313890236548741,
                 0.9954074059059516
+            ],
+            "position_in_world": [
+                -0.1851631999015808,
+                3.9132142066955566,
+                0.827250599861145
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -1934,21 +1529,8 @@
         },
         "mirror_pevdqu_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 5.714170247183119,
@@ -1960,6 +1542,11 @@
                 -0.014150041174121632,
                 0.7681822895205177,
                 -0.6398489891021548
+            ],
+            "position_in_world": [
+                3.8350537109356515,
+                5.655453613279763,
+                1.7499998883490133
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -1976,22 +1563,8 @@
         },
         "picture_etixod_0": {
             "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "Inside",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnFire",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 8.28842998964611,
@@ -2003,6 +1576,11 @@
                 0.017000513317544,
                 0.6398491386727295,
                 0.7681821649373278
+            ],
+            "position_in_world": [
+                4.54505339405094,
+                10.176722320072352,
+                1.6749255398491152
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -2019,22 +1597,8 @@
         },
         "picture_yrgaal_0": {
             "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "Inside",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnFire",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 7.530954544499986,
@@ -2046,6 +1610,11 @@
                 0.022026770904703088,
                 -0.09074498877257947,
                 0.9956284978863551
+            ],
+            "position_in_world": [
+                5.067337612977139,
+                7.940001829784858,
+                1.8003268015379905
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -2062,22 +1631,9 @@
         },
         "range_hood_iqbpie_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "ToggledOn",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "toggled_on",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 2.5787190942559497,
@@ -2089,6 +1645,11 @@
                 0.022026772495702278,
                 -0.09074431738030869,
                 0.9956285590748382
+            ],
+            "position_in_world": [
+                -0.152461975812912,
+                5.917507648468018,
+                1.870792031288147
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -2105,21 +1666,8 @@
         },
         "shelf_owvfik_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 1.4385204655446604,
@@ -2131,6 +1679,11 @@
                 0.022026770904703088,
                 -0.09074498877257947,
                 0.9956284978863551
+            ],
+            "position_in_world": [
+                -0.16995468916905127,
+                4.89994335437812,
+                0.43655594484039595
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -2145,28 +1698,45 @@
                 719.0
             ]
         },
+        "shelf_vgzdul_0": {
+            "ability": [
+                "hot",
+                "frozen"
+            ],
+            "position_in_bot": {
+                "rho": 2.2066240700551294,
+                "theta_deg": 89.6153081905936,
+                "phi_deg": 48.81341243595126
+            },
+            "orientation_in_bot": [
+                -0.001988257446946357,
+                0.022029254221443046,
+                -0.08950987465196562,
+                0.9957402980348647
+            ],
+            "position_in_world": [
+                0.08502709891058287,
+                5.153485150313777,
+                1.4569883978948837
+            ],
+            "bot_in_world": [
+                -1.538582682609558,
+                4.801025390625,
+                0.004799455404281616
+            ],
+            "path": "/shared/liushuai/OmniGibson/trash/seg_instance1_detect_surroundings.png",
+            "bbox2d": [
+                509.0,
+                13.0,
+                732.0,
+                229.0
+            ]
+        },
         "sink_czyfhq_0": {
             "ability": [
-                "ContactBodies",
-                "Pose",
-                "AABB",
-                "ContactParticles",
-                "ModifiedParticles",
-                "ToggledOn",
-                "Covered",
-                "Saturated",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ParticleSource",
-                "ParticleSink",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside"
+                "toggled_on",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 0.9024097241928047,
@@ -2179,6 +1749,11 @@
                 0.995628568064012,
                 0.09074423338768313
             ],
+            "position_in_world": [
+                -2.300387144088745,
+                4.8284077644348145,
+                0.4877564311027527
+            ],
             "bot_in_world": [
                 -1.538582682609558,
                 4.801025390625,
@@ -2187,30 +1762,16 @@
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance1_detect_surroundings.png",
             "bbox2d": [
                 215.0,
-                13.0,
-                732.0,
+                352.0,
+                263.0,
                 393.0
             ]
         },
         "stove_rgpphy_0": {
             "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Inside",
-                "ToggledOn",
-                "HeatSourceOrSink",
-                "Temperature",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
+                "toggled_on",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 1.7893529393058065,
@@ -2222,6 +1783,11 @@
                 0.022026803507439286,
                 -0.09074498900313067,
                 0.9956284971651276
+            ],
+            "position_in_world": [
+                -0.23843911290168762,
+                5.909679889678955,
+                0.5361145734786987
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -2238,24 +1804,8 @@
         },
         "toilet_kfmkbm_0": {
             "ability": [
-                "ContactBodies",
-                "Pose",
-                "AABB",
-                "ContactParticles",
-                "ModifiedParticles",
-                "Covered",
-                "Saturated",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ParticleSink",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 5.242821425870466,
@@ -2267,6 +1817,11 @@
                 0.01700066610157086,
                 0.6398491316046296,
                 0.7681821640737441
+            ],
+            "position_in_world": [
+                3.685638904571533,
+                5.098461627960205,
+                0.33070671558380127
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -2283,22 +1838,9 @@
         },
         "top_cabinet_fqhdne_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 4.553482204124002,
@@ -2310,6 +1852,11 @@
                 0.017000513317544,
                 0.6398491386727295,
                 0.7681821649373278
+            ],
+            "position_in_world": [
+                2.709549903869629,
+                4.545708656311035,
+                1.6241765022277832
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -2324,34 +1871,60 @@
                 211.0
             ]
         },
-        "floors_gwawvk_0": {
+        "floors_cborev_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 5.391257182983045,
-                "theta_deg": 74.11012589562729,
-                "phi_deg": 92.34216029698884
+                "rho": 2.875731463897838,
+                "theta_deg": -4.467284862488911,
+                "phi_deg": 95.6127909087173
             },
             "orientation_in_bot": [
                 0.014150044484243547,
                 0.017000513317544,
                 0.6398491386727295,
                 0.7681821649373278
+            ],
+            "position_in_world": [
+                -1.240252685545,
+                1.94500231934,
+                -0.14999999999999997
+            ],
+            "bot_in_world": [
+                -1.538582682609558,
+                4.801025390625,
+                0.004799455404281616
+            ],
+            "path": "/shared/liushuai/OmniGibson/trash/seg_instance1_detect_surroundings.png",
+            "bbox2d": [
+                722.0,
+                482.0,
+                1198.0,
+                719.0
+            ]
+        },
+        "floors_ekqfhr_0": {
+            "ability": [
+                "hot",
+                "frozen"
+            ],
+            "position_in_bot": {
+                "rho": 2.764356824019661,
+                "theta_deg": 165.01810721907,
+                "phi_deg": 90.76182199630694
+            },
+            "orientation_in_bot": [
+                0.014150044484243547,
+                0.017000513317544,
+                0.6398491386727295,
+                0.7681821649373278
+            ],
+            "position_in_world": [
+                -1.3177527770973594,
+                7.552196035317368,
+                -0.15000012206999996
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -2366,34 +1939,26 @@
                 480.0
             ]
         },
-        "floors_mowtdm_0": {
+        "floors_gwawvk_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 4.256691669001657,
-                "theta_deg": 84.11749135849624,
-                "phi_deg": 92.34697407443997
+                "rho": 5.391257182983045,
+                "theta_deg": 74.11012589562729,
+                "phi_deg": 92.34216029698884
             },
             "orientation_in_bot": [
                 0.014150044484243547,
                 0.017000513317544,
                 0.6398491386727295,
                 0.7681821649373278
+            ],
+            "position_in_world": [
+                3.825104738715436,
+                4.278965128365929,
+                -0.14999999999999997
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -2403,39 +1968,31 @@
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance1_detect_surroundings.png",
             "bbox2d": [
                 0.0,
-                561.0,
-                268.0,
-                719.0
+                324.0,
+                682.0,
+                669.0
             ]
         },
-        "floors_nuacoz_0": {
+        "floors_rqcmwl_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 4.9254393838425585,
-                "theta_deg": 0.37178602730031896,
-                "phi_deg": 94.33580718031727
+                "rho": 6.603240596891063,
+                "theta_deg": 35.55152651252178,
+                "phi_deg": 93.40705709349155
             },
             "orientation_in_bot": [
                 0.014150044484243547,
                 0.017000513317544,
                 0.6398491386727295,
                 0.7681821649373278
+            ],
+            "position_in_world": [
+                3.2025531921424975,
+                0.2075025751915183,
+                -0.15
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -2452,21 +2009,8 @@
         },
         "floors_suqrjf_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 3.207755742013601,
@@ -2478,6 +2022,11 @@
                 0.017000513317544,
                 0.6398491386727295,
                 0.7681821649373278
+            ],
+            "position_in_world": [
+                1.4646795057095834,
+                3.6847144432108494,
+                -0.15000000000000002
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -2492,65 +2041,10 @@
                 719.0
             ]
         },
-        "floors_tcsswg_0": {
-            "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
-            ],
-            "position_in_bot": {
-                "rho": 2.3465379791383123,
-                "theta_deg": 64.9473726705749,
-                "phi_deg": 94.86033033021312
-            },
-            "orientation_in_bot": [
-                0.014150044484243547,
-                0.017000513317544,
-                0.6398491386727295,
-                0.7681821649373278
-            ],
-            "bot_in_world": [
-                -1.538582682609558,
-                4.801025390625,
-                0.004799455404281616
-            ],
-            "path": "/shared/liushuai/OmniGibson/trash/seg_instance1_detect_surroundings.png",
-            "bbox2d": [
-                722.0,
-                482.0,
-                1198.0,
-                719.0
-            ]
-        },
         "floors_xzlkei_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 5.289585512616023,
@@ -2563,6 +2057,11 @@
                 0.6398491386727295,
                 0.7681821649373278
             ],
+            "position_in_world": [
+                2.673383762779977,
+                7.997131010356066,
+                -0.15000012206999996
+            ],
             "bot_in_world": [
                 -1.538582682609558,
                 4.801025390625,
@@ -2571,26 +2070,13 @@
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance1_detect_surroundings.png",
             "bbox2d": [
                 0.0,
-                324.0,
-                682.0,
-                669.0
+                561.0,
+                268.0,
+                719.0
             ]
         },
         "robot0": {
-            "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
-            ],
+            "ability": [],
             "position_in_bot": {
                 "rho": 0.0,
                 "theta_deg": 0.0,
@@ -2602,6 +2088,11 @@
                 0.0,
                 1.0
             ],
+            "position_in_world": [
+                -1.538582682609558,
+                4.801025390625,
+                0.004799380898475647
+            ],
             "bot_in_world": [
                 -1.538582682609558,
                 4.801025390625,
@@ -2610,30 +2101,16 @@
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance1_detect_surroundings.png",
             "bbox2d": [
                 291.0,
-                381.0,
-                768.0,
+                347.0,
+                1279.0,
                 699.0
             ]
         },
         "griddle_157": {
             "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Inside",
-                "ToggledOn",
-                "HeatSourceOrSink",
-                "Temperature",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
+                "toggled_on",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 1.8941361978025335,
@@ -2646,6 +2123,11 @@
                 0.08647323924692688,
                 0.9960018664902311
             ],
+            "position_in_world": [
+                -0.3428764045238495,
+                5.984163284301758,
+                0.8755595088005066
+            ],
             "bot_in_world": [
                 -1.538582682609558,
                 4.801025390625,
@@ -2656,7 +2138,7 @@
                 176.0,
                 344.0,
                 288.0,
-                393.0
+                387.0
             ]
         },
         "scene_graph": [
@@ -2731,96 +2213,6 @@
                 "bathtub_fdjykf_0"
             ],
             [
-                "floors_gwawvk_0",
-                "nextto",
-                "floors_mowtdm_0"
-            ],
-            [
-                "floors_gwawvk_0",
-                "nextto",
-                "floors_suqrjf_0"
-            ],
-            [
-                "floors_gwawvk_0",
-                "nextto",
-                "floors_xzlkei_0"
-            ],
-            [
-                "floors_mowtdm_0",
-                "nextto",
-                "floors_gwawvk_0"
-            ],
-            [
-                "floors_mowtdm_0",
-                "nextto",
-                "floors_suqrjf_0"
-            ],
-            [
-                "floors_mowtdm_0",
-                "nextto",
-                "floors_xzlkei_0"
-            ],
-            [
-                "floors_nuacoz_0",
-                "under",
-                "carpet_ctclvd_0"
-            ],
-            [
-                "floors_nuacoz_0",
-                "nextto",
-                "floors_suqrjf_0"
-            ],
-            [
-                "floors_suqrjf_0",
-                "nextto",
-                "floors_gwawvk_0"
-            ],
-            [
-                "floors_suqrjf_0",
-                "nextto",
-                "floors_mowtdm_0"
-            ],
-            [
-                "floors_suqrjf_0",
-                "nextto",
-                "floors_nuacoz_0"
-            ],
-            [
-                "floors_suqrjf_0",
-                "inside",
-                "floors_tcsswg_0"
-            ],
-            [
-                "floors_suqrjf_0",
-                "nextto",
-                "floors_tcsswg_0"
-            ],
-            [
-                "floors_suqrjf_0",
-                "nextto",
-                "floors_xzlkei_0"
-            ],
-            [
-                "floors_tcsswg_0",
-                "nextto",
-                "floors_suqrjf_0"
-            ],
-            [
-                "floors_xzlkei_0",
-                "nextto",
-                "floors_gwawvk_0"
-            ],
-            [
-                "floors_xzlkei_0",
-                "nextto",
-                "floors_mowtdm_0"
-            ],
-            [
-                "floors_xzlkei_0",
-                "nextto",
-                "floors_suqrjf_0"
-            ],
-            [
                 "robot0",
                 "nextto",
                 "sink_czyfhq_0"
@@ -2841,22 +2233,8 @@
     "2_detect_surroundings": {
         "armchair_qplklw_0": {
             "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "Inside",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnFire",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 3.2220005552373254,
@@ -2868,6 +2246,11 @@
                 0.022001861433811398,
                 -0.10231357362161175,
                 0.9945062552898859
+            ],
+            "position_in_world": [
+                -0.2052396833896637,
+                7.698700904846191,
+                0.45972856879234314
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -2882,35 +2265,26 @@
                 522.0
             ]
         },
-        "armchair_qplklw_2": {
+        "armchair_qplklw_1": {
             "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "Inside",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnFire",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 2.427920095815333,
-                "theta_deg": 157.94097038916652,
-                "phi_deg": 76.84975223270352
+                "rho": 3.4787339840646028,
+                "theta_deg": 162.10153316256194,
+                "phi_deg": 80.07292979852551
             },
             "orientation_in_bot": [
-                0.01682215692127834,
-                -0.014360979680288842,
-                0.7601252492195383,
-                -0.649400017553182
+                0.014150243819808337,
+                0.017000598000370046,
+                0.6398490142800247,
+                0.7681822630029612
+            ],
+            "position_in_world": [
+                -1.0965521335601807,
+                8.221440315246582,
+                0.4597289264202118
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -2919,30 +2293,16 @@
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance2_detect_surroundings.png",
             "bbox2d": [
-                801.0,
-                333.0,
-                958.0,
-                562.0
+                786.0,
+                290.0,
+                888.0,
+                465.0
             ]
         },
         "armchair_qplklw_3": {
             "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "Inside",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnFire",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 2.9136432530827907,
@@ -2954,6 +2314,11 @@
                 0.002522961597899121,
                 0.9932712699392107,
                 0.11367910427814118
+            ],
+            "position_in_world": [
+                -1.9280672073364258,
+                7.652456283569336,
+                0.4597286880016327
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -2968,35 +2333,27 @@
                 497.0
             ]
         },
-        "bottom_cabinet_bamfsz_0": {
+        "bottom_cabinet_dajebq_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 6.418673664779476,
-                "theta_deg": -7.157382927171992,
-                "phi_deg": 89.58304548394676
+                "rho": 3.665377595441036,
+                "theta_deg": 8.791800139878262,
+                "phi_deg": 83.45392721071973
             },
             "orientation_in_bot": [
-                0.01700038482307403,
-                -0.014150334388372108,
-                0.7681820223101649,
-                -0.63984930690908
+                0.014150133632099316,
+                0.017001259417324506,
+                0.6398305643334586,
+                0.7681976177007751
+            ],
+            "position_in_world": [
+                -0.34456777572631836,
+                1.383887529373169,
+                0.5814189314842224
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -3005,30 +2362,17 @@
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance2_detect_surroundings.png",
             "bbox2d": [
-                1073.0,
-                298.0,
-                1177.0,
-                320.0
+                1068.0,
+                319.0,
+                1173.0,
+                352.0
             ]
         },
         "bottom_cabinet_jhymlr_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 5.822040448871693,
@@ -3041,6 +2385,11 @@
                 0.6398492315817187,
                 0.7681821033296995
             ],
+            "position_in_world": [
+                0.9149700999259949,
+                10.069914817810059,
+                0.3439715504646301
+            ],
             "bot_in_world": [
                 -1.538582682609558,
                 4.801025390625,
@@ -3048,73 +2397,17 @@
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance2_detect_surroundings.png",
             "bbox2d": [
-                986.0,
+                801.0,
                 291.0,
                 1177.0,
-                390.0
-            ]
-        },
-        "bottom_cabinet_jrhgeu_0": {
-            "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
-            ],
-            "position_in_bot": {
-                "rho": 5.253374546174051,
-                "theta_deg": 24.57392232192685,
-                "phi_deg": 86.95612380357059
-            },
-            "orientation_in_bot": [
-                0.025634088916732613,
-                -0.021040316704163422,
-                0.9952773074933304,
-                0.09123201054029413
-            ],
-            "bot_in_world": [
-                -1.538582682609558,
-                4.801025390625,
-                0.004799455404281616
-            ],
-            "path": "/shared/liushuai/OmniGibson/trash/seg_instance2_detect_surroundings.png",
-            "bbox2d": [
-                1064.0,
-                351.0,
-                1167.0,
-                384.0
+                562.0
             ]
         },
         "bottom_cabinet_slgzfc_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 8.802080517402286,
@@ -3126,6 +2419,11 @@
                 0.022026653915478697,
                 -0.09074545438693547,
                 0.9956284583845251
+            ],
+            "position_in_world": [
+                4.874765396118164,
+                -1.2227379083633423,
+                0.2494642585515976
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -3142,21 +2440,8 @@
         },
         "breakfast_table_skczfi_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 2.996179775061189,
@@ -3168,6 +2453,11 @@
                 0.017000982774108532,
                 0.6398486883837978,
                 0.768182552650965
+            ],
+            "position_in_world": [
+                -1.06659734249115,
+                7.6913604736328125,
+                0.6374810934066772
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -3184,22 +2474,8 @@
         },
         "pot_plant_udqjui_1": {
             "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "Inside",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnFire",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 3.608828966891235,
@@ -3211,6 +2487,11 @@
                 0.01562772145180566,
                 0.6390186402663804,
                 0.7689254072042809
+            ],
+            "position_in_world": [
+                -2.298452854156494,
+                8.271768569946289,
+                0.6374016404151917
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -3225,68 +2506,11 @@
                 432.0
             ]
         },
-        "bathtub_fdjykf_0": {
-            "ability": [
-                "ContactBodies",
-                "Pose",
-                "AABB",
-                "ContactParticles",
-                "ModifiedParticles",
-                "Covered",
-                "Saturated",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside"
-            ],
-            "position_in_bot": {
-                "rho": 6.180798449321263,
-                "theta_deg": 74.19280370032996,
-                "phi_deg": 88.98558935584691
-            },
-            "orientation_in_bot": [
-                -0.002055624065214148,
-                0.0220230656206936,
-                -0.09255531512083554,
-                0.995461838863375
-            ],
-            "bot_in_world": [
-                -1.538582682609558,
-                4.801025390625,
-                0.004799455404281616
-            ],
-            "path": "/shared/liushuai/OmniGibson/trash/seg_instance2_detect_surroundings.png",
-            "bbox2d": [
-                786.0,
-                290.0,
-                888.0,
-                465.0
-            ]
-        },
         "bottom_cabinet_slgzfc_2": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 1.2177469998457657,
@@ -3298,6 +2522,11 @@
                 0.001971179122245005,
                 0.9958093836634115,
                 0.08873798591713734
+            ],
+            "position_in_world": [
+                -2.38492751121521,
+                5.5549516677856445,
+                0.44999974966049194
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -3314,22 +2543,9 @@
         },
         "bottom_cabinet_slgzfc_3": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 1.5929194132741247,
@@ -3341,6 +2557,11 @@
                 0.001971179122245005,
                 0.9958093836634115,
                 0.08873798591713734
+            ],
+            "position_in_world": [
+                -2.38492751121521,
+                6.074952125549316,
+                0.44999974966049194
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -3355,39 +2576,26 @@
                 719.0
             ]
         },
-        "carpet_ctclvd_1": {
+        "carpet_ctclvd_2": {
             "ability": [
-                "ContactBodies",
-                "Pose",
-                "AABB",
-                "ContactParticles",
-                "ModifiedParticles",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "Covered",
-                "Saturated",
-                "Temperature",
-                "Inside",
-                "Touching",
-                "ParticleRemover",
-                "Heated",
-                "Frozen",
-                "OnFire",
-                "Overlaid",
-                "OnTop",
-                "Under",
-                "NextTo"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 4.922728089808143,
-                "theta_deg": 146.04569974607077,
-                "phi_deg": 87.9257315587184
+                "rho": 5.939756060527039,
+                "theta_deg": 109.95128277972096,
+                "phi_deg": 89.15884840138065
             },
             "orientation_in_bot": [
-                0.02202677022509822,
-                0.00201558990752567,
-                0.9956284672893766,
-                0.09074532447339766
+                -0.0019431168750438169,
+                0.022033281781077246,
+                -0.08746948468856125,
+                0.9959216073763452
+            ],
+            "position_in_world": [
+                3.585387208977476,
+                7.805293700379685,
+                0.002372729955
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -3404,22 +2612,9 @@
         },
         "door_lvgliq_7": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 4.913136832630704,
@@ -3431,6 +2626,11 @@
                 0.0019681139091373033,
                 0.9958217275032288,
                 0.08859935561639451
+            ],
+            "position_in_world": [
+                0.03497256338596344,
+                9.311993598937988,
+                1.1510992050170898
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -3445,35 +2645,26 @@
                 416.0
             ]
         },
-        "picture_fhkzlm_0": {
+        "picture_rciuob_0": {
             "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "Inside",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnFire",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 4.25107759523321,
-                "theta_deg": -178.67685764595163,
-                "phi_deg": 63.9621227320874
+                "rho": 5.171734222845158,
+                "theta_deg": 23.30148721600818,
+                "phi_deg": 73.1895298023367
             },
             "orientation_in_bot": [
-                0.014150044484243547,
-                0.017000513317544,
-                0.6398491386727295,
-                0.7681821649373278
+                -0.001955528756639702,
+                0.022032183652890645,
+                -0.08803051151542057,
+                0.9958721744446426
+            ],
+            "position_in_world": [
+                1.1967347367601655,
+                0.7524930924354428,
+                1.7001633781806251
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -3490,22 +2681,8 @@
         },
         "picture_weqggl_0": {
             "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "Inside",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnFire",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 2.3327163633590082,
@@ -3517,6 +2694,11 @@
                 0.017000513317544,
                 0.6398491386727295,
                 0.7681821649373278
+            ],
+            "position_in_world": [
+                -1.9249468380733468,
+                6.328299333779766,
+                1.7251837760686988
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -3533,26 +2715,9 @@
         },
         "sink_czyfhq_0": {
             "ability": [
-                "ContactBodies",
-                "Pose",
-                "AABB",
-                "ContactParticles",
-                "ModifiedParticles",
-                "ToggledOn",
-                "Covered",
-                "Saturated",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ParticleSource",
-                "ParticleSink",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside"
+                "toggled_on",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 0.9024097241928047,
@@ -3564,6 +2729,11 @@
                 0.0020155683771419125,
                 0.995628568064012,
                 0.09074423338768313
+            ],
+            "position_in_world": [
+                -2.300387144088745,
+                4.8284077644348145,
+                0.4877564311027527
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -3580,23 +2750,9 @@
         },
         "stove_rgpphy_0": {
             "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Inside",
-                "ToggledOn",
-                "HeatSourceOrSink",
-                "Temperature",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
+                "toggled_on",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 1.7893529393058065,
@@ -3608,6 +2764,11 @@
                 0.022026803507439286,
                 -0.09074498900313067,
                 0.9956284971651276
+            ],
+            "position_in_world": [
+                -0.23843911290168762,
+                5.909679889678955,
+                0.5361145734786987
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -3624,22 +2785,9 @@
         },
         "top_cabinet_dmwxyl_1": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 2.349256603688053,
@@ -3651,6 +2799,11 @@
                 0.0020155907636326582,
                 0.9956284672515269,
                 0.09074532445447056
+            ],
+            "position_in_world": [
+                -2.4792513847351074,
+                5.838789463043213,
+                1.8908520936965942
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -3667,21 +2820,8 @@
         },
         "towel_rack_kqrmrh_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 6.097273994079301,
@@ -3693,6 +2833,11 @@
                 0.017000513317544,
                 0.6398491386727295,
                 0.7681821649373278
+            ],
+            "position_in_world": [
+                0.6850543390021323,
+                10.157961268187501,
+                1.8850734172566177
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -3707,34 +2852,26 @@
                 139.0
             ]
         },
-        "floors_mowtdm_0": {
+        "floors_gwawvk_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 4.256691669001657,
-                "theta_deg": 84.11749135849624,
-                "phi_deg": 92.34697407443997
+                "rho": 5.391257182983045,
+                "theta_deg": 74.11012589562729,
+                "phi_deg": 92.34216029698884
             },
             "orientation_in_bot": [
                 0.014150044484243547,
                 0.017000513317544,
                 0.6398491386727295,
                 0.7681821649373278
+            ],
+            "position_in_world": [
+                3.825104738715436,
+                4.278965128365929,
+                -0.14999999999999997
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -3743,40 +2880,32 @@
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance2_detect_surroundings.png",
             "bbox2d": [
-                395.0,
-                406.0,
+                937.0,
+                371.0,
                 1279.0,
                 719.0
             ]
         },
-        "floors_nuacoz_0": {
+        "floors_rqcmwl_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 4.9254393838425585,
-                "theta_deg": 0.37178602730031896,
-                "phi_deg": 94.33580718031727
+                "rho": 6.603240596891063,
+                "theta_deg": 35.55152651252178,
+                "phi_deg": 93.40705709349155
             },
             "orientation_in_bot": [
                 0.014150044484243547,
                 0.017000513317544,
                 0.6398491386727295,
                 0.7681821649373278
+            ],
+            "position_in_world": [
+                3.2025531921424975,
+                0.2075025751915183,
+                -0.15
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -3793,21 +2922,8 @@
         },
         "floors_xzlkei_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 5.289585512616023,
@@ -3820,6 +2936,11 @@
                 0.6398491386727295,
                 0.7681821649373278
             ],
+            "position_in_world": [
+                2.673383762779977,
+                7.997131010356066,
+                -0.15000012206999996
+            ],
             "bot_in_world": [
                 -1.538582682609558,
                 4.801025390625,
@@ -3827,8 +2948,8 @@
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance2_detect_surroundings.png",
             "bbox2d": [
-                937.0,
-                371.0,
+                395.0,
+                406.0,
                 1279.0,
                 719.0
             ]
@@ -3840,7 +2961,7 @@
                 "breakfast_table_skczfi_0"
             ],
             [
-                "armchair_qplklw_2",
+                "armchair_qplklw_1",
                 "nextto",
                 "breakfast_table_skczfi_0"
             ],
@@ -3855,19 +2976,14 @@
                 "pot_plant_udqjui_1"
             ],
             [
-                "bottom_cabinet_bamfsz_0",
-                "ontop",
-                "floors_nuacoz_0"
-            ],
-            [
-                "bottom_cabinet_jhymlr_0",
-                "nextto",
-                "carpet_ctclvd_1"
-            ],
-            [
                 "bottom_cabinet_jhymlr_0",
                 "ontop",
                 "floors_xzlkei_0"
+            ],
+            [
+                "bottom_cabinet_slgzfc_0",
+                "ontop",
+                "floors_rqcmwl_0"
             ],
             [
                 "breakfast_table_skczfi_0",
@@ -3877,7 +2993,7 @@
             [
                 "breakfast_table_skczfi_0",
                 "nextto",
-                "armchair_qplklw_2"
+                "armchair_qplklw_1"
             ],
             [
                 "breakfast_table_skczfi_0",
@@ -3925,21 +3041,6 @@
                 "top_cabinet_dmwxyl_1"
             ],
             [
-                "carpet_ctclvd_1",
-                "nextto",
-                "bottom_cabinet_jhymlr_0"
-            ],
-            [
-                "carpet_ctclvd_1",
-                "nextto",
-                "door_lvgliq_7"
-            ],
-            [
-                "door_lvgliq_7",
-                "nextto",
-                "carpet_ctclvd_1"
-            ],
-            [
                 "picture_weqggl_0",
                 "nextto",
                 "top_cabinet_dmwxyl_1"
@@ -3953,16 +3054,6 @@
                 "top_cabinet_dmwxyl_1",
                 "nextto",
                 "picture_weqggl_0"
-            ],
-            [
-                "floors_mowtdm_0",
-                "nextto",
-                "floors_xzlkei_0"
-            ],
-            [
-                "floors_xzlkei_0",
-                "nextto",
-                "floors_mowtdm_0"
             ]
         ],
         "inventory": []
@@ -3970,22 +3061,9 @@
     "3_detect_surroundings": {
         "bottom_cabinet_slgzfc_2": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 1.2177469998457657,
@@ -3997,6 +3075,11 @@
                 0.001971179122245005,
                 0.9958093836634115,
                 0.08873798591713734
+            ],
+            "position_in_world": [
+                -2.38492751121521,
+                5.5549516677856445,
+                0.44999974966049194
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -4013,22 +3096,9 @@
         },
         "bottom_cabinet_slgzfc_4": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 1.4987523858320857,
@@ -4040,6 +3110,11 @@
                 0.0020156020022943093,
                 0.9956284022418753,
                 0.09074603791920707
+            ],
+            "position_in_world": [
+                -2.379021644592285,
+                3.642699956893921,
+                0.4499996602535248
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -4056,23 +3131,10 @@
         },
         "dishwasher_dngvvi_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "ToggledOn",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "toggled_on",
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 1.1596635336673848,
@@ -4084,6 +3146,11 @@
                 0.001986398782520539,
                 0.9957479144586735,
                 0.08942510108473795
+            ],
+            "position_in_world": [
+                -2.3353991508483887,
+                4.092134475708008,
+                0.46018579602241516
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -4100,22 +3167,9 @@
         },
         "door_lvgliq_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 2.4768287486850475,
@@ -4127,6 +3181,11 @@
                 0.002015589997400903,
                 0.995628467296898,
                 0.09074532447139236
+            ],
+            "position_in_world": [
+                -2.670013666152954,
+                2.9193928241729736,
+                1.1510993242263794
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -4143,26 +3202,9 @@
         },
         "sink_czyfhq_0": {
             "ability": [
-                "ContactBodies",
-                "Pose",
-                "AABB",
-                "ContactParticles",
-                "ModifiedParticles",
-                "ToggledOn",
-                "Covered",
-                "Saturated",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ParticleSource",
-                "ParticleSink",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside"
+                "toggled_on",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 0.9024097241928047,
@@ -4174,6 +3216,11 @@
                 0.0020155683771419125,
                 0.995628568064012,
                 0.09074423338768313
+            ],
+            "position_in_world": [
+                -2.300387144088745,
+                4.8284077644348145,
+                0.4877564311027527
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -4190,22 +3237,9 @@
         },
         "top_cabinet_dmwxyl_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 2.2910941492712062,
@@ -4217,6 +3251,11 @@
                 0.0020156092558569457,
                 0.995628402872303,
                 0.09074603775850096
+            ],
+            "position_in_world": [
+                -2.512604236602783,
+                3.938934803009033,
+                1.8908519744873047
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -4233,22 +3272,9 @@
         },
         "top_cabinet_dmwxyl_1": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
                 "rho": 2.349256603688053,
@@ -4260,6 +3286,11 @@
                 0.0020155907636326582,
                 0.9956284672515269,
                 0.09074532445447056
+            ],
+            "position_in_world": [
+                -2.4792513847351074,
+                5.838789463043213,
+                1.8908520936965942
             ],
             "bot_in_world": [
                 -1.538582682609558,
@@ -4326,40 +3357,29 @@
     "4_BEV_surroundings": {
         "trash_can_zotrbg_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "ContainedParticles",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "Contains",
-                "Filled",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 1.8723162248104959,
-                "theta_deg": 27.146189445473652,
-                "phi_deg": 84.40513456991707
+                "rho": 1.8724881878169086,
+                "theta_deg": 27.13053415931555,
+                "phi_deg": 84.40614635402214
             },
             "orientation_in_bot": [
-                0.011210565968864564,
-                0.014684354905335236,
-                0.639782114948112,
-                0.7683342621048425
+                0.011207272596241578,
+                0.014685975511923442,
+                0.6397044444435396,
+                0.7683989477630738
+            ],
+            "position_in_world": [
+                -0.404857873916626,
+                3.3319056034088135,
+                0.26053792238235474
             ],
             "bot_in_world": [
                 -1.5388692617416382,
-                4.799619674682617,
-                0.004800528287887573
+                4.799839019775391,
+                0.004800334572792053
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance4_BEV_surroundings.png",
             "bbox2d": [
@@ -4371,38 +3391,30 @@
         },
         "bottom_cabinet_slgzfc_2": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 1.218418351928419,
-                "theta_deg": -141.51898091914606,
-                "phi_deg": 66.57369544152465
+                "rho": 1.218282468131785,
+                "theta_deg": -141.52237167039652,
+                "phi_deg": 66.57107864772377
             },
             "orientation_in_bot": [
-                0.02204097705236284,
-                0.0019687376849399025,
-                0.9958148326407484,
-                0.08867433955312651
+                0.02203981100749983,
+                0.0019720861479658827,
+                0.9958058529116567,
+                0.08877533955928829
+            ],
+            "position_in_world": [
+                -2.38492751121521,
+                5.5549516677856445,
+                0.44999974966049194
             ],
             "bot_in_world": [
                 -1.5388692617416382,
-                4.799619674682617,
-                0.004800528287887573
+                4.799839019775391,
+                0.004800334572792053
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance4_BEV_surroundings.png",
             "bbox2d": [
@@ -4414,38 +3426,30 @@
         },
         "bottom_cabinet_slgzfc_3": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 1.5938913643793522,
-                "theta_deg": -156.53379403116125,
-                "phi_deg": 71.4512843981082
+                "rho": 1.5937159312181526,
+                "theta_deg": -156.54098200586054,
+                "phi_deg": 71.44935476401206
             },
             "orientation_in_bot": [
-                0.02204097705236284,
-                0.0019687376849399025,
-                0.9958148326407484,
-                0.08867433955312651
+                0.02203981100749983,
+                0.0019720861479658827,
+                0.9958058529116567,
+                0.08877533955928829
+            ],
+            "position_in_world": [
+                -2.38492751121521,
+                6.074952125549316,
+                0.44999974966049194
             ],
             "bot_in_world": [
                 -1.5388692617416382,
-                4.799619674682617,
-                0.004800528287887573
+                4.799839019775391,
+                0.004800334572792053
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance4_BEV_surroundings.png",
             "bbox2d": [
@@ -4457,38 +3461,30 @@
         },
         "bottom_cabinet_slgzfc_4": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 1.4975050776471373,
-                "theta_deg": -45.85641287184457,
-                "phi_deg": 74.46215299120307
+                "rho": 1.4976746146409288,
+                "theta_deg": -45.86286911990063,
+                "phi_deg": 74.46379161121558
             },
             "orientation_in_bot": [
-                0.02203696140172509,
-                0.002013181743633102,
-                0.9956339757507354,
-                0.09068244461983864
+                0.02203578860582064,
+                0.0020165278472405587,
+                0.9956247923486878,
+                0.09078342633208483
+            ],
+            "position_in_world": [
+                -2.379021644592285,
+                3.642699956893921,
+                0.4499996602535248
             ],
             "bot_in_world": [
                 -1.5388692617416382,
-                4.799619674682617,
-                0.004800528287887573
+                4.799839019775391,
+                0.004800334572792053
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance4_BEV_surroundings.png",
             "bbox2d": [
@@ -4500,39 +3496,31 @@
         },
         "dishwasher_dngvvi_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "ToggledOn",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "toggled_on",
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 1.1586072995708583,
-                "theta_deg": -57.902833500337856,
-                "phi_deg": 68.18619565544796
+                "rho": 1.1587413399028994,
+                "theta_deg": -57.90573362380318,
+                "phi_deg": 68.18874263041545
             },
             "orientation_in_bot": [
-                0.02203963418725684,
-                0.00198396498578019,
-                0.9957534035423338,
-                0.0893615003325547
+                0.022038465833741194,
+                0.001987312640851841,
+                0.9957443541176488,
+                0.0894624941245706
+            ],
+            "position_in_world": [
+                -2.3353991508483887,
+                4.092134475708008,
+                0.46018582582473755
             ],
             "bot_in_world": [
                 -1.5388692617416382,
-                4.799619674682617,
-                0.004800528287887573
+                4.799839019775391,
+                0.004800334572792053
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance4_BEV_surroundings.png",
             "bbox2d": [
@@ -4544,38 +3532,30 @@
         },
         "door_lvgliq_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 2.475629502021695,
-                "theta_deg": -40.60442479463355,
-                "phi_deg": 64.33000724610633
+                "rho": 2.475796201770818,
+                "theta_deg": -40.61299699445155,
+                "phi_deg": 64.3316029184909
             },
             "orientation_in_bot": [
-                0.022036961632642713,
-                0.002013169081897511,
-                0.9956340445747404,
-                0.09068168919904993
+                0.022035788839688264,
+                0.00201651518652662,
+                0.9956248612492876,
+                0.09078267091825362
+            ],
+            "position_in_world": [
+                -2.670013666152954,
+                2.9193928241729736,
+                1.1510993242263794
             ],
             "bot_in_world": [
                 -1.5388692617416382,
-                4.799619674682617,
-                0.004800528287887573
+                4.799839019775391,
+                0.004800334572792053
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance4_BEV_surroundings.png",
             "bbox2d": [
@@ -4587,38 +3567,30 @@
         },
         "door_lvgliq_1": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 2.9972101337587933,
-                "theta_deg": 114.29488167848979,
-                "phi_deg": 66.451510854278
+                "rho": 2.997092030467668,
+                "theta_deg": 114.27943965516766,
+                "phi_deg": 66.4513565503887
             },
             "orientation_in_bot": [
-                0.01700601102195824,
-                -0.014158959252921415,
-                0.7681412432434807,
-                -0.6398979214611928
+                0.017007548190799738,
+                -0.014155763649253297,
+                0.768206148025851,
+                -0.6398200307862583
+            ],
+            "position_in_world": [
+                0.7105916142463684,
+                6.414919376373291,
+                1.1510995626449585
             ],
             "bot_in_world": [
                 -1.5388692617416382,
-                4.799619674682617,
-                0.004800528287887573
+                4.799839019775391,
+                0.004800334572792053
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance4_BEV_surroundings.png",
             "bbox2d": [
@@ -4630,39 +3602,30 @@
         },
         "fridge_xyejdx_0": {
             "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Inside",
-                "Open",
-                "HeatSourceOrSink",
-                "Temperature",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 1.8151194942351077,
-                "theta_deg": 45.48406570194048,
-                "phi_deg": 64.82113482228722
+                "rho": 1.8152267262826882,
+                "theta_deg": 45.46637690130012,
+                "phi_deg": 64.82344724578927
             },
             "orientation_in_bot": [
-                -0.002066152183254495,
-                0.022032055806107856,
-                -0.09307528065810144,
-                0.9954131361713727
+                -0.002069495457348594,
+                0.02203087497150648,
+                -0.09317624003193986,
+                0.9954037100744864
+            ],
+            "position_in_world": [
+                -0.1851631999015808,
+                3.9132142066955566,
+                0.827250599861145
             ],
             "bot_in_world": [
                 -1.5388692617416382,
-                4.799619674682617,
-                0.004800528287887573
+                4.799839019775391,
+                0.004800334572792053
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance4_BEV_surroundings.png",
             "bbox2d": [
@@ -4674,80 +3637,64 @@
         },
         "range_hood_iqbpie_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "ToggledOn",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "toggled_on",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 2.579481121551667,
-                "theta_deg": 116.06055118286845,
-                "phi_deg": 42.50267330891476
+                "rho": 2.57938620291458,
+                "theta_deg": 116.04293467962378,
+                "phi_deg": 42.50130954916987
             },
             "orientation_in_bot": [
-                -0.002013145369656717,
-                0.0220369643491353,
-                -0.09068064013907906,
-                0.9956341401096902
+                -0.002016491475461725,
+                0.022035791559656716,
+                -0.09078162186794902,
+                0.9956249568906425
+            ],
+            "position_in_world": [
+                -0.152461975812912,
+                5.917507648468018,
+                1.8707919120788574
             ],
             "bot_in_world": [
                 -1.5388692617416382,
-                4.799619674682617,
-                0.004800528287887573
+                4.799839019775391,
+                0.004800334572792053
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance4_BEV_surroundings.png",
             "bbox2d": [
-                1156.0,
+                377.0,
                 0.0,
                 1279.0,
-                157.0
+                507.0
             ]
         },
         "shelf_owvfik_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 1.4388900707161336,
-                "theta_deg": 82.99790662046327,
-                "phi_deg": 72.83133680519286
+                "rho": 1.4388748748667046,
+                "theta_deg": 82.97723670895479,
+                "phi_deg": 72.83217400509828
             },
             "orientation_in_bot": [
-                -0.0020131615803595303,
-                0.022036962673730218,
-                -0.09068135349794815,
-                0.9956340751422422
+                -0.002016507685347503,
+                0.02203578988189681,
+                -0.09078233522024573,
+                0.995624891850839
+            ],
+            "position_in_world": [
+                -0.16995468916905127,
+                4.89994335437812,
+                0.43655594484039595
             ],
             "bot_in_world": [
                 -1.5388692617416382,
-                4.799619674682617,
-                0.004800528287887573
+                4.799839019775391,
+                0.004800334572792053
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance4_BEV_surroundings.png",
             "bbox2d": [
@@ -4757,88 +3704,101 @@
                 574.0
             ]
         },
-        "sink_czyfhq_0": {
+        "shelf_vgzdul_0": {
             "ability": [
-                "ContactBodies",
-                "Pose",
-                "AABB",
-                "ContactParticles",
-                "ModifiedParticles",
-                "ToggledOn",
-                "Covered",
-                "Saturated",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ParticleSource",
-                "ParticleSink",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 0.902210963365118,
-                "theta_deg": -100.98380209856897,
-                "phi_deg": 57.11709142841986
+                "rho": 2.2070240922278037,
+                "theta_deg": 89.64863889231093,
+                "phi_deg": 48.82094322810166
             },
             "orientation_in_bot": [
-                0.02203690386403033,
-                0.0020131474652603145,
-                0.9956341452722298,
-                0.09068059810900496
+                -0.0019891714643255967,
+                0.022038274339227167,
+                -0.089547225544601,
+                0.9957367383291121
+            ],
+            "position_in_world": [
+                0.08502709891058287,
+                5.153485150313777,
+                1.4569883978948837
             ],
             "bot_in_world": [
                 -1.5388692617416382,
-                4.799619674682617,
-                0.004800528287887573
+                4.799839019775391,
+                0.004800334572792053
+            ],
+            "path": "/shared/liushuai/OmniGibson/trash/seg_instance4_BEV_surroundings.png",
+            "bbox2d": [
+                1121.0,
+                225.0,
+                1279.0,
+                448.0
+            ]
+        },
+        "sink_czyfhq_0": {
+            "ability": [
+                "toggled_on",
+                "hot",
+                "frozen"
+            ],
+            "position_in_bot": {
+                "rho": 0.9022041027145077,
+                "theta_deg": -100.97898136632794,
+                "phi_deg": 57.11689724637893
+            },
+            "orientation_in_bot": [
+                0.022035731074999097,
+                0.0020164935772579843,
+                0.9956249620573753,
+                0.0907815798380558
+            ],
+            "position_in_world": [
+                -2.300387144088745,
+                4.8284077644348145,
+                0.4877564311027527
+            ],
+            "bot_in_world": [
+                -1.5388692617416382,
+                4.799839019775391,
+                0.004800334572792053
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance4_BEV_surroundings.png",
             "bbox2d": [
                 297.0,
                 82.0,
-                1279.0,
-                448.0
+                1015.0,
+                445.0
             ]
         },
         "stove_rgpphy_0": {
             "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Inside",
-                "ToggledOn",
-                "HeatSourceOrSink",
-                "Temperature",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
+                "toggled_on",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 1.7904320073768618,
-                "theta_deg": 119.36501852967668,
-                "phi_deg": 71.4805424812668
+                "rho": 1.790296099682404,
+                "theta_deg": 119.34764847583367,
+                "phi_deg": 71.48001755555588
             },
             "orientation_in_bot": [
-                -0.0020131511734000013,
-                0.02203699527712436,
-                -0.09068135372849398,
-                0.9956340744206562
+                -0.0020164972750811166,
+                0.02203582248423566,
+                -0.0907823354508947,
+                0.9956248911293168
+            ],
+            "position_in_world": [
+                -0.23843911290168762,
+                5.909679889678955,
+                0.5361145734786987
             ],
             "bot_in_world": [
                 -1.5388692617416382,
-                4.799619674682617,
-                0.004800528287887573
+                4.799839019775391,
+                0.004800334572792053
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance4_BEV_surroundings.png",
             "bbox2d": [
@@ -4850,38 +3810,30 @@
         },
         "top_cabinet_dmwxyl_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 2.290442801993175,
-                "theta_deg": -55.90978655201385,
-                "phi_deg": 35.93447466602823
+                "rho": 2.2905253808648465,
+                "theta_deg": -55.91434345833782,
+                "phi_deg": 35.93712966822577
             },
             "orientation_in_bot": [
-                0.022036930639314813,
-                0.0020131895315212353,
-                0.9956339764315876,
-                0.09068244444727472
+                0.022035757844200036,
+                0.0020165356382488,
+                0.9956247930294868,
+                0.09078342615942188
+            ],
+            "position_in_world": [
+                -2.512604236602783,
+                3.938934803009033,
+                1.8908519744873047
             ],
             "bot_in_world": [
                 -1.5388692617416382,
-                4.799619674682617,
-                0.004800528287887573
+                4.799839019775391,
+                0.004800334572792053
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance4_BEV_surroundings.png",
             "bbox2d": [
@@ -4893,38 +3845,30 @@
         },
         "top_cabinet_dmwxyl_1": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Open",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "open",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 2.349762286386691,
-                "theta_deg": -146.34855851773568,
-                "phi_deg": 34.48049854459801
+                "rho": 2.3496654288625223,
+                "theta_deg": -146.35446934469996,
+                "phi_deg": 34.47718536248926
             },
             "orientation_in_bot": [
-                0.022036963705359285,
-                0.0020131698668835723,
-                0.9956340445288565,
-                0.09068168918170157
+                0.022035790912484473,
+                0.002016515971302471,
+                0.995624861203403,
+                0.09078267090091312
+            ],
+            "position_in_world": [
+                -2.4792513847351074,
+                5.838789463043213,
+                1.8908520936965942
             ],
             "bot_in_world": [
                 -1.5388692617416382,
-                4.799619674682617,
-                0.004800528287887573
+                4.799839019775391,
+                0.004800334572792053
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance4_BEV_surroundings.png",
             "bbox2d": [
@@ -4934,123 +3878,99 @@
                 98.0
             ]
         },
-        "floors_hcqtge_0": {
+        "floors_cborev_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 0.5458656169342594,
-                "theta_deg": 24.709469949871288,
-                "phi_deg": 108.78164411205844
+                "rho": 2.8745829963360756,
+                "theta_deg": -4.463429073774671,
+                "phi_deg": 95.61509803285934
             },
             "orientation_in_bot": [
-                0.014158962564227868,
-                0.017006008265275336,
-                0.6398980710218043,
-                0.7681411186523999
+                0.01415576696085896,
+                0.017007545434739157,
+                0.6398201803595097,
+                0.7682060234499334
+            ],
+            "position_in_world": [
+                -1.240252685545,
+                1.94500231934,
+                -0.14999999999999997
             ],
             "bot_in_world": [
                 -1.5388692617416382,
-                4.799619674682617,
-                0.004800528287887573
+                4.799839019775391,
+                0.004800334572792053
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance4_BEV_surroundings.png",
             "bbox2d": [
-                555.0,
-                356.0,
-                569.0,
-                360.0
+                880.0,
+                407.0,
+                1151.0,
+                698.0
             ]
         },
-        "floors_mowtdm_0": {
+        "floors_gwawvk_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 4.25708592042476,
-                "theta_deg": 84.14340410423364,
-                "phi_deg": 92.34555327878986
+                "rho": 5.391427439583515,
+                "theta_deg": 74.11870837977246,
+                "phi_deg": 92.34195822099947
             },
             "orientation_in_bot": [
-                0.014158962564227868,
-                0.017006008265275336,
-                0.6398980710218043,
-                0.7681411186523999
+                0.01415576696085896,
+                0.017007545434739157,
+                0.6398201803595097,
+                0.7682060234499334
+            ],
+            "position_in_world": [
+                3.825104738715436,
+                4.278965128365929,
+                -0.14999999999999997
             ],
             "bot_in_world": [
                 -1.5388692617416382,
-                4.799619674682617,
-                0.004800528287887573
+                4.799839019775391,
+                0.004800334572792053
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance4_BEV_surroundings.png",
             "bbox2d": [
-                448.0,
+                945.0,
                 0.0,
-                994.0,
-                124.0
+                1279.0,
+                343.0
             ]
         },
-        "floors_nuacoz_0": {
+        "floors_rqcmwl_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 4.9241127552006025,
-                "theta_deg": 0.3854920845478161,
-                "phi_deg": 94.33743782228177
+                "rho": 6.60262102787028,
+                "theta_deg": 35.55639967694726,
+                "phi_deg": 93.4078634947396
             },
             "orientation_in_bot": [
-                0.014158962564227868,
-                0.017006008265275336,
-                0.6398980710218043,
-                0.7681411186523999
+                0.01415576696085896,
+                0.017007545434739157,
+                0.6398201803595097,
+                0.7682060234499334
+            ],
+            "position_in_world": [
+                3.2025531921424975,
+                0.2075025751915183,
+                -0.15
             ],
             "bot_in_world": [
                 -1.5388692617416382,
-                4.799619674682617,
-                0.004800528287887573
+                4.799839019775391,
+                0.004800334572792053
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance4_BEV_surroundings.png",
             "bbox2d": [
@@ -5062,37 +3982,29 @@
         },
         "floors_suqrjf_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 3.2075350839263694,
-                "theta_deg": 59.3571700763648,
-                "phi_deg": 94.06202987575222
+                "rho": 3.2076113802175783,
+                "theta_deg": 59.341850558027424,
+                "phi_deg": 94.06261005949504
             },
             "orientation_in_bot": [
-                0.014158962564227868,
-                0.017006008265275336,
-                0.6398980710218043,
-                0.7681411186523999
+                0.01415576696085896,
+                0.017007545434739157,
+                0.6398201803595097,
+                0.7682060234499334
+            ],
+            "position_in_world": [
+                1.4646795057095834,
+                3.6847144432108494,
+                -0.15000000000000002
             ],
             "bot_in_world": [
                 -1.5388692617416382,
-                4.799619674682617,
-                0.004800528287887573
+                4.799839019775391,
+                0.004800334572792053
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance4_BEV_surroundings.png",
             "bbox2d": [
@@ -5102,105 +4014,42 @@
                 719.0
             ]
         },
-        "floors_tcsswg_0": {
-            "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
-            ],
-            "position_in_bot": {
-                "rho": 2.3464562873240786,
-                "theta_deg": 64.98986674976534,
-                "phi_deg": 94.85907224289706
-            },
-            "orientation_in_bot": [
-                0.014158962564227868,
-                0.017006008265275336,
-                0.6398980710218043,
-                0.7681411186523999
-            ],
-            "bot_in_world": [
-                -1.5388692617416382,
-                4.799619674682617,
-                0.004800528287887573
-            ],
-            "path": "/shared/liushuai/OmniGibson/trash/seg_instance4_BEV_surroundings.png",
-            "bbox2d": [
-                880.0,
-                407.0,
-                1151.0,
-                698.0
-            ]
-        },
         "floors_xzlkei_0": {
             "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "Temperature",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 5.290663031591239,
-                "theta_deg": 116.83752253081055,
-                "phi_deg": 90.53310422976115
+                "rho": 5.290530542295905,
+                "theta_deg": 116.82402728706671,
+                "phi_deg": 90.53384460346777
             },
             "orientation_in_bot": [
-                0.014158962564227868,
-                0.017006008265275336,
-                0.6398980710218043,
-                0.7681411186523999
+                0.01415576696085896,
+                0.017007545434739157,
+                0.6398201803595097,
+                0.7682060234499334
+            ],
+            "position_in_world": [
+                2.673383762779977,
+                7.997131010356066,
+                -0.15000012206999996
             ],
             "bot_in_world": [
                 -1.5388692617416382,
-                4.799619674682617,
-                0.004800528287887573
+                4.799839019775391,
+                0.004800334572792053
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance4_BEV_surroundings.png",
             "bbox2d": [
-                945.0,
+                448.0,
                 0.0,
-                1279.0,
-                343.0
+                994.0,
+                124.0
             ]
         },
         "robot0": {
-            "ability": [
-                "AABB",
-                "ContactBodies",
-                "Pose",
-                "VerticalAdjacency",
-                "Touching",
-                "HorizontalAdjacency",
-                "ContactParticles",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Inside",
-                "Covered"
-            ],
+            "ability": [],
             "position_in_bot": {
                 "rho": 0.0,
                 "theta_deg": 0.0,
@@ -5212,54 +4061,50 @@
                 0.0,
                 1.0
             ],
+            "position_in_world": [
+                -1.5388692617416382,
+                4.799839019775391,
+                0.00480024516582489
+            ],
             "bot_in_world": [
                 -1.5388692617416382,
-                4.799619674682617,
-                0.004800528287887573
+                4.799839019775391,
+                0.004800334572792053
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance4_BEV_surroundings.png",
             "bbox2d": [
                 552.0,
                 109.0,
-                1279.0,
-                502.0
+                1203.0,
+                447.0
             ]
         },
         "griddle_157": {
             "ability": [
-                "AABB",
-                "VerticalAdjacency",
-                "HorizontalAdjacency",
-                "ContactBodies",
-                "Pose",
-                "Inside",
-                "ToggledOn",
-                "HeatSourceOrSink",
-                "Temperature",
-                "Touching",
-                "ContactParticles",
-                "Heated",
-                "Frozen",
-                "OnTop",
-                "Under",
-                "NextTo",
-                "Covered"
+                "toggled_on",
+                "hot",
+                "frozen"
             ],
             "position_in_bot": {
-                "rho": 1.895194877712466,
-                "theta_deg": 123.19207970908495,
-                "phi_deg": 61.239265413916016
+                "rho": 1.8950578899780577,
+                "theta_deg": 123.17484902685933,
+                "phi_deg": 61.23791440175739
             },
             "orientation_in_bot": [
-                0.0019882316801290148,
-                0.02234108394778525,
-                0.0865369746025216,
-                0.9959961219449937
+                0.0019847608945471468,
+                0.022340512438641026,
+                0.08643595897107009,
+                0.9960049132534046
+            ],
+            "position_in_world": [
+                -0.3428763449192047,
+                5.984163284301758,
+                0.8755594491958618
             ],
             "bot_in_world": [
                 -1.5388692617416382,
-                4.799619674682617,
-                0.004800528287887573
+                4.799839019775391,
+                0.004800334572792053
             ],
             "path": "/shared/liushuai/OmniGibson/trash/seg_instance4_BEV_surroundings.png",
             "bbox2d": [
@@ -5274,11 +4119,6 @@
                 "trash_can_zotrbg_0",
                 "nextto",
                 "fridge_xyejdx_0"
-            ],
-            [
-                "trash_can_zotrbg_0",
-                "ontop",
-                "floors_hcqtge_0"
             ],
             [
                 "bottom_cabinet_slgzfc_2",
@@ -5401,101 +4241,6 @@
                 "griddle_157"
             ],
             [
-                "floors_hcqtge_0",
-                "nextto",
-                "floors_nuacoz_0"
-            ],
-            [
-                "floors_hcqtge_0",
-                "nextto",
-                "floors_suqrjf_0"
-            ],
-            [
-                "floors_hcqtge_0",
-                "nextto",
-                "floors_tcsswg_0"
-            ],
-            [
-                "floors_hcqtge_0",
-                "nextto",
-                "floors_xzlkei_0"
-            ],
-            [
-                "floors_mowtdm_0",
-                "nextto",
-                "floors_suqrjf_0"
-            ],
-            [
-                "floors_mowtdm_0",
-                "nextto",
-                "floors_xzlkei_0"
-            ],
-            [
-                "floors_nuacoz_0",
-                "nextto",
-                "floors_hcqtge_0"
-            ],
-            [
-                "floors_nuacoz_0",
-                "nextto",
-                "floors_suqrjf_0"
-            ],
-            [
-                "floors_suqrjf_0",
-                "nextto",
-                "floors_hcqtge_0"
-            ],
-            [
-                "floors_suqrjf_0",
-                "nextto",
-                "floors_mowtdm_0"
-            ],
-            [
-                "floors_suqrjf_0",
-                "nextto",
-                "floors_nuacoz_0"
-            ],
-            [
-                "floors_suqrjf_0",
-                "inside",
-                "floors_tcsswg_0"
-            ],
-            [
-                "floors_suqrjf_0",
-                "nextto",
-                "floors_tcsswg_0"
-            ],
-            [
-                "floors_suqrjf_0",
-                "nextto",
-                "floors_xzlkei_0"
-            ],
-            [
-                "floors_tcsswg_0",
-                "nextto",
-                "floors_hcqtge_0"
-            ],
-            [
-                "floors_tcsswg_0",
-                "nextto",
-                "floors_suqrjf_0"
-            ],
-            [
-                "floors_xzlkei_0",
-                "nextto",
-                "floors_hcqtge_0"
-            ],
-            [
-                "floors_xzlkei_0",
-                "nextto",
-                "floors_mowtdm_0"
-            ],
-            [
-                "floors_xzlkei_0",
-                "nextto",
-                "floors_suqrjf_0"
-            ],
-            [
                 "robot0",
                 "nextto",
                 "bottom_cabinet_slgzfc_2"
@@ -5509,11 +4254,6 @@
                 "robot0",
                 "nextto",
                 "sink_czyfhq_0"
-            ],
-            [
-                "robot0",
-                "ontop",
-                "floors_hcqtge_0"
             ],
             [
                 "griddle_157",
