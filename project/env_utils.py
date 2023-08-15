@@ -568,16 +568,52 @@ write_text_lines = dump_text_lines
 text_dump = dump_text
 
 import pkg_resources
-
+from omnigibson import object_states
 def load_prompt(prompt):
     package_path = pkg_resources.resource_filename("communicate", "")
     return load_text(f"{package_path}/prompts/{prompt}.txt")
+
+reverse=lambda states:{value:key for key,value in states.items()}
+unary_states={object_states.Cooked:"cooked",object_states.Burnt:"burnt",object_states.Frozen:"frozen",object_states.Heated:"hot",
+                         object_states.Open:"open",object_states.ToggledOn:"toggled_on",object_states.Folded:"folded",object_states.Unfolded:"unfolded"}
+binary__states={
+    object_states.Inside: "inside",
+    object_states.NextTo: "nextto",
+    object_states.OnTop: "ontop",
+    object_states.Under: "under",
+    object_states.Touching: "touching",
+    object_states.Covered: "covered",
+    object_states.Contains: "contains",
+    object_states.Saturated: "saturated",
+    object_states.Filled: "filled",
+    object_states.AttachedTo: "attached",
+    object_states.Overlaid: "overlaid",
+    object_states.Draped: "draped"
+}
+reversed_unary_states,reversed_binary__states=reverse(unary_states),reverse(binary__states)
+
 
 def verify_inv(env, robot, states):
     return env.scene.object_registry("name", states) in robot.inventory # we need to transfer variable to str
 
 def verify_obj_2(obj, states, value):
-    pass
+    states_status=reversed_unary_states[states] # CLASS object_states
+    return states_status._get_value(obj)==value
+    
 
 def verify_obj_3(obj1, states, obj2, value):
-    pass
+    states_status=reversed_binary__states[states] # CLASS object_states
+    return states_status._get_value(obj1,obj2)==value
+
+def get_states(env,obj:str,state:str)->object_states:
+    whole_dict={**reversed_unary_states,**reversed_binary__states}
+    class_obj=env.scene.object_registry("name", obj)
+    try:
+        if whole_dict[state] in list(class_obj.states.keys()):
+            return whole_dict[state]
+        else:
+            print(f"{obj} don't have states {whole_dict[state]}")
+            raise Exception
+    except:
+        print(f"Wrong state {state}")
+        raise Exception
