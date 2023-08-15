@@ -115,18 +115,46 @@ def donothing(env):
         env.step(dumbact)
         step += 1
 
+reverse=lambda states:{value:key for key,value in states.items()}
+unary_states={object_states.Cooked:"cooked",object_states.Burnt:"burnt",object_states.Frozen:"frozen",object_states.Heated:"hot",
+                         object_states.Open:"open",object_states.ToggledOn:"toggled_on",object_states.Folded:"folded",object_states.Unfolded:"unfolded"}
+binary__states={
+    object_states.Inside: "inside",
+    object_states.NextTo: "nextto",
+    object_states.OnTop: "ontop",
+    object_states.Under: "under",
+    object_states.Touching: "touching",
+    object_states.Covered: "covered",
+    object_states.Contains: "contains",
+    object_states.Saturated: "saturated",
+    object_states.Filled: "filled",
+    object_states.AttachedTo: "attached",
+    object_states.Overlaid: "overlaid",
+    object_states.Draped: "draped"
+}
+reversed_unary_states,reversed_binary__states=reverse(unary_states),reverse(binary__states)
+
 def change_states(obj, states, oper):
     '''
     obj (Objects): The object that the states are needed to be changed.
     states (str): The specific states to be changed.
     oper (int): 0 or 1, meaning the False or True of the states.
     '''
+    try:
+        states_status=reversed_unary_states[states]
+        obj.states[states_status].set_value(oper)
+    except:
+        print(f'Wrong state or operation {states, oper}')
 
-    # TODO: get the states we can edit @Choizst
-    # TODO: translate the states to class, for example: open
-    all_states = []
-    black_list = [] # the states that cannot be set to True or False
-
-    assert states in all_states and states not in black_list
-
-    obj.states[CLASS(states)].set_value(oper)
+def get_states(env,obj:str,state:str)->object_states:
+    whole_dict={**reversed_unary_states,**reversed_binary__states}
+    class_obj=env.scene.object_registry("name", obj)
+    try:
+        if whole_dict[state] in list(class_obj.states.keys()):
+            return whole_dict[state]
+        else:
+            print(f"{obj} don't have states {whole_dict[state]}")
+            raise Exception
+    except:
+        print(f"Wrong state {state}")
+        raise Exception

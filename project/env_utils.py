@@ -604,16 +604,3 @@ def verify_obj_2(obj, states, value):
 def verify_obj_3(obj1, states, obj2, value):
     states_status=reversed_binary__states[states] # CLASS object_states
     return states_status._get_value(obj1,obj2)==value
-
-def get_states(env,obj:str,state:str)->object_states:
-    whole_dict={**reversed_unary_states,**reversed_binary__states}
-    class_obj=env.scene.object_registry("name", obj)
-    try:
-        if whole_dict[state] in list(class_obj.states.keys()):
-            return whole_dict[state]
-        else:
-            print(f"{obj} don't have states {whole_dict[state]}")
-            raise Exception
-    except:
-        print(f"Wrong state {state}")
-        raise Exception
