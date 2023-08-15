@@ -391,6 +391,60 @@
                 "joints": {},
                 "non_kin": {}
             },
+            "frying_pan_sfbdjn_0": {
+                "root_link": {
+                    "pos": [
+                        -0.07668,
+                        5.73204,
+                        0.93655479931362917
+                    ],
+                    "ori": [
+                        0.0,
+                        0.0,
+                        -0.7071066619772458,
+                        0.7071069003958291
+                    ],
+                    "lin_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "ang_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                },
+                "joints": {},
+                "non_kin": {}
+            },
+            "pork_ihekpm_0": {
+                "root_link": {
+                    "pos": [
+                        -0.36788,
+                        3.97716,
+                        0.62028
+                    ],
+                    "ori": [
+                        0.0,
+                        0.0,
+                        0,
+                        1.0
+                    ],
+                    "lin_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "ang_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                },
+                "joints": {},
+                "non_kin": {}
+            },
             "shelf_vgzdul_0": {
                 "root_link": {
                     "pos": [
@@ -1131,7 +1185,35 @@
                     "bddl_object_scope": null,
                     "uuid": 76073189
                 }
-            }
+            },
+            "pork_ihekpm_0": {
+                "class_module": "omnigibson.objects.dataset_object",
+                "class_name": "DatasetObject",
+                "args": {
+                    "name": "pork_ihekpm_0",
+                    "prim_path": "/World/pork_ihekpm_0",
+                    "category": "pork",
+                    "model": "ihekpm",
+                    "scale": 3,
+                    "position":[-0.36788,3.97716,0.62028],
+                    "orientation":[0, 0, 0, 1.0]                  
+                }
+            },
+            "frying_pan_sfbdjn_0": {
+                "class_module": "omnigibson.objects.dataset_object",
+                "class_name": "DatasetObject",
+                "args": {
+                    "name": "frying_pan_sfbdjn_0",
+                    "prim_path": "/World/frying_pan_sfbdjn_0",
+                    "category": "frying_pan",
+                    "model": "sfbdjn",
+                    "scale": 3,
+                    "position":[-0.07668, 5.73204, 0.93655479931362917],
+                    "orientation":[0, 0, 0, 0]                  
+                }
+            }   
+
+            
         }
     }
 }
