@@ -36,26 +36,7 @@ def main(random_selection=False, headless=False, short_exec=False):
         visual_only=True,
         visible=False,
     )    
-    pork_cfg=dict(
-        type="DatasetObject",
-        name="pork_ihekpm_0",
-        category="pork",
-        model="ihekpm",
-        scale=3,
-        position=[-0.36788,3.97716,0.62028],#fridge position
-        # position= [-0.16995458765489063, 4.899943354378097, 0.93655479931362917],
-        orientation= [0, 0, 0, 1.0],
-    )
-    pan_cfg=dict(
-        type="DatasetObject",
-        name="frying_pan_sfbdjn_0",
-        category="frying_pan",
-        model="sfbdjn",
-        scale=3,
-        position=[-0.07668, 5.73204, 0.93655479931362917],#fridge position
-        orientation= [0, 0, 0, 0],
-    )
-    cfg=dict(scene=scene_cfg,robots=[robot0_cfg],objects=[pork_cfg,pan_cfg])    
+    cfg=dict(scene=scene_cfg,robots=[robot0_cfg])    
     env = og.Environment(configs=cfg, action_timestep=1/60., physics_timestep=1/60.)
     pork=env.scene.object_registry("name","pork_ihekpm_0")   
     sink=env.scene.object_registry("name","sink_czyfhq_0")

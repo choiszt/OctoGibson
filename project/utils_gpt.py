@@ -611,7 +611,7 @@ def get_states(env,obj:str,state:str)->object_states:
     try:
         if whole_dict[state] in list(class_obj.states.keys()):
             return whole_dict[state]
-        else:
+        else:   
             print(f"{obj} don't have states {whole_dict[state]}")
             raise Exception
     except:

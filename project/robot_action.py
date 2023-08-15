@@ -293,7 +293,7 @@ class Camera():
 
     def collectdata_v2(self,robot): #each time change the robot position need to collectdata
         nowwehave=self.parsing_segmentdata()
-        inventory=self.robot.inventory
+        inventory=self.robot.inventory.copy()
         sub_nowwehave=[]
         for key in nowwehave:
             if list(key.keys())[0].split("/")[-1].rstrip('.png').lstrip("seg_instance") not in self.actionlist:
@@ -301,7 +301,7 @@ class Camera():
         seglists=self.seglist
         obj_in_robs=self.set_in_rob(robot) #the object in now robot_pos
         obj_metadata={} #get the object metadata
-        robot_pose=robot.get_position()
+        robot_pose=robot.get_position().copy()
         editable_states={object_states.Cooked:"cooked",object_states.Burnt:"burnt",object_states.Frozen:"frozen",object_states.Heated:"hot",
                          object_states.Open:"open",object_states.ToggledOn:"toggled_on",object_states.Folded:"folded",object_states.Unfolded:"unfolded"}
 
@@ -348,7 +348,7 @@ class Camera():
         return self.result_json
 
     def writejson(self):
-        with open(f"/shared/liushuai/OmniGibson/{self.FILENAME}/task.json","w")as f:
+        with open(f"/shared/liushuai/OmniGibson/{self.FILENAME}/task1.json","w")as f:
             json.dump(self.result_json,f)
 
     def collectdata(self):
