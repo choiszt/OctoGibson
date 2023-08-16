@@ -8,18 +8,18 @@ from omnigibson import object_states
 import numpy as np
 import json
 import robot_action as ra
+import time
 
 # Configure macros for maximum performance
 gm.USE_GPU_DYNAMICS = True
 gm.ENABLE_FLATCACHE = True
 gm.ENABLE_OBJECT_STATES = True
 gm.ENABLE_TRANSITION_RULES = False
-import time
-from robot_action import *
 from scipy.spatial.transform import Rotation as R
+from robot_action import *
 
 
-def adjust_position(obj, offset):
+def adjust_position(obj, offset):  # offset is a list of 3 elements [x,y,z]
     pos = obj.get_position()
     pos_x = pos[0] + offset[0]
     pos_y = pos[1] + offset[1]
@@ -47,24 +47,37 @@ def main(random_selection=False, headless=False, short_exec=False):
         name="pork_ihekpm_0",
         category="pork",
         model="ihekpm",
-        scale=0.15,
+        scale=3,
         position=[-0.36788, 3.97716, 0.62028],  # fridge position
         # position= [-0.16995458765489063, 4.899943354378097, 0.93655479931362917],
-        orientation=[0, 0, 0, 1.0],
+        orientation=[0, 1, 0, 0],
     )
     pan_cfg = dict(
         type="DatasetObject",
         name="frying_pan_sfbdjn_0",
         category="frying_pan",
         model="sfbdjn",
-        scale=1,
+        scale=3,
         position=[-0.07668, 5.73204, 0.93655479931362917],  # fridge position
-        orientation=[0, 0, 0, 0],
+        orientation=[0, 0, 0, 1],
     )
-    cfg = dict(scene=scene_cfg, robots=[robot0_cfg], objects=[pork_cfg, pan_cfg])
+    apple_cfg = dict(
+        type="DatasetObject",
+        name="apple_agveuv_0",
+        category="apple",
+        model="agveuv",
+        scale=2,
+        position=[-0.42788, 3.57716, 0.62028],  # fridge position
+        # position= [-0.16995458765489063, 4.899943354378097, 0.93655479931362917],
+        orientation=[0, 0, 0, 1.0],  # fridge orientation
+    )
+    cfg = dict(
+        scene=scene_cfg, robots=[robot0_cfg], objects=[pork_cfg, pan_cfg, apple_cfg] # here delete pork
+    )
     env = og.Environment(
         configs=cfg, action_timestep=1 / 60.0, physics_timestep=1 / 60.0
     )
+    apple = env.scene.object_registry("name", "apple_agveuv_0")
     pork = env.scene.object_registry("name", "pork_ihekpm_0")
     sink = env.scene.object_registry("name", "sink_czyfhq_0")
     stove = env.scene.object_registry("name", "stove_igwqpj_0")
@@ -105,7 +118,7 @@ def main(random_selection=False, headless=False, short_exec=False):
     # [-0.36728,5.76531,1.29481]
     # robot pos
 
-    tablepos_bot = adjust_position(robot, [0, 0, 0])
+    tablepos_bot = adjust_position(robot, [0, 0, 0.01])
     fridgepos = adjust_position(robot, [0, -0.5, 0])
     stove_bot = adjust_position(robot, [0, 0.9, 0])
 
@@ -119,31 +132,26 @@ def main(random_selection=False, headless=False, short_exec=False):
         robot_sensor = robot._sensors["robot0:eyes_Camera_sensor"]
         rs_p, rs_o = robot_sensor.get_position_orientation()
         cam.setposition(cam_position, rs_o)
-        # quat = rotate_camera_euler()
-        # cam.setposition(cam_position, quat)
 
-        # sequentially check the function
-        # TODO: how to use the existing object in the scene
+        
+        # donothing(env, action)
+        # print("detect surroundings!!")
+        # for i in range(4):
+        #     cam.FlyingCapture(f"{iter}_detect_surroundings")
+        #     iter += 1
 
-        # cam.turn_90()
-        donothing(env, action)
-        print("detect surroundings!!")
-        for i in range(4):
-            cam.FlyingCapture(f"{iter}_detect_surroundings")
-            iter += 1
+        #     Turn_90(robot)
+        #     rs_o = ra.trans_camera(rs_o)
+        #     cam.setposition(cam_position, rs_o)
 
-            Turn_90(robot)
-            rs_o = ra.trans_camera(rs_o)
-            cam.setposition(cam_position, rs_o)
-
-            donothing(env, action)
+        #     donothing(env, action)
 
         cam.collectdata_v2(robot)
         donothing(env, action)
 
         print("move to fridge")
-        cam.Update_camera_pos(robot)
-        MoveBot(robot, fridgepos)
+        MoveBot(robot, cam, fridge, fridgepos)
+        # cam.Update_camera_pos(robot)
         donothing(env, action)
         cam.FlyingCapture(f"{iter}_move_to_fridge")
         iter += 1
@@ -175,8 +183,8 @@ def main(random_selection=False, headless=False, short_exec=False):
 
         donothing(env, action)
         print("move to the table")
-        cam.Update_camera_pos(robot)
-        MoveBot(robot, tablepos_bot)
+        MoveBot(robot, cam, table, tablepos_bot)
+        # cam.Update_camera_pos(robot)
         donothing(env, action)
         cam.FlyingCapture(f"{iter}_move_to_the_table")
         iter += 1
@@ -192,8 +200,8 @@ def main(random_selection=False, headless=False, short_exec=False):
 
         donothing(env, action)
         print("move to the stove")
-        cam.Update_camera_pos(robot)
-        MoveBot(robot, stove_bot)
+        MoveBot(robot, cam, stove, stove_bot)
+        # cam.Update_camera_pos(robot)
         donothing(env, action)
         cam.FlyingCapture(f"{iter}_move_to_the_stove")
         iter += 1
@@ -210,7 +218,7 @@ def main(random_selection=False, headless=False, short_exec=False):
         donothing(env, action)
         print("put the pan on the stove")
         # pan.set_position(stove_pan)
-        Turn_90(pan, stove_pan)
+        Turn_90(pan, stove_pan)  # robot 的 position 变为了 stove_pan
         donothing(env, action)
         cam.FlyingCapture(f"{iter}_put_the_pan_on_the_stove")
         iter += 1
@@ -234,8 +242,8 @@ def main(random_selection=False, headless=False, short_exec=False):
 
         donothing(env, action)
         print("move to the table")
-        cam.Update_camera_pos(robot)
-        MoveBot(robot, tablepos_bot)
+        MoveBot(robot, cam, table, tablepos_bot)
+        # cam.Update_camera_pos(robot)
         donothing(env, action)
         cam.FlyingCapture(f"{iter}_move_to_the_table")
         iter += 1
@@ -251,8 +259,8 @@ def main(random_selection=False, headless=False, short_exec=False):
 
         donothing(env, action)
         print("move to the stove")
-        cam.Update_camera_pos(robot)
-        MoveBot(robot, stove_bot)
+        MoveBot(robot, cam, stove, stove_bot)
+        # cam.Update_camera_pos(robot)
         donothing(env, action)
         cam.FlyingCapture(f"{iter}_move_to_the_stove")
         iter += 1
@@ -266,6 +274,55 @@ def main(random_selection=False, headless=False, short_exec=False):
         iter += 1
         cam.collectdata_v2(robot)
 
+        donothing(env, action)
+        print("move to the fridge")
+        MoveBot(robot, cam, fridge, fridgepos)
+        # cam.Update_camera_pos(robot)
+        donothing(env, action)
+        cam.FlyingCapture(f"{iter}_move_to_fridge")
+        iter += 1
+        cam.collectdata_v2(robot)
+
+        donothing(env, action)
+        print("open the fridge")
+        fridge.states[object_states.Open].set_value(True)
+        donothing(env, action)
+        cam.FlyingCapture(f"{iter}_open_the_fridge")
+        iter += 1
+        cam.collectdata_v2(robot)
+
+        donothing(env, action)
+        print("pick the apple")
+        EasyGrasp(robot, apple, 100)
+        donothing(env, action)
+        cam.FlyingCapture(f"{iter}_pick_the_apple")
+        iter += 1
+        cam.collectdata_v2(robot)
+
+        donothing(env, action)
+        print("close the fridge")
+        fridge.states[object_states.Open].set_value(False)
+        donothing(env, action)
+        cam.FlyingCapture(f"{iter}_close_the_fridge")
+        iter += 1
+        cam.collectdata_v2(robot)
+
+        donothing(env, action)
+        print("move to the table")
+        MoveBot(robot, cam, table, tablepos_bot)
+        # cam.Update_camera_pos(robot)
+        donothing(env, action)
+        cam.FlyingCapture(f"{iter}_move_to_the_table")
+        iter += 1
+
+        donothing(env, action)
+        print("put the apple on the table")
+        apple.set_position(tablepos)
+        donothing(env, action)
+        cam.FlyingCapture(f"{iter}_put_the_apple_on_the_table")
+        iter += 1
+        cam.collectdata_v2(robot)
+
         cam.writejson()
 
     # Always close the environment at the end
@@ -274,3 +331,5 @@ def main(random_selection=False, headless=False, short_exec=False):
 
 if __name__ == "__main__":
     main()
+
+
