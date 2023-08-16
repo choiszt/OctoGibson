@@ -16,16 +16,16 @@ from robot_action import *
 import yaml
 
 def init_pipeline(env, robot, camera, random_selection=False, headless=False, short_exec=False, file_name=None):
-
-    cam=Camera(robot=env.robots[0],camera=camera,env=env,filename=file_name)
+    iter=0
+    cam=Camera(robot=env.robots[0],camera=camera,env=env,filename="816_test_gpt")
     robot=ROBOT(env.robots[0],env)
 
     action=np.zeros(11)
-    ppposition=robot.get_position()
+    ppposition=robot.robot.get_position()
     cam_position=get_camera_position(ppposition)
     robot_sensor = robot.robot._sensors['robot0:eyes_Camera_sensor']
-    rs_p, rs_o = robot_sensor.get_position_orientation()
-    cam.setposition(cam_position, rs_o)
+    rs_p, init_rs_o = robot_sensor.get_position_orientation()
+    cam.setposition(cam_position, init_rs_o)
 
     donothing(env, action)
     print("ego:detect surroundings!!")
@@ -33,7 +33,7 @@ def init_pipeline(env, robot, camera, random_selection=False, headless=False, sh
         cam.FlyingCapture(f'{iter}_detect_surroundings')   
         iter+=1   
         Turn_90(robot.robot)
-        rs_o = trans_camera(rs_o)
+        rs_o = trans_camera(init_rs_o)
         cam.setposition(cam_position, rs_o)
         donothing(env, action) 
     
@@ -51,4 +51,5 @@ def init_pipeline(env, robot, camera, random_selection=False, headless=False, sh
 
     donothing(env, action)
     cam.collectdata_v2(robot.robot)
-    cam.writejson()
+    jsonpath=cam.writejson()
+    return jsonpath

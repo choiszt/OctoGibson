@@ -7,6 +7,7 @@ import random
 import omnigibson.utils.transform_utils as T
 from scipy.spatial.transform import Rotation as R
 import json
+import os
 from bddl.object_taxonomy import ObjectTaxonomy
 from omnigibson.object_states.factory import (
     get_default_states,
@@ -216,8 +217,12 @@ class Camera():
                 if file_name is not None:
                     cv2.imwrite(query_name + str(file_name) + '.png', rgbimg)
                 else:
+                    path=os.path.dirname(f"/shared/liushuai/OmniGibson/{self.FILENAME}/"+query_name + f'{iter}.png')
+                    if not os.path.exists(path):
+                        os.makedirs(path)
+                    
                     cv2.imwrite(f"/shared/liushuai/OmniGibson/{self.FILENAME}/"+query_name + f'{iter}.png', rgbimg)
-                    print(f"save as:{query_name + f'{iter}.png'}")
+                    print(f"save as: /shared/liushuai/OmniGibson/{self.FILENAME}/"+query_name + f'{iter}.png')
         
     def parsing_segmentdata(self): #parse all data from the files that we have collected
         seglists=self.seglist
@@ -350,6 +355,7 @@ class Camera():
     def writejson(self):
         with open(f"/shared/liushuai/OmniGibson/{self.FILENAME}/task1.json","w")as f:
             json.dump(self.result_json,f)
+        return f"/shared/liushuai/OmniGibson/{self.FILENAME}/task1.json"
 
     def collectdata(self):
         seglists=self.seglist

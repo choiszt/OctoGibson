@@ -47,8 +47,3 @@ def parse_json(path):
         obs_str += s
 
     return [sg_str, obj_str, obs_str, str(INV), str(TASK)]
-
-
-if __name__ == "__main__":
-    # path = '/home/dongyuhao/communicate/task.json'
-    # parse_json(path)
