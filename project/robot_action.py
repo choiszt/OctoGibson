@@ -596,7 +596,6 @@ class Camera():
 
 def get_camera_position(p):
     p[2] += 2.5
-    # p[0] += 0.2
     return p
 
 
