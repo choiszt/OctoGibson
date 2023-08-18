@@ -50,6 +50,23 @@ class ROBOT():
     # else:
     #     return False
 
+    def get_robot_pos(obj):
+        obj_pos, obj_ori = obj.get_position_orientation()
+        vec_standard = np.array([0, 1, 0])
+        rotated_vec = Quaternion(obj_ori[[1, 2, 3, 0]]).rotate(vec_standard)
+        bbox = obj.native_bbox
+        robot_pos = np.zeros(3)
+        robot_pos[0] = obj_pos[0] + rotated_vec[0] * bbox[1] * 0.5 + rotated_vec[0]
+        robot_pos[1] = obj_pos[1] + rotated_vec[1] * bbox[1] * 0.5 + rotated_vec[1]
+        robot_pos[2] = 0.25
+
+        with open('./record.txt', 'a') as file:
+            file.write('bbox: ' + str(bbox) + '\n')
+            file.write('rotated_vec: ' + str(rotated_vec) + '\n')
+            file.write('obj_pos: ' + str(obj_pos) + '\n')
+            file.write('robot_pos: ' + str(robot_pos) + '\n')
+        return robot_pos
+
     def Hold(self, obj_name):
         # Hold the objects
         robot_pos = self.robot.get_position()
@@ -59,11 +76,13 @@ class ROBOT():
         obj.set_position(robot_pos)
 
     def MoveBot(self, obj):
+        pos = self.get_robot_pos(obj)
         self.robot.set_position(obj)
         if self.robot.inventory:
             # relationship between name and variable.
             obj = self.robot.inventory[0]
             self.Hold(obj)
+
     
     def EasyDrop(self,obj, pos, dis_threshold): #TODO possible function  EasyDrop_V2(robot,obj1, obj2, dis_threshold) (put the OBJ1 <predicate> OBJ2)
         # Drop the objects within robot's hands
@@ -125,6 +144,7 @@ class Camera():
         self.result_json={}
         self.actionlist=[] #check the action to appear only once
         self.OG_results=self._decomposed()
+        self.blacklist=["walls","electric_switch","floors","ceilings","window"]
     def _getallobject(self):
         allobject=[]
         try:
@@ -191,7 +211,7 @@ class Camera():
                     segimg = segmentation_to_rgb(obs_dict[query_name][0], N=256)
                     instancemap = obs_dict[query_name][1]
                     for item in instancemap:
-                        bbox_3ds=obs_dict['bbox_3d']
+                        # bbox_3ds=obs_dict['bbox_3d']
                         bbox_2ds=obs_dict["bbox_2d_loose"] #
                         hextuple=[f"/shared/liushuai/OmniGibson/{self.FILENAME}/"+query_name + f'{iter}.png',item[1].split("/")[-1],item[3],item[0],'','']
                         for bbox_2d in bbox_2ds:
@@ -199,11 +219,11 @@ class Camera():
                                 bbox2d_info=[bbox_2d[i] for i in range(6,10,1)]
                                 hextuple[4]=bbox2d_info
                                 break
-                        for bbox_3d in bbox_3ds:
-                            if bbox_3d[0]==item[0]:
-                                bbox3d_info=[bbox_3d[i] for i in range(2,9,1)]
-                                hextuple[5]=bbox3d_info
-                                break
+                        # for bbox_3d in bbox_3ds:
+                        #     if bbox_3d[0]==item[0]:
+                        #         bbox3d_info=[bbox_3d[i] for i in range(2,9,1)]
+                        #         hextuple[5]=bbox3d_info
+                        #         break
                         self.seglist.append(hextuple)
                 elif modality == "normal":
                     # Re-map to 0 - 1 range
@@ -251,14 +271,13 @@ class Camera():
         return self.nowwehave
     
     def parseSG(self,objects):
-        blacklist=["walls","electric_switch","floors","ceilings","window"]
         pairs=[]
         SG=[]
         for i in range(len(objects)):
             for j in range(len(objects)):
                 cnt=0
                 if(objects[i]!=objects[j]):
-                    for blackele in blacklist:
+                    for blackele in self.blacklist:
                         if blackele in objects[i]:
                             cnt+=1
                         if blackele in objects[j]:
@@ -335,18 +354,27 @@ class Camera():
         obj_in_robs=self.set_in_rob(robot) #the object in now robot_pos
         obj_metadata={} #get the object metadata
         robot_pose=robot.get_position().copy()
-        editable_states={object_states.Cooked:"cooked",object_states.Burnt:"burnt",object_states.Frozen:"frozen",object_states.Heated:"hot",
-                         object_states.Open:"open",object_states.ToggledOn:"toggled_on",object_states.Folded:"folded",object_states.Unfolded:"unfolded"}
+        editable_states={object_states.Cooked:"cookable",object_states.Burnt:"burnable",object_states.Frozen:"freezable",object_states.Heated:"heatable",
+                         object_states.Open:"openable",object_states.ToggledOn:"togglable",object_states.Folded:"foldable",object_states.Unfolded:"unfoldable"}
+        
+        blacklist=['robot0']
+        for ele in self.OG_results:
+            for a in self.blacklist:
+                if a in ele:
+                    blacklist.append(ele)
 
         for ele in sub_nowwehave:
             picpath=list(ele.keys())[0]
             objects=list(ele.values())[0]
-            intersect_objects=list(set(objects)&set(self.OG_results))
+            intersect_objects=list(set(objects)&set(self.OG_results)-set(blacklist))
             action=picpath.split("/")[-1][12:-4]
             scene_graph=self.parseSG(objects)
             if action not in self.actionlist:
                 self.actionlist.append(action)
             obj_metadata.clear()
+            if len(intersect_objects)==0:
+                self.result_json[action]={}
+                continue
             for obj_name in intersect_objects:
                 obj_metadata[obj_name]={}
                 # ability=OBJECT_TAXONOMY.get_abilities(OBJECT_TAXONOMY.get_synset_from_category(obj_name.split("_")[0]))
@@ -367,16 +395,17 @@ class Camera():
                 obj_metadata[obj_name].update(bot_pose)
                 path={"path":picpath}
                 obj_metadata[obj_name].update(path)
-                for hextuple in seglists:
-                    if hextuple[0]==picpath:
-                        if(obj_name==hextuple[1]):
-                            bbox2d={"bbox2d":np.array(hextuple[4]).astype(float).tolist()}
-                            obj_metadata[obj_name].update(bbox2d)
-                            break
+                # for hextuple in seglists:
+                #     if hextuple[0]==picpath:
+                #         if(obj_name==hextuple[1]):
+                #             bbox2d={"bbox2d":np.array(hextuple[4]).astype(float).tolist()}
+                #             obj_metadata[obj_name].update(bbox2d)
+                #             break
                 self.result_json[action].update(obj_metadata)
                 self.result_json[action].update(scene_graph)
-            inventory_dict={"inventory":inventory}
-            self.result_json[action].update(inventory_dict)
+
+                inventory_dict={"inventory":inventory} #TODO check this choiszt
+                self.result_json[action].update(inventory_dict)
         return self.result_json
 
     def writejson(self):
