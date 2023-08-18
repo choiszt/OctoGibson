@@ -252,7 +252,8 @@ class PhysxParticleInstancer(BasePrim):
             f"Got mismatch in particle setting size: {quat.shape[0]}, vs. number of particles {self._n_particles}!"
         # Swap w position, since Quath takes (w,x,y,z)
         quat = quat.astype(float)
-        quat = quat[:, [3, 0, 1, 2]]
+        if self._n_particles > 0:
+            quat = quat[:, [3, 0, 1, 2]]
         self.set_attribute(attr="orientations", val=Vt.QuathArray.FromNumpy(quat))
 
     @property

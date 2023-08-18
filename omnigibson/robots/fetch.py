@@ -114,6 +114,8 @@ class Fetch(ManipulationRobot, TwoWheelRobot, ActiveCameraRobot):
             kwargs (dict): Additional keyword arguments that are used for other super() calls from subclasses, allowing
                 for flexible compositions of various object subclasses (e.g.: Robot is USDObject + ControllableObject).
         """
+
+        self.inventory=[]
         # Store args
         self.rigid_trunk = rigid_trunk
         self.default_trunk_offset = default_trunk_offset
