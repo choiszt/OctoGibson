@@ -1,14 +1,13 @@
 import numpy as np
 from omnigibson.utils.vision_utils import segmentation_to_rgb
 import cv2
-from omnigibson.utils.control_utils import IKSolver
-import omnigibson as og
 import math
 from omnigibson import object_states
 import random
 import omnigibson.utils.transform_utils as T
 from scipy.spatial.transform import Rotation as R
 import json
+import os
 from bddl.object_taxonomy import ObjectTaxonomy
 from omnigibson.object_states.factory import (
     get_default_states,
@@ -32,56 +31,72 @@ def cal_dis(pos1, pos2):
     return np.linalg.norm(pos1 - pos2)
 
 
-def EasyGrasp(robot, obj, dis_threshold):
-    # Grasp the robot within the distance threshold
-    robot_pos = robot.get_position()
-    obj_pose = obj.get_position()
-    dis = cal_dis(robot_pos, obj_pose)
-    # if dis < dis_threshold:
-    robot_pos[2] += robot.aabb_center[2]
-    robot_pos[2] -= 0.2
-    obj.set_position(robot_pos)
-    #     robot.Inventory.append(obj)
+class ROBOT:
+    def __init__(self, robot, env):
+        self.robot = robot
+        self.env = env
+
+    def EasyGrasp(self, obj, dis_threshold):
+        # Grasp the robot within the distance threshold
+        robot_pos = self.robot.get_position()
+        obj_pose = obj.get_position()
+        dis = cal_dis(robot_pos, obj_pose)
+        # if dis < dis_threshold:
+        robot_pos[2] += self.robot.aabb_center[2]
+        robot_pos[2] -= 0.2
+        obj.set_position(robot_pos)
+        if len(self.robot.inventory) > 1:
+            raise Exception("robot carries more than 1 object!")
+        self.robot.inventory.append(obj._name)
+        print(f"now we have:{self.robot.inventory}")
+
     #     return True
     # else:
     #     return False
 
+    def Hold(self, obj_name):
+        # Hold the objects
+        robot_pos = self.robot.get_position()
+        robot_pos[2] += self.robot.aabb_center[2]
+        robot_pos[2] -= 0.2
+        obj = self.env.scene.object_registry("name", obj_name)
+        obj.set_position(robot_pos)
 
-def Hold(robot, obj):
-    # Hold the objects
-    robot_pos = robot.get_position()
-    robot_pos[2] += robot.aabb_center[2]
-    robot_pos[2] -= 0.2
-    obj.set_position(robot_pos)
+    def MoveBot(self, obj):
+        self.robot.set_position(obj)
+        if self.robot.inventory:
+            # relationship between name and variable.
+            obj = self.robot.inventory[0]
+            self.Hold(obj)
+
+    def EasyDrop(
+        self, obj, pos, dis_threshold
+    ):  # TODO possible function  EasyDrop_V2(robot,obj1, obj2, dis_threshold) (put the OBJ1 <predicate> OBJ2)
+        # Drop the objects within robot's hands
+        obj_pos = obj.get_position()
+        dis = cal_dis(obj_pos, pos)
+        obj.set_position(pos)
+        if dis < dis_threshold:
+            obj.set_position(pos)
+            a = self.robot.inventory.pop()
+            print(f"the robot throw {a},now we have:{self.robot.inventory}")
+        #     return True
+        # else:
+        #     return False
 
 
 # def Teleport(robot, obj, pos):
 #     # Teleport the robot and the objects within its hands
 #     robot.set_position(pos)
 #     Hold(robot, obj)
-
-
 def quaternion2vector(quat):
     quat = Quaternion(quat[[1, 2, 3, 0]])
     v = np.array([0, 0, -1])
     return quat.rotate(v)
 
 
-def MoveBot(robot, pos):
-    robot.set_position(pos)
-
-
-def EasyDrop(obj, pos, dis_threshold):
-    # Drop the objects within robot's hands
-    obj_pos = obj.get_position()
-    dis = cal_dis(obj_pos, pos)
-    obj.set_position(pos)
-    # if dis < dis_threshold:
-    #     obj.set_position(pos)
-    #     robot.Inventory.pop()
-    #     return True
-    # else:
-    #     return False
+def get_robot_pos(obj):
+    obj_pos, obj_ori = obj.get_position_orientation()
 
 
 def quaternion_multiply(q1, q2):
@@ -109,12 +124,14 @@ def Turn_90(robot, pos=None):
 class Camera:
     def __init__(
         self,
+        robot,
         camera,
         env,
         filename,
         position=np.array([-2.48302418, 1.55655398, 2.22882511]),
         orientation=np.array([0.56621324, -0.0712958, -0.10258276, 0.81473692]),
     ):
+        self.robot = robot
         self.camera = camera
         self.env = env
         self.camera.set_position_orientation(position=position, orientation=orientation)
@@ -222,7 +239,7 @@ class Camera:
                                 break
                         for bbox_3d in bbox_3ds:
                             if bbox_3d[0] == item[0]:
-                                bbox3d_info = [bbox_3d[i] for i in range(6, 14, 1)]
+                                bbox3d_info = [bbox_3d[i] for i in range(2, 9, 1)]
                                 hextuple[5] = bbox3d_info
                                 break
                         self.seglist.append(hextuple)
@@ -242,11 +259,25 @@ class Camera:
                 if file_name is not None:
                     cv2.imwrite(query_name + str(file_name) + ".png", rgbimg)
                 else:
+                    path = os.path.dirname(
+                        f"/shared/liushuai/OmniGibson/{self.FILENAME}/"
+                        + query_name
+                        + f"{iter}.png"
+                    )
+                    if not os.path.exists(path):
+                        os.makedirs(path)
+
                     cv2.imwrite(
-                        f"../{self.FILENAME}/" + query_name + f"{iter}.png",
+                        f"/shared/liushuai/OmniGibson/{self.FILENAME}/"
+                        + query_name
+                        + f"{iter}.png",
                         rgbimg,
                     )
-                    print(f"save as:{query_name + f'{iter}.png'}")
+                    print(
+                        f"save as: /shared/liushuai/OmniGibson/{self.FILENAME}/"
+                        + query_name
+                        + f"{iter}.png"
+                    )
 
     def parsing_segmentdata(
         self,
@@ -273,12 +304,20 @@ class Camera:
         return self.nowwehave
 
     def parseSG(self, objects):
+        blacklist = ["walls", "electric_switch", "floors", "ceilings", "window"]
         pairs = []
         SG = []
         for i in range(len(objects)):
             for j in range(len(objects)):
+                cnt = 0
                 if objects[i] != objects[j]:
-                    pairs.append((objects[i], objects[j]))
+                    for blackele in blacklist:
+                        if blackele in objects[i]:
+                            cnt += 1
+                        if blackele in objects[j]:
+                            cnt += 1
+                    if cnt != 2:
+                        pairs.append((objects[i], objects[j]))
         for pair in pairs:
             obj0 = self.env.scene.object_registry("name", pair[0])
             obj1 = self.env.scene.object_registry("name", pair[1])
@@ -318,6 +357,7 @@ class Camera:
         self, robot
     ):  # each time change the robot position need to collectdata
         nowwehave = self.parsing_segmentdata()
+        inventory = self.robot.inventory.copy()
         sub_nowwehave = []
         for key in nowwehave:
             if (
@@ -328,12 +368,22 @@ class Camera:
         seglists = self.seglist
         obj_in_robs = self.set_in_rob(robot)  # the object in now robot_pos
         obj_metadata = {}  # get the object metadata
-        robot_pose = robot.get_position()
+        robot_pose = robot.get_position().copy()
+        editable_states = {
+            object_states.Cooked: "cooked",
+            object_states.Burnt: "burnt",
+            object_states.Frozen: "frozen",
+            object_states.Heated: "hot",
+            object_states.Open: "open",
+            object_states.ToggledOn: "toggled_on",
+            object_states.Folded: "folded",
+            object_states.Unfolded: "unfolded",
+        }
 
         for ele in sub_nowwehave:
             picpath = list(ele.keys())[0]
             objects = list(ele.values())[0]
-            action = picpath.split("/")[-1].rstrip(".png").lstrip("seg_instance")
+            action = picpath.split("/")[-1][12:-4]
             scene_graph = self.parseSG(objects)
             if action not in self.actionlist:
                 self.actionlist.append(action)
@@ -344,18 +394,25 @@ class Camera:
                 object = self.env.scene.object_registry("name", obj_name)
                 states = {
                     "ability": [
-                        get_state_name(sta) for sta in list(object.states.keys())
+                        editable_states[sta]
+                        for sta in list(object.states.keys())
+                        if sta in editable_states.keys()
                     ]
                 }
                 obj_metadata[obj_name].update(states)
 
                 obj_in_rob = obj_in_robs[obj_name]
-                position = {"position_in_bot": obj_in_rob[0]}
+                position_in_bot = {"position_in_bot": obj_in_rob[0]}
                 self.result_json[action] = {}
-
-                obj_metadata[obj_name].update(position)
+                obj_metadata[obj_name].update(position_in_bot)
                 orientation = {"orientation_in_bot": obj_in_rob[1].tolist()}
+
                 obj_metadata[obj_name].update(orientation)
+                position_in_world = {
+                    "position_in_world": object.get_position().tolist()
+                }
+                obj_metadata[obj_name].update(position_in_world)
+
                 bot_pose = {"bot_in_world": robot_pose.tolist()}
                 obj_metadata[obj_name].update(bot_pose)
                 path = {"path": picpath}
@@ -370,11 +427,14 @@ class Camera:
                             break
                 self.result_json[action].update(obj_metadata)
                 self.result_json[action].update(scene_graph)
+            inventory_dict = {"inventory": inventory}
+            self.result_json[action].update(inventory_dict)
         return self.result_json
 
     def writejson(self):
-        with open(f"../{self.FILENAME}/task.json", "w") as f:
+        with open(f"/shared/liushuai/OmniGibson/{self.FILENAME}/task1.json", "w") as f:
             json.dump(self.result_json, f)
+        return f"/shared/liushuai/OmniGibson/{self.FILENAME}/task1.json"
 
     def collectdata(self):
         seglists = self.seglist
