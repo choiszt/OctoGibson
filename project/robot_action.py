@@ -61,9 +61,26 @@ class ROBOT:
         robot_pos[2] -= 0.2
         obj = self.env.scene.object_registry("name", obj_name)
         obj.set_position(robot_pos)
+    def get_robot_pos(obj):
+        obj_pos, obj_ori = obj.get_position_orientation()
+        vec_standard = np.array([0, 1, 0])
+        rotated_vec = Quaternion(obj_ori[[1, 2, 3, 0]]).rotate(vec_standard)
+        bbox = obj.native_bbox
+        robot_pos = np.zeros(3)
+        robot_pos[0] = obj_pos[0] + rotated_vec[0] * bbox[1] * 0.5 + rotated_vec[0]
+        robot_pos[1] = obj_pos[1] + rotated_vec[1] * bbox[1] * 0.5 + rotated_vec[1]
+        robot_pos[2] = 0.25
 
+        with open('./record.txt', 'a') as file:
+            file.write('bbox: ' + str(bbox) + '\n')
+            file.write('rotated_vec: ' + str(rotated_vec) + '\n')
+            file.write('obj_pos: ' + str(obj_pos) + '\n')
+            file.write('robot_pos: ' + str(robot_pos) + '\n')
+        return robot_pos
     def MoveBot(self, obj):
-        self.robot.set_position(obj)
+        # self.robot.set_position(obj)
+        pos = self.get_robot_pos(obj)
+        self.robot.set_position(pos)
         if self.robot.inventory:
             # relationship between name and variable.
             obj = self.robot.inventory[0]
@@ -578,7 +595,7 @@ class Camera():
 
 
 def get_camera_position(p):
-    p[2] += 1.2
+    p[2] += 2.5
     # p[0] += 0.2
     return p
 
