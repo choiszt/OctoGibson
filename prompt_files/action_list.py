@@ -114,19 +114,6 @@ def donothing(env):
         # og.sim.step()
         env.step(dumbact)
         step += 1
-
-# def get_states(env,obj:str,state:str)->object_states:
-#     whole_dict={**reversed_unary_states,**reversed_binary__states}
-#     class_obj=env.scene.object_registry("name", obj)
-#     try:
-#         if whole_dict[state] in list(class_obj.states.keys()):
-#             return whole_dict[state]
-#         else:
-#             print(f"{obj} don't have states {whole_dict[state]}")
-#             raise Exception
-#     except:
-#         print(f"Wrong state {state}")
-#         raise Exception
     
 def registry(env, obj):
     return env.scene.object_registry("name", obj)

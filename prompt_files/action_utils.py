@@ -293,3 +293,16 @@ def change_states(obj, states, oper):
         obj.states[states_status].set_value(oper)
     except:
         print(f'Wrong state or operation {states, oper}')
+        
+def get_states(env,obj:str,state:str)->object_states:
+    whole_dict={**reversed_unary_states,**reversed_binary__states}
+    class_obj=env.scene.object_registry("name", obj)
+    try:
+        if whole_dict[state] in list(class_obj.states.keys()):
+            return whole_dict[state]
+        else:
+            print(f"{obj} don't have states {whole_dict[state]}")
+            raise Exception
+    except:
+        print(f"Wrong state {state}")
+        raise Exception
