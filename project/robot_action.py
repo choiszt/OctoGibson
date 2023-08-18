@@ -78,6 +78,8 @@ class ROBOT():
     def MoveBot(self, obj):
         pos = self.get_robot_pos(obj)
         self.robot.set_position(obj)
+
+        #TODO update_camera_pos
         if self.robot.inventory:
             # relationship between name and variable.
             obj = self.robot.inventory[0]
