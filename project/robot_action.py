@@ -94,9 +94,11 @@ def quaternion2vector(quat):
     v = np.array([0, 0, -1])
     return quat.rotate(v)
 
+def quaternion2vector(quat):
+    quat = Quaternion(quat[[1, 2, 3, 0]])
+    v = np.array([0, 0, -1])
+    return quat.rotate(v)
 
-def get_robot_pos(obj):
-    obj_pos, obj_ori = obj.get_position_orientation()
 
 
 def quaternion_multiply(q1, q2):
@@ -121,29 +123,21 @@ def Turn_90(robot, pos=None):
 
 
 # class of flying camera
-class Camera:
-    def __init__(
-        self,
-        robot,
-        camera,
-        env,
-        filename,
-        position=np.array([-2.48302418, 1.55655398, 2.22882511]),
-        orientation=np.array([0.56621324, -0.0712958, -0.10258276, 0.81473692]),
-    ):
-        self.robot = robot
-        self.camera = camera
-        self.env = env
-        self.camera.set_position_orientation(position=position, orientation=orientation)
-        self.seglist = (
-            []
-        )  # (seg_file_id,object_name,objectclass,instance_id,2d_bbox,3d_bbox)
-        self.instancemap = []
-        self.FILENAME = filename
-        self.allobject = self._getallobject()
-        self.result_json = {}
-        self.actionlist = []  # check the action to appear only once
-
+class Camera():
+    def __init__(self,robot,camera,env,filename,position=np.array([-2.48302418,  1.55655398,  2.22882511]),orientation=np.array([ 0.56621324, -0.0712958 , -0.10258276,  0.81473692])):
+        self.robot=robot
+        self.camera=camera
+        self.env=env
+        self.camera.set_position_orientation(
+        position=position,
+        orientation=orientation)
+        self.seglist=[]  #(seg_file_id,object_name,objectclass,instance_id,2d_bbox,3d_bbox)
+        self.instancemap=[]
+        self.FILENAME=filename
+        self.allobject=self._getallobject()
+        self.result_json={}
+        self.actionlist=[] #check the action to appear only once
+        self.OG_results=self._decomposed()
     def _getallobject(self):
         allobject = []
         try:
@@ -315,12 +309,22 @@ class Camera:
                         if blackele in objects[i]:
                             cnt += 1
                         if blackele in objects[j]:
-                            cnt += 1
-                    if cnt != 2:
-                        pairs.append((objects[i], objects[j]))
-        for pair in pairs:
-            obj0 = self.env.scene.object_registry("name", pair[0])
-            obj1 = self.env.scene.object_registry("name", pair[1])
+                            cnt+=1
+                    if cnt!=2:
+                        pairs.append((objects[i],objects[j]))
+        reduced_pairs=[]
+        for pair in pairs: 
+            tempscore=0 #record whether the object in og_results
+            for ele_pair in pair:
+                if ele_pair in self.OG_results:
+                    tempscore+=1
+            if tempscore!=0:
+                reduced_pairs.append(pair)
+
+
+        for pair in reduced_pairs:
+            obj0=self.env.scene.object_registry("name",pair[0])
+            obj1=self.env.scene.object_registry("name",pair[1])
             try:
                 is_inside = obj0.states[object_states.Inside].get_value(obj1)
                 if is_inside:
@@ -351,14 +355,26 @@ class Camera:
                     SG.append((obj0._name, "under", obj1._name))
             except:
                 pass
-        return {"scene_graph": SG}
+        temp_SG=SG.copy()
+        for (obj1,prep,obj2) in SG:
+            if (obj2,prep,obj1) in temp_SG:
+                temp_SG.remove((obj1,prep,obj2))
+        return {"scene_graph":SG}
 
-    def collectdata_v2(
-        self, robot
-    ):  # each time change the robot position need to collectdata
-        nowwehave = self.parsing_segmentdata()
-        inventory = self.robot.inventory.copy()
-        sub_nowwehave = []
+    def _decomposed(self): #decomposed all the object in the env at the very beginning
+        OG_results=[]
+        parsed_objects=self.env.task.activity_conditions.parsed_objects
+        OG_dict=self.env.task.load_task_metadata()["inst_to_name"] #format in OG E.g: floor.n.01_1 -> floors_hcqtge_0
+        for key in parsed_objects.keys():
+            for ele in parsed_objects[key]: #E.g:bacon.n.01_1
+                OG_results.append(OG_dict[ele])
+
+        return OG_results
+
+    def collectdata_v2(self,robot): #each time change the robot position need to collectdata
+        nowwehave=self.parsing_segmentdata()
+        inventory=self.robot.inventory.copy()
+        sub_nowwehave=[]
         for key in nowwehave:
             if (
                 list(key.keys())[0].split("/")[-1].rstrip(".png").lstrip("seg_instance")
@@ -381,29 +397,23 @@ class Camera:
         }
 
         for ele in sub_nowwehave:
-            picpath = list(ele.keys())[0]
-            objects = list(ele.values())[0]
-            action = picpath.split("/")[-1][12:-4]
-            scene_graph = self.parseSG(objects)
+            picpath=list(ele.keys())[0]
+            objects=list(ele.values())[0]
+            intersect_objects=list(set(objects)&set(self.OG_results))
+            action=picpath.split("/")[-1][12:-4]
+            scene_graph=self.parseSG(objects)
             if action not in self.actionlist:
                 self.actionlist.append(action)
             obj_metadata.clear()
-            for obj_name in objects:
-                obj_metadata[obj_name] = {}
+            for obj_name in intersect_objects:
+                obj_metadata[obj_name]={}
                 # ability=OBJECT_TAXONOMY.get_abilities(OBJECT_TAXONOMY.get_synset_from_category(obj_name.split("_")[0]))
-                object = self.env.scene.object_registry("name", obj_name)
-                states = {
-                    "ability": [
-                        editable_states[sta]
-                        for sta in list(object.states.keys())
-                        if sta in editable_states.keys()
-                    ]
-                }
-                obj_metadata[obj_name].update(states)
-
-                obj_in_rob = obj_in_robs[obj_name]
-                position_in_bot = {"position_in_bot": obj_in_rob[0]}
-                self.result_json[action] = {}
+                object=self.env.scene.object_registry("name",obj_name)
+                states={"ability":[(editable_states[sta],int(object.states[sta]._get_value())) for sta in list(object.states.keys()) if sta in editable_states.keys()]}
+                obj_metadata[obj_name].update(states.copy())
+                obj_in_rob=obj_in_robs[obj_name]
+                position_in_bot={"position_in_bot":obj_in_rob[0]}
+                self.result_json[action]={}
                 obj_metadata[obj_name].update(position_in_bot)
                 orientation = {"orientation_in_bot": obj_in_rob[1].tolist()}
 
@@ -476,6 +486,8 @@ class Camera:
         with open(f"../{self.FILENAME}/task.json", "w") as f:
             json.dump(result_json, f)
         return result_json
+
+
 
     def Update_camera_pos(self, robot, obj):
         pos = robot.get_position()

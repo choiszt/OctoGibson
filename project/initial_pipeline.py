@@ -20,6 +20,8 @@ def init_pipeline(env, robot, camera, random_selection=False, headless=False, sh
     cam=Camera(robot=env.robots[0],camera=camera,env=env,filename="816_test_gpt")
     robot=ROBOT(env.robots[0],env)
 
+    robot.robot.visible=False
+    
     action=np.zeros(11)
     ppposition=robot.robot.get_position()
     cam_position=get_camera_position(ppposition)

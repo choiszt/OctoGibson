@@ -58,7 +58,7 @@ def exec(task_name=None, scene_name=None,
         error = ""       
         if isinstance(answer, str):
             error = answer
-            gpt_query.record_history(answer=answer, error=error)
+            gpt_query.record_history(error=error)
             continue
         else:
             exec_code = answer['code']
@@ -69,7 +69,7 @@ def exec(task_name=None, scene_name=None,
                 action.act()
             except Exception as e:
                 error = str(e)
-                gpt_query.record_history(answer=answer, error=error)
+                gpt_query.record_history(subtask=answer['subtask'], code=answer['code'], error=error)
                 continue
         
         target_states = answer['target']
@@ -89,10 +89,10 @@ def exec(task_name=None, scene_name=None,
         
         if len(error) == 0:
             print('Task succeed!')
-            gpt_query(answer=answer, error=error)
+            gpt_query.record_history(subtask=answer['subtask'], code=answer['code'], error=error)
             break
         else:
-            gpt_query(answer=answer, error=error)
+            gpt_query.record_history(subtask=answer['subtask'], code=answer['code'], error=error)
     
     
 

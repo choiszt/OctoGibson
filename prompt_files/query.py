@@ -7,7 +7,7 @@ from langchain.chat_models import ChatOpenAI
 from langchain.prompts import SystemMessagePromptTemplate
 from langchain.schema import AIMessage, HumanMessage, SystemMessage
 
-import communicate.env_utils as u
+# import env_utils as u
 
 class Query:
     def __init__(
@@ -18,10 +18,10 @@ class Query:
         ckpt_dir="ckpt",
         openai_api_key=None,
     ):
-        os.environ["OPENAI_API_KEY"] = openai_api_key
+        os.environ["OPENAI_API_KEY"] = '12345'
         
         self.ckpt_dir = ckpt_dir
-        u.f_mkdir(f"{ckpt_dir}/action")
+        # u.f_mkdir(f"{ckpt_dir}/action")
 
         self.llm = ChatOpenAI(
             model_name=model_name,
@@ -48,38 +48,43 @@ class Query:
         return system_message
     
     def render_human_message(
-        self, inventory="", observation="", object="", scene_graph="", task="" 
+        self, inventory="", object="", scene_graph="", task="" 
     ):
 
-        message = ""
-        if len(self.history_info['answer']) > 0:
-            message += f"Code from last round: {self.history_info['answer']['code']}\n\n"
-            if len(self.history_info['error']) > 0:
-                message += f"Execution error: {self.history_info['error']}\n\n"
-            else:
-                message += f"Execution error: No error\n\n"  
-        elif len(self.history_info['answer']) == 0: 
-            message += f"Code from the last round: No code in the first round\n\n"
-            message += f"Execution error: No error in the first round\n\n"      
+        message = ""    
 
         if object:
-            message += f"Objects Informaton: {object}\n\n"
+            message += f"Observed Objects: {object}\n"
         else:
-            message += f"Objects Informaton: None\n\n"
-        if observation:
-            message += f"Observations: {observation}, {scene_graph}\n\n"
+            message += f"Objects Informaton: None\n"
+        if scene_graph:
+            message += f"Observed Relations: {scene_graph}\n"
         else:
-            message += f"Observations: None\n\n"
+            message += f"Observed Relations: None\n"
 
         if inventory:
-            message += f"Inventory: {inventory}\n\n"
+            message += f"Inventory: {inventory}\n"
         else:
-            message += f"Inventory: None\n\n"
+            message += f"Inventory: None\n"
 
-        message += f"Task Goal: {task}\n\n"
+        message += f"Task Goal: {task}\n"
+        
+        if len(self.history_info['subtask']) > 0:
+            message += f"Original Subtasks: {self.history_info['subtask']}\n"
+        else:
+            message += f"Original Subtasks: none\n"
 
-
-        return HumanMessage(content=observation)
+        if len(self.history_info['code']) > 0:
+            message += f"Previous Action Code: {self.history_info['code']}\n"
+            if len(self.history_info['error']) > 0:
+                message += f"Execution Error: {self.history_info['error']}\n"
+            else:
+                message += f"Execution Error: No error\n"  
+        elif len(self.history_info['code']) == 0: 
+            message += f"Previous Action Code: No code\n"
+            message += f"Execution error: No error\n"  
+            
+        return HumanMessage(content=message)
     
     def process_ai_message(self, message):
         # assert isinstance(message, AIMessage)
@@ -87,7 +92,7 @@ class Query:
         processed_message = message
         retry = 3
         error = None
-        classes = ["Explain:", "Plan:", "Code:", "Target States:"]
+        classes = ["Explain:", "Subtasks:", "Code:", "Target States:"]
         idxs = []
         for c in classes:
             m = processed_message.find(c)
@@ -97,28 +102,28 @@ class Query:
         while retry > 0:
             # try:
             explain = processed_message[:idxs[1]]
-            plan = processed_message[idxs[1]:idxs[2]]
+            subtask = processed_message[idxs[1]:idxs[2]]
             code = processed_message[idxs[2]:idxs[3]]
             target = processed_message[idxs[3]:]
             explain = explain.split('Explain:\n')[1]
-            plan = plan.split('Plan:\n\n')[1]
-            exec_code = code.split('Code:\n\n')[1]
+            subtask = subtask.split('Subtasks:\n')[1]
+            exec_code = code.split('Code:\n')[1]
             inv = target.split('Inventory: ')[1]
-            inv = inv.split('Object')[0]
+            inv = inv.split('Object')[0].split('\n')[0]
             obj_states_2 = []
             obj_states_3 = []
-            objects = target.split('Information:')[1]
-            objects = objects.split('\n')
+            objects = target.split('Information:\n')[1]
+            objects = objects.split('\n')[1:]
             for obj in objects:
-                obj = obj[3:]
+                obj = obj.split(') ')[1]
                 obj_list = obj.split(', ')
                 if len(obj_list) == 2:
                     obj_states_2.append(obj_list)
-                else: 
+                elif len(obj_list) == 3: 
                     obj_states_3.append(obj_list)
             return {
                 "explain": explain,
-                "plan": plan,
+                "subtask": subtask,
                 "code": exec_code,
                 "inventory": inv,
                 "obj_2": obj_states_2, 
@@ -130,8 +135,9 @@ class Query:
             #     time.sleep(1)
         return f"Error parsing response (before program execution): {error}"
     
-    def record_history(self, answer="", error=""):
-        self.history_info['response'] = answer
+    def record_history(self, subtask="", code="", error=""):
+        self.history_info['subtask'] = subtask
+        self.history_info['code'] = code
         self.history_info['error'] = error
 
 if __name__ == '__main__':
@@ -140,7 +146,7 @@ if __name__ == '__main__':
         q = Query()
         d = q.process_ai_message(response)
         print(d['explain'])
-        print(d['plan'])
+        print(d['subtask'])
         print(d['code'])
         print(d['inventory'])
         print(d['obj_2'])
