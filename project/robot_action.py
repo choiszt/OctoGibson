@@ -20,7 +20,7 @@ from omnigibson.object_states.factory import (
     get_visual_states,
     get_texture_change_priority,
 )
-
+from pyquaternion import Quaternion
 
 
 OBJECT_TAXONOMY = ObjectTaxonomy()
@@ -83,7 +83,10 @@ class ROBOT():
 #     robot.set_position(pos)
 #     Hold(robot, obj)
 
-
+def quaternion2vector(quat):
+    quat = Quaternion(quat[[1, 2, 3, 0]])
+    v = np.array([0, 0, -1])
+    return quat.rotate(v)
 
 
 
@@ -121,6 +124,7 @@ class Camera():
         self.allobject=self._getallobject()
         self.result_json={}
         self.actionlist=[] #check the action to appear only once
+        self.OG_results=self._decomposed()
     def _getallobject(self):
         allobject=[]
         try:
@@ -261,7 +265,17 @@ class Camera():
                             cnt+=1
                     if cnt!=2:
                         pairs.append((objects[i],objects[j]))
-        for pair in pairs:
+        reduced_pairs=[]
+        for pair in pairs: 
+            tempscore=0 #record whether the object in og_results
+            for ele_pair in pair:
+                if ele_pair in self.OG_results:
+                    tempscore+=1
+            if tempscore!=0:
+                reduced_pairs.append(pair)
+
+
+        for pair in reduced_pairs:
             obj0=self.env.scene.object_registry("name",pair[0])
             obj1=self.env.scene.object_registry("name",pair[1])
             try:
@@ -293,8 +307,22 @@ class Camera():
                 if is_under:
                     SG.append((obj0._name,"under",obj1._name))                   
             except:
-                pass                                
+                pass
+        temp_SG=SG.copy()
+        for (obj1,prep,obj2) in SG:
+            if (obj2,prep,obj1) in temp_SG:
+                temp_SG.remove((obj1,prep,obj2))
         return {"scene_graph":SG}
+
+    def _decomposed(self): #decomposed all the object in the env at the very beginning
+        OG_results=[]
+        parsed_objects=self.env.task.activity_conditions.parsed_objects
+        OG_dict=self.env.task.load_task_metadata()["inst_to_name"] #format in OG E.g: floor.n.01_1 -> floors_hcqtge_0
+        for key in parsed_objects.keys():
+            for ele in parsed_objects[key]: #E.g:bacon.n.01_1
+                OG_results.append(OG_dict[ele])
+
+        return OG_results
 
     def collectdata_v2(self,robot): #each time change the robot position need to collectdata
         nowwehave=self.parsing_segmentdata()
@@ -313,19 +341,18 @@ class Camera():
         for ele in sub_nowwehave:
             picpath=list(ele.keys())[0]
             objects=list(ele.values())[0]
+            intersect_objects=list(set(objects)&set(self.OG_results))
             action=picpath.split("/")[-1][12:-4]
             scene_graph=self.parseSG(objects)
             if action not in self.actionlist:
                 self.actionlist.append(action)
             obj_metadata.clear()
-            for obj_name in objects:
+            for obj_name in intersect_objects:
                 obj_metadata[obj_name]={}
                 # ability=OBJECT_TAXONOMY.get_abilities(OBJECT_TAXONOMY.get_synset_from_category(obj_name.split("_")[0]))
                 object=self.env.scene.object_registry("name",obj_name)
-                states={"ability":[editable_states[sta] for sta in list(object.states.keys()) if sta in editable_states.keys()]}
-                obj_metadata[obj_name].update(states)
-
-
+                states={"ability":[(editable_states[sta],int(object.states[sta]._get_value())) for sta in list(object.states.keys()) if sta in editable_states.keys()]}
+                obj_metadata[obj_name].update(states.copy())
                 obj_in_rob=obj_in_robs[obj_name]
                 position_in_bot={"position_in_bot":obj_in_rob[0]}
                 self.result_json[action]={}
@@ -392,35 +419,120 @@ class Camera():
 
 
 
-    def Update_camera_pos(self, robot):
+    def Update_camera_pos(self, robot, obj):
         pos = robot.get_position()
         cam_pos = get_camera_position(pos)
         self.camera.set_position(cam_pos)
+        obj_pos = obj.get_position()
+        cam_pos = get_camera_position(robot.get_position())
+        direction = obj_pos - cam_pos
+        direction /= np.linalg.norm(direction)
 
-    def Update_camera_pos_bev(self, robot):
+        # 分三步计算旋转四元数，以保证镜头位置
+
+        cam_forward = np.array([0, 0, -1])
+        dir1 = np.array([0, 1, 0])
+        rotation_axis = np.cross(cam_forward, dir1)
+        rotation_angle = np.arccos(np.dot(cam_forward, dir1))
+        q_ro1 = Quaternion(axis=rotation_axis, angle=rotation_angle)
+
+        dir2 = np.append(direction[[0, 1]], 0)
+        rotation_axis = np.cross(dir1, dir2)
+        if np.isclose(np.linalg.norm(rotation_axis), 0):
+            rotation_axis = (
+                np.array([1, 0, 0])
+                if np.allclose(dir1, np.array([0, 0, 1]))
+                else np.cross(dir1, np.array([0, 0, 1]))
+            )
+
+        rotation_angle = np.arccos(np.dot(dir1, dir2))
+        q_ro2 = Quaternion(axis=rotation_axis, angle=rotation_angle) * q_ro1
+
+        rotation_axis = np.cross(dir2, direction)
+        if np.isclose(np.linalg.norm(rotation_axis), 0):
+            rotation_axis = (
+                np.array([1, 0, 0])
+                if np.allclose(dir1, np.array([0, 0, 1]))
+                else np.cross(dir1, np.array([0, 0, 1]))
+            )
+
+        rotation_angle = np.arccos(np.dot(dir2, direction))
+        q_rotation = Quaternion(axis=rotation_axis, angle=rotation_angle) * q_ro2
+
+        new_cam_ori = q_rotation.elements[[1, 2, 3, 0]]
+        self.camera.set_orientation(new_cam_ori)
+
+    def Update_camera_pos_bev(self, robot, obj):
         pos = robot.get_position()
         cam_pos = get_camera_position_bev(pos)
         self.camera.set_position(cam_pos)
+
+        obj_pos = obj.get_position()
+        cam_pos = get_camera_position(robot.get_position())
+        direction = obj_pos - cam_pos
+        direction /= np.linalg.norm(direction)
+
+        # 分三步计算旋转四元数，以保证镜头位置
+
+        cam_forward = np.array([0, 0, -1])
+        dir1 = np.array([0, 1, 0])
+        rotation_axis = np.cross(cam_forward, dir1)
+        rotation_angle = np.arccos(np.dot(cam_forward, dir1))
+        q_ro1 = Quaternion(axis=rotation_axis, angle=rotation_angle)
+
+        dir2 = np.append(direction[[0, 1]], 0)
+        rotation_axis = np.cross(dir1, dir2)
+        if np.isclose(np.linalg.norm(rotation_axis), 0):
+            rotation_axis = (
+                np.array([1, 0, 0])
+                if np.allclose(dir1, np.array([0, 0, 1]))
+                else np.cross(dir1, np.array([0, 0, 1]))
+            )
+
+        rotation_angle = np.arccos(np.dot(dir1, dir2))
+        q_ro2 = Quaternion(axis=rotation_axis, angle=rotation_angle) * q_ro1
+
+        rotation_axis = np.cross(dir2, direction)
+        if np.isclose(np.linalg.norm(rotation_axis), 0):
+            rotation_axis = (
+                np.array([1, 0, 0])
+                if np.allclose(dir1, np.array([0, 0, 1]))
+                else np.cross(dir1, np.array([0, 0, 1]))
+            )
+
+        rotation_angle = np.arccos(np.dot(dir2, direction))
+        q_rotation = Quaternion(axis=rotation_axis, angle=rotation_angle) * q_ro2
+
+        new_cam_ori = q_rotation.elements[[1, 2, 3, 0]]
+        self.camera.set_orientation(new_cam_ori)
+
 
 def get_camera_position(p):
     p[2] += 1.2
     # p[0] += 0.2
     return p
 
+
 def get_camera_position_bev(p):
     p[2] += 3
     return p
 
+
 from collections import OrderedDict
+
+
 def donothing(env, navi):
-    dumbact=OrderedDict([('robot0', navi)])
-    step=0
+    dumbact = OrderedDict([("robot0", navi)])
+    step = 0
     for _ in range(30):
         # og.sim.step()
         env.step(dumbact)
         step += 1
 
+
 from scipy.spatial.transform import Rotation as R
+
+
 def trans_camera(q):
     random_yaw = np.pi / 2
     yaw_orn = R.from_euler("Z", random_yaw)
@@ -428,17 +540,18 @@ def trans_camera(q):
     print(new_camera_orn)
     return new_camera_orn
 
+
 def change_states(obj, states, oper):
-    '''
+    """
     obj (Objects): The object that the states are needed to be changed.
     states (str): The specific states to be changed.
     oper (int): 0 or 1, meaning the False or True of the states.
-    '''
+    """
 
     # TODO: get the states we can edit @Choizst
     # TODO: translate the states to class, for example: open
     all_states = []
-    black_list = [] # the states that cannot be set to True or False
+    black_list = []  # the states that cannot be set to True or False
 
     assert states in all_states and states not in black_list
 
