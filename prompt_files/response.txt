@@ -1,0 +1,23 @@
+Explain:
+Given the observed information, the bacon is inside the fridge. To cook the bacon, I'll need to take it out of the fridge, possibly place it on the griddle, and then cook it. Since no original subtasks were provided and no previous actions have been taken, I will start by planning the subtasks to achieve the goal.
+
+Subtasks:
+(1) Open the fridge.
+(2) Retrieve the bacon from the fridge.
+(3) Place the bacon on the griddle.
+(4) Toggle on the griddle.
+(5) Cook the bacon.
+
+Code:
+def act(bot, env):
+    # Subtask 1: Open the fridge
+    fridge = registry("fridge_xyejdx_0")
+    open(fridge)
+    donothing(env)
+    FlyingCapture(cam, 1)
+
+Target States:
+(1) Inventory: none
+(2) Object Information:
+(a) fridge_xyejdx_0, openable, 1
+(b) fridge_xyejdx_0, openable, 1
