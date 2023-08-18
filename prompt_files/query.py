@@ -48,38 +48,43 @@ class Query:
         return system_message
     
     def render_human_message(
-        self, inventory="", observation="", object="", scene_graph="", task="" 
+        self, inventory="", object="", scene_graph="", task="" 
     ):
 
-        message = ""
-        if len(self.history_info['answer']) > 0:
-            message += f"Code from last round: {self.history_info['answer']['code']}\n\n"
-            if len(self.history_info['error']) > 0:
-                message += f"Execution error: {self.history_info['error']}\n\n"
-            else:
-                message += f"Execution error: No error\n\n"  
-        elif len(self.history_info['answer']) == 0: 
-            message += f"Code from the last round: No code in the first round\n\n"
-            message += f"Execution error: No error in the first round\n\n"      
+        message = ""    
 
         if object:
-            message += f"Objects Informaton: {object}\n\n"
+            message += f"Observed Objects: {object}\n"
         else:
-            message += f"Objects Informaton: None\n\n"
-        if observation:
-            message += f"Observations: {observation}, {scene_graph}\n\n"
+            message += f"Objects Informaton: None\n"
+        if scene_graph:
+            message += f"Observed Relations: {scene_graph}\n"
         else:
-            message += f"Observations: None\n\n"
+            message += f"Observed Relations: None\n"
 
         if inventory:
-            message += f"Inventory: {inventory}\n\n"
+            message += f"Inventory: {inventory}\n"
         else:
-            message += f"Inventory: None\n\n"
+            message += f"Inventory: None\n"
 
-        message += f"Task Goal: {task}\n\n"
+        message += f"Task Goal: {task}\n"
+        
+        if len(self.history_info['subtask']) > 0:
+            message += f"Original Subtasks: {self.history_info['subtask']}\n"
+        else:
+            message += f"Original Subtasks: none\n"
 
-
-        return HumanMessage(content=observation)
+        if len(self.history_info['answer']) > 0:
+            message += f"Previous Action Code: {self.history_info['answer']['code']}\n"
+            if len(self.history_info['error']) > 0:
+                message += f"Execution Error: {self.history_info['error']}\n"
+            else:
+                message += f"Execution Error: No error\n"  
+        elif len(self.history_info['answer']) == 0: 
+            message += f"Code from the last round: No code\n"
+            message += f"Execution error: No error\n"  
+            
+        return HumanMessage(content=message)
     
     def process_ai_message(self, message):
         # assert isinstance(message, AIMessage)

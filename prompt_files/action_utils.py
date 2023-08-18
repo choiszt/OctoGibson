@@ -264,8 +264,8 @@ def trans_camera(q):
     return new_camera_orn
 
 reverse=lambda states:{value:key for key,value in states.items()}
-unary_states={object_states.Cooked:"cooked",object_states.Burnt:"burnt",object_states.Frozen:"frozen",object_states.Heated:"hot",
-                         object_states.Open:"open",object_states.ToggledOn:"toggled_on",object_states.Folded:"folded",object_states.Unfolded:"unfolded"}
+unary_states={object_states.Cooked:"cookable",object_states.Burnt:"burnable",object_states.Frozen:"freezable",object_states.Heated:"heatable",
+                         object_states.Open:"openable",object_states.ToggledOn:"togglable",object_states.Folded:"foldable",object_states.Unfolded:"unfoldable"}
 binary__states={
     object_states.Inside: "inside",
     object_states.NextTo: "nextto",

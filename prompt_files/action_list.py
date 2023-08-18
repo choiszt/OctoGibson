@@ -25,7 +25,7 @@ from action_utils import *
 
 OBJECT_TAXONOMY = ObjectTaxonomy()
 
-def EasyGrasp(robot, obj, dis_threshold):
+def EasyGrasp(robot, obj, dis_threshold=1.0):
     #Grasp the robot within the distance threshold
     robot_pos = robot.get_position()
     obj_pose = obj.get_position()
@@ -46,7 +46,7 @@ def MoveBot(env, robot, pos):
         obj = robot.inventory[0]
         Hold(env, robot, obj)
 
-def EasyDrop(robot, obj, pos, dis_threshold): #TODO possible function  EasyDrop_V2(robot,obj1, obj2, dis_threshold) (put the OBJ1 <predicate> OBJ2)
+def EasyDrop(robot, obj, pos, dis_threshold=1.0): #TODO possible function  EasyDrop_V2(robot,obj1, obj2, dis_threshold) (put the OBJ1 <predicate> OBJ2)
     # Drop the objects within robot's hands
     obj_pos = obj.get_position()
     dis = cal_dis(obj_pos, pos)
@@ -115,18 +115,18 @@ def donothing(env):
         env.step(dumbact)
         step += 1
 
-def get_states(env,obj:str,state:str)->object_states:
-    whole_dict={**reversed_unary_states,**reversed_binary__states}
-    class_obj=env.scene.object_registry("name", obj)
-    try:
-        if whole_dict[state] in list(class_obj.states.keys()):
-            return whole_dict[state]
-        else:
-            print(f"{obj} don't have states {whole_dict[state]}")
-            raise Exception
-    except:
-        print(f"Wrong state {state}")
-        raise Exception
+# def get_states(env,obj:str,state:str)->object_states:
+#     whole_dict={**reversed_unary_states,**reversed_binary__states}
+#     class_obj=env.scene.object_registry("name", obj)
+#     try:
+#         if whole_dict[state] in list(class_obj.states.keys()):
+#             return whole_dict[state]
+#         else:
+#             print(f"{obj} don't have states {whole_dict[state]}")
+#             raise Exception
+#     except:
+#         print(f"Wrong state {state}")
+#         raise Exception
     
 def registry(env, obj):
     return env.scene.object_registry("name", obj)
@@ -134,7 +134,7 @@ def registry(env, obj):
 def cook(obj):
     change_states(obj, 'cooked', 1)
 
-def burnt(obj):
+def burn(obj):
     change_states(obj, 'burnt', 1)
 
 def freeze(obj):
