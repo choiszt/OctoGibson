@@ -6,9 +6,9 @@ import omnigibson as og
 from omnigibson.macros import gm
 from omnigibson.utils.ui_utils import choose_from_options
 import sys;sys.path.append("/shared/liushuai/OmniGibson/project")
-from robot_action import *
+from omni_base.prompt_files.robot_action import *
 import action
-import parse_json
+import omni_base.prompt_files.parse_json as parse_json
 # import query
 # from imp import reload
 # import communicate.env_utils as u
@@ -29,7 +29,7 @@ def main(random_selection=False, headless=False, short_exec=False, task_name=Non
 
     robot = env.robots[0]
     camera= og.sim.viewer_camera 
-    bbox_modalities = ["bbox_3d", "bbox_2d_loose"]# "bbox_2d_tight" not use 
+    bbox_modalities = ["bbox_2d_loose"]# "bbox_2d_tight" "bbox_3d"not use 
     for bbox_modality in bbox_modalities:
         camera.add_modality(bbox_modality)
     camera.focal_length = 10.

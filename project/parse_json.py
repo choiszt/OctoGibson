@@ -54,6 +54,13 @@ def parse_json(path):
         s = '(' + i[0] + ', ' + str(i[1])+ ", " +str(round(i[2], 2)) + ')'
         obs_str += s
 
-    return [sg_str, obs_str, str(INV), str(TASK)]
+    final_SG=list(set(SG)).copy()
+    for (obj1,prep,obj2) in list(set(SG)):
+        if (obj2,prep,obj1) in final_SG:
+            final_SG.remove((obj1,prep,obj2))
 
-parse_json('/shared/liushuai/OmniGibson/816_test_gpt/task1.json')
+
+    return [final_SG, obs_str, str(INV), str(TASK)]
+
+parse_json("/shared/liushuai/OmniGibson/818_test_gpt/task1.json")
+

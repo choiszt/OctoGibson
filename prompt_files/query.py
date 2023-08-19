@@ -7,21 +7,18 @@ from langchain.chat_models import ChatOpenAI
 from langchain.prompts import SystemMessagePromptTemplate
 from langchain.schema import AIMessage, HumanMessage, SystemMessage
 
-# import env_utils as u
+import env_utils as u
+import openai
 
 class Query:
     def __init__(
         self,
-        model_name="gpt-3.5-turbo",
+        model_name="gpt-4",
         temperature=0,
         request_timout=120,
-        ckpt_dir="ckpt",
         openai_api_key=None,
     ):
-        os.environ["OPENAI_API_KEY"] = '12345'
-        
-        self.ckpt_dir = ckpt_dir
-        # u.f_mkdir(f"{ckpt_dir}/action")
+        os.environ["OPENAI_API_KEY"] = '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'
 
         self.llm = ChatOpenAI(
             model_name=model_name,
@@ -33,17 +30,13 @@ class Query:
         self.record_history()
 
     def render_system_message(self):
-        system_template = u.load_prompt("action_template")
-        
-        # TODO: specify the content in prompt
+        system_template = u.load_prompt("prompt_template")
 
-        response_format = u.load_prompt("action_response_format")
+        response_format = u.load_prompt("response_template")
         system_message_prompt = SystemMessagePromptTemplate.from_template(
             system_template
         )
-        system_message = system_message_prompt.format(
-            programs=programs, response_format=response_format
-        )  ### programs and response_format are variables in system template.
+        system_message = system_message_prompt.format(response_format=response_format)  ### programs and response_format are variables in system template.
         assert isinstance(system_message, SystemMessage)
         return system_message
     
@@ -83,6 +76,11 @@ class Query:
         elif len(self.history_info['code']) == 0: 
             message += f"Previous Action Code: No code\n"
             message += f"Execution error: No error\n"  
+        
+        message += "Now, please output Explain, Subtasks (revise if necessary), Code that completing the next subtask, and Target States, according to the instruction above. Remember you can only use the functions provided above and pay attention to the response format."
+        
+        with open('./input.txt', 'w') as f:
+            f.write(message)
             
         return HumanMessage(content=message)
     
@@ -90,6 +88,8 @@ class Query:
         # assert isinstance(message, AIMessage)
 
         processed_message = message
+        # with open('./answer.txt', 'w') as f:
+        #     f.write(processed_message)
         retry = 3
         error = None
         classes = ["Explain:", "Subtasks:", "Code:", "Target States:"]
@@ -144,10 +144,19 @@ if __name__ == '__main__':
     with open('response.txt', 'r') as f:
         response = f.read()
         q = Query()
-        d = q.process_ai_message(response)
-        print(d['explain'])
-        print(d['subtask'])
-        print(d['code'])
-        print(d['inventory'])
-        print(d['obj_2'])
-        print(d['obj_3'])
+        # system = q.render_system_message()
+        # human = q.render_human_message(object="(fridge_xyejdx_0, [('openable', 0), ('heatable', 0), ('freezable', 0)], 2.12)(stove_rgpphy_0, [('togglable', 0), ('heatable', 0), ('freezable', 0)], 1.59)(griddle_157, [('togglable', 0), ('heatable', 0), ('freezable', 0)], 1.68)(bacon_1234, ('cookable, heatable, burnable'), 2.12)",
+        #                                scene_graph="(pot_plant_udqjui_0,ontop,bottom_cabinet_jrhgeu_1)(trash_can_zotrbg_0,nextto,fridge_xyejdx_0)(bacon_1234, inside fridge_xyejdx_0)(fridge_xyejdx_0,nextto,shelf_owvfik_0)(pot_plant_udqjui_2,ontop,floors_xzlkei_0)(stove_rgpphy_0,under,range_hood_iqbpie_0)(stove_rgpphy_0,nextto,shelf_owvfik_0)(stove_rgpphy_0,nextto,door_lvgliq_1)(griddle_157,under,range_hood_iqbpie_0)(griddle_157,nextto,stove_rgpphy_0)",
+        #                                task='cook the bacon')
+        # print('111')
+        # answer = q.llm([system, human])
+        
+        # print(answer)
+        info = q.process_ai_message(response)
+        
+        print(info['explain'])
+        print(info['code'])
+        print(info['subtask'])
+        print(info['inventory'])
+        print(info['obj_2'])
+        print(info['obj_3'])

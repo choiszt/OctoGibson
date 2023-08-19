@@ -1,3 +1,5 @@
+#merged from jiamu @ 8.18
+
 import omnigibson as og
 from omnigibson.macros import gm
 from omnigibson.utils.asset_utils import get_available_g_scenes, get_available_og_scenes
@@ -7,7 +9,7 @@ from collections import OrderedDict
 from omnigibson import object_states
 import numpy as np
 import json
-import robot_action as ra
+import omni_base.prompt_files.robot_action as ra
 
 # Configure macros for maximum performance
 gm.USE_GPU_DYNAMICS = True
@@ -15,7 +17,7 @@ gm.ENABLE_FLATCACHE = True
 gm.ENABLE_OBJECT_STATES = True
 gm.ENABLE_TRANSITION_RULES = False
 from scipy.spatial.transform import Rotation as R
-from robot_action import *
+from omni_base.prompt_files.robot_action import *
 
 
 def adjust_position(obj, offset):  # offset is a list of 3 elements [x,y,z]

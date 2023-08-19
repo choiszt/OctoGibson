@@ -7,7 +7,7 @@ from collections import OrderedDict
 from omnigibson import object_states
 import numpy as np
 import json
-import robot_action as ra
+import omni_base.prompt_files.robot_action as ra
 
 # Configure macros for maximum performance
 gm.USE_GPU_DYNAMICS = True
@@ -15,7 +15,7 @@ gm.ENABLE_FLATCACHE = True
 gm.ENABLE_OBJECT_STATES = True
 gm.ENABLE_TRANSITION_RULES = False
 import time
-from robot_action import *
+from omni_base.prompt_files.robot_action import *
 from scipy.spatial.transform import Rotation as R
 
 
