@@ -16,7 +16,7 @@ gm.ENABLE_OBJECT_STATES = True
 gm.ENABLE_TRANSITION_RULES = False
 import time
 from robot_action import *
-from scipy.spatial.transform import kRotation as R
+from scipy.spatial.transform import Rotation as R
 
 
 def adjust_position(obj, offset):

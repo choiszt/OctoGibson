@@ -87,14 +87,17 @@ class ROBOT:
             self.Hold(obj)
 
     def EasyDrop(
-        self, obj, pos, dis_threshold
+        self, obj1, obj2, dis_threshold
     ):  # TODO possible function  EasyDrop_V2(robot,obj1, obj2, dis_threshold) (put the OBJ1 <predicate> OBJ2)
         # Drop the objects within robot's hands
-        obj_pos = obj.get_position()
-        dis = cal_dis(obj_pos, pos)
-        obj.set_position(pos)
+        obj1_pos = obj1.get_position()
+        obj2_pos = obj2.get_position()
+        z_len = obj2.aabb_center[2]
+        target_pos = obj2_pos + np.array([0, 0, 0.2 + z_len * 0.5])
+        dis = cal_dis(obj1_pos, target_pos)
+        obj1.set_position(target_pos)
         if dis < dis_threshold:
-            obj.set_position(pos)
+            obj1.set_position(target_pos)
             a = self.robot.inventory.pop()
             print(f"the robot throw {a},now we have:{self.robot.inventory}")
         #     return True
@@ -106,11 +109,6 @@ class ROBOT:
 #     # Teleport the robot and the objects within its hands
 #     robot.set_position(pos)
 #     Hold(robot, obj)
-def quaternion2vector(quat):
-    quat = Quaternion(quat[[1, 2, 3, 0]])
-    v = np.array([0, 0, -1])
-    return quat.rotate(v)
-
 def quaternion2vector(quat):
     quat = Quaternion(quat[[1, 2, 3, 0]])
     v = np.array([0, 0, -1])
