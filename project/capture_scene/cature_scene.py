@@ -13,7 +13,7 @@ gm.ENABLE_FLATCACHE = True
 gm.ENABLE_OBJECT_STATES = False
 gm.ENABLE_TRANSITION_RULES = False
 import time
-from robot_action import *
+from omni_base.prompt_files.robot_action import *
 "['Beechwood_0_int', 'Beechwood_1_int', 'Benevolence_0_int', 'Benevolence_1_int', 'Benevolence_2_int', 'Ihlen_0_int', 'Ihlen_1_int',"
 "'Merom_0_int', 'Merom_1_int', 'Pomaria_0_int', 'Pomaria_1_int', 'Pomaria_2_int', 'Rs_int', 'Wainscott_0_int', 'Wainscott_1_int']"
 def main(random_selection=False, headless=False, short_exec=False):

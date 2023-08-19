@@ -12,7 +12,7 @@ gm.USE_GPU_DYNAMICS = True
 gm.ENABLE_FLATCACHE = True
 gm.ENABLE_OBJECT_STATES = True
 gm.ENABLE_TRANSITION_RULES = False
-from robot_action import *
+from omni_base.prompt_files.robot_action import *
 import yaml
 
 def init_pipeline(env, robot, camera, random_selection=False, headless=False, short_exec=False, file_name=None):

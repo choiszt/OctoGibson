@@ -4,7 +4,7 @@ import omnigibson as og
 from omnigibson.macros import gm
 from omnigibson.sensors import VisionSensor
 from omnigibson.utils.ui_utils import choose_from_options, KeyboardRobotController
-from robot_action import *
+from omni_base.prompt_files.robot_action import *
 GRASPING_MODES = dict(
     sticky="Sticky Mitten - Objects are magnetized when they touch the fingers and a CLOSE command is given",
     physical="Physical Grasping - No additional grasping assistance applied",
