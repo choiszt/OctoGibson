@@ -6,9 +6,9 @@ import omnigibson as og
 from omnigibson.macros import gm
 from omnigibson.utils.ui_utils import choose_from_options
 import sys;sys.path.append("/shared/liushuai/OmniGibson/project")
-from robot_action import *
+from omni_base.prompt_files.robot_action import *
 import action
-import parse_json
+import omni_base.prompt_files.parse_json as parse_json
 # import query
 # from imp import reload
 # import communicate.env_utils as u
