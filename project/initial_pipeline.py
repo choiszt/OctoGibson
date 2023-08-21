@@ -15,12 +15,13 @@ gm.ENABLE_TRANSITION_RULES = False
 from robot_action import *
 import yaml
 
-def init_pipeline(env, robot, camera, random_selection=False, headless=False, short_exec=False, file_name=None):
+def init_pipeline(env, robot, camera,task_name,random_selection=False, headless=False, short_exec=False, file_name=None):
     iter=0
-    cam=Camera(robot=env.robots[0],camera=camera,env=env,filename="818_test_gpt")
+    cam=Camera(robot=env.robots[0],camera=camera,env=env,filename="818_test_gpt",TASK=task_name)
     robot=ROBOT(env.robots[0],env)
 
     robot.robot.visible=False
+    robot.robot.visible_only=True
     
     action=np.zeros(11)
     ppposition=robot.robot.get_position()
@@ -34,7 +35,7 @@ def init_pipeline(env, robot, camera, random_selection=False, headless=False, sh
     for i in range(4):
         cam.FlyingCapture(f'{iter}_detect_surroundings')   
         iter+=1   
-        Turn_90(robot.robot)
+        # Turn_90(robot.robot)
         rs_o = trans_camera(rs_o)
         cam.setposition(cam_position, rs_o)
         donothing(env, action) 

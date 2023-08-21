@@ -21,6 +21,9 @@ def parse_json(path):
     with open(path) as f:
         data = json.load(f)
     for k in data.keys():
+        if k=='task':
+            TASK=data[k]
+            continue
         parsed_data = data[k]
         for ks in parsed_data.keys(): #each object in data
             if ks == 'scene_graph':
@@ -30,8 +33,6 @@ def parse_json(path):
                         SG.append(tuple(s))
             elif ks == 'inventory':
                 INV = parsed_data[ks]
-            elif ks == 'task':
-                TASK = parsed_data[ks]
             else:
                 if ks not in OBJ:
                     obj = []
@@ -62,5 +63,5 @@ def parse_json(path):
 
     return [final_SG, obs_str, str(INV), str(TASK)]
 
-parse_json("/shared/liushuai/OmniGibson/818_test_gpt/task1.json")
+# parse_json("/shared/liushuai/OmniGibson/818_test_gpt/task1.json")
 

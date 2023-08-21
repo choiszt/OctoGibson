@@ -35,7 +35,7 @@ def main(random_selection=False, headless=False, short_exec=False, task_name=Non
     camera.focal_length = 10.
 
     # init pipeline
-    json_path=init_pipeline(env, robot, camera)
+    json_path=init_pipeline(env, robot, camera,task_name)
     
     human_info = parse_json.parse_json(path=json_path)
 
@@ -81,4 +81,4 @@ def main(random_selection=False, headless=False, short_exec=False, task_name=Non
 
 
 if __name__ == "__main__":
-    main(scene_name="Merom_1_int",task_name="cook_bacon")
+    main(scene_name="Merom_1_int",task_name="fry_pot_stickers")

@@ -8,6 +8,7 @@ import omnigibson.utils.transform_utils as T
 from scipy.spatial.transform import Rotation as R
 import json
 import os
+import omnigibson as og
 from bddl.object_taxonomy import ObjectTaxonomy
 from omnigibson.object_states.factory import (
     get_default_states,
@@ -132,7 +133,7 @@ def Turn_90(robot, pos=None):
 
 # class of flying camera
 class Camera():
-    def __init__(self,robot,camera,env,filename,position=np.array([-2.48302418,  1.55655398,  2.22882511]),orientation=np.array([ 0.56621324, -0.0712958 , -0.10258276,  0.81473692])):
+    def __init__(self,robot,camera,env,filename,TASK,position=np.array([-2.48302418,  1.55655398,  2.22882511]),orientation=np.array([ 0.56621324, -0.0712958 , -0.10258276,  0.81473692])):
         self.robot=robot
         self.camera=camera
         self.env=env
@@ -147,6 +148,7 @@ class Camera():
         self.actionlist=[] #check the action to appear only once
         self.OG_results=self._decomposed()
         self.blacklist=["walls","electric_switch","floors","ceilings","window"]
+        self.task=TASK
     def _getallobject(self):
         allobject=[]
         try:
@@ -346,6 +348,7 @@ class Camera():
         return OG_results
 
     def collectdata_v2(self,robot): #each time change the robot position need to collectdata
+        self.result_json['task']=self.task
         nowwehave=self.parsing_segmentdata()
         inventory=self.robot.inventory.copy()
         sub_nowwehave=[]
@@ -557,6 +560,17 @@ def donothing(env, navi):
     step = 0
     for _ in range(30):
         # og.sim.step()
+        # og.sim.step()
+        # _,_,info=env.task.step(env,dumbact)
+        # env._populate_info(info)
+
+        # # if done and self._automatic_reset:
+        # #     # Add lost observation to our information dict, and reset
+        # #     info["last_observation"] = obs
+        # #     obs = self.reset()
+
+        # # Increment step
+        # env._current_step += 1
         env.step(dumbact)
         step += 1
 
