@@ -12,7 +12,8 @@ gm.USE_GPU_DYNAMICS = True
 gm.ENABLE_FLATCACHE = True
 gm.ENABLE_OBJECT_STATES = True
 gm.ENABLE_TRANSITION_RULES = False
-from omni_base.prompt_files.robot_action import *
+# from omni_base.prompt_files.robot_action import *
+from robot_action import *
 import yaml
 
 def init_pipeline(env, robot, camera,task_name,random_selection=False, headless=False, short_exec=False, file_name=None):
@@ -28,31 +29,37 @@ def init_pipeline(env, robot, camera,task_name,random_selection=False, headless=
     cam_position=get_camera_position(ppposition)
     robot_sensor = robot.robot._sensors['robot0:eyes_Camera_sensor']
     rs_p, rs_o = robot_sensor.get_position_orientation()
+    origin_pos_ori=[cam_position,rs_o]
     cam.setposition(cam_position, rs_o)
+    from verify_action_list import act
+    act(robot,env)
+    # donothing(env, action)
+    # print("ego:detect surroundings!!")
+    # for i in range(4):
+    #     cam.FlyingCapture(f'{iter}_detect_surroundings')   
+    #     iter+=1   
+    #     # Turn_90(robot.robot)
+    #     rs_o = trans_camera(rs_o)
+    #     cam.setposition(cam_position, rs_o)
+    #     donothing(env, action) 
     
-    donothing(env, action)
-    print("ego:detect surroundings!!")
-    for i in range(4):
-        cam.FlyingCapture(f'{iter}_detect_surroundings')   
-        iter+=1   
-        # Turn_90(robot.robot)
-        rs_o = trans_camera(rs_o)
-        cam.setposition(cam_position, rs_o)
-        donothing(env, action) 
+    # cam.collectdata_v2(robot.robot)
     
-    cam.collectdata_v2(robot.robot)
-    
-    donothing(env, action)
-    robot.robot.visible=True
-    robot.robot.set_position([-1.53887291 ,4.79978561 ,0.01504258])
-    ppposition=robot.robot.get_position()
-    cam_position=get_camera_position_bev(ppposition)
-    cam.setposition(cam_position, trans_camera(robot.robot.get_orientation()))
-    donothing(env, action)
-    cam.FlyingCapture(f'{iter}_BEV_surroundings')   
-    iter+=1  
+    # donothing(env, action)
+    # robot.robot.visible=True
+    # robot.robot.set_position([-1.53887291 ,4.79978561 ,0.01504258])
+    # ppposition=robot.robot.get_position()
+    # cam_position=get_camera_position_bev(ppposition)
+    # cam.setposition(cam_position, trans_camera(robot.robot.get_orientation()))
+    # donothing(env, action)
+    # cam.FlyingCapture(f'{iter}_BEV_surroundings')   
+    # iter+=1  
 
-    donothing(env, action)
-    cam.collectdata_v2(robot.robot)
-    jsonpath=cam.writejson()
+    # donothing(env, action)
+    # cam.collectdata_v2(robot.robot)
+    # jsonpath=cam.writejson()
+
+
+
+
     return jsonpath

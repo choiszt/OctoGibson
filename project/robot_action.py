@@ -51,7 +51,7 @@ class ROBOT():
     # else:
     #     return False
 
-    def get_robot_pos(obj):
+    def get_robot_pos(self,obj):
         obj_pos, obj_ori = obj.get_position_orientation()
         vec_standard = np.array([0, 1, 0])
         rotated_vec = Quaternion(obj_ori[[1, 2, 3, 0]]).rotate(vec_standard)
@@ -78,7 +78,7 @@ class ROBOT():
 
     def MoveBot(self, obj):
         pos = self.get_robot_pos(obj)
-        self.robot.set_position(obj)
+        self.robot.set_position(pos)
 
         #TODO update_camera_pos
         if self.robot.inventory:

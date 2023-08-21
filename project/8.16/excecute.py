@@ -6,9 +6,12 @@ import omnigibson as og
 from omnigibson.macros import gm
 from omnigibson.utils.ui_utils import choose_from_options
 import sys;sys.path.append("/shared/liushuai/OmniGibson/project")
-from omni_base.prompt_files.robot_action import *
+# from omni_base.prompt_files.robot_action import *
+# import action
+# import omni_base.prompt_files.parse_json as parse_json
+from robot_action import *
 import action
-import omni_base.prompt_files.parse_json as parse_json
+import parse_json as parse_json
 # import query
 # from imp import reload
 # import communicate.env_utils as u
@@ -81,4 +84,4 @@ def main(random_selection=False, headless=False, short_exec=False, task_name=Non
 
 
 if __name__ == "__main__":
-    main(scene_name="Merom_1_int",task_name="fry_pot_stickers")
+    main(scene_name="Merom_1_int",task_name="cook_bacon")
