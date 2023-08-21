@@ -105,21 +105,22 @@ class Query:
             subtask = processed_message[idxs[1]:idxs[2]]
             code = processed_message[idxs[2]:idxs[3]]
             target = processed_message[idxs[3]:]
-            explain = explain.split('Explain:\n')[1]
+            explain = explain.split('Explain: \n')[1]
+            print(explain)
             subtask = subtask.split('Subtasks:\n')[1]
-            exec_code = code.split('Code:\n')[1]
+            exec_code = code.split('```python\n')[1].split('```')[0]
             inv = target.split('Inventory: ')[1]
             inv = inv.split('Object')[0].split('\n')[0]
             obj_states_2 = []
             obj_states_3 = []
             objects = target.split('Information:\n')[1]
-            objects = objects.split('\n')[1:]
+            objects = objects.split('\n')
             for obj in objects:
-                obj = obj.split(') ')[1]
+                obj = obj.split(') ')[-1]
                 obj_list = obj.split(', ')
-                if len(obj_list) == 2:
+                if len(obj_list) == 3:
                     obj_states_2.append(obj_list)
-                elif len(obj_list) == 3: 
+                elif len(obj_list) == 4: 
                     obj_states_3.append(obj_list)
             return {
                 "explain": explain,
@@ -151,7 +152,9 @@ if __name__ == '__main__':
         # print('111')
         # answer = q.llm([system, human])
         
-        # print(answer)
+        # print(answer.content)
+        # with open('./response.txt', 'w') as f:
+        #     f.write(answer.content)
         info = q.process_ai_message(response)
         
         print(info['explain'])

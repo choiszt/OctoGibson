@@ -20,7 +20,7 @@ from omnigibson.object_states.factory import (
     get_texture_change_priority,
 )
 
-from action_utils import *
+from prompt_files.action_utils import *
 
 
 OBJECT_TAXONOMY = ObjectTaxonomy()
@@ -39,21 +39,26 @@ def EasyGrasp(robot, obj, dis_threshold=1.0):
     robot.inventory.append(obj._name)
     print(f"now we have:{robot.inventory}")
 
-def MoveBot(env, robot, pos):
+def MoveBot(env, robot,obj,camera):
+    pos = get_robot_pos(obj)
     robot.set_position(pos)
+    pos=Update_camera_pos(camera,robot,obj)
     if robot.inventory:
         # relationship between name and variable.
         obj = robot.inventory[0]
         Hold(env, robot, obj)
 
-def EasyDrop(robot, obj, pos, dis_threshold=1.0): #TODO possible function  EasyDrop_V2(robot,obj1, obj2, dis_threshold) (put the OBJ1 <predicate> OBJ2)
+def EasyDrop(robot,obj1, obj2, dis_threshold=1.0):  
     # Drop the objects within robot's hands
-    obj_pos = obj.get_position()
-    dis = cal_dis(obj_pos, pos)
-    obj.set_position(pos)
+    obj1_pos = obj1.get_position()
+    obj2_pos = obj2.get_position()
+    z_len = obj2.aabb_center[2]
+    target_pos = obj2_pos + np.array([0, 0, 0.2 + z_len * 0.5])
+    dis = cal_dis(obj1_pos, target_pos)
+    obj1.set_position(target_pos)
     if dis < dis_threshold:
-        obj.set_position(pos)
-        a=robot.inventory.pop()        
+        obj1.set_position(target_pos)
+        a = robot.inventory.pop()
         print(f"the robot throw {a},now we have:{robot.inventory}")
 
 
@@ -72,7 +77,7 @@ def FlyingCapture(camera, iter, FILENAME=None, file_name=None):
                 segimg = segmentation_to_rgb(obs_dict[query_name][0], N=256)
                 instancemap = obs_dict[query_name][1]
                 for item in instancemap:
-                    bbox_3ds=obs_dict['bbox_3d']
+                    # bbox_3ds=obs_dict['bbox_3d']
                     bbox_2ds=obs_dict["bbox_2d_loose"] #
                     hextuple=[f"/shared/liushuai/OmniGibson/{FILENAME}/"+query_name + f'{iter}.png',item[1].split("/")[-1],item[3],item[0],'','']
                     for bbox_2d in bbox_2ds:
@@ -80,11 +85,11 @@ def FlyingCapture(camera, iter, FILENAME=None, file_name=None):
                             bbox2d_info=[bbox_2d[i] for i in range(6,10,1)]
                             hextuple[4]=bbox2d_info
                             break
-                    for bbox_3d in bbox_3ds:
-                        if bbox_3d[0]==item[0]:
-                            bbox3d_info=[bbox_3d[i] for i in range(2,9,1)]
-                            hextuple[5]=bbox3d_info
-                            break
+                    # for bbox_3d in bbox_3ds:
+                    #     if bbox_3d[0]==item[0]:
+                    #         bbox3d_info=[bbox_3d[i] for i in range(2,9,1)]
+                    #         hextuple[5]=bbox3d_info
+                    #         break
                     seglist.append(hextuple)
             elif modality == "normal":
                 # Re-map to 0 - 1 range
@@ -115,36 +120,36 @@ def donothing(env):
         env.step(dumbact)
         step += 1
     
-def registry(env, obj):
-    return env.scene.object_registry("name", obj)
+def registry(env, obj_name):
+    return env.scene.object_registry("name", obj_name)
 
 def cook(obj):
-    change_states(obj, 'cooked', 1)
+    change_states(obj, 'cookable', 1)
 
 def burn(obj):
-    change_states(obj, 'burnt', 1)
+    change_states(obj, 'burnable', 1)
 
 def freeze(obj):
-    change_states(obj, 'frozen', 1)
+    change_states(obj, 'freezable', 1)
 
 def heat(obj):
-    change_states(obj, 'hot', 1)
+    change_states(obj, 'heatable', 1)
 
 def open(obj):
-    change_states(obj, 'open', 1)
+    change_states(obj, 'openable', 1)
 
 def close(obj):
-    change_states(obj, 'open', 0)
+    change_states(obj, 'openable', 0)
 
 def fold(obj):
-    change_states(obj, 'folded', 1)
+    change_states(obj, 'foldable', 1)
 
 def unfold(obj):
-    change_states(obj, 'unfolded', 1)
+    change_states(obj, 'unfoldable', 1)
 
 def toggle_on(obj):
-    change_states(obj, 'toggled_on', 1)
+    change_states(obj, 'togglable', 1)
 
 def toggle_off(obj):
-    change_states(obj, 'toggled_on', 0)
+    change_states(obj, 'togglable', 0)
 

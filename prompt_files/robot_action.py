@@ -50,7 +50,7 @@ class ROBOT():
     # else:
     #     return False
 
-    def get_robot_pos(obj):
+    def get_robot_pos(self,obj):
         obj_pos, obj_ori = obj.get_position_orientation()
         vec_standard = np.array([0, 1, 0])
         rotated_vec = Quaternion(obj_ori[[1, 2, 3, 0]]).rotate(vec_standard)
@@ -77,7 +77,7 @@ class ROBOT():
 
     def MoveBot(self, obj):
         pos = self.get_robot_pos(obj)
-        self.robot.set_position(obj)
+        self.robot.set_position(pos)
 
         #TODO update_camera_pos
         if self.robot.inventory:
@@ -132,7 +132,7 @@ def Turn_90(robot, pos=None):
 
 # class of flying camera
 class Camera():
-    def __init__(self,robot,camera,env,filename,position=np.array([-2.48302418,  1.55655398,  2.22882511]),orientation=np.array([ 0.56621324, -0.0712958 , -0.10258276,  0.81473692])):
+    def __init__(self,robot,camera,env,filename,TASK,position=np.array([-2.48302418,  1.55655398,  2.22882511]),orientation=np.array([ 0.56621324, -0.0712958 , -0.10258276,  0.81473692])):
         self.robot=robot
         self.camera=camera
         self.env=env
@@ -147,6 +147,7 @@ class Camera():
         self.actionlist=[] #check the action to appear only once
         self.OG_results=self._decomposed()
         self.blacklist=["walls","electric_switch","floors","ceilings","window"]
+        self.task=TASK
     def _getallobject(self):
         allobject=[]
         try:
@@ -346,6 +347,7 @@ class Camera():
         return OG_results
 
     def collectdata_v2(self,robot): #each time change the robot position need to collectdata
+        self.result_json['task']=self.task
         nowwehave=self.parsing_segmentdata()
         inventory=self.robot.inventory.copy()
         sub_nowwehave=[]

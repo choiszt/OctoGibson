@@ -23,7 +23,24 @@ from omnigibson.object_states.factory import (
 
 
 OBJECT_TAXONOMY = ObjectTaxonomy()
+from pyquaternion import Quaternion
 
+def get_robot_pos(obj):
+    obj_pos, obj_ori = obj.get_position_orientation()
+    vec_standard = np.array([0, 1, 0])
+    rotated_vec = Quaternion(obj_ori[[1, 2, 3, 0]]).rotate(vec_standard)
+    bbox = obj.native_bbox
+    robot_pos = np.zeros(3)
+    robot_pos[0] = obj_pos[0] + rotated_vec[0] * bbox[1] * 0.5 + rotated_vec[0]
+    robot_pos[1] = obj_pos[1] + rotated_vec[1] * bbox[1] * 0.5 + rotated_vec[1]
+    robot_pos[2] = 0.25
+
+    with open('./record.txt', 'a') as file:
+        file.write('bbox: ' + str(bbox) + '\n')
+        file.write('rotated_vec: ' + str(rotated_vec) + '\n')
+        file.write('obj_pos: ' + str(obj_pos) + '\n')
+        file.write('robot_pos: ' + str(robot_pos) + '\n')
+    return robot_pos
 
 def cal_dis(pos1, pos2):
     #calculate the distance between the two position
@@ -236,10 +253,48 @@ def writejson(FILENAME, result_json):
     with open(f"/shared/liushuai/OmniGibson/{FILENAME}/task.json","w")as f:
         json.dump(result_json,f)
 
-def Update_camera_pos(camera, robot):
+def Update_camera_pos(camera,robot,obj): #updated 
     pos = robot.get_position()
     cam_pos = get_camera_position(pos)
     camera.set_position(cam_pos)
+    obj_pos = obj.get_position()
+    cam_pos = get_camera_position(robot.get_position())
+    direction = obj_pos - cam_pos
+    direction /= np.linalg.norm(direction)
+
+    # 分三步计算旋转四元数，以保证镜头位置
+
+    cam_forward = np.array([0, 0, -1])
+    dir1 = np.array([0, 1, 0])
+    rotation_axis = np.cross(cam_forward, dir1)
+    rotation_angle = np.arccos(np.dot(cam_forward, dir1))
+    q_ro1 = Quaternion(axis=rotation_axis, angle=rotation_angle)
+
+    dir2 = np.append(direction[[0, 1]], 0)
+    rotation_axis = np.cross(dir1, dir2)
+    if np.isclose(np.linalg.norm(rotation_axis), 0):
+        rotation_axis = (
+            np.array([1, 0, 0])
+            if np.allclose(dir1, np.array([0, 0, 1]))
+            else np.cross(dir1, np.array([0, 0, 1]))
+        )
+
+    rotation_angle = np.arccos(np.dot(dir1, dir2))
+    q_ro2 = Quaternion(axis=rotation_axis, angle=rotation_angle) * q_ro1
+
+    rotation_axis = np.cross(dir2, direction)
+    if np.isclose(np.linalg.norm(rotation_axis), 0):
+        rotation_axis = (
+            np.array([1, 0, 0])
+            if np.allclose(dir1, np.array([0, 0, 1]))
+            else np.cross(dir1, np.array([0, 0, 1]))
+        )
+
+    rotation_angle = np.arccos(np.dot(dir2, direction))
+    q_rotation = Quaternion(axis=rotation_axis, angle=rotation_angle) * q_ro2
+
+    new_cam_ori = q_rotation.elements[[1, 2, 3, 0]]
+    camera.set_orientation(new_cam_ori)
 
 def Update_camera_pos_bev(camera, robot):
     pos = robot.get_position()

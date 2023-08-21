@@ -32,7 +32,7 @@ def exec(task_name=None, scene_name=None,
 
     robot = env.robots[0]
     camera= og.sim.viewer_camera 
-    bbox_modalities = ["bbox_3d", "bbox_2d_loose"]# "bbox_2d_tight" not use 
+    bbox_modalities =["bbox_2d_loose"]# "bbox_2d_tight" not use 
     for bbox_modality in bbox_modalities:
         camera.add_modality(bbox_modality)
     camera.focal_length = 10.
@@ -40,7 +40,7 @@ def exec(task_name=None, scene_name=None,
     #main task loop
     while True:
         # init pipeline for each subtask
-        init_pipeline(env, robot, camera, file_name=json_path)  
+        init_pipeline(env, robot, camera,task_name="cook_bacon",file_name="818_test_gpt")  
         human_info = parse_json.parse_json(path=json_path)
         gpt_query = query.Query(openai_api_key=openai_api_key)
         # subtask loop, when a subtask is finished, close the loop
@@ -104,4 +104,4 @@ def exec(task_name=None, scene_name=None,
 
 
 if __name__ == "__main__":
-    exec()
+    exec(task_name="cook_bacon",scene_name="Merom_1_int")

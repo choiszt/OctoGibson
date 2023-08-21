@@ -12,19 +12,24 @@ gm.USE_GPU_DYNAMICS = True
 gm.ENABLE_FLATCACHE = True
 gm.ENABLE_OBJECT_STATES = True
 gm.ENABLE_TRANSITION_RULES = False
+# from omni_base.prompt_files.robot_action import *
 from robot_action import *
 import yaml
 
-def init_pipeline(env, robot, camera, random_selection=False, headless=False, short_exec=False, file_name=None):
-
-    cam=Camera(robot=env.robots[0],camera=camera,env=env,filename=file_name)
+def init_pipeline(env, robot, camera,task_name,random_selection=False, headless=False, short_exec=False, file_name=None):
+    iter=0
+    cam=Camera(robot=env.robots[0],camera=camera,env=env,filename=file_name,TASK=task_name)
     robot=ROBOT(env.robots[0],env)
 
+    robot.robot.visible=False
+    robot.robot.visible_only=True
+    
     action=np.zeros(11)
-    ppposition=robot.get_position()
+    ppposition=robot.robot.get_position()
     cam_position=get_camera_position(ppposition)
     robot_sensor = robot.robot._sensors['robot0:eyes_Camera_sensor']
     rs_p, rs_o = robot_sensor.get_position_orientation()
+    origin_pos_ori=[cam_position,rs_o].copy()
     cam.setposition(cam_position, rs_o)
 
     donothing(env, action)
@@ -32,7 +37,7 @@ def init_pipeline(env, robot, camera, random_selection=False, headless=False, sh
     for i in range(4):
         cam.FlyingCapture(f'{iter}_detect_surroundings')   
         iter+=1   
-        Turn_90(robot.robot)
+        # Turn_90(robot.robot)
         rs_o = trans_camera(rs_o)
         cam.setposition(cam_position, rs_o)
         donothing(env, action) 
@@ -51,4 +56,11 @@ def init_pipeline(env, robot, camera, random_selection=False, headless=False, sh
 
     donothing(env, action)
     cam.collectdata_v2(robot.robot)
-    cam.writejson()
+    jsonpath=cam.writejson()
+
+    robot.robot.visible=False
+    cam.setposition(*origin_pos_ori)
+    donothing(env, action)
+
+
+    return jsonpath
