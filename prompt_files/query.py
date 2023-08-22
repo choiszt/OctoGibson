@@ -18,7 +18,7 @@ class Query:
         request_timout=120,
         openai_api_key=None,
     ):
-        os.environ["OPENAI_API_KEY"] = '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'
+        os.environ["OPENAI_API_KEY"] = openai_api_key
 
         self.llm = ChatOpenAI(
             model_name=model_name,
