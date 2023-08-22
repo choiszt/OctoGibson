@@ -30,14 +30,16 @@ def EasyGrasp(robot, obj, dis_threshold=1.0):
     robot_pos = robot.get_position()
     obj_pose = obj.get_position()
     dis = cal_dis(robot_pos, obj_pose)
-    # if dis < dis_threshold:
-    robot_pos[2] += robot.aabb_center[2]
-    robot_pos[2] -=0.2
-    obj.set_position(robot_pos)
-    if len(robot.inventory)>1:
-        raise Exception("robot carries more than 1 object!")
-    robot.inventory.append(obj._name)
-    print(f"now we have:{robot.inventory}")
+    if dis < dis_threshold:
+        robot_pos[2] += robot.aabb_center[2]
+        robot_pos[2] -=0.2
+        obj.set_position(robot_pos)
+        if len(robot.inventory)>1:
+            raise Exception("robot carries more than 1 object!")
+        robot.inventory.append(obj._name)
+        print(f"now we have:{robot.inventory}")
+    else:
+        raise Exception(f"Cannot Grasp! robot is not within a meter of {obj}")
 
 def MoveBot(env, robot,obj,camera):
     pos = get_robot_pos(obj)
@@ -60,6 +62,8 @@ def EasyDrop(robot,obj1, obj2, dis_threshold=1.0):
         obj1.set_position(target_pos)
         a = robot.inventory.pop()
         print(f"the robot throw {a},now we have:{robot.inventory}")
+    else:
+        raise Exception(f"Cannot Drop! robot is not within a meter of {obj2}")
 
 
 def FlyingCapture(camera, iter, FILENAME=None, file_name=None):

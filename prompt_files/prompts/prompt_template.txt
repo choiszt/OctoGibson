@@ -8,15 +8,15 @@ You need to use the utility functions to complete the tasks.
 
 Utility Functions:
 donothing(env): wait for the system to capture.
-registry(obj): each time you want to use an object in the environment, call this function first. obj(str): the object in the environment. e.g. apple_1234 = registry("apple_1234"), then you can use apple_1234 to represent "apple_1234" in the environment. For each object, you can only register it once, don't register an object multiple times. By default, the variable name should be the same as the string.
+registry(env, obj_name): each time you want to use an object in the environment, call this function first. obj(str): the object in the environment. e.g. apple_1234 = registry("apple_1234"), then you can use apple_1234 to represent "apple_1234" in the environment. For each object, you can only register it once, don't register an object multiple times. By default, the variable name should be the same as the string.
 
 The Action List contains multiple defined functions, you could execute your actions by calling these functions.
 I will first give you the name of the function as well as its input, then I will give you an explanation of what it can do, e.g. function_name(inputs): capability of the function.
 
 Action List:
 EasyGrasp(robot, obj): The robot will grasp the object.
-MoveBot(env, robot, pos): Move the robot in the env and the object within its hands to pos. Note that the robot can only move to a position in front of large objects (e.g.,  tables, ovens, etc.) that are placed directly on the ground. The robot cannot directly move to small objects (e.g., apples, plates, etc.).
-EasyDrop(robot, obj, pos): Drop the objects within the robot's hands.
+MoveBot(env, robot, obj, camera): Move the robot in the env to the front of obj. Note that the robot can only move to a position in front of large objects (e.g.,  tables, ovens, etc.) that are placed directly on the ground. The robot cannot directly move to small objects (e.g., apples, plates, etc.). The camera should always be set to cam.
+EasyDrop(robot, obj1, obj2): Drop the obj1 within the robot's hands onto obj2
 cook(obj): cook the given object.
 burn(obj): burn the given object.
 freeze(obj): freeze the given object.
@@ -27,12 +27,6 @@ fold(obj): fold the given object.
 unfold(obj): unfold the given object.
 toggle_on(obj): toggle on the given object.
 toggle_off(obj): toggle off the given object.
-
-You also need to record the visual information each time you take an action. A camera has already been instantiated in the environment.
-I will show you some camera functions to control the camera to record visual information. These functions will be introduced in the same format as the action list. You could use these functions to record all the visual information.
-
-Camera Functions:
-FlyingCapture(camera, iter): The function to capture visual information. camera(Objects): it has been instantiated as cam, so only use cam by default; iter(int): the number of times you take actions, it can be regarded as a label.
 
 At each round of conversation, I will give you
 Observed Objects: ...
@@ -49,7 +43,7 @@ I will give you the following information for you to make a one-step action deci
 (3) The observation may not include all the information about the objects you need to interact with, the objects may be hidden inside other objects, so feel free to explore the reasonable place they might appear.
 (4) The Inventory contains a stack-like structure, you could put things inside. But remember first in last out.  It contains all the things the robot has in its hand. If nothing is in Inventory, denoted with None.
 (5) The Task Goal contains instructions and the Agent finished state for the entire goal.
-(6) Original Subtasks: The sub-tasks that is planned in the conversation. We also list the status (success, fail, not started) of each sub-task. Note that the original plans could be problematic and unable to solve the problem, so you might need to make revision and set up a new plan if necessary.
+(6) Original Subtasks: The sub-tasks that is planned in the conversation. Note that the original plans could be problematic and unable to solve the problem, so you might need to make revision and set up a new plan if necessary.
 (7) Previous Actions: The action code for solving the previous subtasks would be provided so that you can understand what was going on and extend the code with the action code for solving the next subtask. Pay attention to the number used in camera functions in previous code, make sure the number is continuous.
 (8) Execution Error: The execution error for last round will be provided to help you in this round.
 
@@ -60,11 +54,11 @@ Subtasks: How to complete the Task Goal step by step by calling given action fun
 
 Code:
 (1) Remember you can only interact with the objects within a meter of you.
-(2) Only use functions given in Utility Functions, Action List, and Camera Functions. Write a function taking the 'robot' and 'env' as the only two arguments.
+(2) Only use functions given in Utility Functions, Action List. Write a function taking the 'robot' and 'env' as the only two arguments.
 (3) Reuse the above useful programs as much as possible.
 (4) Your function will be reused for building more complex functions. Therefore, you should make it generic and reusable. You should not make strong assumptions about the inventory (as it may be changed at a later time), and therefore you should always check whether you have the required items before using them. If not, you should first collect the required items and reuse the above useful programs.
 (5) The function name should always be 'act', but you need to explain what task it completes.
-(6) Each time you take an action in the provided action list, after you take the action, you have to use the function 'donothing' and then use the camera funtions to record new visual information before you take another action in the action list. So the block should look like "One action in the action list + donothing + camera functions". Remember one action in your plan may contain multiple actions in the action list, you have to use the block for each action in the action list.
+(6) Each time you take an action in the provided action list, after you take the action, you have to use the function 'donothing' before you take another action in the action list. So the block should look like "One action in the action list + donothing". Remember one action in your plan may contain multiple actions in the action list, you have to use the block for each action in the action list.
 (7) Registry every object you might need to use first.
 (8) You should only output the action code to finish your very next subtask. Remember not to generate the entire action code unless it is the final step.
 (9) Do not generate any annotations inside the code block.
