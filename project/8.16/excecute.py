@@ -22,7 +22,7 @@ gm.ENABLE_OBJECT_STATES = True
 
 
 def main(random_selection=False, headless=False, short_exec=False, task_name=None, scene_name=None, json_path=None, save_path=None, action_path=None):
-    config_filename="/shared/liushuai/OmniGibson/project/bddl_demo.yaml"
+    config_filename="./bddl_task.yaml"
     cfg = yaml.load(open(config_filename, "r"), Loader=yaml.FullLoader)
     cfg["task"]["online_object_sampling"] = False
     cfg["scene"]["scene_model"] = scene_name

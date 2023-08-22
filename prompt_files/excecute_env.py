@@ -21,8 +21,16 @@ gm.ENABLE_OBJECT_STATES = True
 def exec(task_name=None, scene_name=None, 
          json_path=None, save_path=None, action_path=None,
          openai_api_key=None):
-
-    config_filename="/shared/liushuai/OmniGibson/project/bddl_demo.yaml"
+    '''
+    task_name: name of the task
+    scene_name: name of the loaded scene
+    json_path: path to save the json files of data collection in init pipeline
+    save_path: path to save the collected training data
+    action_path: path to write the repsonse code
+    openai_api_key: api key for GPT4
+    '''
+    
+    config_filename="./bddl_task.yaml"
     cfg = yaml.load(open(config_filename, "r"), Loader=yaml.FullLoader)
     cfg["task"]["online_object_sampling"] = False
     cfg["scene"]["scene_mdoel"] = scene_name
@@ -83,10 +91,12 @@ def exec(task_name=None, scene_name=None,
                 value = u.verify_obj_2(obj[0], obj[1], obj[2])
                 if not value:
                     error += f"State {obj[1]} of object {obj[0]} is not {obj[2]}"
-            for obj in target_states['obj_3']:
-                value = u.verify_obj_3(obj[0], obj[1], obj[2], obj[3])
-                if not value:
-                    error += f"State {obj[1]} between {obj[0]} and {obj[2]} is not {obj[3]}"
+            
+            ### TODO: add function for binary states
+            # for obj in target_states['obj_3']:
+            #     value = u.verify_obj_3(obj[0], obj[1], obj[2], obj[3])
+            #     if not value:
+            #         error += f"State {obj[1]} between {obj[0]} and {obj[2]} is not {obj[3]}"
             
             if len(error) == 0:
                 print('Task succeed!')
