@@ -19,7 +19,7 @@ gm.ENABLE_OBJECT_STATES = True
 
 
 def exec(task_name=None, scene_name=None, 
-         json_path=None, save_path=None, action_path=None,
+         save_path=None, action_path=None,
          openai_api_key=None):
     '''
     task_name: name of the task
@@ -45,22 +45,23 @@ def exec(task_name=None, scene_name=None,
         camera.add_modality(bbox_modality)
     camera.focal_length = 10.
 
-    #main task loop
+    # main task loop
     subtask_iter = 1
+    retry = 1
     while True:
         
         # make the directory
-        sub_json_path = eu.f_mkdir(os.path.join(json_path, f"subtask_{subtask_iter}"))
-        sub_data_path = eu.f_mkdir(os.path.join(save_path, f"subtask_{subtask_iter}"))
+        sub_save_path = eu.f_mkdir(os.path.join(save_path, f"subtask_{subtask_iter}"))
+        
         # init pipeline for each subtask
         # TODO: need to restore each json file for each subtask, use subtask_iter to create the name of json file. @choizst
-        init_pipeline(env, robot, camera,task_name=str(task_name), file_name=sub_json_path)  
-        human_info = parse_json.parse_json(path=os.path.join(sub_json_path, "task.json"))
+        init_pipeline(env, robot, camera,task_name=str(task_name), file_name=sub_save_path)  
+        human_info = parse_json.parse_json(path=os.path.join(sub_save_path, "task.json"))
         gpt_query = query.Query(openai_api_key=openai_api_key)
         
         # subtask loop, when a subtask is finished, close the loop
         while True:
-            env.reset()
+            retry_data_path = eu.f_mkdir(os.path.join(sub_save_path, f"retry_{retry}"))
             system_message = gpt_query.render_system_message()
             human_message = gpt_query.render_human_message(
                 scene_graph=human_info[0], object=human_info[1], observation=human_info[2],
@@ -75,6 +76,8 @@ def exec(task_name=None, scene_name=None,
             if isinstance(answer, str):
                 error = answer
                 gpt_query.record_history(error=error)
+                eu.save_response(retry_data_path, answer, error)
+                retry += 1
                 continue
             else:
                 exec_code = answer['code']
@@ -86,6 +89,9 @@ def exec(task_name=None, scene_name=None,
                 except Exception as e:
                     error = str(e)
                     gpt_query.record_history(subtask=answer['subtask'], code=answer['code'], error=error)
+                    eu.save_response(retry_data_path, answer, error)
+                    retry += 1
+                    env.reset()
                     continue
             
             target_states = answer['target']
@@ -93,11 +99,11 @@ def exec(task_name=None, scene_name=None,
             # verify function
             value = eu.verify_inv(env, robot, target_states['inv'])
             if not value:
-                error += f"{target_states['inv']} is not in Inventory."
+                error += f"\n{target_states['inv']} is not in Inventory.\n"
             for obj in target_states['obj_2']:
                 value = eu.verify_obj_2(obj[0], obj[1], obj[2])
                 if not value:
-                    error += f"State {obj[1]} of object {obj[0]} is not {obj[2]}"
+                    error += f"\nState {obj[1]} of object {obj[0]} is not {obj[2]}\n"
             
             ### TODO: add function for binary states
             # for obj in target_states['obj_3']:
@@ -108,9 +114,17 @@ def exec(task_name=None, scene_name=None,
             if len(error) == 0:
                 print('Task succeed!')
                 gpt_query.record_history(subtask=answer['subtask'], code=answer['code'], error=error)
+                eu.save_response(retry_data_path, answer, error)
                 break
             else:
                 gpt_query.record_history(subtask=answer['subtask'], code=answer['code'], error=error)
+                eu.save_response(retry_data_path, answer, error)
+                retry += 1
+                env.reset()
+
+        # reset parameters
+        retry = 1
+        subtask_iter += 1
         
         #verify the whole task
         signal = verify_bddl()

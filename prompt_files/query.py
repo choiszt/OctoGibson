@@ -65,7 +65,7 @@ class Query:
         if len(self.history_info['subtask']) > 0:
             message += f"Original Subtasks: {self.history_info['subtask']}\n"
         else:
-            message += f"Original Subtasks: none\n"
+            message += f"Original Subtasks: None\n"
 
         if len(self.history_info['code']) > 0:
             message += f"Previous Action Code: {self.history_info['code']}\n"

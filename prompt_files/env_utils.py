@@ -9,6 +9,7 @@ import errno
 import shutil
 import glob
 
+import json
 # import pwd
 import codecs
 import hashlib
@@ -605,6 +606,12 @@ def verify_obj_3(obj1, states, obj2, value):
     states_status=reversed_binary__states[states] # CLASS object_states
     return states_status._get_value(obj1,obj2)==value
 
-def save_response(path, iter, response):
-    with open(os.path.join(path, str(iter), '.txt')) as f:
-        f.write(response)
+def save_response(path, response, error):
+    if len(error) > 0:
+        response['error'] = error
+        response['critic'] = 'fail'
+    else:
+        response['error'] = 'No error'
+        response['critic'] = 'succeed'
+    with open(os.path.join(path, 'response.json')) as f:
+        f.write(json.dump(response, indent=4))
