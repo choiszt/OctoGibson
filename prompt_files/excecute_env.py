@@ -11,7 +11,7 @@ import action
 import parse_json
 import query
 from imp import reload
-import communicate.env_utils as u
+import env_utils as eu 
 from initial_pipeline import *
 
 # Make sure object states are enabled
@@ -46,11 +46,14 @@ def exec(task_name=None, scene_name=None,
     camera.focal_length = 10.
 
     #main task loop
+    subtask_iter = 1
     while True:
         # init pipeline for each subtask
-        init_pipeline(env, robot, camera,task_name="cook_bacon",file_name="818_test_gpt")  
-        human_info = parse_json.parse_json(path=json_path)
+        # TODO: need to restore each json file for each subtask, use subtask_iter to create the name of json file. @choizst
+        init_pipeline(env, robot, camera,task_name=str(task_name),file_name=json_path)  
+        human_info = parse_json.parse_json(path=os.path.join(json_path, f"subtask{subtask_iter}.json"))
         gpt_query = query.Query(openai_api_key=openai_api_key)
+        
         # subtask loop, when a subtask is finished, close the loop
         while True:
             env.reset()
@@ -84,11 +87,11 @@ def exec(task_name=None, scene_name=None,
             target_states = answer['target']
 
             # verify function
-            value = u.verify_inv(env, robot, target_states['inv'])
+            value = eu.verify_inv(env, robot, target_states['inv'])
             if not value:
                 error += f"{target_states['inv']} is not in Inventory."
             for obj in target_states['obj_2']:
-                value = u.verify_obj_2(obj[0], obj[1], obj[2])
+                value = eu.verify_obj_2(obj[0], obj[1], obj[2])
                 if not value:
                     error += f"State {obj[1]} of object {obj[0]} is not {obj[2]}"
             
@@ -104,6 +107,7 @@ def exec(task_name=None, scene_name=None,
                 break
             else:
                 gpt_query.record_history(subtask=answer['subtask'], code=answer['code'], error=error)
+        
         #verify the whole task
         signal = verify_bddl()
         if signal:
