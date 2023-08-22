@@ -132,7 +132,7 @@ def Turn_90(robot, pos=None):
 
 # class of flying camera
 class Camera():
-    def __init__(self,robot,camera,env,filename,TASK,position=np.array([-2.48302418,  1.55655398,  2.22882511]),orientation=np.array([ 0.56621324, -0.0712958 , -0.10258276,  0.81473692])):
+    def __init__(self, robot, camera, env, filename,TASK, position=np.array([-2.48302418,  1.55655398,  2.22882511]),orientation=np.array([ 0.56621324, -0.0712958 , -0.10258276,  0.81473692])):
         self.robot=robot
         self.camera=camera
         self.env=env
@@ -148,6 +148,7 @@ class Camera():
         self.OG_results=self._decomposed()
         self.blacklist=["walls","electric_switch","floors","ceilings","window"]
         self.task=TASK
+
     def _getallobject(self):
         allobject=[]
         try:
@@ -157,6 +158,7 @@ class Camera():
         scenedict=self.env.scene.get_objects_info()
         scenelist=list(scenedict['init_info'].keys())
         return list(set(objectlist+scenelist))
+ 
     def setposition(self,position=None,orientation=None):
         if type(orientation)==np.ndarray and type(position)!=np.ndarray:
             self.camera.set_orientation(orientation)

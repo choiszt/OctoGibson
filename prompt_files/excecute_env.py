@@ -48,10 +48,14 @@ def exec(task_name=None, scene_name=None,
     #main task loop
     subtask_iter = 1
     while True:
+        
+        # make the directory
+        sub_json_path = eu.f_mkdir(os.path.join(json_path, f"subtask_{subtask_iter}"))
+        sub_data_path = eu.f_mkdir(os.path.join(save_path, f"subtask_{subtask_iter}"))
         # init pipeline for each subtask
         # TODO: need to restore each json file for each subtask, use subtask_iter to create the name of json file. @choizst
-        init_pipeline(env, robot, camera,task_name=str(task_name),file_name=json_path)  
-        human_info = parse_json.parse_json(path=os.path.join(json_path, f"subtask{subtask_iter}.json"))
+        init_pipeline(env, robot, camera,task_name=str(task_name), file_name=sub_json_path)  
+        human_info = parse_json.parse_json(path=os.path.join(sub_json_path, "task.json"))
         gpt_query = query.Query(openai_api_key=openai_api_key)
         
         # subtask loop, when a subtask is finished, close the loop
