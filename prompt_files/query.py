@@ -18,7 +18,8 @@ class Query:
         request_timout=120,
         openai_api_key=None,
     ):
-        os.environ["OPENAI_API_KEY"] = openai_api_key
+        # os.environ["OPENAI_API_KEY"] = openai_api_key
+        os.environ["OPENAI_API_KEY"] = "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"
 
         self.llm = ChatOpenAI(
             model_name=model_name,
@@ -85,9 +86,9 @@ class Query:
         return HumanMessage(content=message)
     
     def process_ai_message(self, message):
-        # assert isinstance(message, AIMessage)
+        assert isinstance(message, AIMessage)
 
-        processed_message = message
+        processed_message = message.content
         # with open('./answer.txt', 'w') as f:
         #     f.write(processed_message)
         retry = 3
@@ -105,9 +106,8 @@ class Query:
             subtask = processed_message[idxs[1]:idxs[2]]
             code = processed_message[idxs[2]:idxs[3]]
             target = processed_message[idxs[3]:]
-            explain = explain.split('Explain: \n')[1]
-            print(explain)
-            subtask = subtask.split('Subtasks:\n')[1]
+            explain = explain.split('Explain: \n')[1].split('\n\n')[0]
+            subtask = subtask.split('Subtasks:\n')[1].split('\n\n')[0]
             exec_code = code.split('```python\n')[1].split('```')[0]
             inv = target.split('Inventory: ')[1]
             inv = inv.split('Object')[0].split('\n')[0]
@@ -145,17 +145,17 @@ if __name__ == '__main__':
     with open('response.txt', 'r') as f:
         response = f.read()
         q = Query()
-        # system = q.render_system_message()
-        # human = q.render_human_message(object="(fridge_xyejdx_0, [('openable', 0), ('heatable', 0), ('freezable', 0)], 2.12)(stove_rgpphy_0, [('togglable', 0), ('heatable', 0), ('freezable', 0)], 1.59)(griddle_157, [('togglable', 0), ('heatable', 0), ('freezable', 0)], 1.68)(bacon_1234, ('cookable, heatable, burnable'), 2.12)",
-        #                                scene_graph="(pot_plant_udqjui_0,ontop,bottom_cabinet_jrhgeu_1)(trash_can_zotrbg_0,nextto,fridge_xyejdx_0)(bacon_1234, inside fridge_xyejdx_0)(fridge_xyejdx_0,nextto,shelf_owvfik_0)(pot_plant_udqjui_2,ontop,floors_xzlkei_0)(stove_rgpphy_0,under,range_hood_iqbpie_0)(stove_rgpphy_0,nextto,shelf_owvfik_0)(stove_rgpphy_0,nextto,door_lvgliq_1)(griddle_157,under,range_hood_iqbpie_0)(griddle_157,nextto,stove_rgpphy_0)",
-        #                                task='cook the bacon')
-        # print('111')
-        # answer = q.llm([system, human])
+        system = q.render_system_message()
+        human = q.render_human_message(object="(fridge_xyejdx_0, [('openable', 0), ('heatable', 0), ('freezable', 0)], 2.12)(stove_rgpphy_0, [('togglable', 0), ('heatable', 0), ('freezable', 0)], 1.59)(griddle_157, [('togglable', 0), ('heatable', 0), ('freezable', 0)], 1.68)(bacon_1234, ('cookable, heatable, burnable'), 2.12)",
+                                       scene_graph="(pot_plant_udqjui_0,ontop,bottom_cabinet_jrhgeu_1)(trash_can_zotrbg_0,nextto,fridge_xyejdx_0)(bacon_1234, inside fridge_xyejdx_0)(fridge_xyejdx_0,nextto,shelf_owvfik_0)(pot_plant_udqjui_2,ontop,floors_xzlkei_0)(stove_rgpphy_0,under,range_hood_iqbpie_0)(stove_rgpphy_0,nextto,shelf_owvfik_0)(stove_rgpphy_0,nextto,door_lvgliq_1)(griddle_157,under,range_hood_iqbpie_0)(griddle_157,nextto,stove_rgpphy_0)",
+                                       task='cook the bacon')
+        print('111')
+        answer = q.llm([system, human])
         
-        # print(answer.content)
+        print(answer.content)
         # with open('./response.txt', 'w') as f:
         #     f.write(answer.content)
-        info = q.process_ai_message(response)
+        info = q.process_ai_message(answer)
         
         print(info['explain'])
         print(info['code'])

@@ -97,9 +97,10 @@ def exec(task_name=None, scene_name=None,
             target_states = answer['target']
 
             # verify function
-            value = eu.verify_inv(env, robot, target_states['inv'])
-            if not value:
-                error += f"\n{target_states['inv']} is not in Inventory.\n"
+            if target_states['inv'] is not None:
+                value = eu.verify_inv(env, robot, target_states['inv'])
+                if not value:
+                    error += f"\n{target_states['inv']} is not in Inventory.\n"
             for obj in target_states['obj_2']:
                 value = eu.verify_obj_2(obj[0], obj[1], obj[2])
                 if not value:
