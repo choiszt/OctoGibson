@@ -127,33 +127,83 @@ def donothing(env):
 def registry(env, obj_name):
     return env.scene.object_registry("name", obj_name)
 
-def cook(obj):
+def cook(robot, obj):
+    bot_pose = robot.get_position()
+    obj_pose = obj.get_position()
+    dis = cal_dis(bot_pose, obj_pose)
+    if dis > 1:
+        raise Exception(f"Cannot cook! robot is not within a meter of {obj}")
     change_states(obj, 'cookable', 1)
 
-def burn(obj):
+def burn(robot, obj):
+    bot_pose = robot.get_position()
+    obj_pose = obj.get_position()
+    dis = cal_dis(bot_pose, obj_pose)
+    if dis > 1:
+        raise Exception(f"Cannot burn! robot is not within a meter of {obj}")
     change_states(obj, 'burnable', 1)
 
-def freeze(obj):
+def freeze(robot, obj):
+    bot_pose = robot.get_position()
+    obj_pose = obj.get_position()
+    dis = cal_dis(bot_pose, obj_pose)
+    if dis > 1:
+        raise Exception(f"Cannot freeze! robot is not within a meter of {obj}")
     change_states(obj, 'freezable', 1)
 
-def heat(obj):
+def heat(robot, obj):
+    bot_pose = robot.get_position()
+    obj_pose = obj.get_position()
+    dis = cal_dis(bot_pose, obj_pose)
+    if dis > 1:
+        raise Exception(f"Cannot heat! robot is not within a meter of {obj}")
     change_states(obj, 'heatable', 1)
 
-def open(obj):
+def open(robot, obj):
+    bot_pose = robot.get_position()
+    obj_pose = obj.get_position()
+    dis = cal_dis(bot_pose, obj_pose)
+    if dis > 1:
+        raise Exception(f"Cannot open! robot is not within a meter of {obj}")
     change_states(obj, 'openable', 1)
 
-def close(obj):
+def close(robot, obj):
+    bot_pose = robot.get_position()
+    obj_pose = obj.get_position()
+    dis = cal_dis(bot_pose, obj_pose)
+    if dis > 1:
+        raise Exception(f"Cannot close! robot is not within a meter of {obj}")
     change_states(obj, 'openable', 0)
 
-def fold(obj):
+def fold(robot, obj):
+    bot_pose = robot.get_position()
+    obj_pose = obj.get_position()
+    dis = cal_dis(bot_pose, obj_pose)
+    if dis > 1:
+        raise Exception(f"Cannot fold! robot is not within a meter of {obj}")
     change_states(obj, 'foldable', 1)
 
-def unfold(obj):
+def unfold(robot, obj):
+    bot_pose = robot.get_position()
+    obj_pose = obj.get_position()
+    dis = cal_dis(bot_pose, obj_pose)
+    if dis > 1:
+        raise Exception(f"Cannot unfold! robot is not within a meter of {obj}")
     change_states(obj, 'unfoldable', 1)
 
-def toggle_on(obj):
+def toggle_on(robot, obj):
+    bot_pose = robot.get_position()
+    obj_pose = obj.get_position()
+    dis = cal_dis(bot_pose, obj_pose)
+    if dis > 1:
+        raise Exception(f"Cannot toggle on! robot is not within a meter of {obj}")
     change_states(obj, 'togglable', 1)
 
-def toggle_off(obj):
+def toggle_off(robot, obj):
+    bot_pose = robot.get_position()
+    obj_pose = obj.get_position()
+    dis = cal_dis(bot_pose, obj_pose)
+    if dis > 1:
+        raise Exception(f"Cannot toggle off! robot is not within a meter of {obj}")
     change_states(obj, 'togglable', 0)
 
