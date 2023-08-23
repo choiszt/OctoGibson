@@ -68,6 +68,8 @@ def exec(task_name=None, scene_name=None,
                 inventory=human_info[3], task=human_info[4], 
             )
             all_messages = [system_message, human_message]
+            
+            eu.save_input(retry_data_path, human_message.content)
 
             response = gpt_query.llm(all_messages)
             answer = gpt_query.process_ai_message(response)

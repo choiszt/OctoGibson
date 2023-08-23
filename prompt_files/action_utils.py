@@ -342,7 +342,7 @@ def change_states(obj, states, oper):
         states_status=reversed_unary_states[states]
         obj.states[states_status].set_value(oper)
     except:
-        print(f'Wrong state or operation {states, oper}')
+        raise Exception(f'Wrong state or operation {states, oper}')
         
 def get_states(env,obj:str,state:str)->object_states:
     whole_dict={**reversed_unary_states,**reversed_binary__states}

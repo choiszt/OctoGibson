@@ -79,9 +79,6 @@ class Query:
             message += f"Execution error: No error\n"  
         
         message += "Now, please output Explain, Subtasks (revise if necessary), Code that completing the next subtask, and Target States, according to the instruction above. Remember you can only use the functions provided above and pay attention to the response format."
-        
-        with open('./input.txt', 'w') as f:
-            f.write(message)
             
         return HumanMessage(content=message)
     

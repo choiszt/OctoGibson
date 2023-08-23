@@ -615,3 +615,9 @@ def save_response(path, response, error):
         response['critic'] = 'succeed'
     with open(os.path.join(path, 'response.json')) as f:
         f.write(json.dump(response, indent=4))
+        
+def save_input(path, input):
+    input_message = {}
+    input_message['input'] = input
+    with open(os.path.join(path, 'input.json')) as f:
+        f.write(json.dump(input_message, indent=4))
