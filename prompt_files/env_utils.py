@@ -552,7 +552,7 @@ def dump_text(s, *fpaths):
         fp.write(s)
 
 
-def dump_text_lines(lines: list[str], *fpaths, add_newline=True):
+def dump_text_lines(lines, *fpaths, add_newline=True):
     with open(f_join(*fpaths), "w") as fp:
         for line in lines:
             print(line, file=fp, end="\n" if add_newline else "")

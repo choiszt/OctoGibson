@@ -372,9 +372,9 @@ class Camera():
         for ele in sub_nowwehave:
             picpath=list(ele.keys())[0]
             objects=list(ele.values())[0]
-            intersect_objects=list(set(objects)&set(self.OG_results)-set(blacklist))
+            intersect_objects=list(set(self.OG_results)-set(blacklist)) #TODO
             action=picpath.split("/")[-1][12:-4]
-            scene_graph=self.parseSG(objects)
+            scene_graph=self.parseSG(intersect_objects) #TODO
             if action not in self.actionlist:
                 self.actionlist.append(action)
             obj_metadata.clear()

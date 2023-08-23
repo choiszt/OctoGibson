@@ -22,6 +22,8 @@ def parse_json(path):
         data = json.load(f)
     for k in data.keys():
         parsed_data = data[k]
+        if type(parsed_data)==str:
+            continue
         for ks in parsed_data.keys(): #each object in data
             if ks == 'scene_graph':
                 sg = parsed_data[ks]
@@ -62,5 +64,5 @@ def parse_json(path):
 
     return [final_SG, obs_str, str(INV), str(TASK)]
 
-parse_json("/shared/liushuai/OmniGibson/818_test_gpt/task1.json")
+parse_json("/shared/liushuai/OmniGibson/shared/liushuai/OmniGibson/prompt_files/trash/subtask_1/task1.json")
 

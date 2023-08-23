@@ -9,10 +9,12 @@ from omnigibson.utils.ui_utils import choose_from_options
 from robot_action import *
 import action
 import parse_json
-import query
+# import query
 from imp import reload
 import env_utils as eu 
 from initial_pipeline import *
+
+from bddl_verification import *
 
 # Make sure object states are enabled
 gm.ENABLE_OBJECT_STATES = True
@@ -30,7 +32,7 @@ def exec(task_name=None, scene_name=None,
     openai_api_key: api key for GPT4
     '''
     
-    config_filename="./bddl_task.yaml"
+    config_filename="/shared/liushuai/OmniGibson/prompt_files/bddl_task.yaml"
     cfg = yaml.load(open(config_filename, "r"), Loader=yaml.FullLoader)
     cfg["task"]["online_object_sampling"] = False
     cfg["scene"]["scene_mdoel"] = scene_name
@@ -55,6 +57,8 @@ def exec(task_name=None, scene_name=None,
         
         # init pipeline for each subtask
         # TODO: need to restore each json file for each subtask, use subtask_iter to create the name of json file. @choizst
+        
+        # verify_bddl(task_name)
         init_pipeline(env, robot, camera,task_name=str(task_name), file_name=sub_save_path)  
         human_info = parse_json.parse_json(path=os.path.join(sub_save_path, "task.json"))
         gpt_query = query.Query(openai_api_key=openai_api_key)
@@ -139,4 +143,4 @@ def exec(task_name=None, scene_name=None,
 
 
 if __name__ == "__main__":
-    exec(task_name="cook_bacon",scene_name="Merom_1_int")
+    exec(task_name="cook_bacon",scene_name="Merom_1_int",save_path="/shared/liushuai/OmniGibson/prompt_files/trash")
