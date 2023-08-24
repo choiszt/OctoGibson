@@ -58,7 +58,6 @@ def exec(task_name=None, scene_name=None,
         # init pipeline for each subtask
         # TODO: need to restore each json file for each subtask, use subtask_iter to create the name of json file. @choizst
         
-        # verify_bddl(task_name)
         init_pipeline(env, robot, camera,task_name=str(task_name), file_name=sub_save_path)  
         human_info = parse_json.parse_json(path=os.path.join(sub_save_path, "task.json"))
         gpt_query = query.Query(openai_api_key=openai_api_key)
@@ -68,8 +67,8 @@ def exec(task_name=None, scene_name=None,
             retry_data_path = eu.f_mkdir(os.path.join(sub_save_path, f"retry_{retry}"))
             system_message = gpt_query.render_system_message()
             human_message = gpt_query.render_human_message(
-                scene_graph=human_info[0], object=human_info[1], observation=human_info[2],
-                inventory=human_info[3], task=human_info[4], 
+                scene_graph=human_info[0], object=human_info[1],
+                inventory=human_info[2], task=human_info[3] 
             )
             all_messages = [system_message, human_message]
             
@@ -91,7 +90,7 @@ def exec(task_name=None, scene_name=None,
                     f.write(exec_code)
                 reload(action)
                 try:
-                    action.act()
+                    action.act(robot, env, camera)
                 except Exception as e:
                     error = str(e)
                     gpt_query.record_history(subtask=answer['subtask'], code=answer['code'], error=error)

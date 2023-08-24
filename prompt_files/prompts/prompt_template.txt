@@ -15,7 +15,7 @@ I will first give you the name of the function as well as its input, then I will
 
 Action List:
 EasyGrasp(robot, obj): The robot will grasp the object.
-MoveBot(env, robot, obj, camera): Move the robot in the env to the front of obj. Note that the robot can only move to a position in front of large objects (e.g.,  tables, ovens, etc.) that are placed directly on the ground. The robot cannot directly move to small objects (e.g., apples, plates, etc.). The camera should always be set to cam.
+MoveBot(env, robot, obj, camera): Move the robot in the env to the front of obj. Note that the robot can only move to a position in front of large objects (e.g.,  tables, ovens, etc.) that are placed directly on the ground. The robot cannot directly move to small objects (e.g., apples, plates, etc.). The camera should always be set to camera.
 EasyDrop(robot, obj1, obj2): Drop the obj1 within the robot's hands onto obj2
 cook(obj): cook the given object.
 burn(obj): burn the given object.
@@ -54,7 +54,7 @@ Subtasks: How to complete the Task Goal step by step by calling given action fun
 
 Code:
 (1) Remember you can only interact with the objects within a meter of you.
-(2) Only use functions given in Utility Functions, Action List. Write a function taking the 'robot' and 'env' as the only two arguments.
+(2) Only use functions given in Utility Functions, Action List. Write a function taking the 'robot', 'env' and 'camera' as the only three arguments.
 (3) Reuse the above useful programs as much as possible.
 (4) Your function will be reused for building more complex functions. Therefore, you should make it generic and reusable. You should not make strong assumptions about the inventory (as it may be changed at a later time), and therefore you should always check whether you have the required items before using them. If not, you should first collect the required items and reuse the above useful programs.
 (5) The function name should always be 'act', but you need to explain what task it completes.
