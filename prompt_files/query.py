@@ -50,7 +50,7 @@ class Query:
         if object:
             message += f"Observed Objects: {object}\n"
         else:
-            message += f"Objects Informaton: None\n"
+            message += f"Observed Objects: None\n"
         if scene_graph:
             message += f"Observed Relations: {scene_graph}\n"
         else:

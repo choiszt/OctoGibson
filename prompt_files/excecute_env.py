@@ -97,7 +97,7 @@ def exec(task_name=None, scene_name=None,
                     eu.save_response(retry_data_path, answer, error)
                     retry += 1
                     env.reset()
-                    continue
+                    break
             
             target_states = answer['target']
 
@@ -127,6 +127,7 @@ def exec(task_name=None, scene_name=None,
                 eu.save_response(retry_data_path, answer, error)
                 retry += 1
                 env.reset()
+                break
 
         # reset parameters
         retry = 1

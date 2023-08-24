@@ -41,7 +41,7 @@ def EasyGrasp(robot, obj, dis_threshold=1.0):
     else:
         raise Exception(f"Cannot Grasp! robot is not within a meter of {obj}")
 
-def MoveBot(env, robot,obj,camera=camera):
+def MoveBot(env, robot,obj,camera):
     pos = get_robot_pos(obj)
     robot.set_position(pos)
     pos=Update_camera_pos(camera,robot,obj)
