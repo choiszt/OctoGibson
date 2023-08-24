@@ -212,13 +212,13 @@ class Camera():
                     pass
                 elif modality == "seg_instance":
                     # Map IDs to rgb
-                    self.instancemap.append({f"/shared/liushuai/OmniGibson/{self.FILENAME}/"+query_name + f'{iter}.png':obs_dict[query_name][0]})
+                    self.instancemap.append({f"./{self.FILENAME}/"+query_name + f'{iter}.png':obs_dict[query_name][0]})
                     segimg = segmentation_to_rgb(obs_dict[query_name][0], N=256)
                     instancemap = obs_dict[query_name][1]
                     for item in instancemap:
                         # bbox_3ds=obs_dict['bbox_3d']
                         bbox_2ds=obs_dict["bbox_2d_loose"] #
-                        hextuple=[f"/shared/liushuai/OmniGibson/{self.FILENAME}/"+query_name + f'{iter}.png',item[1].split("/")[-1],item[3],item[0],'','']
+                        hextuple=[f"./{self.FILENAME}/"+query_name + f'{iter}.png',item[1].split("/")[-1],item[3],item[0],'','']
                         for bbox_2d in bbox_2ds:
                             if bbox_2d[0]==item[0]:
                                 bbox2d_info=[bbox_2d[i] for i in range(6,10,1)]
@@ -246,12 +246,12 @@ class Camera():
                 if file_name is not None:
                     cv2.imwrite(query_name + str(file_name) + '.png', rgbimg)
                 else:
-                    path=os.path.dirname(f"/shared/liushuai/OmniGibson/{self.FILENAME}/"+query_name + f'{iter}.png')
+                    path=os.path.dirname(f"./{self.FILENAME}/"+query_name + f'{iter}.png')
                     if not os.path.exists(path):
                         os.makedirs(path)
                     
-                    cv2.imwrite(f"/shared/liushuai/OmniGibson/{self.FILENAME}/"+query_name + f'{iter}.png', rgbimg)
-                    print(f"save as: /shared/liushuai/OmniGibson/{self.FILENAME}/"+query_name + f'{iter}.png')
+                    cv2.imwrite(f"./{self.FILENAME}/"+query_name + f'{iter}.png', rgbimg)
+                    print(f"save as: ./{self.FILENAME}/"+query_name + f'{iter}.png')
         
     def parsing_segmentdata(self): #parse all data from the files that we have collected
         seglists=self.seglist
@@ -415,9 +415,9 @@ class Camera():
         return self.result_json
 
     def writejson(self):
-        with open(f"/shared/liushuai/OmniGibson/{self.FILENAME}/task1.json","w")as f:
+        with open(f"./{self.FILENAME}/task1.json","w")as f:
             json.dump(self.result_json,f)
-        return f"/shared/liushuai/OmniGibson/{self.FILENAME}/task1.json"
+        return f"./{self.FILENAME}/task1.json"
 
     def collectdata(self):
         seglists=self.seglist
@@ -448,7 +448,7 @@ class Camera():
                             obj_metadata[obj_name].update(bbox3d)
                             break
                 result_json[action].update(obj_metadata)
-        with open(f"/shared/liushuai/OmniGibson/{self.FILENAME}/task.json","w")as f:
+        with open(f"./{self.FILENAME}/task.json","w")as f:
             json.dump(result_json,f)
         return result_json
 

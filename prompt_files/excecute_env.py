@@ -9,7 +9,7 @@ from omnigibson.utils.ui_utils import choose_from_options
 from robot_action import *
 import action
 import parse_json
-# import query
+import query
 from imp import reload
 import env_utils as eu 
 from initial_pipeline import *
@@ -138,9 +138,6 @@ def exec(task_name=None, scene_name=None,
         if signal:
             break
         
-    
-    
-
 
 if __name__ == "__main__":
     exec(task_name="cook_bacon",scene_name="Merom_1_int",save_path="/shared/liushuai/OmniGibson/prompt_files/trash")
