@@ -44,10 +44,11 @@ def sim_process(task_name, scene_name, action_path, save_path):
         sub_save_path = os.path.join(save_path, f"subtask_{subtask_iter}")
         init_pipeline(env, robot, camera,task_name=str(task_name), file_name=sub_save_path)
         
+        response_path = os.path.join(sub_save_path, 'response.json')
+        feedback_path = os.path.join(sub_save_path, 'feedback.json')
+        
         #subtask loop
         while True:  
-            response_path = os.path.join(sub_save_path, 'response.json')
-            feedback_path = os.path.join(sub_save_path, 'feedback.json')
             # wait for the GPT response
             while True:
                 if os.path.exists(response_path):
@@ -57,7 +58,11 @@ def sim_process(task_name, scene_name, action_path, save_path):
                 data = json.load(f)
             answer = data['response']
             if isinstance(answer, str):
-                eu.save_feedback(feedback_path, subtask="", code="", error=answer, critic='fail', reset=False)
+                subtask = ""
+                code = ""
+                error = answer
+                critic = 'fail'
+                reset = False
                 break
             else:
                 subtask, code = answer['subtask'], answer['code']
@@ -69,7 +74,11 @@ def sim_process(task_name, scene_name, action_path, save_path):
                 except Exception as e:
                     error = str(e)
                     env.reset()
-                    eu.save_feedback(feedback_path, subtask=subtask, code=code, error=error, critic='fail', reset=True)
+                    subtask = subtask
+                    code = code
+                    error = error
+                    critic = 'fail'
+                    reset = True
                     break
             
             # subtask verification
@@ -85,10 +94,16 @@ def sim_process(task_name, scene_name, action_path, save_path):
                     error += f"State {obj[1]} of object {obj[0]} is not {obj[2]}\n"
 
             if len(error) == 0:
-                eu.save_feedback(feedback_path, subtask=subtask, error=error, critic='succeed', reset=False)
+                subtask = subtask
+                error = error
+                critic = 'succeed'
+                reset = False
                 break
             else:
-                eu.save_feedback(feedback_path, subtask=subtask, error=error, critic='fail', reset=True)
+                subtask = subtask
+                error = error
+                critic = 'fail'
+                reset = True
                 env.reset()
                 break
 
@@ -96,6 +111,13 @@ def sim_process(task_name, scene_name, action_path, save_path):
         subtask_iter += 1
         
         #verify the whole task
-        signal = verify_bddl()
-        if signal:
-            break
+        if critic == 'succeed':
+            signal = verify_bddl()
+            if signal:
+                main_succeed = True
+                eu.save_feedback(feedback_path, subtask, code, error, critic, reset, main_succeed)
+                break
+            else:
+                eu.save_feedback(feedback_path, subtask, code, error, critic, reset, main_succeed)
+        else:
+            eu.save_feedback(feedback_path, subtask, code, error, critic, reset, main_succeed)
