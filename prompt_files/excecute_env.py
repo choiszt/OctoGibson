@@ -136,6 +136,7 @@ def exec(task_name=None, scene_name=None,
         #verify the whole task
         signal = verify_bddl()
         if signal:
+            with open('signal')
             break
         
 

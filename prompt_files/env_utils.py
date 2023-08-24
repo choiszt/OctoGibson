@@ -606,21 +606,28 @@ def verify_obj_3(obj1, states, obj2, value):
     states_status=reversed_binary__states[states] # CLASS object_states
     return states_status._get_value(obj1,obj2)==value
 
-def save_response(path, response, error):
-    if len(error) > 0:
-        response['error'] = error
-        response['critic'] = 'fail'
-    else:
-        response['error'] = 'No error'
-        response['critic'] = 'succeed'
+def save_response(path, response):
+    responses = {}
+    responses['response'] = response
     with open(os.path.join(path, 'response.json'), 'w') as f:
-        f.write(json.dumps(response, indent=4))
+        f.write(json.dumps(responses, indent=4))
         
 def save_input(path, input):
     input_message = {}
     input_message['input'] = input
     with open(os.path.join(path, 'input.json'), 'w') as f:
         f.write(json.dumps(input_message, indent=4))
+        
+def save_feedback(path, subtask, code, error, critic, reset, main_succeed):
+    feedback = {}
+    feedback['subtask'] = subtask
+    feedback['code'] = code
+    feedback['error'] = error
+    feedback['critic'] = critic
+    feedback['reset'] = reset
+    feedback['main_succeed'] = main_succeed
+    with open(path, 'w') as f:
+        f.write(json.dumps(feedback, indent=4))
         
 if __name__ == '__main__':
     subtask_iter = 1
