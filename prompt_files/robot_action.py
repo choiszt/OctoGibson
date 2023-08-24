@@ -308,12 +308,12 @@ class Camera():
                     SG.append((obj0._name,"inside",obj1._name))
             except:
                 pass
-            try:
-                is_nextto=obj0.states[object_states.NextTo].get_value(obj1)
-                if is_nextto:
-                    SG.append((obj0._name,"nextto",obj1._name))                
-            except:
-                pass            
+            # try:
+            #     is_nextto=obj0.states[object_states.NextTo].get_value(obj1)
+            #     if is_nextto:
+            #         SG.append((obj0._name,"nextto",obj1._name))                
+            # except:
+            #     pass            
             try:
                 is_ontop=obj0.states[object_states.OnTop].get_value(obj1)
                 if is_ontop:
