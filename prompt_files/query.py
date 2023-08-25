@@ -6,8 +6,7 @@ import os
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import SystemMessagePromptTemplate
 from langchain.schema import AIMessage, HumanMessage, SystemMessage
-import sys;sys.path.append('/home/cooyes/OmniGibson/omni_base')
-import prompt_files.env_utils_gpt as u
+import env_utils_gpt as u
 import openai
 
 class Query:
@@ -103,14 +102,14 @@ class Query:
                 subtask = processed_message[idxs[1]:idxs[2]]
                 code = processed_message[idxs[2]:idxs[3]]
                 target = processed_message[idxs[3]:]
-                explain = explain.split('Explain:')[1].split('\n\n')[0]
-                subtask = subtask.split('Subtasks:\n')[1].split('\n\n')[0]
-                exec_code = code.split('```python\n')[1].split('```')[0]
+                explain_str = explain.split('Explain:')[1].split('\n\n')[0]
+                subtask_str = subtask.split('Subtasks: \n')[1].split('\n\n')[0]
+                exec_code_str = code.split('```python\n')[1].split('```')[0]
                 inv = target.split('Inventory: ')[1]
-                inv = inv.split('Object')[0].split('\n')[0]
+                inv_str = inv.split('Object')[0].split('\n')[0]
                 obj_states_2 = []
                 obj_states_3 = []
-                objects = target.split('Information:\n')[1]
+                objects = target.split('Information:')[1]
                 objects = objects.split('\n')
                 for obj in objects:
                     obj = obj.split(') ')[-1]
@@ -120,10 +119,10 @@ class Query:
                     elif len(obj_list) == 4: 
                         obj_states_3.append(obj_list)
                 return {
-                    "explain": explain,
-                    "subtask": subtask,
-                    "code": exec_code,
-                    "inventory": inv,
+                    "explain": explain_str,
+                    "subtask": subtask_str,
+                    "code": exec_code_str,
+                    "inventory": inv_str,
                     "obj_2": obj_states_2, 
                     "obj_3": obj_states_3,
                 }

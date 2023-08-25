@@ -7,7 +7,7 @@ from omnigibson.macros import gm
 from omnigibson.utils.ui_utils import choose_from_options
 
 from robot_action import *
-import action
+import prompt_files.action as action
 from imp import reload
 import env_utils_sim as eu 
 from initial_pipeline import *
@@ -16,7 +16,7 @@ from bddl_verification import *
 
 def sim_process(task_name, scene_name, action_path, save_path):
     heading="import os \nimport json\nimport yaml\nimport omnigibson as og\nfrom action_list import * \nfrom action_utils import *\n"
-    config_filename="./bddl_task.yaml"
+    config_filename="./prompt_files/bddl_task.yaml"
     cfg = yaml.load(open(config_filename, "r"), Loader=yaml.FullLoader)
     cfg["task"]["online_object_sampling"] = False
     cfg["scene"]["scene_mdoel"] = scene_name
@@ -50,7 +50,10 @@ def sim_process(task_name, scene_name, action_path, save_path):
             while True:
                 if os.path.exists(response_path):
                     break
-            
+            while True:
+                response_info = os.stat(response_path) 
+                if response_info.st_size > 0:
+                    break
             with open(response_path) as f:
                 data = json.load(f)
             answer = data['response']
@@ -68,7 +71,7 @@ def sim_process(task_name, scene_name, action_path, save_path):
                     f.write(code)
                 reload(action)
                 try:
-                    action.act(robot, env, camera)
+                    action.act(env,robot,camera)
                     print("act...")
                 except Exception as e:
                     error = str(e)
@@ -122,4 +125,4 @@ def sim_process(task_name, scene_name, action_path, save_path):
             eu.save_feedback(feedback_path, subtask, code, error, critic, reset, main_succeed)
 
 
-sim_process(task_name="cook_bacon",scene_name="Merom_1_int",action_path="./action.py",save_path="./data")
+sim_process(task_name="cook_bacon",scene_name="Merom_1_int",action_path="./prompt_files/action.py",save_path="./prompt_files/data")
