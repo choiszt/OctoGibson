@@ -9,7 +9,7 @@ from omnigibson.utils.ui_utils import choose_from_options
 from robot_action import *
 import action
 from imp import reload
-import env_utils_gpt as eu 
+import env_utils_sim as eu 
 from initial_pipeline import *
 
 from bddl_verification import *
