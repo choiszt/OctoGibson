@@ -6,8 +6,8 @@ import os
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import SystemMessagePromptTemplate
 from langchain.schema import AIMessage, HumanMessage, SystemMessage
-
-import env_utils as u
+import sys;sys.path.append("/shared/liushuai/OmniGibson")
+import prompt_files.env_utils_gpt as u
 import openai
 
 class Query:

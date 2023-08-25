@@ -11,7 +11,7 @@ import action
 import parse_json
 import query
 from imp import reload
-import env_utils as eu 
+import prompt_files.env_utils_gpt as eu 
 from initial_pipeline import *
 
 from bddl_verification import *

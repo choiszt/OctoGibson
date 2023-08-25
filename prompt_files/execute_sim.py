@@ -8,16 +8,14 @@ from omnigibson.utils.ui_utils import choose_from_options
 
 from robot_action import *
 import action
-import parse_json
-import query
 from imp import reload
-import env_utils as eu 
+import prompt_files.env_utils_gpt as eu 
 from initial_pipeline import *
 
 from bddl_verification import *
 
 def sim_process(task_name, scene_name, action_path, save_path):
-    
+    heading="import os \nimport json\nimport yaml\nimport omnigibson as og\nfrom action_list import * \nfrom action_utils import *\n"
     config_filename="/shared/liushuai/OmniGibson/prompt_files/bddl_task.yaml"
     cfg = yaml.load(open(config_filename, "r"), Loader=yaml.FullLoader)
     cfg["task"]["online_object_sampling"] = False
@@ -67,10 +65,12 @@ def sim_process(task_name, scene_name, action_path, save_path):
             else:
                 subtask, code = answer['subtask'], answer['code']
                 with open(action_path, 'w') as f:
+                    f.write(heading)
                     f.write(code)
                 reload(action)
                 try:
                     action.act(robot, env, camera)
+                    print("act...")
                 except Exception as e:
                     error = str(e)
                     env.reset()
@@ -121,3 +121,6 @@ def sim_process(task_name, scene_name, action_path, save_path):
                 eu.save_feedback(feedback_path, subtask, code, error, critic, reset, main_succeed)
         else:
             eu.save_feedback(feedback_path, subtask, code, error, critic, reset, main_succeed)
+
+
+sim_process(task_name="cook_bacon",scene_name="Merom_1_int",action_path="./action.py",save_path="./data")

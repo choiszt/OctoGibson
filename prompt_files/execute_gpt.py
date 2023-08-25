@@ -2,25 +2,23 @@ import os
 import json
 import yaml
 
-import omnigibson as og
-from omnigibson.macros import gm
-from omnigibson.utils.ui_utils import choose_from_options
+# import omnigibson as og
 
-from robot_action import *
+# from robot_action import *
 import action
 import parse_json
 import query
 from imp import reload
-import env_utils as eu 
-from initial_pipeline import *
+import prompt_files.env_utils_gpt as eu 
+import openai
 
-from bddl_verification import *
 
 def gpt_process(save_path, openai_api_key):
     # main task loop
     
     main_task_flag = False
     subtask_iter = 1
+    gpt_query = query.Query(openai_api_key=openai_api_key)
     while True:
         
         # make the directory
@@ -28,10 +26,10 @@ def gpt_process(save_path, openai_api_key):
         
         # init pipeline for each subtask
         while True:
-            if os.path.exists(os.path.join(sub_save_path, 'task.json')):
+            if os.path.exists(os.path.join(sub_save_path, 'task.json')): #TODO align with "task1"
                 break        
         human_info = parse_json.parse_json(path=os.path.join(sub_save_path, "task.json"))
-        gpt_query = query.Query(openai_api_key=openai_api_key)
+        
         
         # subtask loop, when a subtask is finished, close the loop
         while True:
@@ -43,8 +41,14 @@ def gpt_process(save_path, openai_api_key):
             all_messages = [system_message, human_message]
             
             eu.save_input(sub_save_path, human_message.content)
-
+            print("start query")
+            proxy={
+                "http":'127.0.0.0:7890',
+                "https":'127.0.0.0:7890',
+                }
+            openai.proxy=proxy
             response = gpt_query.llm(all_messages)
+            print(response.content)
             answer = gpt_query.process_ai_message(response)
             
             eu.save_response(sub_save_path, answer)
@@ -74,3 +78,6 @@ def gpt_process(save_path, openai_api_key):
         
         if main_task_flag:
             break
+
+api_key="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"
+gpt_process(save_path="/shared/liushuai/OmniGibson/data",openai_api_key=api_key)

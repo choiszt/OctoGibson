@@ -1,6 +1,6 @@
 import json
 import os
-import env_utils as eu
+import prompt_files.env_utils_gpt as eu
 from excecute_env import exec
 
 openai_api_key = "YOUR_API_KEY"

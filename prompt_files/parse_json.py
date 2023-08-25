@@ -23,6 +23,7 @@ def parse_json(path):
     for k in data.keys():
         parsed_data = data[k]
         if type(parsed_data)==str:
+            TASK=parsed_data
             continue
         for ks in parsed_data.keys(): #each object in data
             if ks == 'scene_graph':
@@ -32,8 +33,6 @@ def parse_json(path):
                         SG.append(tuple(s))
             elif ks == 'inventory':
                 INV = parsed_data[ks]
-            elif ks == 'task':
-                TASK = parsed_data[ks]
             else:
                 if ks not in OBJ:
                     obj = []
@@ -64,5 +63,6 @@ def parse_json(path):
 
     return [final_SG, obs_str, str(INV), str(TASK)]
 
-parse_json("/shared/liushuai/OmniGibson/shared/liushuai/OmniGibson/prompt_files/trash/subtask_1/task1.json")
+if __name__=="__main__":
+    parse_json("/shared/liushuai/OmniGibson/data/subtask_1/task.json")
 
