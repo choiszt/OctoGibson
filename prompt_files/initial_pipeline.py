@@ -56,11 +56,9 @@ def init_pipeline(env, robot, camera, task_name, file_name=None):
 
     donothing(env, action)
     cam.collectdata_v2(robot.robot)
-    jsonpath=cam.writejson()
 
     robot.robot.visible=False
     cam.setposition(*origin_pos_ori)
     donothing(env, action)
 
-
-    return jsonpath
+    return cam.result_json

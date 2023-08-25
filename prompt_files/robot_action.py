@@ -416,8 +416,7 @@ class Camera():
 
     def writejson(self):
         with open(f"./{self.FILENAME}/task1.json","w")as f:
-            json.dump(self.result_json,f)
-        return f"./{self.FILENAME}/task1.json"
+            f.write(json.dumps(self.result_json, indent=4))
 
     def collectdata(self):
         seglists=self.seglist
@@ -449,7 +448,7 @@ class Camera():
                             break
                 result_json[action].update(obj_metadata)
         with open(f"./{self.FILENAME}/task.json","w")as f:
-            json.dump(result_json,f)
+            f.write(json.dump(self.result_json, indent=4))
         return result_json
 
 

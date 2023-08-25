@@ -8,7 +8,7 @@ You need to use the utility functions to complete the tasks.
 
 Utility Functions:
 donothing(env): wait for the system to capture.
-registry(env, obj_name): each time you want to use an object in the environment, call this function first. obj(str): the object in the environment. e.g. apple_1234 = registry("apple_1234"), then you can use apple_1234 to represent "apple_1234" in the environment. For each object, you can only register it once, don't register an object multiple times. By default, the variable name should be the same as the string.
+registry(env, obj_name): each time you want to use an object in the environment, call this function first. obj(str): the object in the environment. e.g. apple_1234 = registry(env, "apple_1234"), then you can use apple_1234 to represent "apple_1234" in the environment. For each object, you can only register it once, don't register an object multiple times. By default, the variable name should be the same as the string.
 
 The Action List contains multiple defined functions, you could execute your actions by calling these functions.
 I will first give you the name of the function as well as its input, then I will give you an explanation of what it can do, e.g. function_name(inputs): capability of the function.

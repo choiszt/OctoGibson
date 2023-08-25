@@ -8,6 +8,7 @@ import yaml
 import parse_json
 import query
 from imp import reload
+import sys;sys.path.append('/home/cooyes/OmniGibson/omni_base')
 import prompt_files.env_utils_gpt as eu 
 import openai
 
@@ -26,7 +27,11 @@ def gpt_process(save_path, openai_api_key):
         # init pipeline for each subtask
         while True:
             if os.path.exists(os.path.join(sub_save_path, 'task1.json')): #TODO align with "task1"
-                break        
+                break   
+        while True:
+            statinfo = os.stat(os.path.join(sub_save_path, 'task1.json')) 
+            if statinfo.st_size > 0:
+                break
         human_info = parse_json.parse_json(path=os.path.join(sub_save_path, "task1.json"))
         
         
@@ -41,15 +46,18 @@ def gpt_process(save_path, openai_api_key):
             
             eu.save_input(sub_save_path, human_message.content)
             print("start query")
-            proxy={
-                "http":'127.0.0.0:7890',
-                "https":'127.0.0.0:7890',
-                }
-            openai.proxy=proxy
+            # proxy={
+            #     "http":'127.0.0.0:7890',
+            #     "https":'127.0.0.0:7890',
+            #     }
+            # openai.proxy=proxy
             response = gpt_query.llm(all_messages)
             print(response.content)
-            answer = gpt_query.process_ai_message(response)
-            
+            try:
+                answer = gpt_query.process_ai_message(response)
+            except Exception as e:
+                answer = str(e)
+                print(answer)
             eu.save_response(sub_save_path, answer)
             
             while True:
@@ -79,4 +87,4 @@ def gpt_process(save_path, openai_api_key):
             break
 
 api_key="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"
-gpt_process(save_path="/shared/liushuai/OmniGibson/prompt_files/data",openai_api_key=api_key)
+gpt_process(save_path="/home/cooyes/OmniGibson/omni_base/prompt_files/data",openai_api_key=api_key)

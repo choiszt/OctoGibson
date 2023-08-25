@@ -43,7 +43,6 @@ def save_response(path, response):
         f.write(json.dumps(responses, indent=4))
         
 
-        
 def save_feedback(path, subtask, code, error, critic, reset, main_succeed):
     feedback = {}
     feedback['subtask'] = subtask

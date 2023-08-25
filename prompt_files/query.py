@@ -6,7 +6,7 @@ import os
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import SystemMessagePromptTemplate
 from langchain.schema import AIMessage, HumanMessage, SystemMessage
-import sys;sys.path.append("/shared/liushuai/OmniGibson")
+import sys;sys.path.append('/home/cooyes/OmniGibson/omni_base')
 import prompt_files.env_utils_gpt as u
 import openai
 
@@ -63,19 +63,19 @@ class Query:
 
         message += f"Task Goal: {task}\n"
         
-        if len(self.history_info['subtask']) > 0:
-            message += f"Original Subtasks: {self.history_info['subtask']}\n"
-        else:
-            message += f"Original Subtasks: None\n"
+        # if len(self.history_info['subtask']) > 0:
+            # message += f"Original Subtasks: {self.history_info['subtask']}\n"
+        # else:
+            # message += f"Original Subtasks: None\n"
 
         if len(self.history_info['code']) > 0:
-            message += f"Previous Action Code: {self.history_info['code']}\n"
+            # message += f"Previous Action Code: {self.history_info['code']}\n"
             if len(self.history_info['error']) > 0:
                 message += f"Execution Error: {self.history_info['error']}\n"
             else:
                 message += f"Execution Error: No error\n"  
         elif len(self.history_info['code']) == 0: 
-            message += f"Previous Action Code: No code\n"
+            # message += f"Previous Action Code: No code\n"
             message += f"Execution error: No error\n"  
         
         message += "Now, please output Explain, Subtasks (revise if necessary), Code that completing the next subtask, and Target States, according to the instruction above. Remember you can only use the functions provided above and pay attention to the response format."
@@ -88,7 +88,7 @@ class Query:
         processed_message = message.content
         # with open('./answer.txt', 'w') as f:
         #     f.write(processed_message)
-        retry = 3
+        retry = 1
         error = None
         classes = ["Explain:", "Subtasks:", "Code:", "Target States:"]
         idxs = []
@@ -98,39 +98,38 @@ class Query:
         if -1 in idxs:
             raise Exception('Invalid response format!')
         while retry > 0:
-            # try:
-            explain = processed_message[:idxs[1]]
-            subtask = processed_message[idxs[1]:idxs[2]]
-            code = processed_message[idxs[2]:idxs[3]]
-            target = processed_message[idxs[3]:]
-            explain = explain.split('Explain: \n')[1].split('\n\n')[0]
-            subtask = subtask.split('Subtasks:\n')[1].split('\n\n')[0]
-            exec_code = code.split('```python\n')[1].split('```')[0]
-            inv = target.split('Inventory: ')[1]
-            inv = inv.split('Object')[0].split('\n')[0]
-            obj_states_2 = []
-            obj_states_3 = []
-            objects = target.split('Information:\n')[1]
-            objects = objects.split('\n')
-            for obj in objects:
-                obj = obj.split(') ')[-1]
-                obj_list = obj.split(', ')
-                if len(obj_list) == 3:
-                    obj_states_2.append(obj_list)
-                elif len(obj_list) == 4: 
-                    obj_states_3.append(obj_list)
-            return {
-                "explain": explain,
-                "subtask": subtask,
-                "code": exec_code,
-                "inventory": inv,
-                "obj_2": obj_states_2, 
-                "obj_3": obj_states_3,
-            }
-            # except Exception as e:
-            #     retry -= 1
-            #     error = e
-            #     time.sleep(1)
+            try:
+                explain = processed_message[:idxs[1]]
+                subtask = processed_message[idxs[1]:idxs[2]]
+                code = processed_message[idxs[2]:idxs[3]]
+                target = processed_message[idxs[3]:]
+                explain = explain.split('Explain:')[1].split('\n\n')[0]
+                subtask = subtask.split('Subtasks:\n')[1].split('\n\n')[0]
+                exec_code = code.split('```python\n')[1].split('```')[0]
+                inv = target.split('Inventory: ')[1]
+                inv = inv.split('Object')[0].split('\n')[0]
+                obj_states_2 = []
+                obj_states_3 = []
+                objects = target.split('Information:\n')[1]
+                objects = objects.split('\n')
+                for obj in objects:
+                    obj = obj.split(') ')[-1]
+                    obj_list = obj.split(', ')
+                    if len(obj_list) == 3:
+                        obj_states_2.append(obj_list)
+                    elif len(obj_list) == 4: 
+                        obj_states_3.append(obj_list)
+                return {
+                    "explain": explain,
+                    "subtask": subtask,
+                    "code": exec_code,
+                    "inventory": inv,
+                    "obj_2": obj_states_2, 
+                    "obj_3": obj_states_3,
+                }
+            except Exception as e:
+                retry -= 1
+                error = e
         return f"Error parsing response (before program execution): {error}"
     
     def record_history(self, subtask="", code="", error=""):

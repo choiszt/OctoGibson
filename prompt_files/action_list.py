@@ -20,7 +20,7 @@ from omnigibson.object_states.factory import (
     get_texture_change_priority,
 )
 
-from prompt_files.action_utils import *
+from action_utils import *
 
 
 OBJECT_TAXONOMY = ObjectTaxonomy()
