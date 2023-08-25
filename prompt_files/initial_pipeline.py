@@ -61,4 +61,4 @@ def init_pipeline(env, robot, camera, task_name, file_name=None):
     cam.setposition(*origin_pos_ori)
     donothing(env, action)
 
-    return cam.result_json
+    cam.writejson()
