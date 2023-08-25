@@ -26,9 +26,9 @@ def gpt_process(save_path, openai_api_key):
         
         # init pipeline for each subtask
         while True:
-            if os.path.exists(os.path.join(sub_save_path, 'task.json')): #TODO align with "task1"
+            if os.path.exists(os.path.join(sub_save_path, 'task1.json')): #TODO align with "task1"
                 break        
-        human_info = parse_json.parse_json(path=os.path.join(sub_save_path, "task.json"))
+        human_info = parse_json.parse_json(path=os.path.join(sub_save_path, "task1.json"))
         
         
         # subtask loop, when a subtask is finished, close the loop
@@ -80,4 +80,4 @@ def gpt_process(save_path, openai_api_key):
             break
 
 api_key="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"
-gpt_process(save_path="/shared/liushuai/OmniGibson/data",openai_api_key=api_key)
+gpt_process(save_path="/shared/liushuai/OmniGibson/prompt_files/data",openai_api_key=api_key)

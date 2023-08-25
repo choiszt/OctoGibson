@@ -9,7 +9,7 @@ from omnigibson.utils.ui_utils import choose_from_options
 from robot_action import *
 import action
 from imp import reload
-import prompt_files.env_utils_gpt as eu 
+import env_utils_gpt as eu 
 from initial_pipeline import *
 
 from bddl_verification import *
@@ -123,4 +123,4 @@ def sim_process(task_name, scene_name, action_path, save_path):
             eu.save_feedback(feedback_path, subtask, code, error, critic, reset, main_succeed)
 
 
-sim_process(task_name="cook_bacon",scene_name="Merom_1_int",action_path="./action.py",save_path="./data")
+sim_process(task_name="cook_bacon",scene_name="Merom_1_int",action_path="./prompt_files/action.py",save_path="./prompt_files/data")
