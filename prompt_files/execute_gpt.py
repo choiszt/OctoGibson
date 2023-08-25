@@ -5,7 +5,6 @@ import yaml
 # import omnigibson as og
 
 # from robot_action import *
-import action
 import parse_json
 import query
 from imp import reload
