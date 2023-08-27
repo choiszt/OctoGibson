@@ -44,7 +44,7 @@ def EasyGrasp(robot, obj, dis_threshold=1.0):
 def MoveBot(env, robot,obj,camera):
     pos = get_robot_pos(obj)
     robot.set_position(pos)
-    pos=Update_camera_pos(camera,robot,obj)
+    Update_camera_pos(camera,robot,obj)
     if robot.inventory:
         # relationship between name and variable.
         obj = robot.inventory[0]
@@ -163,7 +163,7 @@ def open(robot, obj):
     bot_pose = robot.get_position()
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
-    if dis > 1:
+    if dis > 5:
         raise Exception(f"Cannot open! robot is not within a meter of {obj}")
     change_states(obj, 'openable', 1)
 

@@ -5,8 +5,8 @@ import os
 import json
 from omnigibson import object_states
 reverse=lambda states:{value:key for key,value in states.items()}
-unary_states={object_states.Cooked:"cooked",object_states.Burnt:"burnt",object_states.Frozen:"frozen",object_states.Heated:"hot",
-                         object_states.Open:"open",object_states.ToggledOn:"toggled_on",object_states.Folded:"folded",object_states.Unfolded:"unfolded"}
+unary_states={object_states.Cooked:"cookable",object_states.Burnt:"burnable",object_states.Frozen:"freezable",object_states.Heated:"heatable",
+object_states.Open:"openable",object_states.ToggledOn:"togglable",object_states.Folded:"foldable",object_states.Unfolded:"unfoldable"}
 binary__states={
     object_states.Inside: "inside",
     object_states.NextTo: "nextto",
@@ -23,13 +23,14 @@ binary__states={
 }
 reversed_unary_states,reversed_binary__states=reverse(unary_states),reverse(binary__states)
 
-
-def verify_inv(env, robot, states):
-    return env.scene.object_registry("name", states) in robot.inventory # we need to transfer variable to str
-
-def verify_obj_2(obj, states, value):
+def verify_obj_2(env,obj,states, value):
     states_status=reversed_unary_states[states] # CLASS object_states
-    return states_status._get_value(obj)==value
+    registered_states=states_status(env.scene.object_registry("name", obj))
+    try:
+        registered_states._initialize()
+    except:
+        pass
+    return registered_states._get_value()==value
     
 
 def verify_obj_3(obj1, states, obj2, value):

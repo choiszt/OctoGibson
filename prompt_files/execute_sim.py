@@ -8,10 +8,10 @@ from omnigibson.utils.ui_utils import choose_from_options
 
 from robot_action import *
 import prompt_files.action as action
-from imp import reload
+from importlib import reload
 import env_utils_sim as eu 
 from initial_pipeline import *
-
+import time
 from bddl_verification import *
 
 def sim_process(task_name, scene_name, action_path, save_path):
@@ -46,6 +46,7 @@ def sim_process(task_name, scene_name, action_path, save_path):
         
         #subtask loop
         while True:  
+            error=''
             # wait for the GPT response
             while True:
                 if os.path.exists(response_path):
@@ -69,9 +70,11 @@ def sim_process(task_name, scene_name, action_path, save_path):
                 with open(action_path, 'w') as f:
                     f.write(heading)
                     f.write(code)
-                reload(action)
+                time.sleep(2)
+                new_action=reload(action)
+                time.sleep(2)
                 try:
-                    action.act(env,robot,camera)
+                    new_action.act(robot,env,camera)
                     print("act...")
                 except Exception as e:
                     error = str(e)
@@ -86,12 +89,12 @@ def sim_process(task_name, scene_name, action_path, save_path):
             # subtask verification
             target_states = answer['target']
             # verify function
-            if target_states['inv'] is not None:
+            if target_states['inv'] != 'None': #TODO string None
                 value = eu.verify_inv(env, robot, target_states['inv'])
                 if not value:
                     error += f"{target_states['inv']} is not in Inventory.\n"
             for obj in target_states['obj_2']:
-                value = eu.verify_obj_2(obj[0], obj[1], obj[2])
+                value = eu.verify_obj_2(env,obj[0], obj[1], obj[2])
                 if not value:
                     error += f"State {obj[1]} of object {obj[0]} is not {obj[2]}\n"
 
@@ -114,7 +117,8 @@ def sim_process(task_name, scene_name, action_path, save_path):
         
         #verify the whole task
         if critic == 'succeed':
-            signal = verify_bddl()
+            # signal = verify_bddl()
+            signal=False
             if signal:
                 main_succeed = True
                 eu.save_feedback(feedback_path, subtask, code, error, critic, reset, main_succeed)
