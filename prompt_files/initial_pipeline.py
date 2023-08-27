@@ -44,20 +44,20 @@ def init_pipeline(env, robot, camera, task_name, file_name=None):
     
     cam.collectdata_v2(robot.robot)
     
-    donothing(env, action)
-    robot.robot.visible=True
-    robot.robot.set_position([-1.53887291 ,4.79978561 ,0.01504258])
-    ppposition=robot.robot.get_position()
-    cam_position=get_camera_position_bev(ppposition)
-    cam.setposition(cam_position, trans_camera(robot.robot.get_orientation()))
-    donothing(env, action)
-    cam.FlyingCapture(f'{iter}_BEV_surroundings')   
-    iter+=1  
+    # donothing(env, action)
+    # robot.robot.visible=True
+    # robot.robot.set_position([-1.53887291 ,4.79978561 ,0.01504258])
+    # ppposition=robot.robot.get_position()
+    # cam_position=get_camera_position_bev(ppposition)
+    # cam.setposition(cam_position, trans_camera(robot.robot.get_orientation()))
+    # donothing(env, action)
+    # cam.FlyingCapture(f'{iter}_BEV_surroundings')   
+    # iter+=1  
 
-    donothing(env, action)
-    cam.collectdata_v2(robot.robot)
+    # donothing(env, action)
+    # cam.collectdata_v2(robot.robot)
 
-    robot.robot.visible=False
+    # robot.robot.visible=False
     cam.setposition(*origin_pos_ori)
     donothing(env, action)
 

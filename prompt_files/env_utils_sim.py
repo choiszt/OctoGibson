@@ -22,6 +22,8 @@ binary__states={
     object_states.Draped: "draped"
 }
 reversed_unary_states,reversed_binary__states=reverse(unary_states),reverse(binary__states)
+def verify_inv(env, robot, states):
+    return states in robot.inventory # we need to transfer variable to str
 
 def verify_obj_2(env,obj,states, value):
     states_status=reversed_unary_states[states] # CLASS object_states

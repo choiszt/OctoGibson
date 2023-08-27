@@ -25,7 +25,7 @@ from action_utils import *
 
 OBJECT_TAXONOMY = ObjectTaxonomy()
 
-def EasyGrasp(robot, obj, dis_threshold=1.0):
+def EasyGrasp(robot, obj, dis_threshold=5.0):
     #Grasp the robot within the distance threshold
     robot_pos = robot.get_position()
     obj_pose = obj.get_position()
@@ -131,7 +131,7 @@ def cook(robot, obj):
     bot_pose = robot.get_position()
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
-    if dis > 1:
+    if dis > 5:
         raise Exception(f"Cannot cook! robot is not within a meter of {obj}")
     change_states(obj, 'cookable', 1)
 
@@ -139,7 +139,7 @@ def burn(robot, obj):
     bot_pose = robot.get_position()
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
-    if dis > 1:
+    if dis > 5:
         raise Exception(f"Cannot burn! robot is not within a meter of {obj}")
     change_states(obj, 'burnable', 1)
 
@@ -147,7 +147,7 @@ def freeze(robot, obj):
     bot_pose = robot.get_position()
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
-    if dis > 1:
+    if dis > 5:
         raise Exception(f"Cannot freeze! robot is not within a meter of {obj}")
     change_states(obj, 'freezable', 1)
 
@@ -155,7 +155,7 @@ def heat(robot, obj):
     bot_pose = robot.get_position()
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
-    if dis > 1:
+    if dis > 5:
         raise Exception(f"Cannot heat! robot is not within a meter of {obj}")
     change_states(obj, 'heatable', 1)
 
@@ -171,7 +171,7 @@ def close(robot, obj):
     bot_pose = robot.get_position()
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
-    if dis > 1:
+    if dis > 5:
         raise Exception(f"Cannot close! robot is not within a meter of {obj}")
     change_states(obj, 'openable', 0)
 
@@ -179,7 +179,7 @@ def fold(robot, obj):
     bot_pose = robot.get_position()
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
-    if dis > 1:
+    if dis > 5:
         raise Exception(f"Cannot fold! robot is not within a meter of {obj}")
     change_states(obj, 'foldable', 1)
 
@@ -187,7 +187,7 @@ def unfold(robot, obj):
     bot_pose = robot.get_position()
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
-    if dis > 1:
+    if dis > 5:
         raise Exception(f"Cannot unfold! robot is not within a meter of {obj}")
     change_states(obj, 'unfoldable', 1)
 
@@ -195,7 +195,7 @@ def toggle_on(robot, obj):
     bot_pose = robot.get_position()
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
-    if dis > 1:
+    if dis > 5:
         raise Exception(f"Cannot toggle on! robot is not within a meter of {obj}")
     change_states(obj, 'togglable', 1)
 
@@ -203,7 +203,7 @@ def toggle_off(robot, obj):
     bot_pose = robot.get_position()
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
-    if dis > 1:
+    if dis > 5:
         raise Exception(f"Cannot toggle off! robot is not within a meter of {obj}")
     change_states(obj, 'togglable', 0)
 

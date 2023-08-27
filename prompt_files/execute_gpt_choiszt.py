@@ -11,7 +11,7 @@ from imp import reload
 import env_utils_gpt as eu 
 import openai
 import re
-
+import time
 def gpt_process(save_path, openai_api_key):
     # main task loop
     
@@ -19,7 +19,7 @@ def gpt_process(save_path, openai_api_key):
     subtask_iter = 1
     gpt_query = query.Query(openai_api_key=openai_api_key)
     while True:
-        
+        print(f"create subtask_{subtask_iter}")
         # make the directory
         sub_save_path = eu.f_mkdir(os.path.join(save_path, f"subtask_{subtask_iter}"))
         
@@ -48,7 +48,7 @@ def gpt_process(save_path, openai_api_key):
                 answer = str(e)
                 print(answer)
             eu.save_response(sub_save_path, answer)
-            
+            time.sleep(2)
             while True:
                 if os.path.exists(os.path.join(sub_save_path, 'feedback.json')):
                     break

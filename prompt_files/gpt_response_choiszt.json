@@ -1,21 +1,24 @@
 {
-    "Explain": "The last executed action successfully moved the robot closer to the fridge as intended in the original subtask 1. The next step is to open the fridge to access the bacon inside.",
-    "subtask": [
-        "Move to the fridge.",
-        "Open the fridge.",
-        "Grasp the bacon.",
-        "Move to the stove.",
-        "Toggle on the stove.",
-        "Cook the bacon on the stove.",
-        "Toggle off the stove."
-    ],
-    "code": "def act(robot, env, camera):\n    fridge = registry(env, \"fridge_xyejdx_0\")\n    open(robot, fridge)\n    donothing(env)",
+    "Explain": "The bacon is already within the robot's inventory, so we don't need to go through the process of opening the fridge and grasping it. It seems the robot has already moved to the stove, toggled it on, and began the cooking process. We will proceed to the final stages of cooking.",
+    "subtask": {
+        "(1)": "Cook the bacon on the stove.",
+        "(2)": "Toggle off the stove."
+    },
+    "code": "def act(robot, env, camera):\n    bacon = registry(env, \"bacon_150\")\n    stove = registry(env, \"stove_rgpphy_0\")\n    toggle_off(robot, stove)\n    donothing(env)",
     "target": {
-        "inv": "None",
+        "inv": "bacon_150",
         "obj_2": [
-            ["fridge_xyejdx_0","openable",1]
+            [
+                "bacon_150",
+                "cookable",
+                1
+            ],
+            [
+                "stove_rgpphy_0",
+                "togglable",
+                0
+            ]
         ],
-        "obj_3":[
-        ]
+        "obj_3": []
     }
 }
