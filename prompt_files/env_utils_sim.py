@@ -27,12 +27,8 @@ def verify_inv(env, robot, states):
 
 def verify_obj_2(env,obj,states, value):
     states_status=reversed_unary_states[states] # CLASS object_states
-    registered_states=states_status(env.scene.object_registry("name", obj))
-    try:
-        registered_states._initialize()
-    except:
-        pass
-    return registered_states._get_value()==value
+    registered_obj=env.scene.object_registry("name", obj)
+    return registered_obj.states[states_status]._get_value()==value
     
 
 def verify_obj_3(obj1, states, obj2, value):

@@ -98,8 +98,8 @@ def sim_process(task_name, scene_name, action_path, save_path):
             # verify function
             if target_states['inv'] != 'None': #TODO string None
                 value = eu.verify_inv(env, robot, target_states['inv'])
-                # if not value: #TODO need to fix the bug
-                #     error += f"{target_states['inv']} is not in Inventory.\n"
+                if not value: #TODO need to fix the bug
+                    error += f"{target_states['inv']} is not in Inventory.\n"
             for obj in target_states['obj_2']:
                 value = eu.verify_obj_2(env,obj[0], obj[1], obj[2])
                 if not value:
