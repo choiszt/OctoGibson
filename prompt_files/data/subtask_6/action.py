@@ -5,6 +5,9 @@ import omnigibson as og
 from action_list import * 
 from action_utils import *
 def act(robot, env, camera):
-    fridge = registry(env, "fridge_xyejdx_0")
-    MoveBot(env, robot, fridge, camera)
+    bacon = registry(env, "bacon_150")
+    stove = registry(env, "stove_rgpphy_0")
+    cook(robot, bacon)
+    donothing(env)
+    toggle_off(robot, stove)
     donothing(env)

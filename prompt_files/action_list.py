@@ -34,7 +34,7 @@ def EasyGrasp(robot, obj, dis_threshold=5.0):
         robot_pos[2] += robot.aabb_center[2]
         robot_pos[2] -=0.2
         obj.set_position(robot_pos)
-        if len(robot.inventory)>1:
+        if len(robot.inventory)>=1:
             raise Exception("robot carries more than 1 object!")
         robot.inventory.append(obj._name)
         print(f"now we have:{robot.inventory}")

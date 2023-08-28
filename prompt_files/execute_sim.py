@@ -14,6 +14,7 @@ from initial_pipeline import *
 import time
 from bddl_verification import *
 import sys
+import verify_taskgoal
 def sim_process(task_name, scene_name, action_path, save_path):
     heading="import os \nimport json\nimport yaml\nimport omnigibson as og\nfrom action_list import * \nfrom action_utils import *\n"
     config_filename="./prompt_files/bddl_task.yaml"
@@ -32,7 +33,7 @@ def sim_process(task_name, scene_name, action_path, save_path):
     camera.focal_length = 10.
     
     # main task loop
-    subtask_iter = 1
+    subtask_iter = 3
     while True:
         
 
@@ -86,6 +87,7 @@ def sim_process(task_name, scene_name, action_path, save_path):
                 except Exception as e:
                     error = str(e)
                     # env.reset()
+                    robot.inventory=[]
                     subtask = subtask
                     code = code
                     error = error
@@ -98,6 +100,8 @@ def sim_process(task_name, scene_name, action_path, save_path):
             # verify function
             if target_states['inv'] != 'None': #TODO string None
                 value = eu.verify_inv(env, robot, target_states['inv'])
+                print(f"target_inv:{target_states['inv']}")
+                print(f"inventory:{robot.inventory}")
                 if not value: #TODO need to fix the bug
                     error += f"{target_states['inv']} is not in Inventory.\n"
             for obj in target_states['obj_2']:
@@ -120,11 +124,23 @@ def sim_process(task_name, scene_name, action_path, save_path):
                 break
 
         # reset parameters
+
+        ###reset and run the previous code #TODO: NEED TO DELETE subtask_iter python.py *** CHOISZT 8.28
         subtask_iter += 1
-        
+        for iter_num in subtask_iter:
+            path=f"/shared/liushuai/OmniGibson/prompt_files/data/subtask_{iter_num}"
+            with open(os.path.join(path,"feedback.json"))as f:
+                tmp_feedback=json.load(f)
+            if tmp_feedback['critic']=='succeed':
+                sys.path.append(path)
+                import action
+                action.act(robot,env,camera)
+
+
+        #TODO choiszt need to add rename
         #verify the whole task
         if critic == 'succeed':
-            # signal = verify_bddl()
+            # signal = verify_taskgoal() 
             signal=False
             if signal:
                 main_succeed = True

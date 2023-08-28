@@ -1,0 +1,26 @@
+{
+    "response": {
+        "Explain": "The bacon is already within the robot's inventory, so we don't need to go through the process of opening the fridge and grasping it. It seems the robot has already moved to the stove, toggled it on, and began the cooking process. We will proceed to the final stages of cooking.",
+        "subtask": {
+            "(1)": "Cook the bacon on the stove.",
+            "(2)": "Toggle off the stove."
+        },
+        "code": "def act(robot, env, camera):\n    bacon = registry(env, \"bacon_150\")\n    stove = registry(env, \"stove_rgpphy_0\")\n    cook(robot, bacon)\n    donothing(env)\n    toggle_off(robot, stove)\n    donothing(env)",
+        "target": {
+            "inv": "bacon_150",
+            "obj_2": [
+                [
+                    "bacon_150",
+                    "cookable",
+                    1
+                ],
+                [
+                    "stove_rgpphy_0",
+                    "togglable",
+                    1
+                ]
+            ],
+            "obj_3": []
+        }
+    }
+}

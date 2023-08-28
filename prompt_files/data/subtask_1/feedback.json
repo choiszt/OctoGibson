@@ -1,12 +1,17 @@
 {
     "subtask": [
-        "(1) Move to the stove.",
-        "(2) Toggle on the stove.",
-        "(3) Cook the bacon on the stove."
+        "Move the robot to the fridge.",
+        "Open the fridge.",
+        "Grasp the bacon.",
+        "Close the fridge.",
+        "Move the robot to the stove.",
+        "Place bacon on the stove.",
+        "Toggle on the stove to cook the bacon.",
+        "Once bacon is cooked, toggle off the stove."
     ],
-    "code": "def act(robot, env, camera):\n    stove = registry(env, \"stove_rgpphy_0\")\n    bacon = registry(env, \"bacon_150\")\n    MoveBot(env, robot, stove, camera)\n    donothing(env)\n    toggle_on(robot, stove)\n    donothing(env)\n    cook(robot, bacon)\n    donothing(env)",
-    "error": "bacon_150 is not in Inventory.\nState togglable of object stove_rgpphy_0 is not 1\nState cookable of object bacon_150 is not 1\n",
-    "critic": "fail",
-    "reset": true,
+    "code": "def act(robot, env, camera):\n    fridge = registry(env, \"fridge_xyejdx_0\")\n    MoveBot(env, robot, fridge, camera)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
     "main_succeed": false
 }

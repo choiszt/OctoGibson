@@ -1,27 +1,28 @@
 {
     "response": {
-        "Explain": "Given the provided information, the agent has already grasped the bacon. Therefore, the next steps involve moving to the stove, toggling it on, and cooking the bacon.",
+        "Explain": "Our task is to cook the bacon. The bacon is currently inside the fridge. Our first step is to move to the fridge to retrieve the bacon.",
         "subtask": [
-            "(1) Move to the stove.",
-            "(2) Toggle on the stove.",
-            "(3) Cook the bacon on the stove."
+            "Move the robot to the fridge.",
+            "Open the fridge.",
+            "Grasp the bacon.",
+            "Close the fridge.",
+            "Move the robot to the stove.",
+            "Place bacon on the stove.",
+            "Toggle on the stove to cook the bacon.",
+            "Once bacon is cooked, toggle off the stove."
         ],
-        "code": "def act(robot, env, camera):\n    stove = registry(env, \"stove_rgpphy_0\")\n    bacon = registry(env, \"bacon_150\")\n    MoveBot(env, robot, stove, camera)\n    donothing(env)\n    toggle_on(robot, stove)\n    donothing(env)\n    cook(robot, bacon)\n    donothing(env)",
+        "code": "def act(robot, env, camera):\n    fridge = registry(env, \"fridge_xyejdx_0\")\n    MoveBot(env, robot, fridge, camera)\n    donothing(env)\n",
         "target": {
-            "inv": "bacon_150",
-            "obj_2": [
+            "inv": "None",
+            "obj_2": [],
+            "obj_3": [
                 [
-                    "stove_rgpphy_0",
-                    "togglable",
-                    1
-                ],
-                [
-                    "bacon_150",
-                    "cookable",
-                    1
+                    "robot",
+                    "nextto",
+                    "fridge_xyejdx_0",
+                    "1"
                 ]
-            ],
-            "obj_3": []
+            ]
         }
     }
 }

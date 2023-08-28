@@ -1,0 +1,12 @@
+{
+    "subtask": [
+        "(1) Move to the stove.",
+        "(2) Toggle on the stove.",
+        "(3) Cook the bacon on the stove."
+    ],
+    "code": "def act(robot, env, camera):\n    stove = registry(env, \"stove_rgpphy_0\")\n    bacon = registry(env, \"bacon_150\")\n    MoveBot(env, robot, stove, camera)\n    donothing(env)\n    toggle_on(robot, stove)\n    donothing(env)\n    cook(robot, bacon)\n    donothing(env)",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}
