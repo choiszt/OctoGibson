@@ -24,13 +24,16 @@ def gpt_request(content=None):
     }
 
     # Make the POST request
-    response = requests.post(url, headers=headers, json=data)
+    while True:
+        response = requests.post(url, headers=headers, json=data)
 
-    response = response.json()
-    
-    print(response)
-    
-    # import pdb;pdb.set_trace()
+        response = response.json()
+        
+        if 'status' in response.keys():
+            print('retry')
+            continue
+        if 'code' in response.keys():
+            break
 
     ### this is what we need
     repsonse_content = response["data"]["0"]["message"]["content"]
