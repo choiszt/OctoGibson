@@ -31,9 +31,39 @@ def verify_obj_2(env,obj,states, value):
     return registered_obj.states[states_status]._get_value()==value
     
 
-def verify_obj_3(obj1, states, obj2, value):
-    states_status=reversed_binary__states[states] # CLASS object_states
-    return states_status._get_value(obj1,obj2)==value
+def verify_obj_3(env, obj1, states, obj2, value):
+    obj1 = env.scene.object_registry("name", obj1)
+    obj2 = env.scene.object_registry("name", obj2)
+    if states == 'inside':
+        """
+        obj1 inside obj2
+        """
+        pos1 = obj1.get_position()
+        pos2 = obj2.get_position()
+        bbox1 = obj1.native_bbox
+        bbox2 = obj2.native_bbox
+        if pos1[0] + 0.5 * bbox1[0] <= pos2[0] + 0.5 * bbox2[0] and pos1[0] - 0.5 * bbox1[0] >= pos2[0] - 0.5 * bbox2[0] and \
+                pos1[1] + 0.5 * bbox1[1] <= pos2[1] + 0.5 * bbox2[1] and pos1[1] - 0.5 * bbox1[1] >= pos2[1] - 0.5 * bbox2[1] and \
+                pos1[2] + 0.5 * bbox1[2] <= pos2[2] + 0.5 * bbox2[2] and pos1[2] - 0.5 * bbox1[2] >= pos2[2] - 0.5 * bbox2[2]:
+            v = 1
+        else:
+            v = 0
+        return v == value
+    elif states == 'ontop':
+        """
+        obj1 ontop obj2
+        """
+        pos1 = obj1.get_position()
+        pos2 = obj2.get_position()
+        # bbox1 = obj1.native_bbox
+        # bbox2 = obj2.native_bbox
+        if pos1[2] >= pos2[2]:
+            v = 1
+        else:
+            v = 0
+        return v == value
+    else:
+        raise Exception(f"Not supported states {states}")
 
 def save_response(path, response):
     responses = {}
