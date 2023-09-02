@@ -16,7 +16,8 @@ I will first give you the name of the function as well as its input, then I will
 Action List:
 EasyGrasp(robot, obj): The robot will grasp the object.
 MoveBot(env, robot, obj, camera): Move the robot in the env to the front of obj. Note that the robot can only move to a position in front of large objects (e.g.,  tables, ovens, etc.) that are placed directly on the ground. The robot cannot directly move to small objects (e.g., apples, plates, etc.). The camera should always be set to camera.
-EasyDrop(robot, obj1, obj2): Drop the obj1 within the robot's hands onto obj2
+put_ontop(robot, obj1, obj2): Put the obj1 within the robot's hands onto obj2
+put_inside(robot, obj1, obj2): Put the obj1 within the robot's hands inside obj2
 cook(robot,obj): cook the given object.
 burn(robot,obj): burn the given object.
 freeze(robot,obj): freeze the given object.
@@ -39,7 +40,7 @@ Execution Error: ...
 
 I will give you the following information for you to make a one-step action decision toward the final goal.
 (1) Observed Objects: contains object names, its editable states with the corresponding value of the states and distance measuring the centroid of Agent towards the object. It denotes with (object, [(state1, value1), (state2, value2)], distance).e.g. (fridge, [('openable', 1)], 1.8) means the object fridge can be opened, and it is currently openedand and the distance is a float value measured in meters.
-(2) Observed Relations: a scene relation graph triplet denotes with (object, relation, object), e.g. (apple, on, desk). You are termed with Agent in this context.
+(2) Observed Relations: a scene relation graph triplet denotes with (object, relation, object), e.g. (apple, ontop, desk). You are termed with Agent in this context.
 (3) The observation may not include all the information about the objects you need to interact with, the objects may be hidden inside other objects, so feel free to explore the reasonable place they might appear.
 (4) The Inventory contains a stack-like structure, you could put things inside. But remember first in last out.  It contains all the things the robot has in its hand. If nothing is in Inventory, denoted with None.
 (5) The Task Goal contains instructions and the Agent finished state for the entire goal.
@@ -69,7 +70,7 @@ Please make sure no code annotations is generated in the code.
 Target States: A state to check the completeness of the subtask. You should generate the state for self-verifying if the code can successfully run and reach a desired state in the simulator environment to finish the subtask. The state should be in the format
 (1) Inventory (describe what you could have in Inventory in this state): object
 (2) Object Information (describe the object information in this environment): format1: object, state, value or format2: object1, state, object2, value. The value can only be 0 or 1, representing False or True of the state. For example, [fridge_1234, openable, 1] means fridge_1234 is opened; [meat_jhg, inside, fridge_1234, 1] means meat_jhg is inside fridge_1234. For format1, you can only choose the state from: ['cookable', 'burnable', 'freezable', 'heatable', 'openable', 'togglable', 'foldable', 'unfoldable']. For format2, you can choose the state from: ['inside', 'nextto', 'ontop', 'under', 'touching', 'covered', 'contains', 'saturated', 'filled', 'attached', 'overlaid', 'draped']. If the object is the robot, denote it with 'robot'.
-(3) If the object has not been changed in this task, you don't need to report it. 
+(3) If the object has not been changed in this conversation, do not add it into the target states. 
 (4) You don't need to write any annotations for target states.
 (5) Remember to make sure the states you use is in the provided state list for format1 and format2.
 (5) You can only use the objects provided in the Object Information part, you cannot use the name you registered in the code.
