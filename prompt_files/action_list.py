@@ -65,55 +65,6 @@ def EasyDrop(robot,obj1, obj2, dis_threshold=1.0):
     else:
         raise Exception(f"Cannot Drop! robot is not within a meter of {obj2}")
 
-
-def FlyingCapture(camera, iter, FILENAME=None, file_name=None):
-    obs_dict = camera._get_obs()
-    instancemap = []
-    seglist = []
-    for modality in ["rgb", "depth", "seg_instance"]:
-        query_name = modality
-        if query_name in obs_dict:
-            if modality == "rgb":
-                pass
-            elif modality == "seg_instance":
-                # Map IDs to rgb
-                instancemap.append({f"/shared/liushuai/OmniGibson/{FILENAME}/"+query_name + f'{iter}.png':obs_dict[query_name][0]})
-                segimg = segmentation_to_rgb(obs_dict[query_name][0], N=256)
-                instancemap = obs_dict[query_name][1]
-                for item in instancemap:
-                    # bbox_3ds=obs_dict['bbox_3d']
-                    bbox_2ds=obs_dict["bbox_2d_loose"] #
-                    hextuple=[f"/shared/liushuai/OmniGibson/{FILENAME}/"+query_name + f'{iter}.png',item[1].split("/")[-1],item[3],item[0],'','']
-                    for bbox_2d in bbox_2ds:
-                        if bbox_2d[0]==item[0]:
-                            bbox2d_info=[bbox_2d[i] for i in range(6,10,1)]
-                            hextuple[4]=bbox2d_info
-                            break
-                    # for bbox_3d in bbox_3ds:
-                    #     if bbox_3d[0]==item[0]:
-                    #         bbox3d_info=[bbox_3d[i] for i in range(2,9,1)]
-                    #         hextuple[5]=bbox3d_info
-                    #         break
-                    seglist.append(hextuple)
-            elif modality == "normal":
-                # Re-map to 0 - 1 range
-                pass
-            else:
-                # Depth, nothing to do here
-                pass
-            if modality == "seg_instance":
-                rgbimg = cv2.cvtColor(segimg, cv2.COLOR_BGR2RGB)
-            elif modality == "rgb":
-                rgbimg = cv2.cvtColor(obs_dict[query_name], cv2.COLOR_BGR2RGB)
-            else:
-                rgbimg = obs_dict[query_name]
-            if file_name is not None:
-                cv2.imwrite(query_name + str(file_name) + '.png', rgbimg)
-            else:
-                cv2.imwrite(f"/shared/liushuai/OmniGibson/{FILENAME}/"+query_name + f'{iter}.png', rgbimg)
-                print(f"save as:{query_name + f'{iter}.png'}")
-    return instancemap, seglist
-
 from collections import OrderedDict
 def donothing(env):
     action=np.zeros(11)
@@ -206,4 +157,33 @@ def toggle_off(robot, obj):
     if dis > 5:
         raise Exception(f"Cannot toggle off! robot is not within a meter of {obj}")
     change_states(obj, 'togglable', 0)
-
+    
+def put_inside(robot, obj1, obj2, dis_threshold=1.0):
+    """
+    put obj1 inside obj2
+    """
+    obj2_pos = obj2.get_position()
+    if obj1 not in robot.inventory:
+        raise Exception(f"No {obj1} in robot's hands!")
+    dis = cal_dis(obj2_pos, robot.get_position())
+    if dis < dis_threshold:
+        obj1.set_position(obj2.get_position())
+        a = robot.inventory.pop()
+    else:
+        raise Exception(f"Cannot Put Inside! robot is not within a meter of {obj2}")
+def put_ontop(robot, obj1, obj2, dis_threshold=1.0):
+    """
+    put obj1 ontop obj2
+    """
+    obj2_pos = obj2.get_position()
+    if obj1 not in robot.inventory:
+        raise Exception(f"No {obj1} in robot's hands!")
+    dis = cal_dis(obj2_pos, robot.get_position())
+    if dis < dis_threshold:
+        p_pos = obj2.get_position()
+        p_pos[2] += 0.5 * obj1.native_bbox[2] + 0.5 * obj2.native_bbox[2]
+        obj1.set_position(p_pos)
+        a = robot.inventory.pop()
+    else:
+        raise Exception(f"Cannot Put Inside! robot is not within a meter of {obj2}")
+    
