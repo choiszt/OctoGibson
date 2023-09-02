@@ -1,0 +1,10 @@
+{
+    "response": {
+        "explain": " As per the given task, the agent has to cook bacon. In the observed objects, we see that the bacon is inside the fridge and the tray. The tray is also inside the fridge. Since the bacon is inside the fridge, the first step is to get the bacon out of the fridge.",
+        "subtask": "\n(1) Move to the fridge.\n(2) Open the fridge.\n(3) Grasp the bacon tray.\n(4) Close the fridge.\n(5) Cook bacon on the stove.",
+        "code": "def act(robot, env, camera):\n    # Subtask 1: Move to the fridge\n    fridge = registry(env,\"fridge_xyejdx_0\")\n    MoveBot(env, robot, fridge, camera)\n    donothing(env)\n    \n    # Subtask 2: Open the fridge\n    open(robot,fridge)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [],
+        "obj_3": []
+    }
+}

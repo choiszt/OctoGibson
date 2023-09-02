@@ -6,17 +6,17 @@ import yaml
 
 # from robot_action import *
 import parse_json
-import query
+import query_new as query
 from imp import reload
 import env_utils_gpt as eu 
 import openai
-
+from gpt_request import gpt_request
 
 def gpt_process(save_path, openai_api_key):
     # main task loop
     
     main_task_flag = False
-    subtask_iter = 1
+    subtask_iter = 2
     gpt_query = query.Query(openai_api_key=openai_api_key)
     while True:
         
@@ -42,16 +42,10 @@ def gpt_process(save_path, openai_api_key):
                 inventory=human_info[2], task=human_info[3] 
             )
             all_messages = [system_message, human_message]
-            
+            content=system_message.content+"\n\n"+human_message.content
             eu.save_input(sub_save_path, human_message.content)
             print("start query")
-            proxy={
-                "http":'127.0.0.0:7890',
-                "https":'127.0.0.0:7890',
-                }
-            openai.proxy=proxy
-            response = gpt_query.llm(all_messages)
-            print(response.content)
+            response=gpt_request(content)
             try:
                 answer = gpt_query.process_ai_message(response)
             except Exception as e:
@@ -90,4 +84,4 @@ def gpt_process(save_path, openai_api_key):
             break
 
 api_key="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"
-gpt_process(save_path="/shared/liushuai/OmniGibson/prompt_files/data",openai_api_key=api_key)
+gpt_process(save_path="/shared/liushuai/OmniGibson/prompt_files/data/cook_bacon",openai_api_key=api_key)

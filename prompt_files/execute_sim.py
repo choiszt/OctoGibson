@@ -14,6 +14,7 @@ from initial_pipeline import *
 import time
 from bddl_verification import *
 import sys
+import bddl
 import verify_taskgoal
 def sim_process(task_name, scene_name, action_path, save_path):
     heading="import os \nimport json\nimport yaml\nimport omnigibson as og\nfrom action_list import * \nfrom action_utils import *\n"
@@ -33,7 +34,7 @@ def sim_process(task_name, scene_name, action_path, save_path):
     camera.focal_length = 10.
     
     # main task loop
-    subtask_iter = 3
+    subtask_iter = 2
     while True:
         
 
@@ -70,13 +71,13 @@ def sim_process(task_name, scene_name, action_path, save_path):
                 break
             else:
                 subtask, code = answer['subtask'], answer['code']
-                with open(f"/shared/liushuai/OmniGibson/prompt_files/data/subtask_{subtask_iter}/action.py", 'w') as f:
+                with open(f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{subtask_iter}/action.py", 'w') as f:
                     f.write(heading)
                     f.write(code)
                 # time.sleep(2)
                 if(subtask_iter!=1):
-                    sys.path.remove(f"/shared/liushuai/OmniGibson/prompt_files/data/subtask_{subtask_iter-1}")
-                sys.path.append(f"/shared/liushuai/OmniGibson/prompt_files/data/subtask_{subtask_iter}")
+                    sys.path.remove(f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{subtask_iter-1}")
+                sys.path.append(f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{subtask_iter}")
                 import action
                 time.sleep(1)
                 try:
@@ -96,7 +97,7 @@ def sim_process(task_name, scene_name, action_path, save_path):
                     break
             
             # subtask verification
-            target_states = answer['target']
+            target_states = answer
             # verify function
             if target_states['inv'] != 'None': #TODO string None
                 value = eu.verify_inv(env, robot, target_states['inv'])
@@ -128,7 +129,7 @@ def sim_process(task_name, scene_name, action_path, save_path):
         ###reset and run the previous code #TODO: NEED TO DELETE subtask_iter python.py *** CHOISZT 8.28
         subtask_iter += 1
         for iter_num in subtask_iter:
-            path=f"/shared/liushuai/OmniGibson/prompt_files/data/subtask_{iter_num}"
+            path=f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{iter_num}"
             with open(os.path.join(path,"feedback.json"))as f:
                 tmp_feedback=json.load(f)
             if tmp_feedback['critic']=='succeed':
@@ -152,4 +153,4 @@ def sim_process(task_name, scene_name, action_path, save_path):
             eu.save_feedback(feedback_path, subtask, code, error, critic, reset, main_succeed)
 
 
-sim_process(task_name="cook_bacon",scene_name="Merom_1_int",action_path="./prompt_files/action.py",save_path="./prompt_files/data")
+sim_process(task_name="cook_bacon",scene_name="Merom_1_int",action_path="./prompt_files/action.py",save_path="./prompt_files/data/cook_bacon")

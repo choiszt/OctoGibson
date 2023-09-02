@@ -340,11 +340,15 @@ class Camera():
 
     def _decomposed(self): #decomposed all the object in the env at the very beginning
         OG_results=[]
+        with open("/shared/liushuai/OmniGibson/prompt_files/excel.json","r")as f:
+            bddl_blacklist=json.load(f)
+        removed_item=bddl_blacklist[self.env.task.activity_name]['removed_item']
         parsed_objects=self.env.task.activity_conditions.parsed_objects
         OG_dict=self.env.task.load_task_metadata()["inst_to_name"] #format in OG E.g: floor.n.01_1 -> floors_hcqtge_0
         for key in parsed_objects.keys():
             for ele in parsed_objects[key]: #E.g:bacon.n.01_1
-                OG_results.append(OG_dict[ele])
+                if ele not in removed_item:
+                    OG_results.append(OG_dict[ele])
 
         return OG_results
 
