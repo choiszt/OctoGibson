@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Take the bacon out from the fridge.\n(2) Put the bacon on the tray.\n(3) Cook the bacon.",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Take the bacon out from the fridge\n    bacon = registry(env, \"bacon_150\")\n    EasyGrasp(robot, bacon)\n    donothing(env)\n",
+    "error": "robot carries more than 1 object!",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

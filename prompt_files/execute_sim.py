@@ -34,9 +34,17 @@ def sim_process(task_name, scene_name, action_path, save_path):
     camera.focal_length = 10.
     
     # main task loop
-    subtask_iter = 2
+    subtask_iter = 1
     while True:
-        
+        if subtask_iter!=1:
+            for iter_num in range(1,subtask_iter):
+                path=f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{iter_num}"
+                with open(os.path.join(path,"feedback.json"))as f:
+                    tmp_feedback=json.load(f)
+                if tmp_feedback['critic']=='succeed':
+                    sys.path.append(path)
+                    import action
+                    action.act(robot,env,camera)        
 
         main_succeed = False
         
@@ -99,17 +107,20 @@ def sim_process(task_name, scene_name, action_path, save_path):
             # subtask verification
             target_states = answer
             # verify function
-            if target_states['inv'] != 'None': #TODO string None
-                value = eu.verify_inv(env, robot, target_states['inv'])
-                print(f"target_inv:{target_states['inv']}")
+            if target_states['inventory'] != 'None': #TODO string None
+                value = eu.verify_inv(env, robot, target_states['inventory'])
+                print(f"target_inv:{target_states['inventory']}")
                 print(f"inventory:{robot.inventory}")
                 if not value: #TODO need to fix the bug
-                    error += f"{target_states['inv']} is not in Inventory.\n"
+                    error += f"{target_states['inventory']} is not in Inventory.\n"
             for obj in target_states['obj_2']:
                 value = eu.verify_obj_2(env,obj[0], obj[1], obj[2])
                 if not value:
                     error += f"State {obj[1]} of object {obj[0]} is not {obj[2]}\n"
-
+            # for obj in target_states['obj_3']:
+            #     value = eu.verify_obj_3(env,obj[0], obj[1], obj[2],obj[3])
+            #     if not value:
+            #         error += f"{obj[0]} is not {obj[1]} {obj[2]}\n"
             if len(error) == 0:
                 subtask = subtask
                 error = error
@@ -127,17 +138,17 @@ def sim_process(task_name, scene_name, action_path, save_path):
         # reset parameters
 
         ###reset and run the previous code #TODO: NEED TO DELETE subtask_iter python.py *** CHOISZT 8.28
+        
+        # for iter_num in range(1,subtask_iter):
+        #     path=f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{iter_num}"
+        #     with open(os.path.join(path,"feedback.json"))as f:
+        #         tmp_feedback=json.load(f)
+        #     if tmp_feedback['critic']=='succeed':
+        #         sys.path.append(path)
+        #         import action
+        #         action.act(robot,env,camera)
+
         subtask_iter += 1
-        for iter_num in subtask_iter:
-            path=f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{iter_num}"
-            with open(os.path.join(path,"feedback.json"))as f:
-                tmp_feedback=json.load(f)
-            if tmp_feedback['critic']=='succeed':
-                sys.path.append(path)
-                import action
-                action.act(robot,env,camera)
-
-
         #TODO choiszt need to add rename
         #verify the whole task
         if critic == 'succeed':

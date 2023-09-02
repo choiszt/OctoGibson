@@ -16,7 +16,7 @@ def gpt_process(save_path, openai_api_key):
     # main task loop
     
     main_task_flag = False
-    subtask_iter = 2
+    subtask_iter = 1
     gpt_query = query.Query(openai_api_key=openai_api_key)
     while True:
         
