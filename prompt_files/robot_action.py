@@ -342,7 +342,10 @@ class Camera():
         OG_results=[]
         with open("/shared/liushuai/OmniGibson/prompt_files/excel.json","r")as f:
             bddl_blacklist=json.load(f)
-        removed_item=bddl_blacklist[self.env.task.activity_name]['removed_item']
+        try:
+            removed_item=bddl_blacklist[self.env.task.activity_name]['removed_item']
+        except:
+            removed_item=[]
         parsed_objects=self.env.task.activity_conditions.parsed_objects
         OG_dict=self.env.task.load_task_metadata()["inst_to_name"] #format in OG E.g: floor.n.01_1 -> floors_hcqtge_0
         for key in parsed_objects.keys():
@@ -386,9 +389,11 @@ class Camera():
                 self.result_json[action]={}
                 continue
             for obj_name in intersect_objects:
-                obj_metadata[obj_name]={}
                 # ability=OBJECT_TAXONOMY.get_abilities(OBJECT_TAXONOMY.get_synset_from_category(obj_name.split("_")[0]))
                 object=self.env.scene.object_registry("name",obj_name)
+                if object== None:
+                    continue
+                obj_metadata[obj_name]={}
                 states={"ability":[(editable_states[sta],int(object.states[sta]._get_value())) for sta in list(object.states.keys()) if sta in editable_states.keys()]}
                 obj_metadata[obj_name].update(states.copy())
                 obj_in_rob=obj_in_robs[obj_name]

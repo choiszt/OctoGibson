@@ -8,7 +8,7 @@ from omnigibson.utils.ui_utils import choose_from_options
 
 from robot_action import *
 # import prompt_files.action as action
-from importlib import reload
+import importlib
 import env_utils_sim as eu 
 from initial_pipeline import *
 import time
@@ -83,15 +83,18 @@ def sim_process(task_name, scene_name, action_path, save_path):
                     f.write(heading)
                     f.write(code)
                 # time.sleep(2)
-                if(subtask_iter!=1):
-                    sys.path.remove(f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{subtask_iter-1}")
-                sys.path.append(f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{subtask_iter}")
-                import action
-                time.sleep(1)
+                # sys.path=list(set(sys.path))
+                # if(subtask_iter!=1):
+                #     for target in range(1,subtask_iter):
+                #         if f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{target}" in list(set(sys.path)):
+                #             sys.path.remove(f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{target}")
+                # sys.path.append(f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{subtask_iter}")
+                # import action
+                # time.sleep(1)
                 try:
-                    reload(action)
+                    module=importlib.import_module(f"prompt_files.data.{task_name}.subtask_{subtask_iter}.action")
                     time.sleep(2)
-                    action.act(robot,env,camera)
+                    module.act(robot,env,camera)
                     print("act...")
                 except Exception as e:
                     error = str(e)
@@ -164,4 +167,4 @@ def sim_process(task_name, scene_name, action_path, save_path):
             eu.save_feedback(feedback_path, subtask, code, error, critic, reset, main_succeed)
 
 
-sim_process(task_name="cook_bacon",scene_name="Merom_1_int",action_path="./prompt_files/action.py",save_path="./prompt_files/data/cook_bacon")
+sim_process(task_name="cook_a_brisket",scene_name="Beechwood_0_int",action_path="./prompt_files/action.py",save_path="./prompt_files/data/cook_a_brisket")
