@@ -9,6 +9,7 @@ from omnigibson.utils.ui_utils import choose_from_options
 from robot_action import *
 # import prompt_files.action as action
 from importlib import reload
+import importlib
 import env_utils_sim as eu 
 from initial_pipeline import *
 import time
@@ -42,9 +43,10 @@ def sim_process(task_name, scene_name, action_path, save_path):
         #         with open(os.path.join(path,"feedback.json"))as f:
         #             tmp_feedback=json.load(f)
         #         if tmp_feedback['critic']=='succeed':
-        #             sys.path.append(path)
-        #             import action
-        #             action.act(robot,env,camera)        
+        #             time.sleep(1)
+        #             module=importlib.import_module(f"prompt_files.data.{task_name}.subtask_{iter_num}.action")
+        #             time.sleep(1)
+        #             module.act(robot,env,camera)        
 
         main_succeed = False
         
@@ -83,16 +85,15 @@ def sim_process(task_name, scene_name, action_path, save_path):
                     f.write(heading)
                     f.write(code)
                 # time.sleep(2)
-                sys.path=list(set(sys.path))
-                if(subtask_iter!=1):
-                    sys.path.remove(f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{subtask_iter-1}")
-                sys.path.append(f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{subtask_iter}")
-                import action
+                # sys.path=list(set(sys.path))
+                # if(subtask_iter!=1):
+                #     sys.path.remove(f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{subtask_iter-1}")
+                # sys.path.append(f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{subtask_iter}")
+                time.sleep(1)
+                params = importlib.import_module(f"prompt_files.data.{task_name}.subtask_{subtask_iter}.action")
                 time.sleep(1)
                 try:
-                    reload(action)
-                    time.sleep(2)
-                    action.act(robot,env,camera)
+                    params.act(robot,env,camera)
                     print("act...")
                 except Exception as e:
                     error = str(e)
