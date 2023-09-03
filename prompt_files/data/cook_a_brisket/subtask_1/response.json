@@ -1,9 +1,9 @@
 {
     "response": {
-        "explain": " Since there are no previous subtasks, actions, or errors, we will need to start from scratch. The task is to cook a brisket. However, the brisket is inside the fridge and the fridge is not open yet, so the first subtask must be opening the fridge.",
-        "subtask": "\n(1) Register the fridge object.\n(2) Open the fridge.\n(3) Obtain the brisket from the fridge.\n(4) Heat the brisket in an oven.",
-        "code": "def act(robot, env, camera):\n    # Registration\n    fridge = registry(env, \"fridge_dszchb_0\")\n    # Subtask 1: Open the fridge\n    open(robot, fridge)\n    donothing(env)\n",
-        "inventory": "None",
+        "explain": " In order to start cooking the brisket, we first need to take it out of the fridge. As no errors or previous code was given, and we don't currently have a brisket in our inventory, we will need to move to the fridge, open it, and then take the brisket.",
+        "subtask": "\n(1) Move robot to the fridge\n(2) Open the fridge\n(3) Grasp the brisket from inside the fridge",
+        "code": "def act(robot,env,camera):\n    fridge = registry(env, \"fridge_dszchb_0\")\n    brisket = registry(env, \"brisket_189\")\n    MoveBot(env, robot, fridge, camera)\n    donothing(env)\n    open(robot, fridge)\n    donothing(env)\n    EasyGrasp(robot, brisket)\n",
+        "inventory": "brisket_189",
         "obj_2": [
             [
                 "fridge_dszchb_0",
@@ -11,6 +11,19 @@
                 "1"
             ]
         ],
-        "obj_3": []
+        "obj_3": [
+            [
+                "brisket_189",
+                "inside",
+                "fridge_dszchb_0",
+                "0"
+            ],
+            [
+                "robot",
+                "nextto",
+                "fridge_dszchb_0",
+                "1"
+            ]
+        ]
     }
 }

@@ -1,22 +1,28 @@
 {
     "response": {
-        "explain": " The execution error received in the previous round was due to the fact that the opening of the fridge failed as it is already opened. This can be seen in the observed objects section where the state openable of fridge_dszchb_0 is 1. Therefore, instead of opening the fridge we need to proceed to the next subtask which is obtaining the brisket.",
-        "subtask": "\n(1) Register the brisket object.\n(2) Move in front of the fridge.\n(3) Obtain the brisket from the fridge.",
-        "code": "def act(robot, env, camera):\n    # Registration\n    brisket = registry(env, \"brisket_189\")\n    # Subtask 1: Move to in front of the fridge\n    fridge = registry(env, \"fridge_dszchb_0\")\n    MoveBot(env, robot, fridge, camera)\n    donothing(env)\n    # Subtask 2: Obtain the brisket from the fridge\n    EasyGrasp(robot, brisket)\n    donothing(env)\n",
-        "inventory": "brisket_189",
-        "obj_2": [],
+        "explain": " The error message indicates that the robot is not within a meter of the brisket, which means it's not close enough to grasp it. Before the robot tries to grasp the brisket, it should first move to the fridge. Apparently, the previous \"MoveBot\" function did not successfully move the robot close enough to the fridge, so the robot was not able to grasp the brisket within the fridge. ",
+        "subtask": "\n(1) Move the robot closer to the fridge\n(2) Open the fridge (if it's not opened yet)\n(3) Grasp the brisket from inside the fridge\n(4) Move the robot closer to the oven\n(5) Put the brisket into the oven\n(6) Cook the brisket in the oven",
+        "code": "def act(robot,env,camera):\n    fridge = registry(env, \"fridge_dszchb_0\")\n    brisket = registry(env, \"brisket_189\")\n    # Subtask 1: Move the robot closer to the fridge\n    MoveBot(env, robot, fridge, camera)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [
+            [
+                "fridge_dszchb_0",
+                "openable",
+                "1"
+            ]
+        ],
         "obj_3": [
             [
-                "[brisket_189",
-                "inside",
+                "robot",
+                "nextto",
                 "fridge_dszchb_0",
-                "0]"
+                "1"
             ],
             [
-                "[brisket_189",
+                "brisket_189",
                 "inside",
-                "robot",
-                "1]"
+                "fridge_dszchb_0",
+                "1"
             ]
         ]
     }

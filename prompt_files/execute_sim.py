@@ -8,7 +8,7 @@ from omnigibson.utils.ui_utils import choose_from_options
 
 from robot_action import *
 # import prompt_files.action as action
-import importlib
+from importlib import reload
 import env_utils_sim as eu 
 from initial_pipeline import *
 import time
@@ -36,15 +36,15 @@ def sim_process(task_name, scene_name, action_path, save_path):
     # main task loop
     subtask_iter = 1
     while True:
-        if subtask_iter!=1:
-            for iter_num in range(1,subtask_iter):
-                path=f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{iter_num}"
-                with open(os.path.join(path,"feedback.json"))as f:
-                    tmp_feedback=json.load(f)
-                if tmp_feedback['critic']=='succeed':
-                    sys.path.append(path)
-                    import action
-                    action.act(robot,env,camera)        
+        # if subtask_iter!=1:
+        #     for iter_num in range(1,subtask_iter):
+        #         path=f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{iter_num}"
+        #         with open(os.path.join(path,"feedback.json"))as f:
+        #             tmp_feedback=json.load(f)
+        #         if tmp_feedback['critic']=='succeed':
+        #             sys.path.append(path)
+        #             import action
+        #             action.act(robot,env,camera)        
 
         main_succeed = False
         
@@ -83,18 +83,16 @@ def sim_process(task_name, scene_name, action_path, save_path):
                     f.write(heading)
                     f.write(code)
                 # time.sleep(2)
-                # sys.path=list(set(sys.path))
-                # if(subtask_iter!=1):
-                #     for target in range(1,subtask_iter):
-                #         if f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{target}" in list(set(sys.path)):
-                #             sys.path.remove(f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{target}")
-                # sys.path.append(f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{subtask_iter}")
-                # import action
-                # time.sleep(1)
+                sys.path=list(set(sys.path))
+                if(subtask_iter!=1):
+                    sys.path.remove(f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{subtask_iter-1}")
+                sys.path.append(f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{subtask_iter}")
+                import action
+                time.sleep(1)
                 try:
-                    module=importlib.import_module(f"prompt_files.data.{task_name}.subtask_{subtask_iter}.action")
+                    reload(action)
                     time.sleep(2)
-                    module.act(robot,env,camera)
+                    action.act(robot,env,camera)
                     print("act...")
                 except Exception as e:
                     error = str(e)
