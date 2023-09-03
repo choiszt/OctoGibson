@@ -36,17 +36,17 @@ def sim_process(task_name, scene_name, action_path, save_path):
     
     # main task loop
     subtask_iter = 1
-    # while True:
-    #     if subtask_iter!=1:
-    #         for iter_num in range(1,subtask_iter):
-    #             path=f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{iter_num}"
-    #             with open(os.path.join(path,"feedback.json"))as f:
-    #                 tmp_feedback=json.load(f)
-    #             if tmp_feedback['critic']=='succeed':
-    #                 time.sleep(1)
-    #                 module=importlib.import_module(f"prompt_files.data.{task_name}.subtask_{iter_num}.action")
-    #                 time.sleep(1)
-    #                 module.act(robot,env,camera)        
+    while True:
+        # if subtask_iter!=1:
+        #     for iter_num in range(1,subtask_iter):
+        #         path=f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{iter_num}"
+        #         with open(os.path.join(path,"feedback.json"))as f:
+        #             tmp_feedback=json.load(f)
+        #         if tmp_feedback['critic']=='succeed':
+        #             time.sleep(1)
+        #             module=importlib.import_module(f"prompt_files.data.{task_name}.subtask_{iter_num}.action")
+        #             time.sleep(1)
+        #             module.act(robot,env,camera)        
 
         main_succeed = False
         

@@ -5,7 +5,7 @@ import omnigibson as og
 from action_list import * 
 from action_utils import *
 def act(robot,env,camera):
-    #Subtask 1: Open the fridge
+    # Subtask 1: Move robot close to the fridge
     fridge = registry(env, "fridge_dszchb_0")
-    open(robot, fridge)
+    MoveBot(env, robot, fridge, camera)
     donothing(env)

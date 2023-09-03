@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot close to the brisket.\n(2) Pick up the brisket.\n(3) Move the robot to the front of the oven.\n(4) Open the oven.\n(5) Put the brisket inside the oven.\n(6) Close the oven.\n(7) Cook the brisket.\n(8) Open the oven.\n(9) Take out the brisket.\n(10) Move the robot back to its original position.",
+    "code": "def act(robot,env,camera):\n    #Subtask 1: Move the robot close to the brisket\n    brisket = registry(env, \"brisket_189\")\n    MoveBot(env, robot, brisket, camera)\n    donothing(env)\n",
+    "error": "None. is not in Inventory.\n",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

@@ -1,17 +1,16 @@
 {
     "response": {
-        "explain": " The task is to cook a brisket which currently inside the fridge. The brisket is placed a bit far from the robot, hence in order to cook it, the robot should first open the fridge and then grasp it. Since the original plan is not given, the process would be initiated from moving the robot closer to the fridge. ",
-        "subtask": "\n(1) Move the Robot to the fridge.\n(2) Open the fridge.\n(3) Grasp the brisket from the fridge.",
-        "code": "def act(robot, env, camera):\n    fridge = registry(env, \"fridge_dszchb_0\")\n    MoveBot(env, robot, fridge, camera)\n    donothing(env)\n",
+        "explain": " Since no steps have been carried out yet, we need to start with the first step towards the task of cooking a brisket. From our observations, we can see that the brisket is inside the fridge which is currently closed (since 'openable' state is 0). So, our first action will be to open the fridge.",
+        "subtask": "\n(1) Open the fridge.\n(2) Move the robot close to the brisket.\n(3) Pick up the brisket.\n(4) Move the robot to the front of the oven.\n(5) Open the oven.\n(6) Put the brisket inside the oven.\n(7) Close the oven.\n(8) Cook the brisket.\n(9) Open the oven.\n(10) Take out the brisket.\n(11) Move the robot back to its original position.",
+        "code": "def act(robot,env,camera):\n    #Subtask 1: Open the fridge\n    fridge = registry(env, \"fridge_dszchb_0\")\n    open(robot, fridge)\n    donothing(env)\n",
         "inventory": "None",
-        "obj_2": [],
-        "obj_3": [
+        "obj_2": [
             [
-                "robot",
-                "nextto",
                 "fridge_dszchb_0",
+                "openable",
                 "1"
             ]
-        ]
+        ],
+        "obj_3": []
     }
 }
