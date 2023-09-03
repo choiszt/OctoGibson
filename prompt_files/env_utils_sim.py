@@ -1,5 +1,3 @@
-
-
 import pkg_resources
 import os
 import json
@@ -65,6 +63,20 @@ def verify_obj_3(env, obj1, states, obj2, value):
     else:
         return True
         # raise Exception(f"Not supported states {states}")
+        
+def verify_main_goal(goal):
+    goal_value = []
+    for g in range(len(goal)):
+        if len(goal[g]) == 3:
+            v = verify_obj_2(goal[g][0], goal[g][1], goal[g][2])
+            goal_value.append(v)
+        elif len(goal[g]) == 4:
+            v = verify_obj_3(goal[g][0], goal[g][1], goal[g][2], goal[g][3])
+            goal_value.append(v)
+    if False in goal_value:
+        return False
+    else:
+        return True
 
 def save_response(path, response):
     responses = {}
@@ -92,5 +104,7 @@ if __name__ == '__main__':
     retry_data_path = f_mkdir(os.path.join(sub_save_path, f"retry_{retry}"))
     save_response(retry_data_path, response={}, error='check')
     save_input(retry_data_path, input='this is a test')
+    
+    
     
     
