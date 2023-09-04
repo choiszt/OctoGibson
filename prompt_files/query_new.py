@@ -55,10 +55,11 @@ class Query:
         else:
             message += f"Observed Relations: None\n"
 
-        if inventory:
-            message += f"Inventory: {inventory}\n"
-        else:
+        if inventory=="[]":
             message += f"Inventory: None\n"
+        elif inventory:
+            message += f"Inventory: {inventory[2:-2]}\n"
+
 
         message += f"Task Goal: {task}\n"
         

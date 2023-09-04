@@ -16,7 +16,7 @@ import time
 from bddl_verification import *
 import sys
 import bddl
-import verify_taskgoal
+from verify_taskgoal import verify_taskgoal
 def sim_process(task_name, scene_name, action_path, save_path):
     heading="import os \nimport json\nimport yaml\nimport omnigibson as og\nfrom action_list import * \nfrom action_utils import *\n"
     config_filename="./prompt_files/bddl_task.yaml"
@@ -35,18 +35,8 @@ def sim_process(task_name, scene_name, action_path, save_path):
     camera.focal_length = 10.
     
     # main task loop
-    subtask_iter = 1
-    while True:
-        # if subtask_iter!=1:
-        #     for iter_num in range(1,subtask_iter):
-        #         path=f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{iter_num}"
-        #         with open(os.path.join(path,"feedback.json"))as f:
-        #             tmp_feedback=json.load(f)
-        #         if tmp_feedback['critic']=='succeed':
-        #             time.sleep(1)
-        #             module=importlib.import_module(f"prompt_files.data.{task_name}.subtask_{iter_num}.action")
-        #             time.sleep(1)
-        #             module.act(robot,env,camera)        
+    subtask_iter = 17
+    while True:     
 
         main_succeed = False
         
@@ -60,6 +50,7 @@ def sim_process(task_name, scene_name, action_path, save_path):
         
         #subtask loop
         while True:  
+            reset = False
             error=''
             # wait for the GPT response
             while True:
@@ -86,7 +77,7 @@ def sim_process(task_name, scene_name, action_path, save_path):
                     f.write(code)
                 # time.sleep(2)
                 sys.path=list(set(sys.path))
-                if(subtask_iter!=1):
+                if(subtask_iter!=17):
                     sys.path.remove(f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{subtask_iter-1}")
                 sys.path.append(f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{subtask_iter}")
                 import action
@@ -98,7 +89,7 @@ def sim_process(task_name, scene_name, action_path, save_path):
                     print("act...")
                 except Exception as e:
                     error = str(e)
-                    # env.reset()
+                    env.reset()
                     robot.inventory=[]
                     subtask = subtask
                     code = code
@@ -135,7 +126,8 @@ def sim_process(task_name, scene_name, action_path, save_path):
                 error = error
                 critic = 'fail'
                 reset = True
-                # env.reset()
+                env.reset()
+                robot.inventory=[]
                 break
 
         # reset parameters
@@ -165,6 +157,19 @@ def sim_process(task_name, scene_name, action_path, save_path):
                 eu.save_feedback(feedback_path, subtask, code, error, critic, reset, main_succeed)
         else:
             eu.save_feedback(feedback_path, subtask, code, error, critic, reset, main_succeed)
+        
+        if reset: #
+            if subtask_iter!=1:
+                for iter_num in range(1,subtask_iter):
+                    path=f"./prompt_files/data/{task_name}/subtask_{iter_num}"
+                    with open(os.path.join(path,"feedback.json"))as f:
+                        tmp_feedback=json.load(f)
+                    if tmp_feedback['critic']=='succeed':
+                        time.sleep(1)
+                        module=importlib.import_module(f"prompt_files.data.{task_name}.subtask_{iter_num}.action")
+                        print(f"prompt_files.data.{task_name}.subtask_{iter_num}.action retrieve")
+                        module.act(robot,env,camera)   
+                        
 
 
-sim_process(task_name="cook_a_brisket",scene_name="Beechwood_0_int",action_path="./prompt_files/action.py",save_path="./prompt_files/data/cook_a_brisket")
+sim_process(task_name="cook_bacon",scene_name="Merom_1_int",action_path="./prompt_files/action.py",save_path="./prompt_files/data/cook_bacon")

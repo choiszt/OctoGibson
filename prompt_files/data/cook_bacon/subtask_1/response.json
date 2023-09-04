@@ -1,29 +1,11 @@
 {
     "response": {
-        "explain": " Since the task goal is to cook bacon and there is no previous action code or execution errors, I will start by planning the subtasks. Currently, the observed objects include a fridge, griddle, stove, tray, and bacon. Notably, the fridge is in a closed state and contains a tray which in turn holds the bacon (['bacon_150', 'inside', 'fray_156'], ['tray_156', 'inside', 'fridge_xyejdx_0']). Therefore, my first task will be to open the fridge to access the tray with the bacon.",
-        "subtask": "\n(1) Open the fridge.\n(2) Take the tray containing bacon out from the fridge.\n(3) Cook the bacon.",
-        "code": "def act(robot, env, camera):\n    # Subtask 1: Open the fridge.\n    fridge = registry(env, \"fridge_xyejdx_0\")\n    open(robot, fridge)\n    donothing(env)\n",
+        "explain": " The task goal is to cook bacon. From the observed objects and relations, we can see that the bacon is inside the fridge, which is currently closed. The first step to cook the bacon is to take it out from the fridge. However, the fridge is not within the robot's reach (distance > 2m). Therefore, the robot needs to move closer to the fridge first.",
+        "subtask": "\n(1) Move the robot to the fridge.\n(2) Open the fridge.\n(3) Grasp the bacon.\n(4) Cook the bacon.",
+        "code": "def act(robot,env,camera):\n    fridge = registry(env,\"fridge_xyejdx_0\")\n    MoveBot(env, robot, fridge, camera)\n    donothing(env)\n",
         "inventory": "None",
-        "obj_2": [
-            [
-                "fridge_xyejdx_0",
-                "openable",
-                "1"
-            ]
-        ],
+        "obj_2": [],
         "obj_3": [
-            [
-                "tray_156",
-                "inside",
-                "fridge_xyejdx_0",
-                "1"
-            ],
-            [
-                "bacon_150",
-                "inside",
-                "tray_156",
-                "1"
-            ],
             [
                 "robot",
                 "nextto",

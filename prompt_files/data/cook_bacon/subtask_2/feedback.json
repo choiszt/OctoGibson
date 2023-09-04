@@ -1,8 +1,8 @@
 {
-    "subtask": "\n(1) Take the tray containing bacon out from the fridge.\n(2) Cook the bacon.",
-    "code": "def act(robot, env, camera):\n    # Subtask 1: Take the tray containing bacon out from the fridge.\n    tray = registry(env, \"tray_156\")\n    EasyGrasp(robot, tray)\n    donothing(env)\n",
-    "error": "State cookable of object bacon_150 is not 0\n",
-    "critic": "fail",
-    "reset": true,
+    "subtask": "\n(1) Move the robot to the fridge.\n(2) Open the fridge.\n(3) Grasp the bacon.\n(4) Cook the bacon.",
+    "code": "def act(robot,env,camera):\n    fridge = registry(env,\"fridge_xyejdx_0\")\n    open(robot, fridge)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
     "main_succeed": false
 }

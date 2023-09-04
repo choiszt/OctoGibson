@@ -1,8 +1,8 @@
 {
-    "subtask": "\n(1) Open the fridge.\n(2) Take the tray containing bacon out from the fridge.\n(3) Cook the bacon.",
-    "code": "def act(robot, env, camera):\n    # Subtask 1: Open the fridge.\n    fridge = registry(env, \"fridge_xyejdx_0\")\n    open(robot, fridge)\n    donothing(env)\n",
-    "error": "State openable of object fridge_xyejdx_0 is not 1\n",
-    "critic": "fail",
-    "reset": true,
+    "subtask": "\n(1) Move the robot to the fridge.\n(2) Open the fridge.\n(3) Grasp the bacon.\n(4) Cook the bacon.",
+    "code": "def act(robot,env,camera):\n    fridge = registry(env,\"fridge_xyejdx_0\")\n    MoveBot(env, robot, fridge, camera)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
     "main_succeed": false
 }

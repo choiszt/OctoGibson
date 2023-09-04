@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register the tray and stove.\n(2) Move the robot to the tray.\n(3) Grasp the tray.\n(4) Move the robot to the stove.\n(5) Put the tray on the stove.\n(6) Put the bacon on the tray.\n(7) Cook the bacon.",
+    "code": "def act(robot,env,camera):\n    tray = registry(env,\"tray_156\")\n    MoveBot(env, robot, tray, camera)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

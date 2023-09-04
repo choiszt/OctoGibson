@@ -1,0 +1,29 @@
+{
+    "response": {
+        "explain": " The previous action code successfully moved the robot to the tray. The next step is to grasp the tray. ",
+        "subtask": "\n(1) Register the tray.\n(2) Move the robot to the tray.\n(3) Grasp the tray.\n(4) Move the robot back to the stove.\n(5) Put the tray on the stove.\n(6) Register the bacon.\n(7) Open the fridge.\n(8) Grasp the bacon.\n(9) Close the fridge.\n(10) Put the bacon on the tray.\n(11) Cook the bacon.",
+        "code": "def act(robot,env,camera):\n    tray = registry(env,\"tray_156\")\n    EasyGrasp(robot, tray)\n    donothing(env)\n",
+        "inventory": "tray_156",
+        "obj_2": [],
+        "obj_3": [
+            [
+                "robot",
+                "nextto",
+                "tray_156",
+                "1"
+            ],
+            [
+                "tray_156",
+                "inside",
+                "fridge_xyejdx_0",
+                "0"
+            ],
+            [
+                "robot",
+                "inside",
+                "fridge_xyejdx_0",
+                "1"
+            ]
+        ]
+    }
+}

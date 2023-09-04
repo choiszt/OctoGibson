@@ -10,7 +10,8 @@ import query_new as query
 from imp import reload
 import env_utils_gpt as eu 
 import openai
-from gpt_request import gpt_request
+# from gpt_request import gpt_request
+from gpt_request_azure import gpt_request
 
 def gpt_process(save_path, openai_api_key):
     # main task loop
@@ -18,8 +19,11 @@ def gpt_process(save_path, openai_api_key):
     main_task_flag = False
     subtask_iter = 1
     gpt_query = query.Query(openai_api_key=openai_api_key)
+    for i in range(1, 15):
+        eu.f_mkdir(os.path.join(save_path, f"subtask_{i}"))
+
     while True:
-        
+
         # make the directory
         sub_save_path = eu.f_mkdir(os.path.join(save_path, f"subtask_{subtask_iter}"))
         
@@ -84,4 +88,4 @@ def gpt_process(save_path, openai_api_key):
             break
 
 api_key="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"
-gpt_process(save_path="/shared/liushuai/OmniGibson/prompt_files/data/cook_a_brisket",openai_api_key=api_key)
+gpt_process(save_path="/shared/liushuai/OmniGibson/prompt_files/data/cook_bacon",openai_api_key=api_key)
