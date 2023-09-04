@@ -26,7 +26,7 @@ def verify_inv(env, robot, states):
 def verify_obj_2(env,obj,states, value):
     states_status=reversed_unary_states[states] # CLASS object_states
     registered_obj=env.scene.object_registry("name", obj)
-    return registered_obj.states[states_status]._get_value()==value
+    return registered_obj.states[states_status]._get_value()==int(value)
     
 
 def verify_obj_3(env, obj1, states, obj2, value):
@@ -46,7 +46,7 @@ def verify_obj_3(env, obj1, states, obj2, value):
             v = 1
         else:
             v = 0
-        return v == value
+        return v == int(value)
     elif states == 'ontop':
         """
         obj1 ontop obj2
@@ -59,7 +59,7 @@ def verify_obj_3(env, obj1, states, obj2, value):
             v = 1
         else:
             v = 0
-        return v == value
+        return v == int(value)
     else:
         return True
         # raise Exception(f"Not supported states {states}")
