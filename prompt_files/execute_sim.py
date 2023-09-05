@@ -182,4 +182,4 @@ def sim_process(task_name, scene_name, action_path, save_path):
                         
 
 
-sim_process(task_name="cook_a_duck",scene_name="Ihlen_1_int",action_path="./prompt_files/action.py",save_path="./prompt_files/data/cook_a_duck")
+sim_process(task_name="cook_a_frozen_pie",scene_name="Beechwood_0_int",action_path="./prompt_files/action.py",save_path=f"./prompt_files/data/cook_a_frozen_pie")

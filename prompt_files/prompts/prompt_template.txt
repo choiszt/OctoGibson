@@ -41,7 +41,7 @@ Execution Error: ...
 I will give you the following information for you to make a one-step action decision toward the final goal.
 (1) Observed Objects: contains object names, its editable states with the corresponding value of the states and distance measuring the centroid of Agent towards the object. It denotes with (object, ([state1, value1], [state2, value2]), distance).e.g. (fridge, (['openable', 1]), 1.8) means the object fridge can be opened, and it is currently opened and the distance is a float value measured in meters.
 (2) Observed Relations: a scene relation graph triplet denotes with (object, relation, object), e.g. (apple, ontop, desk). You are termed with Agent in this context.
-(3) You should pay attention to the relation graph which is essential your you to understand the status of the environment.
+(3) You should pay attention to the relation graph which is essential for you to understand the status of the environment.
 (3) The observation may not include all the information about the objects you need to interact with, the objects may be hidden inside other objects, so feel free to explore the reasonable place they might appear.
 (4) The Inventory contains a stack-like structure, you could put things inside. But remember first in last out.  It contains all the things the robot has in its hand. If nothing is in Inventory, denoted with None.
 (5) The Task Goal contains instructions and the Agent finished state for the entire goal.
