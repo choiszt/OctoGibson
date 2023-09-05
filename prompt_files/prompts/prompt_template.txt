@@ -39,7 +39,7 @@ Previous Action Code: ...
 Execution Error: ...
 
 I will give you the following information for you to make a one-step action decision toward the final goal.
-(1) Observed Objects: contains object names, its editable states with the corresponding value of the states and distance measuring the centroid of Agent towards the object. It denotes with (object, ([state1, value1], [state2, value2]), distance).e.g. (fridge, (['openable', 1]), 1.8) means the object fridge can be opened, and it is currently opened and the distance is a float value measured in meters.
+(1) Observed Objects: contains object names, its editable states with the corresponding value of the states. It denotes with (object, ([state1, value1], [state2, value2])).e.g. (fridge, (['openable', 1])) means the object fridge can be opened, and it is currently opened.
 (2) Observed Relations: a scene relation graph triplet denotes with (object, relation, object), e.g. (apple, ontop, desk). You are termed with Agent in this context.
 (3) You should pay attention to the relation graph which is essential for you to understand the status of the environment.
 (3) The observation may not include all the information about the objects you need to interact with, the objects may be hidden inside other objects, so feel free to explore the reasonable place they might appear.
@@ -63,11 +63,9 @@ Code:
 (6) Each time you take an action in the provided action list, after you take the action, you have to use the function 'donothing' before you take another action in the action list. So the block should look like "One action in the action list + donothing". Remember one action in your plan may contain multiple actions in the action list, you have to use the block for each action in the action list.
 (7) Registry every object you might need to use first.
 (8) You should only output the action code to finish your very next subtask. Remember not to generate the entire action code unless it is the final step.
-(9) Do not generate any annotations inside the code block.
-(10) You can have more than one things in Inventory.
+(9) You can have more than one things in Inventory.
 
 Also please notice that registration should not be considered as one subtask. Make sure that your subtask planning should start with real actions like "open the door" while keeping the object registry as the default action.
-Please make sure no code annotations is generated in the code.
 
 Target States: A state to check the completeness of the subtask. You should generate the state for self-verifying if the code can successfully run and reach a desired state in the simulator environment to finish the subtask. The state should be in the format
 (1) Inventory (describe what you could have in Inventory in this state): object
