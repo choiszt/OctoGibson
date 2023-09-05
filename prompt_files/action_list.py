@@ -34,8 +34,8 @@ def EasyGrasp(robot, obj, dis_threshold=2.0):
         robot_pos[2] += robot.aabb_center[2]
         robot_pos[2] -=0.2
         obj.set_position(robot_pos)
-        if len(robot.inventory)>=1:
-            raise Exception("robot carries more than 1 object!")
+        # if len(robot.inventory)>=1:
+        #     raise Exception("robot carries more than 1 object!")
         robot.inventory.append(obj._name)
         print(f"now we have:{robot.inventory}")
     else:
@@ -47,8 +47,8 @@ def MoveBot(env, robot,obj,camera):
     Update_camera_pos(camera,robot,obj)
     if robot.inventory:
         # relationship between name and variable.
-        obj = robot.inventory[0]
-        Hold(env, robot, obj)
+        for obj in robot.inventory: 
+            Hold(env, robot, obj)
 
 def EasyDrop(robot,obj1, obj2, dis_threshold=2.0):  
     # Drop the objects within robot's hands
@@ -60,8 +60,8 @@ def EasyDrop(robot,obj1, obj2, dis_threshold=2.0):
     obj1.set_position(target_pos)
     if dis < dis_threshold:
         obj1.set_position(target_pos)
-        a = robot.inventory.pop()
-        print(f"the robot throw {a},now we have:{robot.inventory}")
+        robot.inventory.remove(obj1._name)
+        print(f"the robot throw {obj1._name},now we have:{robot.inventory}")
     else:
         raise Exception(f"Cannot Drop! robot is not within two meters of {obj2}")
 
@@ -166,7 +166,8 @@ def put_inside(robot, obj1, obj2, dis_threshold=2.0):
     dis = cal_dis(obj2_pos, robot.get_position())
     if dis < dis_threshold:
         obj1.set_position(obj2.get_position())
-        a = robot.inventory.pop()
+        robot.inventory.remove(obj1._name)
+        print(f"the robot put {obj1._name} inside {obj2._name},now we have:{robot.inventory}")
     else:
         raise Exception(f"Cannot Put Inside! robot is not within two meters of {obj2}")
 def put_ontop(robot, obj1, obj2, dis_threshold=2.0):
@@ -179,7 +180,8 @@ def put_ontop(robot, obj1, obj2, dis_threshold=2.0):
         p_pos = obj2.get_position()
         p_pos[2] += 0.5 * obj1.native_bbox[2] + 0.5 * obj2.native_bbox[2]
         obj1.set_position(p_pos)
-        a = robot.inventory.pop()
+        robot.inventory.remove(obj1._name)
+        print(f"the robot put {obj1._name} ontop {obj2._name},now we have:{robot.inventory}")
     else:
         raise Exception(f"Cannot Put Ontop! robot is not within two meters of {obj2}")
     

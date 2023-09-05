@@ -1,0 +1,28 @@
+{
+    "response": {
+        "explain": " The previous action code successfully registered the stove and turned it on. There was no execution error. The next step is to put the bacon on the griddle to cook it. ",
+        "subtask": "\n(1) Register the griddle.\n(2) Put the bacon on the griddle.\n(3) Cook the bacon.",
+        "code": "def act(robot,env,camera):\n    griddle = registry(env,\"griddle_157\")\n    put_ontop(robot, \"bacon_150\", griddle)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [
+            [
+                "griddle_157",
+                "heatable",
+                "1"
+            ],
+            [
+                "bacon_150",
+                "cookable",
+                "1"
+            ]
+        ],
+        "obj_3": [
+            [
+                "bacon_150",
+                "ontop",
+                "griddle_157",
+                "1"
+            ]
+        ]
+    }
+}

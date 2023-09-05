@@ -1,6 +1,6 @@
 {
-    "subtask": "\n(1) Move the robot to the stove.\n(2) Put the tray on the stove.\n(3) Move the robot to the fridge.\n(4) Open the fridge.\n(5) Grasp the bacon from the fridge.\n(6) Put the bacon on the tray.\n(7) Cook the bacon.",
-    "code": "def act(robot,env,camera):\n    stove = registry(env,\"stove_rgpphy_0\")\n    MoveBot(env, robot, stove, camera)\n    donothing(env)\n",
+    "subtask": "\n(1) Open the fridge.\n(2) Take the bacon out of the fridge.\n(3) Cook the bacon on the stove.",
+    "code": "def act(robot,env,camera):\n    bacon = registry(env,\"bacon_150\")\n    EasyGrasp(robot, bacon)\n    donothing(env)\n",
     "error": "",
     "critic": "succeed",
     "reset": false,

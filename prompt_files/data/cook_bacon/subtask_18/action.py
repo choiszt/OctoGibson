@@ -5,8 +5,9 @@ import omnigibson as og
 from action_list import * 
 from action_utils import *
 def act(robot,env,camera):
-    stove = registry(env,"stove_rgpphy_0")
-    MoveBot(env, robot, stove, camera)
+    fridge = registry(env,"fridge_xyejdx_0")
+    MoveBot(env, robot, fridge, camera)
     donothing(env)
-    put_ontop(robot, tray, stove)
+    tray = registry(env,"tray_156")
+    put_ontop(robot, tray, fridge)
     donothing(env)

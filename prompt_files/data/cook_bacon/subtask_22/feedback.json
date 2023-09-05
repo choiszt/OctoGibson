@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register the griddle.\n(2) Put the bacon on the griddle.\n(3) Cook the bacon.",
+    "code": "def act(robot,env,camera):\n    griddle = registry(env,\"griddle_157\")\n    bacon = registry(env,\"bacon_150\")\n    put_ontop(robot, bacon, griddle)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

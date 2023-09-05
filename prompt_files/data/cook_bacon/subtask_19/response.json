@@ -1,0 +1,23 @@
+{
+    "response": {
+        "explain": " The previous action code successfully moved the robot to the fridge and put the tray on top of the fridge. The robot currently has bacon in its inventory. The next step is to cook the bacon. However, the bacon needs to be placed on the griddle which is on the stove before it can be cooked. ",
+        "subtask": "\n(1) Move to the stove.\n(2) Put the bacon on the griddle.",
+        "code": "def act(robot,env,camera):\n    stove = registry(env,\"stove_rgpphy_0\")\n    MoveBot(env, robot, stove, camera)\n    donothing(env)\n    griddle = registry(env,\"griddle_157\")\n    put_ontop(robot, bacon_150, griddle)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [],
+        "obj_3": [
+            [
+                "robot",
+                "nextto",
+                "stove_rgpphy_0",
+                "1"
+            ],
+            [
+                "bacon_150",
+                "ontop",
+                "griddle_157",
+                "1"
+            ]
+        ]
+    }
+}

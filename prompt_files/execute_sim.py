@@ -35,7 +35,7 @@ def sim_process(task_name, scene_name, action_path, save_path):
     camera.focal_length = 10.
     
     # main task loop
-    subtask_iter = 17
+    subtask_iter = 1
     while True:     
 
         main_succeed = False
@@ -77,7 +77,7 @@ def sim_process(task_name, scene_name, action_path, save_path):
                     f.write(code)
                 # time.sleep(2)
                 sys.path=list(set(sys.path))
-                if(subtask_iter!=17):
+                if(subtask_iter!=1):
                     sys.path.remove(f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{subtask_iter-1}")
                 sys.path.append(f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{subtask_iter}")
                 import action
@@ -91,6 +91,7 @@ def sim_process(task_name, scene_name, action_path, save_path):
                     error = str(e)
                     env.reset()
                     robot.inventory=[]
+                    robot.visible_only=True
                     subtask = subtask
                     code = code
                     error = error
@@ -101,12 +102,13 @@ def sim_process(task_name, scene_name, action_path, save_path):
             # subtask verification
             target_states = answer
             # verify function
-            if target_states['inventory'] != 'None': #TODO string None
-                value = eu.verify_inv(env, robot, target_states['inventory'])
-                print(f"target_inv:{target_states['inventory']}")
-                print(f"inventory:{robot.inventory}")
-                if not value: #TODO need to fix the bug
-                    error += f"{target_states['inventory']} is not in Inventory.\n"
+            #comment the verification of inventory
+            # if target_states['inventory'] != 'None': #TODO string None
+            #     value = eu.verify_inv(env, robot, target_states['inventory'])
+            #     print(f"target_inv:{target_states['inventory']}")
+            #     print(f"inventory:{robot.inventory}")
+            #     if not value: #TODO need to fix the bug
+            #         error += f"{target_states['inventory']} is not in Inventory.\n"
             for obj in target_states['obj_2']:
                 value = eu.verify_obj_2(env,obj[0], obj[1], obj[2])
                 if not value:

@@ -1,8 +1,8 @@
 {
-    "subtask": "\n(1) Register the tray.\n(2) Check if the tray is reachable. If not, move the stove.\n(3) Grasp the tray.\n(4) Move the robot to the stove.\n(5) Put the tray on the stove.\n(6) Put the bacon on the tray.\n(7) Cook the bacon.",
-    "code": "def act(robot,env,camera):\n    tray = registry(env,\"tray_156\")\n    if tray.distance > 2:\n        stove = registry(env,\"stove_rgpphy_0\")\n        MoveBot(env, robot, stove, camera)\n        donothing(env)\n    EasyGrasp(robot, tray)\n",
-    "error": "'DatasetObject' object has no attribute 'distance'",
-    "critic": "fail",
-    "reset": true,
+    "subtask": "\n(1) Move to the stove.\n(2) Turn on the stove.\n(3) Put the tray with the bacon on the stove.\n(4) Cook the bacon on the stove.",
+    "code": "def act(robot,env,camera):\n    stove = registry(env,\"stove_rgpphy_0\")\n    toggle_on(robot, stove)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
     "main_succeed": false
 }

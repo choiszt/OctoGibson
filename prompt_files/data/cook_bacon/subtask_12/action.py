@@ -6,4 +6,5 @@ from action_list import *
 from action_utils import *
 def act(robot,env,camera):
     tray = registry(env,"tray_156")
-    MoveBot(env, robot, tray, camera)
+    EasyGrasp(robot, tray)
+    donothing(env)

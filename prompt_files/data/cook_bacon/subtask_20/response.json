@@ -1,0 +1,31 @@
+{
+    "response": {
+        "explain": " The error occurred because the object 'bacon_150' was not registered before being used in the action function. The object needs to be registered first before it can be used in the action function.",
+        "subtask": "\n(1) Register the bacon.\n(2) Move to the stove.\n(3) Put the bacon on the griddle.\n(4) Cook the bacon.",
+        "code": "def act(robot,env,camera):\n    bacon = registry(env,\"bacon_150\")\n",
+        "inventory": "bacon_150",
+        "obj_2": [
+            [
+                "bacon_150",
+                "heatable",
+                "0"
+            ],
+            [
+                "bacon_150",
+                "freezable",
+                "0"
+            ],
+            [
+                "bacon_150",
+                "burnable",
+                "0"
+            ],
+            [
+                "bacon_150",
+                "cookable",
+                "0"
+            ]
+        ],
+        "obj_3": []
+    }
+}

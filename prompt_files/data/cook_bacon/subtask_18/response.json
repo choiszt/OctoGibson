@@ -1,15 +1,27 @@
 {
     "response": {
-        "explain": " The previous action code successfully grasped the tray. The next step is to move the robot back to the stove and put the tray on the stove.",
-        "subtask": "\n(1) Register the stove.\n(2) Move the robot to the stove.\n(3) Put the tray on the stove.\n(4) Register the bacon.\n(5) Open the fridge.\n(6) Grasp the bacon.\n(7) Close the fridge.\n(8) Put the bacon on the tray.\n(9) Cook the bacon.",
-        "code": "def act(robot,env,camera):\n    stove = registry(env,\"stove_rgpphy_0\")\n    MoveBot(env, robot, stove, camera)\n    donothing(env)\n    put_ontop(robot, tray, stove)\n    donothing(env)\n",
-        "inventory": "tray_156",
+        "explain": " The previous action code has successfully moved the robot to the tray and grasped the tray. The tray and bacon are now in the robot's inventory. The next step is to move the robot to a location that is not the stove and put the tray down.",
+        "subtask": "\n(1) Move to a location that is not the stove.\n(2) Put the tray down.",
+        "code": "def act(robot,env,camera):\n    fridge = registry(env,\"fridge_xyejdx_0\")\n    MoveBot(env, robot, fridge, camera)\n    donothing(env)\n    tray = registry(env,\"tray_156\")\n    put_ontop(robot, tray, fridge)\n    donothing(env)\n",
+        "inventory": "bacon_150",
         "obj_2": [],
         "obj_3": [
             [
                 "tray_156",
+                "nextto",
+                "fridge_xyejdx_0",
+                "1"
+            ],
+            [
+                "tray_156",
                 "ontop",
-                "stove_rgpphy_0",
+                "fridge_xyejdx_0",
+                "1"
+            ],
+            [
+                "robot",
+                "nextto",
+                "fridge_xyejdx_0",
                 "1"
             ]
         ]

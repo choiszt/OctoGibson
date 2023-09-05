@@ -1,15 +1,27 @@
 {
     "response": {
-        "explain": " The previous action code failed because it tried to access a non-existent 'distance' attribute of the 'tray' object. The 'distance' attribute is not a part of the 'DatasetObject' class, hence the error. The 'distance' attribute is provided in the 'Observed Objects' information, not in the object itself. Therefore, we need to revise the subtasks to avoid this error.",
-        "subtask": "\n(1) Register the stove.\n(2) Move the robot to the stove.\n(3) Register the tray.\n(4) Grasp the tray.\n(5) Put the tray on the stove.\n(6) Put the bacon on the tray.\n(7) Cook the bacon.",
-        "code": "def act(robot,env,camera):\n    stove = registry(env,\"stove_rgpphy_0\")\n    MoveBot(env, robot, stove, camera)\n    donothing(env)\n",
-        "inventory": "bacon_150",
-        "obj_2": [],
+        "explain": " The previous action code successfully turned on the stove. The next step is to put the tray with the bacon on the stove. However, the tray with the bacon is already in the robot's inventory, so we don't need to move or grasp it. We can directly put it on the stove.",
+        "subtask": "\n(1) Move to the stove.\n(2) Turn on the stove.\n(3) Put the tray with the bacon on the stove.\n(4) Cook the bacon on the stove.",
+        "code": "def act(robot,env,camera):\n    stove = registry(env,\"stove_rgpphy_0\")\n    tray = registry(env,\"tray_156\")\n    put_ontop(robot, tray, stove)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [
+            [
+                "stove_rgpphy_0",
+                "togglable",
+                "1"
+            ]
+        ],
         "obj_3": [
             [
-                "robot",
-                "nextto",
+                "tray_156",
+                "ontop",
                 "stove_rgpphy_0",
+                "1"
+            ],
+            [
+                "bacon_150",
+                "inside",
+                "tray_156",
                 "1"
             ]
         ]

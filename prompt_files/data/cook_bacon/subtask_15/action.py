@@ -6,5 +6,6 @@ from action_list import *
 from action_utils import *
 def act(robot,env,camera):
     stove = registry(env,"stove_rgpphy_0")
-    MoveBot(env, robot, stove, camera)
+    tray = registry(env,"tray_156")
+    put_ontop(robot, tray, stove)
     donothing(env)
