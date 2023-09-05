@@ -1,16 +1,23 @@
 {
     "response": {
-        "explain": " The previous action code successfully executed the subtask of taking out the cheese tart from the fridge. The robot now has the cheese tart in its inventory. The next step in the original subtasks is to move the robot to the oven. However, the oven is already within the robot's interaction range (1.71m), so there is no need to move the robot. The next action should be to open the oven.",
-        "subtask": "\n(1) Move the robot to the fridge.\n(2) Open the fridge.\n(3) Take out the cheese tart from the fridge.\n(4) Open the oven.\n(5) Put the cheese tart into the oven.\n(6) Cook the cheese tart.",
-        "code": "def act(robot,env,camera):\n    # Subtask 4: Open the oven\n    oven = registry(env, \"oven_wuinhm_0\")\n    open(robot, oven)\n    donothing(env)\n",
+        "explain": " The previous action code successfully opened the fridge as planned in the subtask. There was no execution error. The next step is to take the cheese tart from the fridge.",
+        "subtask": "\n(1) Move the robot to the fridge\n(2) Open the fridge\n(3) Take the cheese tart from the fridge\n(4) Close the fridge\n(5) Open the oven\n(6) Put the cheese tart in the oven\n(7) Close the oven\n(8) Turn on the oven to cook the cheese tart",
+        "code": "def act(robot,env,camera):\n    cheese_tart = registry(env,\"cheese_tart_188\")\n    EasyGrasp(robot, cheese_tart)\n    donothing(env)\n",
         "inventory": "cheese_tart_188",
-        "obj_2": [
+        "obj_2": [],
+        "obj_3": [
             [
-                "oven_wuinhm_0",
-                "openable",
+                "cheese_tart_188",
+                "inside",
+                "fridge_dszchb_0",
+                "0"
+            ],
+            [
+                "cheese_tart_188",
+                "inside",
+                "robot",
                 "1"
             ]
-        ],
-        "obj_3": []
+        ]
     }
 }

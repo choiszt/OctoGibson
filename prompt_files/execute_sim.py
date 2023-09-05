@@ -179,6 +179,9 @@ def sim_process(task_name, scene_name, action_path, save_path):
                         module=importlib.import_module(f"prompt_files.data.{task_name}.subtask_{iter_num}.action")
                         print(f"prompt_files.data.{task_name}.subtask_{iter_num}.action retrieve")
                         module.act(robot,env,camera)   
+        if subtask_iter>15:
+            print(f"already attempt {subtask_iter} time, it is too long!")
+            break
                         
 
 

@@ -1,15 +1,21 @@
 {
     "response": {
-        "explain": " The previous action code has successfully executed the subtask of taking out the cheese tart from the oven. The robot now has the cheese tart in its inventory. The next step is to move the robot to the fridge.",
-        "subtask": "\n(1) Move the robot to the fridge.\n(2) Open the fridge.\n(3) Put the cheese tart inside the fridge to freeze it.\n(4) Take out the frozen cheese tart from the fridge.\n(5) Put the frozen cheese tart back into the oven.\n(6) Toggle on the oven to start cooking.",
-        "code": "def act(robot,env,camera):\n    # Subtask 1: Move the robot to the fridge\n    fridge = registry(env, \"fridge_dszchb_0\")\n    MoveBot(env, robot, fridge, camera)\n    donothing(env)\n",
-        "inventory": "cheese_tart_188",
-        "obj_2": [],
+        "explain": " The previous action was to close the oven, which was successful as there was no execution error. The next step in the original subtasks is to turn on the oven to cook the cheese tart. However, the cheese tart is already inside the oven, so we can proceed with this step.",
+        "subtask": "\n(1) Move the robot to the oven\n(2) Open the oven\n(3) Put the cheese tart in the oven\n(4) Close the oven\n(5) Turn on the oven to cook the cheese tart",
+        "code": "def act(robot,env,camera):\n    oven = registry(env,\"oven_wuinhm_0\")\n    toggle_on(robot, oven)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [
+            [
+                "oven_wuinhm_0",
+                "togglable",
+                "1"
+            ]
+        ],
         "obj_3": [
             [
-                "robot",
-                "nextto",
-                "fridge_dszchb_0",
+                "cheese_tart_188",
+                "inside",
+                "oven_wuinhm_0",
                 "1"
             ]
         ]

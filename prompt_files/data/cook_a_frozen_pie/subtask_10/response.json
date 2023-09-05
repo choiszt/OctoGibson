@@ -1,9 +1,9 @@
 {
     "response": {
-        "explain": " The previous action code successfully moved the robot to the fridge. The next step is to open the fridge. There is no error in the execution of the previous action code.",
-        "subtask": "\n(1) Move the robot to the fridge.\n(2) Open the fridge.\n(3) Put the cheese tart inside the fridge to freeze it.\n(4) Take out the frozen cheese tart from the fridge.\n(5) Put the frozen cheese tart back into the oven.\n(6) Toggle on the oven to start cooking.",
-        "code": "def act(robot,env,camera):\n    # Subtask 2: Open the fridge\n    fridge = registry(env, \"fridge_dszchb_0\")\n    open(robot, fridge)\n    donothing(env)\n",
-        "inventory": "cheese_tart_188",
+        "explain": " The previous action was to turn on the oven, which was successful as there was no execution error. However, the cheese tart is not yet inside the oven, so the oven should not have been turned on at this stage. The original subtasks are incorrect as they do not include the step to freeze the cheese tart before cooking it. ",
+        "subtask": "\n(1) Move the robot to the fridge\n(2) Open the fridge\n(3) Grasp the cheese tart\n(4) Put the cheese tart inside the fridge to freeze it\n(5) Close the fridge\n(6) Move the robot to the oven\n(7) Open the oven\n(8) Grasp the frozen cheese tart from the fridge\n(9) Put the frozen cheese tart in the oven\n(10) Close the oven\n(11) Turn on the oven to cook the cheese tart",
+        "code": "def act(robot,env,camera):\n    fridge = registry(env,\"fridge_dszchb_0\")\n    open(robot, fridge)\n    donothing(env)\n",
+        "inventory": "None",
         "obj_2": [
             [
                 "fridge_dszchb_0",

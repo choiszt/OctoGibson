@@ -1,6 +1,86 @@
 {
     "task": "cook_a_frozen_pie",
     "0_detect_surroundings": {
+        "fridge_dszchb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.4476574580727197,
+                "theta_deg": -26.082381320521137,
+                "phi_deg": 66.2766655431344
+            },
+            "orientation_in_bot": [
+                0.011361865549966032,
+                0.018866949494435317,
+                0.5254267103226816,
+                0.8505537715556164
+            ],
+            "position_in_world": [
+                -6.848034381866455,
+                -1.78300940990448,
+                0.8840970396995544
+            ],
+            "bot_in_world": [
+                -6.8474860191345215,
+                -0.4815577566623688,
+                0.250113308429718
+            ],
+            "path": "./prompt_files/data/cook_a_frozen_pie/subtask_3/seg_instance0_detect_surroundings.png"
+        },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.7082315900521754,
+                "theta_deg": 8.114042757705398,
+                "phi_deg": 69.71615325223439
+            },
+            "orientation_in_bot": [
+                0.011361865549966032,
+                0.018866949494435317,
+                0.5254267103226816,
+                0.8505537715556164
+            ],
+            "position_in_world": [
+                -5.947904109954834,
+                -1.7742741107940674,
+                0.911696195602417
+            ],
+            "bot_in_world": [
+                -6.8474860191345215,
+                -0.4815577566623688,
+                0.250113308429718
+            ],
+            "path": "./prompt_files/data/cook_a_frozen_pie/subtask_3/seg_instance0_detect_surroundings.png"
+        },
         "cheese_tart_188": {
             "ability": [
                 [
@@ -21,15 +101,15 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.5016780418771525,
-                "theta_deg": -22.41480613550236,
-                "phi_deg": 69.65084563571064
+                "rho": 1.5006889868479234,
+                "theta_deg": -22.211095253621423,
+                "phi_deg": 69.64317132255628
             },
             "orientation_in_bot": [
-                0.003655886876200653,
-                0.025096496345298994,
-                0.17408953129963334,
-                0.9844031874461869
+                0.0038037353308135228,
+                0.025119302292327724,
+                0.17564486908464824,
+                0.9841257197198519
             ],
             "position_in_world": [
                 -6.751186370849609,
@@ -37,107 +117,107 @@
                 0.8287374377250671
             ],
             "bot_in_world": [
-                -6.846851825714111,
-                -0.48038315773010254,
-                0.25024735927581787
-            ],
-            "path": "./prompt_files/data/cook_a_frozen_pie/subtask_3/seg_instance0_detect_surroundings.png"
-        },
-        "oven_wuinhm_0": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.7087350466561473,
-                "theta_deg": 7.898864281819212,
-                "phi_deg": 69.72566521481936
-            },
-            "orientation_in_bot": [
-                0.011211252621456278,
-                0.018902514725798382,
-                0.5240829115391106,
-                0.8513836412478147
-            ],
-            "position_in_world": [
-                -5.947904109954834,
-                -1.7742741107940674,
-                0.911696195602417
-            ],
-            "bot_in_world": [
-                -6.846851825714111,
-                -0.48038315773010254,
-                0.25024735927581787
-            ],
-            "path": "./prompt_files/data/cook_a_frozen_pie/subtask_3/seg_instance0_detect_surroundings.png"
-        },
-        "fridge_dszchb_0": {
-            "ability": [
-                [
-                    "openable",
-                    1
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.4486552490199172,
-                "theta_deg": -26.283815060190918,
-                "phi_deg": 66.28697416372293
-            },
-            "orientation_in_bot": [
-                0.011211252621456278,
-                0.018902514725798382,
-                0.5240829115391106,
-                0.8513836412478147
-            ],
-            "position_in_world": [
-                -6.848034381866455,
-                -1.78300940990448,
-                0.8840970396995544
-            ],
-            "bot_in_world": [
-                -6.846851825714111,
-                -0.48038315773010254,
-                0.25024735927581787
+                -6.8474860191345215,
+                -0.4815577566623688,
+                0.250113308429718
             ],
             "path": "./prompt_files/data/cook_a_frozen_pie/subtask_3/seg_instance0_detect_surroundings.png"
         },
         "scene_graph": [
             [
-                "cheese_tart_188",
-                "inside",
-                "fridge_dszchb_0"
-            ],
-            [
                 "fridge_dszchb_0",
                 "ontop",
                 "cheese_tart_188"
+            ],
+            [
+                "cheese_tart_188",
+                "inside",
+                "fridge_dszchb_0"
             ]
         ],
         "inventory": []
     },
     "1_detect_surroundings": {
+        "fridge_dszchb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.4476574580727197,
+                "theta_deg": -26.082381320521137,
+                "phi_deg": 66.2766655431344
+            },
+            "orientation_in_bot": [
+                0.011361865549966032,
+                0.018866949494435317,
+                0.5254267103226816,
+                0.8505537715556164
+            ],
+            "position_in_world": [
+                -6.848034381866455,
+                -1.78300940990448,
+                0.8840970396995544
+            ],
+            "bot_in_world": [
+                -6.8474860191345215,
+                -0.4815577566623688,
+                0.250113308429718
+            ],
+            "path": "./prompt_files/data/cook_a_frozen_pie/subtask_3/seg_instance1_detect_surroundings.png"
+        },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.7082315900521754,
+                "theta_deg": 8.114042757705398,
+                "phi_deg": 69.71615325223439
+            },
+            "orientation_in_bot": [
+                0.011361865549966032,
+                0.018866949494435317,
+                0.5254267103226816,
+                0.8505537715556164
+            ],
+            "position_in_world": [
+                -5.947904109954834,
+                -1.7742741107940674,
+                0.911696195602417
+            ],
+            "bot_in_world": [
+                -6.8474860191345215,
+                -0.4815577566623688,
+                0.250113308429718
+            ],
+            "path": "./prompt_files/data/cook_a_frozen_pie/subtask_3/seg_instance1_detect_surroundings.png"
+        },
         "cheese_tart_188": {
             "ability": [
                 [
@@ -158,15 +238,15 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.5016780418771525,
-                "theta_deg": -22.41480613550236,
-                "phi_deg": 69.65084563571064
+                "rho": 1.5006889868479234,
+                "theta_deg": -22.211095253621423,
+                "phi_deg": 69.64317132255628
             },
             "orientation_in_bot": [
-                0.003655886876200653,
-                0.025096496345298994,
-                0.17408953129963334,
-                0.9844031874461869
+                0.0038037353308135228,
+                0.025119302292327724,
+                0.17564486908464824,
+                0.9841257197198519
             ],
             "position_in_world": [
                 -6.751186370849609,
@@ -174,107 +254,107 @@
                 0.8287374377250671
             ],
             "bot_in_world": [
-                -6.846851825714111,
-                -0.48038315773010254,
-                0.25024735927581787
-            ],
-            "path": "./prompt_files/data/cook_a_frozen_pie/subtask_3/seg_instance1_detect_surroundings.png"
-        },
-        "oven_wuinhm_0": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.7087350466561473,
-                "theta_deg": 7.898864281819212,
-                "phi_deg": 69.72566521481936
-            },
-            "orientation_in_bot": [
-                0.011211252621456278,
-                0.018902514725798382,
-                0.5240829115391106,
-                0.8513836412478147
-            ],
-            "position_in_world": [
-                -5.947904109954834,
-                -1.7742741107940674,
-                0.911696195602417
-            ],
-            "bot_in_world": [
-                -6.846851825714111,
-                -0.48038315773010254,
-                0.25024735927581787
-            ],
-            "path": "./prompt_files/data/cook_a_frozen_pie/subtask_3/seg_instance1_detect_surroundings.png"
-        },
-        "fridge_dszchb_0": {
-            "ability": [
-                [
-                    "openable",
-                    1
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.4486552490199172,
-                "theta_deg": -26.283815060190918,
-                "phi_deg": 66.28697416372293
-            },
-            "orientation_in_bot": [
-                0.011211252621456278,
-                0.018902514725798382,
-                0.5240829115391106,
-                0.8513836412478147
-            ],
-            "position_in_world": [
-                -6.848034381866455,
-                -1.78300940990448,
-                0.8840970396995544
-            ],
-            "bot_in_world": [
-                -6.846851825714111,
-                -0.48038315773010254,
-                0.25024735927581787
+                -6.8474860191345215,
+                -0.4815577566623688,
+                0.250113308429718
             ],
             "path": "./prompt_files/data/cook_a_frozen_pie/subtask_3/seg_instance1_detect_surroundings.png"
         },
         "scene_graph": [
             [
-                "cheese_tart_188",
-                "inside",
-                "fridge_dszchb_0"
-            ],
-            [
                 "fridge_dszchb_0",
                 "ontop",
                 "cheese_tart_188"
+            ],
+            [
+                "cheese_tart_188",
+                "inside",
+                "fridge_dszchb_0"
             ]
         ],
         "inventory": []
     },
     "2_detect_surroundings": {
+        "fridge_dszchb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.4476574580727197,
+                "theta_deg": -26.082381320521137,
+                "phi_deg": 66.2766655431344
+            },
+            "orientation_in_bot": [
+                0.011361865549966032,
+                0.018866949494435317,
+                0.5254267103226816,
+                0.8505537715556164
+            ],
+            "position_in_world": [
+                -6.848034381866455,
+                -1.78300940990448,
+                0.8840970396995544
+            ],
+            "bot_in_world": [
+                -6.8474860191345215,
+                -0.4815577566623688,
+                0.250113308429718
+            ],
+            "path": "./prompt_files/data/cook_a_frozen_pie/subtask_3/seg_instance2_detect_surroundings.png"
+        },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.7082315900521754,
+                "theta_deg": 8.114042757705398,
+                "phi_deg": 69.71615325223439
+            },
+            "orientation_in_bot": [
+                0.011361865549966032,
+                0.018866949494435317,
+                0.5254267103226816,
+                0.8505537715556164
+            ],
+            "position_in_world": [
+                -5.947904109954834,
+                -1.7742741107940674,
+                0.911696195602417
+            ],
+            "bot_in_world": [
+                -6.8474860191345215,
+                -0.4815577566623688,
+                0.250113308429718
+            ],
+            "path": "./prompt_files/data/cook_a_frozen_pie/subtask_3/seg_instance2_detect_surroundings.png"
+        },
         "cheese_tart_188": {
             "ability": [
                 [
@@ -295,15 +375,15 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.5016780418771525,
-                "theta_deg": -22.41480613550236,
-                "phi_deg": 69.65084563571064
+                "rho": 1.5006889868479234,
+                "theta_deg": -22.211095253621423,
+                "phi_deg": 69.64317132255628
             },
             "orientation_in_bot": [
-                0.003655886876200653,
-                0.025096496345298994,
-                0.17408953129963334,
-                0.9844031874461869
+                0.0038037353308135228,
+                0.025119302292327724,
+                0.17564486908464824,
+                0.9841257197198519
             ],
             "position_in_world": [
                 -6.751186370849609,
@@ -311,107 +391,107 @@
                 0.8287374377250671
             ],
             "bot_in_world": [
-                -6.846851825714111,
-                -0.48038315773010254,
-                0.25024735927581787
-            ],
-            "path": "./prompt_files/data/cook_a_frozen_pie/subtask_3/seg_instance2_detect_surroundings.png"
-        },
-        "oven_wuinhm_0": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.7087350466561473,
-                "theta_deg": 7.898864281819212,
-                "phi_deg": 69.72566521481936
-            },
-            "orientation_in_bot": [
-                0.011211252621456278,
-                0.018902514725798382,
-                0.5240829115391106,
-                0.8513836412478147
-            ],
-            "position_in_world": [
-                -5.947904109954834,
-                -1.7742741107940674,
-                0.911696195602417
-            ],
-            "bot_in_world": [
-                -6.846851825714111,
-                -0.48038315773010254,
-                0.25024735927581787
-            ],
-            "path": "./prompt_files/data/cook_a_frozen_pie/subtask_3/seg_instance2_detect_surroundings.png"
-        },
-        "fridge_dszchb_0": {
-            "ability": [
-                [
-                    "openable",
-                    1
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.4486552490199172,
-                "theta_deg": -26.283815060190918,
-                "phi_deg": 66.28697416372293
-            },
-            "orientation_in_bot": [
-                0.011211252621456278,
-                0.018902514725798382,
-                0.5240829115391106,
-                0.8513836412478147
-            ],
-            "position_in_world": [
-                -6.848034381866455,
-                -1.78300940990448,
-                0.8840970396995544
-            ],
-            "bot_in_world": [
-                -6.846851825714111,
-                -0.48038315773010254,
-                0.25024735927581787
+                -6.8474860191345215,
+                -0.4815577566623688,
+                0.250113308429718
             ],
             "path": "./prompt_files/data/cook_a_frozen_pie/subtask_3/seg_instance2_detect_surroundings.png"
         },
         "scene_graph": [
             [
-                "cheese_tart_188",
-                "inside",
-                "fridge_dszchb_0"
-            ],
-            [
                 "fridge_dszchb_0",
                 "ontop",
                 "cheese_tart_188"
+            ],
+            [
+                "cheese_tart_188",
+                "inside",
+                "fridge_dszchb_0"
             ]
         ],
         "inventory": []
     },
     "3_detect_surroundings": {
+        "fridge_dszchb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.4476574580727197,
+                "theta_deg": -26.082381320521137,
+                "phi_deg": 66.2766655431344
+            },
+            "orientation_in_bot": [
+                0.011361865549966032,
+                0.018866949494435317,
+                0.5254267103226816,
+                0.8505537715556164
+            ],
+            "position_in_world": [
+                -6.848034381866455,
+                -1.78300940990448,
+                0.8840970396995544
+            ],
+            "bot_in_world": [
+                -6.8474860191345215,
+                -0.4815577566623688,
+                0.250113308429718
+            ],
+            "path": "./prompt_files/data/cook_a_frozen_pie/subtask_3/seg_instance3_detect_surroundings.png"
+        },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.7082315900521754,
+                "theta_deg": 8.114042757705398,
+                "phi_deg": 69.71615325223439
+            },
+            "orientation_in_bot": [
+                0.011361865549966032,
+                0.018866949494435317,
+                0.5254267103226816,
+                0.8505537715556164
+            ],
+            "position_in_world": [
+                -5.947904109954834,
+                -1.7742741107940674,
+                0.911696195602417
+            ],
+            "bot_in_world": [
+                -6.8474860191345215,
+                -0.4815577566623688,
+                0.250113308429718
+            ],
+            "path": "./prompt_files/data/cook_a_frozen_pie/subtask_3/seg_instance3_detect_surroundings.png"
+        },
         "cheese_tart_188": {
             "ability": [
                 [
@@ -432,15 +512,15 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.5016780418771525,
-                "theta_deg": -22.41480613550236,
-                "phi_deg": 69.65084563571064
+                "rho": 1.5006889868479234,
+                "theta_deg": -22.211095253621423,
+                "phi_deg": 69.64317132255628
             },
             "orientation_in_bot": [
-                0.003655886876200653,
-                0.025096496345298994,
-                0.17408953129963334,
-                0.9844031874461869
+                0.0038037353308135228,
+                0.025119302292327724,
+                0.17564486908464824,
+                0.9841257197198519
             ],
             "position_in_world": [
                 -6.751186370849609,
@@ -448,102 +528,22 @@
                 0.8287374377250671
             ],
             "bot_in_world": [
-                -6.846851825714111,
-                -0.48038315773010254,
-                0.25024735927581787
-            ],
-            "path": "./prompt_files/data/cook_a_frozen_pie/subtask_3/seg_instance3_detect_surroundings.png"
-        },
-        "oven_wuinhm_0": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.7087350466561473,
-                "theta_deg": 7.898864281819212,
-                "phi_deg": 69.72566521481936
-            },
-            "orientation_in_bot": [
-                0.011211252621456278,
-                0.018902514725798382,
-                0.5240829115391106,
-                0.8513836412478147
-            ],
-            "position_in_world": [
-                -5.947904109954834,
-                -1.7742741107940674,
-                0.911696195602417
-            ],
-            "bot_in_world": [
-                -6.846851825714111,
-                -0.48038315773010254,
-                0.25024735927581787
-            ],
-            "path": "./prompt_files/data/cook_a_frozen_pie/subtask_3/seg_instance3_detect_surroundings.png"
-        },
-        "fridge_dszchb_0": {
-            "ability": [
-                [
-                    "openable",
-                    1
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.4486552490199172,
-                "theta_deg": -26.283815060190918,
-                "phi_deg": 66.28697416372293
-            },
-            "orientation_in_bot": [
-                0.011211252621456278,
-                0.018902514725798382,
-                0.5240829115391106,
-                0.8513836412478147
-            ],
-            "position_in_world": [
-                -6.848034381866455,
-                -1.78300940990448,
-                0.8840970396995544
-            ],
-            "bot_in_world": [
-                -6.846851825714111,
-                -0.48038315773010254,
-                0.25024735927581787
+                -6.8474860191345215,
+                -0.4815577566623688,
+                0.250113308429718
             ],
             "path": "./prompt_files/data/cook_a_frozen_pie/subtask_3/seg_instance3_detect_surroundings.png"
         },
         "scene_graph": [
             [
-                "cheese_tart_188",
-                "inside",
-                "fridge_dszchb_0"
-            ],
-            [
                 "fridge_dszchb_0",
                 "ontop",
                 "cheese_tart_188"
+            ],
+            [
+                "cheese_tart_188",
+                "inside",
+                "fridge_dszchb_0"
             ]
         ],
         "inventory": []

@@ -1,6 +1,6 @@
 {
-    "subtask": "\n(1) Move the robot to the fridge.\n(2) Open the fridge.\n(3) Put the cheese tart inside the fridge to freeze it.\n(4) Freeze the cheese tart.\n(5) Take out the frozen cheese tart from the fridge.\n(6) Move the robot to the oven.\n(7) Open the oven.\n(8) Put the frozen cheese tart into the oven.\n(9) Toggle on the oven to start cooking.",
-    "code": "def act(robot,env,camera):\n    # Subtask 3: Put the cheese tart inside the fridge to freeze it\n    cheese_tart = registry(env, \"cheese_tart_188\")\n    fridge = registry(env, \"fridge_dszchb_0\")\n    put_inside(robot, cheese_tart, fridge)\n    donothing(env)\n",
+    "subtask": "\n(1) Move the robot to the oven\n(2) Open the oven\n(3) Grasp the cheese tart from the oven\n(4) Close the oven\n(5) Move the robot to the fridge\n(6) Open the fridge\n(7) Put the cheese tart inside the fridge to freeze it\n(8) Close the fridge\n(9) Move the robot to the oven again\n(10) Open the oven\n(11) Grasp the frozen cheese tart from the fridge\n(12) Put the frozen cheese tart in the oven\n(13) Close the oven\n(14) Turn on the oven to cook the cheese tart",
+    "code": "def act(robot,env,camera):\n    oven = registry(env,\"oven_wuinhm_0\")\n    MoveBot(env, robot, oven, camera)\n",
     "error": "",
     "critic": "succeed",
     "reset": false,

@@ -80,10 +80,16 @@ def gpt_process(save_path, openai_api_key):
                 else:
                     gpt_query.record_history(subtask=answer['subtask'], code=answer['code'], error=data['error'])
                     break
+        
 
+        
         # reset parameters
         subtask_iter += 1
         
+        if subtask_iter>15:
+            print(f"already attempt {subtask_iter} time, it is too long!")
+            break
+                
         if main_task_flag:
             break
 

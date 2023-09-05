@@ -2,6 +2,7 @@ import numpy as np
 from omnigibson.utils.vision_utils import segmentation_to_rgb
 import cv2
 import math
+import omnigibson
 from omnigibson import object_states
 import random
 import omnigibson.utils.transform_utils as T
@@ -116,6 +117,8 @@ def open(robot, obj):
     dis = cal_dis(bot_pose, obj_pose)
     if dis > 2.0:
         raise Exception(f"Cannot open! robot is not within two meters of {obj}")
+    if obj.states[omnigibson.object_states.open.Open].get_value()==True:
+        raise Exception(f"the {obj._name} has been opened! Please pay attention to the states of Observed Objects!!")
     change_states(obj, 'openable', 1)
 
 def close(robot, obj):

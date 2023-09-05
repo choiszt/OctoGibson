@@ -50,10 +50,14 @@ def parse_json(path):
     for i in SG:
         s = ','.join(i)
         sg_str += '(' + s + ')'
+    # obs_str = ''
+    # for i in OBS:
+    #     s = '(' + i[0] + ', ' + str(i[1])+ ", " +str(round(i[2], 2)) + ')'
+    #     obs_str += s
     obs_str = ''
     for i in OBS:
-        s = '(' + i[0] + ', ' + str(i[1])+ ", " +str(round(i[2], 2)) + ')'
-        obs_str += s
+        s = '(' + i[0] + ', ' + str(i[1])+ ')'
+        obs_str += s    
 
     final_SG=list(set(SG)).copy()
     for (obj1,prep,obj2) in list(set(SG)):
