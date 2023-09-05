@@ -24,4 +24,4 @@ def verify_taskgoal(env,bddl_name,states,targets):
     og_obj=bddl_map[bddl_name] #stove_rgpphy_0
     states_status=reversed_unary_states[states] # CLASS object_states
     registered_obj=env.scene.object_registry("name", og_obj)
-    return registered_obj.states[states_status]._get_value()==targets
+    return registered_obj.states[states_status]._get_value()==int(targets)

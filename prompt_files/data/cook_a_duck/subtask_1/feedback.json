@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the fridge\n(2) Take the duck out of the fridge\n(3) Cook the duck",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Open the fridge\n    fridge = registry(env,\"fridge_xyejdx_0\")\n    open(robot, fridge)\n    donothing(env)\n",
+    "error": "Cannot open! robot is not within two meters of <omnigibson.objects.dataset_object.DatasetObject object at 0x7f999e2e2ad0>",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

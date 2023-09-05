@@ -149,10 +149,18 @@ def sim_process(task_name, scene_name, action_path, save_path):
         #TODO choiszt need to add rename
         #verify the whole task
         if critic == 'succeed':
-            # signal = verify_taskgoal() 
+            with open("/shared/liushuai/OmniGibson/prompt_files/excel.json","r")as f:
+                goal=json.load(f)
             signal=False
+            target=goal[task_name]['target_states']
+            for tar in target:
+                if not verify_taskgoal(env,*tar):
+                    signal=False
+                    break
+                signal=True
             if signal:
                 main_succeed = True
+                print(f"finish {task_name}!!!!! congrats!!!!!")
                 eu.save_feedback(feedback_path, subtask, code, error, critic, reset, main_succeed)
                 break
             else:
@@ -174,4 +182,4 @@ def sim_process(task_name, scene_name, action_path, save_path):
                         
 
 
-sim_process(task_name="cook_bacon",scene_name="Merom_1_int",action_path="./prompt_files/action.py",save_path="./prompt_files/data/cook_bacon")
+sim_process(task_name="cook_a_duck",scene_name="Ihlen_1_int",action_path="./prompt_files/action.py",save_path="./prompt_files/data/cook_a_duck")
