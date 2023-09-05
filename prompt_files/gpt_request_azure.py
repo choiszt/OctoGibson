@@ -4,7 +4,7 @@ import openai
 openai.api_type = "azure"
 openai.api_base = "https://gpt4-32k-oai-us-east-2.openai.azure.com/"
 openai.api_version = "2023-07-01-preview"
-openai.api_key = "28a2a30822fe4902921e35ae0673df1f"
+openai.api_key = "810e80dc590b4011ba2c2ff87c5285ce"
 
 def gpt_request(content):
     response = openai.ChatCompletion.create(
