@@ -1,0 +1,29 @@
+{
+    "response": {
+        "explain": " The previous action code has successfully put the carrot into the saucepot. Now, we need to turn on the stove to cook the carrot. ",
+        "subtask": "\n(1) Turn on the stove to cook the carrot.",
+        "code": "def act(robot,env,camera):\n    # Subtask 1: Turn on the stove to cook the carrot\n    stove = registry(env,\"stove_rgpphy_0\")\n    toggle_on(robot, stove)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [
+            [
+                "stove_rgpphy_0",
+                "togglable",
+                "1"
+            ]
+        ],
+        "obj_3": [
+            [
+                "carrot_151",
+                "inside",
+                "saucepot_150",
+                "1"
+            ],
+            [
+                "saucepot_150",
+                "ontop",
+                "stove_rgpphy_0",
+                "1"
+            ]
+        ]
+    }
+}
