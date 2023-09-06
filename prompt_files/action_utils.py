@@ -27,8 +27,8 @@ from pyquaternion import Quaternion
 
 def get_robot_pos(obj):
     obj_pos, obj_ori = obj.get_position_orientation()
-    vec_standard = np.array([0, 1, 0])
-    rotated_vec = Quaternion(obj_ori[[1, 2, 3, 0]]).rotate(vec_standard)
+    vec_standard = np.array([0, -1, 0])
+    rotated_vec = Quaternion(obj_ori[[3, 0, 1, 2]]).rotate(vec_standard)
     bbox = obj.native_bbox
     robot_pos = np.zeros(3)
     robot_pos[0] = obj_pos[0] + rotated_vec[0] * bbox[1] * 0.5 + rotated_vec[0]

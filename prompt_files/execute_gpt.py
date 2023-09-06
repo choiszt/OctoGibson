@@ -89,9 +89,9 @@ def gpt_process(save_path, openai_api_key):
         if subtask_iter>15:
             print(f"already attempt {subtask_iter} time, it is too long!")
             break
-                
+
         if main_task_flag:
             break
 
 api_key="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"
-gpt_process(save_path="/shared/liushuai/OmniGibson/prompt_files/data/cook_a_frozen_pie",openai_api_key=api_key)
+gpt_process(save_path="/shared/liushuai/OmniGibson/prompt_files/data/cook_carrots",openai_api_key=api_key)

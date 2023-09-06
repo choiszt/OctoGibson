@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register the stove object.\n(2) Check the state of the stove.\n(3) If the stove is on, toggle it off.\n(4) Move to the saucepot.\n(5) Put the carrot into the saucepot.\n(6) Cook the carrot.",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Register the stove object.\n    stove = registry(env,\"stove_rgpphy_0\")\n    # Subtask 2: Check the state of the stove.\n    if stove.togglable == 1:\n        # Subtask 3: If the stove is on, toggle it off.\n        toggle_off(robot, stove)\n        donothing(env)\n",
+    "error": "'DatasetObject' object has no attribute 'togglable'",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}
