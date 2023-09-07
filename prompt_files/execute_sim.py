@@ -45,7 +45,7 @@ def sim_process(args):
     config_filename="./prompt_files/bddl_task.yaml"
     cfg = yaml.load(open(config_filename, "r"), Loader=yaml.FullLoader)
     cfg["task"]["online_object_sampling"] = False
-    cfg["scene"]["scene_mdoel"] = scene_name
+    cfg["scene"]["scene_model"] = scene_name
     cfg["task"]["activity_name"] = task_name
     # Load the environment
     env = og.Environment(configs=cfg, action_timestep=1/60., physics_timestep=1/60.)
