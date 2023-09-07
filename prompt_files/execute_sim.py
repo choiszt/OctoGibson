@@ -17,7 +17,26 @@ from bddl_verification import *
 import sys
 import bddl
 from verify_taskgoal import verify_taskgoal
-def sim_process(task_name, scene_name, action_path, save_path):
+import argparse
+
+def parse_args():
+    description = "EVLM_sim_process"
+    parser = argparse.ArgumentParser(description=description)
+    parser.add_argument("-t", "--task_name", type=str, help="task name to get bddl", required=True)
+    parser.add_argument("-g", "--gpt_task_name", type=str, help="task name for gpt", required=True)
+    parser.add_argument("-s", "--scene_name", type=str, help="scene name to get bddl", required=True)
+    parser.add_argument("-a", "--action_path", type=str, help="action path", required=True)
+    parser.add_argument("-save", "--save_path", type=str, help="data save path", required=True)
+    return parser.parse_args()
+
+
+def sim_process(args):
+    task_name = args.task_name
+    gpt_task_name = args.gpt_task_name
+    scene_name = args.scene_name
+    action_path = args.action_path
+    save_path = args.save_path
+
     heading="import os \nimport json\nimport yaml\nimport omnigibson as og\nfrom action_list import * \nfrom action_utils import *\n"
     config_filename="./prompt_files/bddl_task.yaml"
     cfg = yaml.load(open(config_filename, "r"), Loader=yaml.FullLoader)
@@ -44,7 +63,7 @@ def sim_process(task_name, scene_name, action_path, save_path):
             if os.path.exists(os.path.join(save_path, f"subtask_{subtask_iter}")):
                 break
         sub_save_path = os.path.join(save_path, f"subtask_{subtask_iter}")
-        init_pipeline(env, robot, camera,task_name=str(task_name), file_name=sub_save_path)
+        init_pipeline(env, robot, camera,task_name=str(gpt_task_name), file_name=sub_save_path)
         response_path = os.path.join(sub_save_path, 'response.json')
         feedback_path = os.path.join(sub_save_path, 'feedback.json')
         
@@ -184,5 +203,6 @@ def sim_process(task_name, scene_name, action_path, save_path):
             break
                         
 
-
-sim_process(task_name="cook_carrots",scene_name="Merom_1_int",action_path="./prompt_files/action.py",save_path=f"./prompt_files/data/cook_carrots")
+if __name__ == "__main__":
+    args = parse_args()
+    sim_process(args)
