@@ -25,15 +25,6 @@ all_rel = {}
 all_images = {}
 for dir in os.listdir(base_path):
     task_path = os.path.join(base_path, dir)
-    
-    # cal subtask number
-    subtask_num = 0
-    for sub_dir in os.listdir(task_path):
-        sub_path = os.path.join(task_path, sub_dir)
-        if len(os.listdir(sub_path)) == 0:
-            break
-        else:
-            subtask_num += 1
             
     for sub_dir in os.listdir(task_path):
         sub_path = os.path.join(task_path, sub_dir)
@@ -77,11 +68,13 @@ for dir in os.listdir(base_path):
             
             #RELID
             ids = os.listdir(task_path)
-            if subtask_num < 5:
-                rel_id = [dir + '_' + id for id in ids[:subtask_num]]
+            current_sub = int(sub_dir[-1])
+            if current_sub == 1:
+                rel_id = []
+            elif current_sub <= 10:
+                rel_id = [dir + '_' + id for id in ids[:current_sub-1]]
             else:
-                idx = random.sample(ids[:subtask_num], 4)
-                rel_id = [dir + '_' + idx[i] for i in range(4)]
+                rel_id = [dir + '_' + id for id in ids[current_sub-10:current_sub-1]]
             
         all_data[name] = {}
         all_data[name]["instruction"] = input_str
