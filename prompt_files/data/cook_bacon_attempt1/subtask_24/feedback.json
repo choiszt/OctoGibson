@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Register the bacon.\n(2) Grasp the bacon.\n(3) Cook the bacon.",
-    "code": "def act(robot,env,camera):\n    bacon = registry(env,\"bacon_150\")\n    EasyGrasp(robot, bacon)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

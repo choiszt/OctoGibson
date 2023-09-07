@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Check the state of the stove.\n(2) If the stove is on, toggle it off.\n(3) Move to the saucepot.\n(4) Put the carrot into the saucepot.\n(5) Cook the carrot.",
-    "code": "def act(robot,env,camera):\n    # Subtask 2: If the stove is on, toggle it off.\n    stove = registry(env,\"stove_rgpphy_0\")\n    if stove['togglable'] == 1:\n        toggle_off(robot, stove)\n        donothing(env)\n",
-    "error": "'DatasetObject' object is not subscriptable",
-    "critic": "fail",
-    "reset": true,
-    "main_succeed": false
-}

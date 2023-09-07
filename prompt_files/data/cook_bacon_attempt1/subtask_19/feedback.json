@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move to the stove.\n(2) Put the bacon on the griddle.",
-    "code": "def act(robot,env,camera):\n    stove = registry(env,\"stove_rgpphy_0\")\n    MoveBot(env, robot, stove, camera)\n    donothing(env)\n    griddle = registry(env,\"griddle_157\")\n    put_ontop(robot, bacon_150, griddle)\n    donothing(env)\n",
-    "error": "name 'bacon_150' is not defined",
-    "critic": "fail",
-    "reset": true,
-    "main_succeed": false
-}
