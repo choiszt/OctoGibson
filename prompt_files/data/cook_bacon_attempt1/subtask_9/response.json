@@ -1,0 +1,16 @@
+{
+    "response": {
+        "explain": " The previous action code successfully moved the robot to the stove. The next step is to turn on the stove. The original subtasks are correct and we can follow them.",
+        "subtask": "\n(1) Move to the stove.\n(2) Turn on the stove.\n(3) Cook the bacon on the stove.",
+        "code": "def act(robot,env,camera):\n    stove = registry(env,\"stove_rgpphy_0\")\n    toggle_on(robot, stove)\n    donothing(env)\n",
+        "inventory": "tray_156,bacon_150",
+        "obj_2": [
+            [
+                "stove_rgpphy_0",
+                "togglable",
+                "1"
+            ]
+        ],
+        "obj_3": []
+    }
+}

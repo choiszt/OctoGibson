@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register the saucepot object.\n(2) Put the carrot into the saucepot.",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Register the saucepot object.\n    saucepot = registry(env,\"saucepot_150\")\n    # Subtask 2: Put the carrot into the saucepot.\n    put_inside(robot, \"carrot_151\", saucepot)\n    donothing(env)\n",
+    "error": "'str' object has no attribute 'set_position'",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

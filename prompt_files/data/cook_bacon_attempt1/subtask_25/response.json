@@ -1,0 +1,16 @@
+{
+    "response": {
+        "explain": " The previous action code has successfully grasped the bacon, which is now in the robot's inventory. The next step is to cook the bacon. However, the bacon needs to be cooked on a heatable surface, such as a griddle. The griddle is currently on top of the stove, but the stove is not turned on. Therefore, the next subtask should be to turn on the stove.",
+        "subtask": "\n(1) Register the stove.\n(2) Turn on the stove.",
+        "code": "def act(robot,env,camera):\n    stove = registry(env,\"stove_rgpphy_0\")\n    toggle_on(robot, stove)\n    donothing(env)\n",
+        "inventory": "bacon_150",
+        "obj_2": [
+            [
+                "stove_rgpphy_0",
+                "togglable",
+                "1"
+            ]
+        ],
+        "obj_3": []
+    }
+}

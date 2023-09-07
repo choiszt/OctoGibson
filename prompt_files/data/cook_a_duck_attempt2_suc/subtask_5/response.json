@@ -1,0 +1,16 @@
+{
+    "response": {
+        "explain": " The previous action code successfully grasped the duck from the fridge. The next step is to cook the duck. However, the duck is not cookable yet, so we need to make it cookable first. We can do this by putting the duck in the oven and turning on the oven.",
+        "subtask": "\n(1) Move the robot to the oven\n(2) Open the oven\n(3) Put the duck in the oven\n(4) Turn on the oven\n(5) Cook the duck",
+        "code": "def act(robot,env,camera):\n    # Subtask 4: Turn on the oven\n    oven = registry(env,\"oven_wuinhm_0\")\n    toggle_on(robot, oven)\n    donothing(env)\n",
+        "inventory": "duck_171",
+        "obj_2": [
+            [
+                "oven_wuinhm_0",
+                "togglable",
+                "1"
+            ]
+        ],
+        "obj_3": []
+    }
+}

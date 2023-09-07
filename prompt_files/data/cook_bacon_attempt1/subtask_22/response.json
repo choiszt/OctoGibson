@@ -1,0 +1,17 @@
+{
+    "response": {
+        "explain": " The previous action code successfully moved the robot to the stove. The next step is to put the bacon on the griddle. However, the griddle has not been registered yet. Therefore, the next action code should register the griddle and put the bacon on it.",
+        "subtask": "\n(1) Register the griddle.\n(2) Put the bacon on the griddle.\n(3) Cook the bacon.",
+        "code": "def act(robot,env,camera):\n    griddle = registry(env,\"griddle_157\")\n    bacon = registry(env,\"bacon_150\")\n    put_ontop(robot, bacon, griddle)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [],
+        "obj_3": [
+            [
+                "bacon_150",
+                "ontop",
+                "griddle_157",
+                "1"
+            ]
+        ]
+    }
+}

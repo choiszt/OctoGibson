@@ -1,0 +1,16 @@
+{
+    "response": {
+        "explain": " The task goal is to cook a duck. From the observed objects and relations, we can see that the duck is currently inside the fridge which is not open. The first step to cook the duck is to retrieve it from the fridge. Therefore, the first subtask is to open the fridge.",
+        "subtask": "\n(1) Open the fridge\n(2) Take the duck out of the fridge\n(3) Cook the duck",
+        "code": "def act(robot,env,camera):\n    # Subtask 1: Open the fridge\n    fridge = registry(env,\"fridge_xyejdx_0\")\n    open(robot, fridge)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [
+            [
+                "fridge_xyejdx_0",
+                "openable",
+                "1"
+            ]
+        ],
+        "obj_3": []
+    }
+}

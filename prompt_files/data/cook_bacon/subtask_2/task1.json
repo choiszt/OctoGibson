@@ -1,0 +1,883 @@
+{
+    "task": "cook_bacon",
+    "0_detect_surroundings": {
+        "bacon_150": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8911438156310834,
+                "theta_deg": 30.912825610839203,
+                "phi_deg": 84.47585682151465
+            },
+            "orientation_in_bot": [
+                0.004681175270338981,
+                0.0620494868047314,
+                0.46550089467594474,
+                0.8828572165652003
+            ],
+            "position_in_world": [
+                -0.3377228081226349,
+                3.8790035247802734,
+                0.2572709023952484
+            ],
+            "bot_in_world": [
+                -1.5897499322891235,
+                5.273488521575928,
+                0.0037662237882614136
+            ],
+            "path": "./prompt_files/data/cook_bacon/subtask_2/seg_instance0_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.1216353666840306,
+                "theta_deg": 34.504630393069306,
+                "phi_deg": 69.25427285353445
+            },
+            "orientation_in_bot": [
+                -0.002660966742909792,
+                0.021700756259117424,
+                -0.09702279648260416,
+                0.9950419957953889
+            ],
+            "position_in_world": [
+                -0.1851631999015808,
+                3.9132142066955566,
+                0.827250599861145
+            ],
+            "bot_in_world": [
+                -1.5897499322891235,
+                5.273488521575928,
+                0.0037662237882614136
+            ],
+            "path": "./prompt_files/data/cook_bacon/subtask_2/seg_instance0_detect_surroundings.png"
+        },
+        "griddle_157": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6792188297684183,
+                "theta_deg": 107.33993339665412,
+                "phi_deg": 58.00528305178349
+            },
+            "orientation_in_bot": [
+                0.0013449971177714756,
+                0.022121455979283913,
+                0.08258715931336762,
+                0.9963373892836995
+            ],
+            "position_in_world": [
+                -0.3428763747215271,
+                5.984163284301758,
+                0.8755595088005066
+            ],
+            "bot_in_world": [
+                -1.5897499322891235,
+                5.273488521575928,
+                0.0037662237882614136
+            ],
+            "path": "./prompt_files/data/cook_bacon/subtask_2/seg_instance0_detect_surroundings.png"
+        },
+        "stove_rgpphy_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.585615091228461,
+                "theta_deg": 103.4630817968061,
+                "phi_deg": 69.84097436391622
+            },
+            "orientation_in_bot": [
+                -0.0026087605484320145,
+                0.02170712697309139,
+                -0.09462975061856777,
+                0.9952724276824124
+            ],
+            "position_in_world": [
+                -0.23843911290168762,
+                5.909679889678955,
+                0.5361145734786987
+            ],
+            "bot_in_world": [
+                -1.5897499322891235,
+                5.273488521575928,
+                0.0037662237882614136
+            ],
+            "path": "./prompt_files/data/cook_bacon/subtask_2/seg_instance0_detect_surroundings.png"
+        },
+        "tray_156": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8485989388480422,
+                "theta_deg": 29.365337883370326,
+                "phi_deg": 84.41131013130905
+            },
+            "orientation_in_bot": [
+                0.002721573818404633,
+                0.02179349157710358,
+                0.14976789564532414,
+                0.9884772198663968
+            ],
+            "position_in_world": [
+                -0.40354815125465393,
+                3.8780357837677,
+                0.25467467308044434
+            ],
+            "bot_in_world": [
+                -1.5897499322891235,
+                5.273488521575928,
+                0.0037662237882614136
+            ],
+            "path": "./prompt_files/data/cook_bacon/subtask_2/seg_instance0_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "bacon_150",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "bacon_150",
+                "inside",
+                "tray_156"
+            ],
+            [
+                "bacon_150",
+                "ontop",
+                "tray_156"
+            ],
+            [
+                "fridge_xyejdx_0",
+                "ontop",
+                "tray_156"
+            ],
+            [
+                "tray_156",
+                "inside",
+                "fridge_xyejdx_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "1_detect_surroundings": {
+        "bacon_150": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8911438156310834,
+                "theta_deg": 30.912825610839203,
+                "phi_deg": 84.47585682151465
+            },
+            "orientation_in_bot": [
+                0.004681175270338981,
+                0.0620494868047314,
+                0.46550089467594474,
+                0.8828572165652003
+            ],
+            "position_in_world": [
+                -0.3377228081226349,
+                3.8790035247802734,
+                0.2572709023952484
+            ],
+            "bot_in_world": [
+                -1.5897499322891235,
+                5.273488521575928,
+                0.0037662237882614136
+            ],
+            "path": "./prompt_files/data/cook_bacon/subtask_2/seg_instance1_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.1216353666840306,
+                "theta_deg": 34.504630393069306,
+                "phi_deg": 69.25427285353445
+            },
+            "orientation_in_bot": [
+                -0.002660966742909792,
+                0.021700756259117424,
+                -0.09702279648260416,
+                0.9950419957953889
+            ],
+            "position_in_world": [
+                -0.1851631999015808,
+                3.9132142066955566,
+                0.827250599861145
+            ],
+            "bot_in_world": [
+                -1.5897499322891235,
+                5.273488521575928,
+                0.0037662237882614136
+            ],
+            "path": "./prompt_files/data/cook_bacon/subtask_2/seg_instance1_detect_surroundings.png"
+        },
+        "griddle_157": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6792188297684183,
+                "theta_deg": 107.33993339665412,
+                "phi_deg": 58.00528305178349
+            },
+            "orientation_in_bot": [
+                0.0013449971177714756,
+                0.022121455979283913,
+                0.08258715931336762,
+                0.9963373892836995
+            ],
+            "position_in_world": [
+                -0.3428763747215271,
+                5.984163284301758,
+                0.8755595088005066
+            ],
+            "bot_in_world": [
+                -1.5897499322891235,
+                5.273488521575928,
+                0.0037662237882614136
+            ],
+            "path": "./prompt_files/data/cook_bacon/subtask_2/seg_instance1_detect_surroundings.png"
+        },
+        "stove_rgpphy_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.585615091228461,
+                "theta_deg": 103.4630817968061,
+                "phi_deg": 69.84097436391622
+            },
+            "orientation_in_bot": [
+                -0.0026087605484320145,
+                0.02170712697309139,
+                -0.09462975061856777,
+                0.9952724276824124
+            ],
+            "position_in_world": [
+                -0.23843911290168762,
+                5.909679889678955,
+                0.5361145734786987
+            ],
+            "bot_in_world": [
+                -1.5897499322891235,
+                5.273488521575928,
+                0.0037662237882614136
+            ],
+            "path": "./prompt_files/data/cook_bacon/subtask_2/seg_instance1_detect_surroundings.png"
+        },
+        "tray_156": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8485989388480422,
+                "theta_deg": 29.365337883370326,
+                "phi_deg": 84.41131013130905
+            },
+            "orientation_in_bot": [
+                0.002721573818404633,
+                0.02179349157710358,
+                0.14976789564532414,
+                0.9884772198663968
+            ],
+            "position_in_world": [
+                -0.40354815125465393,
+                3.8780357837677,
+                0.25467467308044434
+            ],
+            "bot_in_world": [
+                -1.5897499322891235,
+                5.273488521575928,
+                0.0037662237882614136
+            ],
+            "path": "./prompt_files/data/cook_bacon/subtask_2/seg_instance1_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "bacon_150",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "bacon_150",
+                "inside",
+                "tray_156"
+            ],
+            [
+                "bacon_150",
+                "ontop",
+                "tray_156"
+            ],
+            [
+                "fridge_xyejdx_0",
+                "ontop",
+                "tray_156"
+            ],
+            [
+                "tray_156",
+                "inside",
+                "fridge_xyejdx_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "2_detect_surroundings": {
+        "bacon_150": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8911438156310834,
+                "theta_deg": 30.912825610839203,
+                "phi_deg": 84.47585682151465
+            },
+            "orientation_in_bot": [
+                0.004681175270338981,
+                0.0620494868047314,
+                0.46550089467594474,
+                0.8828572165652003
+            ],
+            "position_in_world": [
+                -0.3377228081226349,
+                3.8790035247802734,
+                0.2572709023952484
+            ],
+            "bot_in_world": [
+                -1.5897499322891235,
+                5.273488521575928,
+                0.0037662237882614136
+            ],
+            "path": "./prompt_files/data/cook_bacon/subtask_2/seg_instance2_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.1216353666840306,
+                "theta_deg": 34.504630393069306,
+                "phi_deg": 69.25427285353445
+            },
+            "orientation_in_bot": [
+                -0.002660966742909792,
+                0.021700756259117424,
+                -0.09702279648260416,
+                0.9950419957953889
+            ],
+            "position_in_world": [
+                -0.1851631999015808,
+                3.9132142066955566,
+                0.827250599861145
+            ],
+            "bot_in_world": [
+                -1.5897499322891235,
+                5.273488521575928,
+                0.0037662237882614136
+            ],
+            "path": "./prompt_files/data/cook_bacon/subtask_2/seg_instance2_detect_surroundings.png"
+        },
+        "griddle_157": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6792188297684183,
+                "theta_deg": 107.33993339665412,
+                "phi_deg": 58.00528305178349
+            },
+            "orientation_in_bot": [
+                0.0013449971177714756,
+                0.022121455979283913,
+                0.08258715931336762,
+                0.9963373892836995
+            ],
+            "position_in_world": [
+                -0.3428763747215271,
+                5.984163284301758,
+                0.8755595088005066
+            ],
+            "bot_in_world": [
+                -1.5897499322891235,
+                5.273488521575928,
+                0.0037662237882614136
+            ],
+            "path": "./prompt_files/data/cook_bacon/subtask_2/seg_instance2_detect_surroundings.png"
+        },
+        "stove_rgpphy_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.585615091228461,
+                "theta_deg": 103.4630817968061,
+                "phi_deg": 69.84097436391622
+            },
+            "orientation_in_bot": [
+                -0.0026087605484320145,
+                0.02170712697309139,
+                -0.09462975061856777,
+                0.9952724276824124
+            ],
+            "position_in_world": [
+                -0.23843911290168762,
+                5.909679889678955,
+                0.5361145734786987
+            ],
+            "bot_in_world": [
+                -1.5897499322891235,
+                5.273488521575928,
+                0.0037662237882614136
+            ],
+            "path": "./prompt_files/data/cook_bacon/subtask_2/seg_instance2_detect_surroundings.png"
+        },
+        "tray_156": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8485989388480422,
+                "theta_deg": 29.365337883370326,
+                "phi_deg": 84.41131013130905
+            },
+            "orientation_in_bot": [
+                0.002721573818404633,
+                0.02179349157710358,
+                0.14976789564532414,
+                0.9884772198663968
+            ],
+            "position_in_world": [
+                -0.40354815125465393,
+                3.8780357837677,
+                0.25467467308044434
+            ],
+            "bot_in_world": [
+                -1.5897499322891235,
+                5.273488521575928,
+                0.0037662237882614136
+            ],
+            "path": "./prompt_files/data/cook_bacon/subtask_2/seg_instance2_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "bacon_150",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "bacon_150",
+                "inside",
+                "tray_156"
+            ],
+            [
+                "bacon_150",
+                "ontop",
+                "tray_156"
+            ],
+            [
+                "fridge_xyejdx_0",
+                "ontop",
+                "tray_156"
+            ],
+            [
+                "tray_156",
+                "inside",
+                "fridge_xyejdx_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "3_detect_surroundings": {
+        "bacon_150": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8911438156310834,
+                "theta_deg": 30.912825610839203,
+                "phi_deg": 84.47585682151465
+            },
+            "orientation_in_bot": [
+                0.004681175270338981,
+                0.0620494868047314,
+                0.46550089467594474,
+                0.8828572165652003
+            ],
+            "position_in_world": [
+                -0.3377228081226349,
+                3.8790035247802734,
+                0.2572709023952484
+            ],
+            "bot_in_world": [
+                -1.5897499322891235,
+                5.273488521575928,
+                0.0037662237882614136
+            ],
+            "path": "./prompt_files/data/cook_bacon/subtask_2/seg_instance3_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.1216353666840306,
+                "theta_deg": 34.504630393069306,
+                "phi_deg": 69.25427285353445
+            },
+            "orientation_in_bot": [
+                -0.002660966742909792,
+                0.021700756259117424,
+                -0.09702279648260416,
+                0.9950419957953889
+            ],
+            "position_in_world": [
+                -0.1851631999015808,
+                3.9132142066955566,
+                0.827250599861145
+            ],
+            "bot_in_world": [
+                -1.5897499322891235,
+                5.273488521575928,
+                0.0037662237882614136
+            ],
+            "path": "./prompt_files/data/cook_bacon/subtask_2/seg_instance3_detect_surroundings.png"
+        },
+        "griddle_157": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6792188297684183,
+                "theta_deg": 107.33993339665412,
+                "phi_deg": 58.00528305178349
+            },
+            "orientation_in_bot": [
+                0.0013449971177714756,
+                0.022121455979283913,
+                0.08258715931336762,
+                0.9963373892836995
+            ],
+            "position_in_world": [
+                -0.3428763747215271,
+                5.984163284301758,
+                0.8755595088005066
+            ],
+            "bot_in_world": [
+                -1.5897499322891235,
+                5.273488521575928,
+                0.0037662237882614136
+            ],
+            "path": "./prompt_files/data/cook_bacon/subtask_2/seg_instance3_detect_surroundings.png"
+        },
+        "stove_rgpphy_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.585615091228461,
+                "theta_deg": 103.4630817968061,
+                "phi_deg": 69.84097436391622
+            },
+            "orientation_in_bot": [
+                -0.0026087605484320145,
+                0.02170712697309139,
+                -0.09462975061856777,
+                0.9952724276824124
+            ],
+            "position_in_world": [
+                -0.23843911290168762,
+                5.909679889678955,
+                0.5361145734786987
+            ],
+            "bot_in_world": [
+                -1.5897499322891235,
+                5.273488521575928,
+                0.0037662237882614136
+            ],
+            "path": "./prompt_files/data/cook_bacon/subtask_2/seg_instance3_detect_surroundings.png"
+        },
+        "tray_156": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8485989388480422,
+                "theta_deg": 29.365337883370326,
+                "phi_deg": 84.41131013130905
+            },
+            "orientation_in_bot": [
+                0.002721573818404633,
+                0.02179349157710358,
+                0.14976789564532414,
+                0.9884772198663968
+            ],
+            "position_in_world": [
+                -0.40354815125465393,
+                3.8780357837677,
+                0.25467467308044434
+            ],
+            "bot_in_world": [
+                -1.5897499322891235,
+                5.273488521575928,
+                0.0037662237882614136
+            ],
+            "path": "./prompt_files/data/cook_bacon/subtask_2/seg_instance3_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "bacon_150",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "bacon_150",
+                "inside",
+                "tray_156"
+            ],
+            [
+                "bacon_150",
+                "ontop",
+                "tray_156"
+            ],
+            [
+                "fridge_xyejdx_0",
+                "ontop",
+                "tray_156"
+            ],
+            [
+                "tray_156",
+                "inside",
+                "fridge_xyejdx_0"
+            ]
+        ],
+        "inventory": []
+    }
+}

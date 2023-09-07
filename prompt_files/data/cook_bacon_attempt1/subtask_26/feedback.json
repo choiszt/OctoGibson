@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register the griddle.\n(2) Put the bacon on the griddle.\n(3) Cook the bacon.",
+    "code": "def act(robot,env,camera):\n    griddle = registry(env,\"griddle_157\")\n    put_ontop(robot, \"bacon_150\", griddle)\n    donothing(env)\n",
+    "error": "'str' object has no attribute 'native_bbox'",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

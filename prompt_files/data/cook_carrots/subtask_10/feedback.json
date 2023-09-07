@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the fridge.\n(2) Open the fridge.\n(3) Grasp the carrot from the fridge.\n(4) Close the fridge.\n(5) Move the robot to the stove.\n(6) Grasp the saucepot from the stove.\n(7) Put the carrot into the saucepot.\n(8) Put the saucepot back onto the stove.\n(9) Turn on the stove.\n(10) Cook the carrot.",
+    "code": "def act(robot,env,camera):\n    # Subtask 10: Cook the carrot\n    carrot = registry(env,\"carrot_151\")\n    cook(robot, carrot)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": true
+}
