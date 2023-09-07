@@ -25,6 +25,7 @@ all_rel = {}
 all_images = {}
 for dir in os.listdir(base_path):
     task_path = os.path.join(base_path, dir)
+    print(task_path)
             
     for sub_dir in os.listdir(task_path):
         sub_path = os.path.join(task_path, sub_dir)
@@ -67,14 +68,13 @@ for dir in os.listdir(base_path):
                 all_images[i] = get_img_json(base_path, task_path, sub_dir, images[k])
             
             #RELID
-            ids = os.listdir(task_path)
-            current_sub = int(sub_dir[-1])
+            current_sub = int(sub_dir.split('_')[-1])
             if current_sub == 1:
                 rel_id = []
             elif current_sub <= 10:
-                rel_id = [dir + '_' + id for id in ids[:current_sub-1]]
+                rel_id = [dir + '_' + f"subtask_{id}" for id in range(1, current_sub)]
             else:
-                rel_id = [dir + '_' + id for id in ids[current_sub-10:current_sub-1]]
+                rel_id = [dir + '_' + f"subtask_{id}" for id in range(current_sub - 10, current_sub)]
             
         all_data[name] = {}
         all_data[name]["instruction"] = input_str
@@ -86,7 +86,7 @@ for dir in os.listdir(base_path):
         all_rel[name] = rel_id
         
 dataset = {}
-dataset['meta'] = {'version':'v1', 'author':'dongyuhao', 'date':'2023-09-06'}
+dataset['meta'] = {'version':'v1', 'author':'dongyuhao', 'date':'2023-09-07'}
 dataset['data'] = all_data
 with open('test.json', 'w') as f:
     f.write(json.dumps(dataset))
