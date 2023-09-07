@@ -1,21 +1,25 @@
 import pandas as pd
 import json
 
-data = pd.read_excel(io='./tasks.xlsx', sheet_name='I1.cooking')
-print(data.keys())
-task_name = data['BDDL_Task']
-gpt_task = data['EVLM_Task']
-target_states = data['Target States']
-removed_item = data['Removed Items']
-scene_name = data['Environment']
+f = pd.ExcelFile('./task.xlsx')
 all_tasks = {}
-for i in range(len(task_name)):
-    if gpt_task[i] == 'NA':
+for name in f.sheet_names:
+    print(name)
+    if name == '工作时长':
         continue
-    try:
+    data = pd.read_excel(io='./task.xlsx', sheet_name=name, keep_default_na=False)
+    task_name = data['BDDL_Task']
+    gpt_task = data['EVLM_Task']
+    target_states = data['Target States']
+    removed_item = data['Removed Items']
+    scene_name = data['Environment']
+    for i in range(len(task_name)):
+        if gpt_task[i] == 'NA':
+            continue
         one_task = {}
         one_task['task_name'] = task_name[i]
         one_task['gpt_task'] = gpt_task[i]
+        
         r = removed_item[i]
         r = r.split(',')
         for j in range(len(r)):
@@ -37,8 +41,6 @@ for i in range(len(task_name)):
         one_task['target_states'] = all_t
         one_task['env'] = scene_name[i]
         all_tasks[gpt_task[i]] = one_task
-    except: 
-        pass
-     
+        
 with open('test.json', 'w') as f:
-     f.write(json.dumps(all_tasks))
+    f.write(json.dumps(all_tasks))
