@@ -29,6 +29,9 @@ def parse_args():
     parser.add_argument("-r", "--removed_items", type=str, help="removed items for bddl", required=True)
     parser.add_argument("-target", "--target_states", type=str, help="main task target states", required=True)
     parser.add_argument("-save", "--save_path", type=str, help="data save path", required=True)
+    parser.add_argument("-l", "--/log/level", type=str, help="error log 1", required=True)
+    parser.add_argument("-f", "--/log/fileLogLevel", type=str, help="error log 2", required=True)
+    parser.add_argument("-o", "--/log/outputStreamLevel", type=str, help="error log 3", required=True)
     return parser.parse_args()
 
 
@@ -47,6 +50,7 @@ def sim_process(args):
     cfg["task"]["online_object_sampling"] = False
     cfg["scene"]["scene_model"] = scene_name
     cfg["task"]["activity_name"] = task_name
+    print(cfg)
     # Load the environment
     env = og.Environment(configs=cfg, action_timestep=1/60., physics_timestep=1/60.)
 
