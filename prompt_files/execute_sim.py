@@ -26,6 +26,8 @@ def parse_args():
     parser.add_argument("-g", "--gpt_task_name", type=str, help="task name for gpt", required=True)
     parser.add_argument("-s", "--scene_name", type=str, help="scene name to get bddl", required=True)
     parser.add_argument("-a", "--action_path", type=str, help="action path", required=True)
+    parser.add_argument("-r", "--removed_items", type=str, help="removed items for bddl", required=True)
+    parser.add_argument("-target", "--target_states", type=str, help="main task target states", required=True)
     parser.add_argument("-save", "--save_path", type=str, help="data save path", required=True)
     return parser.parse_args()
 
@@ -36,6 +38,8 @@ def sim_process(args):
     scene_name = args.scene_name
     action_path = args.action_path
     save_path = args.save_path
+    main_target_states = args.target_states
+    removed_items = args.removed_items
 
     heading="import os \nimport json\nimport yaml\nimport omnigibson as og\nfrom action_list import * \nfrom action_utils import *\n"
     config_filename="./prompt_files/bddl_task.yaml"
@@ -63,7 +67,7 @@ def sim_process(args):
             if os.path.exists(os.path.join(save_path, f"subtask_{subtask_iter}")):
                 break
         sub_save_path = os.path.join(save_path, f"subtask_{subtask_iter}")
-        init_pipeline(env, robot, camera,task_name=str(gpt_task_name), file_name=sub_save_path)
+        init_pipeline(env, robot, camera,task_name=str(gpt_task_name), file_name=sub_save_path, removed_items=removed_items)
         response_path = os.path.join(sub_save_path, 'response.json')
         feedback_path = os.path.join(sub_save_path, 'feedback.json')
         
@@ -165,13 +169,11 @@ def sim_process(args):
         #         action.act(robot,env,camera)
 
         subtask_iter += 1
-        #TODO choiszt need to add rename
+        #TODO choiszt need to add renametarget_states
         #verify the whole task
         if critic == 'succeed':
-            with open("/shared/liushuai/OmniGibson/prompt_files/excel.json","r")as f:
-                goal=json.load(f)
             signal=False
-            target=goal[task_name]['target_states']
+            target=main_target_states
             for tar in target:
                 if not verify_taskgoal(env,*tar):
                     signal=False

@@ -16,9 +16,9 @@ gm.ENABLE_TRANSITION_RULES = False
 from robot_action import *
 import yaml
 
-def init_pipeline(env, robot, camera, task_name, file_name=None):
+def init_pipeline(env, robot, camera, task_name, file_name=None, removed_items=None):
     iter=0
-    cam=Camera(robot=env.robots[0],camera=camera,env=env,filename=file_name,TASK=task_name)
+    cam=Camera(robot=env.robots[0],camera=camera,env=env,filename=file_name,TASK=task_name, removed_items=removed_items)
     robot=ROBOT(env.robots[0],env)
 
     robot.robot.visible=False

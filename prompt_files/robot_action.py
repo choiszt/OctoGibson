@@ -132,7 +132,7 @@ def Turn_90(robot, pos=None):
 
 # class of flying camera
 class Camera():
-    def __init__(self, robot, camera, env, filename,TASK, position=np.array([-2.48302418,  1.55655398,  2.22882511]),orientation=np.array([ 0.56621324, -0.0712958 , -0.10258276,  0.81473692])):
+    def __init__(self, robot, camera, env, filename,TASK, position=np.array([-2.48302418,  1.55655398,  2.22882511]),orientation=np.array([ 0.56621324, -0.0712958 , -0.10258276,  0.81473692]), removed_items=None):
         self.robot=robot
         self.camera=camera
         self.env=env
@@ -148,6 +148,7 @@ class Camera():
         self.OG_results=self._decomposed()
         self.blacklist=["walls","electric_switch","floors","ceilings","window"]
         self.task=TASK
+        self.removed_items = removed_items
 
     def _getallobject(self):
         allobject=[]
@@ -340,17 +341,11 @@ class Camera():
 
     def _decomposed(self): #decomposed all the object in the env at the very beginning
         OG_results=[]
-        with open("/shared/liushuai/OmniGibson/prompt_files/excel.json","r")as f:
-            bddl_blacklist=json.load(f)
-        try:
-            removed_item=bddl_blacklist[self.env.task.activity_name]['removed_item']
-        except:
-            removed_item=[]
         parsed_objects=self.env.task.activity_conditions.parsed_objects
         OG_dict=self.env.task.load_task_metadata()["inst_to_name"] #format in OG E.g: floor.n.01_1 -> floors_hcqtge_0
         for key in parsed_objects.keys():
             for ele in parsed_objects[key]: #E.g:bacon.n.01_1
-                if ele not in removed_item:
+                if ele not in self.removed_items:
                     OG_results.append(OG_dict[ele])
 
         return OG_results
