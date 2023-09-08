@@ -1,6 +1,6 @@
 import os
 import json
-from test_json import *
+from parse_annotation import *
 import env_utils_sim as eu 
 from run_command import *
 
