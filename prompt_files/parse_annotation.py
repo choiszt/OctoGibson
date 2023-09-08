@@ -1,7 +1,7 @@
 import json
 
 def parse(num):
-    with open('./test.json', 'r') as f:
+    with open('/shared/liushuai/OmniGibson/EVLM_Task/task_0908.json', 'r') as f:
         data = json.load(f)
     
     for k, v in enumerate(data):
