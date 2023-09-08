@@ -1,0 +1,807 @@
+{
+    "task": "defrost_meat",
+    "0_detect_surroundings": {
+        "fridge_dszchb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.916481117690586,
+                "theta_deg": -140.50582276428094,
+                "phi_deg": 75.05835763179121
+            },
+            "orientation_in_bot": [
+                0.01046941200813857,
+                0.019487990078025874,
+                0.4761875052503833,
+                0.8790654523403468
+            ],
+            "position_in_world": [
+                -6.848034381866455,
+                -1.78300940990448,
+                0.8840970396995544
+            ],
+            "bot_in_world": [
+                -3.214064836502075,
+                -2.94917893409729,
+                0.004814416170120239
+            ],
+            "path": "./prompt_files/data/defrost_meat/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "countertop_tpuwys_6": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.6969650422813105,
+                "theta_deg": -102.1953972946526,
+                "phi_deg": 70.83478600799792
+            },
+            "orientation_in_bot": [
+                0.01046941200813857,
+                0.019487990078025874,
+                0.4761875052503833,
+                0.8790654523403468
+            ],
+            "position_in_world": [
+                -5.614899169925001,
+                -3.82634741211,
+                0.8651575012200001
+            ],
+            "bot_in_world": [
+                -3.214064836502075,
+                -2.94917893409729,
+                0.004814416170120239
+            ],
+            "path": "./prompt_files/data/defrost_meat/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "chicken_189": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.864278909156578,
+                "theta_deg": -139.04172623875778,
+                "phi_deg": 69.31196500520687
+            },
+            "orientation_in_bot": [
+                -0.0008614223007937902,
+                0.017000430285799804,
+                0.4198970864654988,
+                0.9074120784403868
+            ],
+            "position_in_world": [
+                -6.7220234870910645,
+                -1.9087237119674683,
+                1.2475252151489258
+            ],
+            "bot_in_world": [
+                -3.214064836502075,
+                -2.94917893409729,
+                0.004814416170120239
+            ],
+            "path": "./prompt_files/data/defrost_meat/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "sink_czyfhq_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 4.815087112109597,
+                "theta_deg": -92.87614711035214,
+                "phi_deg": 85.16270618856673
+            },
+            "orientation_in_bot": [
+                0.021990205072525793,
+                -0.002412277706877131,
+                0.9934097036383983,
+                -0.1124623159738528
+            ],
+            "position_in_world": [
+                -7.369039058685303,
+                -5.35038948059082,
+                0.39907264709472656
+            ],
+            "bot_in_world": [
+                -3.214064836502075,
+                -2.94917893409729,
+                0.004814416170120239
+            ],
+            "path": "./prompt_files/data/defrost_meat/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "bowl_188": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.2835308003176342,
+                "theta_deg": -112.16441152381913,
+                "phi_deg": 73.20667048350778
+            },
+            "orientation_in_bot": [
+                -0.0047975643449859945,
+                0.01523125145220006,
+                -0.2681610905336016,
+                0.963241725570163
+            ],
+            "position_in_world": [
+                -6.322763919830322,
+                -3.5120413303375244,
+                0.8996607661247253
+            ],
+            "bot_in_world": [
+                -3.214064836502075,
+                -2.94917893409729,
+                0.004814416170120239
+            ],
+            "path": "./prompt_files/data/defrost_meat/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "chicken_189",
+                "inside",
+                "fridge_dszchb_0"
+            ],
+            [
+                "bowl_188",
+                "ontop",
+                "countertop_tpuwys_6"
+            ]
+        ],
+        "inventory": []
+    },
+    "1_detect_surroundings": {
+        "fridge_dszchb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.916481117690586,
+                "theta_deg": -140.50582276428094,
+                "phi_deg": 75.05835763179121
+            },
+            "orientation_in_bot": [
+                0.01046941200813857,
+                0.019487990078025874,
+                0.4761875052503833,
+                0.8790654523403468
+            ],
+            "position_in_world": [
+                -6.848034381866455,
+                -1.78300940990448,
+                0.8840970396995544
+            ],
+            "bot_in_world": [
+                -3.214064836502075,
+                -2.94917893409729,
+                0.004814416170120239
+            ],
+            "path": "./prompt_files/data/defrost_meat/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "countertop_tpuwys_6": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.6969650422813105,
+                "theta_deg": -102.1953972946526,
+                "phi_deg": 70.83478600799792
+            },
+            "orientation_in_bot": [
+                0.01046941200813857,
+                0.019487990078025874,
+                0.4761875052503833,
+                0.8790654523403468
+            ],
+            "position_in_world": [
+                -5.614899169925001,
+                -3.82634741211,
+                0.8651575012200001
+            ],
+            "bot_in_world": [
+                -3.214064836502075,
+                -2.94917893409729,
+                0.004814416170120239
+            ],
+            "path": "./prompt_files/data/defrost_meat/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "chicken_189": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.864278909156578,
+                "theta_deg": -139.04172623875778,
+                "phi_deg": 69.31196500520687
+            },
+            "orientation_in_bot": [
+                -0.0008614223007937902,
+                0.017000430285799804,
+                0.4198970864654988,
+                0.9074120784403868
+            ],
+            "position_in_world": [
+                -6.7220234870910645,
+                -1.9087237119674683,
+                1.2475252151489258
+            ],
+            "bot_in_world": [
+                -3.214064836502075,
+                -2.94917893409729,
+                0.004814416170120239
+            ],
+            "path": "./prompt_files/data/defrost_meat/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "sink_czyfhq_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 4.815087112109597,
+                "theta_deg": -92.87614711035214,
+                "phi_deg": 85.16270618856673
+            },
+            "orientation_in_bot": [
+                0.021990205072525793,
+                -0.002412277706877131,
+                0.9934097036383983,
+                -0.1124623159738528
+            ],
+            "position_in_world": [
+                -7.369039058685303,
+                -5.35038948059082,
+                0.39907264709472656
+            ],
+            "bot_in_world": [
+                -3.214064836502075,
+                -2.94917893409729,
+                0.004814416170120239
+            ],
+            "path": "./prompt_files/data/defrost_meat/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "bowl_188": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.2835308003176342,
+                "theta_deg": -112.16441152381913,
+                "phi_deg": 73.20667048350778
+            },
+            "orientation_in_bot": [
+                -0.0047975643449859945,
+                0.01523125145220006,
+                -0.2681610905336016,
+                0.963241725570163
+            ],
+            "position_in_world": [
+                -6.322763919830322,
+                -3.5120413303375244,
+                0.8996607661247253
+            ],
+            "bot_in_world": [
+                -3.214064836502075,
+                -2.94917893409729,
+                0.004814416170120239
+            ],
+            "path": "./prompt_files/data/defrost_meat/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "chicken_189",
+                "inside",
+                "fridge_dszchb_0"
+            ],
+            [
+                "bowl_188",
+                "ontop",
+                "countertop_tpuwys_6"
+            ]
+        ],
+        "inventory": []
+    },
+    "2_detect_surroundings": {
+        "fridge_dszchb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.916481117690586,
+                "theta_deg": -140.50582276428094,
+                "phi_deg": 75.05835763179121
+            },
+            "orientation_in_bot": [
+                0.01046941200813857,
+                0.019487990078025874,
+                0.4761875052503833,
+                0.8790654523403468
+            ],
+            "position_in_world": [
+                -6.848034381866455,
+                -1.78300940990448,
+                0.8840970396995544
+            ],
+            "bot_in_world": [
+                -3.214064836502075,
+                -2.94917893409729,
+                0.004814416170120239
+            ],
+            "path": "./prompt_files/data/defrost_meat/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "countertop_tpuwys_6": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.6969650422813105,
+                "theta_deg": -102.1953972946526,
+                "phi_deg": 70.83478600799792
+            },
+            "orientation_in_bot": [
+                0.01046941200813857,
+                0.019487990078025874,
+                0.4761875052503833,
+                0.8790654523403468
+            ],
+            "position_in_world": [
+                -5.614899169925001,
+                -3.82634741211,
+                0.8651575012200001
+            ],
+            "bot_in_world": [
+                -3.214064836502075,
+                -2.94917893409729,
+                0.004814416170120239
+            ],
+            "path": "./prompt_files/data/defrost_meat/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "chicken_189": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.864278909156578,
+                "theta_deg": -139.04172623875778,
+                "phi_deg": 69.31196500520687
+            },
+            "orientation_in_bot": [
+                -0.0008614223007937902,
+                0.017000430285799804,
+                0.4198970864654988,
+                0.9074120784403868
+            ],
+            "position_in_world": [
+                -6.7220234870910645,
+                -1.9087237119674683,
+                1.2475252151489258
+            ],
+            "bot_in_world": [
+                -3.214064836502075,
+                -2.94917893409729,
+                0.004814416170120239
+            ],
+            "path": "./prompt_files/data/defrost_meat/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "sink_czyfhq_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 4.815087112109597,
+                "theta_deg": -92.87614711035214,
+                "phi_deg": 85.16270618856673
+            },
+            "orientation_in_bot": [
+                0.021990205072525793,
+                -0.002412277706877131,
+                0.9934097036383983,
+                -0.1124623159738528
+            ],
+            "position_in_world": [
+                -7.369039058685303,
+                -5.35038948059082,
+                0.39907264709472656
+            ],
+            "bot_in_world": [
+                -3.214064836502075,
+                -2.94917893409729,
+                0.004814416170120239
+            ],
+            "path": "./prompt_files/data/defrost_meat/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "bowl_188": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.2835308003176342,
+                "theta_deg": -112.16441152381913,
+                "phi_deg": 73.20667048350778
+            },
+            "orientation_in_bot": [
+                -0.0047975643449859945,
+                0.01523125145220006,
+                -0.2681610905336016,
+                0.963241725570163
+            ],
+            "position_in_world": [
+                -6.322763919830322,
+                -3.5120413303375244,
+                0.8996607661247253
+            ],
+            "bot_in_world": [
+                -3.214064836502075,
+                -2.94917893409729,
+                0.004814416170120239
+            ],
+            "path": "./prompt_files/data/defrost_meat/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "chicken_189",
+                "inside",
+                "fridge_dszchb_0"
+            ],
+            [
+                "bowl_188",
+                "ontop",
+                "countertop_tpuwys_6"
+            ]
+        ],
+        "inventory": []
+    },
+    "3_detect_surroundings": {
+        "fridge_dszchb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.916481117690586,
+                "theta_deg": -140.50582276428094,
+                "phi_deg": 75.05835763179121
+            },
+            "orientation_in_bot": [
+                0.01046941200813857,
+                0.019487990078025874,
+                0.4761875052503833,
+                0.8790654523403468
+            ],
+            "position_in_world": [
+                -6.848034381866455,
+                -1.78300940990448,
+                0.8840970396995544
+            ],
+            "bot_in_world": [
+                -3.214064836502075,
+                -2.94917893409729,
+                0.004814416170120239
+            ],
+            "path": "./prompt_files/data/defrost_meat/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "countertop_tpuwys_6": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.6969650422813105,
+                "theta_deg": -102.1953972946526,
+                "phi_deg": 70.83478600799792
+            },
+            "orientation_in_bot": [
+                0.01046941200813857,
+                0.019487990078025874,
+                0.4761875052503833,
+                0.8790654523403468
+            ],
+            "position_in_world": [
+                -5.614899169925001,
+                -3.82634741211,
+                0.8651575012200001
+            ],
+            "bot_in_world": [
+                -3.214064836502075,
+                -2.94917893409729,
+                0.004814416170120239
+            ],
+            "path": "./prompt_files/data/defrost_meat/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "chicken_189": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.864278909156578,
+                "theta_deg": -139.04172623875778,
+                "phi_deg": 69.31196500520687
+            },
+            "orientation_in_bot": [
+                -0.0008614223007937902,
+                0.017000430285799804,
+                0.4198970864654988,
+                0.9074120784403868
+            ],
+            "position_in_world": [
+                -6.7220234870910645,
+                -1.9087237119674683,
+                1.2475252151489258
+            ],
+            "bot_in_world": [
+                -3.214064836502075,
+                -2.94917893409729,
+                0.004814416170120239
+            ],
+            "path": "./prompt_files/data/defrost_meat/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "sink_czyfhq_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 4.815087112109597,
+                "theta_deg": -92.87614711035214,
+                "phi_deg": 85.16270618856673
+            },
+            "orientation_in_bot": [
+                0.021990205072525793,
+                -0.002412277706877131,
+                0.9934097036383983,
+                -0.1124623159738528
+            ],
+            "position_in_world": [
+                -7.369039058685303,
+                -5.35038948059082,
+                0.39907264709472656
+            ],
+            "bot_in_world": [
+                -3.214064836502075,
+                -2.94917893409729,
+                0.004814416170120239
+            ],
+            "path": "./prompt_files/data/defrost_meat/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "bowl_188": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.2835308003176342,
+                "theta_deg": -112.16441152381913,
+                "phi_deg": 73.20667048350778
+            },
+            "orientation_in_bot": [
+                -0.0047975643449859945,
+                0.01523125145220006,
+                -0.2681610905336016,
+                0.963241725570163
+            ],
+            "position_in_world": [
+                -6.322763919830322,
+                -3.5120413303375244,
+                0.8996607661247253
+            ],
+            "bot_in_world": [
+                -3.214064836502075,
+                -2.94917893409729,
+                0.004814416170120239
+            ],
+            "path": "./prompt_files/data/defrost_meat/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "chicken_189",
+                "inside",
+                "fridge_dszchb_0"
+            ],
+            [
+                "bowl_188",
+                "ontop",
+                "countertop_tpuwys_6"
+            ]
+        ],
+        "inventory": []
+    }
+}

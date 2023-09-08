@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the fridge.\n(2) Open the fridge.\n(3) Grasp the chicken from the fridge.\n(4) Close the fridge.\n(5) Defrost the chicken.",
+    "code": "def act(robot,env,camera):\n    # Subtask 5: Defrost the chicken\n    chicken = registry(env,\"chicken_189\")\n    heat(robot, chicken)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": true
+}

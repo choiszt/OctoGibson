@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register all the objects\n(2) Open the fridge\n(3) Take out the hot dogs from the fridge\n(4) Place the hot dogs on the frying pan\n(5) Cook the hot dogs",
+    "code": "def act(robot,env,camera):\n    # Subtask 4: Place the hot dogs on the frying pan\n    frying_pan_85 = registry(env, \"frying_pan_85\")\n    put_ontop(robot, hotdog_87, frying_pan_85)\n    donothing(env)\n    put_ontop(robot, hotdog_86, frying_pan_85)\n    donothing(env)\n",
+    "error": "name 'hotdog_87' is not defined",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}
