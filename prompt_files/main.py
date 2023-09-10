@@ -2,7 +2,7 @@ import os
 import json
 from parse_annotation import *
 import env_utils_sim as eu 
-from run_command import *
+from omni_base.prompt_files.test_run_command import *
 
 TASK_NUM = 100
 base_path = './data'

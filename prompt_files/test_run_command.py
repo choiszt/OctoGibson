@@ -29,10 +29,10 @@ def terminate_processes(processes):
 
 
 if __name__ == "__main__":
-    test1_command = "python prompt_files/execute_gpt.py"
-    test2_command = "python prompt_files/execute_sim.py --/log/level=error --/log/fileLogLevel=error --/log/outputStreamLevel=error"
-    conda_env1 = "gpt"
-    conda_env2 = "omni"
+    test1_command = "python prompt_files/1.py"
+    test2_command = "python prompt_files/2.py"
+    conda_env1 = "base"
+    conda_env2 = "kitti"
 
     processes = []
     processes.append(run_command_in_terminal(test1_command, conda_env1))
