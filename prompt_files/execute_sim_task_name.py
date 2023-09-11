@@ -16,7 +16,7 @@ import time
 from bddl_verification import *
 import sys
 import bddl
-from verify_taskgoal import verify_taskgoal
+from verify_taskgoal import *
 import argparse
 
 def parse_args():
@@ -137,10 +137,13 @@ def sim_process(args):
                 value = eu.verify_obj_2(env,obj[0], obj[1], obj[2])
                 if not value:
                     error += f"State {obj[1]} of object {obj[0]} is not {obj[2]}\n"
-            # for obj in target_states['obj_3']:
-            #     value = eu.verify_obj_3(env,obj[0], obj[1], obj[2],obj[3])
-            #     if not value:
-            #         error += f"{obj[0]} is not {obj[1]} {obj[2]}\n"
+            #verify binary states
+            for obj in target_states['obj_3']:
+                value = eu.verify_obj_3(env,obj[0], obj[1], obj[2],obj[3])
+                if not value:
+                    error += f"{obj[0]} is not {obj[1]} {obj[2]}\n"
+
+
             if len(error) == 0:
                 subtask = subtask
                 error = error
@@ -175,11 +178,18 @@ def sim_process(args):
         if critic == 'succeed':
             signal=False
             target=main_target_states
-            for tar in target:
-                if not verify_taskgoal(env,*tar):
-                    signal=False
-                    break
-                signal=True
+            if len(target)==3:
+                for tar in target:
+                    if not verify_taskgoal(env,*tar):
+                        signal=False
+                        break
+                    signal=True
+            if len(target)==4:
+                for tar in target:
+                    if not verify_binary_taskgoal(env,*tar):
+                        signal=False
+                        break
+                    signal=True
             if signal:
                 main_succeed = True
                 print(f"finish {task_name}!!!!! congrats!!!!!")
