@@ -1,13 +1,15 @@
 import pandas as pd
 import json
 
-f = pd.ExcelFile('./task.xlsx')
+f = pd.ExcelFile('./tasks.xlsx')
 all_tasks = {}
 for name in f.sheet_names:
     print(name)
     if name == '工作时长':
         continue
-    data = pd.read_excel(io='./task.xlsx', sheet_name=name, keep_default_na=False)
+    if name == 'all':
+        continue
+    data = pd.read_excel(io='./tasks.xlsx', sheet_name=name, keep_default_na=False)
     task_name = data['BDDL_Task']
     gpt_task = data['EVLM_Task']
     target_states = data['Target States']
@@ -43,4 +45,5 @@ for name in f.sheet_names:
         all_tasks[gpt_task[i]] = one_task
         
 with open('test.json', 'w') as f:
+    print(len(list(all_tasks.keys())))
     f.write(json.dumps(all_tasks))
