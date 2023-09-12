@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Register the carrot.\n(2) Put the carrot inside the saucepot.",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Register the carrot\n    carrot = registry(env,\"carrot_151\")\n    # Subtask 2: Put the carrot inside the saucepot\n    put_inside(robot, carrot, saucepot)\n    donothing(env)\n",
-    "error": "name 'saucepot' is not defined",
-    "critic": "fail",
-    "reset": true,
-    "main_succeed": false
-}

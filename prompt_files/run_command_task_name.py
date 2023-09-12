@@ -5,12 +5,12 @@ import os
 
 
 def run_command_in_terminal(command_args, process_name, conda_env):
-    activate_env_command = f"source /opt/anaconda3/bin/activate {conda_env}"
+    activate_env_command = f"source /home/cooyes/anaconda3/bin/activate {conda_env}"
     if process_name == 'gpt':
-        command = f"python prompt_files/execute_gpt.py -t {command_args['t']}"
+        command = f"python /home/cooyes/Desktop/liushuai/omnigibson/prompt_files/execute_gpt_task_name.py -t {command_args['t']}"
         full_command = f"bash -c '{activate_env_command} && {command}'"
-    elif process_name == 'omni':
-        command = f"python prompt_files/execute_sim.py -t {command_args['t']} --/log/level=error --/log/fileLogLevel=error --/log/outputStreamLevel=error"
+    elif process_name == 'omnigibson':
+        command = f"python /home/cooyes/Desktop/liushuai/omnigibson/prompt_files/execute_sim_task_name.py -t {command_args['t']} --/log/level=error --/log/fileLogLevel=error --/log/outputStreamLevel=error>prompt_files/sim_error.txt"
         full_command = f"bash -c '{activate_env_command} && {command}'"
     return subprocess.Popen(["gnome-terminal", "--", "bash", "-c", full_command])
 

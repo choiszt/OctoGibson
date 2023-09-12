@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move the robot to the fax machine.",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Move the robot to the fax machine\n    facsimile_188 = registry(env,\"facsimile_188\")\n    MoveBot(env, robot, facsimile_188, camera)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

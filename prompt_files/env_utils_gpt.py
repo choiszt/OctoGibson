@@ -578,7 +578,7 @@ def save_input(path, input):
 import pkg_resources
 def load_prompt(prompt):
     # package_path = pkg_resources.resource_filename("prompt_files", "")
-    return load_text(f"/shared/liushuai/OmniGibson/prompt_files/prompts/{prompt}.txt")
+    return load_text(f"/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/prompts/{prompt}.txt")
 
 
 def save_response(path, response):

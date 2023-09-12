@@ -16,8 +16,8 @@ import time
 from bddl_verification import *
 import sys
 import bddl
-from verify_taskgoal import verify_taskgoal
-def sim_process(task_name, scene_name, action_path, save_path):
+from verify_taskgoal import *
+def sim_process(task_name, scene_name, save_path,gpt_name):
     heading="import os \nimport json\nimport yaml\nimport omnigibson as og\nfrom action_list import * \nfrom action_utils import *\n"
     config_filename="./prompt_files/bddl_task.yaml"
     cfg = yaml.load(open(config_filename, "r"), Loader=yaml.FullLoader)
@@ -44,10 +44,11 @@ def sim_process(task_name, scene_name, action_path, save_path):
             if os.path.exists(os.path.join(save_path, f"subtask_{subtask_iter}")):
                 break
         sub_save_path = os.path.join(save_path, f"subtask_{subtask_iter}")
-        with open ("/shared/liushuai/OmniGibson/prompt_files/excel.json","r")as f:
+        with open ("/home/cooyes/Desktop/liushuai/omnigibson/EVLM_Task/sub1.json","r")as f:
             a=json.load(f)
-            gpt_task_name=a[task_name]['gpt_task']
-        init_pipeline(env, robot, camera,task_name=str(gpt_task_name), file_name=sub_save_path)
+            gpt_task_name=a[gpt_name]['gpt_task']
+            removed_item=a[gpt_name]['removed_item']
+        init_pipeline(env, robot, camera,task_name=str(gpt_task_name), file_name=sub_save_path,removed_items=removed_item)
         response_path = os.path.join(sub_save_path, 'response.json')
         feedback_path = os.path.join(sub_save_path, 'feedback.json')
         
@@ -75,14 +76,14 @@ def sim_process(task_name, scene_name, action_path, save_path):
                 break
             else:
                 subtask, code = answer['subtask'], answer['code']
-                with open(f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{subtask_iter}/action.py", 'w') as f:
+                with open(f"/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/data/{gpt_name}/subtask_{subtask_iter}/action.py", 'w') as f:
                     f.write(heading)
                     f.write(code)
                 # time.sleep(2)
                 sys.path=list(set(sys.path))
                 if(subtask_iter!=1):
-                    sys.path.remove(f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{subtask_iter-1}")
-                sys.path.append(f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{subtask_iter}")
+                    sys.path.remove(f"/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/data/{gpt_name}/subtask_{subtask_iter-1}")
+                sys.path.append(f"/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/data/{gpt_name}/subtask_{subtask_iter}")
                 import action
                 time.sleep(1)
                 try:
@@ -120,6 +121,10 @@ def sim_process(task_name, scene_name, action_path, save_path):
             #     value = eu.verify_obj_3(env,obj[0], obj[1], obj[2],obj[3])
             #     if not value:
             #         error += f"{obj[0]} is not {obj[1]} {obj[2]}\n"
+                for obj in target_states['obj_3']:
+                    value = eu.verify_obj_3(env,obj[0], obj[1], obj[2],obj[3])
+                    if not value:
+                        error += f"{obj[0]} is not {obj[1]} {obj[2]}\n"            
             if len(error) == 0:
                 subtask = subtask
                 error = error
@@ -140,7 +145,7 @@ def sim_process(task_name, scene_name, action_path, save_path):
         ###reset and run the previous code #TODO: NEED TO DELETE subtask_iter python.py *** CHOISZT 8.28
         
         # for iter_num in range(1,subtask_iter):
-        #     path=f"/shared/liushuai/OmniGibson/prompt_files/data/{task_name}/subtask_{iter_num}"
+        #     path=f"/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/data/{gpt_name}/subtask_{iter_num}"
         #     with open(os.path.join(path,"feedback.json"))as f:
         #         tmp_feedback=json.load(f)
         #     if tmp_feedback['critic']=='succeed':
@@ -152,18 +157,25 @@ def sim_process(task_name, scene_name, action_path, save_path):
         #TODO choiszt need to add rename
         #verify the whole task
         if critic == 'succeed':
-            with open("/shared/liushuai/OmniGibson/prompt_files/excel.json","r")as f:
+            with open("/home/cooyes/Desktop/liushuai/omnigibson/EVLM_Task/sub1.json","r")as f:
                 goal=json.load(f)
             signal=False
-            target=goal[task_name]['target_states']
-            for tar in target:
-                if not verify_taskgoal(env,*tar):
-                    signal=False
-                    break
-                signal=True
+            target=goal[gpt_name]['target_states']
+            if len(target)==3:
+                for tar in target:
+                    if not verify_taskgoal(env,*tar):
+                        signal=False
+                        break
+                    signal=True
+            if len(target)==4:
+                for tar in target:
+                    if not verify_binary_taskgoal(env,*tar):
+                        signal=False
+                        break
+                    signal=True
             if signal:
                 main_succeed = True
-                print(f"finish {task_name}!!!!! congrats!!!!!")
+                print(f"finish {gpt_name}!!!!! congrats!!!!!")
                 eu.save_feedback(feedback_path, subtask, code, error, critic, reset, main_succeed)
                 break
             else:
@@ -174,18 +186,25 @@ def sim_process(task_name, scene_name, action_path, save_path):
         if reset: #
             if subtask_iter!=1:
                 for iter_num in range(1,subtask_iter):
-                    path=f"./prompt_files/data/{task_name}/subtask_{iter_num}"
+                    path=f"./prompt_files/data/{gpt_name}/subtask_{iter_num}"
                     with open(os.path.join(path,"feedback.json"))as f:
                         tmp_feedback=json.load(f)
                     if tmp_feedback['critic']=='succeed':
                         time.sleep(1)
-                        module=importlib.import_module(f"prompt_files.data.{task_name}.subtask_{iter_num}.action")
-                        print(f"prompt_files.data.{task_name}.subtask_{iter_num}.action retrieve")
+                        module=importlib.import_module(f"prompt_files.data.{gpt_name}.subtask_{iter_num}.action")
+                        print(f"prompt_files.data.{gpt_name}.subtask_{iter_num}.action retrieve")
                         module.act(robot,env,camera)   
         if subtask_iter>15:
             print(f"already attempt {subtask_iter} time, it is too long!")
             break
                         
 
+with open("/home/cooyes/Desktop/liushuai/omnigibson/EVLM_Task/sub1.json","r")as f:
+    task=json.load(f)
 
-sim_process(task_name="cook_hot_dogs",scene_name="Benevolence_1_int",action_path="./prompt_files/action.py",save_path=f"./prompt_files/data/cook_hot_dogs")
+i=0
+gpt_name=sorted(list(task))[i]
+task_name=task[gpt_name]['task_name']
+scene=task[gpt_name]['env']
+print(i,gpt_name,task_name)
+sim_process(task_name=task_name,scene_name=scene,save_path=f"./prompt_files/data/{gpt_name}",gpt_name=gpt_name)

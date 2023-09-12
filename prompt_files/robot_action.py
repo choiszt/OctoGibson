@@ -142,13 +142,14 @@ class Camera():
         self.seglist=[]  #(seg_file_id,object_name,objectclass,instance_id,2d_bbox,3d_bbox)
         self.instancemap=[]
         self.FILENAME=filename
+        self.removed_items = removed_items
         self.allobject=self._getallobject()
         self.result_json={}
         self.actionlist=[] #check the action to appear only once
         self.OG_results=self._decomposed()
         self.blacklist=["walls","electric_switch","floors","ceilings","window"]
         self.task=TASK
-        self.removed_items = removed_items
+    
 
     def _getallobject(self):
         allobject=[]

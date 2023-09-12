@@ -9,7 +9,7 @@ import json
 #ADD "--/log/level=error --/log/fileLogLevel=error --/log/outputStreamLevel=error"
 # Configure macros for maximum performance
 gm.USE_GPU_DYNAMICS = True
-gm.ENABLE_FLATCACHE = True
+# gm.ENABLE_FLATCACHE = True
 gm.ENABLE_OBJECT_STATES = True
 gm.ENABLE_TRANSITION_RULES = False
 # from omni_base.prompt_files.robot_action import *

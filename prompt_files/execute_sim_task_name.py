@@ -31,7 +31,7 @@ def parse_args():
 
 def sim_process(args):
     main_task_name = args.task_name
-    with open('./task.json') as f:
+    with open('/home/cooyes/Desktop/liushuai/omnigibson/EVLM_Task/task_0911.json') as f:
         data = json.load(f)
     task_data = data[main_task_name]
     task_name = task_data['task_name']
@@ -49,8 +49,8 @@ def sim_process(args):
     cfg["task"]["activity_name"] = task_name
     print(cfg)
     # Load the environment
-    env = og.Environment(configs=cfg, action_timestep=1/60., physics_timestep=1/60.)
-
+    env = og.Environment(configs=cfg)
+    print("success")
     robot = env.robots[0]
     camera= og.sim.viewer_camera 
     bbox_modalities =["bbox_2d_loose"]# "bbox_2d_tight" not use 

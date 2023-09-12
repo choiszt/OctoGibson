@@ -94,4 +94,11 @@ def gpt_process(save_path, openai_api_key):
             break
 
 api_key="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"
-gpt_process(save_path="/shared/liushuai/OmniGibson/prompt_files/data/cook_hot_dogs",openai_api_key=api_key)
+with open("/home/cooyes/Desktop/liushuai/omnigibson/EVLM_Task/sub1.json","r")as f:
+    task=json.load(f)
+i=0
+gpt_name=sorted(list(task))[i]
+task_name=task[gpt_name]['task_name']
+scene=task[gpt_name]['env']
+print(i,gpt_name,task_name)
+gpt_process(save_path=f"/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/data/{gpt_name}",openai_api_key=api_key)

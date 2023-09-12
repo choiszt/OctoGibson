@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Open the oven.\n(2) Put the duck inside the oven.\n(3) Cook the duck.",
-    "code": "def act(robot,env,camera):\n    duck = registry(env,\"duck_171\")\n    oven = registry(env,\"oven_wuinhm_0\")\n    put_inside(robot, duck, oven)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}
