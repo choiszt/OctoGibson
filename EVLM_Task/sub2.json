@@ -1,0 +1,390 @@
+{
+    "put_a_mug_inside_sink": {
+        "task_name": "collecting_dishes_from_around_house",
+        "gpt_task": "put_a_mug_inside_sink",
+        "removed_item": [
+            "mug.n.04_2",
+            "coffee_table.n.01_1",
+            "console_table.n.01_1"
+        ],
+        "target_states": [
+            [
+                "mug.n.04_1",
+                "inside",
+                "sink.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Wainscott_0_int"
+    },
+    "put_water_filter_and_pebble_in_tank_and_close_it": {
+        "task_name": "setup_a_fish_tank",
+        "gpt_task": "put_water_filter_and_pebble_in_tank_and_close_it",
+        "removed_item": [
+            "bucket.n.01_1",
+            "water.n.06_1"
+        ],
+        "target_states": [
+            [
+                "tank.n.02_1",
+                "openable",
+                "0"
+            ],
+            [
+                "water_filter.n.01_1",
+                "inside",
+                "tank.n.02_1",
+                "1"
+            ],
+            [
+                "pebble.n.01_1",
+                "inside",
+                "tank.n.02_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_0_int"
+    },
+    "put_pebble_in_tank_and_close_it": {
+        "task_name": "setup_a_fish_tank",
+        "gpt_task": "put_pebble_in_tank_and_close_it",
+        "removed_item": [
+            "bucket.n.01_1",
+            "water.n.06_1"
+        ],
+        "target_states": [
+            [
+                "tank.n.02_1",
+                "openable",
+                "0"
+            ],
+            [
+                "pebble.n.01_1",
+                "inside",
+                "tank.n.02_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_0_int"
+    },
+    "put_a_bowl_on_the_table": {
+        "task_name": "laying_out_snacks_at_work",
+        "gpt_task": "put_a_bowl_on_the_table",
+        "removed_item": [
+            "bowl.n.01_2"
+        ],
+        "target_states": [
+            [
+                "bowl.n.01_1",
+                "ontop",
+                "conference_table.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "office_large"
+    },
+    "put_a_book_in_the_carton": {
+        "task_name": "boxing_books_up_for_storage",
+        "gpt_task": "put_a_book_in_the_carton",
+        "removed_item": [
+            "book.n.02_2",
+            "book.n.02_3",
+            "book.n.02_4",
+            "book.n.02_5",
+            "book.n.02_6",
+            "book.n.02_7"
+        ],
+        "target_states": [
+            [
+                "book.n.02_1",
+                "inside",
+                "carton.n.02_1",
+                "1"
+            ]
+        ],
+        "env": "Beechwood_0_int"
+    },
+    "put_glass_in_the_bin": {
+        "task_name": "dispose_of_glass",
+        "gpt_task": "put_glass_in_the_bin",
+        "removed_item": [
+            "water_glass.n.02_2"
+        ],
+        "target_states": [
+            [
+                "water_glass.n.02_1",
+                "inside",
+                "recycling_bin.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "house_single_floor"
+    },
+    "put_carboy_in_the_bin": {
+        "task_name": "recycling_glass_bottles",
+        "gpt_task": "put_carboy_in_the_bin",
+        "removed_item": [
+            "carboy.n.01_2"
+        ],
+        "target_states": [
+            [
+                "carboy.n.01_1",
+                "inside",
+                "recycling_bin.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Beechwood_0_int"
+    },
+    "buy_a_air_conditioner": {
+        "task_name": "buy_a_air_conditioner",
+        "gpt_task": "buy_a_air_conditioner",
+        "removed_item": [
+            ""
+        ],
+        "target_states": [
+            [
+                "money.n.01_1",
+                "ontop",
+                "checkout.n.03_1",
+                "1"
+            ],
+            [
+                "air_conditioner.n.01_1",
+                "ontop",
+                "checkout.n.03_1",
+                "1"
+            ]
+        ],
+        "env": "grocery_store_cafe"
+    },
+    "buy_a_good_avocado": {
+        "task_name": "buy_a_good_avocado",
+        "gpt_task": "buy_a_good_avocado",
+        "removed_item": [
+            ""
+        ],
+        "target_states": [
+            [
+                "money.n.01_1",
+                "ontop",
+                "checkout.n.03_1",
+                "1"
+            ],
+            [
+                "avocado.n.01_1",
+                "ontop",
+                "checkout.n.03_1",
+                "1"
+            ]
+        ],
+        "env": "grocery_store_cafe"
+    },
+    "put_a_chair_on_the_floor_and_put_a_pitcher_and_a_teacup_in_the_table": {
+        "task_name": "setting_up_garden_furniture",
+        "gpt_task": "put_a_chair_on_the_floor_and_put_a_pitcher_and_a_teacup_in_the_table",
+        "removed_item": [
+            "lawn_chair.n.01_2",
+            "lawn_chair.n.01_3",
+            "teacup.n.02_2"
+        ],
+        "target_states": [
+            [
+                "pitcher.n.02_1",
+                "ontop",
+                "coffee_table.n.01_1",
+                "1"
+            ],
+            [
+                "lawn_chair.n.01_1",
+                "ontop",
+                "floor.n.01_1",
+                "1"
+            ],
+            [
+                "teacup.n.02_1",
+                "inside",
+                "coffee_table.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "house_single_floor"
+    },
+    "put_a_entire_leaf_in_the_ashcan": {
+        "task_name": "clean_decking",
+        "gpt_task": "put_a_entire_leaf_in_the_ashcan",
+        "removed_item": [
+            "entire_leaf.n.01_2",
+            "entire_leaf.n.01_3",
+            "entire_leaf.n.01_4",
+            "entire_leaf.n.01_5",
+            "mud.n.03_1",
+            "rail_fence.n.01_1",
+            "watering_can.n.01_1",
+            "liquid_soap.n.01_1",
+            "liquid_soap__bottle.n.01_1",
+            "bleaching_agent.n.01_1",
+            "bleaching_agent__atomizer.n.01_1",
+            "water.n.06_1",
+            "scrub_brush.n.01_1"
+        ],
+        "target_states": [
+            [
+                "entire_leaf.n.01_1",
+                "inside",
+                "ashcan.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Pomaria_0_garden"
+    },
+    "covering_a_boat_with_rope": {
+        "task_name": "covering_boat",
+        "gpt_task": "covering_a_boat_with_rope",
+        "removed_item": [
+            "tarpaulin.n.01_1"
+        ],
+        "target_states": [
+            [
+                "rope.n.01_1",
+                "ontop",
+                "kayak.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Pomaria_0_garden"
+    },
+    "packing_food_into_car": {
+        "task_name": "packing_picnic_food_into_car",
+        "gpt_task": "packing_food_into_car",
+        "removed_item": [
+            "driveway.n.01_1",
+            "tortilla_chip.n.01_1",
+            "tortilla_chip.n.01_2",
+            "muffin.n.01_1"
+        ],
+        "target_states": [
+            [
+                "hamburger.n.01_1",
+                "inside",
+                "bag.n.06_1",
+                "1"
+            ],
+            [
+                "pie.n.01_1",
+                "inside",
+                "bag.n.06_1",
+                "1"
+            ],
+            [
+                "crescent_roll.n.01_1",
+                "inside",
+                "bag.n.06_1",
+                "1"
+            ],
+            [
+                "water_bottle.n.01_1",
+                "inside",
+                "bag.n.06_1",
+                "1"
+            ],
+            [
+                "water_bottle.n.01_1",
+                "inside",
+                "car.n.01_1",
+                "1"
+            ],
+            [
+                "bag.n.06_1",
+                "inside",
+                "car.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Pomaria_0_garden"
+    },
+    "put_a_laptop_into_car": {
+        "task_name": "loading_the_car",
+        "gpt_task": "put_a_laptop_into_car",
+        "removed_item": [
+            ""
+        ],
+        "target_states": [
+            [
+                "laptop.n.01_1",
+                "inside",
+                "car.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "house_double_floor_lower"
+    },
+    "put_milk_and_chicken_into_the_sack_and_put_sack_on_the_floor": {
+        "task_name": "delivering_groceries_to_doorstep",
+        "gpt_task": "put_milk_and_chicken_into_the_sack_and_put_sack_on_the_floor",
+        "removed_item": [
+            "bread_slice.n.01_1"
+        ],
+        "target_states": [
+            [
+                "sack.n.01_1",
+                "ontop",
+                "floor.n.01_1",
+                "1"
+            ],
+            [
+                "carton__of__milk.n.01_1",
+                "inside",
+                "sack.n.01_1",
+                "1"
+            ],
+            [
+                "chicken.n.01_1",
+                "inside",
+                "sack.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Pomaria_0_garden"
+    },
+    "dispose_of_water_bottle": {
+        "task_name": "cleaning_parks",
+        "gpt_task": "dispose_of_water_bottle",
+        "removed_item": [
+            "water_bottle.n.01_2",
+            "water_bottle.n.01_3"
+        ],
+        "target_states": [
+            [
+                "water_bottle.n.01_1",
+                "inside",
+                "recycling_bin.n.01_1",
+                "1"
+            ],
+            [
+                "recycling_bin.n.01_1",
+                "inside",
+                "lawn.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Pomaria_0_garden"
+    },
+    "put_a_water_bottle_into_bin": {
+        "task_name": "cleaning_parks",
+        "gpt_task": "put_a_water_bottle_into_bin",
+        "removed_item": [
+            "water_bottle.n.01_2",
+            "water_bottle.n.01_3"
+        ],
+        "target_states": [
+            [
+                "water_bottle.n.01_1",
+                "inside",
+                "recycling_bin.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Pomaria_0_garden"
+    }
+}
