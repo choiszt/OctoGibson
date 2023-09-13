@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register the recycling bin and the water bottle.\n(2) Move the robot to the water bottle.\n(3) Grasp the water bottle.\n(4) Move the robot to the recycling bin.\n(5) Open the recycling bin.\n(6) Put the water bottle inside the recycling bin.\n(7) Close the recycling bin.",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Grasp the water bottle.\n    water_bottle_275 = registry(env,\"water_bottle_275\")\n    EasyGrasp(robot, water_bottle_275)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

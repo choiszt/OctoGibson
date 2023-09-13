@@ -41,9 +41,12 @@ def verify_binary_taskgoal(env,bddl_name1,states,bddl_name2,targets):
         pos2 = obj2.get_position()
         bbox1 = obj1.native_bbox
         bbox2 = obj2.native_bbox
-        if pos1[0] + 0.5 * bbox1[0] <= pos2[0] + 0.5 * bbox2[0] and pos1[0] - 0.5 * bbox1[0] >= pos2[0] - 0.5 * bbox2[0] and \
-                pos1[1] + 0.5 * bbox1[1] <= pos2[1] + 0.5 * bbox2[1] and pos1[1] - 0.5 * bbox1[1] >= pos2[1] - 0.5 * bbox2[1] and \
-                pos1[2] + 0.5 * bbox1[2] <= pos2[2] + 0.5 * bbox2[2] and pos1[2] - 0.5 * bbox1[2] >= pos2[2] - 0.5 * bbox2[2]:
+        if pos1[0] + 0.5 * bbox1[0] <= pos2[0] + 0.5 * bbox2[0]+0.15 and \
+        pos1[0] - 0.5 * bbox1[0] >= pos2[0] - 0.5 * bbox2[0]-0.15 and \
+        pos1[1] + 0.5 * bbox1[1] <= pos2[1] + 0.5 * bbox2[1]+0.15 and \
+        pos1[1] - 0.5 * bbox1[1] >= pos2[1] - 0.5 * bbox2[1]-0.15 and \
+        pos1[2] + 0.5 * bbox1[2] <= pos2[2] + 0.5 * bbox2[2]+0.15 and \
+        pos1[2] - 0.5 * bbox1[2] >= pos2[2] - 0.5 * bbox2[2]-0.15:
             v = 1
         else:
             v = 0

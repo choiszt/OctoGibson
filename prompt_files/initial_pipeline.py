@@ -11,7 +11,7 @@ import json
 gm.USE_GPU_DYNAMICS = True
 # gm.ENABLE_FLATCACHE = True
 gm.ENABLE_OBJECT_STATES = True
-gm.ENABLE_TRANSITION_RULES = False
+# gm.ENABLE_TRANSITION_RULES = False
 # from omni_base.prompt_files.robot_action import *
 from robot_action import *
 import yaml
@@ -34,7 +34,7 @@ def init_pipeline(env, robot, camera, task_name, file_name=None, removed_items=N
 
     donothing(env, action)
     print("ego:detect surroundings!!")
-    for i in range(4):
+    for i in range(8):
         cam.FlyingCapture(f'{iter}_detect_surroundings')   
         iter+=1   
         # Turn_90(robot.robot)
@@ -44,20 +44,20 @@ def init_pipeline(env, robot, camera, task_name, file_name=None, removed_items=N
     
     cam.collectdata_v2(robot.robot)
     
-    # donothing(env, action)
-    # robot.robot.visible=True
-    # robot.robot.set_position([-1.53887291 ,4.79978561 ,0.01504258])
-    # ppposition=robot.robot.get_position()
-    # cam_position=get_camera_position_bev(ppposition)
-    # cam.setposition(cam_position, trans_camera(robot.robot.get_orientation()))
-    # donothing(env, action)
-    # cam.FlyingCapture(f'{iter}_BEV_surroundings')   
-    # iter+=1  
+    robot.robot.visible=False
+    robot.robot.visible_only=True
+    donothing(env, action)
+    robot.robot.set_position([-1.53887291 ,4.79978561 ,0.01504258])
+    ppposition=robot.robot.get_position()
+    cam_position=get_camera_position_bev(ppposition)
+    cam.setposition(cam_position, trans_camera(robot.robot.get_orientation()))
+    donothing(env, action)
+    cam.FlyingCapture(f'{iter}_BEV_surroundings')   
+    iter+=1  
+    donothing(env, action)
+    cam.collectdata_v2(robot.robot)
 
-    # donothing(env, action)
-    # cam.collectdata_v2(robot.robot)
 
-    # robot.robot.visible=False
     cam.setposition(*origin_pos_ori)
     donothing(env, action)
 

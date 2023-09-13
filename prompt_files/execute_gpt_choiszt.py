@@ -86,7 +86,7 @@ def gpt_process(save_path, openai_api_key):
         # reset parameters
         subtask_iter += 1
         
-        if subtask_iter>15:
+        if subtask_iter>14:
             print(f"already attempt {subtask_iter} time, it is too long!")
             break
                 
@@ -94,11 +94,15 @@ def gpt_process(save_path, openai_api_key):
             break
 
 api_key="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"
-with open("/home/cooyes/Desktop/liushuai/omnigibson/EVLM_Task/sub1.json","r")as f:
+with open("/shared/liushuai/OmniGibson/EVLM_Task/new913.json","r")as f:
     task=json.load(f)
 i=0
-gpt_name=sorted(list(task))[i]
-task_name=task[gpt_name]['task_name']
-scene=task[gpt_name]['env']
-print(i,gpt_name,task_name)
-gpt_process(save_path=f"/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/data/{gpt_name}",openai_api_key=api_key)
+EVLM_name=sorted(list(task))[i]
+task_name=task[EVLM_name]['task_name']
+gpt_name=task[EVLM_name]['gpt_task']
+scene=task[EVLM_name]['env']
+print(i)
+print(f"EVLM:{EVLM_name}")
+print(f"task_name:{task_name}")
+print(f"gpt_name:{gpt_name}")
+gpt_process(save_path=f"/shared/liushuai/OmniGibson/prompt_files/data/{gpt_name}",openai_api_key=api_key)

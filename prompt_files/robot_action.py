@@ -563,7 +563,7 @@ from collections import OrderedDict
 def donothing(env, navi):
     dumbact = OrderedDict([("robot0", navi)])
     step = 0
-    for _ in range(30):
+    for _ in range(10):
         # og.sim.step()
         env.step(dumbact)
         step += 1
@@ -573,7 +573,7 @@ from scipy.spatial.transform import Rotation as R
 
 
 def trans_camera(q):
-    random_yaw = np.pi / 2
+    random_yaw = np.pi / 4
     yaw_orn = R.from_euler("Z", random_yaw)
     new_camera_orn = quaternion_multiply(yaw_orn.as_quat(), q)
     print(new_camera_orn)

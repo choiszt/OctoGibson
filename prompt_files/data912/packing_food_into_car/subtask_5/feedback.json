@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the breakfast table.\n(2) Pick up the croissant from the breakfast table.\n(3) Put the croissant into the suitcase.\n(4) Pick up the hamburger from the breakfast table.\n(5) Put the hamburger into the suitcase.\n(6) Pick up the cheese tart from the breakfast table.\n(7) Put the cheese tart into the suitcase.\n(8) Move the robot to the car.\n(9) Put the suitcase into the car.",
+    "code": "def act(robot,env,camera):\n    # Subtask 5: Put the hamburger into the suitcase\n    suitcase = registry(env, \"suitcase_285\")\n    hamburger = registry(env, \"hamburger_277\")\n    put_ontop(robot, hamburger, suitcase)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

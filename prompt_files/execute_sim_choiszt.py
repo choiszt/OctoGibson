@@ -17,7 +17,7 @@ from bddl_verification import *
 import sys
 import bddl
 from verify_taskgoal import *
-def sim_process(task_name, scene_name, save_path,gpt_name):
+def sim_process(task_name, scene_name, save_path,EVLM_name):
     heading="import os \nimport json\nimport yaml\nimport omnigibson as og\nfrom action_list import * \nfrom action_utils import *\n"
     config_filename="./prompt_files/bddl_task.yaml"
     cfg = yaml.load(open(config_filename, "r"), Loader=yaml.FullLoader)
@@ -44,10 +44,10 @@ def sim_process(task_name, scene_name, save_path,gpt_name):
             if os.path.exists(os.path.join(save_path, f"subtask_{subtask_iter}")):
                 break
         sub_save_path = os.path.join(save_path, f"subtask_{subtask_iter}")
-        with open ("/home/cooyes/Desktop/liushuai/omnigibson/EVLM_Task/sub1.json","r")as f:
+        with open ("/shared/liushuai/OmniGibson/EVLM_Task/new913.json","r")as f:
             a=json.load(f)
-            gpt_task_name=a[gpt_name]['gpt_task']
-            removed_item=a[gpt_name]['removed_item']
+            gpt_task_name=a[EVLM_name]['gpt_task']
+            removed_item=a[EVLM_name]['removed_item']
         init_pipeline(env, robot, camera,task_name=str(gpt_task_name), file_name=sub_save_path,removed_items=removed_item)
         response_path = os.path.join(sub_save_path, 'response.json')
         feedback_path = os.path.join(sub_save_path, 'feedback.json')
@@ -76,14 +76,14 @@ def sim_process(task_name, scene_name, save_path,gpt_name):
                 break
             else:
                 subtask, code = answer['subtask'], answer['code']
-                with open(f"/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/data/{gpt_name}/subtask_{subtask_iter}/action.py", 'w') as f:
+                with open(f"/shared/liushuai/OmniGibson/prompt_files/data/{gpt_name}/subtask_{subtask_iter}/action.py", 'w') as f:
                     f.write(heading)
                     f.write(code)
                 # time.sleep(2)
                 sys.path=list(set(sys.path))
                 if(subtask_iter!=1):
-                    sys.path.remove(f"/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/data/{gpt_name}/subtask_{subtask_iter-1}")
-                sys.path.append(f"/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/data/{gpt_name}/subtask_{subtask_iter}")
+                    sys.path.remove(f"/shared/liushuai/OmniGibson/prompt_files/data/{gpt_name}/subtask_{subtask_iter-1}")
+                sys.path.append(f"/shared/liushuai/OmniGibson/prompt_files/data/{gpt_name}/subtask_{subtask_iter}")
                 import action
                 time.sleep(1)
                 try:
@@ -121,10 +121,12 @@ def sim_process(task_name, scene_name, save_path,gpt_name):
             #     value = eu.verify_obj_3(env,obj[0], obj[1], obj[2],obj[3])
             #     if not value:
             #         error += f"{obj[0]} is not {obj[1]} {obj[2]}\n"
-                for obj in target_states['obj_3']:
-                    value = eu.verify_obj_3(env,obj[0], obj[1], obj[2],obj[3])
-                    if not value:
-                        error += f"{obj[0]} is not {obj[1]} {obj[2]}\n"            
+            for obj in target_states['obj_3']:
+                if obj[0]=="robot" or obj[2]=='robot':
+                    continue
+                value = eu.verify_obj_3(env,obj[0], obj[1], obj[2],obj[3])
+                if not value:
+                    error += f"{obj[0]} is not {obj[1]} {obj[2]}\n"            
             if len(error) == 0:
                 subtask = subtask
                 error = error
@@ -157,22 +159,22 @@ def sim_process(task_name, scene_name, save_path,gpt_name):
         #TODO choiszt need to add rename
         #verify the whole task
         if critic == 'succeed':
-            with open("/home/cooyes/Desktop/liushuai/omnigibson/EVLM_Task/sub1.json","r")as f:
+            with open("/shared/liushuai/OmniGibson/EVLM_Task/new913.json","r")as f:
                 goal=json.load(f)
             signal=False
-            target=goal[gpt_name]['target_states']
-            if len(target)==3:
-                for tar in target:
+            target=goal[EVLM_name]['target_states']
+
+            signal=True
+            for tar in target:
+                if len(tar)==3:
                     if not verify_taskgoal(env,*tar):
                         signal=False
                         break
-                    signal=True
-            if len(target)==4:
-                for tar in target:
+            for tar in target:
+                if len(tar)==4:
                     if not verify_binary_taskgoal(env,*tar):
                         signal=False
                         break
-                    signal=True
             if signal:
                 main_succeed = True
                 print(f"finish {gpt_name}!!!!! congrats!!!!!")
@@ -194,17 +196,21 @@ def sim_process(task_name, scene_name, save_path,gpt_name):
                         module=importlib.import_module(f"prompt_files.data.{gpt_name}.subtask_{iter_num}.action")
                         print(f"prompt_files.data.{gpt_name}.subtask_{iter_num}.action retrieve")
                         module.act(robot,env,camera)   
-        if subtask_iter>15:
+        if subtask_iter>14:
             print(f"already attempt {subtask_iter} time, it is too long!")
             break
                         
 
-with open("/home/cooyes/Desktop/liushuai/omnigibson/EVLM_Task/sub1.json","r")as f:
+with open("/shared/liushuai/OmniGibson/EVLM_Task/new913.json","r")as f:
     task=json.load(f)
 
 i=0
-gpt_name=sorted(list(task))[i]
-task_name=task[gpt_name]['task_name']
-scene=task[gpt_name]['env']
-print(i,gpt_name,task_name)
-sim_process(task_name=task_name,scene_name=scene,save_path=f"./prompt_files/data/{gpt_name}",gpt_name=gpt_name)
+EVLM_name=sorted(list(task))[i]
+task_name=task[EVLM_name]['task_name']
+gpt_name=task[EVLM_name]['gpt_task']
+scene=task[EVLM_name]['env']
+print(i)
+print(f"EVLM:{EVLM_name}")
+print(f"task_name:{task_name}")
+print(f"gpt_name:{gpt_name}")
+sim_process(task_name=task_name,scene_name=scene,save_path=f"./prompt_files/data/{gpt_name}",EVLM_name=EVLM_name)
