@@ -96,7 +96,7 @@ def gpt_process(save_path, openai_api_key):
 api_key="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"
 with open("/shared/liushuai/OmniGibson/EVLM_Task/new913.json","r")as f:
     task=json.load(f)
-i=0
+i=1
 EVLM_name=sorted(list(task))[i]
 task_name=task[EVLM_name]['task_name']
 gpt_name=task[EVLM_name]['gpt_task']

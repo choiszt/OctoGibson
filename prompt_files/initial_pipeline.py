@@ -43,17 +43,24 @@ def init_pipeline(env, robot, camera, task_name, file_name=None, removed_items=N
         donothing(env, action) 
     
     cam.collectdata_v2(robot.robot)
-    
+
     robot.robot.visible=False
     robot.robot.visible_only=True
     donothing(env, action)
-    robot.robot.set_position([-1.53887291 ,4.79978561 ,0.01504258])
+    #bev
     ppposition=robot.robot.get_position()
     cam_position=get_camera_position_bev(ppposition)
     cam.setposition(cam_position, trans_camera(robot.robot.get_orientation()))
     donothing(env, action)
     cam.FlyingCapture(f'{iter}_BEV_surroundings')   
     iter+=1  
+    #higher BEV
+    cam_position[2]+=2
+    cam.setposition(cam_position, trans_camera(robot.robot.get_orientation()))
+    donothing(env, action)
+    cam.FlyingCapture(f'{iter}_BEV_surroundings')   
+    iter+=1  
+
     donothing(env, action)
     cam.collectdata_v2(robot.robot)
 
