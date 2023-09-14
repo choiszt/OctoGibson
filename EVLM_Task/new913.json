@@ -219,7 +219,7 @@
     },
     "freeze_all_vegetables": {
         "task_name": "freeze_vegetables",
-        "gpt_task": "freeze_a_carrot",
+        "gpt_task": "put_the_carrot_in_the_fridge_and_freeze_it",
         "removed_item": [
             "floor.n.01_1",
             "agent.n.01_1",
@@ -370,7 +370,7 @@
             [
                 "strawberry.n.01_1",
                 "inside",
-                "masonjar.n.01_1",
+                "mason_jar.n.01_1",
                 "1"
             ]
         ],
@@ -389,13 +389,13 @@
         ],
         "target_states": [
             [
-                "bowl.n.01",
+                "bowl.n.01_1",
                 "inside",
                 "sink.n.01_1",
                 "1"
             ],
             [
-                "plate.n.04",
+                "plate.n.04_1",
                 "inside",
                 "sink.n.01_1",
                 "1"
@@ -751,7 +751,7 @@
     },
     "dispose_of_water_bottle": {
         "task_name": "cleaning_parks",
-        "gpt_task": "dispose_of_water_bottle_and_put_bin_inside_lawn",
+        "gpt_task": "put_water_bottle_inside_bin_and_put_bin_on_the_lawn",
         "removed_item": [
             "water_bottle.n.01_2",
             "water_bottle.n.01_3"
@@ -765,7 +765,7 @@
             ],
             [
                 "recycling_bin.n.01_1",
-                "inside",
+                "ontop",
                 "lawn.n.01_1",
                 "1"
             ]
