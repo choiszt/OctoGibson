@@ -204,7 +204,7 @@ def sim_process(task_name, scene_name, save_path,EVLM_name):
 with open("/shared/liushuai/OmniGibson/EVLM_Task/new913.json","r")as f:
     task=json.load(f)
 
-i=15
+i=4
 EVLM_name=sorted(list(task))[i]
 task_name=task[EVLM_name]['task_name']
 gpt_name=task[EVLM_name]['gpt_task']

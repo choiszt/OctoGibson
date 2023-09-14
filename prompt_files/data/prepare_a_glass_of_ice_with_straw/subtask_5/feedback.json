@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the fridge\n(2) Take out an ice cube from the fridge\n(3) Put the ice cube into the glass\n(4) Pick up the straw\n(5) Put the straw into the glass",
+    "code": "def act(robot,env,camera):\n    # Subtask 4: Pick up the straw\n    straw = registry(env, \"straw_92\")\n    EasyGrasp(robot, straw)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

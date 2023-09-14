@@ -6,6 +6,6 @@ from action_list import *
 from action_utils import *
 def act(robot,env,camera):
     # Subtask 2: Grasp the chopping board.
-    chopping_board = registry(env, "chopping_board_85")
-    EasyGrasp(robot, chopping_board)
+    chopping_board_85 = registry(env,"chopping_board_85")
+    EasyGrasp(robot, chopping_board_85)
     donothing(env)

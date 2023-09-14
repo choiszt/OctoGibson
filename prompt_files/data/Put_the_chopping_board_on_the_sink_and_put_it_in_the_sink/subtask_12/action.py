@@ -5,7 +5,7 @@ import omnigibson as og
 from action_list import * 
 from action_utils import *
 def act(robot,env,camera):
-    # Subtask 3: Move the robot to the sink.
-    sink = registry(env, "sink_czyfhq_0")
-    MoveBot(env, robot, sink, camera)
+    # Subtask 2: Grasp the chopping board.
+    chopping_board_85 = registry(env,"chopping_board_85")
+    EasyGrasp(robot, chopping_board_85)
     donothing(env)

@@ -8,5 +8,5 @@ def act(robot,env,camera):
     # Subtask 8: Put the dumpling into the frying pan
     dumpling = registry(env,"dumpling_153")
     frying_pan = registry(env,"frying_pan_150")
-    put_ontop(robot, dumpling, frying_pan)
+    put_inside(robot, dumpling, frying_pan)
     donothing(env)

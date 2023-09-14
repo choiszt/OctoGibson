@@ -5,9 +5,7 @@ import omnigibson as og
 from action_list import * 
 from action_utils import *
 def act(robot,env,camera):
-    # Subtask 6: Register the sink
-    sink = registry(env,"sink_czyfhq_0")
-    # Subtask 7: Put the tupperware down on the sink
-    tupperware = registry(env,"tupperware_156")
-    put_ontop(robot, tupperware, sink)
+    # Subtask 7: Cook the dumpling
+    frying_pan = registry(env,"frying_pan_150")
+    cook(robot, frying_pan)
     donothing(env)

@@ -1,0 +1,2203 @@
+{
+    "task": "put_a_bowl_on_the_table",
+    "0_detect_surroundings": {
+        "chip_787": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.551519829122356,
+                "theta_deg": -97.77000381379906,
+                "phi_deg": 88.8372442954258
+            },
+            "orientation_in_bot": [
+                -0.3571428791203816,
+                0.49780133577066604,
+                0.6859104675232759,
+                -0.39264439960420455
+            ],
+            "position_in_world": [
+                15.678791999816895,
+                -15.061549186706543,
+                0.08541949093341827
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "conference_table_qzmjrj_4": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 4.246117544394455,
+                "theta_deg": 165.23311079730277,
+                "phi_deg": 81.92381335186282
+            },
+            "orientation_in_bot": [
+                -0.003364612274946181,
+                -0.00848615272370205,
+                0.010695857888810367,
+                0.9999011267221434
+            ],
+            "position_in_world": [
+                12.202339172363281,
+                -10.39633846282959,
+                0.6716912984848022
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "bottom_cabinet_zuwvdo_1": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5158473513951045,
+                "theta_deg": -103.78688963928764,
+                "phi_deg": 84.27842532833228
+            },
+            "orientation_in_bot": [
+                -0.003953157973173986,
+                -0.008492550545387776,
+                0.01069182597101536,
+                0.9998989618879893
+            ],
+            "position_in_world": [
+                15.33258056640625,
+                -14.933525085449219,
+                0.36983340978622437
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "bowl_788": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5301641040110456,
+                "theta_deg": -98.32943638372599,
+                "phi_deg": 88.89992029892993
+            },
+            "orientation_in_bot": [
+                -0.02541057204233509,
+                0.0163381320897286,
+                -0.0077155380405919075,
+                0.9995138011758737
+            ],
+            "position_in_world": [
+                15.648040771484375,
+                -15.034976959228516,
+                0.08166128396987915
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "tortilla_790": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ],
+                [
+                    "unfoldable",
+                    0
+                ],
+                [
+                    "foldable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5246796604539554,
+                "theta_deg": -104.26307896155747,
+                "phi_deg": 88.66213952824835
+            },
+            "orientation_in_bot": [
+                -0.007867507186827917,
+                -0.0030985711491698154,
+                0.9243274936285644,
+                0.3815064687653867
+            ],
+            "position_in_world": [
+                15.293221894787617,
+                -14.950169775015231,
+                0.10223329812288284
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "chip_787",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ],
+            [
+                "chip_787",
+                "inside",
+                "bowl_788"
+            ],
+            [
+                "chip_787",
+                "ontop",
+                "bowl_788"
+            ],
+            [
+                "bowl_788",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ],
+            [
+                "tortilla_790",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ]
+        ],
+        "inventory": []
+    },
+    "1_detect_surroundings": {
+        "chip_787": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.551519829122356,
+                "theta_deg": -97.77000381379906,
+                "phi_deg": 88.8372442954258
+            },
+            "orientation_in_bot": [
+                -0.3571428791203816,
+                0.49780133577066604,
+                0.6859104675232759,
+                -0.39264439960420455
+            ],
+            "position_in_world": [
+                15.678791999816895,
+                -15.061549186706543,
+                0.08541949093341827
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "conference_table_qzmjrj_4": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 4.246117544394455,
+                "theta_deg": 165.23311079730277,
+                "phi_deg": 81.92381335186282
+            },
+            "orientation_in_bot": [
+                -0.003364612274946181,
+                -0.00848615272370205,
+                0.010695857888810367,
+                0.9999011267221434
+            ],
+            "position_in_world": [
+                12.202339172363281,
+                -10.39633846282959,
+                0.6716912984848022
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "bottom_cabinet_zuwvdo_1": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5158473513951045,
+                "theta_deg": -103.78688963928764,
+                "phi_deg": 84.27842532833228
+            },
+            "orientation_in_bot": [
+                -0.003953157973173986,
+                -0.008492550545387776,
+                0.01069182597101536,
+                0.9998989618879893
+            ],
+            "position_in_world": [
+                15.33258056640625,
+                -14.933525085449219,
+                0.36983340978622437
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "bowl_788": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5301641040110456,
+                "theta_deg": -98.32943638372599,
+                "phi_deg": 88.89992029892993
+            },
+            "orientation_in_bot": [
+                -0.02541057204233509,
+                0.0163381320897286,
+                -0.0077155380405919075,
+                0.9995138011758737
+            ],
+            "position_in_world": [
+                15.648040771484375,
+                -15.034976959228516,
+                0.08166128396987915
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "tortilla_790": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ],
+                [
+                    "unfoldable",
+                    0
+                ],
+                [
+                    "foldable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5246796604539554,
+                "theta_deg": -104.26307896155747,
+                "phi_deg": 88.66213952824835
+            },
+            "orientation_in_bot": [
+                -0.007867507186827917,
+                -0.0030985711491698154,
+                0.9243274936285644,
+                0.3815064687653867
+            ],
+            "position_in_world": [
+                15.293221894787617,
+                -14.950169775015231,
+                0.10223329812288284
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "chip_787",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ],
+            [
+                "chip_787",
+                "inside",
+                "bowl_788"
+            ],
+            [
+                "chip_787",
+                "ontop",
+                "bowl_788"
+            ],
+            [
+                "bowl_788",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ],
+            [
+                "tortilla_790",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ]
+        ],
+        "inventory": []
+    },
+    "2_detect_surroundings": {
+        "chip_787": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.551519829122356,
+                "theta_deg": -97.77000381379906,
+                "phi_deg": 88.8372442954258
+            },
+            "orientation_in_bot": [
+                -0.3571428791203816,
+                0.49780133577066604,
+                0.6859104675232759,
+                -0.39264439960420455
+            ],
+            "position_in_world": [
+                15.678791999816895,
+                -15.061549186706543,
+                0.08541949093341827
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "conference_table_qzmjrj_4": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 4.246117544394455,
+                "theta_deg": 165.23311079730277,
+                "phi_deg": 81.92381335186282
+            },
+            "orientation_in_bot": [
+                -0.003364612274946181,
+                -0.00848615272370205,
+                0.010695857888810367,
+                0.9999011267221434
+            ],
+            "position_in_world": [
+                12.202339172363281,
+                -10.39633846282959,
+                0.6716912984848022
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "bottom_cabinet_zuwvdo_1": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5158473513951045,
+                "theta_deg": -103.78688963928764,
+                "phi_deg": 84.27842532833228
+            },
+            "orientation_in_bot": [
+                -0.003953157973173986,
+                -0.008492550545387776,
+                0.01069182597101536,
+                0.9998989618879893
+            ],
+            "position_in_world": [
+                15.33258056640625,
+                -14.933525085449219,
+                0.36983340978622437
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "bowl_788": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5301641040110456,
+                "theta_deg": -98.32943638372599,
+                "phi_deg": 88.89992029892993
+            },
+            "orientation_in_bot": [
+                -0.02541057204233509,
+                0.0163381320897286,
+                -0.0077155380405919075,
+                0.9995138011758737
+            ],
+            "position_in_world": [
+                15.648040771484375,
+                -15.034976959228516,
+                0.08166128396987915
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "tortilla_790": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ],
+                [
+                    "unfoldable",
+                    0
+                ],
+                [
+                    "foldable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5246796604539554,
+                "theta_deg": -104.26307896155747,
+                "phi_deg": 88.66213952824835
+            },
+            "orientation_in_bot": [
+                -0.007867507186827917,
+                -0.0030985711491698154,
+                0.9243274936285644,
+                0.3815064687653867
+            ],
+            "position_in_world": [
+                15.293221894787617,
+                -14.950169775015231,
+                0.10223329812288284
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "chip_787",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ],
+            [
+                "chip_787",
+                "inside",
+                "bowl_788"
+            ],
+            [
+                "chip_787",
+                "ontop",
+                "bowl_788"
+            ],
+            [
+                "bowl_788",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ],
+            [
+                "tortilla_790",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ]
+        ],
+        "inventory": []
+    },
+    "3_detect_surroundings": {
+        "chip_787": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.551519829122356,
+                "theta_deg": -97.77000381379906,
+                "phi_deg": 88.8372442954258
+            },
+            "orientation_in_bot": [
+                -0.3571428791203816,
+                0.49780133577066604,
+                0.6859104675232759,
+                -0.39264439960420455
+            ],
+            "position_in_world": [
+                15.678791999816895,
+                -15.061549186706543,
+                0.08541949093341827
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "conference_table_qzmjrj_4": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 4.246117544394455,
+                "theta_deg": 165.23311079730277,
+                "phi_deg": 81.92381335186282
+            },
+            "orientation_in_bot": [
+                -0.003364612274946181,
+                -0.00848615272370205,
+                0.010695857888810367,
+                0.9999011267221434
+            ],
+            "position_in_world": [
+                12.202339172363281,
+                -10.39633846282959,
+                0.6716912984848022
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "bottom_cabinet_zuwvdo_1": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5158473513951045,
+                "theta_deg": -103.78688963928764,
+                "phi_deg": 84.27842532833228
+            },
+            "orientation_in_bot": [
+                -0.003953157973173986,
+                -0.008492550545387776,
+                0.01069182597101536,
+                0.9998989618879893
+            ],
+            "position_in_world": [
+                15.33258056640625,
+                -14.933525085449219,
+                0.36983340978622437
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "bowl_788": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5301641040110456,
+                "theta_deg": -98.32943638372599,
+                "phi_deg": 88.89992029892993
+            },
+            "orientation_in_bot": [
+                -0.02541057204233509,
+                0.0163381320897286,
+                -0.0077155380405919075,
+                0.9995138011758737
+            ],
+            "position_in_world": [
+                15.648040771484375,
+                -15.034976959228516,
+                0.08166128396987915
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "tortilla_790": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ],
+                [
+                    "unfoldable",
+                    0
+                ],
+                [
+                    "foldable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5246796604539554,
+                "theta_deg": -104.26307896155747,
+                "phi_deg": 88.66213952824835
+            },
+            "orientation_in_bot": [
+                -0.007867507186827917,
+                -0.0030985711491698154,
+                0.9243274936285644,
+                0.3815064687653867
+            ],
+            "position_in_world": [
+                15.293221894787617,
+                -14.950169775015231,
+                0.10223329812288284
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "chip_787",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ],
+            [
+                "chip_787",
+                "inside",
+                "bowl_788"
+            ],
+            [
+                "chip_787",
+                "ontop",
+                "bowl_788"
+            ],
+            [
+                "bowl_788",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ],
+            [
+                "tortilla_790",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ]
+        ],
+        "inventory": []
+    },
+    "4_detect_surroundings": {
+        "chip_787": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.551519829122356,
+                "theta_deg": -97.77000381379906,
+                "phi_deg": 88.8372442954258
+            },
+            "orientation_in_bot": [
+                -0.3571428791203816,
+                0.49780133577066604,
+                0.6859104675232759,
+                -0.39264439960420455
+            ],
+            "position_in_world": [
+                15.678791999816895,
+                -15.061549186706543,
+                0.08541949093341827
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "conference_table_qzmjrj_4": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 4.246117544394455,
+                "theta_deg": 165.23311079730277,
+                "phi_deg": 81.92381335186282
+            },
+            "orientation_in_bot": [
+                -0.003364612274946181,
+                -0.00848615272370205,
+                0.010695857888810367,
+                0.9999011267221434
+            ],
+            "position_in_world": [
+                12.202339172363281,
+                -10.39633846282959,
+                0.6716912984848022
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "bottom_cabinet_zuwvdo_1": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5158473513951045,
+                "theta_deg": -103.78688963928764,
+                "phi_deg": 84.27842532833228
+            },
+            "orientation_in_bot": [
+                -0.003953157973173986,
+                -0.008492550545387776,
+                0.01069182597101536,
+                0.9998989618879893
+            ],
+            "position_in_world": [
+                15.33258056640625,
+                -14.933525085449219,
+                0.36983340978622437
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "bowl_788": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5301641040110456,
+                "theta_deg": -98.32943638372599,
+                "phi_deg": 88.89992029892993
+            },
+            "orientation_in_bot": [
+                -0.02541057204233509,
+                0.0163381320897286,
+                -0.0077155380405919075,
+                0.9995138011758737
+            ],
+            "position_in_world": [
+                15.648040771484375,
+                -15.034976959228516,
+                0.08166128396987915
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "tortilla_790": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ],
+                [
+                    "unfoldable",
+                    0
+                ],
+                [
+                    "foldable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5246796604539554,
+                "theta_deg": -104.26307896155747,
+                "phi_deg": 88.66213952824835
+            },
+            "orientation_in_bot": [
+                -0.007867507186827917,
+                -0.0030985711491698154,
+                0.9243274936285644,
+                0.3815064687653867
+            ],
+            "position_in_world": [
+                15.293221894787617,
+                -14.950169775015231,
+                0.10223329812288284
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "chip_787",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ],
+            [
+                "chip_787",
+                "inside",
+                "bowl_788"
+            ],
+            [
+                "chip_787",
+                "ontop",
+                "bowl_788"
+            ],
+            [
+                "bowl_788",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ],
+            [
+                "tortilla_790",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ]
+        ],
+        "inventory": []
+    },
+    "5_detect_surroundings": {
+        "chip_787": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.551519829122356,
+                "theta_deg": -97.77000381379906,
+                "phi_deg": 88.8372442954258
+            },
+            "orientation_in_bot": [
+                -0.3571428791203816,
+                0.49780133577066604,
+                0.6859104675232759,
+                -0.39264439960420455
+            ],
+            "position_in_world": [
+                15.678791999816895,
+                -15.061549186706543,
+                0.08541949093341827
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "conference_table_qzmjrj_4": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 4.246117544394455,
+                "theta_deg": 165.23311079730277,
+                "phi_deg": 81.92381335186282
+            },
+            "orientation_in_bot": [
+                -0.003364612274946181,
+                -0.00848615272370205,
+                0.010695857888810367,
+                0.9999011267221434
+            ],
+            "position_in_world": [
+                12.202339172363281,
+                -10.39633846282959,
+                0.6716912984848022
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "bottom_cabinet_zuwvdo_1": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5158473513951045,
+                "theta_deg": -103.78688963928764,
+                "phi_deg": 84.27842532833228
+            },
+            "orientation_in_bot": [
+                -0.003953157973173986,
+                -0.008492550545387776,
+                0.01069182597101536,
+                0.9998989618879893
+            ],
+            "position_in_world": [
+                15.33258056640625,
+                -14.933525085449219,
+                0.36983340978622437
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "bowl_788": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5301641040110456,
+                "theta_deg": -98.32943638372599,
+                "phi_deg": 88.89992029892993
+            },
+            "orientation_in_bot": [
+                -0.02541057204233509,
+                0.0163381320897286,
+                -0.0077155380405919075,
+                0.9995138011758737
+            ],
+            "position_in_world": [
+                15.648040771484375,
+                -15.034976959228516,
+                0.08166128396987915
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "tortilla_790": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ],
+                [
+                    "unfoldable",
+                    0
+                ],
+                [
+                    "foldable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5246796604539554,
+                "theta_deg": -104.26307896155747,
+                "phi_deg": 88.66213952824835
+            },
+            "orientation_in_bot": [
+                -0.007867507186827917,
+                -0.0030985711491698154,
+                0.9243274936285644,
+                0.3815064687653867
+            ],
+            "position_in_world": [
+                15.293221894787617,
+                -14.950169775015231,
+                0.10223329812288284
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "chip_787",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ],
+            [
+                "chip_787",
+                "inside",
+                "bowl_788"
+            ],
+            [
+                "chip_787",
+                "ontop",
+                "bowl_788"
+            ],
+            [
+                "bowl_788",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ],
+            [
+                "tortilla_790",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ]
+        ],
+        "inventory": []
+    },
+    "6_detect_surroundings": {
+        "chip_787": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.551519829122356,
+                "theta_deg": -97.77000381379906,
+                "phi_deg": 88.8372442954258
+            },
+            "orientation_in_bot": [
+                -0.3571428791203816,
+                0.49780133577066604,
+                0.6859104675232759,
+                -0.39264439960420455
+            ],
+            "position_in_world": [
+                15.678791999816895,
+                -15.061549186706543,
+                0.08541949093341827
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "conference_table_qzmjrj_4": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 4.246117544394455,
+                "theta_deg": 165.23311079730277,
+                "phi_deg": 81.92381335186282
+            },
+            "orientation_in_bot": [
+                -0.003364612274946181,
+                -0.00848615272370205,
+                0.010695857888810367,
+                0.9999011267221434
+            ],
+            "position_in_world": [
+                12.202339172363281,
+                -10.39633846282959,
+                0.6716912984848022
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "bottom_cabinet_zuwvdo_1": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5158473513951045,
+                "theta_deg": -103.78688963928764,
+                "phi_deg": 84.27842532833228
+            },
+            "orientation_in_bot": [
+                -0.003953157973173986,
+                -0.008492550545387776,
+                0.01069182597101536,
+                0.9998989618879893
+            ],
+            "position_in_world": [
+                15.33258056640625,
+                -14.933525085449219,
+                0.36983340978622437
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "bowl_788": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5301641040110456,
+                "theta_deg": -98.32943638372599,
+                "phi_deg": 88.89992029892993
+            },
+            "orientation_in_bot": [
+                -0.02541057204233509,
+                0.0163381320897286,
+                -0.0077155380405919075,
+                0.9995138011758737
+            ],
+            "position_in_world": [
+                15.648040771484375,
+                -15.034976959228516,
+                0.08166128396987915
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "tortilla_790": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ],
+                [
+                    "unfoldable",
+                    0
+                ],
+                [
+                    "foldable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5246796604539554,
+                "theta_deg": -104.26307896155747,
+                "phi_deg": 88.66213952824835
+            },
+            "orientation_in_bot": [
+                -0.007867507186827917,
+                -0.0030985711491698154,
+                0.9243274936285644,
+                0.3815064687653867
+            ],
+            "position_in_world": [
+                15.293221894787617,
+                -14.950169775015231,
+                0.10223329812288284
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "chip_787",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ],
+            [
+                "chip_787",
+                "inside",
+                "bowl_788"
+            ],
+            [
+                "chip_787",
+                "ontop",
+                "bowl_788"
+            ],
+            [
+                "bowl_788",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ],
+            [
+                "tortilla_790",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ]
+        ],
+        "inventory": []
+    },
+    "7_detect_surroundings": {
+        "chip_787": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.551519829122356,
+                "theta_deg": -97.77000381379906,
+                "phi_deg": 88.8372442954258
+            },
+            "orientation_in_bot": [
+                -0.3571428791203816,
+                0.49780133577066604,
+                0.6859104675232759,
+                -0.39264439960420455
+            ],
+            "position_in_world": [
+                15.678791999816895,
+                -15.061549186706543,
+                0.08541949093341827
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "conference_table_qzmjrj_4": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 4.246117544394455,
+                "theta_deg": 165.23311079730277,
+                "phi_deg": 81.92381335186282
+            },
+            "orientation_in_bot": [
+                -0.003364612274946181,
+                -0.00848615272370205,
+                0.010695857888810367,
+                0.9999011267221434
+            ],
+            "position_in_world": [
+                12.202339172363281,
+                -10.39633846282959,
+                0.6716912984848022
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "bottom_cabinet_zuwvdo_1": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5158473513951045,
+                "theta_deg": -103.78688963928764,
+                "phi_deg": 84.27842532833228
+            },
+            "orientation_in_bot": [
+                -0.003953157973173986,
+                -0.008492550545387776,
+                0.01069182597101536,
+                0.9998989618879893
+            ],
+            "position_in_world": [
+                15.33258056640625,
+                -14.933525085449219,
+                0.36983340978622437
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "bowl_788": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5301641040110456,
+                "theta_deg": -98.32943638372599,
+                "phi_deg": 88.89992029892993
+            },
+            "orientation_in_bot": [
+                -0.02541057204233509,
+                0.0163381320897286,
+                -0.0077155380405919075,
+                0.9995138011758737
+            ],
+            "position_in_world": [
+                15.648040771484375,
+                -15.034976959228516,
+                0.08166128396987915
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "tortilla_790": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ],
+                [
+                    "unfoldable",
+                    0
+                ],
+                [
+                    "foldable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5246796604539554,
+                "theta_deg": -104.26307896155747,
+                "phi_deg": 88.66213952824835
+            },
+            "orientation_in_bot": [
+                -0.007867507186827917,
+                -0.0030985711491698154,
+                0.9243274936285644,
+                0.3815064687653867
+            ],
+            "position_in_world": [
+                15.293221894787617,
+                -14.950169775015231,
+                0.10223329812288284
+            ],
+            "bot_in_world": [
+                16.23291015625,
+                -11.554417610168457,
+                0.0062103271484375
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "chip_787",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ],
+            [
+                "chip_787",
+                "inside",
+                "bowl_788"
+            ],
+            [
+                "chip_787",
+                "ontop",
+                "bowl_788"
+            ],
+            [
+                "bowl_788",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ],
+            [
+                "tortilla_790",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ]
+        ],
+        "inventory": []
+    },
+    "8_BEV_surroundings": {
+        "chip_787": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.52403941766805,
+                "theta_deg": -97.81748171496838,
+                "phi_deg": 88.84795405009808
+            },
+            "orientation_in_bot": [
+                0.14043420863580497,
+                -0.312400660949657,
+                -0.3828978463124514,
+                0.8579471425282207
+            ],
+            "position_in_world": [
+                15.68272876739502,
+                -15.033814430236816,
+                0.08158547431230545
+            ],
+            "bot_in_world": [
+                16.232555389404297,
+                -11.553736686706543,
+                0.006725609302520752
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "conference_table_qzmjrj_4": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 4.245514504304353,
+                "theta_deg": 165.17234540762254,
+                "phi_deg": 81.60658136767525
+            },
+            "orientation_in_bot": [
+                -0.003377676875595666,
+                -0.005558260612220395,
+                0.010223500853631566,
+                0.9999265858392739
+            ],
+            "position_in_world": [
+                12.202339172363281,
+                -10.39633846282959,
+                0.6716912984848022
+            ],
+            "bot_in_world": [
+                16.232555389404297,
+                -11.553736686706543,
+                0.006725609302520752
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "bottom_cabinet_zuwvdo_1": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.51709844843535,
+                "theta_deg": -103.83338506495213,
+                "phi_deg": 84.16906327307274
+            },
+            "orientation_in_bot": [
+                -0.003946546843132941,
+                -0.008306828980995159,
+                0.01021352725929868,
+                0.9999055481500336
+            ],
+            "position_in_world": [
+                15.330549240112305,
+                -14.93351936340332,
+                0.3720145523548126
+            ],
+            "bot_in_world": [
+                16.232555389404297,
+                -11.553736686706543,
+                0.006725609302520752
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "bowl_788": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5309144798553,
+                "theta_deg": -98.37823333149714,
+                "phi_deg": 88.79191345355959
+            },
+            "orientation_in_bot": [
+                -0.025791544286425064,
+                0.016469953376611505,
+                -0.008051026117051588,
+                0.999499233545257
+            ],
+            "position_in_world": [
+                15.64760971069336,
+                -15.034969329833984,
+                0.0855640396475792
+            ],
+            "bot_in_world": [
+                16.232555389404297,
+                -11.553736686706543,
+                0.006725609302520752
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "tortilla_790": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ],
+                [
+                    "unfoldable",
+                    0
+                ],
+                [
+                    "foldable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5249175127172534,
+                "theta_deg": -104.29850385103171,
+                "phi_deg": 88.55059737643784
+            },
+            "orientation_in_bot": [
+                -0.005179671907856639,
+                -0.0019412018728322585,
+                0.9241624789142265,
+                0.3819595728625314
+            ],
+            "position_in_world": [
+                15.293544373241216,
+                -14.949880462230242,
+                0.10424277186393738
+            ],
+            "bot_in_world": [
+                16.232555389404297,
+                -11.553736686706543,
+                0.006725609302520752
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "chip_787",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ],
+            [
+                "chip_787",
+                "inside",
+                "bowl_788"
+            ],
+            [
+                "chip_787",
+                "ontop",
+                "bowl_788"
+            ],
+            [
+                "bowl_788",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ],
+            [
+                "tortilla_790",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ]
+        ],
+        "inventory": []
+    },
+    "9_BEV_surroundings": {
+        "chip_787": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.52403941766805,
+                "theta_deg": -97.81748171496838,
+                "phi_deg": 88.84795405009808
+            },
+            "orientation_in_bot": [
+                0.14043420863580497,
+                -0.312400660949657,
+                -0.3828978463124514,
+                0.8579471425282207
+            ],
+            "position_in_world": [
+                15.68272876739502,
+                -15.033814430236816,
+                0.08158547431230545
+            ],
+            "bot_in_world": [
+                16.232555389404297,
+                -11.553736686706543,
+                0.006725609302520752
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "conference_table_qzmjrj_4": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 4.245514504304353,
+                "theta_deg": 165.17234540762254,
+                "phi_deg": 81.60658136767525
+            },
+            "orientation_in_bot": [
+                -0.003377676875595666,
+                -0.005558260612220395,
+                0.010223500853631566,
+                0.9999265858392739
+            ],
+            "position_in_world": [
+                12.202339172363281,
+                -10.39633846282959,
+                0.6716912984848022
+            ],
+            "bot_in_world": [
+                16.232555389404297,
+                -11.553736686706543,
+                0.006725609302520752
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "bottom_cabinet_zuwvdo_1": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.51709844843535,
+                "theta_deg": -103.83338506495213,
+                "phi_deg": 84.16906327307274
+            },
+            "orientation_in_bot": [
+                -0.003946546843132941,
+                -0.008306828980995159,
+                0.01021352725929868,
+                0.9999055481500336
+            ],
+            "position_in_world": [
+                15.330549240112305,
+                -14.93351936340332,
+                0.3720145523548126
+            ],
+            "bot_in_world": [
+                16.232555389404297,
+                -11.553736686706543,
+                0.006725609302520752
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "bowl_788": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5309144798553,
+                "theta_deg": -98.37823333149714,
+                "phi_deg": 88.79191345355959
+            },
+            "orientation_in_bot": [
+                -0.025791544286425064,
+                0.016469953376611505,
+                -0.008051026117051588,
+                0.999499233545257
+            ],
+            "position_in_world": [
+                15.64760971069336,
+                -15.034969329833984,
+                0.0855640396475792
+            ],
+            "bot_in_world": [
+                16.232555389404297,
+                -11.553736686706543,
+                0.006725609302520752
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "tortilla_790": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ],
+                [
+                    "unfoldable",
+                    0
+                ],
+                [
+                    "foldable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.5249175127172534,
+                "theta_deg": -104.29850385103171,
+                "phi_deg": 88.55059737643784
+            },
+            "orientation_in_bot": [
+                -0.005179671907856639,
+                -0.0019412018728322585,
+                0.9241624789142265,
+                0.3819595728625314
+            ],
+            "position_in_world": [
+                15.293544373241216,
+                -14.949880462230242,
+                0.10424277186393738
+            ],
+            "bot_in_world": [
+                16.232555389404297,
+                -11.553736686706543,
+                0.006725609302520752
+            ],
+            "path": "./prompt_files/data/put_a_bowl_on_the_table/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "chip_787",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ],
+            [
+                "chip_787",
+                "inside",
+                "bowl_788"
+            ],
+            [
+                "chip_787",
+                "ontop",
+                "bowl_788"
+            ],
+            [
+                "bowl_788",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ],
+            [
+                "tortilla_790",
+                "inside",
+                "bottom_cabinet_zuwvdo_1"
+            ]
+        ],
+        "inventory": []
+    }
+}

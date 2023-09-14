@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the bottom cabinet.\n(2) Grasp the carboy.\n(3) Move to the bin.\n(4) Put the reagent bottle in the bin.\n(5) Grasp the carboy.\n(6) Put the carboy in the bin.",
+    "code": "def act(robot,env,camera):\n    # Subtask 4: Put the reagent bottle in the bin\n    reagent_bottle = registry(env, \"reagent_bottle_189\")\n    bin = registry(env, \"recycling_bin_188\")\n    put_inside(robot, reagent_bottle, bin)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": true
+}

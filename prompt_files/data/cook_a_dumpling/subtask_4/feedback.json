@@ -1,8 +1,8 @@
 {
-    "subtask": "\n(1) Open the fridge\n(2) Grasp the tupperware from the fridge\n(3) Grasp a dumpling from the fridge\n(4) Put the dumpling into the frying pan\n(5) Cook the dumpling",
-    "code": "def act(robot,env,camera):\n    # Subtask 3: Grasp a dumpling from the fridge\n    dumpling = registry(env,\"dumpling_154\")\n    EasyGrasp(robot, dumpling)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
+    "subtask": "\n(1) Open the fridge\n(2) Grasp the tupperware from the fridge\n(3) Grasp a dumpling from the tupperware\n(4) Put the dumpling into the frying pan\n(5) Cook the dumpling",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Grasp a dumpling from the tupperware\n    dumpling = registry(env,\"dumpling_153\")\n    EasyGrasp(robot, dumpling)\n    donothing(env)\n",
+    "error": "dumpling_153 is not inside tupperware_156\n",
+    "critic": "fail",
+    "reset": true,
     "main_succeed": false
 }

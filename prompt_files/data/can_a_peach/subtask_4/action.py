@@ -5,7 +5,7 @@ import omnigibson as og
 from action_list import * 
 from action_utils import *
 def act(robot,env,camera):
-    # Subtask 3: Take the peach out of the fridge
-    peach = registry(env, "peach_173")
-    EasyGrasp(robot, peach)
+    # Subtask 4: Move the robot to the bottom cabinet
+    bottom_cabinet = registry(env, "bottom_cabinet_no_top_qohxjq_1")
+    MoveBot(env, robot, bottom_cabinet, camera)
     donothing(env)

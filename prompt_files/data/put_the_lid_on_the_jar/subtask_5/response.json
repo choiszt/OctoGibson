@@ -1,0 +1,17 @@
+{
+    "response": {
+        "explain": " The previous action code has successfully grasped the jar. Now, the robot has both the jar and the lid in its inventory. The next step is to put the lid on the jar.",
+        "subtask": "\n(1) Move to the top cabinet\n(2) Grasp the jar\n(3) Put the lid on the jar",
+        "code": "def act(robot,env,camera):\n    # Subtask 3: Put the lid on the jar\n    lid = registry(env, \"lid_150\")\n    jar = registry(env, \"jar_153\")\n    put_ontop(robot, lid, jar)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [],
+        "obj_3": [
+            [
+                "lid_150",
+                "ontop",
+                "jar_153",
+                "1"
+            ]
+        ]
+    }
+}

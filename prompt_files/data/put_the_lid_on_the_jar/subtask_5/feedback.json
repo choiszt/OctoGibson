@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move to the top cabinet\n(2) Grasp the jar\n(3) Put the lid on the jar",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Put the lid on the jar\n    lid = registry(env, \"lid_150\")\n    jar = registry(env, \"jar_153\")\n    put_ontop(robot, lid, jar)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

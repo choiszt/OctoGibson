@@ -1,21 +1,15 @@
 {
     "response": {
-        "explain": " The previous action code was to cook the dumpling. However, the dumpling is not in the frying pan, but inside the fridge. The robot needs to first take the dumpling out of the fridge and put it into the frying pan before it can be cooked. ",
+        "explain": " The previous action code was to cook the dumpling. However, the dumpling is not in the frying pan, but on top of it. Therefore, the dumpling cannot be cooked. ",
         "subtask": "\n(1) Open the fridge\n(2) Grasp the tupperware from the fridge\n(3) Grasp a dumpling from the fridge\n(4) Move to the stove\n(5) Grasp the frying pan\n(6) Put the dumpling into the frying pan\n(7) Cook the dumpling",
-        "code": "def act(robot,env,camera):\n    # Subtask 3: Grasp a dumpling from the fridge\n    dumpling = registry(env,\"dumpling_153\")\n    EasyGrasp(robot, dumpling)\n    donothing(env)\n",
-        "inventory": "'tupperware_156','frying_pan_150','dumpling_153'",
+        "code": "def act(robot,env,camera):\n    # Subtask 6: Put the dumpling into the frying pan\n    dumpling = registry(env,\"dumpling_154\")\n    frying_pan = registry(env,\"frying_pan_150\")\n    put_inside(robot, dumpling, frying_pan)\n    donothing(env)\n",
+        "inventory": "None",
         "obj_2": [],
         "obj_3": [
             [
-                "dumpling_153",
+                "dumpling_154",
                 "inside",
-                "fridge_xyejdx_0",
-                "0"
-            ],
-            [
-                "dumpling_153",
-                "inside",
-                "robot",
+                "frying_pan_150",
                 "1"
             ]
         ]

@@ -5,7 +5,7 @@ import omnigibson as og
 from action_list import * 
 from action_utils import *
 def act(robot,env,camera):
-    # Subtask 8: Close the bottom cabinet
-    bottom_cabinet = registry(env, "bottom_cabinet_no_top_qohxjq_1")
-    close(robot, bottom_cabinet)
+    # Subtask 7: Open jar_171
+    jar = registry(env, "jar_171")
+    open(robot, jar)
     donothing(env)

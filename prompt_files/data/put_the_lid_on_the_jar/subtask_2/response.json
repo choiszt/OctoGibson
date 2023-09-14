@@ -1,0 +1,17 @@
+{
+    "response": {
+        "explain": " The previous action code successfully opened the top cabinet. Now, the next step is to grasp the lid from the cabinet.",
+        "subtask": "\n(1) Open the top cabinet\n(2) Grasp the lid\n(3) Grasp the jar\n(4) Put the lid on the jar",
+        "code": "def act(robot,env,camera):\n    # Subtask 2: Grasp the lid\n    lid = registry(env, \"lid_150\")\n    EasyGrasp(robot, lid)\n    donothing(env)\n",
+        "inventory": "lid_150",
+        "obj_2": [],
+        "obj_3": [
+            [
+                "lid_150",
+                "inside",
+                "robot",
+                "1"
+            ]
+        ]
+    }
+}
