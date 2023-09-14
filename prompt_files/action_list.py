@@ -40,7 +40,7 @@ def EasyGrasp(robot, obj, dis_threshold=4.0):
         robot.inventory.append(obj._name)
         print(f"now we have:{robot.inventory}")
     else:
-        raise Exception(f"Cannot Grasp! robot is not within two meters of {obj}")
+        raise Exception(f"Cannot Grasp! robot is not within four meters of {obj}")
 
 def MoveBot(env, robot,obj,camera):
     pos = get_robot_pos(obj)
@@ -64,7 +64,7 @@ def EasyDrop(robot,obj1, obj2, dis_threshold=4.0):
         robot.inventory.remove(obj1._name)
         print(f"the robot throw {obj1._name},now we have:{robot.inventory}")
     else:
-        raise Exception(f"Cannot Drop! robot is not within two meters of {obj2}")
+        raise Exception(f"Cannot Drop! robot is not within four meters of {obj2}")
 
 from collections import OrderedDict
 def donothing(env):
@@ -84,7 +84,7 @@ def cook(robot, obj):
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
     if dis > 4.0:
-        raise Exception(f"Cannot cook! robot is not within two meters of {obj}")
+        raise Exception(f"Cannot cook! robot is not within four meters of {obj}")
     change_states(obj, 'cookable', 1)
 
 def burn(robot, obj):
@@ -92,7 +92,7 @@ def burn(robot, obj):
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
     if dis > 4.0:
-        raise Exception(f"Cannot burn! robot is not within two meters of {obj}")
+        raise Exception(f"Cannot burn! robot is not within four meters of {obj}")
     change_states(obj, 'burnable', 1)
 
 def freeze(robot, obj):
@@ -100,7 +100,7 @@ def freeze(robot, obj):
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
     if dis > 4.0:
-        raise Exception(f"Cannot freeze! robot is not within two meters of {obj}")
+        raise Exception(f"Cannot freeze! robot is not within four meters of {obj}")
     change_states(obj, 'freezable', 1)
 
 def heat(robot, obj):
@@ -108,7 +108,7 @@ def heat(robot, obj):
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
     if dis > 4.0:
-        raise Exception(f"Cannot heat! robot is not within two meters of {obj}")
+        raise Exception(f"Cannot heat! robot is not within four meters of {obj}")
     change_states(obj, 'heatable', 1)
 
 def open(robot, obj):
@@ -116,7 +116,7 @@ def open(robot, obj):
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
     if dis > 4.0:
-        raise Exception(f"Cannot open! robot is not within two meters of {obj}")
+        raise Exception(f"Cannot open! robot is not within four meters of {obj}")
     if obj.states[omnigibson.object_states.open.Open].get_value()==True:
         raise Exception(f"the {obj._name} has been opened! Please pay attention to the states of Observed Objects!!")
     change_states(obj, 'openable', 1)
@@ -126,7 +126,7 @@ def close(robot, obj):
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
     if dis > 4.0:
-        raise Exception(f"Cannot close! robot is not within two meters of {obj}")
+        raise Exception(f"Cannot close! robot is not within four meters of {obj}")
     change_states(obj, 'openable', 0)
 
 def fold(robot, obj):
@@ -134,7 +134,7 @@ def fold(robot, obj):
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
     if dis > 4.0:
-        raise Exception(f"Cannot fold! robot is not within two meters of {obj}")
+        raise Exception(f"Cannot fold! robot is not within four meters of {obj}")
     change_states(obj, 'foldable', 1)
 
 def unfold(robot, obj):
@@ -142,7 +142,7 @@ def unfold(robot, obj):
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
     if dis > 4.0:
-        raise Exception(f"Cannot unfold! robot is not within two meters of {obj}")
+        raise Exception(f"Cannot unfold! robot is not within four meters of {obj}")
     change_states(obj, 'unfoldable', 1)
 
 def toggle_on(robot, obj):
@@ -150,7 +150,7 @@ def toggle_on(robot, obj):
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
     if dis > 4.0:
-        raise Exception(f"Cannot toggle on! robot is not within two meters of {obj}")
+        raise Exception(f"Cannot toggle on! robot is not within four meters of {obj}")
     change_states(obj, 'togglable', 1)
 
 def toggle_off(robot, obj):
@@ -158,7 +158,7 @@ def toggle_off(robot, obj):
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
     if dis > 4.0:
-        raise Exception(f"Cannot toggle off! robot is not within two meters of {obj}")
+        raise Exception(f"Cannot toggle off! robot is not within four meters of {obj}")
     change_states(obj, 'togglable', 0)
     
 def put_inside(robot, obj1, obj2, dis_threshold=4.0):
@@ -172,7 +172,7 @@ def put_inside(robot, obj1, obj2, dis_threshold=4.0):
         robot.inventory.remove(obj1._name)
         print(f"the robot put {obj1._name} inside {obj2._name},now we have:{robot.inventory}")
     else:
-        raise Exception(f"Cannot Put Inside! robot is not within two meters of {obj2}")
+        raise Exception(f"Cannot Put Inside! robot is not within four meters of {obj2}")
 def put_ontop(robot, obj1, obj2, dis_threshold=4.0):
     """
     put obj1 ontop obj2
@@ -186,5 +186,5 @@ def put_ontop(robot, obj1, obj2, dis_threshold=4.0):
         robot.inventory.remove(obj1._name)
         print(f"the robot put {obj1._name} ontop {obj2._name},now we have:{robot.inventory}")
     else:
-        raise Exception(f"Cannot Put Ontop! robot is not within two meters of {obj2}")
+        raise Exception(f"Cannot Put Ontop! robot is not within four meters of {obj2}")
     
