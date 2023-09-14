@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the driveway.\n(2) Grasp rope_277.\n(3) Put rope_277 on top of kayak_275.\n(4) Grasp rope_278.\n(5) Put rope_278 on top of kayak_275.",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Move the robot to the driveway\n    driveway = registry(env, \"driveway_aipswu_0\")\n    MoveBot(env, robot, driveway, camera)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": true
+}

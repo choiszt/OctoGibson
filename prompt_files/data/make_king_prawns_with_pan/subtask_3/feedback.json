@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the fridge\n(2) Take the shrimp out of the fridge\n(3) Put the shrimp into the frying pan\n(4) Cook the shrimp",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Put the shrimp into the frying pan\n    frying_pan = registry(env,\"frying_pan_201\")\n    shrimp = registry(env,\"shrimp_203\")\n    put_ontop(robot, shrimp, frying_pan)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

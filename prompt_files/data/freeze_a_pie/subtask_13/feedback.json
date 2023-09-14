@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move to the oven.\n(2) Open the oven.\n(3) Pick up the cheese tart.\n(4) Move to the plate.\n(5) Put the cheese tart on the plate.\n(6) Move to the fridge.\n(7) Open the fridge.\n(8) Put the plate with the cheese tart inside the fridge.\n(9) Close the fridge.\n(10) Freeze the cheese tart.",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Pick up the cheese tart\n    cheese_tart = registry(env,\"cheese_tart_85\")\n    EasyGrasp(robot, cheese_tart)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

@@ -1,0 +1,17 @@
+{
+    "response": {
+        "explain": " The previous action was successful and there was no error. The bottom cabinet is now closed. The next step is to put the peach inside the jar.",
+        "subtask": "\n(1) Move the robot to the fridge\n(2) Open the fridge\n(3) Take the peach out of the fridge\n(4) Close the fridge\n(5) Move the robot to the bottom cabinet\n(6) Open the bottom cabinet\n(7) Take a jar out of the bottom cabinet\n(8) Close the bottom cabinet\n(9) Put the peach inside the jar\n(10) Close the jar",
+        "code": "def act(robot,env,camera):\n    # Subtask 9: Put the peach inside the jar\n    peach = registry(env, \"peach_173\")\n    jar = registry(env, \"jar_172\")\n    put_inside(robot, peach, jar)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [],
+        "obj_3": [
+            [
+                "peach_173",
+                "inside",
+                "jar_172",
+                "1"
+            ]
+        ]
+    }
+}

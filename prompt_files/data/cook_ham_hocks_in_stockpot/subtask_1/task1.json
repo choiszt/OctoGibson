@@ -1,0 +1,2103 @@
+{
+    "task": "cook_ham_hocks_in_stockpot",
+    "0_detect_surroundings": {
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1237705615910474,
+                "theta_deg": -147.89096983526687,
+                "phi_deg": 55.793513619777265
+            },
+            "orientation_in_bot": [
+                0.01718942414327939,
+                0.013871031915892682,
+                0.7818428147055438,
+                0.6230842088069023
+            ],
+            "position_in_world": [
+                -1.6611706018447876,
+                2.137333869934082,
+                0.601054847240448
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3315022269038967,
+                "theta_deg": 50.71191097018183,
+                "phi_deg": 58.06997873022925
+            },
+            "orientation_in_bot": [
+                0.0022946193763661946,
+                0.021968539222792627,
+                0.10991463142692286,
+                0.9936955730024251
+            ],
+            "position_in_world": [
+                0.09982478618621826,
+                3.1454217433929443,
+                0.7401729822158813
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "ham_hock_82": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0621047240233497,
+                "theta_deg": 59.2094543184282,
+                "phi_deg": 72.92354955308788
+            },
+            "orientation_in_bot": [
+                -0.2693064439292339,
+                0.17403722303236582,
+                0.9298096235134526,
+                0.18066307945771484
+            ],
+            "position_in_world": [
+                -0.07469795644283295,
+                3.182110071182251,
+                0.33958128094673157
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "countertop_tpuwys_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3909009906225678,
+                "theta_deg": -77.44753506223311,
+                "phi_deg": 41.24238396782079
+            },
+            "orientation_in_bot": [
+                0.0022946193763661946,
+                0.021968539222792627,
+                0.10991463142692286,
+                0.9936955730024251
+            ],
+            "position_in_world": [
+                -0.80497244263,
+                1.5344866943350002,
+                1.0582098999
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "stockpot_81": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.5219581862898226,
+                "theta_deg": -139.81877316805762,
+                "phi_deg": 38.59263765773653
+            },
+            "orientation_in_bot": [
+                0.048040974244506436,
+                -0.02837718474389821,
+                -0.576798159119407,
+                0.8149789468545261
+            ],
+            "position_in_world": [
+                -1.6508100032806396,
+                2.013378620147705,
+                1.1610177755355835
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "oven_wuinhm_0",
+                "under",
+                "stockpot_81"
+            ],
+            [
+                "ham_hock_82",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "stockpot_81",
+                "ontop",
+                "oven_wuinhm_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "1_detect_surroundings": {
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1237705615910474,
+                "theta_deg": -147.89096983526687,
+                "phi_deg": 55.793513619777265
+            },
+            "orientation_in_bot": [
+                0.01718942414327939,
+                0.013871031915892682,
+                0.7818428147055438,
+                0.6230842088069023
+            ],
+            "position_in_world": [
+                -1.6611706018447876,
+                2.137333869934082,
+                0.601054847240448
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3315022269038967,
+                "theta_deg": 50.71191097018183,
+                "phi_deg": 58.06997873022925
+            },
+            "orientation_in_bot": [
+                0.0022946193763661946,
+                0.021968539222792627,
+                0.10991463142692286,
+                0.9936955730024251
+            ],
+            "position_in_world": [
+                0.09982478618621826,
+                3.1454217433929443,
+                0.7401729822158813
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "ham_hock_82": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0621047240233497,
+                "theta_deg": 59.2094543184282,
+                "phi_deg": 72.92354955308788
+            },
+            "orientation_in_bot": [
+                -0.2693064439292339,
+                0.17403722303236582,
+                0.9298096235134526,
+                0.18066307945771484
+            ],
+            "position_in_world": [
+                -0.07469795644283295,
+                3.182110071182251,
+                0.33958128094673157
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "countertop_tpuwys_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3909009906225678,
+                "theta_deg": -77.44753506223311,
+                "phi_deg": 41.24238396782079
+            },
+            "orientation_in_bot": [
+                0.0022946193763661946,
+                0.021968539222792627,
+                0.10991463142692286,
+                0.9936955730024251
+            ],
+            "position_in_world": [
+                -0.80497244263,
+                1.5344866943350002,
+                1.0582098999
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "stockpot_81": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.5219581862898226,
+                "theta_deg": -139.81877316805762,
+                "phi_deg": 38.59263765773653
+            },
+            "orientation_in_bot": [
+                0.048040974244506436,
+                -0.02837718474389821,
+                -0.576798159119407,
+                0.8149789468545261
+            ],
+            "position_in_world": [
+                -1.6508100032806396,
+                2.013378620147705,
+                1.1610177755355835
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "oven_wuinhm_0",
+                "under",
+                "stockpot_81"
+            ],
+            [
+                "ham_hock_82",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "stockpot_81",
+                "ontop",
+                "oven_wuinhm_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "2_detect_surroundings": {
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1237705615910474,
+                "theta_deg": -147.89096983526687,
+                "phi_deg": 55.793513619777265
+            },
+            "orientation_in_bot": [
+                0.01718942414327939,
+                0.013871031915892682,
+                0.7818428147055438,
+                0.6230842088069023
+            ],
+            "position_in_world": [
+                -1.6611706018447876,
+                2.137333869934082,
+                0.601054847240448
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3315022269038967,
+                "theta_deg": 50.71191097018183,
+                "phi_deg": 58.06997873022925
+            },
+            "orientation_in_bot": [
+                0.0022946193763661946,
+                0.021968539222792627,
+                0.10991463142692286,
+                0.9936955730024251
+            ],
+            "position_in_world": [
+                0.09982478618621826,
+                3.1454217433929443,
+                0.7401729822158813
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "ham_hock_82": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0621047240233497,
+                "theta_deg": 59.2094543184282,
+                "phi_deg": 72.92354955308788
+            },
+            "orientation_in_bot": [
+                -0.2693064439292339,
+                0.17403722303236582,
+                0.9298096235134526,
+                0.18066307945771484
+            ],
+            "position_in_world": [
+                -0.07469795644283295,
+                3.182110071182251,
+                0.33958128094673157
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "countertop_tpuwys_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3909009906225678,
+                "theta_deg": -77.44753506223311,
+                "phi_deg": 41.24238396782079
+            },
+            "orientation_in_bot": [
+                0.0022946193763661946,
+                0.021968539222792627,
+                0.10991463142692286,
+                0.9936955730024251
+            ],
+            "position_in_world": [
+                -0.80497244263,
+                1.5344866943350002,
+                1.0582098999
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "stockpot_81": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.5219581862898226,
+                "theta_deg": -139.81877316805762,
+                "phi_deg": 38.59263765773653
+            },
+            "orientation_in_bot": [
+                0.048040974244506436,
+                -0.02837718474389821,
+                -0.576798159119407,
+                0.8149789468545261
+            ],
+            "position_in_world": [
+                -1.6508100032806396,
+                2.013378620147705,
+                1.1610177755355835
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "oven_wuinhm_0",
+                "under",
+                "stockpot_81"
+            ],
+            [
+                "ham_hock_82",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "stockpot_81",
+                "ontop",
+                "oven_wuinhm_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "3_detect_surroundings": {
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1237705615910474,
+                "theta_deg": -147.89096983526687,
+                "phi_deg": 55.793513619777265
+            },
+            "orientation_in_bot": [
+                0.01718942414327939,
+                0.013871031915892682,
+                0.7818428147055438,
+                0.6230842088069023
+            ],
+            "position_in_world": [
+                -1.6611706018447876,
+                2.137333869934082,
+                0.601054847240448
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3315022269038967,
+                "theta_deg": 50.71191097018183,
+                "phi_deg": 58.06997873022925
+            },
+            "orientation_in_bot": [
+                0.0022946193763661946,
+                0.021968539222792627,
+                0.10991463142692286,
+                0.9936955730024251
+            ],
+            "position_in_world": [
+                0.09982478618621826,
+                3.1454217433929443,
+                0.7401729822158813
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "ham_hock_82": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0621047240233497,
+                "theta_deg": 59.2094543184282,
+                "phi_deg": 72.92354955308788
+            },
+            "orientation_in_bot": [
+                -0.2693064439292339,
+                0.17403722303236582,
+                0.9298096235134526,
+                0.18066307945771484
+            ],
+            "position_in_world": [
+                -0.07469795644283295,
+                3.182110071182251,
+                0.33958128094673157
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "countertop_tpuwys_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3909009906225678,
+                "theta_deg": -77.44753506223311,
+                "phi_deg": 41.24238396782079
+            },
+            "orientation_in_bot": [
+                0.0022946193763661946,
+                0.021968539222792627,
+                0.10991463142692286,
+                0.9936955730024251
+            ],
+            "position_in_world": [
+                -0.80497244263,
+                1.5344866943350002,
+                1.0582098999
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "stockpot_81": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.5219581862898226,
+                "theta_deg": -139.81877316805762,
+                "phi_deg": 38.59263765773653
+            },
+            "orientation_in_bot": [
+                0.048040974244506436,
+                -0.02837718474389821,
+                -0.576798159119407,
+                0.8149789468545261
+            ],
+            "position_in_world": [
+                -1.6508100032806396,
+                2.013378620147705,
+                1.1610177755355835
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "oven_wuinhm_0",
+                "under",
+                "stockpot_81"
+            ],
+            [
+                "ham_hock_82",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "stockpot_81",
+                "ontop",
+                "oven_wuinhm_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "4_detect_surroundings": {
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1237705615910474,
+                "theta_deg": -147.89096983526687,
+                "phi_deg": 55.793513619777265
+            },
+            "orientation_in_bot": [
+                0.01718942414327939,
+                0.013871031915892682,
+                0.7818428147055438,
+                0.6230842088069023
+            ],
+            "position_in_world": [
+                -1.6611706018447876,
+                2.137333869934082,
+                0.601054847240448
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3315022269038967,
+                "theta_deg": 50.71191097018183,
+                "phi_deg": 58.06997873022925
+            },
+            "orientation_in_bot": [
+                0.0022946193763661946,
+                0.021968539222792627,
+                0.10991463142692286,
+                0.9936955730024251
+            ],
+            "position_in_world": [
+                0.09982478618621826,
+                3.1454217433929443,
+                0.7401729822158813
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "ham_hock_82": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0621047240233497,
+                "theta_deg": 59.2094543184282,
+                "phi_deg": 72.92354955308788
+            },
+            "orientation_in_bot": [
+                -0.2693064439292339,
+                0.17403722303236582,
+                0.9298096235134526,
+                0.18066307945771484
+            ],
+            "position_in_world": [
+                -0.07469795644283295,
+                3.182110071182251,
+                0.33958128094673157
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "countertop_tpuwys_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3909009906225678,
+                "theta_deg": -77.44753506223311,
+                "phi_deg": 41.24238396782079
+            },
+            "orientation_in_bot": [
+                0.0022946193763661946,
+                0.021968539222792627,
+                0.10991463142692286,
+                0.9936955730024251
+            ],
+            "position_in_world": [
+                -0.80497244263,
+                1.5344866943350002,
+                1.0582098999
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "stockpot_81": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.5219581862898226,
+                "theta_deg": -139.81877316805762,
+                "phi_deg": 38.59263765773653
+            },
+            "orientation_in_bot": [
+                0.048040974244506436,
+                -0.02837718474389821,
+                -0.576798159119407,
+                0.8149789468545261
+            ],
+            "position_in_world": [
+                -1.6508100032806396,
+                2.013378620147705,
+                1.1610177755355835
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "oven_wuinhm_0",
+                "under",
+                "stockpot_81"
+            ],
+            [
+                "ham_hock_82",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "stockpot_81",
+                "ontop",
+                "oven_wuinhm_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "5_detect_surroundings": {
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1237705615910474,
+                "theta_deg": -147.89096983526687,
+                "phi_deg": 55.793513619777265
+            },
+            "orientation_in_bot": [
+                0.01718942414327939,
+                0.013871031915892682,
+                0.7818428147055438,
+                0.6230842088069023
+            ],
+            "position_in_world": [
+                -1.6611706018447876,
+                2.137333869934082,
+                0.601054847240448
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3315022269038967,
+                "theta_deg": 50.71191097018183,
+                "phi_deg": 58.06997873022925
+            },
+            "orientation_in_bot": [
+                0.0022946193763661946,
+                0.021968539222792627,
+                0.10991463142692286,
+                0.9936955730024251
+            ],
+            "position_in_world": [
+                0.09982478618621826,
+                3.1454217433929443,
+                0.7401729822158813
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "ham_hock_82": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0621047240233497,
+                "theta_deg": 59.2094543184282,
+                "phi_deg": 72.92354955308788
+            },
+            "orientation_in_bot": [
+                -0.2693064439292339,
+                0.17403722303236582,
+                0.9298096235134526,
+                0.18066307945771484
+            ],
+            "position_in_world": [
+                -0.07469795644283295,
+                3.182110071182251,
+                0.33958128094673157
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "countertop_tpuwys_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3909009906225678,
+                "theta_deg": -77.44753506223311,
+                "phi_deg": 41.24238396782079
+            },
+            "orientation_in_bot": [
+                0.0022946193763661946,
+                0.021968539222792627,
+                0.10991463142692286,
+                0.9936955730024251
+            ],
+            "position_in_world": [
+                -0.80497244263,
+                1.5344866943350002,
+                1.0582098999
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "stockpot_81": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.5219581862898226,
+                "theta_deg": -139.81877316805762,
+                "phi_deg": 38.59263765773653
+            },
+            "orientation_in_bot": [
+                0.048040974244506436,
+                -0.02837718474389821,
+                -0.576798159119407,
+                0.8149789468545261
+            ],
+            "position_in_world": [
+                -1.6508100032806396,
+                2.013378620147705,
+                1.1610177755355835
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "oven_wuinhm_0",
+                "under",
+                "stockpot_81"
+            ],
+            [
+                "ham_hock_82",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "stockpot_81",
+                "ontop",
+                "oven_wuinhm_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "6_detect_surroundings": {
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1237705615910474,
+                "theta_deg": -147.89096983526687,
+                "phi_deg": 55.793513619777265
+            },
+            "orientation_in_bot": [
+                0.01718942414327939,
+                0.013871031915892682,
+                0.7818428147055438,
+                0.6230842088069023
+            ],
+            "position_in_world": [
+                -1.6611706018447876,
+                2.137333869934082,
+                0.601054847240448
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3315022269038967,
+                "theta_deg": 50.71191097018183,
+                "phi_deg": 58.06997873022925
+            },
+            "orientation_in_bot": [
+                0.0022946193763661946,
+                0.021968539222792627,
+                0.10991463142692286,
+                0.9936955730024251
+            ],
+            "position_in_world": [
+                0.09982478618621826,
+                3.1454217433929443,
+                0.7401729822158813
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "ham_hock_82": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0621047240233497,
+                "theta_deg": 59.2094543184282,
+                "phi_deg": 72.92354955308788
+            },
+            "orientation_in_bot": [
+                -0.2693064439292339,
+                0.17403722303236582,
+                0.9298096235134526,
+                0.18066307945771484
+            ],
+            "position_in_world": [
+                -0.07469795644283295,
+                3.182110071182251,
+                0.33958128094673157
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "countertop_tpuwys_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3909009906225678,
+                "theta_deg": -77.44753506223311,
+                "phi_deg": 41.24238396782079
+            },
+            "orientation_in_bot": [
+                0.0022946193763661946,
+                0.021968539222792627,
+                0.10991463142692286,
+                0.9936955730024251
+            ],
+            "position_in_world": [
+                -0.80497244263,
+                1.5344866943350002,
+                1.0582098999
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "stockpot_81": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.5219581862898226,
+                "theta_deg": -139.81877316805762,
+                "phi_deg": 38.59263765773653
+            },
+            "orientation_in_bot": [
+                0.048040974244506436,
+                -0.02837718474389821,
+                -0.576798159119407,
+                0.8149789468545261
+            ],
+            "position_in_world": [
+                -1.6508100032806396,
+                2.013378620147705,
+                1.1610177755355835
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "oven_wuinhm_0",
+                "under",
+                "stockpot_81"
+            ],
+            [
+                "ham_hock_82",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "stockpot_81",
+                "ontop",
+                "oven_wuinhm_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "7_detect_surroundings": {
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1237705615910474,
+                "theta_deg": -147.89096983526687,
+                "phi_deg": 55.793513619777265
+            },
+            "orientation_in_bot": [
+                0.01718942414327939,
+                0.013871031915892682,
+                0.7818428147055438,
+                0.6230842088069023
+            ],
+            "position_in_world": [
+                -1.6611706018447876,
+                2.137333869934082,
+                0.601054847240448
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3315022269038967,
+                "theta_deg": 50.71191097018183,
+                "phi_deg": 58.06997873022925
+            },
+            "orientation_in_bot": [
+                0.0022946193763661946,
+                0.021968539222792627,
+                0.10991463142692286,
+                0.9936955730024251
+            ],
+            "position_in_world": [
+                0.09982478618621826,
+                3.1454217433929443,
+                0.7401729822158813
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "ham_hock_82": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0621047240233497,
+                "theta_deg": 59.2094543184282,
+                "phi_deg": 72.92354955308788
+            },
+            "orientation_in_bot": [
+                -0.2693064439292339,
+                0.17403722303236582,
+                0.9298096235134526,
+                0.18066307945771484
+            ],
+            "position_in_world": [
+                -0.07469795644283295,
+                3.182110071182251,
+                0.33958128094673157
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "countertop_tpuwys_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3909009906225678,
+                "theta_deg": -77.44753506223311,
+                "phi_deg": 41.24238396782079
+            },
+            "orientation_in_bot": [
+                0.0022946193763661946,
+                0.021968539222792627,
+                0.10991463142692286,
+                0.9936955730024251
+            ],
+            "position_in_world": [
+                -0.80497244263,
+                1.5344866943350002,
+                1.0582098999
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "stockpot_81": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.5219581862898226,
+                "theta_deg": -139.81877316805762,
+                "phi_deg": 38.59263765773653
+            },
+            "orientation_in_bot": [
+                0.048040974244506436,
+                -0.02837718474389821,
+                -0.576798159119407,
+                0.8149789468545261
+            ],
+            "position_in_world": [
+                -1.6508100032806396,
+                2.013378620147705,
+                1.1610177755355835
+            ],
+            "bot_in_world": [
+                -0.7585101127624512,
+                2.4415712356567383,
+                0.004813298583030701
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "oven_wuinhm_0",
+                "under",
+                "stockpot_81"
+            ],
+            [
+                "ham_hock_82",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "stockpot_81",
+                "ontop",
+                "oven_wuinhm_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "8_BEV_surroundings": {
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1237729206079985,
+                "theta_deg": -147.8910131997035,
+                "phi_deg": 55.79441007527318
+            },
+            "orientation_in_bot": [
+                0.017181481850709408,
+                0.013865845296849467,
+                0.7818465086350634,
+                0.6230799081584795
+            ],
+            "position_in_world": [
+                -1.6611706018447876,
+                2.137333869934082,
+                0.601054847240448
+            ],
+            "bot_in_world": [
+                -0.7585065960884094,
+                2.44156813621521,
+                0.004812583327293396
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3315019727632331,
+                "theta_deg": 50.713349480058056,
+                "phi_deg": 58.0693093308908
+            },
+            "orientation_in_bot": [
+                0.0022926932121104943,
+                0.021959251284061475,
+                0.10992027560340373,
+                0.9936951584123525
+            ],
+            "position_in_world": [
+                0.09982478618621826,
+                3.1454217433929443,
+                0.7401729822158813
+            ],
+            "bot_in_world": [
+                -0.7585065960884094,
+                2.44156813621521,
+                0.004812583327293396
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "ham_hock_82": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0621049384933854,
+                "theta_deg": 59.21067984336838,
+                "phi_deg": 72.92301874153625
+            },
+            "orientation_in_bot": [
+                -0.26931747912078097,
+                0.17403416407650837,
+                0.9298078621388861,
+                0.18065864130711515
+            ],
+            "position_in_world": [
+                -0.0746980756521225,
+                3.18211030960083,
+                0.33958137035369873
+            ],
+            "bot_in_world": [
+                -0.7585065960884094,
+                2.44156813621521,
+                0.004812583327293396
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "countertop_tpuwys_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3908996059735497,
+                "theta_deg": -77.44828546721615,
+                "phi_deg": 41.24194174242155
+            },
+            "orientation_in_bot": [
+                0.0022926932121104943,
+                0.021959251284061475,
+                0.10992027560340373,
+                0.9936951584123525
+            ],
+            "position_in_world": [
+                -0.80497244263,
+                1.5344866943350002,
+                1.0582098999
+            ],
+            "bot_in_world": [
+                -0.7585065960884094,
+                2.44156813621521,
+                0.004812583327293396
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "stockpot_81": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.5219597877154947,
+                "theta_deg": -139.81941931102466,
+                "phi_deg": 38.59342755528555
+            },
+            "orientation_in_bot": [
+                0.04804305481320393,
+                -0.028389558482775835,
+                -0.5767926132929374,
+                0.8149823182769504
+            ],
+            "position_in_world": [
+                -1.6508103609085083,
+                2.0133798122406006,
+                1.1610177755355835
+            ],
+            "bot_in_world": [
+                -0.7585065960884094,
+                2.44156813621521,
+                0.004812583327293396
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "oven_wuinhm_0",
+                "under",
+                "stockpot_81"
+            ],
+            [
+                "ham_hock_82",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "stockpot_81",
+                "ontop",
+                "oven_wuinhm_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "9_BEV_surroundings": {
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1237729206079985,
+                "theta_deg": -147.8910131997035,
+                "phi_deg": 55.79441007527318
+            },
+            "orientation_in_bot": [
+                0.017181481850709408,
+                0.013865845296849467,
+                0.7818465086350634,
+                0.6230799081584795
+            ],
+            "position_in_world": [
+                -1.6611706018447876,
+                2.137333869934082,
+                0.601054847240448
+            ],
+            "bot_in_world": [
+                -0.7585065960884094,
+                2.44156813621521,
+                0.004812583327293396
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3315019727632331,
+                "theta_deg": 50.713349480058056,
+                "phi_deg": 58.0693093308908
+            },
+            "orientation_in_bot": [
+                0.0022926932121104943,
+                0.021959251284061475,
+                0.10992027560340373,
+                0.9936951584123525
+            ],
+            "position_in_world": [
+                0.09982478618621826,
+                3.1454217433929443,
+                0.7401729822158813
+            ],
+            "bot_in_world": [
+                -0.7585065960884094,
+                2.44156813621521,
+                0.004812583327293396
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "ham_hock_82": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0621049384933854,
+                "theta_deg": 59.21067984336838,
+                "phi_deg": 72.92301874153625
+            },
+            "orientation_in_bot": [
+                -0.26931747912078097,
+                0.17403416407650837,
+                0.9298078621388861,
+                0.18065864130711515
+            ],
+            "position_in_world": [
+                -0.0746980756521225,
+                3.18211030960083,
+                0.33958137035369873
+            ],
+            "bot_in_world": [
+                -0.7585065960884094,
+                2.44156813621521,
+                0.004812583327293396
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "countertop_tpuwys_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3908996059735497,
+                "theta_deg": -77.44828546721615,
+                "phi_deg": 41.24194174242155
+            },
+            "orientation_in_bot": [
+                0.0022926932121104943,
+                0.021959251284061475,
+                0.10992027560340373,
+                0.9936951584123525
+            ],
+            "position_in_world": [
+                -0.80497244263,
+                1.5344866943350002,
+                1.0582098999
+            ],
+            "bot_in_world": [
+                -0.7585065960884094,
+                2.44156813621521,
+                0.004812583327293396
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "stockpot_81": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.5219597877154947,
+                "theta_deg": -139.81941931102466,
+                "phi_deg": 38.59342755528555
+            },
+            "orientation_in_bot": [
+                0.04804305481320393,
+                -0.028389558482775835,
+                -0.5767926132929374,
+                0.8149823182769504
+            ],
+            "position_in_world": [
+                -1.6508103609085083,
+                2.0133798122406006,
+                1.1610177755355835
+            ],
+            "bot_in_world": [
+                -0.7585065960884094,
+                2.44156813621521,
+                0.004812583327293396
+            ],
+            "path": "./prompt_files/data/cook_ham_hocks_in_stockpot/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "oven_wuinhm_0",
+                "under",
+                "stockpot_81"
+            ],
+            [
+                "ham_hock_82",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "stockpot_81",
+                "ontop",
+                "oven_wuinhm_0"
+            ]
+        ],
+        "inventory": []
+    }
+}

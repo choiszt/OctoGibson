@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the fridge\n(2) Take the ham hock out of the fridge\n(3) Move to the oven\n(4) Put the ham hock into the stockpot\n(5) Put the stockpot onto the oven\n(6) Cook the ham hock in the stockpot",
+    "code": "def act(robot,env,camera):\n    # Subtask 2: Take the ham hock out of the fridge\n    ham_hock = registry(env,\"ham_hock_82\")\n    EasyGrasp(robot, ham_hock)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

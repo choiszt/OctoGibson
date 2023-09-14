@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move to the oven.\n(2) Pick up the plate.\n(3) Put the cheese tart on the plate.\n(4) Move to the fridge.\n(5) Put the plate with the cheese tart inside the fridge.\n(6) Close the fridge.",
+    "code": "def act(robot,env,camera):\n    # Subtask 4: Move to the fridge\n    fridge = registry(env,\"fridge_xyejdx_0\")\n    MoveBot(env, robot, fridge, camera)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

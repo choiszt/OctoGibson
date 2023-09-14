@@ -1,0 +1,17 @@
+{
+    "response": {
+        "explain": " The previous action code successfully closed the bottom cabinet. The next step is to move the robot to the microwave.",
+        "subtask": "\n(1) Open the bottom cabinet.\n(2) Grasp the mug from the cabinet.\n(3) Close the bottom cabinet.\n(4) Move to the microwave.\n(5) Open the microwave.\n(6) Put the mug inside the microwave.\n(7) Close the microwave.\n(8) Turn on the microwave to heat the mug.",
+        "code": "def act(robot,env,camera):\n    # Subtask 4: Move to the microwave\n    microwave = registry(env, \"microwave_bfbeeb_0\")\n    MoveBot(env, robot, microwave, camera)\n    donothing(env)\n",
+        "inventory": "mug_188",
+        "obj_2": [],
+        "obj_3": [
+            [
+                "robot",
+                "nextto",
+                "microwave_bfbeeb_0",
+                "1"
+            ]
+        ]
+    }
+}

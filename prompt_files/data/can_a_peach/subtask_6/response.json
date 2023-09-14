@@ -1,0 +1,16 @@
+{
+    "response": {
+        "explain": " The previous action was successful and the fridge was closed. The next step is to open the bottom cabinet to get the jar.",
+        "subtask": "\n(1) Move the robot to the fridge\n(2) Open the fridge\n(3) Take the peach out of the fridge\n(4) Close the fridge\n(5) Open the bottom cabinet\n(6) Take a jar out of the bottom cabinet\n(7) Close the bottom cabinet\n(8) Put the peach inside the jar\n(9) Close the jar",
+        "code": "def act(robot,env,camera):\n    # Subtask 5: Open the bottom cabinet\n    bottom_cabinet = registry(env, \"bottom_cabinet_no_top_qohxjq_1\")\n    open(robot, bottom_cabinet)\n    donothing(env)\n",
+        "inventory": "peach_173",
+        "obj_2": [
+            [
+                "bottom_cabinet_no_top_qohxjq_1",
+                "openable",
+                "1"
+            ]
+        ],
+        "obj_3": []
+    }
+}

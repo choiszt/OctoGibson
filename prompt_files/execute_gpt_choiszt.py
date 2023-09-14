@@ -1,7 +1,7 @@
 import os
 import json
 import yaml
-
+import time
 # import omnigibson as og
 
 # from robot_action import *
@@ -49,7 +49,20 @@ def gpt_process(save_path, openai_api_key):
             content=system_message.content+"\n\n"+human_message.content
             eu.save_input(sub_save_path, human_message.content)
             print("start query")
-            response=gpt_request(content)
+            success=True
+            while success:
+                try:
+                    response=gpt_request(content)
+                    success=False
+                except Exception as e:
+                    print(f'Error:{e}')
+                    if "have exceeded" in str(e):
+                        print("sleeping for 3 seconds")
+                        success=True
+                        time.sleep(3)
+                    else:
+                        success=False
+                        response={"error_message":str(e)}
             try:
                 answer = gpt_query.process_ai_message(response)
             except Exception as e:
@@ -96,7 +109,7 @@ def gpt_process(save_path, openai_api_key):
 api_key="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"
 with open("/shared/liushuai/OmniGibson/EVLM_Task/new913.json","r")as f:
     task=json.load(f)
-i=1
+i=15
 EVLM_name=sorted(list(task))[i]
 task_name=task[EVLM_name]['task_name']
 gpt_name=task[EVLM_name]['gpt_task']
