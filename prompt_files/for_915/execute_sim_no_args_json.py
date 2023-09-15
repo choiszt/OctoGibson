@@ -31,7 +31,7 @@ def parse_args():
 
 def sim_process(args):
     idx = args.idx
-    with open('./task.json') as f:
+    with open('/home/dongyuhao/omni_base/EVLM_Task/task_0911.json') as f:
         data = json.load(f)
     all_task_name = list(data.keys())
     main_task_name = all_task_name[idx]
@@ -58,7 +58,7 @@ def sim_process(args):
         print(task_name, scene_name)
         with open("/Users/liushuai/Desktop/sim_gpt/finished_task.json","r")as f:
             finished_task = json.load(f)
-            finished_task[args.task_name] = "error"
+            finished_task[task_name] = "error"
         with open("/Users/liushuai/Desktop/sim_gpt/finished_task.json","w")as f:
             f.write(json.dumps(finished_task))  
         return 0
@@ -206,7 +206,7 @@ def sim_process(args):
                 main_succeed = True
                 with open("/Users/liushuai/Desktop/sim_gpt/finished_task.json","r")as f:
                     finished_task = json.load(f)
-                    finished_task[args.task_name] = "succeed"
+                    finished_task[task_name] = "succeed"
                 with open("/Users/liushuai/Desktop/sim_gpt/finished_task.json","w")as f:
                     f.write(json.dumps(finished_task))                        
                 print(f"finish {task_name}!!!!! congrats!!!!!")
@@ -234,7 +234,7 @@ def sim_process(args):
             print(f"already attempt {subtask_iter} time, it is too long!")
             with open("/Users/liushuai/Desktop/sim_gpt/finished_task.json","r")as f:
                 finished_task = json.load(f)
-                finished_task[args.task_name] = "failed"
+                finished_task[task_name] = "failed"
             with open("/Users/liushuai/Desktop/sim_gpt/finished_task.json","w")as f:
                 f.write(json.dumps(finished_task))    
             env.close()        

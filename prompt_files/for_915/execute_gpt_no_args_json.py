@@ -26,7 +26,7 @@ def parse_args():
 def gpt_process(args):
     
     idx = args.idx
-    with open('/home/dongyuhao/omni_base/EVLM_Task/task_0911.json') as f:
+    with open('/home/dongyuhao/omni_base/EVLM_Task/task_0911.json') as f: #TODO change the json path
         data = json.load(f)
     all_task_name = list(data.keys())
     main_task_name = all_task_name[idx]
@@ -52,7 +52,7 @@ def gpt_process(args):
                 data = json.load(f)
                 if gpt_task_name in data.keys():
                     return 0
-            if os.path.exists(os.path.join(sub_save_path, 'task1.json')): #TODO align with "task1"
+            if os.path.exists(os.path.join(sub_save_path, 'task1.json')): 
                 break   
             time.sleep(1)
         while True:
@@ -84,7 +84,7 @@ def gpt_process(args):
                     succuss = False
                 except Exception as e:
                     print(f"Error: {e}")
-                    if "have exceeded call rate limit" in str(e):
+                    if "have exceeded" in str(e):
                         print("Sleeping for 3 seconds")
                         succuss = True
                         time.sleep(3)
