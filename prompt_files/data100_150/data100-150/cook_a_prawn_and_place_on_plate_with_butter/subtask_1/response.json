@@ -1,0 +1,16 @@
+{
+    "response": {
+        "explain": " Since there is no previous action code or execution error, we can start planning from scratch. The task is to cook a prawn and place it on a plate with butter. The prawn, butter, and garlic clove are all inside the fridge, and the plate is on the countertop. The stove is off and the fridge is closed. The first step should be to open the fridge.",
+        "subtask": "\n(1) Open the fridge\n(2) Take out the prawn from the fridge\n(3) Take out the butter from the fridge\n(4) Close the fridge\n(5) Turn on the stove\n(6) Cook the prawn on the stove\n(7) Turn off the stove\n(8) Place the cooked prawn on the plate\n(9) Place the butter on the plate",
+        "code": "def act(robot,env,camera):\n    # Subtask 1: Open the fridge\n    fridge = registry(env,\"fridge_dszchb_0\")\n    open(robot, fridge)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [
+            [
+                "fridge_dszchb_0",
+                "openable",
+                "1"
+            ]
+        ],
+        "obj_3": []
+    }
+}

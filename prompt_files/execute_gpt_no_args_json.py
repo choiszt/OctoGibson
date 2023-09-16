@@ -26,7 +26,7 @@ def parse_args():
 def gpt_process(args):
     
     idx = args.idx
-    with open('/home/cooyes/Desktop/liushuai/omnigibson/EVLM_Task/all.json') as f: #TODO change the path
+    with open('/shared/liushuai/OmniGibson/EVLM_Task/all.json') as f: #TODO change the path
         data = json.load(f)
     EVLM_name=sorted(list(data))[idx]
     print(data[EVLM_name]['split'])
@@ -40,7 +40,7 @@ def gpt_process(args):
         print(f"detailed_name:{gpt_name}")
         task_data = data[EVLM_name]
         gpt_task_name = task_data['detailed_name']
-        save_path = eu.f_mkdir(os.path.join('./data', gpt_task_name))
+        save_path = eu.f_mkdir(os.path.join('./prompt_files/data', gpt_task_name))
         # main task loop
         
         main_task_flag = False
@@ -56,7 +56,7 @@ def gpt_process(args):
             
             # init pipeline for each subtask
             while True:
-                with open("/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/finished_task.json","r")as f:
+                with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","r")as f:
                     data = json.load(f)
                     if gpt_task_name in data.keys():
                         return 0
@@ -69,7 +69,7 @@ def gpt_process(args):
                     break
             human_info = parse_json.parse_json(path=os.path.join(sub_save_path, "task1.json"))
             
-            with open("/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/finished_task.json","r")as f:
+            with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","r")as f:
                 data = json.load(f)
                 if gpt_task_name in data.keys():
                     return 0
@@ -106,10 +106,12 @@ def gpt_process(args):
                 except Exception as e:
                     answer = str(e)
                     print(answer)
+                    
                 eu.save_response(sub_save_path, answer)
+
                 
                 while True:
-                    with open("/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/finished_task.json","r")as f:
+                    with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","r")as f:
                         data = json.load(f)
                         if gpt_task_name in data.keys():
                             return 0               
@@ -122,7 +124,7 @@ def gpt_process(args):
                     if feedbackinfo.st_size > 0:
                         break
                     
-                with open("/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/finished_task.json","r")as f:
+                with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","r")as f:
                     data = json.load(f)
                     if gpt_task_name in data.keys():
                         return 0

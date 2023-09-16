@@ -30,9 +30,9 @@ def parse_args():
 
 
 def sim_process(args):
-    try:
+    try:    
         idx = args.idx
-        with open('/home/cooyes/Desktop/liushuai/omnigibson/EVLM_Task/all.json') as f: #TODO change the path
+        with open('/shared/liushuai/OmniGibson/EVLM_Task/all.json') as f: #TODO change the path
             data = json.load(f)
         EVLM_name=sorted(list(data))[idx]
         if "train" in data[EVLM_name]['split']:
@@ -47,13 +47,13 @@ def sim_process(args):
             task_name = task_data['task_name']
             gpt_task_name = task_data['detailed_name']
             scene_name = task_data['env']
-            save_path = eu.f_mkdir(os.path.join('./data', gpt_task_name))
+            save_path = eu.f_mkdir(os.path.join('./prompt_files/data', gpt_task_name))
             main_target_states = task_data['target_states']
             og.log.info(main_target_states)
             removed_items = task_data['removed_item']
 
             heading="import os \nimport json\nimport yaml\nimport omnigibson as og\nfrom action_list import * \nfrom action_utils import *\n"
-            config_filename="./bddl_task.yaml"
+            config_filename="./prompt_files/bddl_task.yaml"
             cfg = yaml.load(open(config_filename, "r"), Loader=yaml.FullLoader)
             cfg["task"]["online_object_sampling"] = False
             cfg["scene"]["scene_model"] = scene_name
@@ -65,10 +65,10 @@ def sim_process(args):
             except:
                 og.log.info("Loading Environment Error!!!")
                 og.log.info(task_name, scene_name)
-                with open("/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/finished_task.json","r")as f:
+                with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","r")as f:
                     finished_task = json.load(f)
                     finished_task[gpt_task_name] = "error"
-                with open("/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/finished_task.json","w")as f:
+                with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","w")as f:
                     f.write(json.dumps(finished_task))  
                 return 0
             
@@ -114,17 +114,24 @@ def sim_process(args):
                         error = answer
                         critic = 'fail'
                         reset = False
-                        break
+                        with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","r")as f:
+                            finished_task = json.load(f)
+                            finished_task[gpt_task_name] = "failed"
+                        with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","w")as f:
+                            f.write(json.dumps(finished_task))
+                        eu.save_feedback(feedback_path, subtask, code, error, critic, reset, main_succeed)
+                        env.close()
+                        return 0
                     else:
                         subtask, code = answer['subtask'], answer['code']
-                        with open(f"./data/{gpt_task_name}/subtask_{subtask_iter}/action.py", 'w') as f:
+                        with open(f"./prompt_files/data/{gpt_task_name}/subtask_{subtask_iter}/action.py", 'w') as f:
                             f.write(heading)
                             f.write(code)
                         # time.sleep(2)
                         sys.path=list(set(sys.path))
                         if(subtask_iter!=1):
-                            sys.path.remove(f"./data/{gpt_task_name}/subtask_{subtask_iter-1}")
-                        sys.path.append(f"./data/{gpt_task_name}/subtask_{subtask_iter}")
+                            sys.path.remove(f"./prompt_files/data/{gpt_task_name}/subtask_{subtask_iter-1}")
+                        sys.path.append(f"./prompt_files/data/{gpt_task_name}/subtask_{subtask_iter}")
                         import action
                         time.sleep(1)
                         try:
@@ -162,7 +169,7 @@ def sim_process(args):
                     for obj in target_states['obj_3']:
                         if obj[0] == "robot" or obj[2] == "robot":
                             continue
-                        value = eu.verify_obj_3(env,obj[0], obj[1], obj[2],obj[3], f"./data/{gpt_task_name}/subtask_{subtask_iter}/action.py")
+                        value = eu.verify_obj_3(env,obj[0], obj[1], obj[2],obj[3], f"./prompt_files/data/{gpt_task_name}/subtask_{subtask_iter}/action.py")
                         if not value:
                             error += f"{obj[0]} is not {obj[1]} {obj[2]}\n"
 
@@ -215,10 +222,10 @@ def sim_process(args):
                                 signal.append(0)
                     if 0 not in signal:
                         main_succeed = True
-                        with open("/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/finished_task.json","r")as f:
+                        with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","r")as f:
                             finished_task = json.load(f)
                             finished_task[gpt_task_name] = "succeed"
-                        with open("/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/finished_task.json","w")as f:
+                        with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","w")as f:
                             f.write(json.dumps(finished_task))                        
                         og.log.info(f"finish {task_name}!!!!! congrats!!!!!")
                         eu.save_feedback(feedback_path, subtask, code, error, critic, reset, main_succeed)
@@ -232,7 +239,7 @@ def sim_process(args):
                 if reset: #
                     if subtask_iter!=1:
                         for iter_num in range(1,subtask_iter):
-                            path=f"./data/{gpt_task_name}/subtask_{iter_num}"
+                            path=f"./prompt_files/data/{gpt_task_name}/subtask_{iter_num}"
                             with open(os.path.join(path,"feedback.json"))as f:
                                 tmp_feedback=json.load(f)
                             if tmp_feedback['critic']=='succeed':
@@ -243,19 +250,19 @@ def sim_process(args):
                 if subtask_iter>14:
                     #write json
                     og.log.info(f"already attempt {subtask_iter} time, it is too long!")
-                    with open("/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/finished_task.json","r")as f:
+                    with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","r")as f:
                         finished_task = json.load(f)
                         finished_task[gpt_task_name] = "failed"
-                    with open("/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/finished_task.json","w")as f:
+                    with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","w")as f:
                         f.write(json.dumps(finished_task))    
                     env.close()        
                     return 0
     except:
         og.log.info(f"loop failed")
-        with open("/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/finished_task.json","r")as f:
+        with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","r")as f:
             finished_task = json.load(f)
             finished_task[gpt_task_name] = "error"
-        with open("/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/finished_task.json","w")as f:
+        with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","w")as f:
             f.write(json.dumps(finished_task)) 
         return 0
 

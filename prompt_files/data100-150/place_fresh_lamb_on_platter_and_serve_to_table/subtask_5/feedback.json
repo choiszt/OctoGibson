@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the fridge.\n(2) Open the fridge.\n(3) Grasp the lamb from the fridge.\n(4) Close the fridge.\n(5) Move the robot to the bottom cabinet.\n(6) Open the bottom cabinet.\n(7) Grasp the platter from the bottom cabinet.\n(8) Close the bottom cabinet.\n(9) Put the lamb on the platter.\n(10) Move the robot to the breakfast table.\n(11) Put the platter with the lamb on the breakfast table.",
+    "code": "def act(robot,env,camera):\n    # Subtask 5: Move the robot to the bottom cabinet.\n    bottom_cabinet = registry(env, \"bottom_cabinet_no_top_ufhpbn_0\")\n    MoveBot(env, robot, bottom_cabinet, camera)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

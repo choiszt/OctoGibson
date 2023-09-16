@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Take a tissue from the toilet paper.\n(2) Put the tissue inside the backpack.",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Take a tissue from the toilet paper\n    toilet_paper_88 = registry(env,\"toilet_paper_88\")\n    EasyGrasp(robot, toilet_paper_88)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

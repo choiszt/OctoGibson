@@ -1,0 +1,1583 @@
+{
+    "task": "put_a_legal_document_into_folder_and_put_it_in_cabinet",
+    "0_detect_surroundings": {
+        "folder_190": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.37191561148131386,
+                "theta_deg": -9.19654925568978,
+                "phi_deg": 2.153725979301593
+            },
+            "orientation_in_bot": [
+                0.018872752207845702,
+                -0.027662635915399726,
+                -0.10436662373010169,
+                0.9939749522243971
+            ],
+            "position_in_world": [
+                -0.5807812809944153,
+                0.5359863638877869,
+                0.37669044733047485
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance0_detect_surroundings.png"
+        },
+        "bottom_cabinet_nddvba_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.4407847793982325,
+                "theta_deg": 1.0828197070374874,
+                "phi_deg": 84.35736714748775
+            },
+            "orientation_in_bot": [
+                -0.01040254274909962,
+                0.0194561824264244,
+                -0.468223627492316,
+                0.8833345225494584
+            ],
+            "position_in_world": [
+                1.4433799982070923,
+                -0.7879114151000977,
+                0.3516830503940582
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance0_detect_surroundings.png"
+        },
+        "legal_document_188": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.36552845843048903,
+                "theta_deg": -3.326823214048605,
+                "phi_deg": 4.494409797833411
+            },
+            "orientation_in_bot": [
+                0.004768541727925961,
+                -0.021701704332270887,
+                -0.2944786555419511,
+                0.9553997165946139
+            ],
+            "position_in_world": [
+                -0.5679855346679688,
+                0.5279422402381897,
+                0.3701019585132599
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance0_detect_surroundings.png"
+        },
+        "post_it_191": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.27831603668784,
+                "theta_deg": -2.962936513121913,
+                "phi_deg": 90.7857276498056
+            },
+            "orientation_in_bot": [
+                -0.018949677495167707,
+                0.003507131925622642,
+                -0.45510457802364973,
+                0.8902294270638335
+            ],
+            "position_in_world": [
+                1.2343820333480835,
+                -0.8433165550231934,
+                0.0739220604300499
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance0_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "legal_document_188",
+                "under",
+                "folder_190"
+            ],
+            [
+                "post_it_191",
+                "inside",
+                "bottom_cabinet_nddvba_0"
+            ]
+        ],
+        "inventory": [
+            "folder_190",
+            "legal_document_188"
+        ]
+    },
+    "1_detect_surroundings": {
+        "folder_190": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.37191561148131386,
+                "theta_deg": -9.19654925568978,
+                "phi_deg": 2.153725979301593
+            },
+            "orientation_in_bot": [
+                0.018872752207845702,
+                -0.027662635915399726,
+                -0.10436662373010169,
+                0.9939749522243971
+            ],
+            "position_in_world": [
+                -0.5807812809944153,
+                0.5359863638877869,
+                0.37669044733047485
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance1_detect_surroundings.png"
+        },
+        "bottom_cabinet_nddvba_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.4407847793982325,
+                "theta_deg": 1.0828197070374874,
+                "phi_deg": 84.35736714748775
+            },
+            "orientation_in_bot": [
+                -0.01040254274909962,
+                0.0194561824264244,
+                -0.468223627492316,
+                0.8833345225494584
+            ],
+            "position_in_world": [
+                1.4433799982070923,
+                -0.7879114151000977,
+                0.3516830503940582
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance1_detect_surroundings.png"
+        },
+        "legal_document_188": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.36552845843048903,
+                "theta_deg": -3.326823214048605,
+                "phi_deg": 4.494409797833411
+            },
+            "orientation_in_bot": [
+                0.004768541727925961,
+                -0.021701704332270887,
+                -0.2944786555419511,
+                0.9553997165946139
+            ],
+            "position_in_world": [
+                -0.5679855346679688,
+                0.5279422402381897,
+                0.3701019585132599
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance1_detect_surroundings.png"
+        },
+        "post_it_191": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.27831603668784,
+                "theta_deg": -2.962936513121913,
+                "phi_deg": 90.7857276498056
+            },
+            "orientation_in_bot": [
+                -0.018949677495167707,
+                0.003507131925622642,
+                -0.45510457802364973,
+                0.8902294270638335
+            ],
+            "position_in_world": [
+                1.2343820333480835,
+                -0.8433165550231934,
+                0.0739220604300499
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance1_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "legal_document_188",
+                "under",
+                "folder_190"
+            ],
+            [
+                "post_it_191",
+                "inside",
+                "bottom_cabinet_nddvba_0"
+            ]
+        ],
+        "inventory": [
+            "folder_190",
+            "legal_document_188"
+        ]
+    },
+    "2_detect_surroundings": {
+        "folder_190": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.37191561148131386,
+                "theta_deg": -9.19654925568978,
+                "phi_deg": 2.153725979301593
+            },
+            "orientation_in_bot": [
+                0.018872752207845702,
+                -0.027662635915399726,
+                -0.10436662373010169,
+                0.9939749522243971
+            ],
+            "position_in_world": [
+                -0.5807812809944153,
+                0.5359863638877869,
+                0.37669044733047485
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance2_detect_surroundings.png"
+        },
+        "bottom_cabinet_nddvba_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.4407847793982325,
+                "theta_deg": 1.0828197070374874,
+                "phi_deg": 84.35736714748775
+            },
+            "orientation_in_bot": [
+                -0.01040254274909962,
+                0.0194561824264244,
+                -0.468223627492316,
+                0.8833345225494584
+            ],
+            "position_in_world": [
+                1.4433799982070923,
+                -0.7879114151000977,
+                0.3516830503940582
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance2_detect_surroundings.png"
+        },
+        "legal_document_188": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.36552845843048903,
+                "theta_deg": -3.326823214048605,
+                "phi_deg": 4.494409797833411
+            },
+            "orientation_in_bot": [
+                0.004768541727925961,
+                -0.021701704332270887,
+                -0.2944786555419511,
+                0.9553997165946139
+            ],
+            "position_in_world": [
+                -0.5679855346679688,
+                0.5279422402381897,
+                0.3701019585132599
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance2_detect_surroundings.png"
+        },
+        "post_it_191": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.27831603668784,
+                "theta_deg": -2.962936513121913,
+                "phi_deg": 90.7857276498056
+            },
+            "orientation_in_bot": [
+                -0.018949677495167707,
+                0.003507131925622642,
+                -0.45510457802364973,
+                0.8902294270638335
+            ],
+            "position_in_world": [
+                1.2343820333480835,
+                -0.8433165550231934,
+                0.0739220604300499
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance2_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "legal_document_188",
+                "under",
+                "folder_190"
+            ],
+            [
+                "post_it_191",
+                "inside",
+                "bottom_cabinet_nddvba_0"
+            ]
+        ],
+        "inventory": [
+            "folder_190",
+            "legal_document_188"
+        ]
+    },
+    "3_detect_surroundings": {
+        "folder_190": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.37191561148131386,
+                "theta_deg": -9.19654925568978,
+                "phi_deg": 2.153725979301593
+            },
+            "orientation_in_bot": [
+                0.018872752207845702,
+                -0.027662635915399726,
+                -0.10436662373010169,
+                0.9939749522243971
+            ],
+            "position_in_world": [
+                -0.5807812809944153,
+                0.5359863638877869,
+                0.37669044733047485
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance3_detect_surroundings.png"
+        },
+        "bottom_cabinet_nddvba_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.4407847793982325,
+                "theta_deg": 1.0828197070374874,
+                "phi_deg": 84.35736714748775
+            },
+            "orientation_in_bot": [
+                -0.01040254274909962,
+                0.0194561824264244,
+                -0.468223627492316,
+                0.8833345225494584
+            ],
+            "position_in_world": [
+                1.4433799982070923,
+                -0.7879114151000977,
+                0.3516830503940582
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance3_detect_surroundings.png"
+        },
+        "legal_document_188": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.36552845843048903,
+                "theta_deg": -3.326823214048605,
+                "phi_deg": 4.494409797833411
+            },
+            "orientation_in_bot": [
+                0.004768541727925961,
+                -0.021701704332270887,
+                -0.2944786555419511,
+                0.9553997165946139
+            ],
+            "position_in_world": [
+                -0.5679855346679688,
+                0.5279422402381897,
+                0.3701019585132599
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance3_detect_surroundings.png"
+        },
+        "post_it_191": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.27831603668784,
+                "theta_deg": -2.962936513121913,
+                "phi_deg": 90.7857276498056
+            },
+            "orientation_in_bot": [
+                -0.018949677495167707,
+                0.003507131925622642,
+                -0.45510457802364973,
+                0.8902294270638335
+            ],
+            "position_in_world": [
+                1.2343820333480835,
+                -0.8433165550231934,
+                0.0739220604300499
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance3_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "legal_document_188",
+                "under",
+                "folder_190"
+            ],
+            [
+                "post_it_191",
+                "inside",
+                "bottom_cabinet_nddvba_0"
+            ]
+        ],
+        "inventory": [
+            "folder_190",
+            "legal_document_188"
+        ]
+    },
+    "4_detect_surroundings": {
+        "folder_190": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.37191561148131386,
+                "theta_deg": -9.19654925568978,
+                "phi_deg": 2.153725979301593
+            },
+            "orientation_in_bot": [
+                0.018872752207845702,
+                -0.027662635915399726,
+                -0.10436662373010169,
+                0.9939749522243971
+            ],
+            "position_in_world": [
+                -0.5807812809944153,
+                0.5359863638877869,
+                0.37669044733047485
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance4_detect_surroundings.png"
+        },
+        "bottom_cabinet_nddvba_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.4407847793982325,
+                "theta_deg": 1.0828197070374874,
+                "phi_deg": 84.35736714748775
+            },
+            "orientation_in_bot": [
+                -0.01040254274909962,
+                0.0194561824264244,
+                -0.468223627492316,
+                0.8833345225494584
+            ],
+            "position_in_world": [
+                1.4433799982070923,
+                -0.7879114151000977,
+                0.3516830503940582
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance4_detect_surroundings.png"
+        },
+        "legal_document_188": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.36552845843048903,
+                "theta_deg": -3.326823214048605,
+                "phi_deg": 4.494409797833411
+            },
+            "orientation_in_bot": [
+                0.004768541727925961,
+                -0.021701704332270887,
+                -0.2944786555419511,
+                0.9553997165946139
+            ],
+            "position_in_world": [
+                -0.5679855346679688,
+                0.5279422402381897,
+                0.3701019585132599
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance4_detect_surroundings.png"
+        },
+        "post_it_191": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.27831603668784,
+                "theta_deg": -2.962936513121913,
+                "phi_deg": 90.7857276498056
+            },
+            "orientation_in_bot": [
+                -0.018949677495167707,
+                0.003507131925622642,
+                -0.45510457802364973,
+                0.8902294270638335
+            ],
+            "position_in_world": [
+                1.2343820333480835,
+                -0.8433165550231934,
+                0.0739220604300499
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance4_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "legal_document_188",
+                "under",
+                "folder_190"
+            ],
+            [
+                "post_it_191",
+                "inside",
+                "bottom_cabinet_nddvba_0"
+            ]
+        ],
+        "inventory": [
+            "folder_190",
+            "legal_document_188"
+        ]
+    },
+    "5_detect_surroundings": {
+        "folder_190": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.37191561148131386,
+                "theta_deg": -9.19654925568978,
+                "phi_deg": 2.153725979301593
+            },
+            "orientation_in_bot": [
+                0.018872752207845702,
+                -0.027662635915399726,
+                -0.10436662373010169,
+                0.9939749522243971
+            ],
+            "position_in_world": [
+                -0.5807812809944153,
+                0.5359863638877869,
+                0.37669044733047485
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance5_detect_surroundings.png"
+        },
+        "bottom_cabinet_nddvba_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.4407847793982325,
+                "theta_deg": 1.0828197070374874,
+                "phi_deg": 84.35736714748775
+            },
+            "orientation_in_bot": [
+                -0.01040254274909962,
+                0.0194561824264244,
+                -0.468223627492316,
+                0.8833345225494584
+            ],
+            "position_in_world": [
+                1.4433799982070923,
+                -0.7879114151000977,
+                0.3516830503940582
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance5_detect_surroundings.png"
+        },
+        "legal_document_188": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.36552845843048903,
+                "theta_deg": -3.326823214048605,
+                "phi_deg": 4.494409797833411
+            },
+            "orientation_in_bot": [
+                0.004768541727925961,
+                -0.021701704332270887,
+                -0.2944786555419511,
+                0.9553997165946139
+            ],
+            "position_in_world": [
+                -0.5679855346679688,
+                0.5279422402381897,
+                0.3701019585132599
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance5_detect_surroundings.png"
+        },
+        "post_it_191": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.27831603668784,
+                "theta_deg": -2.962936513121913,
+                "phi_deg": 90.7857276498056
+            },
+            "orientation_in_bot": [
+                -0.018949677495167707,
+                0.003507131925622642,
+                -0.45510457802364973,
+                0.8902294270638335
+            ],
+            "position_in_world": [
+                1.2343820333480835,
+                -0.8433165550231934,
+                0.0739220604300499
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance5_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "legal_document_188",
+                "under",
+                "folder_190"
+            ],
+            [
+                "post_it_191",
+                "inside",
+                "bottom_cabinet_nddvba_0"
+            ]
+        ],
+        "inventory": [
+            "folder_190",
+            "legal_document_188"
+        ]
+    },
+    "6_detect_surroundings": {
+        "folder_190": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.37191561148131386,
+                "theta_deg": -9.19654925568978,
+                "phi_deg": 2.153725979301593
+            },
+            "orientation_in_bot": [
+                0.018872752207845702,
+                -0.027662635915399726,
+                -0.10436662373010169,
+                0.9939749522243971
+            ],
+            "position_in_world": [
+                -0.5807812809944153,
+                0.5359863638877869,
+                0.37669044733047485
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance6_detect_surroundings.png"
+        },
+        "bottom_cabinet_nddvba_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.4407847793982325,
+                "theta_deg": 1.0828197070374874,
+                "phi_deg": 84.35736714748775
+            },
+            "orientation_in_bot": [
+                -0.01040254274909962,
+                0.0194561824264244,
+                -0.468223627492316,
+                0.8833345225494584
+            ],
+            "position_in_world": [
+                1.4433799982070923,
+                -0.7879114151000977,
+                0.3516830503940582
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance6_detect_surroundings.png"
+        },
+        "legal_document_188": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.36552845843048903,
+                "theta_deg": -3.326823214048605,
+                "phi_deg": 4.494409797833411
+            },
+            "orientation_in_bot": [
+                0.004768541727925961,
+                -0.021701704332270887,
+                -0.2944786555419511,
+                0.9553997165946139
+            ],
+            "position_in_world": [
+                -0.5679855346679688,
+                0.5279422402381897,
+                0.3701019585132599
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance6_detect_surroundings.png"
+        },
+        "post_it_191": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.27831603668784,
+                "theta_deg": -2.962936513121913,
+                "phi_deg": 90.7857276498056
+            },
+            "orientation_in_bot": [
+                -0.018949677495167707,
+                0.003507131925622642,
+                -0.45510457802364973,
+                0.8902294270638335
+            ],
+            "position_in_world": [
+                1.2343820333480835,
+                -0.8433165550231934,
+                0.0739220604300499
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance6_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "legal_document_188",
+                "under",
+                "folder_190"
+            ],
+            [
+                "post_it_191",
+                "inside",
+                "bottom_cabinet_nddvba_0"
+            ]
+        ],
+        "inventory": [
+            "folder_190",
+            "legal_document_188"
+        ]
+    },
+    "7_detect_surroundings": {
+        "folder_190": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.37191561148131386,
+                "theta_deg": -9.19654925568978,
+                "phi_deg": 2.153725979301593
+            },
+            "orientation_in_bot": [
+                0.018872752207845702,
+                -0.027662635915399726,
+                -0.10436662373010169,
+                0.9939749522243971
+            ],
+            "position_in_world": [
+                -0.5807812809944153,
+                0.5359863638877869,
+                0.37669044733047485
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance7_detect_surroundings.png"
+        },
+        "bottom_cabinet_nddvba_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.4407847793982325,
+                "theta_deg": 1.0828197070374874,
+                "phi_deg": 84.35736714748775
+            },
+            "orientation_in_bot": [
+                -0.01040254274909962,
+                0.0194561824264244,
+                -0.468223627492316,
+                0.8833345225494584
+            ],
+            "position_in_world": [
+                1.4433799982070923,
+                -0.7879114151000977,
+                0.3516830503940582
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance7_detect_surroundings.png"
+        },
+        "legal_document_188": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.36552845843048903,
+                "theta_deg": -3.326823214048605,
+                "phi_deg": 4.494409797833411
+            },
+            "orientation_in_bot": [
+                0.004768541727925961,
+                -0.021701704332270887,
+                -0.2944786555419511,
+                0.9553997165946139
+            ],
+            "position_in_world": [
+                -0.5679855346679688,
+                0.5279422402381897,
+                0.3701019585132599
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance7_detect_surroundings.png"
+        },
+        "post_it_191": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.27831603668784,
+                "theta_deg": -2.962936513121913,
+                "phi_deg": 90.7857276498056
+            },
+            "orientation_in_bot": [
+                -0.018949677495167707,
+                0.003507131925622642,
+                -0.45510457802364973,
+                0.8902294270638335
+            ],
+            "position_in_world": [
+                1.2343820333480835,
+                -0.8433165550231934,
+                0.0739220604300499
+            ],
+            "bot_in_world": [
+                -0.5773319005966187,
+                0.5364071130752563,
+                0.00479106605052948
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance7_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "legal_document_188",
+                "under",
+                "folder_190"
+            ],
+            [
+                "post_it_191",
+                "inside",
+                "bottom_cabinet_nddvba_0"
+            ]
+        ],
+        "inventory": [
+            "folder_190",
+            "legal_document_188"
+        ]
+    },
+    "8_BEV_surroundings": {
+        "folder_190": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.37731582139780667,
+                "theta_deg": -9.76578165834737,
+                "phi_deg": 2.1091410442916203
+            },
+            "orientation_in_bot": [
+                0.010416440933331687,
+                0.013846650032173075,
+                -0.10236707527068502,
+                0.9945957721314197
+            ],
+            "position_in_world": [
+                -0.5811396241188049,
+                0.53608238697052,
+                0.38208749890327454
+            ],
+            "bot_in_world": [
+                -0.5773318409919739,
+                0.5364067554473877,
+                0.0047910213470458984
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance8_BEV_surroundings.png"
+        },
+        "bottom_cabinet_nddvba_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.4407845494601452,
+                "theta_deg": 1.0829222153919429,
+                "phi_deg": 84.35734613013277
+            },
+            "orientation_in_bot": [
+                -0.010402503147442125,
+                0.019456012117679233,
+                -0.4682228809909072,
+                0.8833349224599462
+            ],
+            "position_in_world": [
+                1.4433799982070923,
+                -0.7879114151000977,
+                0.3516830503940582
+            ],
+            "bot_in_world": [
+                -0.5773318409919739,
+                0.5364067554473877,
+                0.0047910213470458984
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance8_BEV_surroundings.png"
+        },
+        "legal_document_188": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.3655284878483478,
+                "theta_deg": -3.326209185619782,
+                "phi_deg": 4.4943484623470615
+            },
+            "orientation_in_bot": [
+                0.004768584458399677,
+                -0.021701869521624687,
+                -0.29447784403968563,
+                0.9553999627544832
+            ],
+            "position_in_world": [
+                -0.5679855346679688,
+                0.5279422402381897,
+                0.3701019585132599
+            ],
+            "bot_in_world": [
+                -0.5773318409919739,
+                0.5364067554473877,
+                0.0047910213470458984
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance8_BEV_surroundings.png"
+        },
+        "post_it_191": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.278315788809416,
+                "theta_deg": -2.9628343207766004,
+                "phi_deg": 90.78570688231834
+            },
+            "orientation_in_bot": [
+                -0.018949541150419358,
+                0.003507084390784617,
+                -0.4551038370361783,
+                0.8902298089618277
+            ],
+            "position_in_world": [
+                1.2343820333480835,
+                -0.8433165550231934,
+                0.0739220604300499
+            ],
+            "bot_in_world": [
+                -0.5773318409919739,
+                0.5364067554473877,
+                0.0047910213470458984
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance8_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "legal_document_188",
+                "under",
+                "folder_190"
+            ],
+            [
+                "post_it_191",
+                "inside",
+                "bottom_cabinet_nddvba_0"
+            ]
+        ],
+        "inventory": [
+            "folder_190",
+            "legal_document_188"
+        ]
+    },
+    "9_BEV_surroundings": {
+        "folder_190": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.37731582139780667,
+                "theta_deg": -9.76578165834737,
+                "phi_deg": 2.1091410442916203
+            },
+            "orientation_in_bot": [
+                0.010416440933331687,
+                0.013846650032173075,
+                -0.10236707527068502,
+                0.9945957721314197
+            ],
+            "position_in_world": [
+                -0.5811396241188049,
+                0.53608238697052,
+                0.38208749890327454
+            ],
+            "bot_in_world": [
+                -0.5773318409919739,
+                0.5364067554473877,
+                0.0047910213470458984
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance9_BEV_surroundings.png"
+        },
+        "bottom_cabinet_nddvba_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.4407845494601452,
+                "theta_deg": 1.0829222153919429,
+                "phi_deg": 84.35734613013277
+            },
+            "orientation_in_bot": [
+                -0.010402503147442125,
+                0.019456012117679233,
+                -0.4682228809909072,
+                0.8833349224599462
+            ],
+            "position_in_world": [
+                1.4433799982070923,
+                -0.7879114151000977,
+                0.3516830503940582
+            ],
+            "bot_in_world": [
+                -0.5773318409919739,
+                0.5364067554473877,
+                0.0047910213470458984
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance9_BEV_surroundings.png"
+        },
+        "legal_document_188": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.3655284878483478,
+                "theta_deg": -3.326209185619782,
+                "phi_deg": 4.4943484623470615
+            },
+            "orientation_in_bot": [
+                0.004768584458399677,
+                -0.021701869521624687,
+                -0.29447784403968563,
+                0.9553999627544832
+            ],
+            "position_in_world": [
+                -0.5679855346679688,
+                0.5279422402381897,
+                0.3701019585132599
+            ],
+            "bot_in_world": [
+                -0.5773318409919739,
+                0.5364067554473877,
+                0.0047910213470458984
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance9_BEV_surroundings.png"
+        },
+        "post_it_191": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.278315788809416,
+                "theta_deg": -2.9628343207766004,
+                "phi_deg": 90.78570688231834
+            },
+            "orientation_in_bot": [
+                -0.018949541150419358,
+                0.003507084390784617,
+                -0.4551038370361783,
+                0.8902298089618277
+            ],
+            "position_in_world": [
+                1.2343820333480835,
+                -0.8433165550231934,
+                0.0739220604300499
+            ],
+            "bot_in_world": [
+                -0.5773318409919739,
+                0.5364067554473877,
+                0.0047910213470458984
+            ],
+            "path": "./prompt_files/data/put_a_legal_document_into_folder_and_put_it_in_cabinet/subtask_5/seg_instance9_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "legal_document_188",
+                "under",
+                "folder_190"
+            ],
+            [
+                "post_it_191",
+                "inside",
+                "bottom_cabinet_nddvba_0"
+            ]
+        ],
+        "inventory": [
+            "folder_190",
+            "legal_document_188"
+        ]
+    }
+}

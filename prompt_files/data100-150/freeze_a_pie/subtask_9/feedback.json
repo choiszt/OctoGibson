@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register the objects: cheese tart (pie), fridge, and plate.\n(2) Open the fridge.\n(3) Grasp the cheese tart from the fridge.\n(4) Put the cheese tart inside the fridge.\n(5) Close the fridge.\n(6) Freeze the cheese tart.",
+    "code": "def act(robot,env,camera):\n    # Subtask 6: Freeze the cheese tart.\n    cheese_tart_85 = registry(env, \"cheese_tart_85\")\n    freeze(robot, cheese_tart_85)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": true
+}

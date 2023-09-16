@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register the marker and the backpack.\n(2) Grasp the marker.\n(3) Put the marker in the backpack.",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Register the marker and the backpack\n    marker_82 = registry(env,\"marker_82\")\n    backpack_88 = registry(env,\"backpack_88\")\n    # Subtask 2: Grasp the marker\n    EasyGrasp(robot, marker_82)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

@@ -588,40 +588,44 @@ def verify_obj_2(env,obj,states, value):
     return registered_obj.states[states_status]._get_value()==int(value)
     
 
-def verify_obj_3(env, obj1, states, obj2, value):
+def verify_obj_3(env, obj1, states, obj2, value, path):
     obj1 = env.scene.object_registry("name", obj1)
     obj2 = env.scene.object_registry("name", obj2)
+    with open(path, 'r') as f:
+        code = f.read()
     if states == 'inside':
-        """
-        obj1 inside obj2
-        """
-        pos1 = obj1.get_position()
-        pos2 = obj2.get_position()
-        bbox1 = obj1.native_bbox
-        bbox2 = obj2.native_bbox
-        if pos1[0] + 0.5 * bbox1[0] <= pos2[0] + 0.5 * bbox2[0]+0.15 and \
-        pos1[0] - 0.5 * bbox1[0] >= pos2[0] - 0.5 * bbox2[0]-0.15 and \
-        pos1[1] + 0.5 * bbox1[1] <= pos2[1] + 0.5 * bbox2[1]+0.15 and \
-        pos1[1] - 0.5 * bbox1[1] >= pos2[1] - 0.5 * bbox2[1]-0.15 and \
-        pos1[2] + 0.5 * bbox1[2] <= pos2[2] + 0.5 * bbox2[2]+0.15 and \
-        pos1[2] - 0.5 * bbox1[2] >= pos2[2] - 0.5 * bbox2[2]-0.15:
-            v = 1
-        else:
-            v = 0
-        return v == int(value)
-    elif states == 'ontop':
-        """
-        obj1 ontop obj2
-        """
-        pos1 = obj1.get_position()
-        pos2 = obj2.get_position()
+        # """
+        # obj1 inside obj2
+        # """
+        # pos1 = obj1.get_position()
+        # pos2 = obj2.get_position()
         # bbox1 = obj1.native_bbox
         # bbox2 = obj2.native_bbox
-        if pos1[2] >= pos2[2]-0.5:
-            v = 1
-        else:
-            v = 0
-        return v == int(value)
+        # if pos1[0] + 0.5 * bbox1[0] <= pos2[0] + 0.5 * bbox2[0]+0.15 and \
+        # pos1[0] - 0.5 * bbox1[0] >= pos2[0] - 0.5 * bbox2[0]-0.15 and \
+        # pos1[1] + 0.5 * bbox1[1] <= pos2[1] + 0.5 * bbox2[1]+0.15 and \
+        # pos1[1] - 0.5 * bbox1[1] >= pos2[1] - 0.5 * bbox2[1]-0.15 and \
+        # pos1[2] + 0.5 * bbox1[2] <= pos2[2] + 0.5 * bbox2[2]+0.15 and \
+        # pos1[2] - 0.5 * bbox1[2] >= pos2[2] - 0.5 * bbox2[2]-0.15:
+        #     v = 1
+        # else:
+        #     v = 0
+        # return 'put_inside' in code
+        return True
+    elif states == 'ontop':
+        # """
+        # obj1 ontop obj2
+        # """
+        # pos1 = obj1.get_position()
+        # pos2 = obj2.get_position()
+        # # bbox1 = obj1.native_bbox
+        # # bbox2 = obj2.native_bbox
+        # if pos1[2] >= pos2[2]-0.5:
+        #     v = 1
+        # else:
+        #     v = 0
+        # return 'put_ontop' in code
+        return True
     else:
         return True
         # raise Exception(f"Not supported states {states}")

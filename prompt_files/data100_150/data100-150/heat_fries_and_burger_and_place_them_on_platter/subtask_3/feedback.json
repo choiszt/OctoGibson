@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the fridge\n(2) Take out the fries and burger from the fridge\n(3) Heat the fries and burger\n(4) Open the top cabinet\n(5) Take out the platter from the top cabinet\n(6) Place the heated fries and burger on the platter",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Heat the fries and burger\n    french_fries = registry(env, \"french_fries_88\")\n    hamburger = registry(env, \"hamburger_85\")\n    microwave = registry(env, \"microwave_bfbeeb_0\")\n    \n    open(robot, microwave)\n    donothing(env)\n    \n    put_inside(robot, french_fries, microwave)\n    donothing(env)\n    \n    put_inside(robot, hamburger, microwave)\n    donothing(env)\n    \n    toggle_on(robot, microwave)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

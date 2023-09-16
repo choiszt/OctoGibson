@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the microwave.\n(2) Open the microwave.\n(3) Grasp the hamburger from the microwave.\n(4) Move the robot to the microwave.\n(5) Open the microwave.\n(6) Put the hamburger inside the microwave.\n(7) Close the microwave.\n(8) Toggle on the microwave to heat the hamburger.\n(9) Wait for the hamburger to be heated.\n(10) Toggle off the microwave after heating.\n(11) Open the microwave.\n(12) Grasp the heated hamburger from the microwave.\n(13) Check if the hamburger is heated. If not, repeat steps 8-12.",
+    "code": "def act(robot,env,camera):\n    # Subtask 13: Check if the hamburger is heated. If not, repeat steps 8-12.\n    hamburger_85 = registry(env,\"hamburger_85\")\n    if hamburger_85['heatable'] == 0:\n        return True\n    else:\n        return False\n",
+    "error": "'DatasetObject' object is not subscriptable",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

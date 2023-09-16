@@ -246,14 +246,16 @@ class Camera():
                     rgbimg = obs_dict[query_name]
 
                 if file_name is not None:
-                    cv2.imwrite(query_name + str(file_name) + '.png', rgbimg)
+                    if modality== "rgb":
+                        cv2.imwrite(query_name + str(file_name) + '.png', rgbimg)
                 else:
-                    path=os.path.dirname(f"{self.FILENAME}/"+query_name + f'{iter}.png')
-                    if not os.path.exists(path):
-                        os.makedirs(path)
-                    
-                    cv2.imwrite(f"{self.FILENAME}/"+query_name + f'{iter}.png', rgbimg)
-                    print(f"save as: {self.FILENAME}/"+query_name + f'{iter}.png')
+                    if modality== "rgb":
+                        path=os.path.dirname(f"{self.FILENAME}/"+query_name + f'{iter}.png')
+                        if not os.path.exists(path):
+                            os.makedirs(path)
+                        
+                        cv2.imwrite(f"{self.FILENAME}/"+query_name + f'{iter}.png', rgbimg)
+                        print(f"save as: {self.FILENAME}/"+query_name + f'{iter}.png')
         
     def parsing_segmentdata(self): #parse all data from the files that we have collected
         seglists=self.seglist

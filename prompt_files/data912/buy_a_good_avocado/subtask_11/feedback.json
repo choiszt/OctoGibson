@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move the robot to the checkout counter.\n(2) Grasp the money from the checkout counter.\n(3) Place the money on the checkout counter.\n(4) Place the avocado on the checkout counter.",
-    "code": "def act(robot,env,camera):\n    # Subtask 4: Place the avocado on the checkout counter.\n    checkout_counter_sckdal_0 = registry(env,\"checkout_counter_sckdal_0\")\n    avocado_142 = registry(env,\"avocado_142\")\n    put_ontop(robot, avocado_142, checkout_counter_sckdal_0)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

@@ -1,0 +1,2073 @@
+{
+    "task": "heat_a_hamburger_up",
+    "0_detect_surroundings": {
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6100279962945214,
+                "theta_deg": 149.9730197079015,
+                "phi_deg": 56.048285983109004
+            },
+            "orientation_in_bot": [
+                0.011051360233751752,
+                0.019044905426244155,
+                0.5058064600210925,
+                0.8623659223411023
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance0_detect_surroundings.png"
+        },
+        "hamburger_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.38816533339316245,
+                "theta_deg": -176.5183791641357,
+                "phi_deg": 0.7397425661421545
+            },
+            "orientation_in_bot": [
+                0.004887961822525603,
+                0.007599278529666887,
+                0.9483433950811363,
+                0.3171169560288976
+            ],
+            "position_in_world": [
+                -1.5118136405944824,
+                0.08791279047727585,
+                0.3913123905658722
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance0_detect_surroundings.png"
+        },
+        "plate_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8616590815405087,
+                "theta_deg": 122.43145315703227,
+                "phi_deg": 58.85930325159716
+            },
+            "orientation_in_bot": [
+                0.0039397005382091595,
+                0.023029876619792132,
+                0.16177157337354328,
+                0.986551601078623
+            ],
+            "position_in_world": [
+                -0.7644075751304626,
+                1.507232666015625,
+                0.9282377362251282
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance0_detect_surroundings.png"
+        },
+        "microwave_bfbeeb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.491999929590995,
+                "theta_deg": 112.56943157325674,
+                "phi_deg": 50.203999830383374
+            },
+            "orientation_in_bot": [
+                0.011051359771498993,
+                0.019044905212590724,
+                0.505806456817569,
+                0.8623659242307183
+            ],
+            "position_in_world": [
+                -0.350424587726593,
+                1.633657455444336,
+                1.5652587413787842
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance0_detect_surroundings.png"
+        },
+        "countertop_tpuwys_4": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8037897415212436,
+                "theta_deg": 126.55456971180963,
+                "phi_deg": 59.05136684621998
+            },
+            "orientation_in_bot": [
+                0.011051359771498993,
+                0.019044905212590724,
+                0.505806456817569,
+                0.8623659242307183
+            ],
+            "position_in_world": [
+                -0.8854419250500001,
+                1.51428814697,
+                0.890200805665
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance0_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "plate_86",
+                "ontop",
+                "countertop_tpuwys_4"
+            ],
+            [
+                "countertop_tpuwys_4",
+                "under",
+                "plate_86"
+            ]
+        ],
+        "inventory": [
+            "hamburger_85"
+        ]
+    },
+    "1_detect_surroundings": {
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6100279962945214,
+                "theta_deg": 149.9730197079015,
+                "phi_deg": 56.048285983109004
+            },
+            "orientation_in_bot": [
+                0.011051360233751752,
+                0.019044905426244155,
+                0.5058064600210925,
+                0.8623659223411023
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance1_detect_surroundings.png"
+        },
+        "hamburger_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.38816533339316245,
+                "theta_deg": -176.5183791641357,
+                "phi_deg": 0.7397425661421545
+            },
+            "orientation_in_bot": [
+                0.004887961822525603,
+                0.007599278529666887,
+                0.9483433950811363,
+                0.3171169560288976
+            ],
+            "position_in_world": [
+                -1.5118136405944824,
+                0.08791279047727585,
+                0.3913123905658722
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance1_detect_surroundings.png"
+        },
+        "plate_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8616590815405087,
+                "theta_deg": 122.43145315703227,
+                "phi_deg": 58.85930325159716
+            },
+            "orientation_in_bot": [
+                0.0039397005382091595,
+                0.023029876619792132,
+                0.16177157337354328,
+                0.986551601078623
+            ],
+            "position_in_world": [
+                -0.7644075751304626,
+                1.507232666015625,
+                0.9282377362251282
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance1_detect_surroundings.png"
+        },
+        "microwave_bfbeeb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.491999929590995,
+                "theta_deg": 112.56943157325674,
+                "phi_deg": 50.203999830383374
+            },
+            "orientation_in_bot": [
+                0.011051359771498993,
+                0.019044905212590724,
+                0.505806456817569,
+                0.8623659242307183
+            ],
+            "position_in_world": [
+                -0.350424587726593,
+                1.633657455444336,
+                1.5652587413787842
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance1_detect_surroundings.png"
+        },
+        "countertop_tpuwys_4": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8037897415212436,
+                "theta_deg": 126.55456971180963,
+                "phi_deg": 59.05136684621998
+            },
+            "orientation_in_bot": [
+                0.011051359771498993,
+                0.019044905212590724,
+                0.505806456817569,
+                0.8623659242307183
+            ],
+            "position_in_world": [
+                -0.8854419250500001,
+                1.51428814697,
+                0.890200805665
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance1_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "plate_86",
+                "ontop",
+                "countertop_tpuwys_4"
+            ],
+            [
+                "countertop_tpuwys_4",
+                "under",
+                "plate_86"
+            ]
+        ],
+        "inventory": [
+            "hamburger_85"
+        ]
+    },
+    "2_detect_surroundings": {
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6100279962945214,
+                "theta_deg": 149.9730197079015,
+                "phi_deg": 56.048285983109004
+            },
+            "orientation_in_bot": [
+                0.011051360233751752,
+                0.019044905426244155,
+                0.5058064600210925,
+                0.8623659223411023
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance2_detect_surroundings.png"
+        },
+        "hamburger_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.38816533339316245,
+                "theta_deg": -176.5183791641357,
+                "phi_deg": 0.7397425661421545
+            },
+            "orientation_in_bot": [
+                0.004887961822525603,
+                0.007599278529666887,
+                0.9483433950811363,
+                0.3171169560288976
+            ],
+            "position_in_world": [
+                -1.5118136405944824,
+                0.08791279047727585,
+                0.3913123905658722
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance2_detect_surroundings.png"
+        },
+        "plate_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8616590815405087,
+                "theta_deg": 122.43145315703227,
+                "phi_deg": 58.85930325159716
+            },
+            "orientation_in_bot": [
+                0.0039397005382091595,
+                0.023029876619792132,
+                0.16177157337354328,
+                0.986551601078623
+            ],
+            "position_in_world": [
+                -0.7644075751304626,
+                1.507232666015625,
+                0.9282377362251282
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance2_detect_surroundings.png"
+        },
+        "microwave_bfbeeb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.491999929590995,
+                "theta_deg": 112.56943157325674,
+                "phi_deg": 50.203999830383374
+            },
+            "orientation_in_bot": [
+                0.011051359771498993,
+                0.019044905212590724,
+                0.505806456817569,
+                0.8623659242307183
+            ],
+            "position_in_world": [
+                -0.350424587726593,
+                1.633657455444336,
+                1.5652587413787842
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance2_detect_surroundings.png"
+        },
+        "countertop_tpuwys_4": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8037897415212436,
+                "theta_deg": 126.55456971180963,
+                "phi_deg": 59.05136684621998
+            },
+            "orientation_in_bot": [
+                0.011051359771498993,
+                0.019044905212590724,
+                0.505806456817569,
+                0.8623659242307183
+            ],
+            "position_in_world": [
+                -0.8854419250500001,
+                1.51428814697,
+                0.890200805665
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance2_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "plate_86",
+                "ontop",
+                "countertop_tpuwys_4"
+            ],
+            [
+                "countertop_tpuwys_4",
+                "under",
+                "plate_86"
+            ]
+        ],
+        "inventory": [
+            "hamburger_85"
+        ]
+    },
+    "3_detect_surroundings": {
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6100279962945214,
+                "theta_deg": 149.9730197079015,
+                "phi_deg": 56.048285983109004
+            },
+            "orientation_in_bot": [
+                0.011051360233751752,
+                0.019044905426244155,
+                0.5058064600210925,
+                0.8623659223411023
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance3_detect_surroundings.png"
+        },
+        "hamburger_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.38816533339316245,
+                "theta_deg": -176.5183791641357,
+                "phi_deg": 0.7397425661421545
+            },
+            "orientation_in_bot": [
+                0.004887961822525603,
+                0.007599278529666887,
+                0.9483433950811363,
+                0.3171169560288976
+            ],
+            "position_in_world": [
+                -1.5118136405944824,
+                0.08791279047727585,
+                0.3913123905658722
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance3_detect_surroundings.png"
+        },
+        "plate_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8616590815405087,
+                "theta_deg": 122.43145315703227,
+                "phi_deg": 58.85930325159716
+            },
+            "orientation_in_bot": [
+                0.0039397005382091595,
+                0.023029876619792132,
+                0.16177157337354328,
+                0.986551601078623
+            ],
+            "position_in_world": [
+                -0.7644075751304626,
+                1.507232666015625,
+                0.9282377362251282
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance3_detect_surroundings.png"
+        },
+        "microwave_bfbeeb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.491999929590995,
+                "theta_deg": 112.56943157325674,
+                "phi_deg": 50.203999830383374
+            },
+            "orientation_in_bot": [
+                0.011051359771498993,
+                0.019044905212590724,
+                0.505806456817569,
+                0.8623659242307183
+            ],
+            "position_in_world": [
+                -0.350424587726593,
+                1.633657455444336,
+                1.5652587413787842
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance3_detect_surroundings.png"
+        },
+        "countertop_tpuwys_4": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8037897415212436,
+                "theta_deg": 126.55456971180963,
+                "phi_deg": 59.05136684621998
+            },
+            "orientation_in_bot": [
+                0.011051359771498993,
+                0.019044905212590724,
+                0.505806456817569,
+                0.8623659242307183
+            ],
+            "position_in_world": [
+                -0.8854419250500001,
+                1.51428814697,
+                0.890200805665
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance3_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "plate_86",
+                "ontop",
+                "countertop_tpuwys_4"
+            ],
+            [
+                "countertop_tpuwys_4",
+                "under",
+                "plate_86"
+            ]
+        ],
+        "inventory": [
+            "hamburger_85"
+        ]
+    },
+    "4_detect_surroundings": {
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6100279962945214,
+                "theta_deg": 149.9730197079015,
+                "phi_deg": 56.048285983109004
+            },
+            "orientation_in_bot": [
+                0.011051360233751752,
+                0.019044905426244155,
+                0.5058064600210925,
+                0.8623659223411023
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance4_detect_surroundings.png"
+        },
+        "hamburger_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.38816533339316245,
+                "theta_deg": -176.5183791641357,
+                "phi_deg": 0.7397425661421545
+            },
+            "orientation_in_bot": [
+                0.004887961822525603,
+                0.007599278529666887,
+                0.9483433950811363,
+                0.3171169560288976
+            ],
+            "position_in_world": [
+                -1.5118136405944824,
+                0.08791279047727585,
+                0.3913123905658722
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance4_detect_surroundings.png"
+        },
+        "plate_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8616590815405087,
+                "theta_deg": 122.43145315703227,
+                "phi_deg": 58.85930325159716
+            },
+            "orientation_in_bot": [
+                0.0039397005382091595,
+                0.023029876619792132,
+                0.16177157337354328,
+                0.986551601078623
+            ],
+            "position_in_world": [
+                -0.7644075751304626,
+                1.507232666015625,
+                0.9282377362251282
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance4_detect_surroundings.png"
+        },
+        "microwave_bfbeeb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.491999929590995,
+                "theta_deg": 112.56943157325674,
+                "phi_deg": 50.203999830383374
+            },
+            "orientation_in_bot": [
+                0.011051359771498993,
+                0.019044905212590724,
+                0.505806456817569,
+                0.8623659242307183
+            ],
+            "position_in_world": [
+                -0.350424587726593,
+                1.633657455444336,
+                1.5652587413787842
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance4_detect_surroundings.png"
+        },
+        "countertop_tpuwys_4": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8037897415212436,
+                "theta_deg": 126.55456971180963,
+                "phi_deg": 59.05136684621998
+            },
+            "orientation_in_bot": [
+                0.011051359771498993,
+                0.019044905212590724,
+                0.505806456817569,
+                0.8623659242307183
+            ],
+            "position_in_world": [
+                -0.8854419250500001,
+                1.51428814697,
+                0.890200805665
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance4_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "plate_86",
+                "ontop",
+                "countertop_tpuwys_4"
+            ],
+            [
+                "countertop_tpuwys_4",
+                "under",
+                "plate_86"
+            ]
+        ],
+        "inventory": [
+            "hamburger_85"
+        ]
+    },
+    "5_detect_surroundings": {
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6100279962945214,
+                "theta_deg": 149.9730197079015,
+                "phi_deg": 56.048285983109004
+            },
+            "orientation_in_bot": [
+                0.011051360233751752,
+                0.019044905426244155,
+                0.5058064600210925,
+                0.8623659223411023
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance5_detect_surroundings.png"
+        },
+        "hamburger_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.38816533339316245,
+                "theta_deg": -176.5183791641357,
+                "phi_deg": 0.7397425661421545
+            },
+            "orientation_in_bot": [
+                0.004887961822525603,
+                0.007599278529666887,
+                0.9483433950811363,
+                0.3171169560288976
+            ],
+            "position_in_world": [
+                -1.5118136405944824,
+                0.08791279047727585,
+                0.3913123905658722
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance5_detect_surroundings.png"
+        },
+        "plate_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8616590815405087,
+                "theta_deg": 122.43145315703227,
+                "phi_deg": 58.85930325159716
+            },
+            "orientation_in_bot": [
+                0.0039397005382091595,
+                0.023029876619792132,
+                0.16177157337354328,
+                0.986551601078623
+            ],
+            "position_in_world": [
+                -0.7644075751304626,
+                1.507232666015625,
+                0.9282377362251282
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance5_detect_surroundings.png"
+        },
+        "microwave_bfbeeb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.491999929590995,
+                "theta_deg": 112.56943157325674,
+                "phi_deg": 50.203999830383374
+            },
+            "orientation_in_bot": [
+                0.011051359771498993,
+                0.019044905212590724,
+                0.505806456817569,
+                0.8623659242307183
+            ],
+            "position_in_world": [
+                -0.350424587726593,
+                1.633657455444336,
+                1.5652587413787842
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance5_detect_surroundings.png"
+        },
+        "countertop_tpuwys_4": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8037897415212436,
+                "theta_deg": 126.55456971180963,
+                "phi_deg": 59.05136684621998
+            },
+            "orientation_in_bot": [
+                0.011051359771498993,
+                0.019044905212590724,
+                0.505806456817569,
+                0.8623659242307183
+            ],
+            "position_in_world": [
+                -0.8854419250500001,
+                1.51428814697,
+                0.890200805665
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance5_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "plate_86",
+                "ontop",
+                "countertop_tpuwys_4"
+            ],
+            [
+                "countertop_tpuwys_4",
+                "under",
+                "plate_86"
+            ]
+        ],
+        "inventory": [
+            "hamburger_85"
+        ]
+    },
+    "6_detect_surroundings": {
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6100279962945214,
+                "theta_deg": 149.9730197079015,
+                "phi_deg": 56.048285983109004
+            },
+            "orientation_in_bot": [
+                0.011051360233751752,
+                0.019044905426244155,
+                0.5058064600210925,
+                0.8623659223411023
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance6_detect_surroundings.png"
+        },
+        "hamburger_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.38816533339316245,
+                "theta_deg": -176.5183791641357,
+                "phi_deg": 0.7397425661421545
+            },
+            "orientation_in_bot": [
+                0.004887961822525603,
+                0.007599278529666887,
+                0.9483433950811363,
+                0.3171169560288976
+            ],
+            "position_in_world": [
+                -1.5118136405944824,
+                0.08791279047727585,
+                0.3913123905658722
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance6_detect_surroundings.png"
+        },
+        "plate_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8616590815405087,
+                "theta_deg": 122.43145315703227,
+                "phi_deg": 58.85930325159716
+            },
+            "orientation_in_bot": [
+                0.0039397005382091595,
+                0.023029876619792132,
+                0.16177157337354328,
+                0.986551601078623
+            ],
+            "position_in_world": [
+                -0.7644075751304626,
+                1.507232666015625,
+                0.9282377362251282
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance6_detect_surroundings.png"
+        },
+        "microwave_bfbeeb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.491999929590995,
+                "theta_deg": 112.56943157325674,
+                "phi_deg": 50.203999830383374
+            },
+            "orientation_in_bot": [
+                0.011051359771498993,
+                0.019044905212590724,
+                0.505806456817569,
+                0.8623659242307183
+            ],
+            "position_in_world": [
+                -0.350424587726593,
+                1.633657455444336,
+                1.5652587413787842
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance6_detect_surroundings.png"
+        },
+        "countertop_tpuwys_4": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8037897415212436,
+                "theta_deg": 126.55456971180963,
+                "phi_deg": 59.05136684621998
+            },
+            "orientation_in_bot": [
+                0.011051359771498993,
+                0.019044905212590724,
+                0.505806456817569,
+                0.8623659242307183
+            ],
+            "position_in_world": [
+                -0.8854419250500001,
+                1.51428814697,
+                0.890200805665
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance6_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "plate_86",
+                "ontop",
+                "countertop_tpuwys_4"
+            ],
+            [
+                "countertop_tpuwys_4",
+                "under",
+                "plate_86"
+            ]
+        ],
+        "inventory": [
+            "hamburger_85"
+        ]
+    },
+    "7_detect_surroundings": {
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6100279962945214,
+                "theta_deg": 149.9730197079015,
+                "phi_deg": 56.048285983109004
+            },
+            "orientation_in_bot": [
+                0.011051360233751752,
+                0.019044905426244155,
+                0.5058064600210925,
+                0.8623659223411023
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance7_detect_surroundings.png"
+        },
+        "hamburger_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.38816533339316245,
+                "theta_deg": -176.5183791641357,
+                "phi_deg": 0.7397425661421545
+            },
+            "orientation_in_bot": [
+                0.004887961822525603,
+                0.007599278529666887,
+                0.9483433950811363,
+                0.3171169560288976
+            ],
+            "position_in_world": [
+                -1.5118136405944824,
+                0.08791279047727585,
+                0.3913123905658722
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance7_detect_surroundings.png"
+        },
+        "plate_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8616590815405087,
+                "theta_deg": 122.43145315703227,
+                "phi_deg": 58.85930325159716
+            },
+            "orientation_in_bot": [
+                0.0039397005382091595,
+                0.023029876619792132,
+                0.16177157337354328,
+                0.986551601078623
+            ],
+            "position_in_world": [
+                -0.7644075751304626,
+                1.507232666015625,
+                0.9282377362251282
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance7_detect_surroundings.png"
+        },
+        "microwave_bfbeeb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.491999929590995,
+                "theta_deg": 112.56943157325674,
+                "phi_deg": 50.203999830383374
+            },
+            "orientation_in_bot": [
+                0.011051359771498993,
+                0.019044905212590724,
+                0.505806456817569,
+                0.8623659242307183
+            ],
+            "position_in_world": [
+                -0.350424587726593,
+                1.633657455444336,
+                1.5652587413787842
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance7_detect_surroundings.png"
+        },
+        "countertop_tpuwys_4": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8037897415212436,
+                "theta_deg": 126.55456971180963,
+                "phi_deg": 59.05136684621998
+            },
+            "orientation_in_bot": [
+                0.011051359771498993,
+                0.019044905212590724,
+                0.505806456817569,
+                0.8623659242307183
+            ],
+            "position_in_world": [
+                -0.8854419250500001,
+                1.51428814697,
+                0.890200805665
+            ],
+            "bot_in_world": [
+                -1.5006990432739258,
+                0.06882376223802567,
+                0.003776058554649353
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance7_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "plate_86",
+                "ontop",
+                "countertop_tpuwys_4"
+            ],
+            [
+                "countertop_tpuwys_4",
+                "under",
+                "plate_86"
+            ]
+        ],
+        "inventory": [
+            "hamburger_85"
+        ]
+    },
+    "8_BEV_surroundings": {
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.610027871419115,
+                "theta_deg": 149.97292001221908,
+                "phi_deg": 56.04828285005148
+            },
+            "orientation_in_bot": [
+                0.011051399126549436,
+                0.01904485218007935,
+                0.5058056115453535,
+                0.8623664206774379
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5006988048553467,
+                0.0688239336013794,
+                0.003776043653488159
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance8_BEV_surroundings.png"
+        },
+        "hamburger_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.38816534578165596,
+                "theta_deg": -176.514813985497,
+                "phi_deg": 0.7397434801305117
+            },
+            "orientation_in_bot": [
+                0.004887956743866737,
+                0.007599228848709612,
+                0.9483430814684118,
+                0.3171178951601001
+            ],
+            "position_in_world": [
+                -1.5118136405944824,
+                0.08791279047727585,
+                0.3913123905658722
+            ],
+            "bot_in_world": [
+                -1.5006988048553467,
+                0.0688239336013794,
+                0.003776043653488159
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance8_BEV_surroundings.png"
+        },
+        "plate_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8616588798921814,
+                "theta_deg": 122.43134747512454,
+                "phi_deg": 58.859296936556504
+            },
+            "orientation_in_bot": [
+                0.0039397571984930374,
+                0.023029840539680203,
+                0.1617706001785434,
+                0.9865517612755084
+            ],
+            "position_in_world": [
+                -0.7644075751304626,
+                1.507232666015625,
+                0.9282377362251282
+            ],
+            "bot_in_world": [
+                -1.5006988048553467,
+                0.0688239336013794,
+                0.003776043653488159
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance8_BEV_surroundings.png"
+        },
+        "microwave_bfbeeb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.4919997392138833,
+                "theta_deg": 112.56932453217753,
+                "phi_deg": 50.20399292362464
+            },
+            "orientation_in_bot": [
+                0.011051398664296627,
+                0.019044851966426447,
+                0.5058056083418281,
+                0.8623664225670508
+            ],
+            "position_in_world": [
+                -0.350424587726593,
+                1.633657455444336,
+                1.5652587413787842
+            ],
+            "bot_in_world": [
+                -1.5006988048553467,
+                0.0688239336013794,
+                0.003776043653488159
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance8_BEV_surroundings.png"
+        },
+        "countertop_tpuwys_4": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8037895473824626,
+                "theta_deg": 126.55446489561935,
+                "phi_deg": 59.05136092563858
+            },
+            "orientation_in_bot": [
+                0.011051398664296627,
+                0.019044851966426447,
+                0.5058056083418281,
+                0.8623664225670508
+            ],
+            "position_in_world": [
+                -0.8854419250500001,
+                1.51428814697,
+                0.890200805665
+            ],
+            "bot_in_world": [
+                -1.5006988048553467,
+                0.0688239336013794,
+                0.003776043653488159
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance8_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "plate_86",
+                "ontop",
+                "countertop_tpuwys_4"
+            ],
+            [
+                "countertop_tpuwys_4",
+                "under",
+                "plate_86"
+            ]
+        ],
+        "inventory": [
+            "hamburger_85"
+        ]
+    },
+    "9_BEV_surroundings": {
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.610027871419115,
+                "theta_deg": 149.97292001221908,
+                "phi_deg": 56.04828285005148
+            },
+            "orientation_in_bot": [
+                0.011051399126549436,
+                0.01904485218007935,
+                0.5058056115453535,
+                0.8623664206774379
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5006988048553467,
+                0.0688239336013794,
+                0.003776043653488159
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance9_BEV_surroundings.png"
+        },
+        "hamburger_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 0.38816534578165596,
+                "theta_deg": -176.514813985497,
+                "phi_deg": 0.7397434801305117
+            },
+            "orientation_in_bot": [
+                0.004887956743866737,
+                0.007599228848709612,
+                0.9483430814684118,
+                0.3171178951601001
+            ],
+            "position_in_world": [
+                -1.5118136405944824,
+                0.08791279047727585,
+                0.3913123905658722
+            ],
+            "bot_in_world": [
+                -1.5006988048553467,
+                0.0688239336013794,
+                0.003776043653488159
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance9_BEV_surroundings.png"
+        },
+        "plate_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8616588798921814,
+                "theta_deg": 122.43134747512454,
+                "phi_deg": 58.859296936556504
+            },
+            "orientation_in_bot": [
+                0.0039397571984930374,
+                0.023029840539680203,
+                0.1617706001785434,
+                0.9865517612755084
+            ],
+            "position_in_world": [
+                -0.7644075751304626,
+                1.507232666015625,
+                0.9282377362251282
+            ],
+            "bot_in_world": [
+                -1.5006988048553467,
+                0.0688239336013794,
+                0.003776043653488159
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance9_BEV_surroundings.png"
+        },
+        "microwave_bfbeeb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.4919997392138833,
+                "theta_deg": 112.56932453217753,
+                "phi_deg": 50.20399292362464
+            },
+            "orientation_in_bot": [
+                0.011051398664296627,
+                0.019044851966426447,
+                0.5058056083418281,
+                0.8623664225670508
+            ],
+            "position_in_world": [
+                -0.350424587726593,
+                1.633657455444336,
+                1.5652587413787842
+            ],
+            "bot_in_world": [
+                -1.5006988048553467,
+                0.0688239336013794,
+                0.003776043653488159
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance9_BEV_surroundings.png"
+        },
+        "countertop_tpuwys_4": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.8037895473824626,
+                "theta_deg": 126.55446489561935,
+                "phi_deg": 59.05136092563858
+            },
+            "orientation_in_bot": [
+                0.011051398664296627,
+                0.019044851966426447,
+                0.5058056083418281,
+                0.8623664225670508
+            ],
+            "position_in_world": [
+                -0.8854419250500001,
+                1.51428814697,
+                0.890200805665
+            ],
+            "bot_in_world": [
+                -1.5006988048553467,
+                0.0688239336013794,
+                0.003776043653488159
+            ],
+            "path": "./prompt_files/data/heat_a_hamburger_up/subtask_4/seg_instance9_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "plate_86",
+                "ontop",
+                "countertop_tpuwys_4"
+            ],
+            [
+                "countertop_tpuwys_4",
+                "under",
+                "plate_86"
+            ]
+        ],
+        "inventory": [
+            "hamburger_85"
+        ]
+    }
+}

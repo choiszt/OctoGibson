@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Find the biscuit.",
+    "code": "def act(robot,env,camera):\n  # Subtask 1: Find the biscuit.\n  biscuit = registry(env, \"biscuit\")\n  MoveBot(env, robot, biscuit, camera)\n  donothing(env)\n",
+    "error": "'NoneType' object has no attribute 'get_position_orientation'",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

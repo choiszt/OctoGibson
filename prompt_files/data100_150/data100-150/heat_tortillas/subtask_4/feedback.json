@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move to the bottom cabinet.\n(2) Open the bottom cabinet.\n(3) Take out the tortilla from the bottom cabinet.\n(4) Move to the stove.\n(5) Heat the tortilla on the stove.",
+    "code": "def act(robot,env,camera):\n    # Subtask 4: Move to the stove\n    stove_rgpphy_0 = registry(env,\"stove_rgpphy_0\")\n    MoveBot(env, robot, stove_rgpphy_0, camera)\n    donothing(env)\n",
+    "error": "Found zero norm quaternions in `quat`.",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

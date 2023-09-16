@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the oven.\n(2) Open the oven.\n(3) Put the potato in the oven.\n(4) Cook the potato.\n(5) Grasp the cooked potato from the oven.\n(6) Move the robot to the bottom cabinet.\n(7) Open the bottom cabinet.\n(8) Grasp the platter from the bottom cabinet.\n(9) Put the cooked potato on the platter.\n(10) Move the robot to the table.\n(11) Put the platter with the cooked potato on the table.",
+    "code": "def act(robot,env,camera):\n    # Subtask 6: Put the cooked potato on the platter.\n    potato = registry(env, \"potato_89\")\n    platter = registry(env, \"platter_92\")\n    put_ontop(robot, potato, platter)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

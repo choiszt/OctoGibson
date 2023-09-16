@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the fridge\n(2) Take out the prawn from the fridge\n(3) Take out the butter from the fridge\n(4) Close the fridge\n(5) Turn on the stove\n(6) Cook the prawn on the stove\n(7) Turn off the stove\n(8) Register the prawn and the plate\n(9) Cook the prawn\n(10) Place the cooked prawn on the plate\n(11) Place the butter on the plate",
+    "code": "def act(robot,env,camera):\n    # Subtask 9: Register the prawn\n    shrimp_201 = registry(env, \"shrimp_201\")\n    # Subtask 9: Cook the prawn\n    cook(robot, shrimp_201)\n    donothing(env)\n",
+    "error": "State heatable of object shrimp_201 is not 1\nState freezable of object shrimp_201 is not 0\n",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

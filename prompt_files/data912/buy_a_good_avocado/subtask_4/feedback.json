@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move the robot to the checkout counter.\n(2) Pay for the avocado.",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Move the robot to the checkout counter\n    checkout_counter_sckdal_0 = registry(env,\"checkout_counter_sckdal_0\")\n    MoveBot(env, robot, checkout_counter_sckdal_0, camera)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

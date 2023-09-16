@@ -1,0 +1,2063 @@
+{
+    "task": "make_prawns_with_frying_pan",
+    "0_detect_surroundings": {
+        "frying_pan_201": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.701944746910285,
+                "theta_deg": 31.29723354416049,
+                "phi_deg": 54.929560586775544
+            },
+            "orientation_in_bot": [
+                -0.008302101598365893,
+                -0.01765894190344953,
+                0.4468136928208363,
+                0.8944141997909627
+            ],
+            "position_in_world": [
+                6.962172031402588,
+                9.077168464660645,
+                0.9462244510650635
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "stove_igwqpj_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1512043361980409,
+                "theta_deg": 104.68939199177571,
+                "phi_deg": 66.28617078397033
+            },
+            "orientation_in_bot": [
+                0.0007432724886777603,
+                -0.015227903042159038,
+                -0.04859933580647602,
+                0.9987019891209368
+            ],
+            "position_in_world": [
+                7.110574245452881,
+                10.57181167602539,
+                0.4759700894355774
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "fridge_dszchb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.147591870686703,
+                "theta_deg": -37.397395938793984,
+                "phi_deg": 60.694347550635236
+            },
+            "orientation_in_bot": [
+                -0.011314950595117232,
+                0.010218260224882697,
+                0.741974086419849,
+                -0.6702551858303203
+            ],
+            "position_in_world": [
+                5.140077114105225,
+                8.594399452209473,
+                1.01039719581604
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "countertop_tpuwys_3": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.695705784115433,
+                "theta_deg": 38.577045636216035,
+                "phi_deg": 56.361316524160486
+            },
+            "orientation_in_bot": [
+                0.0007404415753151805,
+                -0.015228017437209614,
+                -0.04841501130991206,
+                0.9987109421204249
+            ],
+            "position_in_world": [
+                7.1094133751238315,
+                9.18000325351292,
+                0.9103154907250001
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "shrimp_203": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.306689531815225,
+                "theta_deg": -38.69950099192303,
+                "phi_deg": 51.72216453410525
+            },
+            "orientation_in_bot": [
+                -0.09738217272067846,
+                -0.02442847915173759,
+                -0.6568794764532241,
+                0.7472812825550172
+            ],
+            "position_in_world": [
+                5.1390228271484375,
+                8.657638549804688,
+                1.3902543783187866
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "frying_pan_201",
+                "ontop",
+                "countertop_tpuwys_3"
+            ],
+            [
+                "fridge_dszchb_0",
+                "under",
+                "shrimp_203"
+            ],
+            [
+                "shrimp_203",
+                "inside",
+                "fridge_dszchb_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "1_detect_surroundings": {
+        "frying_pan_201": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.701944746910285,
+                "theta_deg": 31.29723354416049,
+                "phi_deg": 54.929560586775544
+            },
+            "orientation_in_bot": [
+                -0.008302101598365893,
+                -0.01765894190344953,
+                0.4468136928208363,
+                0.8944141997909627
+            ],
+            "position_in_world": [
+                6.962172031402588,
+                9.077168464660645,
+                0.9462244510650635
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "stove_igwqpj_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1512043361980409,
+                "theta_deg": 104.68939199177571,
+                "phi_deg": 66.28617078397033
+            },
+            "orientation_in_bot": [
+                0.0007432724886777603,
+                -0.015227903042159038,
+                -0.04859933580647602,
+                0.9987019891209368
+            ],
+            "position_in_world": [
+                7.110574245452881,
+                10.57181167602539,
+                0.4759700894355774
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "fridge_dszchb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.147591870686703,
+                "theta_deg": -37.397395938793984,
+                "phi_deg": 60.694347550635236
+            },
+            "orientation_in_bot": [
+                -0.011314950595117232,
+                0.010218260224882697,
+                0.741974086419849,
+                -0.6702551858303203
+            ],
+            "position_in_world": [
+                5.140077114105225,
+                8.594399452209473,
+                1.01039719581604
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "countertop_tpuwys_3": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.695705784115433,
+                "theta_deg": 38.577045636216035,
+                "phi_deg": 56.361316524160486
+            },
+            "orientation_in_bot": [
+                0.0007404415753151805,
+                -0.015228017437209614,
+                -0.04841501130991206,
+                0.9987109421204249
+            ],
+            "position_in_world": [
+                7.1094133751238315,
+                9.18000325351292,
+                0.9103154907250001
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "shrimp_203": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.306689531815225,
+                "theta_deg": -38.69950099192303,
+                "phi_deg": 51.72216453410525
+            },
+            "orientation_in_bot": [
+                -0.09738217272067846,
+                -0.02442847915173759,
+                -0.6568794764532241,
+                0.7472812825550172
+            ],
+            "position_in_world": [
+                5.1390228271484375,
+                8.657638549804688,
+                1.3902543783187866
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "frying_pan_201",
+                "ontop",
+                "countertop_tpuwys_3"
+            ],
+            [
+                "fridge_dszchb_0",
+                "under",
+                "shrimp_203"
+            ],
+            [
+                "shrimp_203",
+                "inside",
+                "fridge_dszchb_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "2_detect_surroundings": {
+        "frying_pan_201": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.701944746910285,
+                "theta_deg": 31.29723354416049,
+                "phi_deg": 54.929560586775544
+            },
+            "orientation_in_bot": [
+                -0.008302101598365893,
+                -0.01765894190344953,
+                0.4468136928208363,
+                0.8944141997909627
+            ],
+            "position_in_world": [
+                6.962172031402588,
+                9.077168464660645,
+                0.9462244510650635
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "stove_igwqpj_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1512043361980409,
+                "theta_deg": 104.68939199177571,
+                "phi_deg": 66.28617078397033
+            },
+            "orientation_in_bot": [
+                0.0007432724886777603,
+                -0.015227903042159038,
+                -0.04859933580647602,
+                0.9987019891209368
+            ],
+            "position_in_world": [
+                7.110574245452881,
+                10.57181167602539,
+                0.4759700894355774
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "fridge_dszchb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.147591870686703,
+                "theta_deg": -37.397395938793984,
+                "phi_deg": 60.694347550635236
+            },
+            "orientation_in_bot": [
+                -0.011314950595117232,
+                0.010218260224882697,
+                0.741974086419849,
+                -0.6702551858303203
+            ],
+            "position_in_world": [
+                5.140077114105225,
+                8.594399452209473,
+                1.01039719581604
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "countertop_tpuwys_3": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.695705784115433,
+                "theta_deg": 38.577045636216035,
+                "phi_deg": 56.361316524160486
+            },
+            "orientation_in_bot": [
+                0.0007404415753151805,
+                -0.015228017437209614,
+                -0.04841501130991206,
+                0.9987109421204249
+            ],
+            "position_in_world": [
+                7.1094133751238315,
+                9.18000325351292,
+                0.9103154907250001
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "shrimp_203": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.306689531815225,
+                "theta_deg": -38.69950099192303,
+                "phi_deg": 51.72216453410525
+            },
+            "orientation_in_bot": [
+                -0.09738217272067846,
+                -0.02442847915173759,
+                -0.6568794764532241,
+                0.7472812825550172
+            ],
+            "position_in_world": [
+                5.1390228271484375,
+                8.657638549804688,
+                1.3902543783187866
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "frying_pan_201",
+                "ontop",
+                "countertop_tpuwys_3"
+            ],
+            [
+                "fridge_dszchb_0",
+                "under",
+                "shrimp_203"
+            ],
+            [
+                "shrimp_203",
+                "inside",
+                "fridge_dszchb_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "3_detect_surroundings": {
+        "frying_pan_201": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.701944746910285,
+                "theta_deg": 31.29723354416049,
+                "phi_deg": 54.929560586775544
+            },
+            "orientation_in_bot": [
+                -0.008302101598365893,
+                -0.01765894190344953,
+                0.4468136928208363,
+                0.8944141997909627
+            ],
+            "position_in_world": [
+                6.962172031402588,
+                9.077168464660645,
+                0.9462244510650635
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "stove_igwqpj_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1512043361980409,
+                "theta_deg": 104.68939199177571,
+                "phi_deg": 66.28617078397033
+            },
+            "orientation_in_bot": [
+                0.0007432724886777603,
+                -0.015227903042159038,
+                -0.04859933580647602,
+                0.9987019891209368
+            ],
+            "position_in_world": [
+                7.110574245452881,
+                10.57181167602539,
+                0.4759700894355774
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "fridge_dszchb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.147591870686703,
+                "theta_deg": -37.397395938793984,
+                "phi_deg": 60.694347550635236
+            },
+            "orientation_in_bot": [
+                -0.011314950595117232,
+                0.010218260224882697,
+                0.741974086419849,
+                -0.6702551858303203
+            ],
+            "position_in_world": [
+                5.140077114105225,
+                8.594399452209473,
+                1.01039719581604
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "countertop_tpuwys_3": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.695705784115433,
+                "theta_deg": 38.577045636216035,
+                "phi_deg": 56.361316524160486
+            },
+            "orientation_in_bot": [
+                0.0007404415753151805,
+                -0.015228017437209614,
+                -0.04841501130991206,
+                0.9987109421204249
+            ],
+            "position_in_world": [
+                7.1094133751238315,
+                9.18000325351292,
+                0.9103154907250001
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "shrimp_203": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.306689531815225,
+                "theta_deg": -38.69950099192303,
+                "phi_deg": 51.72216453410525
+            },
+            "orientation_in_bot": [
+                -0.09738217272067846,
+                -0.02442847915173759,
+                -0.6568794764532241,
+                0.7472812825550172
+            ],
+            "position_in_world": [
+                5.1390228271484375,
+                8.657638549804688,
+                1.3902543783187866
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "frying_pan_201",
+                "ontop",
+                "countertop_tpuwys_3"
+            ],
+            [
+                "fridge_dszchb_0",
+                "under",
+                "shrimp_203"
+            ],
+            [
+                "shrimp_203",
+                "inside",
+                "fridge_dszchb_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "4_detect_surroundings": {
+        "frying_pan_201": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.701944746910285,
+                "theta_deg": 31.29723354416049,
+                "phi_deg": 54.929560586775544
+            },
+            "orientation_in_bot": [
+                -0.008302101598365893,
+                -0.01765894190344953,
+                0.4468136928208363,
+                0.8944141997909627
+            ],
+            "position_in_world": [
+                6.962172031402588,
+                9.077168464660645,
+                0.9462244510650635
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "stove_igwqpj_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1512043361980409,
+                "theta_deg": 104.68939199177571,
+                "phi_deg": 66.28617078397033
+            },
+            "orientation_in_bot": [
+                0.0007432724886777603,
+                -0.015227903042159038,
+                -0.04859933580647602,
+                0.9987019891209368
+            ],
+            "position_in_world": [
+                7.110574245452881,
+                10.57181167602539,
+                0.4759700894355774
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "fridge_dszchb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.147591870686703,
+                "theta_deg": -37.397395938793984,
+                "phi_deg": 60.694347550635236
+            },
+            "orientation_in_bot": [
+                -0.011314950595117232,
+                0.010218260224882697,
+                0.741974086419849,
+                -0.6702551858303203
+            ],
+            "position_in_world": [
+                5.140077114105225,
+                8.594399452209473,
+                1.01039719581604
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "countertop_tpuwys_3": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.695705784115433,
+                "theta_deg": 38.577045636216035,
+                "phi_deg": 56.361316524160486
+            },
+            "orientation_in_bot": [
+                0.0007404415753151805,
+                -0.015228017437209614,
+                -0.04841501130991206,
+                0.9987109421204249
+            ],
+            "position_in_world": [
+                7.1094133751238315,
+                9.18000325351292,
+                0.9103154907250001
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "shrimp_203": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.306689531815225,
+                "theta_deg": -38.69950099192303,
+                "phi_deg": 51.72216453410525
+            },
+            "orientation_in_bot": [
+                -0.09738217272067846,
+                -0.02442847915173759,
+                -0.6568794764532241,
+                0.7472812825550172
+            ],
+            "position_in_world": [
+                5.1390228271484375,
+                8.657638549804688,
+                1.3902543783187866
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "frying_pan_201",
+                "ontop",
+                "countertop_tpuwys_3"
+            ],
+            [
+                "fridge_dszchb_0",
+                "under",
+                "shrimp_203"
+            ],
+            [
+                "shrimp_203",
+                "inside",
+                "fridge_dszchb_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "5_detect_surroundings": {
+        "frying_pan_201": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.701944746910285,
+                "theta_deg": 31.29723354416049,
+                "phi_deg": 54.929560586775544
+            },
+            "orientation_in_bot": [
+                -0.008302101598365893,
+                -0.01765894190344953,
+                0.4468136928208363,
+                0.8944141997909627
+            ],
+            "position_in_world": [
+                6.962172031402588,
+                9.077168464660645,
+                0.9462244510650635
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "stove_igwqpj_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1512043361980409,
+                "theta_deg": 104.68939199177571,
+                "phi_deg": 66.28617078397033
+            },
+            "orientation_in_bot": [
+                0.0007432724886777603,
+                -0.015227903042159038,
+                -0.04859933580647602,
+                0.9987019891209368
+            ],
+            "position_in_world": [
+                7.110574245452881,
+                10.57181167602539,
+                0.4759700894355774
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "fridge_dszchb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.147591870686703,
+                "theta_deg": -37.397395938793984,
+                "phi_deg": 60.694347550635236
+            },
+            "orientation_in_bot": [
+                -0.011314950595117232,
+                0.010218260224882697,
+                0.741974086419849,
+                -0.6702551858303203
+            ],
+            "position_in_world": [
+                5.140077114105225,
+                8.594399452209473,
+                1.01039719581604
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "countertop_tpuwys_3": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.695705784115433,
+                "theta_deg": 38.577045636216035,
+                "phi_deg": 56.361316524160486
+            },
+            "orientation_in_bot": [
+                0.0007404415753151805,
+                -0.015228017437209614,
+                -0.04841501130991206,
+                0.9987109421204249
+            ],
+            "position_in_world": [
+                7.1094133751238315,
+                9.18000325351292,
+                0.9103154907250001
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "shrimp_203": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.306689531815225,
+                "theta_deg": -38.69950099192303,
+                "phi_deg": 51.72216453410525
+            },
+            "orientation_in_bot": [
+                -0.09738217272067846,
+                -0.02442847915173759,
+                -0.6568794764532241,
+                0.7472812825550172
+            ],
+            "position_in_world": [
+                5.1390228271484375,
+                8.657638549804688,
+                1.3902543783187866
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "frying_pan_201",
+                "ontop",
+                "countertop_tpuwys_3"
+            ],
+            [
+                "fridge_dszchb_0",
+                "under",
+                "shrimp_203"
+            ],
+            [
+                "shrimp_203",
+                "inside",
+                "fridge_dszchb_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "6_detect_surroundings": {
+        "frying_pan_201": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.701944746910285,
+                "theta_deg": 31.29723354416049,
+                "phi_deg": 54.929560586775544
+            },
+            "orientation_in_bot": [
+                -0.008302101598365893,
+                -0.01765894190344953,
+                0.4468136928208363,
+                0.8944141997909627
+            ],
+            "position_in_world": [
+                6.962172031402588,
+                9.077168464660645,
+                0.9462244510650635
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "stove_igwqpj_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1512043361980409,
+                "theta_deg": 104.68939199177571,
+                "phi_deg": 66.28617078397033
+            },
+            "orientation_in_bot": [
+                0.0007432724886777603,
+                -0.015227903042159038,
+                -0.04859933580647602,
+                0.9987019891209368
+            ],
+            "position_in_world": [
+                7.110574245452881,
+                10.57181167602539,
+                0.4759700894355774
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "fridge_dszchb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.147591870686703,
+                "theta_deg": -37.397395938793984,
+                "phi_deg": 60.694347550635236
+            },
+            "orientation_in_bot": [
+                -0.011314950595117232,
+                0.010218260224882697,
+                0.741974086419849,
+                -0.6702551858303203
+            ],
+            "position_in_world": [
+                5.140077114105225,
+                8.594399452209473,
+                1.01039719581604
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "countertop_tpuwys_3": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.695705784115433,
+                "theta_deg": 38.577045636216035,
+                "phi_deg": 56.361316524160486
+            },
+            "orientation_in_bot": [
+                0.0007404415753151805,
+                -0.015228017437209614,
+                -0.04841501130991206,
+                0.9987109421204249
+            ],
+            "position_in_world": [
+                7.1094133751238315,
+                9.18000325351292,
+                0.9103154907250001
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "shrimp_203": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.306689531815225,
+                "theta_deg": -38.69950099192303,
+                "phi_deg": 51.72216453410525
+            },
+            "orientation_in_bot": [
+                -0.09738217272067846,
+                -0.02442847915173759,
+                -0.6568794764532241,
+                0.7472812825550172
+            ],
+            "position_in_world": [
+                5.1390228271484375,
+                8.657638549804688,
+                1.3902543783187866
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "frying_pan_201",
+                "ontop",
+                "countertop_tpuwys_3"
+            ],
+            [
+                "fridge_dszchb_0",
+                "under",
+                "shrimp_203"
+            ],
+            [
+                "shrimp_203",
+                "inside",
+                "fridge_dszchb_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "7_detect_surroundings": {
+        "frying_pan_201": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.701944746910285,
+                "theta_deg": 31.29723354416049,
+                "phi_deg": 54.929560586775544
+            },
+            "orientation_in_bot": [
+                -0.008302101598365893,
+                -0.01765894190344953,
+                0.4468136928208363,
+                0.8944141997909627
+            ],
+            "position_in_world": [
+                6.962172031402588,
+                9.077168464660645,
+                0.9462244510650635
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "stove_igwqpj_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1512043361980409,
+                "theta_deg": 104.68939199177571,
+                "phi_deg": 66.28617078397033
+            },
+            "orientation_in_bot": [
+                0.0007432724886777603,
+                -0.015227903042159038,
+                -0.04859933580647602,
+                0.9987019891209368
+            ],
+            "position_in_world": [
+                7.110574245452881,
+                10.57181167602539,
+                0.4759700894355774
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "fridge_dszchb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.147591870686703,
+                "theta_deg": -37.397395938793984,
+                "phi_deg": 60.694347550635236
+            },
+            "orientation_in_bot": [
+                -0.011314950595117232,
+                0.010218260224882697,
+                0.741974086419849,
+                -0.6702551858303203
+            ],
+            "position_in_world": [
+                5.140077114105225,
+                8.594399452209473,
+                1.01039719581604
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "countertop_tpuwys_3": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.695705784115433,
+                "theta_deg": 38.577045636216035,
+                "phi_deg": 56.361316524160486
+            },
+            "orientation_in_bot": [
+                0.0007404415753151805,
+                -0.015228017437209614,
+                -0.04841501130991206,
+                0.9987109421204249
+            ],
+            "position_in_world": [
+                7.1094133751238315,
+                9.18000325351292,
+                0.9103154907250001
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "shrimp_203": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.306689531815225,
+                "theta_deg": -38.69950099192303,
+                "phi_deg": 51.72216453410525
+            },
+            "orientation_in_bot": [
+                -0.09738217272067846,
+                -0.02442847915173759,
+                -0.6568794764532241,
+                0.7472812825550172
+            ],
+            "position_in_world": [
+                5.1390228271484375,
+                8.657638549804688,
+                1.3902543783187866
+            ],
+            "bot_in_world": [
+                6.121150493621826,
+                10.218883514404297,
+                0.005062684416770935
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "frying_pan_201",
+                "ontop",
+                "countertop_tpuwys_3"
+            ],
+            [
+                "fridge_dszchb_0",
+                "under",
+                "shrimp_203"
+            ],
+            [
+                "shrimp_203",
+                "inside",
+                "fridge_dszchb_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "8_BEV_surroundings": {
+        "frying_pan_201": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.7040749882312949,
+                "theta_deg": 31.098465094745798,
+                "phi_deg": 54.97483298193553
+            },
+            "orientation_in_bot": [
+                -0.008454927463066418,
+                -0.01756072594357134,
+                0.46162873068451893,
+                0.886859092591675
+            ],
+            "position_in_world": [
+                6.9598188400268555,
+                9.07225513458252,
+                0.9462243914604187
+            ],
+            "bot_in_world": [
+                6.121153831481934,
+                10.218871116638184,
+                0.005063220858573914
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "stove_igwqpj_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1512050447675057,
+                "theta_deg": 104.689707661129,
+                "phi_deg": 66.28577880681205
+            },
+            "orientation_in_bot": [
+                0.0007445775654293818,
+                -0.01521871935421903,
+                -0.04859899766367587,
+                0.9987021445914456
+            ],
+            "position_in_world": [
+                7.110574245452881,
+                10.57181167602539,
+                0.4759700894355774
+            ],
+            "bot_in_world": [
+                6.121153831481934,
+                10.218871116638184,
+                0.005063220858573914
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "fridge_dszchb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.147583789964457,
+                "theta_deg": -37.39737141386247,
+                "phi_deg": 60.695206102627736
+            },
+            "orientation_in_bot": [
+                -0.01130936372333162,
+                0.010210855550956438,
+                0.7419739508954968,
+                -0.6702555429935793
+            ],
+            "position_in_world": [
+                5.140077114105225,
+                8.594399452209473,
+                1.01039719581604
+            ],
+            "bot_in_world": [
+                6.121153831481934,
+                10.218871116638184,
+                0.005063220858573914
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "countertop_tpuwys_3": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6956959653219115,
+                "theta_deg": 38.57680388923959,
+                "phi_deg": 56.36182538440391
+            },
+            "orientation_in_bot": [
+                0.000741748346958286,
+                -0.015218833990303115,
+                -0.04841467313614146,
+                0.9987110975284524
+            ],
+            "position_in_world": [
+                7.1094133751238315,
+                9.18000325351292,
+                0.9103154907250001
+            ],
+            "bot_in_world": [
+                6.121153831481934,
+                10.218871116638184,
+                0.005063220858573914
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "shrimp_203": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.306679464449174,
+                "theta_deg": -38.69862853439671,
+                "phi_deg": 51.72259235869988
+            },
+            "orientation_in_bot": [
+                -0.09743991598803925,
+                -0.025100839182050673,
+                -0.6563890242558781,
+                0.7476823252431589
+            ],
+            "position_in_world": [
+                5.139049053192139,
+                8.657635688781738,
+                1.3902651071548462
+            ],
+            "bot_in_world": [
+                6.121153831481934,
+                10.218871116638184,
+                0.005063220858573914
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "frying_pan_201",
+                "ontop",
+                "countertop_tpuwys_3"
+            ],
+            [
+                "fridge_dszchb_0",
+                "under",
+                "shrimp_203"
+            ],
+            [
+                "shrimp_203",
+                "inside",
+                "fridge_dszchb_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "9_BEV_surroundings": {
+        "frying_pan_201": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.7040749882312949,
+                "theta_deg": 31.098465094745798,
+                "phi_deg": 54.97483298193553
+            },
+            "orientation_in_bot": [
+                -0.008454927463066418,
+                -0.01756072594357134,
+                0.46162873068451893,
+                0.886859092591675
+            ],
+            "position_in_world": [
+                6.9598188400268555,
+                9.07225513458252,
+                0.9462243914604187
+            ],
+            "bot_in_world": [
+                6.121153831481934,
+                10.218871116638184,
+                0.005063220858573914
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "stove_igwqpj_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1512050447675057,
+                "theta_deg": 104.689707661129,
+                "phi_deg": 66.28577880681205
+            },
+            "orientation_in_bot": [
+                0.0007445775654293818,
+                -0.01521871935421903,
+                -0.04859899766367587,
+                0.9987021445914456
+            ],
+            "position_in_world": [
+                7.110574245452881,
+                10.57181167602539,
+                0.4759700894355774
+            ],
+            "bot_in_world": [
+                6.121153831481934,
+                10.218871116638184,
+                0.005063220858573914
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "fridge_dszchb_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.147583789964457,
+                "theta_deg": -37.39737141386247,
+                "phi_deg": 60.695206102627736
+            },
+            "orientation_in_bot": [
+                -0.01130936372333162,
+                0.010210855550956438,
+                0.7419739508954968,
+                -0.6702555429935793
+            ],
+            "position_in_world": [
+                5.140077114105225,
+                8.594399452209473,
+                1.01039719581604
+            ],
+            "bot_in_world": [
+                6.121153831481934,
+                10.218871116638184,
+                0.005063220858573914
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "countertop_tpuwys_3": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6956959653219115,
+                "theta_deg": 38.57680388923959,
+                "phi_deg": 56.36182538440391
+            },
+            "orientation_in_bot": [
+                0.000741748346958286,
+                -0.015218833990303115,
+                -0.04841467313614146,
+                0.9987110975284524
+            ],
+            "position_in_world": [
+                7.1094133751238315,
+                9.18000325351292,
+                0.9103154907250001
+            ],
+            "bot_in_world": [
+                6.121153831481934,
+                10.218871116638184,
+                0.005063220858573914
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "shrimp_203": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    1
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.306679464449174,
+                "theta_deg": -38.69862853439671,
+                "phi_deg": 51.72259235869988
+            },
+            "orientation_in_bot": [
+                -0.09743991598803925,
+                -0.025100839182050673,
+                -0.6563890242558781,
+                0.7476823252431589
+            ],
+            "position_in_world": [
+                5.139049053192139,
+                8.657635688781738,
+                1.3902651071548462
+            ],
+            "bot_in_world": [
+                6.121153831481934,
+                10.218871116638184,
+                0.005063220858573914
+            ],
+            "path": "./prompt_files/data/make_prawns_with_frying_pan/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "frying_pan_201",
+                "ontop",
+                "countertop_tpuwys_3"
+            ],
+            [
+                "fridge_dszchb_0",
+                "under",
+                "shrimp_203"
+            ],
+            [
+                "shrimp_203",
+                "inside",
+                "fridge_dszchb_0"
+            ]
+        ],
+        "inventory": []
+    }
+}

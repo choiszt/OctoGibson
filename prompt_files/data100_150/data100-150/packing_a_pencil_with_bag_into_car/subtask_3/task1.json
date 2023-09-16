@@ -1,0 +1,1993 @@
+{
+    "task": "packing_a_pencil_with_bag_into_car",
+    "0_detect_surroundings": {
+        "suitcase_276": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3035115999476947,
+                "theta_deg": 95.73097244351099,
+                "phi_deg": 88.06401527746631
+            },
+            "orientation_in_bot": [
+                0.0038537457644929386,
+                0.021028728002918804,
+                0.05068906201473722,
+                0.9984856334641115
+            ],
+            "position_in_world": [
+                -2.275071620941162,
+                -0.7094330787658691,
+                0.04326365515589714
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance0_detect_surroundings.png"
+        },
+        "car_275": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.6882498279300835,
+                "theta_deg": 85.4721879127707,
+                "phi_deg": 77.20500501288087
+            },
+            "orientation_in_bot": [
+                0.009189187623684078,
+                0.019933198036517125,
+                0.4434960300716699,
+                0.8960075321991006
+            ],
+            "position_in_world": [
+                -0.09239059686660767,
+                0.07781513780355453,
+                0.8339022397994995
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance0_detect_surroundings.png"
+        },
+        "colored_pencil_277": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1704392701665216,
+                "theta_deg": 90.29549602534027,
+                "phi_deg": 87.88838109230238
+            },
+            "orientation_in_bot": [
+                0.18204034035997127,
+                0.8551172621532258,
+                -0.07483862963932074,
+                -0.47961960131223347
+            ],
+            "position_in_world": [
+                -2.324976921081543,
+                -0.8794766664505005,
+                0.04779314622282982
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance0_detect_surroundings.png"
+        },
+        "marker_278": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.364586486404201,
+                "theta_deg": 96.17842479010065,
+                "phi_deg": 80.20787251294713
+            },
+            "orientation_in_bot": [
+                0.029548093044314046,
+                -0.049009212321656746,
+                0.2924183856926027,
+                0.9545766051051051
+            ],
+            "position_in_world": [
+                -2.2508280277252197,
+                -0.6696159243583679,
+                0.23048877716064453
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance0_detect_surroundings.png"
+        },
+        "driveway_aipswu_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.9617450493755164,
+                "theta_deg": -9.05077289887964,
+                "phi_deg": 101.71251610046053
+            },
+            "orientation_in_bot": [
+                0.862521848907434,
+                0.5055408542289174,
+                -0.019032926808860467,
+                -0.011056787955217286
+            ],
+            "position_in_world": [
+                -2.6706480045318606,
+                -3.2743106067575294,
+                -0.30963682070240983
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance0_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "suitcase_276",
+                "ontop",
+                "driveway_aipswu_0"
+            ],
+            [
+                "car_275",
+                "ontop",
+                "driveway_aipswu_0"
+            ],
+            [
+                "colored_pencil_277",
+                "inside",
+                "suitcase_276"
+            ],
+            [
+                "marker_278",
+                "ontop",
+                "suitcase_276"
+            ]
+        ],
+        "inventory": []
+    },
+    "1_detect_surroundings": {
+        "suitcase_276": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3035115999476947,
+                "theta_deg": 95.73097244351099,
+                "phi_deg": 88.06401527746631
+            },
+            "orientation_in_bot": [
+                0.0038537457644929386,
+                0.021028728002918804,
+                0.05068906201473722,
+                0.9984856334641115
+            ],
+            "position_in_world": [
+                -2.275071620941162,
+                -0.7094330787658691,
+                0.04326365515589714
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance1_detect_surroundings.png"
+        },
+        "car_275": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.6882498279300835,
+                "theta_deg": 85.4721879127707,
+                "phi_deg": 77.20500501288087
+            },
+            "orientation_in_bot": [
+                0.009189187623684078,
+                0.019933198036517125,
+                0.4434960300716699,
+                0.8960075321991006
+            ],
+            "position_in_world": [
+                -0.09239059686660767,
+                0.07781513780355453,
+                0.8339022397994995
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance1_detect_surroundings.png"
+        },
+        "colored_pencil_277": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1704392701665216,
+                "theta_deg": 90.29549602534027,
+                "phi_deg": 87.88838109230238
+            },
+            "orientation_in_bot": [
+                0.18204034035997127,
+                0.8551172621532258,
+                -0.07483862963932074,
+                -0.47961960131223347
+            ],
+            "position_in_world": [
+                -2.324976921081543,
+                -0.8794766664505005,
+                0.04779314622282982
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance1_detect_surroundings.png"
+        },
+        "marker_278": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.364586486404201,
+                "theta_deg": 96.17842479010065,
+                "phi_deg": 80.20787251294713
+            },
+            "orientation_in_bot": [
+                0.029548093044314046,
+                -0.049009212321656746,
+                0.2924183856926027,
+                0.9545766051051051
+            ],
+            "position_in_world": [
+                -2.2508280277252197,
+                -0.6696159243583679,
+                0.23048877716064453
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance1_detect_surroundings.png"
+        },
+        "driveway_aipswu_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.9617450493755164,
+                "theta_deg": -9.05077289887964,
+                "phi_deg": 101.71251610046053
+            },
+            "orientation_in_bot": [
+                0.862521848907434,
+                0.5055408542289174,
+                -0.019032926808860467,
+                -0.011056787955217286
+            ],
+            "position_in_world": [
+                -2.6706480045318606,
+                -3.2743106067575294,
+                -0.30963682070240983
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance1_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "suitcase_276",
+                "ontop",
+                "driveway_aipswu_0"
+            ],
+            [
+                "car_275",
+                "ontop",
+                "driveway_aipswu_0"
+            ],
+            [
+                "colored_pencil_277",
+                "inside",
+                "suitcase_276"
+            ],
+            [
+                "marker_278",
+                "ontop",
+                "suitcase_276"
+            ]
+        ],
+        "inventory": []
+    },
+    "2_detect_surroundings": {
+        "suitcase_276": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3035115999476947,
+                "theta_deg": 95.73097244351099,
+                "phi_deg": 88.06401527746631
+            },
+            "orientation_in_bot": [
+                0.0038537457644929386,
+                0.021028728002918804,
+                0.05068906201473722,
+                0.9984856334641115
+            ],
+            "position_in_world": [
+                -2.275071620941162,
+                -0.7094330787658691,
+                0.04326365515589714
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance2_detect_surroundings.png"
+        },
+        "car_275": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.6882498279300835,
+                "theta_deg": 85.4721879127707,
+                "phi_deg": 77.20500501288087
+            },
+            "orientation_in_bot": [
+                0.009189187623684078,
+                0.019933198036517125,
+                0.4434960300716699,
+                0.8960075321991006
+            ],
+            "position_in_world": [
+                -0.09239059686660767,
+                0.07781513780355453,
+                0.8339022397994995
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance2_detect_surroundings.png"
+        },
+        "colored_pencil_277": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1704392701665216,
+                "theta_deg": 90.29549602534027,
+                "phi_deg": 87.88838109230238
+            },
+            "orientation_in_bot": [
+                0.18204034035997127,
+                0.8551172621532258,
+                -0.07483862963932074,
+                -0.47961960131223347
+            ],
+            "position_in_world": [
+                -2.324976921081543,
+                -0.8794766664505005,
+                0.04779314622282982
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance2_detect_surroundings.png"
+        },
+        "marker_278": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.364586486404201,
+                "theta_deg": 96.17842479010065,
+                "phi_deg": 80.20787251294713
+            },
+            "orientation_in_bot": [
+                0.029548093044314046,
+                -0.049009212321656746,
+                0.2924183856926027,
+                0.9545766051051051
+            ],
+            "position_in_world": [
+                -2.2508280277252197,
+                -0.6696159243583679,
+                0.23048877716064453
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance2_detect_surroundings.png"
+        },
+        "driveway_aipswu_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.9617450493755164,
+                "theta_deg": -9.05077289887964,
+                "phi_deg": 101.71251610046053
+            },
+            "orientation_in_bot": [
+                0.862521848907434,
+                0.5055408542289174,
+                -0.019032926808860467,
+                -0.011056787955217286
+            ],
+            "position_in_world": [
+                -2.6706480045318606,
+                -3.2743106067575294,
+                -0.30963682070240983
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance2_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "suitcase_276",
+                "ontop",
+                "driveway_aipswu_0"
+            ],
+            [
+                "car_275",
+                "ontop",
+                "driveway_aipswu_0"
+            ],
+            [
+                "colored_pencil_277",
+                "inside",
+                "suitcase_276"
+            ],
+            [
+                "marker_278",
+                "ontop",
+                "suitcase_276"
+            ]
+        ],
+        "inventory": []
+    },
+    "3_detect_surroundings": {
+        "suitcase_276": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3035115999476947,
+                "theta_deg": 95.73097244351099,
+                "phi_deg": 88.06401527746631
+            },
+            "orientation_in_bot": [
+                0.0038537457644929386,
+                0.021028728002918804,
+                0.05068906201473722,
+                0.9984856334641115
+            ],
+            "position_in_world": [
+                -2.275071620941162,
+                -0.7094330787658691,
+                0.04326365515589714
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance3_detect_surroundings.png"
+        },
+        "car_275": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.6882498279300835,
+                "theta_deg": 85.4721879127707,
+                "phi_deg": 77.20500501288087
+            },
+            "orientation_in_bot": [
+                0.009189187623684078,
+                0.019933198036517125,
+                0.4434960300716699,
+                0.8960075321991006
+            ],
+            "position_in_world": [
+                -0.09239059686660767,
+                0.07781513780355453,
+                0.8339022397994995
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance3_detect_surroundings.png"
+        },
+        "colored_pencil_277": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1704392701665216,
+                "theta_deg": 90.29549602534027,
+                "phi_deg": 87.88838109230238
+            },
+            "orientation_in_bot": [
+                0.18204034035997127,
+                0.8551172621532258,
+                -0.07483862963932074,
+                -0.47961960131223347
+            ],
+            "position_in_world": [
+                -2.324976921081543,
+                -0.8794766664505005,
+                0.04779314622282982
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance3_detect_surroundings.png"
+        },
+        "marker_278": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.364586486404201,
+                "theta_deg": 96.17842479010065,
+                "phi_deg": 80.20787251294713
+            },
+            "orientation_in_bot": [
+                0.029548093044314046,
+                -0.049009212321656746,
+                0.2924183856926027,
+                0.9545766051051051
+            ],
+            "position_in_world": [
+                -2.2508280277252197,
+                -0.6696159243583679,
+                0.23048877716064453
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance3_detect_surroundings.png"
+        },
+        "driveway_aipswu_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.9617450493755164,
+                "theta_deg": -9.05077289887964,
+                "phi_deg": 101.71251610046053
+            },
+            "orientation_in_bot": [
+                0.862521848907434,
+                0.5055408542289174,
+                -0.019032926808860467,
+                -0.011056787955217286
+            ],
+            "position_in_world": [
+                -2.6706480045318606,
+                -3.2743106067575294,
+                -0.30963682070240983
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance3_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "suitcase_276",
+                "ontop",
+                "driveway_aipswu_0"
+            ],
+            [
+                "car_275",
+                "ontop",
+                "driveway_aipswu_0"
+            ],
+            [
+                "colored_pencil_277",
+                "inside",
+                "suitcase_276"
+            ],
+            [
+                "marker_278",
+                "ontop",
+                "suitcase_276"
+            ]
+        ],
+        "inventory": []
+    },
+    "4_detect_surroundings": {
+        "suitcase_276": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3035115999476947,
+                "theta_deg": 95.73097244351099,
+                "phi_deg": 88.06401527746631
+            },
+            "orientation_in_bot": [
+                0.0038537457644929386,
+                0.021028728002918804,
+                0.05068906201473722,
+                0.9984856334641115
+            ],
+            "position_in_world": [
+                -2.275071620941162,
+                -0.7094330787658691,
+                0.04326365515589714
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance4_detect_surroundings.png"
+        },
+        "car_275": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.6882498279300835,
+                "theta_deg": 85.4721879127707,
+                "phi_deg": 77.20500501288087
+            },
+            "orientation_in_bot": [
+                0.009189187623684078,
+                0.019933198036517125,
+                0.4434960300716699,
+                0.8960075321991006
+            ],
+            "position_in_world": [
+                -0.09239059686660767,
+                0.07781513780355453,
+                0.8339022397994995
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance4_detect_surroundings.png"
+        },
+        "colored_pencil_277": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1704392701665216,
+                "theta_deg": 90.29549602534027,
+                "phi_deg": 87.88838109230238
+            },
+            "orientation_in_bot": [
+                0.18204034035997127,
+                0.8551172621532258,
+                -0.07483862963932074,
+                -0.47961960131223347
+            ],
+            "position_in_world": [
+                -2.324976921081543,
+                -0.8794766664505005,
+                0.04779314622282982
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance4_detect_surroundings.png"
+        },
+        "marker_278": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.364586486404201,
+                "theta_deg": 96.17842479010065,
+                "phi_deg": 80.20787251294713
+            },
+            "orientation_in_bot": [
+                0.029548093044314046,
+                -0.049009212321656746,
+                0.2924183856926027,
+                0.9545766051051051
+            ],
+            "position_in_world": [
+                -2.2508280277252197,
+                -0.6696159243583679,
+                0.23048877716064453
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance4_detect_surroundings.png"
+        },
+        "driveway_aipswu_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.9617450493755164,
+                "theta_deg": -9.05077289887964,
+                "phi_deg": 101.71251610046053
+            },
+            "orientation_in_bot": [
+                0.862521848907434,
+                0.5055408542289174,
+                -0.019032926808860467,
+                -0.011056787955217286
+            ],
+            "position_in_world": [
+                -2.6706480045318606,
+                -3.2743106067575294,
+                -0.30963682070240983
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance4_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "suitcase_276",
+                "ontop",
+                "driveway_aipswu_0"
+            ],
+            [
+                "car_275",
+                "ontop",
+                "driveway_aipswu_0"
+            ],
+            [
+                "colored_pencil_277",
+                "inside",
+                "suitcase_276"
+            ],
+            [
+                "marker_278",
+                "ontop",
+                "suitcase_276"
+            ]
+        ],
+        "inventory": []
+    },
+    "5_detect_surroundings": {
+        "suitcase_276": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3035115999476947,
+                "theta_deg": 95.73097244351099,
+                "phi_deg": 88.06401527746631
+            },
+            "orientation_in_bot": [
+                0.0038537457644929386,
+                0.021028728002918804,
+                0.05068906201473722,
+                0.9984856334641115
+            ],
+            "position_in_world": [
+                -2.275071620941162,
+                -0.7094330787658691,
+                0.04326365515589714
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance5_detect_surroundings.png"
+        },
+        "car_275": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.6882498279300835,
+                "theta_deg": 85.4721879127707,
+                "phi_deg": 77.20500501288087
+            },
+            "orientation_in_bot": [
+                0.009189187623684078,
+                0.019933198036517125,
+                0.4434960300716699,
+                0.8960075321991006
+            ],
+            "position_in_world": [
+                -0.09239059686660767,
+                0.07781513780355453,
+                0.8339022397994995
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance5_detect_surroundings.png"
+        },
+        "colored_pencil_277": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1704392701665216,
+                "theta_deg": 90.29549602534027,
+                "phi_deg": 87.88838109230238
+            },
+            "orientation_in_bot": [
+                0.18204034035997127,
+                0.8551172621532258,
+                -0.07483862963932074,
+                -0.47961960131223347
+            ],
+            "position_in_world": [
+                -2.324976921081543,
+                -0.8794766664505005,
+                0.04779314622282982
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance5_detect_surroundings.png"
+        },
+        "marker_278": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.364586486404201,
+                "theta_deg": 96.17842479010065,
+                "phi_deg": 80.20787251294713
+            },
+            "orientation_in_bot": [
+                0.029548093044314046,
+                -0.049009212321656746,
+                0.2924183856926027,
+                0.9545766051051051
+            ],
+            "position_in_world": [
+                -2.2508280277252197,
+                -0.6696159243583679,
+                0.23048877716064453
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance5_detect_surroundings.png"
+        },
+        "driveway_aipswu_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.9617450493755164,
+                "theta_deg": -9.05077289887964,
+                "phi_deg": 101.71251610046053
+            },
+            "orientation_in_bot": [
+                0.862521848907434,
+                0.5055408542289174,
+                -0.019032926808860467,
+                -0.011056787955217286
+            ],
+            "position_in_world": [
+                -2.6706480045318606,
+                -3.2743106067575294,
+                -0.30963682070240983
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance5_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "suitcase_276",
+                "ontop",
+                "driveway_aipswu_0"
+            ],
+            [
+                "car_275",
+                "ontop",
+                "driveway_aipswu_0"
+            ],
+            [
+                "colored_pencil_277",
+                "inside",
+                "suitcase_276"
+            ],
+            [
+                "marker_278",
+                "ontop",
+                "suitcase_276"
+            ]
+        ],
+        "inventory": []
+    },
+    "6_detect_surroundings": {
+        "suitcase_276": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3035115999476947,
+                "theta_deg": 95.73097244351099,
+                "phi_deg": 88.06401527746631
+            },
+            "orientation_in_bot": [
+                0.0038537457644929386,
+                0.021028728002918804,
+                0.05068906201473722,
+                0.9984856334641115
+            ],
+            "position_in_world": [
+                -2.275071620941162,
+                -0.7094330787658691,
+                0.04326365515589714
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance6_detect_surroundings.png"
+        },
+        "car_275": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.6882498279300835,
+                "theta_deg": 85.4721879127707,
+                "phi_deg": 77.20500501288087
+            },
+            "orientation_in_bot": [
+                0.009189187623684078,
+                0.019933198036517125,
+                0.4434960300716699,
+                0.8960075321991006
+            ],
+            "position_in_world": [
+                -0.09239059686660767,
+                0.07781513780355453,
+                0.8339022397994995
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance6_detect_surroundings.png"
+        },
+        "colored_pencil_277": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1704392701665216,
+                "theta_deg": 90.29549602534027,
+                "phi_deg": 87.88838109230238
+            },
+            "orientation_in_bot": [
+                0.18204034035997127,
+                0.8551172621532258,
+                -0.07483862963932074,
+                -0.47961960131223347
+            ],
+            "position_in_world": [
+                -2.324976921081543,
+                -0.8794766664505005,
+                0.04779314622282982
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance6_detect_surroundings.png"
+        },
+        "marker_278": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.364586486404201,
+                "theta_deg": 96.17842479010065,
+                "phi_deg": 80.20787251294713
+            },
+            "orientation_in_bot": [
+                0.029548093044314046,
+                -0.049009212321656746,
+                0.2924183856926027,
+                0.9545766051051051
+            ],
+            "position_in_world": [
+                -2.2508280277252197,
+                -0.6696159243583679,
+                0.23048877716064453
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance6_detect_surroundings.png"
+        },
+        "driveway_aipswu_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.9617450493755164,
+                "theta_deg": -9.05077289887964,
+                "phi_deg": 101.71251610046053
+            },
+            "orientation_in_bot": [
+                0.862521848907434,
+                0.5055408542289174,
+                -0.019032926808860467,
+                -0.011056787955217286
+            ],
+            "position_in_world": [
+                -2.6706480045318606,
+                -3.2743106067575294,
+                -0.30963682070240983
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance6_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "suitcase_276",
+                "ontop",
+                "driveway_aipswu_0"
+            ],
+            [
+                "car_275",
+                "ontop",
+                "driveway_aipswu_0"
+            ],
+            [
+                "colored_pencil_277",
+                "inside",
+                "suitcase_276"
+            ],
+            [
+                "marker_278",
+                "ontop",
+                "suitcase_276"
+            ]
+        ],
+        "inventory": []
+    },
+    "7_detect_surroundings": {
+        "suitcase_276": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3035115999476947,
+                "theta_deg": 95.73097244351099,
+                "phi_deg": 88.06401527746631
+            },
+            "orientation_in_bot": [
+                0.0038537457644929386,
+                0.021028728002918804,
+                0.05068906201473722,
+                0.9984856334641115
+            ],
+            "position_in_world": [
+                -2.275071620941162,
+                -0.7094330787658691,
+                0.04326365515589714
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance7_detect_surroundings.png"
+        },
+        "car_275": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.6882498279300835,
+                "theta_deg": 85.4721879127707,
+                "phi_deg": 77.20500501288087
+            },
+            "orientation_in_bot": [
+                0.009189187623684078,
+                0.019933198036517125,
+                0.4434960300716699,
+                0.8960075321991006
+            ],
+            "position_in_world": [
+                -0.09239059686660767,
+                0.07781513780355453,
+                0.8339022397994995
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance7_detect_surroundings.png"
+        },
+        "colored_pencil_277": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1704392701665216,
+                "theta_deg": 90.29549602534027,
+                "phi_deg": 87.88838109230238
+            },
+            "orientation_in_bot": [
+                0.18204034035997127,
+                0.8551172621532258,
+                -0.07483862963932074,
+                -0.47961960131223347
+            ],
+            "position_in_world": [
+                -2.324976921081543,
+                -0.8794766664505005,
+                0.04779314622282982
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance7_detect_surroundings.png"
+        },
+        "marker_278": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.364586486404201,
+                "theta_deg": 96.17842479010065,
+                "phi_deg": 80.20787251294713
+            },
+            "orientation_in_bot": [
+                0.029548093044314046,
+                -0.049009212321656746,
+                0.2924183856926027,
+                0.9545766051051051
+            ],
+            "position_in_world": [
+                -2.2508280277252197,
+                -0.6696159243583679,
+                0.23048877716064453
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance7_detect_surroundings.png"
+        },
+        "driveway_aipswu_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.9617450493755164,
+                "theta_deg": -9.05077289887964,
+                "phi_deg": 101.71251610046053
+            },
+            "orientation_in_bot": [
+                0.862521848907434,
+                0.5055408542289174,
+                -0.019032926808860467,
+                -0.011056787955217286
+            ],
+            "position_in_world": [
+                -2.6706480045318606,
+                -3.2743106067575294,
+                -0.30963682070240983
+            ],
+            "bot_in_world": [
+                -3.3416008949279785,
+                -1.4578824043273926,
+                0.004774883389472961
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance7_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "suitcase_276",
+                "ontop",
+                "driveway_aipswu_0"
+            ],
+            [
+                "car_275",
+                "ontop",
+                "driveway_aipswu_0"
+            ],
+            [
+                "colored_pencil_277",
+                "inside",
+                "suitcase_276"
+            ],
+            [
+                "marker_278",
+                "ontop",
+                "suitcase_276"
+            ]
+        ],
+        "inventory": []
+    },
+    "8_BEV_surroundings": {
+        "suitcase_276": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3035116894347194,
+                "theta_deg": 95.73140196059799,
+                "phi_deg": 88.06403349864098
+            },
+            "orientation_in_bot": [
+                0.003853273122723352,
+                0.021028687076584583,
+                0.05069241442275827,
+                0.9984854659563495
+            ],
+            "position_in_world": [
+                -2.275071382522583,
+                -0.7094331979751587,
+                0.04326365143060684
+            ],
+            "bot_in_world": [
+                -3.3416006565093994,
+                -1.4578826427459717,
+                0.004774704575538635
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance8_BEV_surroundings.png"
+        },
+        "car_275": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.6882497937662273,
+                "theta_deg": 85.47261348375825,
+                "phi_deg": 77.20503333073812
+            },
+            "orientation_in_bot": [
+                0.009188997350336429,
+                0.019933564852843113,
+                0.4434993667120379,
+                0.8960058744483622
+            ],
+            "position_in_world": [
+                -0.09239059686660767,
+                0.07781513780355453,
+                0.8339022397994995
+            ],
+            "bot_in_world": [
+                -3.3416006565093994,
+                -1.4578826427459717,
+                0.004774704575538635
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance8_BEV_surroundings.png"
+        },
+        "colored_pencil_277": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.170415126035086,
+                "theta_deg": 90.29667163483386,
+                "phi_deg": 87.88898619386084
+            },
+            "orientation_in_bot": [
+                0.18091033781481553,
+                0.8553170160780772,
+                -0.07414837110520114,
+                -0.4797981562505933
+            ],
+            "position_in_world": [
+                -2.3250045776367188,
+                -0.8794757723808289,
+                0.04777965322136879
+            ],
+            "bot_in_world": [
+                -3.3416006565093994,
+                -1.4578826427459717,
+                0.004774704575538635
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance8_BEV_surroundings.png"
+        },
+        "marker_278": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3645864774115548,
+                "theta_deg": 96.17885984554574,
+                "phi_deg": 80.20789026677633
+            },
+            "orientation_in_bot": [
+                0.029548107832490216,
+                -0.04900879267961415,
+                0.2924219500380189,
+                0.9545755343080864
+            ],
+            "position_in_world": [
+                -2.2508280277252197,
+                -0.6696159243583679,
+                0.23048877716064453
+            ],
+            "bot_in_world": [
+                -3.3416006565093994,
+                -1.4578826427459717,
+                0.004774704575538635
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance8_BEV_surroundings.png"
+        },
+        "driveway_aipswu_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.961744751085556,
+                "theta_deg": -9.050357064593957,
+                "phi_deg": 101.71253508873386
+            },
+            "orientation_in_bot": [
+                0.8625199594884319,
+                0.5055440670402456,
+                -0.01903330800153627,
+                -0.011056624756240436
+            ],
+            "position_in_world": [
+                -2.6706480045318606,
+                -3.2743106067575294,
+                -0.30963682070240983
+            ],
+            "bot_in_world": [
+                -3.3416006565093994,
+                -1.4578826427459717,
+                0.004774704575538635
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance8_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "suitcase_276",
+                "ontop",
+                "driveway_aipswu_0"
+            ],
+            [
+                "car_275",
+                "ontop",
+                "driveway_aipswu_0"
+            ],
+            [
+                "colored_pencil_277",
+                "inside",
+                "suitcase_276"
+            ],
+            [
+                "marker_278",
+                "ontop",
+                "suitcase_276"
+            ]
+        ],
+        "inventory": []
+    },
+    "9_BEV_surroundings": {
+        "suitcase_276": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3035116894347194,
+                "theta_deg": 95.73140196059799,
+                "phi_deg": 88.06403349864098
+            },
+            "orientation_in_bot": [
+                0.003853273122723352,
+                0.021028687076584583,
+                0.05069241442275827,
+                0.9984854659563495
+            ],
+            "position_in_world": [
+                -2.275071382522583,
+                -0.7094331979751587,
+                0.04326365143060684
+            ],
+            "bot_in_world": [
+                -3.3416006565093994,
+                -1.4578826427459717,
+                0.004774704575538635
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance9_BEV_surroundings.png"
+        },
+        "car_275": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.6882497937662273,
+                "theta_deg": 85.47261348375825,
+                "phi_deg": 77.20503333073812
+            },
+            "orientation_in_bot": [
+                0.009188997350336429,
+                0.019933564852843113,
+                0.4434993667120379,
+                0.8960058744483622
+            ],
+            "position_in_world": [
+                -0.09239059686660767,
+                0.07781513780355453,
+                0.8339022397994995
+            ],
+            "bot_in_world": [
+                -3.3416006565093994,
+                -1.4578826427459717,
+                0.004774704575538635
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance9_BEV_surroundings.png"
+        },
+        "colored_pencil_277": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.170415126035086,
+                "theta_deg": 90.29667163483386,
+                "phi_deg": 87.88898619386084
+            },
+            "orientation_in_bot": [
+                0.18091033781481553,
+                0.8553170160780772,
+                -0.07414837110520114,
+                -0.4797981562505933
+            ],
+            "position_in_world": [
+                -2.3250045776367188,
+                -0.8794757723808289,
+                0.04777965322136879
+            ],
+            "bot_in_world": [
+                -3.3416006565093994,
+                -1.4578826427459717,
+                0.004774704575538635
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance9_BEV_surroundings.png"
+        },
+        "marker_278": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3645864774115548,
+                "theta_deg": 96.17885984554574,
+                "phi_deg": 80.20789026677633
+            },
+            "orientation_in_bot": [
+                0.029548107832490216,
+                -0.04900879267961415,
+                0.2924219500380189,
+                0.9545755343080864
+            ],
+            "position_in_world": [
+                -2.2508280277252197,
+                -0.6696159243583679,
+                0.23048877716064453
+            ],
+            "bot_in_world": [
+                -3.3416006565093994,
+                -1.4578826427459717,
+                0.004774704575538635
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance9_BEV_surroundings.png"
+        },
+        "driveway_aipswu_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.961744751085556,
+                "theta_deg": -9.050357064593957,
+                "phi_deg": 101.71253508873386
+            },
+            "orientation_in_bot": [
+                0.8625199594884319,
+                0.5055440670402456,
+                -0.01903330800153627,
+                -0.011056624756240436
+            ],
+            "position_in_world": [
+                -2.6706480045318606,
+                -3.2743106067575294,
+                -0.30963682070240983
+            ],
+            "bot_in_world": [
+                -3.3416006565093994,
+                -1.4578826427459717,
+                0.004774704575538635
+            ],
+            "path": "./prompt_files/data/packing_a_pencil_with_bag_into_car/subtask_3/seg_instance9_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "suitcase_276",
+                "ontop",
+                "driveway_aipswu_0"
+            ],
+            [
+                "car_275",
+                "ontop",
+                "driveway_aipswu_0"
+            ],
+            [
+                "colored_pencil_277",
+                "inside",
+                "suitcase_276"
+            ],
+            [
+                "marker_278",
+                "ontop",
+                "suitcase_276"
+            ]
+        ],
+        "inventory": []
+    }
+}

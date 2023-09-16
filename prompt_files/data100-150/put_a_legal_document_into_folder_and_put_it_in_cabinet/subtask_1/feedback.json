@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the cabinet.\n(2) Take the folder out of the cabinet.\n(3) Put the legal document into the folder.\n(4) Put the folder (with the document inside) back into the cabinet.\n(5) Close the cabinet.",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Open the cabinet\n    bottom_cabinet_nddvba_0 = registry(env,\"bottom_cabinet_nddvba_0\")\n    open(robot, bottom_cabinet_nddvba_0)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

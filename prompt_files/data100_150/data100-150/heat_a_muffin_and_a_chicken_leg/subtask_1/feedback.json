@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the fridge\n(2) Take out a muffin from the fridge\n(3) Take out a chicken leg from the fridge\n(4) Heat the muffin\n(5) Heat the chicken leg",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Open the fridge\n    fridge = registry(env,\"fridge_xyejdx_0\")\n    open(robot, fridge)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

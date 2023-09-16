@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move to the backpack.\n(2) Open the backpack.\n(3) Search for the biscuit in the environment.\n(4) Move to the biscuit.\n(5) Grasp the biscuit.\n(6) Move back to the backpack.\n(7) Put the biscuit into the backpack.",
+    "code": "def act(robot,env,camera):\n  # Subtask 3: Search for the biscuit in the environment.\n  # Since the biscuit is not in the observed objects, it might be inside the backpack.\n  # So we need to open the backpack and check inside.\n  backpack = registry(env, \"backpack_277\")\n  open(robot, backpack)\n  donothing(env)\n",
+    "error": "the backpack_277 has been opened! Please pay attention to the states of Observed Objects!!",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

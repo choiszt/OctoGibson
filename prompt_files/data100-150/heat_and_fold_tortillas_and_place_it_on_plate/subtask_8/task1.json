@@ -1,0 +1,1803 @@
+{
+    "task": "heat_and_fold_tortillas_and_place_it_on_plate",
+    "0_detect_surroundings": {
+        "stove_rgpphy_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0512139708060155,
+                "theta_deg": -16.916500697629814,
+                "phi_deg": 74.85602318076836
+            },
+            "orientation_in_bot": [
+                0.6161493624627555,
+                0.3741894112802005,
+                -0.3701123131447411,
+                0.5859685343780552
+            ],
+            "position_in_world": [
+                -0.23843911290168762,
+                5.909679889678955,
+                0.5361143946647644
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance0_detect_surroundings.png"
+        },
+        "plate_150": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3950303420616508,
+                "theta_deg": -33.19961663552257,
+                "phi_deg": 82.23973510421443
+            },
+            "orientation_in_bot": [
+                0.2835188712955858,
+                0.6841523661187192,
+                -0.6099901744143726,
+                -0.28189461979853114
+            ],
+            "position_in_world": [
+                -0.09519776701927185,
+                5.76226806640625,
+                0.9974203705787659
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance0_detect_surroundings.png"
+        },
+        "bottom_cabinet_slgzfc_2": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2769088837394484,
+                "theta_deg": -170.78913036233854,
+                "phi_deg": 141.17146144530378
+            },
+            "orientation_in_bot": [
+                -0.3729467048802801,
+                0.6169023423100217,
+                -0.5867133433785355,
+                -0.3689304921972848
+            ],
+            "position_in_world": [
+                -2.38492751121521,
+                5.5549516677856445,
+                0.44999974966049194
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance0_detect_surroundings.png"
+        },
+        "tortilla_153": {
+            "ability": [
+                [
+                    "heatable",
+                    1
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ],
+                [
+                    "unfoldable",
+                    0
+                ],
+                [
+                    "foldable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3485926701744824,
+                "theta_deg": -32.02653370811474,
+                "phi_deg": 76.82351368567026
+            },
+            "orientation_in_bot": [
+                0.11331301095399313,
+                0.7125856266230975,
+                -0.6847985787717108,
+                0.10214104361593696
+            ],
+            "position_in_world": [
+                -0.08304788284413034,
+                5.886461523265791,
+                0.933040385552633
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance0_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "plate_150",
+                "ontop",
+                "stove_rgpphy_0"
+            ],
+            [
+                "tortilla_153",
+                "ontop",
+                "stove_rgpphy_0"
+            ],
+            [
+                "tortilla_153",
+                "under",
+                "plate_150"
+            ]
+        ],
+        "inventory": []
+    },
+    "1_detect_surroundings": {
+        "stove_rgpphy_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0512139708060155,
+                "theta_deg": -16.916500697629814,
+                "phi_deg": 74.85602318076836
+            },
+            "orientation_in_bot": [
+                0.6161493624627555,
+                0.3741894112802005,
+                -0.3701123131447411,
+                0.5859685343780552
+            ],
+            "position_in_world": [
+                -0.23843911290168762,
+                5.909679889678955,
+                0.5361143946647644
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance1_detect_surroundings.png"
+        },
+        "plate_150": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3950303420616508,
+                "theta_deg": -33.19961663552257,
+                "phi_deg": 82.23973510421443
+            },
+            "orientation_in_bot": [
+                0.2835188712955858,
+                0.6841523661187192,
+                -0.6099901744143726,
+                -0.28189461979853114
+            ],
+            "position_in_world": [
+                -0.09519776701927185,
+                5.76226806640625,
+                0.9974203705787659
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance1_detect_surroundings.png"
+        },
+        "bottom_cabinet_slgzfc_2": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2769088837394484,
+                "theta_deg": -170.78913036233854,
+                "phi_deg": 141.17146144530378
+            },
+            "orientation_in_bot": [
+                -0.3729467048802801,
+                0.6169023423100217,
+                -0.5867133433785355,
+                -0.3689304921972848
+            ],
+            "position_in_world": [
+                -2.38492751121521,
+                5.5549516677856445,
+                0.44999974966049194
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance1_detect_surroundings.png"
+        },
+        "tortilla_153": {
+            "ability": [
+                [
+                    "heatable",
+                    1
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ],
+                [
+                    "unfoldable",
+                    0
+                ],
+                [
+                    "foldable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3485926701744824,
+                "theta_deg": -32.02653370811474,
+                "phi_deg": 76.82351368567026
+            },
+            "orientation_in_bot": [
+                0.11331301095399313,
+                0.7125856266230975,
+                -0.6847985787717108,
+                0.10214104361593696
+            ],
+            "position_in_world": [
+                -0.08304788284413034,
+                5.886461523265791,
+                0.933040385552633
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance1_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "plate_150",
+                "ontop",
+                "stove_rgpphy_0"
+            ],
+            [
+                "tortilla_153",
+                "ontop",
+                "stove_rgpphy_0"
+            ],
+            [
+                "tortilla_153",
+                "under",
+                "plate_150"
+            ]
+        ],
+        "inventory": []
+    },
+    "2_detect_surroundings": {
+        "stove_rgpphy_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0512139708060155,
+                "theta_deg": -16.916500697629814,
+                "phi_deg": 74.85602318076836
+            },
+            "orientation_in_bot": [
+                0.6161493624627555,
+                0.3741894112802005,
+                -0.3701123131447411,
+                0.5859685343780552
+            ],
+            "position_in_world": [
+                -0.23843911290168762,
+                5.909679889678955,
+                0.5361143946647644
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance2_detect_surroundings.png"
+        },
+        "plate_150": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3950303420616508,
+                "theta_deg": -33.19961663552257,
+                "phi_deg": 82.23973510421443
+            },
+            "orientation_in_bot": [
+                0.2835188712955858,
+                0.6841523661187192,
+                -0.6099901744143726,
+                -0.28189461979853114
+            ],
+            "position_in_world": [
+                -0.09519776701927185,
+                5.76226806640625,
+                0.9974203705787659
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance2_detect_surroundings.png"
+        },
+        "bottom_cabinet_slgzfc_2": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2769088837394484,
+                "theta_deg": -170.78913036233854,
+                "phi_deg": 141.17146144530378
+            },
+            "orientation_in_bot": [
+                -0.3729467048802801,
+                0.6169023423100217,
+                -0.5867133433785355,
+                -0.3689304921972848
+            ],
+            "position_in_world": [
+                -2.38492751121521,
+                5.5549516677856445,
+                0.44999974966049194
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance2_detect_surroundings.png"
+        },
+        "tortilla_153": {
+            "ability": [
+                [
+                    "heatable",
+                    1
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ],
+                [
+                    "unfoldable",
+                    0
+                ],
+                [
+                    "foldable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3485926701744824,
+                "theta_deg": -32.02653370811474,
+                "phi_deg": 76.82351368567026
+            },
+            "orientation_in_bot": [
+                0.11331301095399313,
+                0.7125856266230975,
+                -0.6847985787717108,
+                0.10214104361593696
+            ],
+            "position_in_world": [
+                -0.08304788284413034,
+                5.886461523265791,
+                0.933040385552633
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance2_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "plate_150",
+                "ontop",
+                "stove_rgpphy_0"
+            ],
+            [
+                "tortilla_153",
+                "ontop",
+                "stove_rgpphy_0"
+            ],
+            [
+                "tortilla_153",
+                "under",
+                "plate_150"
+            ]
+        ],
+        "inventory": []
+    },
+    "3_detect_surroundings": {
+        "stove_rgpphy_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0512139708060155,
+                "theta_deg": -16.916500697629814,
+                "phi_deg": 74.85602318076836
+            },
+            "orientation_in_bot": [
+                0.6161493624627555,
+                0.3741894112802005,
+                -0.3701123131447411,
+                0.5859685343780552
+            ],
+            "position_in_world": [
+                -0.23843911290168762,
+                5.909679889678955,
+                0.5361143946647644
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance3_detect_surroundings.png"
+        },
+        "plate_150": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3950303420616508,
+                "theta_deg": -33.19961663552257,
+                "phi_deg": 82.23973510421443
+            },
+            "orientation_in_bot": [
+                0.2835188712955858,
+                0.6841523661187192,
+                -0.6099901744143726,
+                -0.28189461979853114
+            ],
+            "position_in_world": [
+                -0.09519776701927185,
+                5.76226806640625,
+                0.9974203705787659
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance3_detect_surroundings.png"
+        },
+        "bottom_cabinet_slgzfc_2": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2769088837394484,
+                "theta_deg": -170.78913036233854,
+                "phi_deg": 141.17146144530378
+            },
+            "orientation_in_bot": [
+                -0.3729467048802801,
+                0.6169023423100217,
+                -0.5867133433785355,
+                -0.3689304921972848
+            ],
+            "position_in_world": [
+                -2.38492751121521,
+                5.5549516677856445,
+                0.44999974966049194
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance3_detect_surroundings.png"
+        },
+        "tortilla_153": {
+            "ability": [
+                [
+                    "heatable",
+                    1
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ],
+                [
+                    "unfoldable",
+                    0
+                ],
+                [
+                    "foldable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3485926701744824,
+                "theta_deg": -32.02653370811474,
+                "phi_deg": 76.82351368567026
+            },
+            "orientation_in_bot": [
+                0.11331301095399313,
+                0.7125856266230975,
+                -0.6847985787717108,
+                0.10214104361593696
+            ],
+            "position_in_world": [
+                -0.08304788284413034,
+                5.886461523265791,
+                0.933040385552633
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance3_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "plate_150",
+                "ontop",
+                "stove_rgpphy_0"
+            ],
+            [
+                "tortilla_153",
+                "ontop",
+                "stove_rgpphy_0"
+            ],
+            [
+                "tortilla_153",
+                "under",
+                "plate_150"
+            ]
+        ],
+        "inventory": []
+    },
+    "4_detect_surroundings": {
+        "stove_rgpphy_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0512139708060155,
+                "theta_deg": -16.916500697629814,
+                "phi_deg": 74.85602318076836
+            },
+            "orientation_in_bot": [
+                0.6161493624627555,
+                0.3741894112802005,
+                -0.3701123131447411,
+                0.5859685343780552
+            ],
+            "position_in_world": [
+                -0.23843911290168762,
+                5.909679889678955,
+                0.5361143946647644
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance4_detect_surroundings.png"
+        },
+        "plate_150": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3950303420616508,
+                "theta_deg": -33.19961663552257,
+                "phi_deg": 82.23973510421443
+            },
+            "orientation_in_bot": [
+                0.2835188712955858,
+                0.6841523661187192,
+                -0.6099901744143726,
+                -0.28189461979853114
+            ],
+            "position_in_world": [
+                -0.09519776701927185,
+                5.76226806640625,
+                0.9974203705787659
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance4_detect_surroundings.png"
+        },
+        "bottom_cabinet_slgzfc_2": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2769088837394484,
+                "theta_deg": -170.78913036233854,
+                "phi_deg": 141.17146144530378
+            },
+            "orientation_in_bot": [
+                -0.3729467048802801,
+                0.6169023423100217,
+                -0.5867133433785355,
+                -0.3689304921972848
+            ],
+            "position_in_world": [
+                -2.38492751121521,
+                5.5549516677856445,
+                0.44999974966049194
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance4_detect_surroundings.png"
+        },
+        "tortilla_153": {
+            "ability": [
+                [
+                    "heatable",
+                    1
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ],
+                [
+                    "unfoldable",
+                    0
+                ],
+                [
+                    "foldable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3485926701744824,
+                "theta_deg": -32.02653370811474,
+                "phi_deg": 76.82351368567026
+            },
+            "orientation_in_bot": [
+                0.11331301095399313,
+                0.7125856266230975,
+                -0.6847985787717108,
+                0.10214104361593696
+            ],
+            "position_in_world": [
+                -0.08304788284413034,
+                5.886461523265791,
+                0.933040385552633
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance4_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "plate_150",
+                "ontop",
+                "stove_rgpphy_0"
+            ],
+            [
+                "tortilla_153",
+                "ontop",
+                "stove_rgpphy_0"
+            ],
+            [
+                "tortilla_153",
+                "under",
+                "plate_150"
+            ]
+        ],
+        "inventory": []
+    },
+    "5_detect_surroundings": {
+        "stove_rgpphy_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0512139708060155,
+                "theta_deg": -16.916500697629814,
+                "phi_deg": 74.85602318076836
+            },
+            "orientation_in_bot": [
+                0.6161493624627555,
+                0.3741894112802005,
+                -0.3701123131447411,
+                0.5859685343780552
+            ],
+            "position_in_world": [
+                -0.23843911290168762,
+                5.909679889678955,
+                0.5361143946647644
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance5_detect_surroundings.png"
+        },
+        "plate_150": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3950303420616508,
+                "theta_deg": -33.19961663552257,
+                "phi_deg": 82.23973510421443
+            },
+            "orientation_in_bot": [
+                0.2835188712955858,
+                0.6841523661187192,
+                -0.6099901744143726,
+                -0.28189461979853114
+            ],
+            "position_in_world": [
+                -0.09519776701927185,
+                5.76226806640625,
+                0.9974203705787659
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance5_detect_surroundings.png"
+        },
+        "bottom_cabinet_slgzfc_2": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2769088837394484,
+                "theta_deg": -170.78913036233854,
+                "phi_deg": 141.17146144530378
+            },
+            "orientation_in_bot": [
+                -0.3729467048802801,
+                0.6169023423100217,
+                -0.5867133433785355,
+                -0.3689304921972848
+            ],
+            "position_in_world": [
+                -2.38492751121521,
+                5.5549516677856445,
+                0.44999974966049194
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance5_detect_surroundings.png"
+        },
+        "tortilla_153": {
+            "ability": [
+                [
+                    "heatable",
+                    1
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ],
+                [
+                    "unfoldable",
+                    0
+                ],
+                [
+                    "foldable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3485926701744824,
+                "theta_deg": -32.02653370811474,
+                "phi_deg": 76.82351368567026
+            },
+            "orientation_in_bot": [
+                0.11331301095399313,
+                0.7125856266230975,
+                -0.6847985787717108,
+                0.10214104361593696
+            ],
+            "position_in_world": [
+                -0.08304788284413034,
+                5.886461523265791,
+                0.933040385552633
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance5_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "plate_150",
+                "ontop",
+                "stove_rgpphy_0"
+            ],
+            [
+                "tortilla_153",
+                "ontop",
+                "stove_rgpphy_0"
+            ],
+            [
+                "tortilla_153",
+                "under",
+                "plate_150"
+            ]
+        ],
+        "inventory": []
+    },
+    "6_detect_surroundings": {
+        "stove_rgpphy_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0512139708060155,
+                "theta_deg": -16.916500697629814,
+                "phi_deg": 74.85602318076836
+            },
+            "orientation_in_bot": [
+                0.6161493624627555,
+                0.3741894112802005,
+                -0.3701123131447411,
+                0.5859685343780552
+            ],
+            "position_in_world": [
+                -0.23843911290168762,
+                5.909679889678955,
+                0.5361143946647644
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance6_detect_surroundings.png"
+        },
+        "plate_150": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3950303420616508,
+                "theta_deg": -33.19961663552257,
+                "phi_deg": 82.23973510421443
+            },
+            "orientation_in_bot": [
+                0.2835188712955858,
+                0.6841523661187192,
+                -0.6099901744143726,
+                -0.28189461979853114
+            ],
+            "position_in_world": [
+                -0.09519776701927185,
+                5.76226806640625,
+                0.9974203705787659
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance6_detect_surroundings.png"
+        },
+        "bottom_cabinet_slgzfc_2": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2769088837394484,
+                "theta_deg": -170.78913036233854,
+                "phi_deg": 141.17146144530378
+            },
+            "orientation_in_bot": [
+                -0.3729467048802801,
+                0.6169023423100217,
+                -0.5867133433785355,
+                -0.3689304921972848
+            ],
+            "position_in_world": [
+                -2.38492751121521,
+                5.5549516677856445,
+                0.44999974966049194
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance6_detect_surroundings.png"
+        },
+        "tortilla_153": {
+            "ability": [
+                [
+                    "heatable",
+                    1
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ],
+                [
+                    "unfoldable",
+                    0
+                ],
+                [
+                    "foldable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3485926701744824,
+                "theta_deg": -32.02653370811474,
+                "phi_deg": 76.82351368567026
+            },
+            "orientation_in_bot": [
+                0.11331301095399313,
+                0.7125856266230975,
+                -0.6847985787717108,
+                0.10214104361593696
+            ],
+            "position_in_world": [
+                -0.08304788284413034,
+                5.886461523265791,
+                0.933040385552633
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance6_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "plate_150",
+                "ontop",
+                "stove_rgpphy_0"
+            ],
+            [
+                "tortilla_153",
+                "ontop",
+                "stove_rgpphy_0"
+            ],
+            [
+                "tortilla_153",
+                "under",
+                "plate_150"
+            ]
+        ],
+        "inventory": []
+    },
+    "7_detect_surroundings": {
+        "stove_rgpphy_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0512139708060155,
+                "theta_deg": -16.916500697629814,
+                "phi_deg": 74.85602318076836
+            },
+            "orientation_in_bot": [
+                0.6161493624627555,
+                0.3741894112802005,
+                -0.3701123131447411,
+                0.5859685343780552
+            ],
+            "position_in_world": [
+                -0.23843911290168762,
+                5.909679889678955,
+                0.5361143946647644
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance7_detect_surroundings.png"
+        },
+        "plate_150": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3950303420616508,
+                "theta_deg": -33.19961663552257,
+                "phi_deg": 82.23973510421443
+            },
+            "orientation_in_bot": [
+                0.2835188712955858,
+                0.6841523661187192,
+                -0.6099901744143726,
+                -0.28189461979853114
+            ],
+            "position_in_world": [
+                -0.09519776701927185,
+                5.76226806640625,
+                0.9974203705787659
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance7_detect_surroundings.png"
+        },
+        "bottom_cabinet_slgzfc_2": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2769088837394484,
+                "theta_deg": -170.78913036233854,
+                "phi_deg": 141.17146144530378
+            },
+            "orientation_in_bot": [
+                -0.3729467048802801,
+                0.6169023423100217,
+                -0.5867133433785355,
+                -0.3689304921972848
+            ],
+            "position_in_world": [
+                -2.38492751121521,
+                5.5549516677856445,
+                0.44999974966049194
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance7_detect_surroundings.png"
+        },
+        "tortilla_153": {
+            "ability": [
+                [
+                    "heatable",
+                    1
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ],
+                [
+                    "unfoldable",
+                    0
+                ],
+                [
+                    "foldable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3485926701744824,
+                "theta_deg": -32.02653370811474,
+                "phi_deg": 76.82351368567026
+            },
+            "orientation_in_bot": [
+                0.11331301095399313,
+                0.7125856266230975,
+                -0.6847985787717108,
+                0.10214104361593696
+            ],
+            "position_in_world": [
+                -0.08304788284413034,
+                5.886461523265791,
+                0.933040385552633
+            ],
+            "bot_in_world": [
+                -1.2392246723175049,
+                6.088891983032227,
+                0.2689776122570038
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance7_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "plate_150",
+                "ontop",
+                "stove_rgpphy_0"
+            ],
+            [
+                "tortilla_153",
+                "ontop",
+                "stove_rgpphy_0"
+            ],
+            [
+                "tortilla_153",
+                "under",
+                "plate_150"
+            ]
+        ],
+        "inventory": []
+    },
+    "8_BEV_surroundings": {
+        "stove_rgpphy_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0512186256512994,
+                "theta_deg": -16.917288945720838,
+                "phi_deg": 74.8546223526015
+            },
+            "orientation_in_bot": [
+                0.616137357016981,
+                0.37417742996373965,
+                -0.37012413252272197,
+                0.5859813433191903
+            ],
+            "position_in_world": [
+                -0.23843911290168762,
+                5.909679889678955,
+                0.5361143946647644
+            ],
+            "bot_in_world": [
+                -1.2392276525497437,
+                6.088879585266113,
+                0.2689621150493622
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance8_BEV_surroundings.png"
+        },
+        "plate_150": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.393536462627156,
+                "theta_deg": -33.104361121174726,
+                "phi_deg": 82.3600591538078
+            },
+            "orientation_in_bot": [
+                0.279874030822057,
+                0.6885038139555054,
+                -0.6100845110891492,
+                -0.2746450698069257
+            ],
+            "position_in_world": [
+                -0.09636542946100235,
+                5.759222030639648,
+                0.9950032234191895
+            ],
+            "bot_in_world": [
+                -1.2392276525497437,
+                6.088879585266113,
+                0.2689621150493622
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance8_BEV_surroundings.png"
+        },
+        "bottom_cabinet_slgzfc_2": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.276903205123933,
+                "theta_deg": -170.7852783666987,
+                "phi_deg": 141.17050433685046
+            },
+            "orientation_in_bot": [
+                -0.3729347477973999,
+                0.6168903127431684,
+                -0.5867261761037742,
+                -0.368942285735274
+            ],
+            "position_in_world": [
+                -2.38492751121521,
+                5.5549516677856445,
+                0.44999974966049194
+            ],
+            "bot_in_world": [
+                -1.2392276525497437,
+                6.088879585266113,
+                0.2689621150493622
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance8_BEV_surroundings.png"
+        },
+        "tortilla_153": {
+            "ability": [
+                [
+                    "heatable",
+                    1
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ],
+                [
+                    "unfoldable",
+                    0
+                ],
+                [
+                    "foldable",
+                    1
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3457193225404966,
+                "theta_deg": -32.00155373025185,
+                "phi_deg": 76.97989391386736
+            },
+            "orientation_in_bot": [
+                0.11331425641936593,
+                0.7125687579683504,
+                -0.6848160328938008,
+                0.10214032284639424
+            ],
+            "position_in_world": [
+                -0.08621364471785764,
+                5.883196415357402,
+                0.9316940448929912
+            ],
+            "bot_in_world": [
+                -1.2392276525497437,
+                6.088879585266113,
+                0.2689621150493622
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance8_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "plate_150",
+                "ontop",
+                "stove_rgpphy_0"
+            ],
+            [
+                "tortilla_153",
+                "ontop",
+                "stove_rgpphy_0"
+            ],
+            [
+                "tortilla_153",
+                "under",
+                "plate_150"
+            ]
+        ],
+        "inventory": []
+    },
+    "9_BEV_surroundings": {
+        "stove_rgpphy_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0512186256512994,
+                "theta_deg": -16.917288945720838,
+                "phi_deg": 74.8546223526015
+            },
+            "orientation_in_bot": [
+                0.616137357016981,
+                0.37417742996373965,
+                -0.37012413252272197,
+                0.5859813433191903
+            ],
+            "position_in_world": [
+                -0.23843911290168762,
+                5.909679889678955,
+                0.5361143946647644
+            ],
+            "bot_in_world": [
+                -1.2392276525497437,
+                6.088879585266113,
+                0.2689621150493622
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance9_BEV_surroundings.png"
+        },
+        "plate_150": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.393536462627156,
+                "theta_deg": -33.104361121174726,
+                "phi_deg": 82.3600591538078
+            },
+            "orientation_in_bot": [
+                0.279874030822057,
+                0.6885038139555054,
+                -0.6100845110891492,
+                -0.2746450698069257
+            ],
+            "position_in_world": [
+                -0.09636542946100235,
+                5.759222030639648,
+                0.9950032234191895
+            ],
+            "bot_in_world": [
+                -1.2392276525497437,
+                6.088879585266113,
+                0.2689621150493622
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance9_BEV_surroundings.png"
+        },
+        "bottom_cabinet_slgzfc_2": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.276903205123933,
+                "theta_deg": -170.7852783666987,
+                "phi_deg": 141.17050433685046
+            },
+            "orientation_in_bot": [
+                -0.3729347477973999,
+                0.6168903127431684,
+                -0.5867261761037742,
+                -0.368942285735274
+            ],
+            "position_in_world": [
+                -2.38492751121521,
+                5.5549516677856445,
+                0.44999974966049194
+            ],
+            "bot_in_world": [
+                -1.2392276525497437,
+                6.088879585266113,
+                0.2689621150493622
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance9_BEV_surroundings.png"
+        },
+        "tortilla_153": {
+            "ability": [
+                [
+                    "heatable",
+                    1
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ],
+                [
+                    "unfoldable",
+                    0
+                ],
+                [
+                    "foldable",
+                    1
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.3457193225404966,
+                "theta_deg": -32.00155373025185,
+                "phi_deg": 76.97989391386736
+            },
+            "orientation_in_bot": [
+                0.11331425641936593,
+                0.7125687579683504,
+                -0.6848160328938008,
+                0.10214032284639424
+            ],
+            "position_in_world": [
+                -0.08621364471785764,
+                5.883196415357402,
+                0.9316940448929912
+            ],
+            "bot_in_world": [
+                -1.2392276525497437,
+                6.088879585266113,
+                0.2689621150493622
+            ],
+            "path": "./prompt_files/data/heat_and_fold_tortillas_and_place_it_on_plate/subtask_8/seg_instance9_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "plate_150",
+                "ontop",
+                "stove_rgpphy_0"
+            ],
+            [
+                "tortilla_153",
+                "ontop",
+                "stove_rgpphy_0"
+            ],
+            [
+                "tortilla_153",
+                "under",
+                "plate_150"
+            ]
+        ],
+        "inventory": []
+    }
+}

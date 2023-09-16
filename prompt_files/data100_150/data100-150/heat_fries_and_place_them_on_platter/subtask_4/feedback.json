@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the fridge\n(2) Take the fries out of the fridge\n(3) Open the microwave\n(4) Put the fries inside the microwave\n(5) Heat the fries in the microwave\n(6) Open the top cabinet\n(7) Take the platter out of the top cabinet\n(8) Place the heated fries on the platter",
+    "code": "def act(robot,env,camera):\n    # Subtask 4: Put the fries inside the microwave\n    microwave = registry(env, \"microwave_bfbeeb_0\")\n    fries = registry(env, \"french_fries_88\")\n    put_inside(robot, fries, microwave)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

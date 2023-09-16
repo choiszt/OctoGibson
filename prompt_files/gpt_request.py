@@ -45,3 +45,5 @@ def gpt_request(content=None):
         print("Failed", response.content)
     
     return repsonse_content
+
+gpt_request("hi")
