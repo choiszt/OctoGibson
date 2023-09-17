@@ -44,7 +44,7 @@ def sim_process(args):
     with open('/shared/liushuai/OmniGibson/EVLM_Task/all.json') as f: #TODO change the path
         data = json.load(f)
     EVLM_name=sorted(list(data))[idx]
-    if "train" in data[EVLM_name]['split']:
+    if "val" in data[EVLM_name]['split']:
         task_name=data[EVLM_name]['task_name']
         gpt_name=data[EVLM_name]['detailed_name']
         # scene=data[EVLM_name]['env']
