@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Open the fridge\n(2) Take the ham hocks out of the fridge\n(3) Move to the oven\n(4) Take the stockpot from the oven\n(5) Put the ham hocks into the stockpot\n(6) Cook the ham hocks in the stockpot",
-    "code": "def act(robot,env,camera):\n    # Subtask 5: Put the ham hocks into the stockpot\n    ham_hocks = registry(env,\"ham_hock_82\")\n    stockpot = registry(env,\"stockpot_81\")\n    put_inside(robot, ham_hocks, stockpot)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

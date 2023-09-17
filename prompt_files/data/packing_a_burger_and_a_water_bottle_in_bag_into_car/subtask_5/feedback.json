@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Register the hamburger.\n(2) Put the hamburger into the suitcase.\n(3) Register the water bottle.\n(4) Grasp the water bottle.\n(5) Put the water bottle into the suitcase.\n(6) Register the suitcase.\n(7) Grasp the suitcase.\n(8) Put the suitcase into the car.",
-    "code": "def act(robot,env,camera):\n    # Subtask 7: Grasp the suitcase\n    EasyGrasp(robot, suitcase_286)\n    donothing(env)\n",
-    "error": "name 'suitcase_286' is not defined",
-    "critic": "fail",
-    "reset": true,
-    "main_succeed": false
-}

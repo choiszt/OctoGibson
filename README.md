@@ -1,8 +1,8 @@
 ![splash](./docs/assets/splash.png)
 
-# <h1><img height="40" src="./docs/assets/OmniGibson_logo.png" style="float:left;padding-right:10px"> OmniGibson</h1>
+# <h1><img height="40" src="./docs/assets/OmniGibson_logo.png" style="float:left;padding-right:10px">RobOtter Wetland</h1>
 
-### 
+###
 
 -------
 
@@ -13,16 +13,21 @@
 
 -------
 
-**`OmniGibson`** is a platform for accelerating Embodied AI research built upon NVIDIA's [Omniverse](https://www.nvidia.com/en-us/omniverse/) platform, featuring:
+**`Robotter Wetland`** is a platform for accelerating Embodied AI research built upon NVIDIA's [Omniverse](https://www.nvidia.com/en-us/omniverse/) platform, featuring:
 
-* 📸 Photorealistic Visuals and 📐 Physical Realism
-* 🌊 Fluid and 👕 Soft Body Support
-* 🏔️ Large-Scale, High-Quality Scenes and 🎾 Objects
-* 🌡️ Dynamic Kinematic and Semantic Object States
-* 🤖 Mobile Manipulator Robots with Modular ⚙️ Controllers
-* 🌎 OpenAI Gym Interface
+Check out [**`OmniGibson`**'s documentation](https://stanfordvl.github.io/OmniGibson/getting_started/installation.html) to install OmniGibson
 
-Check out [**`OmniGibson`**'s documentation](https://stanfordvl.github.io/OmniGibson/getting_started/installation.html) to get started!
+```
+pip install pyquaternion
+```
+
+
+```
+conda create --name gpt4 python=3.9
+pip install -r requirements.txt
+pip install urllib3==1.25.11
+
+```
 
 ### Citation
 If you use **`OmniGibson`** or its assets and models, please cite:

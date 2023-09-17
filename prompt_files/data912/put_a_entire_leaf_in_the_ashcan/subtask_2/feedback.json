@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Grasp the leaf.\n(2) Move to the trash can.\n(3) Put the leaf in the trash can.",
-    "code": "def act(robot,env,camera):\n    # Subtask 2: Move to the trash can.\n    trash_can_284 = registry(env,\"trash_can_284\")\n    MoveBot(env, robot, trash_can_284, camera)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

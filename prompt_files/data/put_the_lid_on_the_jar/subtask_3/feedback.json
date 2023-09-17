@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Open the top cabinet\n(2) Grasp the lid\n(3) Open the top cabinet\n(4) Grasp the jar\n(5) Put the lid on the jar",
-    "code": "def act(robot,env,camera):\n    # Subtask 3: Open the top cabinet\n    top_cabinet = registry(env, \"top_cabinet_dmwxyl_1\")\n    open(robot, top_cabinet)\n    donothing(env)\n",
-    "error": "the top_cabinet_dmwxyl_1 has been opened! Please pay attention to the states of Observed Objects!!",
-    "critic": "fail",
-    "reset": true,
-    "main_succeed": false
-}

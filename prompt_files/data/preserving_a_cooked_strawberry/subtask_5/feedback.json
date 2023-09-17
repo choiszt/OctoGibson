@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move the robot to the strawberry.\n(2) Grasp the strawberry.\n(3) Cook the strawberry.\n(4) Move the robot to the jar.\n(5) Put the cooked strawberry in the jar.",
-    "code": "def act(robot,env,camera):\n    # Subtask 5: Put the cooked strawberry in the jar\n    strawberry_201 = registry(env,\"strawberry_201\")\n    jar_212 = registry(env,\"jar_212\")\n    put_inside(robot, strawberry_201, jar_212)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": true
-}

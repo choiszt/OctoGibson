@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move the robot to the fridge.\n(2) Open the fridge.\n(3) Grasp the peach.\n(4) Move the robot to the bottom cabinet.\n(5) Open the bottom cabinet.\n(6) Grasp the jar.\n(7) Put the peach inside the jar.\n(8) Close the jar.",
-    "code": "def act(robot,env,camera):\n    # Subtask 7: Put the peach inside the jar\n    peach = registry(env, \"peach_173\")\n    jar = registry(env, \"jar_171\")\n    put_inside(robot, peach, jar)\n    donothing(env)\n",
-    "error": "list.remove(x): x not in list",
-    "critic": "fail",
-    "reset": true,
-    "main_succeed": false
-}

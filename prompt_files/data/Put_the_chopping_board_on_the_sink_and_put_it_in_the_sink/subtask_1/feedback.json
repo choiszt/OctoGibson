@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move the robot to the breakfast table where the chopping board is located.\n(2) Grasp the chopping board.\n(3) Move the robot to the sink.\n(4) Put the chopping board in the sink.",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Move the robot to the breakfast table where the chopping board is located.\n    breakfast_table_idnnmz_0 = registry(env,\"breakfast_table_idnnmz_0\")\n    MoveBot(env, robot, breakfast_table_idnnmz_0, camera)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}
