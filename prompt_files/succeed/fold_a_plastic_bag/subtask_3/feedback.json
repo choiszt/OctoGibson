@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the clothes dryer.\n(2) Grasp the plastic bag from the top of the clothes dryer.\n(3) Fold the plastic bag.",
+    "code": "def act(robot,env,camera):\n    # Subtask 2: Grasp the plastic bag from the top of the clothes dryer\n    plastic_bag = registry(env, \"plastic_bag_188\")\n    EasyGrasp(robot, plastic_bag)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": true
+}

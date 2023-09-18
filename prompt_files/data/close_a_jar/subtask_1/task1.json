@@ -1,0 +1,2073 @@
+{
+    "task": "close_a_jar",
+    "0_detect_surroundings": {
+        "cutting_board_174": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.929602012763491,
+                "theta_deg": 175.330108630614,
+                "phi_deg": 52.607785510203975
+            },
+            "orientation_in_bot": [
+                0.011459457858530956,
+                0.019426025421848486,
+                0.46586296039155056,
+                0.8845693938279342
+            ],
+            "position_in_world": [
+                -3.0426714420318604,
+                6.199386119842529,
+                1.6795998811721802
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "jar_172": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.3518719898386284,
+                "theta_deg": 160.97236803639152,
+                "phi_deg": 45.10060491024855
+            },
+            "orientation_in_bot": [
+                -0.035589187564689866,
+                0.15084806211666082,
+                0.051407838771455626,
+                0.9865776735751632
+            ],
+            "position_in_world": [
+                -2.4572246074676514,
+                6.162840843200684,
+                2.2693288326263428
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "top_cabinet_dmwxyl_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1812880186795374,
+                "theta_deg": 161.40635982602356,
+                "phi_deg": 49.54308119625795
+            },
+            "orientation_in_bot": [
+                0.015422493379084084,
+                0.015837785572603763,
+                0.6992133194663378,
+                0.7145712316676297
+            ],
+            "position_in_world": [
+                -2.460230827331543,
+                6.199113845825195,
+                1.9657217264175415
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.908030735411594,
+                "theta_deg": 139.53415099085353,
+                "phi_deg": 72.236160132515
+            },
+            "orientation_in_bot": [
+                0.015422491492453656,
+                0.015837780762485085,
+                0.6992133842768491,
+                0.7145711683973823
+            ],
+            "position_in_world": [
+                -1.4296627044677734,
+                5.9822587966918945,
+                0.7982249855995178
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "countertop_tpuwys_1": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.8715153599178826,
+                "theta_deg": 174.40557193477315,
+                "phi_deg": 52.27212503525039
+            },
+            "orientation_in_bot": [
+                0.015422494271615217,
+                0.015837783902496447,
+                0.699213381550163,
+                0.714571170935888
+            ],
+            "position_in_world": [
+                -3.0094560546849998,
+                6.139686523435,
+                1.660315734865
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "cutting_board_174",
+                "ontop",
+                "countertop_tpuwys_1"
+            ],
+            [
+                "jar_172",
+                "inside",
+                "top_cabinet_dmwxyl_0"
+            ],
+            [
+                "top_cabinet_dmwxyl_0",
+                "under",
+                "jar_172"
+            ],
+            [
+                "countertop_tpuwys_1",
+                "under",
+                "cutting_board_174"
+            ]
+        ],
+        "inventory": []
+    },
+    "1_detect_surroundings": {
+        "cutting_board_174": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.929602012763491,
+                "theta_deg": 175.330108630614,
+                "phi_deg": 52.607785510203975
+            },
+            "orientation_in_bot": [
+                0.011459457858530956,
+                0.019426025421848486,
+                0.46586296039155056,
+                0.8845693938279342
+            ],
+            "position_in_world": [
+                -3.0426714420318604,
+                6.199386119842529,
+                1.6795998811721802
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "jar_172": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.3518719898386284,
+                "theta_deg": 160.97236803639152,
+                "phi_deg": 45.10060491024855
+            },
+            "orientation_in_bot": [
+                -0.035589187564689866,
+                0.15084806211666082,
+                0.051407838771455626,
+                0.9865776735751632
+            ],
+            "position_in_world": [
+                -2.4572246074676514,
+                6.162840843200684,
+                2.2693288326263428
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "top_cabinet_dmwxyl_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1812880186795374,
+                "theta_deg": 161.40635982602356,
+                "phi_deg": 49.54308119625795
+            },
+            "orientation_in_bot": [
+                0.015422493379084084,
+                0.015837785572603763,
+                0.6992133194663378,
+                0.7145712316676297
+            ],
+            "position_in_world": [
+                -2.460230827331543,
+                6.199113845825195,
+                1.9657217264175415
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.908030735411594,
+                "theta_deg": 139.53415099085353,
+                "phi_deg": 72.236160132515
+            },
+            "orientation_in_bot": [
+                0.015422491492453656,
+                0.015837780762485085,
+                0.6992133842768491,
+                0.7145711683973823
+            ],
+            "position_in_world": [
+                -1.4296627044677734,
+                5.9822587966918945,
+                0.7982249855995178
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "countertop_tpuwys_1": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.8715153599178826,
+                "theta_deg": 174.40557193477315,
+                "phi_deg": 52.27212503525039
+            },
+            "orientation_in_bot": [
+                0.015422494271615217,
+                0.015837783902496447,
+                0.699213381550163,
+                0.714571170935888
+            ],
+            "position_in_world": [
+                -3.0094560546849998,
+                6.139686523435,
+                1.660315734865
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "cutting_board_174",
+                "ontop",
+                "countertop_tpuwys_1"
+            ],
+            [
+                "jar_172",
+                "inside",
+                "top_cabinet_dmwxyl_0"
+            ],
+            [
+                "top_cabinet_dmwxyl_0",
+                "under",
+                "jar_172"
+            ],
+            [
+                "countertop_tpuwys_1",
+                "under",
+                "cutting_board_174"
+            ]
+        ],
+        "inventory": []
+    },
+    "2_detect_surroundings": {
+        "cutting_board_174": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.929602012763491,
+                "theta_deg": 175.330108630614,
+                "phi_deg": 52.607785510203975
+            },
+            "orientation_in_bot": [
+                0.011459457858530956,
+                0.019426025421848486,
+                0.46586296039155056,
+                0.8845693938279342
+            ],
+            "position_in_world": [
+                -3.0426714420318604,
+                6.199386119842529,
+                1.6795998811721802
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "jar_172": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.3518719898386284,
+                "theta_deg": 160.97236803639152,
+                "phi_deg": 45.10060491024855
+            },
+            "orientation_in_bot": [
+                -0.035589187564689866,
+                0.15084806211666082,
+                0.051407838771455626,
+                0.9865776735751632
+            ],
+            "position_in_world": [
+                -2.4572246074676514,
+                6.162840843200684,
+                2.2693288326263428
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "top_cabinet_dmwxyl_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1812880186795374,
+                "theta_deg": 161.40635982602356,
+                "phi_deg": 49.54308119625795
+            },
+            "orientation_in_bot": [
+                0.015422493379084084,
+                0.015837785572603763,
+                0.6992133194663378,
+                0.7145712316676297
+            ],
+            "position_in_world": [
+                -2.460230827331543,
+                6.199113845825195,
+                1.9657217264175415
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.908030735411594,
+                "theta_deg": 139.53415099085353,
+                "phi_deg": 72.236160132515
+            },
+            "orientation_in_bot": [
+                0.015422491492453656,
+                0.015837780762485085,
+                0.6992133842768491,
+                0.7145711683973823
+            ],
+            "position_in_world": [
+                -1.4296627044677734,
+                5.9822587966918945,
+                0.7982249855995178
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "countertop_tpuwys_1": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.8715153599178826,
+                "theta_deg": 174.40557193477315,
+                "phi_deg": 52.27212503525039
+            },
+            "orientation_in_bot": [
+                0.015422494271615217,
+                0.015837783902496447,
+                0.699213381550163,
+                0.714571170935888
+            ],
+            "position_in_world": [
+                -3.0094560546849998,
+                6.139686523435,
+                1.660315734865
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "cutting_board_174",
+                "ontop",
+                "countertop_tpuwys_1"
+            ],
+            [
+                "jar_172",
+                "inside",
+                "top_cabinet_dmwxyl_0"
+            ],
+            [
+                "top_cabinet_dmwxyl_0",
+                "under",
+                "jar_172"
+            ],
+            [
+                "countertop_tpuwys_1",
+                "under",
+                "cutting_board_174"
+            ]
+        ],
+        "inventory": []
+    },
+    "3_detect_surroundings": {
+        "cutting_board_174": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.929602012763491,
+                "theta_deg": 175.330108630614,
+                "phi_deg": 52.607785510203975
+            },
+            "orientation_in_bot": [
+                0.011459457858530956,
+                0.019426025421848486,
+                0.46586296039155056,
+                0.8845693938279342
+            ],
+            "position_in_world": [
+                -3.0426714420318604,
+                6.199386119842529,
+                1.6795998811721802
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "jar_172": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.3518719898386284,
+                "theta_deg": 160.97236803639152,
+                "phi_deg": 45.10060491024855
+            },
+            "orientation_in_bot": [
+                -0.035589187564689866,
+                0.15084806211666082,
+                0.051407838771455626,
+                0.9865776735751632
+            ],
+            "position_in_world": [
+                -2.4572246074676514,
+                6.162840843200684,
+                2.2693288326263428
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "top_cabinet_dmwxyl_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1812880186795374,
+                "theta_deg": 161.40635982602356,
+                "phi_deg": 49.54308119625795
+            },
+            "orientation_in_bot": [
+                0.015422493379084084,
+                0.015837785572603763,
+                0.6992133194663378,
+                0.7145712316676297
+            ],
+            "position_in_world": [
+                -2.460230827331543,
+                6.199113845825195,
+                1.9657217264175415
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.908030735411594,
+                "theta_deg": 139.53415099085353,
+                "phi_deg": 72.236160132515
+            },
+            "orientation_in_bot": [
+                0.015422491492453656,
+                0.015837780762485085,
+                0.6992133842768491,
+                0.7145711683973823
+            ],
+            "position_in_world": [
+                -1.4296627044677734,
+                5.9822587966918945,
+                0.7982249855995178
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "countertop_tpuwys_1": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.8715153599178826,
+                "theta_deg": 174.40557193477315,
+                "phi_deg": 52.27212503525039
+            },
+            "orientation_in_bot": [
+                0.015422494271615217,
+                0.015837783902496447,
+                0.699213381550163,
+                0.714571170935888
+            ],
+            "position_in_world": [
+                -3.0094560546849998,
+                6.139686523435,
+                1.660315734865
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "cutting_board_174",
+                "ontop",
+                "countertop_tpuwys_1"
+            ],
+            [
+                "jar_172",
+                "inside",
+                "top_cabinet_dmwxyl_0"
+            ],
+            [
+                "top_cabinet_dmwxyl_0",
+                "under",
+                "jar_172"
+            ],
+            [
+                "countertop_tpuwys_1",
+                "under",
+                "cutting_board_174"
+            ]
+        ],
+        "inventory": []
+    },
+    "4_detect_surroundings": {
+        "cutting_board_174": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.929602012763491,
+                "theta_deg": 175.330108630614,
+                "phi_deg": 52.607785510203975
+            },
+            "orientation_in_bot": [
+                0.011459457858530956,
+                0.019426025421848486,
+                0.46586296039155056,
+                0.8845693938279342
+            ],
+            "position_in_world": [
+                -3.0426714420318604,
+                6.199386119842529,
+                1.6795998811721802
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "jar_172": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.3518719898386284,
+                "theta_deg": 160.97236803639152,
+                "phi_deg": 45.10060491024855
+            },
+            "orientation_in_bot": [
+                -0.035589187564689866,
+                0.15084806211666082,
+                0.051407838771455626,
+                0.9865776735751632
+            ],
+            "position_in_world": [
+                -2.4572246074676514,
+                6.162840843200684,
+                2.2693288326263428
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "top_cabinet_dmwxyl_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1812880186795374,
+                "theta_deg": 161.40635982602356,
+                "phi_deg": 49.54308119625795
+            },
+            "orientation_in_bot": [
+                0.015422493379084084,
+                0.015837785572603763,
+                0.6992133194663378,
+                0.7145712316676297
+            ],
+            "position_in_world": [
+                -2.460230827331543,
+                6.199113845825195,
+                1.9657217264175415
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.908030735411594,
+                "theta_deg": 139.53415099085353,
+                "phi_deg": 72.236160132515
+            },
+            "orientation_in_bot": [
+                0.015422491492453656,
+                0.015837780762485085,
+                0.6992133842768491,
+                0.7145711683973823
+            ],
+            "position_in_world": [
+                -1.4296627044677734,
+                5.9822587966918945,
+                0.7982249855995178
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "countertop_tpuwys_1": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.8715153599178826,
+                "theta_deg": 174.40557193477315,
+                "phi_deg": 52.27212503525039
+            },
+            "orientation_in_bot": [
+                0.015422494271615217,
+                0.015837783902496447,
+                0.699213381550163,
+                0.714571170935888
+            ],
+            "position_in_world": [
+                -3.0094560546849998,
+                6.139686523435,
+                1.660315734865
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "cutting_board_174",
+                "ontop",
+                "countertop_tpuwys_1"
+            ],
+            [
+                "jar_172",
+                "inside",
+                "top_cabinet_dmwxyl_0"
+            ],
+            [
+                "top_cabinet_dmwxyl_0",
+                "under",
+                "jar_172"
+            ],
+            [
+                "countertop_tpuwys_1",
+                "under",
+                "cutting_board_174"
+            ]
+        ],
+        "inventory": []
+    },
+    "5_detect_surroundings": {
+        "cutting_board_174": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.929602012763491,
+                "theta_deg": 175.330108630614,
+                "phi_deg": 52.607785510203975
+            },
+            "orientation_in_bot": [
+                0.011459457858530956,
+                0.019426025421848486,
+                0.46586296039155056,
+                0.8845693938279342
+            ],
+            "position_in_world": [
+                -3.0426714420318604,
+                6.199386119842529,
+                1.6795998811721802
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "jar_172": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.3518719898386284,
+                "theta_deg": 160.97236803639152,
+                "phi_deg": 45.10060491024855
+            },
+            "orientation_in_bot": [
+                -0.035589187564689866,
+                0.15084806211666082,
+                0.051407838771455626,
+                0.9865776735751632
+            ],
+            "position_in_world": [
+                -2.4572246074676514,
+                6.162840843200684,
+                2.2693288326263428
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "top_cabinet_dmwxyl_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1812880186795374,
+                "theta_deg": 161.40635982602356,
+                "phi_deg": 49.54308119625795
+            },
+            "orientation_in_bot": [
+                0.015422493379084084,
+                0.015837785572603763,
+                0.6992133194663378,
+                0.7145712316676297
+            ],
+            "position_in_world": [
+                -2.460230827331543,
+                6.199113845825195,
+                1.9657217264175415
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.908030735411594,
+                "theta_deg": 139.53415099085353,
+                "phi_deg": 72.236160132515
+            },
+            "orientation_in_bot": [
+                0.015422491492453656,
+                0.015837780762485085,
+                0.6992133842768491,
+                0.7145711683973823
+            ],
+            "position_in_world": [
+                -1.4296627044677734,
+                5.9822587966918945,
+                0.7982249855995178
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "countertop_tpuwys_1": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.8715153599178826,
+                "theta_deg": 174.40557193477315,
+                "phi_deg": 52.27212503525039
+            },
+            "orientation_in_bot": [
+                0.015422494271615217,
+                0.015837783902496447,
+                0.699213381550163,
+                0.714571170935888
+            ],
+            "position_in_world": [
+                -3.0094560546849998,
+                6.139686523435,
+                1.660315734865
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "cutting_board_174",
+                "ontop",
+                "countertop_tpuwys_1"
+            ],
+            [
+                "jar_172",
+                "inside",
+                "top_cabinet_dmwxyl_0"
+            ],
+            [
+                "top_cabinet_dmwxyl_0",
+                "under",
+                "jar_172"
+            ],
+            [
+                "countertop_tpuwys_1",
+                "under",
+                "cutting_board_174"
+            ]
+        ],
+        "inventory": []
+    },
+    "6_detect_surroundings": {
+        "cutting_board_174": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.929602012763491,
+                "theta_deg": 175.330108630614,
+                "phi_deg": 52.607785510203975
+            },
+            "orientation_in_bot": [
+                0.011459457858530956,
+                0.019426025421848486,
+                0.46586296039155056,
+                0.8845693938279342
+            ],
+            "position_in_world": [
+                -3.0426714420318604,
+                6.199386119842529,
+                1.6795998811721802
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "jar_172": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.3518719898386284,
+                "theta_deg": 160.97236803639152,
+                "phi_deg": 45.10060491024855
+            },
+            "orientation_in_bot": [
+                -0.035589187564689866,
+                0.15084806211666082,
+                0.051407838771455626,
+                0.9865776735751632
+            ],
+            "position_in_world": [
+                -2.4572246074676514,
+                6.162840843200684,
+                2.2693288326263428
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "top_cabinet_dmwxyl_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1812880186795374,
+                "theta_deg": 161.40635982602356,
+                "phi_deg": 49.54308119625795
+            },
+            "orientation_in_bot": [
+                0.015422493379084084,
+                0.015837785572603763,
+                0.6992133194663378,
+                0.7145712316676297
+            ],
+            "position_in_world": [
+                -2.460230827331543,
+                6.199113845825195,
+                1.9657217264175415
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.908030735411594,
+                "theta_deg": 139.53415099085353,
+                "phi_deg": 72.236160132515
+            },
+            "orientation_in_bot": [
+                0.015422491492453656,
+                0.015837780762485085,
+                0.6992133842768491,
+                0.7145711683973823
+            ],
+            "position_in_world": [
+                -1.4296627044677734,
+                5.9822587966918945,
+                0.7982249855995178
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "countertop_tpuwys_1": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.8715153599178826,
+                "theta_deg": 174.40557193477315,
+                "phi_deg": 52.27212503525039
+            },
+            "orientation_in_bot": [
+                0.015422494271615217,
+                0.015837783902496447,
+                0.699213381550163,
+                0.714571170935888
+            ],
+            "position_in_world": [
+                -3.0094560546849998,
+                6.139686523435,
+                1.660315734865
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "cutting_board_174",
+                "ontop",
+                "countertop_tpuwys_1"
+            ],
+            [
+                "jar_172",
+                "inside",
+                "top_cabinet_dmwxyl_0"
+            ],
+            [
+                "top_cabinet_dmwxyl_0",
+                "under",
+                "jar_172"
+            ],
+            [
+                "countertop_tpuwys_1",
+                "under",
+                "cutting_board_174"
+            ]
+        ],
+        "inventory": []
+    },
+    "7_detect_surroundings": {
+        "cutting_board_174": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.929602012763491,
+                "theta_deg": 175.330108630614,
+                "phi_deg": 52.607785510203975
+            },
+            "orientation_in_bot": [
+                0.011459457858530956,
+                0.019426025421848486,
+                0.46586296039155056,
+                0.8845693938279342
+            ],
+            "position_in_world": [
+                -3.0426714420318604,
+                6.199386119842529,
+                1.6795998811721802
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "jar_172": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.3518719898386284,
+                "theta_deg": 160.97236803639152,
+                "phi_deg": 45.10060491024855
+            },
+            "orientation_in_bot": [
+                -0.035589187564689866,
+                0.15084806211666082,
+                0.051407838771455626,
+                0.9865776735751632
+            ],
+            "position_in_world": [
+                -2.4572246074676514,
+                6.162840843200684,
+                2.2693288326263428
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "top_cabinet_dmwxyl_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1812880186795374,
+                "theta_deg": 161.40635982602356,
+                "phi_deg": 49.54308119625795
+            },
+            "orientation_in_bot": [
+                0.015422493379084084,
+                0.015837785572603763,
+                0.6992133194663378,
+                0.7145712316676297
+            ],
+            "position_in_world": [
+                -2.460230827331543,
+                6.199113845825195,
+                1.9657217264175415
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.908030735411594,
+                "theta_deg": 139.53415099085353,
+                "phi_deg": 72.236160132515
+            },
+            "orientation_in_bot": [
+                0.015422491492453656,
+                0.015837780762485085,
+                0.6992133842768491,
+                0.7145711683973823
+            ],
+            "position_in_world": [
+                -1.4296627044677734,
+                5.9822587966918945,
+                0.7982249855995178
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "countertop_tpuwys_1": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.8715153599178826,
+                "theta_deg": 174.40557193477315,
+                "phi_deg": 52.27212503525039
+            },
+            "orientation_in_bot": [
+                0.015422494271615217,
+                0.015837783902496447,
+                0.699213381550163,
+                0.714571170935888
+            ],
+            "position_in_world": [
+                -3.0094560546849998,
+                6.139686523435,
+                1.660315734865
+            ],
+            "bot_in_world": [
+                -3.1798863410949707,
+                3.799635171890259,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "cutting_board_174",
+                "ontop",
+                "countertop_tpuwys_1"
+            ],
+            [
+                "jar_172",
+                "inside",
+                "top_cabinet_dmwxyl_0"
+            ],
+            [
+                "top_cabinet_dmwxyl_0",
+                "under",
+                "jar_172"
+            ],
+            [
+                "countertop_tpuwys_1",
+                "under",
+                "cutting_board_174"
+            ]
+        ],
+        "inventory": []
+    },
+    "8_BEV_surroundings": {
+        "cutting_board_174": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.9296029826022587,
+                "theta_deg": 175.3299375217386,
+                "phi_deg": 52.60774330174918
+            },
+            "orientation_in_bot": [
+                0.011459624677564366,
+                0.01942647479793051,
+                0.4658615704013872,
+                0.8845701138419316
+            ],
+            "position_in_world": [
+                -3.0426714420318604,
+                6.199386119842529,
+                1.6795998811721802
+            ],
+            "bot_in_world": [
+                -3.1798856258392334,
+                3.7996339797973633,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "jar_172": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.3518731199426366,
+                "theta_deg": 160.9721842475267,
+                "phi_deg": 45.10057193984745
+            },
+            "orientation_in_bot": [
+                -0.03559028284046318,
+                0.15084712852740786,
+                0.05140469320909534,
+                0.9865779407114526
+            ],
+            "position_in_world": [
+                -2.4572243690490723,
+                6.162841320037842,
+                2.2693288326263428
+            ],
+            "bot_in_world": [
+                -3.1798856258392334,
+                3.7996339797973633,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "top_cabinet_dmwxyl_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.181288797087221,
+                "theta_deg": 161.40618174931424,
+                "phi_deg": 49.54304159276662
+            },
+            "orientation_in_bot": [
+                0.015422782495810281,
+                0.015838170206841178,
+                0.6992121901479088,
+                0.7145723219472964
+            ],
+            "position_in_world": [
+                -2.460230827331543,
+                6.199113845825195,
+                1.9657217264175415
+            ],
+            "bot_in_world": [
+                -3.1798856258392334,
+                3.7996339797973633,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.9080312058242104,
+                "theta_deg": 139.53398499093802,
+                "phi_deg": 72.23612687743561
+            },
+            "orientation_in_bot": [
+                0.015422780609209336,
+                0.01583816539670155,
+                0.6992122549585191,
+                0.7145722586771541
+            ],
+            "position_in_world": [
+                -1.4296627044677734,
+                5.9822587966918945,
+                0.7982249855995178
+            ],
+            "bot_in_world": [
+                -3.1798856258392334,
+                3.7996339797973633,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "countertop_tpuwys_1": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.8715163161828454,
+                "theta_deg": 174.40540094129884,
+                "phi_deg": 52.272083293299424
+            },
+            "orientation_in_bot": [
+                0.015422783388374333,
+                0.015838168536709475,
+                0.6992122522318275,
+                0.7145722612156542
+            ],
+            "position_in_world": [
+                -3.0094560546849998,
+                6.139686523435,
+                1.660315734865
+            ],
+            "bot_in_world": [
+                -3.1798856258392334,
+                3.7996339797973633,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "cutting_board_174",
+                "ontop",
+                "countertop_tpuwys_1"
+            ],
+            [
+                "jar_172",
+                "inside",
+                "top_cabinet_dmwxyl_0"
+            ],
+            [
+                "top_cabinet_dmwxyl_0",
+                "under",
+                "jar_172"
+            ],
+            [
+                "countertop_tpuwys_1",
+                "under",
+                "cutting_board_174"
+            ]
+        ],
+        "inventory": []
+    },
+    "9_BEV_surroundings": {
+        "cutting_board_174": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.9296029826022587,
+                "theta_deg": 175.3299375217386,
+                "phi_deg": 52.60774330174918
+            },
+            "orientation_in_bot": [
+                0.011459624677564366,
+                0.01942647479793051,
+                0.4658615704013872,
+                0.8845701138419316
+            ],
+            "position_in_world": [
+                -3.0426714420318604,
+                6.199386119842529,
+                1.6795998811721802
+            ],
+            "bot_in_world": [
+                -3.1798856258392334,
+                3.7996339797973633,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "jar_172": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.3518731199426366,
+                "theta_deg": 160.9721842475267,
+                "phi_deg": 45.10057193984745
+            },
+            "orientation_in_bot": [
+                -0.03559028284046318,
+                0.15084712852740786,
+                0.05140469320909534,
+                0.9865779407114526
+            ],
+            "position_in_world": [
+                -2.4572243690490723,
+                6.162841320037842,
+                2.2693288326263428
+            ],
+            "bot_in_world": [
+                -3.1798856258392334,
+                3.7996339797973633,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "top_cabinet_dmwxyl_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.181288797087221,
+                "theta_deg": 161.40618174931424,
+                "phi_deg": 49.54304159276662
+            },
+            "orientation_in_bot": [
+                0.015422782495810281,
+                0.015838170206841178,
+                0.6992121901479088,
+                0.7145723219472964
+            ],
+            "position_in_world": [
+                -2.460230827331543,
+                6.199113845825195,
+                1.9657217264175415
+            ],
+            "bot_in_world": [
+                -3.1798856258392334,
+                3.7996339797973633,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.9080312058242104,
+                "theta_deg": 139.53398499093802,
+                "phi_deg": 72.23612687743561
+            },
+            "orientation_in_bot": [
+                0.015422780609209336,
+                0.01583816539670155,
+                0.6992122549585191,
+                0.7145722586771541
+            ],
+            "position_in_world": [
+                -1.4296627044677734,
+                5.9822587966918945,
+                0.7982249855995178
+            ],
+            "bot_in_world": [
+                -3.1798856258392334,
+                3.7996339797973633,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "countertop_tpuwys_1": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.8715163161828454,
+                "theta_deg": 174.40540094129884,
+                "phi_deg": 52.272083293299424
+            },
+            "orientation_in_bot": [
+                0.015422783388374333,
+                0.015838168536709475,
+                0.6992122522318275,
+                0.7145722612156542
+            ],
+            "position_in_world": [
+                -3.0094560546849998,
+                6.139686523435,
+                1.660315734865
+            ],
+            "bot_in_world": [
+                -3.1798856258392334,
+                3.7996339797973633,
+                0.0048056840896606445
+            ],
+            "path": "./prompt_files/data/close_a_jar/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "cutting_board_174",
+                "ontop",
+                "countertop_tpuwys_1"
+            ],
+            [
+                "jar_172",
+                "inside",
+                "top_cabinet_dmwxyl_0"
+            ],
+            [
+                "top_cabinet_dmwxyl_0",
+                "under",
+                "jar_172"
+            ],
+            [
+                "countertop_tpuwys_1",
+                "under",
+                "cutting_board_174"
+            ]
+        ],
+        "inventory": []
+    }
+}

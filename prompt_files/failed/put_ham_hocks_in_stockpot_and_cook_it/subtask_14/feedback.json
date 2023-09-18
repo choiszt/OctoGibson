@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Grasp the ham hocks\n(2) Move to the oven\n(3) Grasp the stockpot\n(4) Put the ham hocks in the stockpot\n(5) Put the stockpot in the oven\n(6) Turn on the oven\n(7) Wait for the ham hocks to be cooked\n(8) Put the ham hocks inside the stockpot",
+    "code": "def act(robot,env,camera):\n    # Subtask 8: Put the ham hocks inside the stockpot\n    ham_hock_82 = registry(env,\"ham_hock_82\")\n    stockpot_81 = registry(env,\"stockpot_81\")\n    put_inside(robot, ham_hock_82, stockpot_81)\n    donothing(env)\n",
+    "error": "list.remove(x): x not in list",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Grasp the broken glass.\n(2) Move the robot to a position where the broken glass will naturally fall to the floor when the robot opens its gripper.\n(3) Open the robot's gripper to let the broken glass fall onto the floor.",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Open the robot's gripper to let the broken glass fall onto the floor.\n    robot.release()\n    donothing(env)\n",
+    "error": "'Fetch' object has no attribute 'release'",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

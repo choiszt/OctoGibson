@@ -26,7 +26,7 @@ def parse_args():
 def gpt_process(args):
     
     idx = args.idx
-    with open('/shared/liushuai/OmniGibson/EVLM_Task/all.json') as f: #TODO change the path
+    with open('/shared/liushuai/OmniGibson/EVLM_Task/917rerun.json') as f: #TODO change the path
         data = json.load(f)
     EVLM_name=sorted(list(data))[idx]
     print(data[EVLM_name]['split'])

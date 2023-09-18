@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the bottom cabinet.\n(2) Take the die out of the bottom cabinet.\n(3) Take the board game out of the bottom cabinet.\n(4) Move to the table.\n(5) Put the die on the table.\n(6) Put the board game on the table.",
+    "code": "def act(robot,env,camera):\n    # Subtask 2: Take the die out of the bottom cabinet.\n    dice_102 = registry(env,\"dice_102\")\n    EasyGrasp(robot, dice_102)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the countertop.\n(2) Grasp the box of chocolates.\n(3) Move to the sack (paper_bag_85).\n(4) Put the box of chocolates in the sack.",
+    "code": "def act(robot,env,camera):\n    # Subtask 4: Put the box of chocolates in the sack\n    chocolates = registry(env, \"box_of_chocolates_91\")\n    sack = registry(env, \"paper_bag_85\")\n    put_inside(robot, chocolates, sack)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": true
+}

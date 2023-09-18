@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the ceramic tile.\n(2) Grasp the ceramic tile.\n(3) Place the ceramic tile on the floor.",
+    "code": "def act(robot,env,camera):\n    # Subtask 2: Grasp the ceramic tile\n    ceramic_tile_275 = registry(env,\"ceramic_tile_275\")\n    EasyGrasp(robot, ceramic_tile_275)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

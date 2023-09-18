@@ -1,0 +1,16 @@
+{
+    "response": {
+        "explain": " The previous action code has successfully turned on the stove. The next step is to cook the prawn on the stove.",
+        "subtask": "\n(1) Take the prawn from the plate\n(2) Turn on the stove\n(3) Cook the prawn on the stove\n(4) Place the cooked prawn on the plate",
+        "code": "def act(robot,env,camera):\n    # Subtask 3: Cook the prawn on the stove\n    shrimp = registry(env,\"shrimp_201\")\n    cook(robot, shrimp)\n    donothing(env)\n",
+        "inventory": "shrimp_201",
+        "obj_2": [
+            [
+                "shrimp_201",
+                "cookable",
+                "1"
+            ]
+        ],
+        "obj_3": []
+    }
+}

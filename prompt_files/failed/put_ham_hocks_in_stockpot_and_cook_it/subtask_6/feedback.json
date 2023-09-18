@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Grasp the ham hocks\n(2) Move to the oven\n(3) Put the ham hocks in the stockpot\n(4) Cook the ham hocks in the stockpot",
+    "code": "def act(robot,env,camera):\n    # Subtask 2: Move to the oven\n    oven = registry(env, \"oven_wuinhm_0\")\n    MoveBot(env, robot, oven, camera)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

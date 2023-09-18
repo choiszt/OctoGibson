@@ -6,7 +6,7 @@ import omnigibson as og
 from omnigibson.macros import gm
 from omnigibson.utils.ui_utils import choose_from_options
 
-from robot_action import *
+
 # import prompt_files.action as action
 from importlib import reload
 import importlib

@@ -1,0 +1,23 @@
+{
+    "response": {
+        "explain": " The previous action code has successfully opened the fridge without any errors. Now, the next step is to take out the asparagus from the fridge.",
+        "subtask": "\n(1) Open the fridge.\n(2) Take out the asparagus from the fridge.\n(3) Take out the green bean from the fridge.\n(4) Close the fridge.\n(5) Move to the stove.\n(6) Cook the asparagus and green bean on the stove.",
+        "code": "def act(robot,env,camera):\n    # Subtask 2: Take out the asparagus from the fridge\n    asparagus = registry(env, \"asparagus_201\")\n    EasyGrasp(robot, asparagus)\n    donothing(env)\n",
+        "inventory": "asparagus_201",
+        "obj_2": [],
+        "obj_3": [
+            [
+                "asparagus_201",
+                "inside",
+                "fridge_dszchb_0",
+                "0"
+            ],
+            [
+                "asparagus_201",
+                "nextto",
+                "robot",
+                "1"
+            ]
+        ]
+    }
+}

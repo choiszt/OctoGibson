@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the fridge\n(2) Take the steak out of the fridge\n(3) Move to the stove\n(4) Put the steak on the frying pan\n(5) Put the frying pan with the steak on the stove\n(6) Cook the steak on the stove by heating the frying pan\n(7) Grasp the cooked steak from the frying pan\n(8) Move to the plate\n(9) Put the cooked steak on the plate",
+    "code": "def act(robot,env,camera):\n    # Subtask 6: Cook the steak on the stove by heating the frying pan\n    frying_pan = registry(env,\"frying_pan_202\")\n    heat(robot, frying_pan)\n    donothing(env)\n",
+    "error": "ufunc 'bitwise_or' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

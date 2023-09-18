@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Take the table knife out of the bottom cabinet\n(2) Open the fridge\n(3) Take the pickle out of the fridge\n(4) Move to the breakfast table\n(5) Put the pickle on the breakfast table\n(6) Put the table knife on the breakfast table",
+    "code": "def act(robot,env,camera):\n    # Subtask 2: Open the fridge\n    fridge = registry(env, \"fridge_xyejdx_0\")\n    open(robot, fridge)\n    donothing(env)\n",
+    "error": "the fridge_xyejdx_0 has been opened! Please pay attention to the states of Observed Objects!!",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

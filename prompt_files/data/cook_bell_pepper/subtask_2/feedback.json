@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to a place where it can observe more objects.\n(2) Find the bell pepper.",
+    "code": "def act(robot,env,camera):\n    # Subtask 2: Find the bell pepper.\n    # Since the bell pepper is usually stored in the fridge, we move the robot to the fridge.\n    fridge = registry(env, \"fridge_1234\")\n    MoveBot(env, robot, fridge, camera)\n    donothing(env)\n",
+    "error": "something went wrong! Please plan again",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

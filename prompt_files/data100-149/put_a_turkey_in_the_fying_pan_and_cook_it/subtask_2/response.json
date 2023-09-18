@@ -1,0 +1,16 @@
+{
+    "response": {
+        "explain": " The previous action code has successfully moved the robot to the oven. The next step is to open the oven to get the turkey out. ",
+        "subtask": "\n(1) Move the robot to the oven.\n(2) Open the oven.\n(3) Grasp the turkey.\n(4) Move the robot to the frying pan.\n(5) Put the turkey in the frying pan.\n(6) Cook the turkey.",
+        "code": "def act(robot,env,camera):\n    # Subtask 2: Open the oven\n    oven_wuinhm_0 = registry(env,\"oven_wuinhm_0\")\n    open(robot, oven_wuinhm_0)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [
+            [
+                "oven_wuinhm_0",
+                "openable",
+                "1"
+            ]
+        ],
+        "obj_3": []
+    }
+}

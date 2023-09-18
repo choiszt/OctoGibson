@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register the dishwasher and the bottle.\n(2) Grasp the bottle.\n(3) Move to the dishwasher.\n(4) Open the dishwasher.\n(5) Put the bottle in the dishwasher.\n(6) Close the dishwasher.",
+    "code": "def act(robot,env,camera):\n    # Subtask 4: Open the dishwasher\n    dishwasher = registry(env, \"dishwasher_dngvvi_0\")\n    open(robot, dishwasher)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

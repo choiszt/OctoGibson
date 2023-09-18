@@ -1,0 +1,17 @@
+{
+    "response": {
+        "explain": " Since there is no previous action code or execution error, we can start planning from scratch. The task goal is to put a tupperware in the refrigerator and close it. To achieve this, we need to first move to the tupperware, grasp it, move to the refrigerator, open the refrigerator, put the tupperware inside, and finally close the refrigerator.",
+        "subtask": "\n(1) Move to the tupperware\n(2) Grasp the tupperware\n(3) Move to the refrigerator\n(4) Open the refrigerator\n(5) Put the tupperware inside the refrigerator\n(6) Close the refrigerator",
+        "code": "def act(robot,env,camera):\n    # Subtask 1: Move to the tupperware\n    tupperware_88 = registry(env,\"tupperware_88\")\n    MoveBot(env, robot, tupperware_88, camera)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [],
+        "obj_3": [
+            [
+                "robot",
+                "nextto",
+                "tupperware_88",
+                "1"
+            ]
+        ]
+    }
+}

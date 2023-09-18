@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move to the grocery shelf where the can of dog food is located.\n(2) Grasp the can of dog food.\n(3) Move to the checkout desk.\n(4) Put the can of dog food on the checkout desk.",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Move to the grocery shelf where the can of dog food is located.\n    grocery_shelf = registry(env, \"grocery_shelf_rowulr_2\")\n    MoveBot(env, robot, grocery_shelf, camera)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": true
+}

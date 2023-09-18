@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Take the table knife out of the bottom cabinet\n(2) Take the pickle out of the fridge\n(3) Move to the breakfast table\n(4) Put the pickle on the breakfast table\n(5) Put the table knife on the breakfast table",
+    "code": "def act(robot,env,camera):\n    # Subtask 2: Take the pickle out of the fridge\n    pickle = registry(env, \"pickle_88\")\n    EasyGrasp(robot, pickle)\n    donothing(env)\n",
+    "error": "'Vec3fArray' object has no attribute 'values'",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

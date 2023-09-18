@@ -1,0 +1,16 @@
+{
+    "response": {
+        "explain": " Since this is the first step, there is no previous action or error to explain. The task is to cook sweet corn. The sweet corn is currently inside the fridge, which is closed. The first step is to open the fridge to access the sweet corn.",
+        "subtask": "\n(1) Open the fridge\n(2) Take the sweet corn out of the fridge\n(3) Put the sweet corn into the stockpot\n(4) Cook the sweet corn on the stove",
+        "code": "def act(robot,env,camera):\n    # Subtask 1: Open the fridge\n    fridge = registry(env,\"fridge_xyejdx_0\")\n    open(robot, fridge)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [
+            [
+                "fridge_xyejdx_0",
+                "openable",
+                "1"
+            ]
+        ],
+        "obj_3": []
+    }
+}

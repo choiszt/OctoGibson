@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the bed.\n(2) Grasp the mousetrap.\n(3) Move the robot to the floor.\n(4) Place the mousetrap on the floor.",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Move the robot to the bed\n    bed_zrumze_0 = registry(env,\"bed_zrumze_0\")\n    MoveBot(env, robot, bed_zrumze_0, camera)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": true
+}

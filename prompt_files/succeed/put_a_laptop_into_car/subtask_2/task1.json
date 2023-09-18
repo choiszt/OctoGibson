@@ -1,0 +1,2073 @@
+{
+    "task": "put_a_laptop_into_car",
+    "0_detect_surroundings": {
+        "paper_bag_279": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.908696649147288,
+                "theta_deg": 16.09925612680487,
+                "phi_deg": 73.3078096545087
+            },
+            "orientation_in_bot": [
+                0.5604717395286467,
+                0.2520945135197546,
+                -0.20723118183187095,
+                0.7611668823060663
+            ],
+            "position_in_world": [
+                -9.430237770080566,
+                8.12129020690918,
+                0.14233076572418213
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance0_detect_surroundings.png"
+        },
+        "car_276": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.181145042967022,
+                "theta_deg": -147.19225312228352,
+                "phi_deg": 125.33180953137946
+            },
+            "orientation_in_bot": [
+                0.5643967353578726,
+                0.2643968531858198,
+                -0.22608953297465587,
+                0.7486215013089816
+            ],
+            "position_in_world": [
+                -16.207555770874023,
+                6.805974006652832,
+                0.8343520760536194
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance0_detect_surroundings.png"
+        },
+        "suitcase_277": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.8005094726879984,
+                "theta_deg": -153.63278649080073,
+                "phi_deg": 147.51253339182225
+            },
+            "orientation_in_bot": [
+                0.5181098590092654,
+                0.3316815178368238,
+                -0.31434098367457675,
+                0.7230071166353478
+            ],
+            "position_in_world": [
+                -16.150712966918945,
+                5.5152058601379395,
+                0.07901067286729813
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance0_detect_surroundings.png"
+        },
+        "laptop_278": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0246674692127833,
+                "theta_deg": 25.593036153149917,
+                "phi_deg": 82.87281415930788
+            },
+            "orientation_in_bot": [
+                0.5044226210958415,
+                0.3512833328467316,
+                -0.3380932052861991,
+                0.7126365300278942
+            ],
+            "position_in_world": [
+                -12.345311164855957,
+                7.960051536560059,
+                0.04429685324430466
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance0_detect_surroundings.png"
+        },
+        "driveway_qbxmgb_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0703674325435093,
+                "theta_deg": 17.26343800783121,
+                "phi_deg": 140.20363035147204
+            },
+            "orientation_in_bot": [
+                0.6133956585994259,
+                -0.03984428716615707,
+                0.17997348552523937,
+                0.7679633736705767
+            ],
+            "position_in_world": [
+                -12.911641414956225,
+                7.121470243492333,
+                -0.003990936279999999
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance0_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "paper_bag_279",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "car_276",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "suitcase_277",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "laptop_278",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "1_detect_surroundings": {
+        "paper_bag_279": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.908696649147288,
+                "theta_deg": 16.09925612680487,
+                "phi_deg": 73.3078096545087
+            },
+            "orientation_in_bot": [
+                0.5604717395286467,
+                0.2520945135197546,
+                -0.20723118183187095,
+                0.7611668823060663
+            ],
+            "position_in_world": [
+                -9.430237770080566,
+                8.12129020690918,
+                0.14233076572418213
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance1_detect_surroundings.png"
+        },
+        "car_276": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.181145042967022,
+                "theta_deg": -147.19225312228352,
+                "phi_deg": 125.33180953137946
+            },
+            "orientation_in_bot": [
+                0.5643967353578726,
+                0.2643968531858198,
+                -0.22608953297465587,
+                0.7486215013089816
+            ],
+            "position_in_world": [
+                -16.207555770874023,
+                6.805974006652832,
+                0.8343520760536194
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance1_detect_surroundings.png"
+        },
+        "suitcase_277": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.8005094726879984,
+                "theta_deg": -153.63278649080073,
+                "phi_deg": 147.51253339182225
+            },
+            "orientation_in_bot": [
+                0.5181098590092654,
+                0.3316815178368238,
+                -0.31434098367457675,
+                0.7230071166353478
+            ],
+            "position_in_world": [
+                -16.150712966918945,
+                5.5152058601379395,
+                0.07901067286729813
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance1_detect_surroundings.png"
+        },
+        "laptop_278": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0246674692127833,
+                "theta_deg": 25.593036153149917,
+                "phi_deg": 82.87281415930788
+            },
+            "orientation_in_bot": [
+                0.5044226210958415,
+                0.3512833328467316,
+                -0.3380932052861991,
+                0.7126365300278942
+            ],
+            "position_in_world": [
+                -12.345311164855957,
+                7.960051536560059,
+                0.04429685324430466
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance1_detect_surroundings.png"
+        },
+        "driveway_qbxmgb_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0703674325435093,
+                "theta_deg": 17.26343800783121,
+                "phi_deg": 140.20363035147204
+            },
+            "orientation_in_bot": [
+                0.6133956585994259,
+                -0.03984428716615707,
+                0.17997348552523937,
+                0.7679633736705767
+            ],
+            "position_in_world": [
+                -12.911641414956225,
+                7.121470243492333,
+                -0.003990936279999999
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance1_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "paper_bag_279",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "car_276",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "suitcase_277",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "laptop_278",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "2_detect_surroundings": {
+        "paper_bag_279": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.908696649147288,
+                "theta_deg": 16.09925612680487,
+                "phi_deg": 73.3078096545087
+            },
+            "orientation_in_bot": [
+                0.5604717395286467,
+                0.2520945135197546,
+                -0.20723118183187095,
+                0.7611668823060663
+            ],
+            "position_in_world": [
+                -9.430237770080566,
+                8.12129020690918,
+                0.14233076572418213
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance2_detect_surroundings.png"
+        },
+        "car_276": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.181145042967022,
+                "theta_deg": -147.19225312228352,
+                "phi_deg": 125.33180953137946
+            },
+            "orientation_in_bot": [
+                0.5643967353578726,
+                0.2643968531858198,
+                -0.22608953297465587,
+                0.7486215013089816
+            ],
+            "position_in_world": [
+                -16.207555770874023,
+                6.805974006652832,
+                0.8343520760536194
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance2_detect_surroundings.png"
+        },
+        "suitcase_277": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.8005094726879984,
+                "theta_deg": -153.63278649080073,
+                "phi_deg": 147.51253339182225
+            },
+            "orientation_in_bot": [
+                0.5181098590092654,
+                0.3316815178368238,
+                -0.31434098367457675,
+                0.7230071166353478
+            ],
+            "position_in_world": [
+                -16.150712966918945,
+                5.5152058601379395,
+                0.07901067286729813
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance2_detect_surroundings.png"
+        },
+        "laptop_278": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0246674692127833,
+                "theta_deg": 25.593036153149917,
+                "phi_deg": 82.87281415930788
+            },
+            "orientation_in_bot": [
+                0.5044226210958415,
+                0.3512833328467316,
+                -0.3380932052861991,
+                0.7126365300278942
+            ],
+            "position_in_world": [
+                -12.345311164855957,
+                7.960051536560059,
+                0.04429685324430466
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance2_detect_surroundings.png"
+        },
+        "driveway_qbxmgb_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0703674325435093,
+                "theta_deg": 17.26343800783121,
+                "phi_deg": 140.20363035147204
+            },
+            "orientation_in_bot": [
+                0.6133956585994259,
+                -0.03984428716615707,
+                0.17997348552523937,
+                0.7679633736705767
+            ],
+            "position_in_world": [
+                -12.911641414956225,
+                7.121470243492333,
+                -0.003990936279999999
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance2_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "paper_bag_279",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "car_276",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "suitcase_277",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "laptop_278",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "3_detect_surroundings": {
+        "paper_bag_279": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.908696649147288,
+                "theta_deg": 16.09925612680487,
+                "phi_deg": 73.3078096545087
+            },
+            "orientation_in_bot": [
+                0.5604717395286467,
+                0.2520945135197546,
+                -0.20723118183187095,
+                0.7611668823060663
+            ],
+            "position_in_world": [
+                -9.430237770080566,
+                8.12129020690918,
+                0.14233076572418213
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance3_detect_surroundings.png"
+        },
+        "car_276": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.181145042967022,
+                "theta_deg": -147.19225312228352,
+                "phi_deg": 125.33180953137946
+            },
+            "orientation_in_bot": [
+                0.5643967353578726,
+                0.2643968531858198,
+                -0.22608953297465587,
+                0.7486215013089816
+            ],
+            "position_in_world": [
+                -16.207555770874023,
+                6.805974006652832,
+                0.8343520760536194
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance3_detect_surroundings.png"
+        },
+        "suitcase_277": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.8005094726879984,
+                "theta_deg": -153.63278649080073,
+                "phi_deg": 147.51253339182225
+            },
+            "orientation_in_bot": [
+                0.5181098590092654,
+                0.3316815178368238,
+                -0.31434098367457675,
+                0.7230071166353478
+            ],
+            "position_in_world": [
+                -16.150712966918945,
+                5.5152058601379395,
+                0.07901067286729813
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance3_detect_surroundings.png"
+        },
+        "laptop_278": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0246674692127833,
+                "theta_deg": 25.593036153149917,
+                "phi_deg": 82.87281415930788
+            },
+            "orientation_in_bot": [
+                0.5044226210958415,
+                0.3512833328467316,
+                -0.3380932052861991,
+                0.7126365300278942
+            ],
+            "position_in_world": [
+                -12.345311164855957,
+                7.960051536560059,
+                0.04429685324430466
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance3_detect_surroundings.png"
+        },
+        "driveway_qbxmgb_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0703674325435093,
+                "theta_deg": 17.26343800783121,
+                "phi_deg": 140.20363035147204
+            },
+            "orientation_in_bot": [
+                0.6133956585994259,
+                -0.03984428716615707,
+                0.17997348552523937,
+                0.7679633736705767
+            ],
+            "position_in_world": [
+                -12.911641414956225,
+                7.121470243492333,
+                -0.003990936279999999
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance3_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "paper_bag_279",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "car_276",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "suitcase_277",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "laptop_278",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "4_detect_surroundings": {
+        "paper_bag_279": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.908696649147288,
+                "theta_deg": 16.09925612680487,
+                "phi_deg": 73.3078096545087
+            },
+            "orientation_in_bot": [
+                0.5604717395286467,
+                0.2520945135197546,
+                -0.20723118183187095,
+                0.7611668823060663
+            ],
+            "position_in_world": [
+                -9.430237770080566,
+                8.12129020690918,
+                0.14233076572418213
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance4_detect_surroundings.png"
+        },
+        "car_276": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.181145042967022,
+                "theta_deg": -147.19225312228352,
+                "phi_deg": 125.33180953137946
+            },
+            "orientation_in_bot": [
+                0.5643967353578726,
+                0.2643968531858198,
+                -0.22608953297465587,
+                0.7486215013089816
+            ],
+            "position_in_world": [
+                -16.207555770874023,
+                6.805974006652832,
+                0.8343520760536194
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance4_detect_surroundings.png"
+        },
+        "suitcase_277": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.8005094726879984,
+                "theta_deg": -153.63278649080073,
+                "phi_deg": 147.51253339182225
+            },
+            "orientation_in_bot": [
+                0.5181098590092654,
+                0.3316815178368238,
+                -0.31434098367457675,
+                0.7230071166353478
+            ],
+            "position_in_world": [
+                -16.150712966918945,
+                5.5152058601379395,
+                0.07901067286729813
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance4_detect_surroundings.png"
+        },
+        "laptop_278": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0246674692127833,
+                "theta_deg": 25.593036153149917,
+                "phi_deg": 82.87281415930788
+            },
+            "orientation_in_bot": [
+                0.5044226210958415,
+                0.3512833328467316,
+                -0.3380932052861991,
+                0.7126365300278942
+            ],
+            "position_in_world": [
+                -12.345311164855957,
+                7.960051536560059,
+                0.04429685324430466
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance4_detect_surroundings.png"
+        },
+        "driveway_qbxmgb_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0703674325435093,
+                "theta_deg": 17.26343800783121,
+                "phi_deg": 140.20363035147204
+            },
+            "orientation_in_bot": [
+                0.6133956585994259,
+                -0.03984428716615707,
+                0.17997348552523937,
+                0.7679633736705767
+            ],
+            "position_in_world": [
+                -12.911641414956225,
+                7.121470243492333,
+                -0.003990936279999999
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance4_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "paper_bag_279",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "car_276",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "suitcase_277",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "laptop_278",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "5_detect_surroundings": {
+        "paper_bag_279": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.908696649147288,
+                "theta_deg": 16.09925612680487,
+                "phi_deg": 73.3078096545087
+            },
+            "orientation_in_bot": [
+                0.5604717395286467,
+                0.2520945135197546,
+                -0.20723118183187095,
+                0.7611668823060663
+            ],
+            "position_in_world": [
+                -9.430237770080566,
+                8.12129020690918,
+                0.14233076572418213
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance5_detect_surroundings.png"
+        },
+        "car_276": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.181145042967022,
+                "theta_deg": -147.19225312228352,
+                "phi_deg": 125.33180953137946
+            },
+            "orientation_in_bot": [
+                0.5643967353578726,
+                0.2643968531858198,
+                -0.22608953297465587,
+                0.7486215013089816
+            ],
+            "position_in_world": [
+                -16.207555770874023,
+                6.805974006652832,
+                0.8343520760536194
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance5_detect_surroundings.png"
+        },
+        "suitcase_277": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.8005094726879984,
+                "theta_deg": -153.63278649080073,
+                "phi_deg": 147.51253339182225
+            },
+            "orientation_in_bot": [
+                0.5181098590092654,
+                0.3316815178368238,
+                -0.31434098367457675,
+                0.7230071166353478
+            ],
+            "position_in_world": [
+                -16.150712966918945,
+                5.5152058601379395,
+                0.07901067286729813
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance5_detect_surroundings.png"
+        },
+        "laptop_278": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0246674692127833,
+                "theta_deg": 25.593036153149917,
+                "phi_deg": 82.87281415930788
+            },
+            "orientation_in_bot": [
+                0.5044226210958415,
+                0.3512833328467316,
+                -0.3380932052861991,
+                0.7126365300278942
+            ],
+            "position_in_world": [
+                -12.345311164855957,
+                7.960051536560059,
+                0.04429685324430466
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance5_detect_surroundings.png"
+        },
+        "driveway_qbxmgb_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0703674325435093,
+                "theta_deg": 17.26343800783121,
+                "phi_deg": 140.20363035147204
+            },
+            "orientation_in_bot": [
+                0.6133956585994259,
+                -0.03984428716615707,
+                0.17997348552523937,
+                0.7679633736705767
+            ],
+            "position_in_world": [
+                -12.911641414956225,
+                7.121470243492333,
+                -0.003990936279999999
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance5_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "paper_bag_279",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "car_276",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "suitcase_277",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "laptop_278",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "6_detect_surroundings": {
+        "paper_bag_279": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.908696649147288,
+                "theta_deg": 16.09925612680487,
+                "phi_deg": 73.3078096545087
+            },
+            "orientation_in_bot": [
+                0.5604717395286467,
+                0.2520945135197546,
+                -0.20723118183187095,
+                0.7611668823060663
+            ],
+            "position_in_world": [
+                -9.430237770080566,
+                8.12129020690918,
+                0.14233076572418213
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance6_detect_surroundings.png"
+        },
+        "car_276": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.181145042967022,
+                "theta_deg": -147.19225312228352,
+                "phi_deg": 125.33180953137946
+            },
+            "orientation_in_bot": [
+                0.5643967353578726,
+                0.2643968531858198,
+                -0.22608953297465587,
+                0.7486215013089816
+            ],
+            "position_in_world": [
+                -16.207555770874023,
+                6.805974006652832,
+                0.8343520760536194
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance6_detect_surroundings.png"
+        },
+        "suitcase_277": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.8005094726879984,
+                "theta_deg": -153.63278649080073,
+                "phi_deg": 147.51253339182225
+            },
+            "orientation_in_bot": [
+                0.5181098590092654,
+                0.3316815178368238,
+                -0.31434098367457675,
+                0.7230071166353478
+            ],
+            "position_in_world": [
+                -16.150712966918945,
+                5.5152058601379395,
+                0.07901067286729813
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance6_detect_surroundings.png"
+        },
+        "laptop_278": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0246674692127833,
+                "theta_deg": 25.593036153149917,
+                "phi_deg": 82.87281415930788
+            },
+            "orientation_in_bot": [
+                0.5044226210958415,
+                0.3512833328467316,
+                -0.3380932052861991,
+                0.7126365300278942
+            ],
+            "position_in_world": [
+                -12.345311164855957,
+                7.960051536560059,
+                0.04429685324430466
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance6_detect_surroundings.png"
+        },
+        "driveway_qbxmgb_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0703674325435093,
+                "theta_deg": 17.26343800783121,
+                "phi_deg": 140.20363035147204
+            },
+            "orientation_in_bot": [
+                0.6133956585994259,
+                -0.03984428716615707,
+                0.17997348552523937,
+                0.7679633736705767
+            ],
+            "position_in_world": [
+                -12.911641414956225,
+                7.121470243492333,
+                -0.003990936279999999
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance6_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "paper_bag_279",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "car_276",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "suitcase_277",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "laptop_278",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "7_detect_surroundings": {
+        "paper_bag_279": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.908696649147288,
+                "theta_deg": 16.09925612680487,
+                "phi_deg": 73.3078096545087
+            },
+            "orientation_in_bot": [
+                0.5604717395286467,
+                0.2520945135197546,
+                -0.20723118183187095,
+                0.7611668823060663
+            ],
+            "position_in_world": [
+                -9.430237770080566,
+                8.12129020690918,
+                0.14233076572418213
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance7_detect_surroundings.png"
+        },
+        "car_276": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.181145042967022,
+                "theta_deg": -147.19225312228352,
+                "phi_deg": 125.33180953137946
+            },
+            "orientation_in_bot": [
+                0.5643967353578726,
+                0.2643968531858198,
+                -0.22608953297465587,
+                0.7486215013089816
+            ],
+            "position_in_world": [
+                -16.207555770874023,
+                6.805974006652832,
+                0.8343520760536194
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance7_detect_surroundings.png"
+        },
+        "suitcase_277": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.8005094726879984,
+                "theta_deg": -153.63278649080073,
+                "phi_deg": 147.51253339182225
+            },
+            "orientation_in_bot": [
+                0.5181098590092654,
+                0.3316815178368238,
+                -0.31434098367457675,
+                0.7230071166353478
+            ],
+            "position_in_world": [
+                -16.150712966918945,
+                5.5152058601379395,
+                0.07901067286729813
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance7_detect_surroundings.png"
+        },
+        "laptop_278": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0246674692127833,
+                "theta_deg": 25.593036153149917,
+                "phi_deg": 82.87281415930788
+            },
+            "orientation_in_bot": [
+                0.5044226210958415,
+                0.3512833328467316,
+                -0.3380932052861991,
+                0.7126365300278942
+            ],
+            "position_in_world": [
+                -12.345311164855957,
+                7.960051536560059,
+                0.04429685324430466
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance7_detect_surroundings.png"
+        },
+        "driveway_qbxmgb_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0703674325435093,
+                "theta_deg": 17.26343800783121,
+                "phi_deg": 140.20363035147204
+            },
+            "orientation_in_bot": [
+                0.6133956585994259,
+                -0.03984428716615707,
+                0.17997348552523937,
+                0.7679633736705767
+            ],
+            "position_in_world": [
+                -12.911641414956225,
+                7.121470243492333,
+                -0.003990936279999999
+            ],
+            "bot_in_world": [
+                -13.33577823638916,
+                8.06015396118164,
+                0.28698569536209106
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance7_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "paper_bag_279",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "car_276",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "suitcase_277",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "laptop_278",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "8_BEV_surroundings": {
+        "paper_bag_279": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.9263987426554188,
+                "theta_deg": 18.659831660828534,
+                "phi_deg": 74.69145482090013
+            },
+            "orientation_in_bot": [
+                0.6160698884141119,
+                0.32711237401956345,
+                -0.15862918953444213,
+                0.6987790549096009
+            ],
+            "position_in_world": [
+                -9.430237770080566,
+                8.12129020690918,
+                0.14233076572418213
+            ],
+            "bot_in_world": [
+                -13.352828025817871,
+                8.142184257507324,
+                0.31395742297172546
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance8_BEV_surroundings.png"
+        },
+        "car_276": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1946422391870124,
+                "theta_deg": -150.81671187467717,
+                "phi_deg": 129.79048017193242
+            },
+            "orientation_in_bot": [
+                0.6173638362521603,
+                0.3410814172094583,
+                -0.17684083691030492,
+                0.6864784620971486
+            ],
+            "position_in_world": [
+                -16.207555770874023,
+                6.805974006652832,
+                0.8343520760536194
+            ],
+            "bot_in_world": [
+                -13.352828025817871,
+                8.142184257507324,
+                0.31395742297172546
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance8_BEV_surroundings.png"
+        },
+        "suitcase_277": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.845045600025352,
+                "theta_deg": -168.62601152380253,
+                "phi_deg": 148.8668208771717
+            },
+            "orientation_in_bot": [
+                0.5622201663811793,
+                0.4138522842302428,
+                -0.2571185348494232,
+                0.6682251345082849
+            ],
+            "position_in_world": [
+                -16.150712966918945,
+                5.5152058601379395,
+                0.07901067286729813
+            ],
+            "bot_in_world": [
+                -13.352828025817871,
+                8.142184257507324,
+                0.31395742297172546
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance8_BEV_surroundings.png"
+        },
+        "laptop_278": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0587631492218543,
+                "theta_deg": 30.596447023817657,
+                "phi_deg": 85.11308321702198
+            },
+            "orientation_in_bot": [
+                0.5457152896620007,
+                0.43473700507449925,
+                -0.27870705879944013,
+                0.6599400991175933
+            ],
+            "position_in_world": [
+                -12.345311164855957,
+                7.960051536560059,
+                0.04429685324430466
+            ],
+            "bot_in_world": [
+                -13.352828025817871,
+                8.142184257507324,
+                0.31395742297172546
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance8_BEV_surroundings.png"
+        },
+        "driveway_qbxmgb_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1565438723980754,
+                "theta_deg": 38.47371222988268,
+                "phi_deg": 138.88308825821795
+            },
+            "orientation_in_bot": [
+                0.6977112417758056,
+                -0.00034137354697724205,
+                0.19354951075240412,
+                0.6897372640732627
+            ],
+            "position_in_world": [
+                -12.911641414956225,
+                7.121470243492333,
+                -0.003990936279999999
+            ],
+            "bot_in_world": [
+                -13.352828025817871,
+                8.142184257507324,
+                0.31395742297172546
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance8_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "paper_bag_279",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "car_276",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "suitcase_277",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "laptop_278",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "9_BEV_surroundings": {
+        "paper_bag_279": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.9263987426554188,
+                "theta_deg": 18.659831660828534,
+                "phi_deg": 74.69145482090013
+            },
+            "orientation_in_bot": [
+                0.6160698884141119,
+                0.32711237401956345,
+                -0.15862918953444213,
+                0.6987790549096009
+            ],
+            "position_in_world": [
+                -9.430237770080566,
+                8.12129020690918,
+                0.14233076572418213
+            ],
+            "bot_in_world": [
+                -13.352828025817871,
+                8.142184257507324,
+                0.31395742297172546
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance9_BEV_surroundings.png"
+        },
+        "car_276": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1946422391870124,
+                "theta_deg": -150.81671187467717,
+                "phi_deg": 129.79048017193242
+            },
+            "orientation_in_bot": [
+                0.6173638362521603,
+                0.3410814172094583,
+                -0.17684083691030492,
+                0.6864784620971486
+            ],
+            "position_in_world": [
+                -16.207555770874023,
+                6.805974006652832,
+                0.8343520760536194
+            ],
+            "bot_in_world": [
+                -13.352828025817871,
+                8.142184257507324,
+                0.31395742297172546
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance9_BEV_surroundings.png"
+        },
+        "suitcase_277": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.845045600025352,
+                "theta_deg": -168.62601152380253,
+                "phi_deg": 148.8668208771717
+            },
+            "orientation_in_bot": [
+                0.5622201663811793,
+                0.4138522842302428,
+                -0.2571185348494232,
+                0.6682251345082849
+            ],
+            "position_in_world": [
+                -16.150712966918945,
+                5.5152058601379395,
+                0.07901067286729813
+            ],
+            "bot_in_world": [
+                -13.352828025817871,
+                8.142184257507324,
+                0.31395742297172546
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance9_BEV_surroundings.png"
+        },
+        "laptop_278": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.0587631492218543,
+                "theta_deg": 30.596447023817657,
+                "phi_deg": 85.11308321702198
+            },
+            "orientation_in_bot": [
+                0.5457152896620007,
+                0.43473700507449925,
+                -0.27870705879944013,
+                0.6599400991175933
+            ],
+            "position_in_world": [
+                -12.345311164855957,
+                7.960051536560059,
+                0.04429685324430466
+            ],
+            "bot_in_world": [
+                -13.352828025817871,
+                8.142184257507324,
+                0.31395742297172546
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance9_BEV_surroundings.png"
+        },
+        "driveway_qbxmgb_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1565438723980754,
+                "theta_deg": 38.47371222988268,
+                "phi_deg": 138.88308825821795
+            },
+            "orientation_in_bot": [
+                0.6977112417758056,
+                -0.00034137354697724205,
+                0.19354951075240412,
+                0.6897372640732627
+            ],
+            "position_in_world": [
+                -12.911641414956225,
+                7.121470243492333,
+                -0.003990936279999999
+            ],
+            "bot_in_world": [
+                -13.352828025817871,
+                8.142184257507324,
+                0.31395742297172546
+            ],
+            "path": "./prompt_files/data/put_a_laptop_into_car/subtask_2/seg_instance9_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "paper_bag_279",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "car_276",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "suitcase_277",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ],
+            [
+                "laptop_278",
+                "ontop",
+                "driveway_qbxmgb_0"
+            ]
+        ],
+        "inventory": []
+    }
+}

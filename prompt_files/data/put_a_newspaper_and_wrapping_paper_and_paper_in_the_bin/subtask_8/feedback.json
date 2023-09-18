@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the wrapping paper.\n(2) Grasp the wrapping paper.\n(3) Move the robot to the recycling bin.\n(4) Put the wrapping paper in the recycling bin.\n(5) Move the robot to the newspaper.\n(6) Grasp the newspaper.\n(7) Move the robot to the recycling bin.\n(8) Put the newspaper in the recycling bin.\n(9) Move the robot to the notepad.\n(10) Grasp the notepad.\n(11) Move the robot to the recycling bin.\n(12) Put the notepad in the recycling bin.",
+    "code": "def act(robot,env,camera):\n  # Subtask 8: Put the newspaper in the recycling bin.\n  newspaper_171 = registry(env,\"newspaper_171\")\n  recycling_bin_170 = registry(env,\"recycling_bin_170\")\n  put_inside(robot, newspaper_171, recycling_bin_170)\n  donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

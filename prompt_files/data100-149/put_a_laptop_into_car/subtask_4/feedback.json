@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the laptop.\n(2) Grasp the laptop.\n(3) Move the robot to the car.\n(4) Open the car.\n(5) Put the laptop inside the car.",
+    "code": "def act(robot,env,camera):\n    # Subtask 4: Open the car\n    car_276 = registry(env,\"car_276\")\n    open(robot, car_276)\n    donothing(env)\n",
+    "error": "<class 'omnigibson.object_states.open.Open'>",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

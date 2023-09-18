@@ -1,0 +1,17 @@
+{
+    "response": {
+        "explain": " Since there is no previous action code or execution error, we can start planning from scratch. The task goal is to put the prawn (shrimp_145) in the plastic bag (plastic_bag_143). The plastic bag is currently inside the checkout counter (checkout_counter_hhvxxr_0) and the prawn is on the grocery shelf (grocery_shelf_prtqlw_1). The robot needs to first move to the checkout counter to get the plastic bag, then move to the grocery shelf to get the prawn, and finally put the prawn in the plastic bag.",
+        "subtask": "\n(1) Move to the checkout counter (checkout_counter_hhvxxr_0)\n(2) Grasp the plastic bag (plastic_bag_143)\n(3) Move to the grocery shelf (grocery_shelf_prtqlw_1)\n(4) Grasp the prawn (shrimp_145)\n(5) Put the prawn in the plastic bag",
+        "code": "def act(robot,env,camera):\n    # Subtask 1: Move to the checkout counter\n    checkout_counter_hhvxxr_0 = registry(env,\"checkout_counter_hhvxxr_0\")\n    MoveBot(env, robot, checkout_counter_hhvxxr_0, camera)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [],
+        "obj_3": [
+            [
+                "robot",
+                "nextto",
+                "checkout_counter_hhvxxr_0",
+                "1"
+            ]
+        ]
+    }
+}

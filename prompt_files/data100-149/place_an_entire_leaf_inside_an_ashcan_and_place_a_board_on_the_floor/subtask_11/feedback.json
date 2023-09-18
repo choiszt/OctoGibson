@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the leaf.\n(2) Grasp the leaf.\n(3) Find the ashcan.\n(4) Move the robot to the ashcan.\n(5) Put the leaf inside the ashcan.\n(6) Move the robot back to the board.\n(7) Grasp the board.\n(8) Release the board to let it fall on the floor.",
+    "code": "def act(robot,env,camera):\n    # Subtask 8: Release the board to let it fall on the floor\n    board = registry(env,\"board_275\")\n    robot.release(board)\n    donothing(env)\n",
+    "error": "'Fetch' object has no attribute 'release'",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

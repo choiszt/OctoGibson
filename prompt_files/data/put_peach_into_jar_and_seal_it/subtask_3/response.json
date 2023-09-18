@@ -1,0 +1,23 @@
+{
+    "response": {
+        "explain": " The previous action code has successfully opened the fridge. The next step is to grasp the peach from the fridge.",
+        "subtask": "\n(1) Move the robot to the fridge.\n(2) Open the fridge.\n(3) Grasp the peach from the fridge.\n(4) Move the robot to the bottom cabinet.\n(5) Open the bottom cabinet.\n(6) Grasp the jar from the bottom cabinet.\n(7) Put the peach into the jar.\n(8) Close the jar.",
+        "code": "def act(robot,env,camera):\n    # Subtask 3: Grasp the peach from the fridge\n    peach = registry(env, \"peach_173\")\n    EasyGrasp(robot, peach)\n    donothing(env)\n",
+        "inventory": "peach_173",
+        "obj_2": [
+            [
+                "fridge_xyejdx_0",
+                "openable",
+                "1"
+            ]
+        ],
+        "obj_3": [
+            [
+                "peach_173",
+                "inside",
+                "robot",
+                "1"
+            ]
+        ]
+    }
+}

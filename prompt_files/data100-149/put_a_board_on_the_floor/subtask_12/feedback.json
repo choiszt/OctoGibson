@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the board.\n(2) Grasp the leaf on the board.\n(3) Move the robot to the trash can.\n(4) Put the leaf into the trash can.\n(5) Grasp the board.\n(6) Put the board on the floor.",
+    "code": "def act(robot,env,camera):\n    # Subtask 6: Put the board on the floor\n    floor = registry(env, \"floor\")\n    board_275 = registry(env, \"board_275\")\n    put_ontop(robot, board_275, floor)\n    donothing(env)\n",
+    "error": "'NoneType' object has no attribute 'get_position'",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

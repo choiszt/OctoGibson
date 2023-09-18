@@ -1,0 +1,16 @@
+{
+    "response": {
+        "explain": " The previous action code has successfully put the saucepot with the carrot onto the stove. Now, we need to cook the carrot which is the final subtask.",
+        "subtask": "\n(1) Grasp the saucepot\n(2) Grasp the carrot\n(3) Put the carrot into the saucepot\n(4) Put the saucepot with the carrot onto the stove\n(5) Cook the carrot",
+        "code": "def act(robot,env,camera):\n    # Subtask 5: Cook the carrot\n    carrot = registry(env,\"carrot_151\")\n    cook(robot, carrot)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [
+            [
+                "carrot_151",
+                "cookable",
+                "1"
+            ]
+        ],
+        "obj_3": []
+    }
+}

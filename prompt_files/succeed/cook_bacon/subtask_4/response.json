@@ -1,0 +1,16 @@
+{
+    "response": {
+        "explain": " The previous action code successfully executed the subtask of taking the bacon out of the tray. Now, the bacon is in the robot's inventory. The next step is to cook the bacon.",
+        "subtask": "\n(1) Open the fridge\n(2) Take the tray out of the fridge\n(3) Take the bacon out of the tray\n(4) Cook the bacon",
+        "code": "def act(robot,env,camera):\n    # Subtask 4: Cook the bacon\n    bacon = registry(env, \"bacon_150\")\n    cook(robot, bacon)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [
+            [
+                "bacon_150",
+                "cookable",
+                "1"
+            ]
+        ],
+        "obj_3": []
+    }
+}

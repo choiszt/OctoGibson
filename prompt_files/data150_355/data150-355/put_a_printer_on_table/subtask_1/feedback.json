@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Grasp the printer.\n(2) Move to the table.\n(3) Put the printer on the table.",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Grasp the printer\n    printer_188 = registry(env,\"printer_188\")\n    EasyGrasp(robot, printer_188)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the insectifuge atomizer.\n(2) Grasp the insectifuge atomizer.\n(3) Move the robot to the backpack.\n(4) Put the insectifuge atomizer on the backpack.",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Move the robot to the insectifuge atomizer\n    insectifuge_atomizer_88 = registry(env,\"insectifuge_atomizer_88\")\n    MoveBot(env, robot, insectifuge_atomizer_88, camera)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": true
+}

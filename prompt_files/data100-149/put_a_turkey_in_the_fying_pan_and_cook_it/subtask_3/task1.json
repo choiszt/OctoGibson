@@ -1,0 +1,2203 @@
+{
+    "task": "put_a_turkey_in_the_fying_pan_and_cook_it",
+    "0_detect_surroundings": {
+        "frying_pan_88": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.502531443890718,
+                "theta_deg": 125.85955568563892,
+                "phi_deg": 52.2038924248537
+            },
+            "orientation_in_bot": [
+                -0.015329954074002805,
+                0.009350498874370623,
+                -0.16157623731770016,
+                0.9866968532498437
+            ],
+            "position_in_world": [
+                -0.34735336899757385,
+                1.5226739645004272,
+                0.8933330178260803
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance0_detect_surroundings.png"
+        },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2907975641372098,
+                "theta_deg": 126.29130419974219,
+                "phi_deg": 65.71910166059548
+            },
+            "orientation_in_bot": [
+                0.006904023578309384,
+                0.020880305348670858,
+                0.3185528664376991,
+                0.9476499451755916
+            ],
+            "position_in_world": [
+                -0.34276917576789856,
+                1.5018638372421265,
+                0.5036253333091736
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance0_detect_surroundings.png"
+        },
+        "wax_paper_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2101489360749043,
+                "theta_deg": 131.78527821023616,
+                "phi_deg": 84.63528781782028
+            },
+            "orientation_in_bot": [
+                0.03313034938675137,
+                0.032533884961717385,
+                -0.22792487627475763,
+                0.9725709110671293
+            ],
+            "position_in_world": [
+                -0.4429725408554077,
+                1.5153688192367554,
+                0.08169271051883698
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance0_detect_surroundings.png"
+        },
+        "top_cabinet_lsyzkh_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.5773664891119044,
+                "theta_deg": 169.449380151729,
+                "phi_deg": 38.49363511301584
+            },
+            "orientation_in_bot": [
+                0.006918818288545467,
+                0.020875384097956813,
+                0.31922382791456305,
+                0.9474241373238421
+            ],
+            "position_in_world": [
+                -1.4915837049484253,
+                1.5524613857269287,
+                1.9497758150100708
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance0_detect_surroundings.png"
+        },
+        "turkey_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1952635888987129,
+                "theta_deg": 132.14019505001585,
+                "phi_deg": 81.24098152993838
+            },
+            "orientation_in_bot": [
+                0.031718373471122795,
+                -0.03426433210480979,
+                0.8542981080761691,
+                0.517681990093567
+            ],
+            "position_in_world": [
+                -0.45082950592041016,
+                1.49314284324646,
+                0.1509416699409485
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance0_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "wax_paper_86",
+                "under",
+                "frying_pan_88"
+            ],
+            [
+                "wax_paper_86",
+                "inside",
+                "oven_wuinhm_0"
+            ],
+            [
+                "wax_paper_86",
+                "inside",
+                "turkey_85"
+            ],
+            [
+                "turkey_85",
+                "under",
+                "frying_pan_88"
+            ],
+            [
+                "turkey_85",
+                "inside",
+                "oven_wuinhm_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "1_detect_surroundings": {
+        "frying_pan_88": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.502531443890718,
+                "theta_deg": 125.85955568563892,
+                "phi_deg": 52.2038924248537
+            },
+            "orientation_in_bot": [
+                -0.015329954074002805,
+                0.009350498874370623,
+                -0.16157623731770016,
+                0.9866968532498437
+            ],
+            "position_in_world": [
+                -0.34735336899757385,
+                1.5226739645004272,
+                0.8933330178260803
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance1_detect_surroundings.png"
+        },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2907975641372098,
+                "theta_deg": 126.29130419974219,
+                "phi_deg": 65.71910166059548
+            },
+            "orientation_in_bot": [
+                0.006904023578309384,
+                0.020880305348670858,
+                0.3185528664376991,
+                0.9476499451755916
+            ],
+            "position_in_world": [
+                -0.34276917576789856,
+                1.5018638372421265,
+                0.5036253333091736
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance1_detect_surroundings.png"
+        },
+        "wax_paper_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2101489360749043,
+                "theta_deg": 131.78527821023616,
+                "phi_deg": 84.63528781782028
+            },
+            "orientation_in_bot": [
+                0.03313034938675137,
+                0.032533884961717385,
+                -0.22792487627475763,
+                0.9725709110671293
+            ],
+            "position_in_world": [
+                -0.4429725408554077,
+                1.5153688192367554,
+                0.08169271051883698
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance1_detect_surroundings.png"
+        },
+        "top_cabinet_lsyzkh_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.5773664891119044,
+                "theta_deg": 169.449380151729,
+                "phi_deg": 38.49363511301584
+            },
+            "orientation_in_bot": [
+                0.006918818288545467,
+                0.020875384097956813,
+                0.31922382791456305,
+                0.9474241373238421
+            ],
+            "position_in_world": [
+                -1.4915837049484253,
+                1.5524613857269287,
+                1.9497758150100708
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance1_detect_surroundings.png"
+        },
+        "turkey_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1952635888987129,
+                "theta_deg": 132.14019505001585,
+                "phi_deg": 81.24098152993838
+            },
+            "orientation_in_bot": [
+                0.031718373471122795,
+                -0.03426433210480979,
+                0.8542981080761691,
+                0.517681990093567
+            ],
+            "position_in_world": [
+                -0.45082950592041016,
+                1.49314284324646,
+                0.1509416699409485
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance1_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "wax_paper_86",
+                "under",
+                "frying_pan_88"
+            ],
+            [
+                "wax_paper_86",
+                "inside",
+                "oven_wuinhm_0"
+            ],
+            [
+                "wax_paper_86",
+                "inside",
+                "turkey_85"
+            ],
+            [
+                "turkey_85",
+                "under",
+                "frying_pan_88"
+            ],
+            [
+                "turkey_85",
+                "inside",
+                "oven_wuinhm_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "2_detect_surroundings": {
+        "frying_pan_88": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.502531443890718,
+                "theta_deg": 125.85955568563892,
+                "phi_deg": 52.2038924248537
+            },
+            "orientation_in_bot": [
+                -0.015329954074002805,
+                0.009350498874370623,
+                -0.16157623731770016,
+                0.9866968532498437
+            ],
+            "position_in_world": [
+                -0.34735336899757385,
+                1.5226739645004272,
+                0.8933330178260803
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance2_detect_surroundings.png"
+        },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2907975641372098,
+                "theta_deg": 126.29130419974219,
+                "phi_deg": 65.71910166059548
+            },
+            "orientation_in_bot": [
+                0.006904023578309384,
+                0.020880305348670858,
+                0.3185528664376991,
+                0.9476499451755916
+            ],
+            "position_in_world": [
+                -0.34276917576789856,
+                1.5018638372421265,
+                0.5036253333091736
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance2_detect_surroundings.png"
+        },
+        "wax_paper_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2101489360749043,
+                "theta_deg": 131.78527821023616,
+                "phi_deg": 84.63528781782028
+            },
+            "orientation_in_bot": [
+                0.03313034938675137,
+                0.032533884961717385,
+                -0.22792487627475763,
+                0.9725709110671293
+            ],
+            "position_in_world": [
+                -0.4429725408554077,
+                1.5153688192367554,
+                0.08169271051883698
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance2_detect_surroundings.png"
+        },
+        "top_cabinet_lsyzkh_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.5773664891119044,
+                "theta_deg": 169.449380151729,
+                "phi_deg": 38.49363511301584
+            },
+            "orientation_in_bot": [
+                0.006918818288545467,
+                0.020875384097956813,
+                0.31922382791456305,
+                0.9474241373238421
+            ],
+            "position_in_world": [
+                -1.4915837049484253,
+                1.5524613857269287,
+                1.9497758150100708
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance2_detect_surroundings.png"
+        },
+        "turkey_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1952635888987129,
+                "theta_deg": 132.14019505001585,
+                "phi_deg": 81.24098152993838
+            },
+            "orientation_in_bot": [
+                0.031718373471122795,
+                -0.03426433210480979,
+                0.8542981080761691,
+                0.517681990093567
+            ],
+            "position_in_world": [
+                -0.45082950592041016,
+                1.49314284324646,
+                0.1509416699409485
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance2_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "wax_paper_86",
+                "under",
+                "frying_pan_88"
+            ],
+            [
+                "wax_paper_86",
+                "inside",
+                "oven_wuinhm_0"
+            ],
+            [
+                "wax_paper_86",
+                "inside",
+                "turkey_85"
+            ],
+            [
+                "turkey_85",
+                "under",
+                "frying_pan_88"
+            ],
+            [
+                "turkey_85",
+                "inside",
+                "oven_wuinhm_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "3_detect_surroundings": {
+        "frying_pan_88": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.502531443890718,
+                "theta_deg": 125.85955568563892,
+                "phi_deg": 52.2038924248537
+            },
+            "orientation_in_bot": [
+                -0.015329954074002805,
+                0.009350498874370623,
+                -0.16157623731770016,
+                0.9866968532498437
+            ],
+            "position_in_world": [
+                -0.34735336899757385,
+                1.5226739645004272,
+                0.8933330178260803
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance3_detect_surroundings.png"
+        },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2907975641372098,
+                "theta_deg": 126.29130419974219,
+                "phi_deg": 65.71910166059548
+            },
+            "orientation_in_bot": [
+                0.006904023578309384,
+                0.020880305348670858,
+                0.3185528664376991,
+                0.9476499451755916
+            ],
+            "position_in_world": [
+                -0.34276917576789856,
+                1.5018638372421265,
+                0.5036253333091736
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance3_detect_surroundings.png"
+        },
+        "wax_paper_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2101489360749043,
+                "theta_deg": 131.78527821023616,
+                "phi_deg": 84.63528781782028
+            },
+            "orientation_in_bot": [
+                0.03313034938675137,
+                0.032533884961717385,
+                -0.22792487627475763,
+                0.9725709110671293
+            ],
+            "position_in_world": [
+                -0.4429725408554077,
+                1.5153688192367554,
+                0.08169271051883698
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance3_detect_surroundings.png"
+        },
+        "top_cabinet_lsyzkh_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.5773664891119044,
+                "theta_deg": 169.449380151729,
+                "phi_deg": 38.49363511301584
+            },
+            "orientation_in_bot": [
+                0.006918818288545467,
+                0.020875384097956813,
+                0.31922382791456305,
+                0.9474241373238421
+            ],
+            "position_in_world": [
+                -1.4915837049484253,
+                1.5524613857269287,
+                1.9497758150100708
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance3_detect_surroundings.png"
+        },
+        "turkey_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1952635888987129,
+                "theta_deg": 132.14019505001585,
+                "phi_deg": 81.24098152993838
+            },
+            "orientation_in_bot": [
+                0.031718373471122795,
+                -0.03426433210480979,
+                0.8542981080761691,
+                0.517681990093567
+            ],
+            "position_in_world": [
+                -0.45082950592041016,
+                1.49314284324646,
+                0.1509416699409485
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance3_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "wax_paper_86",
+                "under",
+                "frying_pan_88"
+            ],
+            [
+                "wax_paper_86",
+                "inside",
+                "oven_wuinhm_0"
+            ],
+            [
+                "wax_paper_86",
+                "inside",
+                "turkey_85"
+            ],
+            [
+                "turkey_85",
+                "under",
+                "frying_pan_88"
+            ],
+            [
+                "turkey_85",
+                "inside",
+                "oven_wuinhm_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "4_detect_surroundings": {
+        "frying_pan_88": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.502531443890718,
+                "theta_deg": 125.85955568563892,
+                "phi_deg": 52.2038924248537
+            },
+            "orientation_in_bot": [
+                -0.015329954074002805,
+                0.009350498874370623,
+                -0.16157623731770016,
+                0.9866968532498437
+            ],
+            "position_in_world": [
+                -0.34735336899757385,
+                1.5226739645004272,
+                0.8933330178260803
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance4_detect_surroundings.png"
+        },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2907975641372098,
+                "theta_deg": 126.29130419974219,
+                "phi_deg": 65.71910166059548
+            },
+            "orientation_in_bot": [
+                0.006904023578309384,
+                0.020880305348670858,
+                0.3185528664376991,
+                0.9476499451755916
+            ],
+            "position_in_world": [
+                -0.34276917576789856,
+                1.5018638372421265,
+                0.5036253333091736
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance4_detect_surroundings.png"
+        },
+        "wax_paper_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2101489360749043,
+                "theta_deg": 131.78527821023616,
+                "phi_deg": 84.63528781782028
+            },
+            "orientation_in_bot": [
+                0.03313034938675137,
+                0.032533884961717385,
+                -0.22792487627475763,
+                0.9725709110671293
+            ],
+            "position_in_world": [
+                -0.4429725408554077,
+                1.5153688192367554,
+                0.08169271051883698
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance4_detect_surroundings.png"
+        },
+        "top_cabinet_lsyzkh_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.5773664891119044,
+                "theta_deg": 169.449380151729,
+                "phi_deg": 38.49363511301584
+            },
+            "orientation_in_bot": [
+                0.006918818288545467,
+                0.020875384097956813,
+                0.31922382791456305,
+                0.9474241373238421
+            ],
+            "position_in_world": [
+                -1.4915837049484253,
+                1.5524613857269287,
+                1.9497758150100708
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance4_detect_surroundings.png"
+        },
+        "turkey_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1952635888987129,
+                "theta_deg": 132.14019505001585,
+                "phi_deg": 81.24098152993838
+            },
+            "orientation_in_bot": [
+                0.031718373471122795,
+                -0.03426433210480979,
+                0.8542981080761691,
+                0.517681990093567
+            ],
+            "position_in_world": [
+                -0.45082950592041016,
+                1.49314284324646,
+                0.1509416699409485
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance4_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "wax_paper_86",
+                "under",
+                "frying_pan_88"
+            ],
+            [
+                "wax_paper_86",
+                "inside",
+                "oven_wuinhm_0"
+            ],
+            [
+                "wax_paper_86",
+                "inside",
+                "turkey_85"
+            ],
+            [
+                "turkey_85",
+                "under",
+                "frying_pan_88"
+            ],
+            [
+                "turkey_85",
+                "inside",
+                "oven_wuinhm_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "5_detect_surroundings": {
+        "frying_pan_88": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.502531443890718,
+                "theta_deg": 125.85955568563892,
+                "phi_deg": 52.2038924248537
+            },
+            "orientation_in_bot": [
+                -0.015329954074002805,
+                0.009350498874370623,
+                -0.16157623731770016,
+                0.9866968532498437
+            ],
+            "position_in_world": [
+                -0.34735336899757385,
+                1.5226739645004272,
+                0.8933330178260803
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance5_detect_surroundings.png"
+        },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2907975641372098,
+                "theta_deg": 126.29130419974219,
+                "phi_deg": 65.71910166059548
+            },
+            "orientation_in_bot": [
+                0.006904023578309384,
+                0.020880305348670858,
+                0.3185528664376991,
+                0.9476499451755916
+            ],
+            "position_in_world": [
+                -0.34276917576789856,
+                1.5018638372421265,
+                0.5036253333091736
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance5_detect_surroundings.png"
+        },
+        "wax_paper_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2101489360749043,
+                "theta_deg": 131.78527821023616,
+                "phi_deg": 84.63528781782028
+            },
+            "orientation_in_bot": [
+                0.03313034938675137,
+                0.032533884961717385,
+                -0.22792487627475763,
+                0.9725709110671293
+            ],
+            "position_in_world": [
+                -0.4429725408554077,
+                1.5153688192367554,
+                0.08169271051883698
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance5_detect_surroundings.png"
+        },
+        "top_cabinet_lsyzkh_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.5773664891119044,
+                "theta_deg": 169.449380151729,
+                "phi_deg": 38.49363511301584
+            },
+            "orientation_in_bot": [
+                0.006918818288545467,
+                0.020875384097956813,
+                0.31922382791456305,
+                0.9474241373238421
+            ],
+            "position_in_world": [
+                -1.4915837049484253,
+                1.5524613857269287,
+                1.9497758150100708
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance5_detect_surroundings.png"
+        },
+        "turkey_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1952635888987129,
+                "theta_deg": 132.14019505001585,
+                "phi_deg": 81.24098152993838
+            },
+            "orientation_in_bot": [
+                0.031718373471122795,
+                -0.03426433210480979,
+                0.8542981080761691,
+                0.517681990093567
+            ],
+            "position_in_world": [
+                -0.45082950592041016,
+                1.49314284324646,
+                0.1509416699409485
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance5_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "wax_paper_86",
+                "under",
+                "frying_pan_88"
+            ],
+            [
+                "wax_paper_86",
+                "inside",
+                "oven_wuinhm_0"
+            ],
+            [
+                "wax_paper_86",
+                "inside",
+                "turkey_85"
+            ],
+            [
+                "turkey_85",
+                "under",
+                "frying_pan_88"
+            ],
+            [
+                "turkey_85",
+                "inside",
+                "oven_wuinhm_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "6_detect_surroundings": {
+        "frying_pan_88": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.502531443890718,
+                "theta_deg": 125.85955568563892,
+                "phi_deg": 52.2038924248537
+            },
+            "orientation_in_bot": [
+                -0.015329954074002805,
+                0.009350498874370623,
+                -0.16157623731770016,
+                0.9866968532498437
+            ],
+            "position_in_world": [
+                -0.34735336899757385,
+                1.5226739645004272,
+                0.8933330178260803
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance6_detect_surroundings.png"
+        },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2907975641372098,
+                "theta_deg": 126.29130419974219,
+                "phi_deg": 65.71910166059548
+            },
+            "orientation_in_bot": [
+                0.006904023578309384,
+                0.020880305348670858,
+                0.3185528664376991,
+                0.9476499451755916
+            ],
+            "position_in_world": [
+                -0.34276917576789856,
+                1.5018638372421265,
+                0.5036253333091736
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance6_detect_surroundings.png"
+        },
+        "wax_paper_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2101489360749043,
+                "theta_deg": 131.78527821023616,
+                "phi_deg": 84.63528781782028
+            },
+            "orientation_in_bot": [
+                0.03313034938675137,
+                0.032533884961717385,
+                -0.22792487627475763,
+                0.9725709110671293
+            ],
+            "position_in_world": [
+                -0.4429725408554077,
+                1.5153688192367554,
+                0.08169271051883698
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance6_detect_surroundings.png"
+        },
+        "top_cabinet_lsyzkh_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.5773664891119044,
+                "theta_deg": 169.449380151729,
+                "phi_deg": 38.49363511301584
+            },
+            "orientation_in_bot": [
+                0.006918818288545467,
+                0.020875384097956813,
+                0.31922382791456305,
+                0.9474241373238421
+            ],
+            "position_in_world": [
+                -1.4915837049484253,
+                1.5524613857269287,
+                1.9497758150100708
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance6_detect_surroundings.png"
+        },
+        "turkey_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1952635888987129,
+                "theta_deg": 132.14019505001585,
+                "phi_deg": 81.24098152993838
+            },
+            "orientation_in_bot": [
+                0.031718373471122795,
+                -0.03426433210480979,
+                0.8542981080761691,
+                0.517681990093567
+            ],
+            "position_in_world": [
+                -0.45082950592041016,
+                1.49314284324646,
+                0.1509416699409485
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance6_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "wax_paper_86",
+                "under",
+                "frying_pan_88"
+            ],
+            [
+                "wax_paper_86",
+                "inside",
+                "oven_wuinhm_0"
+            ],
+            [
+                "wax_paper_86",
+                "inside",
+                "turkey_85"
+            ],
+            [
+                "turkey_85",
+                "under",
+                "frying_pan_88"
+            ],
+            [
+                "turkey_85",
+                "inside",
+                "oven_wuinhm_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "7_detect_surroundings": {
+        "frying_pan_88": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.502531443890718,
+                "theta_deg": 125.85955568563892,
+                "phi_deg": 52.2038924248537
+            },
+            "orientation_in_bot": [
+                -0.015329954074002805,
+                0.009350498874370623,
+                -0.16157623731770016,
+                0.9866968532498437
+            ],
+            "position_in_world": [
+                -0.34735336899757385,
+                1.5226739645004272,
+                0.8933330178260803
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance7_detect_surroundings.png"
+        },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2907975641372098,
+                "theta_deg": 126.29130419974219,
+                "phi_deg": 65.71910166059548
+            },
+            "orientation_in_bot": [
+                0.006904023578309384,
+                0.020880305348670858,
+                0.3185528664376991,
+                0.9476499451755916
+            ],
+            "position_in_world": [
+                -0.34276917576789856,
+                1.5018638372421265,
+                0.5036253333091736
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance7_detect_surroundings.png"
+        },
+        "wax_paper_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2101489360749043,
+                "theta_deg": 131.78527821023616,
+                "phi_deg": 84.63528781782028
+            },
+            "orientation_in_bot": [
+                0.03313034938675137,
+                0.032533884961717385,
+                -0.22792487627475763,
+                0.9725709110671293
+            ],
+            "position_in_world": [
+                -0.4429725408554077,
+                1.5153688192367554,
+                0.08169271051883698
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance7_detect_surroundings.png"
+        },
+        "top_cabinet_lsyzkh_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.5773664891119044,
+                "theta_deg": 169.449380151729,
+                "phi_deg": 38.49363511301584
+            },
+            "orientation_in_bot": [
+                0.006918818288545467,
+                0.020875384097956813,
+                0.31922382791456305,
+                0.9474241373238421
+            ],
+            "position_in_world": [
+                -1.4915837049484253,
+                1.5524613857269287,
+                1.9497758150100708
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance7_detect_surroundings.png"
+        },
+        "turkey_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1952635888987129,
+                "theta_deg": 132.14019505001585,
+                "phi_deg": 81.24098152993838
+            },
+            "orientation_in_bot": [
+                0.031718373471122795,
+                -0.03426433210480979,
+                0.8542981080761691,
+                0.517681990093567
+            ],
+            "position_in_world": [
+                -0.45082950592041016,
+                1.49314284324646,
+                0.1509416699409485
+            ],
+            "bot_in_world": [
+                -0.3441612124443054,
+                0.311780720949173,
+                0.003766760230064392
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance7_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "wax_paper_86",
+                "under",
+                "frying_pan_88"
+            ],
+            [
+                "wax_paper_86",
+                "inside",
+                "oven_wuinhm_0"
+            ],
+            [
+                "wax_paper_86",
+                "inside",
+                "turkey_85"
+            ],
+            [
+                "turkey_85",
+                "under",
+                "frying_pan_88"
+            ],
+            [
+                "turkey_85",
+                "inside",
+                "oven_wuinhm_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "8_BEV_surroundings": {
+        "frying_pan_88": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.5025283210847795,
+                "theta_deg": 125.85851943388563,
+                "phi_deg": 52.203586268821745
+            },
+            "orientation_in_bot": [
+                -0.015331582195054944,
+                0.009355001829639296,
+                -0.1615817408258914,
+                0.9866958840290346
+            ],
+            "position_in_world": [
+                -0.34735336899757385,
+                1.5226739645004272,
+                0.8933330178260803
+            ],
+            "bot_in_world": [
+                -0.3441612720489502,
+                0.3117845058441162,
+                0.0037668943405151367
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance8_BEV_surroundings.png"
+        },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2907940102473563,
+                "theta_deg": 126.29043021660071,
+                "phi_deg": 65.7188140179927
+            },
+            "orientation_in_bot": [
+                0.0069047204603846,
+                0.02088495600314641,
+                0.3185474589696535,
+                0.9476516553207132
+            ],
+            "position_in_world": [
+                -0.34276917576789856,
+                1.5018638372421265,
+                0.5036253333091736
+            ],
+            "bot_in_world": [
+                -0.3441612720489502,
+                0.3117845058441162,
+                0.0037668943405151367
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance8_BEV_surroundings.png"
+        },
+        "wax_paper_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2101451351810324,
+                "theta_deg": 131.78459960012168,
+                "phi_deg": 84.63500916328579
+            },
+            "orientation_in_bot": [
+                0.03312855853723685,
+                0.032537987011378035,
+                -0.22793054501449458,
+                0.9725695063386923
+            ],
+            "position_in_world": [
+                -0.4429725408554077,
+                1.5153688192367554,
+                0.08169271051883698
+            ],
+            "bot_in_world": [
+                -0.3441612720489502,
+                0.3117845058441162,
+                0.0037668943405151367
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance8_BEV_surroundings.png"
+        },
+        "top_cabinet_lsyzkh_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.5773645990037606,
+                "theta_deg": 169.4485666184742,
+                "phi_deg": 38.49308546023706
+            },
+            "orientation_in_bot": [
+                0.006919518462695682,
+                0.020880034257666946,
+                0.3192184216425204,
+                0.9474258513032568
+            ],
+            "position_in_world": [
+                -1.4915837049484253,
+                1.5524613857269287,
+                1.9497758150100708
+            ],
+            "bot_in_world": [
+                -0.3441612720489502,
+                0.3117845058441162,
+                0.0037668943405151367
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance8_BEV_surroundings.png"
+        },
+        "turkey_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.195259804544447,
+                "theta_deg": 132.1394899089261,
+                "phi_deg": 81.24068898394943
+            },
+            "orientation_in_bot": [
+                0.031721648442891534,
+                -0.03426130663793421,
+                0.8542950783275314,
+                0.5176869894375211
+            ],
+            "position_in_world": [
+                -0.45082950592041016,
+                1.49314284324646,
+                0.1509416699409485
+            ],
+            "bot_in_world": [
+                -0.3441612720489502,
+                0.3117845058441162,
+                0.0037668943405151367
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance8_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "wax_paper_86",
+                "under",
+                "frying_pan_88"
+            ],
+            [
+                "wax_paper_86",
+                "inside",
+                "oven_wuinhm_0"
+            ],
+            [
+                "wax_paper_86",
+                "inside",
+                "turkey_85"
+            ],
+            [
+                "turkey_85",
+                "under",
+                "frying_pan_88"
+            ],
+            [
+                "turkey_85",
+                "inside",
+                "oven_wuinhm_0"
+            ]
+        ],
+        "inventory": []
+    },
+    "9_BEV_surroundings": {
+        "frying_pan_88": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.5025283210847795,
+                "theta_deg": 125.85851943388563,
+                "phi_deg": 52.203586268821745
+            },
+            "orientation_in_bot": [
+                -0.015331582195054944,
+                0.009355001829639296,
+                -0.1615817408258914,
+                0.9866958840290346
+            ],
+            "position_in_world": [
+                -0.34735336899757385,
+                1.5226739645004272,
+                0.8933330178260803
+            ],
+            "bot_in_world": [
+                -0.3441612720489502,
+                0.3117845058441162,
+                0.0037668943405151367
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance9_BEV_surroundings.png"
+        },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2907940102473563,
+                "theta_deg": 126.29043021660071,
+                "phi_deg": 65.7188140179927
+            },
+            "orientation_in_bot": [
+                0.0069047204603846,
+                0.02088495600314641,
+                0.3185474589696535,
+                0.9476516553207132
+            ],
+            "position_in_world": [
+                -0.34276917576789856,
+                1.5018638372421265,
+                0.5036253333091736
+            ],
+            "bot_in_world": [
+                -0.3441612720489502,
+                0.3117845058441162,
+                0.0037668943405151367
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance9_BEV_surroundings.png"
+        },
+        "wax_paper_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.2101451351810324,
+                "theta_deg": 131.78459960012168,
+                "phi_deg": 84.63500916328579
+            },
+            "orientation_in_bot": [
+                0.03312855853723685,
+                0.032537987011378035,
+                -0.22793054501449458,
+                0.9725695063386923
+            ],
+            "position_in_world": [
+                -0.4429725408554077,
+                1.5153688192367554,
+                0.08169271051883698
+            ],
+            "bot_in_world": [
+                -0.3441612720489502,
+                0.3117845058441162,
+                0.0037668943405151367
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance9_BEV_surroundings.png"
+        },
+        "top_cabinet_lsyzkh_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.5773645990037606,
+                "theta_deg": 169.4485666184742,
+                "phi_deg": 38.49308546023706
+            },
+            "orientation_in_bot": [
+                0.006919518462695682,
+                0.020880034257666946,
+                0.3192184216425204,
+                0.9474258513032568
+            ],
+            "position_in_world": [
+                -1.4915837049484253,
+                1.5524613857269287,
+                1.9497758150100708
+            ],
+            "bot_in_world": [
+                -0.3441612720489502,
+                0.3117845058441162,
+                0.0037668943405151367
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance9_BEV_surroundings.png"
+        },
+        "turkey_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.195259804544447,
+                "theta_deg": 132.1394899089261,
+                "phi_deg": 81.24068898394943
+            },
+            "orientation_in_bot": [
+                0.031721648442891534,
+                -0.03426130663793421,
+                0.8542950783275314,
+                0.5176869894375211
+            ],
+            "position_in_world": [
+                -0.45082950592041016,
+                1.49314284324646,
+                0.1509416699409485
+            ],
+            "bot_in_world": [
+                -0.3441612720489502,
+                0.3117845058441162,
+                0.0037668943405151367
+            ],
+            "path": "./prompt_files/data/put_a_turkey_in_the_fying_pan_and_cook_it/subtask_3/seg_instance9_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "wax_paper_86",
+                "under",
+                "frying_pan_88"
+            ],
+            [
+                "wax_paper_86",
+                "inside",
+                "oven_wuinhm_0"
+            ],
+            [
+                "wax_paper_86",
+                "inside",
+                "turkey_85"
+            ],
+            [
+                "turkey_85",
+                "under",
+                "frying_pan_88"
+            ],
+            [
+                "turkey_85",
+                "inside",
+                "oven_wuinhm_0"
+            ]
+        ],
+        "inventory": []
+    }
+}

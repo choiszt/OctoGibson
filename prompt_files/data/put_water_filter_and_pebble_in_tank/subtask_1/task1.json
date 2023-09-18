@@ -1,0 +1,1843 @@
+{
+    "task": "put_water_filter_and_pebble_in_tank",
+    "0_detect_surroundings": {
+        "coffee_table_fqluyq_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.3688695024898054,
+                "theta_deg": 143.62926802386477,
+                "phi_deg": 82.07621670449679
+            },
+            "orientation_in_bot": [
+                0.006710004052748251,
+                0.019912662369320235,
+                0.34957692719830497,
+                0.9366719989908787
+            ],
+            "position_in_world": [
+                0.06319240480661392,
+                3.470465660095215,
+                0.2481631636619568
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "pebble_91": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.3813856399476583,
+                "theta_deg": 134.66015275566104,
+                "phi_deg": 78.94239416028351
+            },
+            "orientation_in_bot": [
+                -0.02294970217302884,
+                0.012451018283288408,
+                -0.02885273033577665,
+                0.9992426148168669
+            ],
+            "position_in_world": [
+                0.4224031865596771,
+                3.5176987648010254,
+                0.38911184668540955
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "tank_88": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.43527544974251,
+                "theta_deg": 135.8543125948722,
+                "phi_deg": 75.59793136413113
+            },
+            "orientation_in_bot": [
+                -0.0005493789097880885,
+                0.024687392568271623,
+                -0.048700233792705334,
+                0.9985081462159081
+            ],
+            "position_in_world": [
+                0.367045521736145,
+                3.5397582054138184,
+                0.5357472896575928
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "water_filter_90": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.350062815117211,
+                "theta_deg": 135.18128635883218,
+                "phi_deg": 75.9007976704276
+            },
+            "orientation_in_bot": [
+                0.001228685168292263,
+                0.024602679936271854,
+                0.026780750239143267,
+                0.9993377756741407
+            ],
+            "position_in_world": [
+                0.401604026556015,
+                3.461808681488037,
+                0.5058726668357849
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "pebble_91",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "pebble_91",
+                "inside",
+                "tank_88"
+            ],
+            [
+                "pebble_91",
+                "under",
+                "tank_88"
+            ],
+            [
+                "tank_88",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "water_filter_90",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "water_filter_90",
+                "inside",
+                "tank_88"
+            ],
+            [
+                "water_filter_90",
+                "under",
+                "tank_88"
+            ]
+        ],
+        "inventory": []
+    },
+    "1_detect_surroundings": {
+        "coffee_table_fqluyq_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.3688695024898054,
+                "theta_deg": 143.62926802386477,
+                "phi_deg": 82.07621670449679
+            },
+            "orientation_in_bot": [
+                0.006710004052748251,
+                0.019912662369320235,
+                0.34957692719830497,
+                0.9366719989908787
+            ],
+            "position_in_world": [
+                0.06319240480661392,
+                3.470465660095215,
+                0.2481631636619568
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "pebble_91": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.3813856399476583,
+                "theta_deg": 134.66015275566104,
+                "phi_deg": 78.94239416028351
+            },
+            "orientation_in_bot": [
+                -0.02294970217302884,
+                0.012451018283288408,
+                -0.02885273033577665,
+                0.9992426148168669
+            ],
+            "position_in_world": [
+                0.4224031865596771,
+                3.5176987648010254,
+                0.38911184668540955
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "tank_88": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.43527544974251,
+                "theta_deg": 135.8543125948722,
+                "phi_deg": 75.59793136413113
+            },
+            "orientation_in_bot": [
+                -0.0005493789097880885,
+                0.024687392568271623,
+                -0.048700233792705334,
+                0.9985081462159081
+            ],
+            "position_in_world": [
+                0.367045521736145,
+                3.5397582054138184,
+                0.5357472896575928
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "water_filter_90": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.350062815117211,
+                "theta_deg": 135.18128635883218,
+                "phi_deg": 75.9007976704276
+            },
+            "orientation_in_bot": [
+                0.001228685168292263,
+                0.024602679936271854,
+                0.026780750239143267,
+                0.9993377756741407
+            ],
+            "position_in_world": [
+                0.401604026556015,
+                3.461808681488037,
+                0.5058726668357849
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "pebble_91",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "pebble_91",
+                "inside",
+                "tank_88"
+            ],
+            [
+                "pebble_91",
+                "under",
+                "tank_88"
+            ],
+            [
+                "tank_88",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "water_filter_90",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "water_filter_90",
+                "inside",
+                "tank_88"
+            ],
+            [
+                "water_filter_90",
+                "under",
+                "tank_88"
+            ]
+        ],
+        "inventory": []
+    },
+    "2_detect_surroundings": {
+        "coffee_table_fqluyq_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.3688695024898054,
+                "theta_deg": 143.62926802386477,
+                "phi_deg": 82.07621670449679
+            },
+            "orientation_in_bot": [
+                0.006710004052748251,
+                0.019912662369320235,
+                0.34957692719830497,
+                0.9366719989908787
+            ],
+            "position_in_world": [
+                0.06319240480661392,
+                3.470465660095215,
+                0.2481631636619568
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "pebble_91": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.3813856399476583,
+                "theta_deg": 134.66015275566104,
+                "phi_deg": 78.94239416028351
+            },
+            "orientation_in_bot": [
+                -0.02294970217302884,
+                0.012451018283288408,
+                -0.02885273033577665,
+                0.9992426148168669
+            ],
+            "position_in_world": [
+                0.4224031865596771,
+                3.5176987648010254,
+                0.38911184668540955
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "tank_88": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.43527544974251,
+                "theta_deg": 135.8543125948722,
+                "phi_deg": 75.59793136413113
+            },
+            "orientation_in_bot": [
+                -0.0005493789097880885,
+                0.024687392568271623,
+                -0.048700233792705334,
+                0.9985081462159081
+            ],
+            "position_in_world": [
+                0.367045521736145,
+                3.5397582054138184,
+                0.5357472896575928
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "water_filter_90": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.350062815117211,
+                "theta_deg": 135.18128635883218,
+                "phi_deg": 75.9007976704276
+            },
+            "orientation_in_bot": [
+                0.001228685168292263,
+                0.024602679936271854,
+                0.026780750239143267,
+                0.9993377756741407
+            ],
+            "position_in_world": [
+                0.401604026556015,
+                3.461808681488037,
+                0.5058726668357849
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "pebble_91",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "pebble_91",
+                "inside",
+                "tank_88"
+            ],
+            [
+                "pebble_91",
+                "under",
+                "tank_88"
+            ],
+            [
+                "tank_88",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "water_filter_90",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "water_filter_90",
+                "inside",
+                "tank_88"
+            ],
+            [
+                "water_filter_90",
+                "under",
+                "tank_88"
+            ]
+        ],
+        "inventory": []
+    },
+    "3_detect_surroundings": {
+        "coffee_table_fqluyq_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.3688695024898054,
+                "theta_deg": 143.62926802386477,
+                "phi_deg": 82.07621670449679
+            },
+            "orientation_in_bot": [
+                0.006710004052748251,
+                0.019912662369320235,
+                0.34957692719830497,
+                0.9366719989908787
+            ],
+            "position_in_world": [
+                0.06319240480661392,
+                3.470465660095215,
+                0.2481631636619568
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "pebble_91": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.3813856399476583,
+                "theta_deg": 134.66015275566104,
+                "phi_deg": 78.94239416028351
+            },
+            "orientation_in_bot": [
+                -0.02294970217302884,
+                0.012451018283288408,
+                -0.02885273033577665,
+                0.9992426148168669
+            ],
+            "position_in_world": [
+                0.4224031865596771,
+                3.5176987648010254,
+                0.38911184668540955
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "tank_88": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.43527544974251,
+                "theta_deg": 135.8543125948722,
+                "phi_deg": 75.59793136413113
+            },
+            "orientation_in_bot": [
+                -0.0005493789097880885,
+                0.024687392568271623,
+                -0.048700233792705334,
+                0.9985081462159081
+            ],
+            "position_in_world": [
+                0.367045521736145,
+                3.5397582054138184,
+                0.5357472896575928
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "water_filter_90": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.350062815117211,
+                "theta_deg": 135.18128635883218,
+                "phi_deg": 75.9007976704276
+            },
+            "orientation_in_bot": [
+                0.001228685168292263,
+                0.024602679936271854,
+                0.026780750239143267,
+                0.9993377756741407
+            ],
+            "position_in_world": [
+                0.401604026556015,
+                3.461808681488037,
+                0.5058726668357849
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "pebble_91",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "pebble_91",
+                "inside",
+                "tank_88"
+            ],
+            [
+                "pebble_91",
+                "under",
+                "tank_88"
+            ],
+            [
+                "tank_88",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "water_filter_90",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "water_filter_90",
+                "inside",
+                "tank_88"
+            ],
+            [
+                "water_filter_90",
+                "under",
+                "tank_88"
+            ]
+        ],
+        "inventory": []
+    },
+    "4_detect_surroundings": {
+        "coffee_table_fqluyq_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.3688695024898054,
+                "theta_deg": 143.62926802386477,
+                "phi_deg": 82.07621670449679
+            },
+            "orientation_in_bot": [
+                0.006710004052748251,
+                0.019912662369320235,
+                0.34957692719830497,
+                0.9366719989908787
+            ],
+            "position_in_world": [
+                0.06319240480661392,
+                3.470465660095215,
+                0.2481631636619568
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "pebble_91": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.3813856399476583,
+                "theta_deg": 134.66015275566104,
+                "phi_deg": 78.94239416028351
+            },
+            "orientation_in_bot": [
+                -0.02294970217302884,
+                0.012451018283288408,
+                -0.02885273033577665,
+                0.9992426148168669
+            ],
+            "position_in_world": [
+                0.4224031865596771,
+                3.5176987648010254,
+                0.38911184668540955
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "tank_88": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.43527544974251,
+                "theta_deg": 135.8543125948722,
+                "phi_deg": 75.59793136413113
+            },
+            "orientation_in_bot": [
+                -0.0005493789097880885,
+                0.024687392568271623,
+                -0.048700233792705334,
+                0.9985081462159081
+            ],
+            "position_in_world": [
+                0.367045521736145,
+                3.5397582054138184,
+                0.5357472896575928
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "water_filter_90": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.350062815117211,
+                "theta_deg": 135.18128635883218,
+                "phi_deg": 75.9007976704276
+            },
+            "orientation_in_bot": [
+                0.001228685168292263,
+                0.024602679936271854,
+                0.026780750239143267,
+                0.9993377756741407
+            ],
+            "position_in_world": [
+                0.401604026556015,
+                3.461808681488037,
+                0.5058726668357849
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "pebble_91",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "pebble_91",
+                "inside",
+                "tank_88"
+            ],
+            [
+                "pebble_91",
+                "under",
+                "tank_88"
+            ],
+            [
+                "tank_88",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "water_filter_90",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "water_filter_90",
+                "inside",
+                "tank_88"
+            ],
+            [
+                "water_filter_90",
+                "under",
+                "tank_88"
+            ]
+        ],
+        "inventory": []
+    },
+    "5_detect_surroundings": {
+        "coffee_table_fqluyq_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.3688695024898054,
+                "theta_deg": 143.62926802386477,
+                "phi_deg": 82.07621670449679
+            },
+            "orientation_in_bot": [
+                0.006710004052748251,
+                0.019912662369320235,
+                0.34957692719830497,
+                0.9366719989908787
+            ],
+            "position_in_world": [
+                0.06319240480661392,
+                3.470465660095215,
+                0.2481631636619568
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "pebble_91": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.3813856399476583,
+                "theta_deg": 134.66015275566104,
+                "phi_deg": 78.94239416028351
+            },
+            "orientation_in_bot": [
+                -0.02294970217302884,
+                0.012451018283288408,
+                -0.02885273033577665,
+                0.9992426148168669
+            ],
+            "position_in_world": [
+                0.4224031865596771,
+                3.5176987648010254,
+                0.38911184668540955
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "tank_88": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.43527544974251,
+                "theta_deg": 135.8543125948722,
+                "phi_deg": 75.59793136413113
+            },
+            "orientation_in_bot": [
+                -0.0005493789097880885,
+                0.024687392568271623,
+                -0.048700233792705334,
+                0.9985081462159081
+            ],
+            "position_in_world": [
+                0.367045521736145,
+                3.5397582054138184,
+                0.5357472896575928
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "water_filter_90": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.350062815117211,
+                "theta_deg": 135.18128635883218,
+                "phi_deg": 75.9007976704276
+            },
+            "orientation_in_bot": [
+                0.001228685168292263,
+                0.024602679936271854,
+                0.026780750239143267,
+                0.9993377756741407
+            ],
+            "position_in_world": [
+                0.401604026556015,
+                3.461808681488037,
+                0.5058726668357849
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "pebble_91",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "pebble_91",
+                "inside",
+                "tank_88"
+            ],
+            [
+                "pebble_91",
+                "under",
+                "tank_88"
+            ],
+            [
+                "tank_88",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "water_filter_90",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "water_filter_90",
+                "inside",
+                "tank_88"
+            ],
+            [
+                "water_filter_90",
+                "under",
+                "tank_88"
+            ]
+        ],
+        "inventory": []
+    },
+    "6_detect_surroundings": {
+        "coffee_table_fqluyq_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.3688695024898054,
+                "theta_deg": 143.62926802386477,
+                "phi_deg": 82.07621670449679
+            },
+            "orientation_in_bot": [
+                0.006710004052748251,
+                0.019912662369320235,
+                0.34957692719830497,
+                0.9366719989908787
+            ],
+            "position_in_world": [
+                0.06319240480661392,
+                3.470465660095215,
+                0.2481631636619568
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "pebble_91": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.3813856399476583,
+                "theta_deg": 134.66015275566104,
+                "phi_deg": 78.94239416028351
+            },
+            "orientation_in_bot": [
+                -0.02294970217302884,
+                0.012451018283288408,
+                -0.02885273033577665,
+                0.9992426148168669
+            ],
+            "position_in_world": [
+                0.4224031865596771,
+                3.5176987648010254,
+                0.38911184668540955
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "tank_88": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.43527544974251,
+                "theta_deg": 135.8543125948722,
+                "phi_deg": 75.59793136413113
+            },
+            "orientation_in_bot": [
+                -0.0005493789097880885,
+                0.024687392568271623,
+                -0.048700233792705334,
+                0.9985081462159081
+            ],
+            "position_in_world": [
+                0.367045521736145,
+                3.5397582054138184,
+                0.5357472896575928
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "water_filter_90": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.350062815117211,
+                "theta_deg": 135.18128635883218,
+                "phi_deg": 75.9007976704276
+            },
+            "orientation_in_bot": [
+                0.001228685168292263,
+                0.024602679936271854,
+                0.026780750239143267,
+                0.9993377756741407
+            ],
+            "position_in_world": [
+                0.401604026556015,
+                3.461808681488037,
+                0.5058726668357849
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "pebble_91",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "pebble_91",
+                "inside",
+                "tank_88"
+            ],
+            [
+                "pebble_91",
+                "under",
+                "tank_88"
+            ],
+            [
+                "tank_88",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "water_filter_90",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "water_filter_90",
+                "inside",
+                "tank_88"
+            ],
+            [
+                "water_filter_90",
+                "under",
+                "tank_88"
+            ]
+        ],
+        "inventory": []
+    },
+    "7_detect_surroundings": {
+        "coffee_table_fqluyq_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.3688695024898054,
+                "theta_deg": 143.62926802386477,
+                "phi_deg": 82.07621670449679
+            },
+            "orientation_in_bot": [
+                0.006710004052748251,
+                0.019912662369320235,
+                0.34957692719830497,
+                0.9366719989908787
+            ],
+            "position_in_world": [
+                0.06319240480661392,
+                3.470465660095215,
+                0.2481631636619568
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "pebble_91": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.3813856399476583,
+                "theta_deg": 134.66015275566104,
+                "phi_deg": 78.94239416028351
+            },
+            "orientation_in_bot": [
+                -0.02294970217302884,
+                0.012451018283288408,
+                -0.02885273033577665,
+                0.9992426148168669
+            ],
+            "position_in_world": [
+                0.4224031865596771,
+                3.5176987648010254,
+                0.38911184668540955
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "tank_88": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.43527544974251,
+                "theta_deg": 135.8543125948722,
+                "phi_deg": 75.59793136413113
+            },
+            "orientation_in_bot": [
+                -0.0005493789097880885,
+                0.024687392568271623,
+                -0.048700233792705334,
+                0.9985081462159081
+            ],
+            "position_in_world": [
+                0.367045521736145,
+                3.5397582054138184,
+                0.5357472896575928
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "water_filter_90": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.350062815117211,
+                "theta_deg": 135.18128635883218,
+                "phi_deg": 75.9007976704276
+            },
+            "orientation_in_bot": [
+                0.001228685168292263,
+                0.024602679936271854,
+                0.026780750239143267,
+                0.9993377756741407
+            ],
+            "position_in_world": [
+                0.401604026556015,
+                3.461808681488037,
+                0.5058726668357849
+            ],
+            "bot_in_world": [
+                0.5883458256721497,
+                1.173398494720459,
+                0.004772275686264038
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "pebble_91",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "pebble_91",
+                "inside",
+                "tank_88"
+            ],
+            [
+                "pebble_91",
+                "under",
+                "tank_88"
+            ],
+            [
+                "tank_88",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "water_filter_90",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "water_filter_90",
+                "inside",
+                "tank_88"
+            ],
+            [
+                "water_filter_90",
+                "under",
+                "tank_88"
+            ]
+        ],
+        "inventory": []
+    },
+    "8_BEV_surroundings": {
+        "coffee_table_fqluyq_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.3688693803860406,
+                "theta_deg": 143.629288501751,
+                "phi_deg": 82.07622495663674
+            },
+            "orientation_in_bot": [
+                0.006709982025129237,
+                0.019912574064587317,
+                0.34957710913856865,
+                0.9366719331236877
+            ],
+            "position_in_world": [
+                0.06319240480661392,
+                3.470465660095215,
+                0.2481631636619568
+            ],
+            "bot_in_world": [
+                0.5883457064628601,
+                1.1733986139297485,
+                0.00477232038974762
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "pebble_91": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.3813855338382397,
+                "theta_deg": 134.66017334501907,
+                "phi_deg": 78.94240112536012
+            },
+            "orientation_in_bot": [
+                -0.022949688073419797,
+                0.012450923911845765,
+                -0.028852542156474946,
+                0.9992426217501849
+            ],
+            "position_in_world": [
+                0.4224031865596771,
+                3.5176987648010254,
+                0.38911184668540955
+            ],
+            "bot_in_world": [
+                0.5883457064628601,
+                1.1733986139297485,
+                0.00477232038974762
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "tank_88": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.43527531395106,
+                "theta_deg": 135.85433750476105,
+                "phi_deg": 75.59794241524897
+            },
+            "orientation_in_bot": [
+                -0.0005488443536881463,
+                0.024687426511674302,
+                -0.048699844393256454,
+                0.9985081646627526
+            ],
+            "position_in_world": [
+                0.3670453727245331,
+                3.5397582054138184,
+                0.5357471108436584
+            ],
+            "bot_in_world": [
+                0.5883457064628601,
+                1.1733986139297485,
+                0.00477232038974762
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "water_filter_90": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.3500686334936938,
+                "theta_deg": 135.18137582806867,
+                "phi_deg": 75.90084891831064
+            },
+            "orientation_in_bot": [
+                0.001220005634698552,
+                0.024580674590033772,
+                0.026783634843549165,
+                0.9993382505075634
+            ],
+            "position_in_world": [
+                0.4016008675098419,
+                3.4618146419525146,
+                0.5058720707893372
+            ],
+            "bot_in_world": [
+                0.5883457064628601,
+                1.1733986139297485,
+                0.00477232038974762
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "pebble_91",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "pebble_91",
+                "inside",
+                "tank_88"
+            ],
+            [
+                "pebble_91",
+                "under",
+                "tank_88"
+            ],
+            [
+                "tank_88",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "water_filter_90",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "water_filter_90",
+                "inside",
+                "tank_88"
+            ],
+            [
+                "water_filter_90",
+                "under",
+                "tank_88"
+            ]
+        ],
+        "inventory": []
+    },
+    "9_BEV_surroundings": {
+        "coffee_table_fqluyq_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.3688693803860406,
+                "theta_deg": 143.629288501751,
+                "phi_deg": 82.07622495663674
+            },
+            "orientation_in_bot": [
+                0.006709982025129237,
+                0.019912574064587317,
+                0.34957710913856865,
+                0.9366719331236877
+            ],
+            "position_in_world": [
+                0.06319240480661392,
+                3.470465660095215,
+                0.2481631636619568
+            ],
+            "bot_in_world": [
+                0.5883457064628601,
+                1.1733986139297485,
+                0.00477232038974762
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "pebble_91": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.3813855338382397,
+                "theta_deg": 134.66017334501907,
+                "phi_deg": 78.94240112536012
+            },
+            "orientation_in_bot": [
+                -0.022949688073419797,
+                0.012450923911845765,
+                -0.028852542156474946,
+                0.9992426217501849
+            ],
+            "position_in_world": [
+                0.4224031865596771,
+                3.5176987648010254,
+                0.38911184668540955
+            ],
+            "bot_in_world": [
+                0.5883457064628601,
+                1.1733986139297485,
+                0.00477232038974762
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "tank_88": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.43527531395106,
+                "theta_deg": 135.85433750476105,
+                "phi_deg": 75.59794241524897
+            },
+            "orientation_in_bot": [
+                -0.0005488443536881463,
+                0.024687426511674302,
+                -0.048699844393256454,
+                0.9985081646627526
+            ],
+            "position_in_world": [
+                0.3670453727245331,
+                3.5397582054138184,
+                0.5357471108436584
+            ],
+            "bot_in_world": [
+                0.5883457064628601,
+                1.1733986139297485,
+                0.00477232038974762
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "water_filter_90": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.3500686334936938,
+                "theta_deg": 135.18137582806867,
+                "phi_deg": 75.90084891831064
+            },
+            "orientation_in_bot": [
+                0.001220005634698552,
+                0.024580674590033772,
+                0.026783634843549165,
+                0.9993382505075634
+            ],
+            "position_in_world": [
+                0.4016008675098419,
+                3.4618146419525146,
+                0.5058720707893372
+            ],
+            "bot_in_world": [
+                0.5883457064628601,
+                1.1733986139297485,
+                0.00477232038974762
+            ],
+            "path": "./prompt_files/data/put_water_filter_and_pebble_in_tank/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "pebble_91",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "pebble_91",
+                "inside",
+                "tank_88"
+            ],
+            [
+                "pebble_91",
+                "under",
+                "tank_88"
+            ],
+            [
+                "tank_88",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "water_filter_90",
+                "ontop",
+                "coffee_table_fqluyq_0"
+            ],
+            [
+                "water_filter_90",
+                "inside",
+                "tank_88"
+            ],
+            [
+                "water_filter_90",
+                "under",
+                "tank_88"
+            ]
+        ],
+        "inventory": []
+    }
+}

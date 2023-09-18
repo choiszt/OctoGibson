@@ -1,0 +1,23 @@
+{
+    "response": {
+        "explain": " The previous action code successfully cooked the garlic clove. The next step is to take out the butter from the fridge.",
+        "subtask": "\n(1) Open the fridge\n(2) Take out the garlic clove\n(3) Cook the garlic clove\n(4) Take out the butter\n(5) Place the cooked garlic clove and butter on the plate",
+        "code": "def act(robot,env,camera):\n    # Subtask 4: Take out the butter\n    fridge = registry(env,\"fridge_dszchb_0\")\n    butter = registry(env,\"butter_208\")\n    MoveBot(env, robot, fridge, camera)\n    donothing(env)\n    EasyGrasp(robot, butter)\n    donothing(env)\n",
+        "inventory": "garlic_clove_209,butter_208",
+        "obj_2": [],
+        "obj_3": [
+            [
+                "butter_208",
+                "inside",
+                "fridge_dszchb_0",
+                "0"
+            ],
+            [
+                "robot",
+                "nextto",
+                "fridge_dszchb_0",
+                "1"
+            ]
+        ]
+    }
+}

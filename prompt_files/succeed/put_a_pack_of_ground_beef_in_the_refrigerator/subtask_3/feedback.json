@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the fridge.\n(2) Grasp the pack of ground beef.\n(3) Put the pack of ground beef in the fridge.",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Put the pack of ground beef in the fridge\n    fridge = registry(env, \"fridge_xyejdx_0\")\n    pack_of_ground_beef = registry(env, \"pack_of_ground_beef_87\")\n    put_inside(robot, pack_of_ground_beef, fridge)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": true
+}

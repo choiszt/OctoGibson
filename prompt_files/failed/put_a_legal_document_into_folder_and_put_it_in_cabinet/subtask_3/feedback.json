@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the cabinet.\n(2) Take the folder out of the cabinet.\n(3) Put the legal document into the folder.\n(4) Put the folder (with the document inside) back into the cabinet.\n(5) Close the cabinet.",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Put the legal document into the folder\n    legal_document_188 = registry(env,\"legal_document_188\")\n    folder_190 = registry(env,\"folder_190\")\n    put_inside(robot, legal_document_188, folder_190)\n    donothing(env)\n",
+    "error": "list.remove(x): x not in list",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

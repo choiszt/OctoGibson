@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the checkout counter.\n(2) Grasp the money.\n(3) Put the money on the cash register.",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Put the money on the cash register\n    cash_register_142 = registry(env,\"cash_register_142\")\n    money_146 = registry(env,\"money_146\")\n    put_ontop(robot, money_146, cash_register_142)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": true
+}

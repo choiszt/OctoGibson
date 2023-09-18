@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot closer to the copper wire.\n(2) Grasp the copper wire.\n(3) Explore the environment to find the vehicle.\n(4) Move the robot closer to the vehicle.\n(5) Put the copper wire into the vehicle.",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Explore the environment to find the vehicle\n    # Since the vehicle is not observed in the environment, we need to explore the environment to find it.\n    # Here we assume that the function explore_environment can help the robot to explore the environment and find the vehicle.\n    explore_environment(robot, env, camera)\n    donothing(env)\n",
+    "error": "name 'explore_environment' is not defined",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

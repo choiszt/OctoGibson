@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register the wallet and the backpack.\n(2) Grasp the wallet.\n(3) Open the backpack.\n(4) Put the wallet in the backpack.",
+    "code": "def act(robot,env,camera):\n    # Subtask 4: Put the wallet in the backpack\n    wallet_87 = registry(env,\"wallet_87\")\n    backpack_82 = registry(env,\"backpack_82\")\n    put_inside(robot, wallet_87, backpack_82)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

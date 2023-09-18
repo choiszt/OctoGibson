@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the cabinet.\n(2) Take the folder out of the cabinet.\n(3) Put the legal document into the folder.\n(4) Put the folder (with the document inside) back into the cabinet.\n(5) Close the cabinet.",
+    "code": "def act(robot,env,camera):\n    # Subtask 2: Take the folder out of the cabinet\n    folder_190 = registry(env,\"folder_190\")\n    EasyGrasp(robot, folder_190)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

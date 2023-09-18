@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move to the saucer.\n(2) Grasp the saucer.\n(3) Move to the countertop.\n(4) Put the saucer on the countertop.",
+    "code": "def act(robot,env,camera):\n    # Subtask 4: Put the saucer on the countertop\n    saucer_192 = registry(env,\"saucer_192\")\n    countertop_tpuwys_1 = registry(env,\"countertop_tpuwys_1\")\n    put_ontop(robot, saucer_192, countertop_tpuwys_1)\n    donothing(env)\n",
+    "error": "Cannot Put Ontop! robot is not within four meters of <omnigibson.objects.dataset_object.DatasetObject object at 0x7f53a719a710>",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

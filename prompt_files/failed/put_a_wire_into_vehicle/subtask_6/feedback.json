@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot closer to the wicker basket that contains the copper wire.\n(2) Grasp the wicker basket that contains the copper wire.\n(3) Move the robot closer to the vehicle.\n(4) Put the wicker basket (with the copper wire inside) into the vehicle.",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Move the robot closer to the wicker basket that contains the copper wire.\n    wicker_basket_276 = registry(env, \"wicker_basket_276\")\n    MoveBot(env, robot, wicker_basket_276, camera)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

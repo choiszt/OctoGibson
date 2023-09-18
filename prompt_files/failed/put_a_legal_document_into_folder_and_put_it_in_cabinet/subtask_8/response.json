@@ -1,0 +1,29 @@
+{
+    "response": {
+        "explain": " The previous action code successfully put the folder (with the document inside) back into the cabinet. Now, the next step is to close the cabinet.",
+        "subtask": "\n(1) Open the cabinet.\n(2) Take the folder out of the cabinet.\n(3) Grasp the legal document.\n(4) Put the legal document into the folder.\n(5) Move to the cabinet.\n(6) Put the folder (with the document inside) back into the cabinet.\n(7) Close the cabinet.",
+        "code": "def act(robot,env,camera):\n    # Subtask 7: Close the cabinet\n    bottom_cabinet_nddvba_0 = registry(env,\"bottom_cabinet_nddvba_0\")\n    close(robot, bottom_cabinet_nddvba_0)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [
+            [
+                "bottom_cabinet_nddvba_0",
+                "openable",
+                "0"
+            ]
+        ],
+        "obj_3": [
+            [
+                "folder_190",
+                "inside",
+                "bottom_cabinet_nddvba_0",
+                "1"
+            ],
+            [
+                "legal_document_188",
+                "inside",
+                "folder_190",
+                "1"
+            ]
+        ]
+    }
+}

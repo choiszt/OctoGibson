@@ -1,0 +1,23 @@
+{
+    "response": {
+        "explain": " The previous action was successful and the robot has moved to the wrapping paper. The next step is to grasp the wrapping paper.",
+        "subtask": "\n(1) Move the robot to the wrapping paper.\n(2) Grasp the wrapping paper.\n(3) Move the robot to the recycling bin.\n(4) Put the wrapping paper in the recycling bin.\n(5) Move the robot to the newspaper.\n(6) Grasp the newspaper.\n(7) Move the robot to the recycling bin.\n(8) Put the newspaper in the recycling bin.\n(9) Move the robot to the notepad.\n(10) Grasp the notepad.\n(11) Move the robot to the recycling bin.\n(12) Put the notepad in the recycling bin.",
+        "code": "def act(robot,env,camera):\n  # Subtask 2: Grasp the wrapping paper.\n  wrapping_paper_174 = registry(env,\"wrapping_paper_174\")\n  EasyGrasp(robot, wrapping_paper_174)\n  donothing(env)\n",
+        "inventory": "wrapping_paper_174",
+        "obj_2": [],
+        "obj_3": [
+            [
+                "robot",
+                "nextto",
+                "wrapping_paper_174",
+                "1"
+            ],
+            [
+                "wrapping_paper_174",
+                "inside",
+                "robot",
+                "1"
+            ]
+        ]
+    }
+}

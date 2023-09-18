@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the oven.\n(2) Open the oven.\n(3) Grasp the pork chop from the oven.\n(4) Move the robot to the fridge.\n(5) Grasp the pork chop from the fridge.\n(6) Move the robot back to the oven.\n(7) Put the pork chop inside the oven.\n(8) Close the oven.\n(9) Toggle on the oven to heat the pork chop.\n(10) After heating, open the oven and grasp the pork chop from the oven.\n(11) Move the robot to the countertop where the plates are.\n(12) Grasp a plate from the countertop.\n(13) Put the heated pork chop on the plate.",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Move the robot to the oven\n    oven = registry(env, \"oven_wuinhm_0\")\n    MoveBot(env, robot, oven, camera)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

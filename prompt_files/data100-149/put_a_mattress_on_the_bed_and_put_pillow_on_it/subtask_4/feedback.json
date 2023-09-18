@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the bed.\n(2) Check if the mattress is on the bed. If not, grasp the mattress and put it on the bed.\n(3) Check if the pillow is on the bed. If not, grasp the pillow and put it on the bed.",
+    "code": "def act(robot,env,camera):\n    # Subtask 2: Check if the mattress is on the bed. If not, grasp the mattress and put it on the bed.\n    mattress = registry(env, \"mattress_82\")\n    bed = registry(env, \"bed_zrumze_0\")\n    if ('mattress_82', 'ontop', 'bed_zrumze_0') not in env.relations:\n        EasyGrasp(robot, mattress)\n        donothing(env)\n        put_ontop(robot, mattress, bed)\n        donothing(env)\n",
+    "error": "'Environment' object has no attribute 'relations'",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

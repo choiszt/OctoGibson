@@ -43,13 +43,18 @@ def EasyGrasp(robot, obj, dis_threshold=4.0):
         raise Exception(f"Cannot Grasp! robot is not within four meters of {obj}")
 
 def MoveBot(env, robot,obj,camera):
-    pos = get_robot_pos(obj)
-    robot.set_position(pos)
-    Update_camera_pos(camera,robot,obj)
-    if robot.inventory:
-        # relationship between name and variable.
-        for obj in robot.inventory: 
-            Hold(env, robot, obj)
+    try:
+        pos = get_robot_pos(obj)
+        robot.set_position(pos)
+        Update_camera_pos(camera,robot,obj)
+        if robot.inventory:
+            # relationship between name and variable.
+            for obj in robot.inventory: 
+                Hold(env, robot, obj)
+    except:
+        if type(obj)==str or type(robot)==str:
+            raise Exception(f"please first register them!")
+        raise Exception("something went wrong! Please plan again")
 
 def EasyDrop(robot,obj1, obj2, dis_threshold=4.0):  
     # Drop the objects within robot's hands

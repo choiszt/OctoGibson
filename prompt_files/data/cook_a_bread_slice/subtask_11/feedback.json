@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the bottom cabinet.\n(2) Grasp a bread slice from the bottom cabinet.\n(3) Move to the toaster.\n(4) Grasp a bread slice.\n(5) Move to the toaster.\n(6) Put the bread slice in the toaster.\n(7) Move closer to the toaster.\n(8) Turn on the toaster.\n(9) Wait for the bread slice to be cooked.",
+    "code": "def act(robot,env,camera):\n    # Subtask 7: Move closer to the toaster\n    toaster_85 = registry(env,\"toaster_85\")\n    MoveBot(env, robot, toaster_85, camera)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

@@ -1,0 +1,23 @@
+{
+    "response": {
+        "explain": " The previous action code was successful in cooking the brisket. Now, the next step is to put the cooked brisket on the chopping board. ",
+        "subtask": "\n(1) Open the fridge\n(2) Take the brisket out of the fridge\n(3) Cook the brisket\n(4) Put the cooked brisket on the chopping board",
+        "code": "def act(robot,env,camera):\n    # Subtask 4: Put the cooked brisket on the chopping board\n    cutting_board = registry(env,\"cutting_board_188\")\n    brisket = registry(env,\"brisket_189\")\n    put_ontop(robot, brisket, cutting_board)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [
+            [
+                "brisket_189",
+                "cookable",
+                "0"
+            ]
+        ],
+        "obj_3": [
+            [
+                "brisket_189",
+                "ontop",
+                "cutting_board_188",
+                "1"
+            ]
+        ]
+    }
+}

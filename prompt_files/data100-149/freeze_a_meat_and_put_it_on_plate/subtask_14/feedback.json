@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register all the objects\n(2) Grasp the meat from the plate\n(3) Put the meat in the fridge\n(4) Freeze the meat\n(5) Take the frozen meat out of the fridge\n(6) Put the frozen meat back on the plate",
+    "code": "def act(robot,env,camera):\n    # Subtask 5: Take the frozen meat out of the fridge\n    pork_chop_188 = registry(env,\"pork_chop_188\")\n    EasyGrasp(robot, pork_chop_188)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

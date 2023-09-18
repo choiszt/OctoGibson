@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to a place where it can observe more objects.\n(2) Find the bell pepper.\n(3) Grasp the bell pepper.\n(4) Move the robot to the stove.\n(5) Put the bell pepper in the frying pan.\n(6) Cook the bell pepper.",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Move the robot to a place where it can observe more objects.\n    shelf_owvfik_0 = registry(env, \"shelf_owvfik_0\")\n    MoveBot(env, robot, shelf_owvfik_0, camera)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

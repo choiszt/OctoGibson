@@ -1,0 +1,23 @@
+{
+    "response": {
+        "explain": " The previous action code has successfully put the tupperware inside the refrigerator. The next step is to close the refrigerator.",
+        "subtask": "\n(1) Move to the tupperware\n(2) Grasp the tupperware\n(3) Move to the refrigerator\n(4) Open the refrigerator\n(5) Put the tupperware inside the refrigerator\n(6) Close the refrigerator",
+        "code": "def act(robot,env,camera):\n    # Subtask 6: Close the refrigerator\n    fridge_xyejdx_0 = registry(env,\"fridge_xyejdx_0\")\n    close(robot, fridge_xyejdx_0)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [
+            [
+                "fridge_xyejdx_0",
+                "openable",
+                "0"
+            ]
+        ],
+        "obj_3": [
+            [
+                "tupperware_88",
+                "inside",
+                "fridge_xyejdx_0",
+                "1"
+            ]
+        ]
+    }
+}

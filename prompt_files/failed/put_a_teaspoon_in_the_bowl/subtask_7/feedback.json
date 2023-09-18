@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Find the teaspoon.\n(2) Register the teaspoon.\n(3) Find a large object that is near the teaspoon.\n(4) Register the large object.\n(5) Open the large object.\n(6) Move to the large object.\n(7) Grasp the teaspoon.\n(8) Find the bowl.\n(9) Register the bowl.\n(10) Move to the bowl.\n(11) Put the teaspoon in the bowl.",
+    "code": "def act(robot,env,camera):\n    # Subtask 5: Open the large object\n    open(robot, bottom_cabinet_no_top_qudfwe_0)\n    donothing(env)\n",
+    "error": "name 'bottom_cabinet_no_top_qudfwe_0' is not defined",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

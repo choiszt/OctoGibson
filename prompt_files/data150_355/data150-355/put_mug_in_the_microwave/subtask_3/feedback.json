@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the bottom cabinet.\n(2) Grasp the mug from the bottom cabinet.\n(3) Move to the microwave.\n(4) Open the microwave.\n(5) Put the mug in the microwave.\n(6) Close the microwave.",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Move to the microwave\n    microwave_bfbeeb_0 = registry(env,\"microwave_bfbeeb_0\")\n    MoveBot(env, robot, microwave_bfbeeb_0, camera)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

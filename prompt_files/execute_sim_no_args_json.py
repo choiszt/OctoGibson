@@ -32,7 +32,7 @@ def parse_args():
 def sim_process(args):
     try:    
         idx = args.idx
-        with open('/shared/liushuai/OmniGibson/EVLM_Task/all.json') as f: #TODO change the path
+        with open('/shared/liushuai/OmniGibson/EVLM_Task/917rerun.json') as f: #TODO change the path
             data = json.load(f)
         EVLM_name=sorted(list(data))[idx]
         if "train" in data[EVLM_name]['split']:

@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the first candle (beeswax_candle_92).\n(2) Grasp the first candle (beeswax_candle_92).\n(3) Move the robot to the second candle (beeswax_candle_93).\n(4) Grasp the second candle (beeswax_candle_93).\n(5) Move the robot to the basket (wicker_basket_88).\n(6) Put the first candle (beeswax_candle_92) in the basket (wicker_basket_88).\n(7) Put the second candle (beeswax_candle_93) in the basket (wicker_basket_88).",
+    "code": "def act(robot,env,camera):\n    # Subtask 5: Move the robot to the basket (wicker_basket_88)\n    wicker_basket_88 = registry(env,\"wicker_basket_88\")\n    MoveBot(env, robot, wicker_basket_88, camera)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

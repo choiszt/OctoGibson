@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the microwave.\n(2) Open the microwave.\n(3) Grasp the hamburger from the microwave.\n(4) Move the robot to the microwave.\n(5) Open the microwave.\n(6) Put the hamburger inside the microwave.\n(7) Close the microwave.\n(8) Toggle on the microwave to heat the hamburger.\n(9) Wait for the hamburger to be heated.\n(10) Toggle off the microwave after heating.\n(11) Open the microwave.\n(12) Grasp the heated hamburger from the microwave.\n(13) Check if the hamburger is heated. If not, repeat steps 8-12.",
+    "code": "def act(robot,env,camera):\n    # Subtask 11: Open the microwave.\n    microwave_bfbeeb_0 = registry(env,\"microwave_bfbeeb_0\")\n    open(robot, microwave_bfbeeb_0)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

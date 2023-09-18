@@ -1,0 +1,34 @@
+{
+    "response": {
+        "explain": " The previous action code has successfully turned on the oven. Now, we need to wait for the ham hocks to be cooked. ",
+        "subtask": "\n(1) Grasp the ham hocks\n(2) Move to the oven\n(3) Grasp the stockpot\n(4) Put the ham hocks in the stockpot\n(5) Put the stockpot in the oven\n(6) Turn on the oven\n(7) Wait for the ham hocks to be cooked",
+        "code": "def act(robot,env,camera):\n    # Subtask 7: Wait for the ham hocks to be cooked\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [
+            [
+                "ham_hock_82",
+                "cookable",
+                "1"
+            ],
+            [
+                "oven_wuinhm_0",
+                "togglable",
+                "1"
+            ]
+        ],
+        "obj_3": [
+            [
+                "ham_hock_82",
+                "inside",
+                "stockpot_81",
+                "1"
+            ],
+            [
+                "stockpot_81",
+                "inside",
+                "oven_wuinhm_0",
+                "1"
+            ]
+        ]
+    }
+}

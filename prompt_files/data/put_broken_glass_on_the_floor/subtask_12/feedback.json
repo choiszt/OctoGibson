@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Grasp the broken glass.\n(2) Move the robot to a position where the broken glass will naturally fall to the floor when the robot opens its gripper.\n(3) Use the EasyGrasp function with the robot and the broken glass as arguments to open the robot's gripper and let the broken glass fall onto the floor.",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Use the EasyGrasp function with the robot and the broken glass as arguments to open the robot's gripper and let the broken glass fall onto the floor.\n    broken_glass_170 = registry(env,\"broken_glass_170\")\n    EasyGrasp(robot, broken_glass_170)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

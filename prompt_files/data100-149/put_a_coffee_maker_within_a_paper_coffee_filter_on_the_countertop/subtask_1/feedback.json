@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the top cabinet\n(2) Take the paper coffee filter from the cabinet\n(3) Put the coffee maker (french press) within the paper coffee filter\n(4) Put the coffee maker within the paper coffee filter on the countertop",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Open the top cabinet\n    top_cabinet = registry(env, \"top_cabinet_dmwxyl_2\")\n    open(robot, top_cabinet)\n    donothing(env)\n",
+    "error": "Cannot open! robot is not within four meters of <omnigibson.objects.dataset_object.DatasetObject object at 0x7f186fbcfc50>",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

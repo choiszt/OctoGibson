@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register the trash can, the valentine wreath, and the leaf.\n(2) Move the robot to the valentine wreath.\n(3) Grasp the valentine wreath.\n(4) Move the robot to the leaf.\n(5) Grasp the leaf.\n(6) Move the robot to the trash can.\n(7) Put the valentine wreath in the trash can.\n(8) Put the leaf in the trash can.",
+    "code": "def act(robot,env,camera):\n  # Subtask 1: Register the trash can, the valentine wreath, and the leaf.\n  trash_can_276 = registry(env, \"trash_can_276\")\n  valentine_wreath_280 = registry(env, \"valentine_wreath_280\")\n  leaf_277 = registry(env, \"leaf_277\")\n  \n  # Subtask 2: Move the robot to the valentine wreath.\n  MoveBot(env, robot, valentine_wreath_280, camera)\n  donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

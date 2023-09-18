@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Grasp the hand_towel_82 from the wicker_basket_84.\n(2) Fold the hand_towel_82.\n(3) Put the folded hand_towel_82 back into the wicker_basket_84.",
+    "code": "def act(robot,env,camera):\n    # Subtask 2: Fold the hand_towel_82.\n    hand_towel_82 = registry(env,\"hand_towel_82\")\n    fold(robot, hand_towel_82)\n    donothing(env)\n",
+    "error": "Wrong state or operation ('foldable', 1)",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

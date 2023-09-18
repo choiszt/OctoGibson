@@ -1,0 +1,23 @@
+{
+    "response": {
+        "explain": " The previous action code has successfully toggled off the clothes dryer. The next step is to take out the rag from the clothes dryer.",
+        "subtask": "\n(1) Toggle off the clothes dryer.\n(2) Take out the rag from the clothes dryer.\n(3) Fold the rag.",
+        "code": "def act(robot,env,camera):\n    # Subtask 2: Take out the rag from the clothes dryer.\n    rag = registry(env, \"rag_194\")\n    clothes_dryer = registry(env, \"clothes_dryer_zlmnfg_0\")\n    open(robot, clothes_dryer)\n    donothing(env)\n    EasyGrasp(robot, rag)\n    donothing(env)\n",
+        "inventory": "rag_194",
+        "obj_2": [
+            [
+                "clothes_dryer_zlmnfg_0",
+                "openable",
+                "1"
+            ]
+        ],
+        "obj_3": [
+            [
+                "rag_194",
+                "inside",
+                "clothes_dryer_zlmnfg_0",
+                "0"
+            ]
+        ]
+    }
+}

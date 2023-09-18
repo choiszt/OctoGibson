@@ -1,0 +1,16 @@
+{
+    "response": {
+        "explain": " Since there is no previous action code or execution error, we can start planning from scratch. The task goal is to saute an asparagus and a green bean. To achieve this, we need to first get the asparagus and green bean from the fridge, then cook them on the stove. ",
+        "subtask": "\n(1) Open the fridge.\n(2) Take out the asparagus from the fridge.\n(3) Take out the green bean from the fridge.\n(4) Close the fridge.\n(5) Move to the stove.\n(6) Cook the asparagus and green bean on the stove.",
+        "code": "def act(robot,env,camera):\n    # Subtask 1: Open the fridge\n    fridge = registry(env, \"fridge_dszchb_0\")\n    open(robot, fridge)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [
+            [
+                "fridge_dszchb_0",
+                "openable",
+                "1"
+            ]
+        ],
+        "obj_3": []
+    }
+}

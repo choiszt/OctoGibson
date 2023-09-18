@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the shopping cart.\n(2) Grasp the box of corn flakes from the shopping cart.\n(3) Move the robot to the checkout counter.\n(4) Put the box of corn flakes on the checkout counter.",
+    "code": "def act(robot,env,camera):\n    # Subtask 2: Grasp the box of corn flakes from the shopping cart.\n    box_of_corn_flakes_142 = registry(env,\"box_of_corn_flakes_142\")\n    EasyGrasp(robot, box_of_corn_flakes_142)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

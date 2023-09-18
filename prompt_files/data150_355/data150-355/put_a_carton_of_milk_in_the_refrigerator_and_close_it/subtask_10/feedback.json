@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the fridge.\n(2) Open the fridge.\n(3) Grasp the carton of milk.\n(4) Move the robot to the fridge.\n(5) Put the carton of milk inside the fridge.\n(6) Close the fridge.",
+    "code": "def act(robot,env,camera):\n    # Subtask 5: Put the carton of milk inside the fridge\n    fridge = registry(env,\"fridge_xyejdx_0\")\n    carton_of_milk = registry(env,\"carton_of_milk_86\")\n    put_inside(robot, carton_of_milk, fridge)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

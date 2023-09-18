@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Put the saucepot with the carrot onto the stove\n(2) Cook the carrot",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Put the saucepot with the carrot onto the stove\n    saucepot = registry(env,\"saucepot_150\")\n    stove = registry(env,\"stove_rgpphy_0\")\n    put_ontop(robot, saucepot, stove)\n    donothing(env)\n",
+    "error": "list.remove(x): x not in list",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

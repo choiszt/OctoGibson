@@ -1,0 +1,28 @@
+{
+    "response": {
+        "explain": " The previous action code successfully put the sweet corn into the stockpot. Now, the next step is to cook the sweet corn on the stove. ",
+        "subtask": "\n(1) Open the fridge\n(2) Take the sweet corn out of the fridge\n(3) Put the sweet corn into the stockpot\n(4) Cook the sweet corn on the stove",
+        "code": "def act(robot,env,camera):\n    # Subtask 4: Cook the sweet corn on the stove\n    stove = registry(env,\"stove_rgpphy_0\")\n    stockpot = registry(env,\"stockpot_155\")\n    cook(robot, stockpot)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [
+            [
+                "stockpot_155",
+                "heatable",
+                "1"
+            ],
+            [
+                "sweet_corn_150",
+                "cookable",
+                "0"
+            ]
+        ],
+        "obj_3": [
+            [
+                "sweet_corn_150",
+                "inside",
+                "stockpot_155",
+                "1"
+            ]
+        ]
+    }
+}

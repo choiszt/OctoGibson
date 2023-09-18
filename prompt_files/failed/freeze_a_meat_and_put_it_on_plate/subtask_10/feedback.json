@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register all the objects\n(2) Grasp the meat from the plate\n(3) Check if the fridge is open, if not, open the fridge\n(4) Freeze the meat\n(5) Take the frozen meat out of the fridge\n(6) Put the frozen meat back on the plate",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Check if the fridge is open, if not, open the fridge\n    fridge_dszchb_0 = registry(env,\"fridge_dszchb_0\")\n    observed_objects = env.get_observed_objects()\n    for obj in observed_objects:\n        if obj[0] == 'fridge_dszchb_0':\n            if ('openable', 0) in obj[1]:\n                open(robot, fridge_dszchb_0)\n                donothing(env)\n                break\n",
+    "error": "'Environment' object has no attribute 'get_observed_objects'",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register the bottom_cabinet_no_top_qudfwe_0.\n(2) Find the teaspoon inside the bottom_cabinet_no_top_qudfwe_0.\n(3) Register the teaspoon.\n(4) Move to the bottom_cabinet_no_top_qudfwe_0.\n(5) Grasp the teaspoon.\n(6) Find the bowl.\n(7) Register the bowl.\n(8) Move to the bowl.\n(9) Put the teaspoon in the bowl.",
+    "code": "def act(robot,env,camera):\n    # Subtask 2: Find the teaspoon inside the bottom_cabinet_no_top_qudfwe_0\n    teaspoon = registry(env, \"teaspoon\")\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

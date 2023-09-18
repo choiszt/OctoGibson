@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register the fire alarm and the breakfast table.\n(2) Toggle on the fire alarm.\n(3) Grasp the fire alarm.\n(4) Move to the breakfast table.\n(5) Put the fire alarm on the breakfast table.",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Grasp the fire alarm\n    fire_alarm_88 = registry(env, \"fire_alarm_88\")\n    EasyGrasp(robot, fire_alarm_88)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the top cabinet.\n(2) Grasp the jar.\n(3) Close the jar.",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Open the top cabinet\n    top_cabinet = registry(env, \"top_cabinet_dmwxyl_0\")\n    open(robot, top_cabinet)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the countertop.\n(2) Grasp the daffodil bulb.\n(3) Put the daffodil bulb in the mixing bowl.\n(4) Grasp the mixing bowl.\n(5) Move the robot to the top cabinet.\n(6) Open the top cabinet.\n(7) Put the mixing bowl in the top cabinet.\n(8) Close the top cabinet.",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Put the daffodil bulb in the mixing bowl\n    mixing_bowl_173 = registry(env,\"mixing_bowl_173\")\n    daffodil_bulb_170 = registry(env,\"daffodil_bulb_170\")\n    put_ontop(robot, daffodil_bulb_170, mixing_bowl_173)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Grasp the plywood.\n(2) Put the plywood on the floor.",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Grasp the plywood\n    plywood_85 = registry(env,\"plywood_85\")\n    EasyGrasp(robot, plywood_85)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": true
+}

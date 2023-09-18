@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the fridge\n(2) Take the sweet corn out of the fridge\n(3) Put the sweet corn into the stockpot\n(4) Heat the sweet corn in the stockpot\n(5) Cook the sweet corn on the stove",
+    "code": "def act(robot,env,camera):\n    # Subtask 4: Heat the sweet corn in the stockpot\n    stockpot = registry(env,\"stockpot_155\")\n    heat(robot, stockpot)\n    donothing(env)\n",
+    "error": "ufunc 'bitwise_or' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

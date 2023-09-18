@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the fridge.\n(2) Open the fridge.\n(3) Grasp the carrot from the fridge.\n(4) Freeze the carrot.",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Grasp the carrot from the fridge\n    carrot = registry(env, \"carrot_178\")\n    EasyGrasp(robot, carrot)\n    donothing(env)\n",
+    "error": "State openable of object fridge_xyejdx_0 is not 1\n",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

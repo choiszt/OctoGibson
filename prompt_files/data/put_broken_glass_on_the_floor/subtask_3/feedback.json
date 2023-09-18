@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Grasp the broken glass.\n(2) Drop the broken glass onto the floor.",
+    "code": "def act(robot,env,camera):\n    # Subtask 2: Drop the broken glass onto the floor\n    drop(robot, \"broken_glass_170\")\n    donothing(env)\n",
+    "error": "name 'drop' is not defined",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

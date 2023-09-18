@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register the club sandwich, the carryall, and the watermelon.\n(2) Grasp the watermelon.\n(3) Move the watermelon away from the club sandwich.\n(4) Grasp the club sandwich.\n(5) Put the club sandwich in the carryall.",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Register the club sandwich, the carryall, and the watermelon.\n    club_sandwich_37 = registry(env,\"club_sandwich_37\")\n    tote_35 = registry(env,\"tote_35\")\n    watermelon_38 = registry(env,\"watermelon_38\")\n    \n    # Subtask 2: Grasp the watermelon.\n    EasyGrasp(robot, watermelon_38)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": true
+}

@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register the pork chop and the plate.\n(2) Grasp the pork chop from the plate on the countertop.\n(3) Put the pork chop back on the plate.",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Register the pork chop and the plate\n    pork_chop_188 = registry(env,\"pork_chop_188\")\n    plate_190 = registry(env,\"plate_190\")\n    \n    # Subtask 2: Grasp the pork chop from the plate on the countertop\n    EasyGrasp(robot, pork_chop_188)\n    donothing(env)\n    \n    # Subtask 3: Put the pork chop back on the plate\n    put_ontop(robot, pork_chop_188, plate_190)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": true
+}

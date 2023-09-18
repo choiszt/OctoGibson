@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Find the teaspoon.\n(2) Register the teaspoon.\n(3) Find a large object that is near the teaspoon.\n(4) Register the large object.\n(5) Move to the large object.\n(6) Grasp the teaspoon.\n(7) Move to the bowl.\n(8) Put the teaspoon in the bowl.",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Find a large object that is near the teaspoon\n    large_object = registry(env, \"large_object\")\n    MoveBot(env, robot, large_object, camera)\n    donothing(env)\n",
+    "error": "something went wrong! Please plan again",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

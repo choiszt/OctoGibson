@@ -1,0 +1,2073 @@
+{
+    "task": "store_strawberry_in_a_bowl",
+    "0_detect_surroundings": {
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.609845694663471,
+                "theta_deg": 118.25321419979653,
+                "phi_deg": 57.02077335752264
+            },
+            "orientation_in_bot": [
+                0.005532040886293469,
+                0.021314947691552663,
+                0.2557237316183285,
+                0.9664990649844084
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance0_detect_surroundings.png"
+        },
+        "strawberries_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.4517887880715548,
+                "theta_deg": 118.04877406498476,
+                "phi_deg": 46.82756786802021
+            },
+            "orientation_in_bot": [
+                0.1452269026727354,
+                0.7501224695677444,
+                -0.296753227175743,
+                0.5728550859951006
+            ],
+            "position_in_world": [
+                -1.5085724592208862,
+                1.1486302614212036,
+                0.9743968844413757
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance0_detect_surroundings.png"
+        },
+        "bowl_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.9488726421616898,
+                "theta_deg": 8.606885910270888,
+                "phi_deg": 62.80844280857048
+            },
+            "orientation_in_bot": [
+                -0.003723400090492983,
+                0.021867266287293855,
+                -0.17143322086257204,
+                0.9849459933121061
+            ],
+            "position_in_world": [
+                0.08208684623241425,
+                -0.5330869555473328,
+                0.9690073132514954
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance0_detect_surroundings.png"
+        },
+        "countertop_tpuwys_2": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.020502123367773,
+                "theta_deg": 9.331145867775376,
+                "phi_deg": 66.46968398385195
+            },
+            "orientation_in_bot": [
+                0.005532039325870948,
+                0.02131494740529959,
+                0.25572372264737003,
+                0.9664990673732579
+            ],
+            "position_in_world": [
+                0.20455229970466282,
+                -0.5556479370210349,
+                0.8902008019217902
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance0_detect_surroundings.png"
+        },
+        "teaspoon_94": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.020382826063566,
+                "theta_deg": 15.211076597090063,
+                "phi_deg": 65.97301398297331
+            },
+            "orientation_in_bot": [
+                0.04873166574057817,
+                0.024307440054752105,
+                -0.060966665778104764,
+                0.9966531185803986
+            ],
+            "position_in_world": [
+                0.25376200675964355,
+                -0.37217575311660767,
+                0.9041198492050171
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance0_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "strawberries_86",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "bowl_85",
+                "ontop",
+                "countertop_tpuwys_2"
+            ],
+            [
+                "countertop_tpuwys_2",
+                "under",
+                "bowl_85"
+            ],
+            [
+                "teaspoon_94",
+                "ontop",
+                "countertop_tpuwys_2"
+            ]
+        ],
+        "inventory": []
+    },
+    "1_detect_surroundings": {
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.609845694663471,
+                "theta_deg": 118.25321419979653,
+                "phi_deg": 57.02077335752264
+            },
+            "orientation_in_bot": [
+                0.005532040886293469,
+                0.021314947691552663,
+                0.2557237316183285,
+                0.9664990649844084
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance1_detect_surroundings.png"
+        },
+        "strawberries_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.4517887880715548,
+                "theta_deg": 118.04877406498476,
+                "phi_deg": 46.82756786802021
+            },
+            "orientation_in_bot": [
+                0.1452269026727354,
+                0.7501224695677444,
+                -0.296753227175743,
+                0.5728550859951006
+            ],
+            "position_in_world": [
+                -1.5085724592208862,
+                1.1486302614212036,
+                0.9743968844413757
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance1_detect_surroundings.png"
+        },
+        "bowl_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.9488726421616898,
+                "theta_deg": 8.606885910270888,
+                "phi_deg": 62.80844280857048
+            },
+            "orientation_in_bot": [
+                -0.003723400090492983,
+                0.021867266287293855,
+                -0.17143322086257204,
+                0.9849459933121061
+            ],
+            "position_in_world": [
+                0.08208684623241425,
+                -0.5330869555473328,
+                0.9690073132514954
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance1_detect_surroundings.png"
+        },
+        "countertop_tpuwys_2": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.020502123367773,
+                "theta_deg": 9.331145867775376,
+                "phi_deg": 66.46968398385195
+            },
+            "orientation_in_bot": [
+                0.005532039325870948,
+                0.02131494740529959,
+                0.25572372264737003,
+                0.9664990673732579
+            ],
+            "position_in_world": [
+                0.20455229970466282,
+                -0.5556479370210349,
+                0.8902008019217902
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance1_detect_surroundings.png"
+        },
+        "teaspoon_94": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.020382826063566,
+                "theta_deg": 15.211076597090063,
+                "phi_deg": 65.97301398297331
+            },
+            "orientation_in_bot": [
+                0.04873166574057817,
+                0.024307440054752105,
+                -0.060966665778104764,
+                0.9966531185803986
+            ],
+            "position_in_world": [
+                0.25376200675964355,
+                -0.37217575311660767,
+                0.9041198492050171
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance1_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "strawberries_86",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "bowl_85",
+                "ontop",
+                "countertop_tpuwys_2"
+            ],
+            [
+                "countertop_tpuwys_2",
+                "under",
+                "bowl_85"
+            ],
+            [
+                "teaspoon_94",
+                "ontop",
+                "countertop_tpuwys_2"
+            ]
+        ],
+        "inventory": []
+    },
+    "2_detect_surroundings": {
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.609845694663471,
+                "theta_deg": 118.25321419979653,
+                "phi_deg": 57.02077335752264
+            },
+            "orientation_in_bot": [
+                0.005532040886293469,
+                0.021314947691552663,
+                0.2557237316183285,
+                0.9664990649844084
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance2_detect_surroundings.png"
+        },
+        "strawberries_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.4517887880715548,
+                "theta_deg": 118.04877406498476,
+                "phi_deg": 46.82756786802021
+            },
+            "orientation_in_bot": [
+                0.1452269026727354,
+                0.7501224695677444,
+                -0.296753227175743,
+                0.5728550859951006
+            ],
+            "position_in_world": [
+                -1.5085724592208862,
+                1.1486302614212036,
+                0.9743968844413757
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance2_detect_surroundings.png"
+        },
+        "bowl_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.9488726421616898,
+                "theta_deg": 8.606885910270888,
+                "phi_deg": 62.80844280857048
+            },
+            "orientation_in_bot": [
+                -0.003723400090492983,
+                0.021867266287293855,
+                -0.17143322086257204,
+                0.9849459933121061
+            ],
+            "position_in_world": [
+                0.08208684623241425,
+                -0.5330869555473328,
+                0.9690073132514954
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance2_detect_surroundings.png"
+        },
+        "countertop_tpuwys_2": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.020502123367773,
+                "theta_deg": 9.331145867775376,
+                "phi_deg": 66.46968398385195
+            },
+            "orientation_in_bot": [
+                0.005532039325870948,
+                0.02131494740529959,
+                0.25572372264737003,
+                0.9664990673732579
+            ],
+            "position_in_world": [
+                0.20455229970466282,
+                -0.5556479370210349,
+                0.8902008019217902
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance2_detect_surroundings.png"
+        },
+        "teaspoon_94": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.020382826063566,
+                "theta_deg": 15.211076597090063,
+                "phi_deg": 65.97301398297331
+            },
+            "orientation_in_bot": [
+                0.04873166574057817,
+                0.024307440054752105,
+                -0.060966665778104764,
+                0.9966531185803986
+            ],
+            "position_in_world": [
+                0.25376200675964355,
+                -0.37217575311660767,
+                0.9041198492050171
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance2_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "strawberries_86",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "bowl_85",
+                "ontop",
+                "countertop_tpuwys_2"
+            ],
+            [
+                "countertop_tpuwys_2",
+                "under",
+                "bowl_85"
+            ],
+            [
+                "teaspoon_94",
+                "ontop",
+                "countertop_tpuwys_2"
+            ]
+        ],
+        "inventory": []
+    },
+    "3_detect_surroundings": {
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.609845694663471,
+                "theta_deg": 118.25321419979653,
+                "phi_deg": 57.02077335752264
+            },
+            "orientation_in_bot": [
+                0.005532040886293469,
+                0.021314947691552663,
+                0.2557237316183285,
+                0.9664990649844084
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance3_detect_surroundings.png"
+        },
+        "strawberries_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.4517887880715548,
+                "theta_deg": 118.04877406498476,
+                "phi_deg": 46.82756786802021
+            },
+            "orientation_in_bot": [
+                0.1452269026727354,
+                0.7501224695677444,
+                -0.296753227175743,
+                0.5728550859951006
+            ],
+            "position_in_world": [
+                -1.5085724592208862,
+                1.1486302614212036,
+                0.9743968844413757
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance3_detect_surroundings.png"
+        },
+        "bowl_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.9488726421616898,
+                "theta_deg": 8.606885910270888,
+                "phi_deg": 62.80844280857048
+            },
+            "orientation_in_bot": [
+                -0.003723400090492983,
+                0.021867266287293855,
+                -0.17143322086257204,
+                0.9849459933121061
+            ],
+            "position_in_world": [
+                0.08208684623241425,
+                -0.5330869555473328,
+                0.9690073132514954
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance3_detect_surroundings.png"
+        },
+        "countertop_tpuwys_2": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.020502123367773,
+                "theta_deg": 9.331145867775376,
+                "phi_deg": 66.46968398385195
+            },
+            "orientation_in_bot": [
+                0.005532039325870948,
+                0.02131494740529959,
+                0.25572372264737003,
+                0.9664990673732579
+            ],
+            "position_in_world": [
+                0.20455229970466282,
+                -0.5556479370210349,
+                0.8902008019217902
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance3_detect_surroundings.png"
+        },
+        "teaspoon_94": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.020382826063566,
+                "theta_deg": 15.211076597090063,
+                "phi_deg": 65.97301398297331
+            },
+            "orientation_in_bot": [
+                0.04873166574057817,
+                0.024307440054752105,
+                -0.060966665778104764,
+                0.9966531185803986
+            ],
+            "position_in_world": [
+                0.25376200675964355,
+                -0.37217575311660767,
+                0.9041198492050171
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance3_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "strawberries_86",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "bowl_85",
+                "ontop",
+                "countertop_tpuwys_2"
+            ],
+            [
+                "countertop_tpuwys_2",
+                "under",
+                "bowl_85"
+            ],
+            [
+                "teaspoon_94",
+                "ontop",
+                "countertop_tpuwys_2"
+            ]
+        ],
+        "inventory": []
+    },
+    "4_detect_surroundings": {
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.609845694663471,
+                "theta_deg": 118.25321419979653,
+                "phi_deg": 57.02077335752264
+            },
+            "orientation_in_bot": [
+                0.005532040886293469,
+                0.021314947691552663,
+                0.2557237316183285,
+                0.9664990649844084
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance4_detect_surroundings.png"
+        },
+        "strawberries_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.4517887880715548,
+                "theta_deg": 118.04877406498476,
+                "phi_deg": 46.82756786802021
+            },
+            "orientation_in_bot": [
+                0.1452269026727354,
+                0.7501224695677444,
+                -0.296753227175743,
+                0.5728550859951006
+            ],
+            "position_in_world": [
+                -1.5085724592208862,
+                1.1486302614212036,
+                0.9743968844413757
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance4_detect_surroundings.png"
+        },
+        "bowl_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.9488726421616898,
+                "theta_deg": 8.606885910270888,
+                "phi_deg": 62.80844280857048
+            },
+            "orientation_in_bot": [
+                -0.003723400090492983,
+                0.021867266287293855,
+                -0.17143322086257204,
+                0.9849459933121061
+            ],
+            "position_in_world": [
+                0.08208684623241425,
+                -0.5330869555473328,
+                0.9690073132514954
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance4_detect_surroundings.png"
+        },
+        "countertop_tpuwys_2": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.020502123367773,
+                "theta_deg": 9.331145867775376,
+                "phi_deg": 66.46968398385195
+            },
+            "orientation_in_bot": [
+                0.005532039325870948,
+                0.02131494740529959,
+                0.25572372264737003,
+                0.9664990673732579
+            ],
+            "position_in_world": [
+                0.20455229970466282,
+                -0.5556479370210349,
+                0.8902008019217902
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance4_detect_surroundings.png"
+        },
+        "teaspoon_94": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.020382826063566,
+                "theta_deg": 15.211076597090063,
+                "phi_deg": 65.97301398297331
+            },
+            "orientation_in_bot": [
+                0.04873166574057817,
+                0.024307440054752105,
+                -0.060966665778104764,
+                0.9966531185803986
+            ],
+            "position_in_world": [
+                0.25376200675964355,
+                -0.37217575311660767,
+                0.9041198492050171
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance4_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "strawberries_86",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "bowl_85",
+                "ontop",
+                "countertop_tpuwys_2"
+            ],
+            [
+                "countertop_tpuwys_2",
+                "under",
+                "bowl_85"
+            ],
+            [
+                "teaspoon_94",
+                "ontop",
+                "countertop_tpuwys_2"
+            ]
+        ],
+        "inventory": []
+    },
+    "5_detect_surroundings": {
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.609845694663471,
+                "theta_deg": 118.25321419979653,
+                "phi_deg": 57.02077335752264
+            },
+            "orientation_in_bot": [
+                0.005532040886293469,
+                0.021314947691552663,
+                0.2557237316183285,
+                0.9664990649844084
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance5_detect_surroundings.png"
+        },
+        "strawberries_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.4517887880715548,
+                "theta_deg": 118.04877406498476,
+                "phi_deg": 46.82756786802021
+            },
+            "orientation_in_bot": [
+                0.1452269026727354,
+                0.7501224695677444,
+                -0.296753227175743,
+                0.5728550859951006
+            ],
+            "position_in_world": [
+                -1.5085724592208862,
+                1.1486302614212036,
+                0.9743968844413757
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance5_detect_surroundings.png"
+        },
+        "bowl_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.9488726421616898,
+                "theta_deg": 8.606885910270888,
+                "phi_deg": 62.80844280857048
+            },
+            "orientation_in_bot": [
+                -0.003723400090492983,
+                0.021867266287293855,
+                -0.17143322086257204,
+                0.9849459933121061
+            ],
+            "position_in_world": [
+                0.08208684623241425,
+                -0.5330869555473328,
+                0.9690073132514954
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance5_detect_surroundings.png"
+        },
+        "countertop_tpuwys_2": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.020502123367773,
+                "theta_deg": 9.331145867775376,
+                "phi_deg": 66.46968398385195
+            },
+            "orientation_in_bot": [
+                0.005532039325870948,
+                0.02131494740529959,
+                0.25572372264737003,
+                0.9664990673732579
+            ],
+            "position_in_world": [
+                0.20455229970466282,
+                -0.5556479370210349,
+                0.8902008019217902
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance5_detect_surroundings.png"
+        },
+        "teaspoon_94": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.020382826063566,
+                "theta_deg": 15.211076597090063,
+                "phi_deg": 65.97301398297331
+            },
+            "orientation_in_bot": [
+                0.04873166574057817,
+                0.024307440054752105,
+                -0.060966665778104764,
+                0.9966531185803986
+            ],
+            "position_in_world": [
+                0.25376200675964355,
+                -0.37217575311660767,
+                0.9041198492050171
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance5_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "strawberries_86",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "bowl_85",
+                "ontop",
+                "countertop_tpuwys_2"
+            ],
+            [
+                "countertop_tpuwys_2",
+                "under",
+                "bowl_85"
+            ],
+            [
+                "teaspoon_94",
+                "ontop",
+                "countertop_tpuwys_2"
+            ]
+        ],
+        "inventory": []
+    },
+    "6_detect_surroundings": {
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.609845694663471,
+                "theta_deg": 118.25321419979653,
+                "phi_deg": 57.02077335752264
+            },
+            "orientation_in_bot": [
+                0.005532040886293469,
+                0.021314947691552663,
+                0.2557237316183285,
+                0.9664990649844084
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance6_detect_surroundings.png"
+        },
+        "strawberries_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.4517887880715548,
+                "theta_deg": 118.04877406498476,
+                "phi_deg": 46.82756786802021
+            },
+            "orientation_in_bot": [
+                0.1452269026727354,
+                0.7501224695677444,
+                -0.296753227175743,
+                0.5728550859951006
+            ],
+            "position_in_world": [
+                -1.5085724592208862,
+                1.1486302614212036,
+                0.9743968844413757
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance6_detect_surroundings.png"
+        },
+        "bowl_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.9488726421616898,
+                "theta_deg": 8.606885910270888,
+                "phi_deg": 62.80844280857048
+            },
+            "orientation_in_bot": [
+                -0.003723400090492983,
+                0.021867266287293855,
+                -0.17143322086257204,
+                0.9849459933121061
+            ],
+            "position_in_world": [
+                0.08208684623241425,
+                -0.5330869555473328,
+                0.9690073132514954
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance6_detect_surroundings.png"
+        },
+        "countertop_tpuwys_2": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.020502123367773,
+                "theta_deg": 9.331145867775376,
+                "phi_deg": 66.46968398385195
+            },
+            "orientation_in_bot": [
+                0.005532039325870948,
+                0.02131494740529959,
+                0.25572372264737003,
+                0.9664990673732579
+            ],
+            "position_in_world": [
+                0.20455229970466282,
+                -0.5556479370210349,
+                0.8902008019217902
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance6_detect_surroundings.png"
+        },
+        "teaspoon_94": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.020382826063566,
+                "theta_deg": 15.211076597090063,
+                "phi_deg": 65.97301398297331
+            },
+            "orientation_in_bot": [
+                0.04873166574057817,
+                0.024307440054752105,
+                -0.060966665778104764,
+                0.9966531185803986
+            ],
+            "position_in_world": [
+                0.25376200675964355,
+                -0.37217575311660767,
+                0.9041198492050171
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance6_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "strawberries_86",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "bowl_85",
+                "ontop",
+                "countertop_tpuwys_2"
+            ],
+            [
+                "countertop_tpuwys_2",
+                "under",
+                "bowl_85"
+            ],
+            [
+                "teaspoon_94",
+                "ontop",
+                "countertop_tpuwys_2"
+            ]
+        ],
+        "inventory": []
+    },
+    "7_detect_surroundings": {
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.609845694663471,
+                "theta_deg": 118.25321419979653,
+                "phi_deg": 57.02077335752264
+            },
+            "orientation_in_bot": [
+                0.005532040886293469,
+                0.021314947691552663,
+                0.2557237316183285,
+                0.9664990649844084
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance7_detect_surroundings.png"
+        },
+        "strawberries_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.4517887880715548,
+                "theta_deg": 118.04877406498476,
+                "phi_deg": 46.82756786802021
+            },
+            "orientation_in_bot": [
+                0.1452269026727354,
+                0.7501224695677444,
+                -0.296753227175743,
+                0.5728550859951006
+            ],
+            "position_in_world": [
+                -1.5085724592208862,
+                1.1486302614212036,
+                0.9743968844413757
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance7_detect_surroundings.png"
+        },
+        "bowl_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.9488726421616898,
+                "theta_deg": 8.606885910270888,
+                "phi_deg": 62.80844280857048
+            },
+            "orientation_in_bot": [
+                -0.003723400090492983,
+                0.021867266287293855,
+                -0.17143322086257204,
+                0.9849459933121061
+            ],
+            "position_in_world": [
+                0.08208684623241425,
+                -0.5330869555473328,
+                0.9690073132514954
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance7_detect_surroundings.png"
+        },
+        "countertop_tpuwys_2": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.020502123367773,
+                "theta_deg": 9.331145867775376,
+                "phi_deg": 66.46968398385195
+            },
+            "orientation_in_bot": [
+                0.005532039325870948,
+                0.02131494740529959,
+                0.25572372264737003,
+                0.9664990673732579
+            ],
+            "position_in_world": [
+                0.20455229970466282,
+                -0.5556479370210349,
+                0.8902008019217902
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance7_detect_surroundings.png"
+        },
+        "teaspoon_94": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.020382826063566,
+                "theta_deg": 15.211076597090063,
+                "phi_deg": 65.97301398297331
+            },
+            "orientation_in_bot": [
+                0.04873166574057817,
+                0.024307440054752105,
+                -0.060966665778104764,
+                0.9966531185803986
+            ],
+            "position_in_world": [
+                0.25376200675964355,
+                -0.37217575311660767,
+                0.9041198492050171
+            ],
+            "bot_in_world": [
+                -1.5002803802490234,
+                0.06903650611639023,
+                0.003778904676437378
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance7_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "strawberries_86",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "bowl_85",
+                "ontop",
+                "countertop_tpuwys_2"
+            ],
+            [
+                "countertop_tpuwys_2",
+                "under",
+                "bowl_85"
+            ],
+            [
+                "teaspoon_94",
+                "ontop",
+                "countertop_tpuwys_2"
+            ]
+        ],
+        "inventory": []
+    },
+    "8_BEV_surroundings": {
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.609845219235318,
+                "theta_deg": 118.25295947126901,
+                "phi_deg": 57.02076490749612
+            },
+            "orientation_in_bot": [
+                0.005532151540969971,
+                0.0213145625509953,
+                0.2557214765766184,
+                0.9664996694981647
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.500280737876892,
+                0.0690370425581932,
+                0.003778889775276184
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance8_BEV_surroundings.png"
+        },
+        "strawberries_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.45178838878377,
+                "theta_deg": 118.04852740755568,
+                "phi_deg": 46.82755509751469
+            },
+            "orientation_in_bot": [
+                0.14522884420463533,
+                0.7501219748504238,
+                -0.29675439407130955,
+                0.5728546371086262
+            ],
+            "position_in_world": [
+                -1.5085724592208862,
+                1.1486302614212036,
+                0.9743968844413757
+            ],
+            "bot_in_world": [
+                -1.500280737876892,
+                0.0690370425581932,
+                0.003778889775276184
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance8_BEV_surroundings.png"
+        },
+        "bowl_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.9488731545114863,
+                "theta_deg": 8.606602483244842,
+                "phi_deg": 62.808404431649336
+            },
+            "orientation_in_bot": [
+                -0.0037230665032613537,
+                0.021866546075686395,
+                -0.17143548262418618,
+                0.9849456168926001
+            ],
+            "position_in_world": [
+                0.08208686858415604,
+                -0.533086895942688,
+                0.9690074324607849
+            ],
+            "bot_in_world": [
+                -1.500280737876892,
+                0.0690370425581932,
+                0.003778889775276184
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance8_BEV_surroundings.png"
+        },
+        "countertop_tpuwys_2": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.0205025832007926,
+                "theta_deg": 9.330862066681462,
+                "phi_deg": 66.46964746407505
+            },
+            "orientation_in_bot": [
+                0.005532149980550227,
+                0.021314562264746435,
+                0.255721467605654,
+                0.9664996718869932
+            ],
+            "position_in_world": [
+                0.20455229970466282,
+                -0.5556479370210349,
+                0.8902008019217902
+            ],
+            "bot_in_world": [
+                -1.500280737876892,
+                0.0690370425581932,
+                0.003778889775276184
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance8_BEV_surroundings.png"
+        },
+        "teaspoon_94": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.02038324668011,
+                "theta_deg": 15.210792835411496,
+                "phi_deg": 65.97297618273626
+            },
+            "orientation_in_bot": [
+                0.048731896900974014,
+                0.02430699238133683,
+                -0.06096896950786914,
+                0.996652977270903
+            ],
+            "position_in_world": [
+                0.25376200675964355,
+                -0.37217575311660767,
+                0.9041198492050171
+            ],
+            "bot_in_world": [
+                -1.500280737876892,
+                0.0690370425581932,
+                0.003778889775276184
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance8_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "strawberries_86",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "bowl_85",
+                "ontop",
+                "countertop_tpuwys_2"
+            ],
+            [
+                "countertop_tpuwys_2",
+                "under",
+                "bowl_85"
+            ],
+            [
+                "teaspoon_94",
+                "ontop",
+                "countertop_tpuwys_2"
+            ]
+        ],
+        "inventory": []
+    },
+    "9_BEV_surroundings": {
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.609845219235318,
+                "theta_deg": 118.25295947126901,
+                "phi_deg": 57.02076490749612
+            },
+            "orientation_in_bot": [
+                0.005532151540969971,
+                0.0213145625509953,
+                0.2557214765766184,
+                0.9664996694981647
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.500280737876892,
+                0.0690370425581932,
+                0.003778889775276184
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance9_BEV_surroundings.png"
+        },
+        "strawberries_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.45178838878377,
+                "theta_deg": 118.04852740755568,
+                "phi_deg": 46.82755509751469
+            },
+            "orientation_in_bot": [
+                0.14522884420463533,
+                0.7501219748504238,
+                -0.29675439407130955,
+                0.5728546371086262
+            ],
+            "position_in_world": [
+                -1.5085724592208862,
+                1.1486302614212036,
+                0.9743968844413757
+            ],
+            "bot_in_world": [
+                -1.500280737876892,
+                0.0690370425581932,
+                0.003778889775276184
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance9_BEV_surroundings.png"
+        },
+        "bowl_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.9488731545114863,
+                "theta_deg": 8.606602483244842,
+                "phi_deg": 62.808404431649336
+            },
+            "orientation_in_bot": [
+                -0.0037230665032613537,
+                0.021866546075686395,
+                -0.17143548262418618,
+                0.9849456168926001
+            ],
+            "position_in_world": [
+                0.08208686858415604,
+                -0.533086895942688,
+                0.9690074324607849
+            ],
+            "bot_in_world": [
+                -1.500280737876892,
+                0.0690370425581932,
+                0.003778889775276184
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance9_BEV_surroundings.png"
+        },
+        "countertop_tpuwys_2": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.0205025832007926,
+                "theta_deg": 9.330862066681462,
+                "phi_deg": 66.46964746407505
+            },
+            "orientation_in_bot": [
+                0.005532149980550227,
+                0.021314562264746435,
+                0.255721467605654,
+                0.9664996718869932
+            ],
+            "position_in_world": [
+                0.20455229970466282,
+                -0.5556479370210349,
+                0.8902008019217902
+            ],
+            "bot_in_world": [
+                -1.500280737876892,
+                0.0690370425581932,
+                0.003778889775276184
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance9_BEV_surroundings.png"
+        },
+        "teaspoon_94": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.02038324668011,
+                "theta_deg": 15.210792835411496,
+                "phi_deg": 65.97297618273626
+            },
+            "orientation_in_bot": [
+                0.048731896900974014,
+                0.02430699238133683,
+                -0.06096896950786914,
+                0.996652977270903
+            ],
+            "position_in_world": [
+                0.25376200675964355,
+                -0.37217575311660767,
+                0.9041198492050171
+            ],
+            "bot_in_world": [
+                -1.500280737876892,
+                0.0690370425581932,
+                0.003778889775276184
+            ],
+            "path": "./prompt_files/data/store_strawberry_in_a_bowl/subtask_3/seg_instance9_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "strawberries_86",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "bowl_85",
+                "ontop",
+                "countertop_tpuwys_2"
+            ],
+            [
+                "countertop_tpuwys_2",
+                "under",
+                "bowl_85"
+            ],
+            [
+                "teaspoon_94",
+                "ontop",
+                "countertop_tpuwys_2"
+            ]
+        ],
+        "inventory": []
+    }
+}

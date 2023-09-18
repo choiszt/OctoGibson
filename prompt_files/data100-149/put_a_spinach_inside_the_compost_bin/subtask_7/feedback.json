@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Grasp the spinach.\n(2) Move to the compost bin.\n(3) Put the spinach inside the compost bin.",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Put the spinach inside the compost bin\n    spinach_189 = registry(env, \"spinach_189\")\n    compost_bin_192 = registry(env, \"compost_bin_192\")\n    put_inside(robot, spinach_189, compost_bin_192)\n    donothing(env)\n",
+    "error": "Cannot Put Inside! robot is not within four meters of <omnigibson.objects.dataset_object.DatasetObject object at 0x7f016b3d1210>",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

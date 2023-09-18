@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Grasp the hand_towel_82 from the wicker_basket_84.\n(2) Put the folded hand_towel_82 back into the wicker_basket_84.",
+    "code": "def act(robot,env,camera):\n    # Subtask 2: Put the folded hand_towel_82 back into the wicker_basket_84.\n    hand_towel_82 = registry(env,\"hand_towel_82\")\n    wicker_basket_84 = registry(env,\"wicker_basket_84\")\n    put_inside(robot, hand_towel_82, wicker_basket_84)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

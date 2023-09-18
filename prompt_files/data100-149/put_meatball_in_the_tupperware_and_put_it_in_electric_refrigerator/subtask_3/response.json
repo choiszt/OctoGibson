@@ -1,0 +1,23 @@
+{
+    "response": {
+        "explain": " The previous action code successfully opened the bottom cabinet. The next step is to grasp the tupperware from the bottom cabinet.",
+        "subtask": "\n(1) Move the robot to the bottom cabinet.\n(2) Open the bottom cabinet.\n(3) Grasp the tupperware from the bottom cabinet.\n(4) Move the robot to the plate with the meatball.\n(5) Grasp the meatball from the plate.\n(6) Put the meatball inside the tupperware.\n(7) Move the robot to the refrigerator.\n(8) Open the refrigerator.\n(9) Put the tupperware inside the refrigerator.\n(10) Close the refrigerator.",
+        "code": "def act(robot,env,camera):\n    # Subtask 3: Grasp the tupperware from the bottom cabinet\n    tupperware_194 = registry(env,\"tupperware_194\")\n    EasyGrasp(robot, tupperware_194)\n    donothing(env)\n",
+        "inventory": "tupperware_194",
+        "obj_2": [
+            [
+                "bottom_cabinet_no_top_spojpj_1",
+                "openable",
+                "1"
+            ]
+        ],
+        "obj_3": [
+            [
+                "tupperware_194",
+                "inside",
+                "bottom_cabinet_no_top_spojpj_1",
+                "0"
+            ]
+        ]
+    }
+}
