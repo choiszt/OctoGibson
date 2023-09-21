@@ -5,7 +5,7 @@ import omnigibson as og
 from action_list import * 
 from action_utils import *
 def act(robot,env,camera):
-    # Subtask 2: Fold the rag.
+    # Subtask 3: Fold the rag
     rag = registry(env, "rag_194")
     fold(robot, rag)
     donothing(env)

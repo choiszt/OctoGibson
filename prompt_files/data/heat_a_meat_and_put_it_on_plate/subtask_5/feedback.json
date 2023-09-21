@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Take the meat out of the oven\n(2) Put the heated meat on the plate",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Take the meat out of the oven\n    pork_chop = registry(env,\"pork_chop_188\")\n    oven = registry(env,\"oven_wuinhm_0\")\n    toggle_off(robot, oven)\n    donothing(env)\n    open(robot, oven)\n    donothing(env)\n    EasyGrasp(robot, pork_chop)\n    donothing(env)\n",
+    "error": "the oven_wuinhm_0 has been opened! Please pay attention to the states of Observed Objects!!",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

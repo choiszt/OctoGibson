@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Grasp the rag.\n(2) Fold the rag.\n(3) Move to the hamper.\n(4) Put the folded rag into the hamper.",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Move to the hamper.\n    hamper = registry(env, \"hamper_188\")\n    MoveBot(env, robot, hamper, camera)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

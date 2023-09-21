@@ -1,14 +1,24 @@
 {
     "response": {
-        "explain": " The execution error indicates that the tortilla is not in a state that can be unfolded. This is because the tortilla is already unfolded. Therefore, the step to unfold the tortilla is unnecessary and can be skipped.",
-        "subtask": "\n(1) Grasp the tortilla from the plate.\n(2) Heat the tortilla.\n(3) Fold the tortilla.\n(4) Put the folded tortilla back on the plate.",
-        "code": "def act(robot, env, camera):\n    # Subtask 3: Fold the tortilla\n    tortilla_189 = registry(env, \"tortilla_189\")\n    fold(robot, tortilla_189)\n    donothing(env)\n",
+        "explain": " The execution error indicates that the tortilla cannot be heated because its 'heatable' state is not 0. Also, the 'foldable' state of the tortilla is not 1, which means it cannot be folded yet. This suggests that the tortilla needs to be cooked before it can be heated and folded.",
+        "subtask": "\n(1) Grasp the tortilla.\n(2) Cook the tortilla.\n(3) Heat the tortilla.\n(4) Fold the tortilla.\n(5) Put the tortilla back on the plate.",
+        "code": "def act(robot, env, camera):\n    # Subtask 2: Cook the tortilla\n    tortilla_189 = registry(env, \"tortilla_189\")\n    cook(robot, tortilla_189)\n    donothing(env)\n",
         "inventory": "tortilla_189",
         "obj_2": [
             [
                 "tortilla_189",
-                "foldable",
+                "cookable",
                 "0"
+            ],
+            [
+                "tortilla_189",
+                "heatable",
+                "1"
+            ],
+            [
+                "tortilla_189",
+                "foldable",
+                "1"
             ]
         ],
         "obj_3": []

@@ -5,8 +5,10 @@ import omnigibson as og
 from action_list import * 
 from action_utils import *
 def act(robot,env,camera):
-    # Subtask 5: Move closer to the saucepot
-    saucepot = registry(env, "saucepot_87")
-    countertop = registry(env, "countertop_tpuwys_1")
-    MoveBot(env, robot, countertop, camera)
+    # Subtask 3: Put the kale into the saucepot
+    kale = registry(env,"kale_85")
+    saucepot = registry(env,"saucepot_87")
+    EasyGrasp(robot, kale)
+    donothing(env)
+    put_inside(robot, kale, saucepot)
     donothing(env)

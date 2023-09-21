@@ -1,16 +1,23 @@
 {
     "response": {
-        "explain": " The previous action code successfully moved the robot closer to the bottom cabinet. The next step is to open the bottom cabinet to access the tupperware inside.",
-        "subtask": "\n(1) Open the bottom cabinet.\n(2) Move the robot closer to the bottom cabinet.\n(3) Grasp the tupperware from the bottom cabinet.\n(4) Open the fridge.\n(5) Grasp the bratwurst from the fridge.\n(6) Put the bratwurst in the tupperware.\n(7) Put the tupperware with the bratwurst in the carton.",
-        "code": "def act(robot,env,camera):\n    # Subtask 1: Open the bottom cabinet.\n    bottom_cabinet = registry(env,\"bottom_cabinet_no_top_spojpj_0\")\n    open(robot, bottom_cabinet)\n    donothing(env)\n",
-        "inventory": "None",
-        "obj_2": [
+        "explain": " The error message indicates that the function 'grasp' is not defined. This is because the correct function name is 'EasyGrasp'. The previous action code should have used 'EasyGrasp' instead of 'grasp'. ",
+        "subtask": "\n(1) Open the fridge\n(2) Find the tupperware inside the bottom cabinet\n(3) Grasp the tupperware\n(4) Grasp the bratwurst from the fridge\n(5) Put the bratwurst in the tupperware\n(6) Grasp the tupperware with the bratwurst\n(7) Put the tupperware with the bratwurst in the carton",
+        "code": "def act(robot,env,camera):\n    # Subtask 3: Grasp the tupperware\n    # We need to register the tupperware first before we can interact with it.\n    tupperware = registry(env, \"tupperware\")\n    EasyGrasp(robot, tupperware)\n    donothing(env)\n",
+        "inventory": "tupperware",
+        "obj_2": [],
+        "obj_3": [
             [
-                "bottom_cabinet_no_top_spojpj_0",
-                "openable",
+                "robot",
+                "nextto",
+                "tupperware",
                 "1"
+            ],
+            [
+                "tupperware",
+                "inside",
+                "bottom_cabinet_no_top_vzzafs_0",
+                "0"
             ]
-        ],
-        "obj_3": []
+        ]
     }
 }

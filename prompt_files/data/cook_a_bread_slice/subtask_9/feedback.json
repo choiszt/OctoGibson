@@ -1,6 +1,6 @@
 {
-    "subtask": "\n(1) Open the bottom cabinet.\n(2) Grasp a bread slice from the bottom cabinet.\n(3) Move to the toaster.\n(4) Grasp a bread slice.\n(5) Move to the toaster.\n(6) Put the bread slice in the toaster.\n(7) Turn on the toaster.\n(8) Wait for the bread slice to be cooked.",
-    "code": "def act(robot,env,camera):\n    # Subtask 6: Put the bread slice in the toaster\n    bread_slice_86 = registry(env,\"bread_slice_86\")\n    toaster_85 = registry(env,\"toaster_85\")\n    put_inside(robot, bread_slice_86, toaster_85)\n    donothing(env)\n",
+    "subtask": "\n(1) Open the bottom cabinet.\n(2) Grasp a bread slice.\n(3) Move to the toaster.\n(4) Put the bread slice into the toaster.\n(5) Toggle on the toaster to cook the bread slice.",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Move to the toaster\n    toaster = registry(env, \"toaster_85\")\n    MoveBot(env, robot, toaster, camera)\n    donothing(env)\n",
     "error": "",
     "critic": "succeed",
     "reset": false,

@@ -1,7 +1,7 @@
 {
     "response": {
-        "explain": " Since there is no previous action code or execution error, we can start planning from scratch. The task is to cook a prawn and place it on a plate with butter. The first step would be to open the fridge to access the prawn and butter.",
-        "subtask": "\n(1) Open the fridge\n(2) Take the prawn from the fridge\n(3) Take the butter from the fridge\n(4) Cook the prawn on the stove\n(5) Place the cooked prawn on the plate\n(6) Place the butter on the plate",
+        "explain": " Since this is the first step, there is no previous error or missing step. The task is to cook a prawn and place it on a plate with butter. The first step should be to open the fridge to access the prawn and butter.",
+        "subtask": "\n(1) Open the fridge\n(2) Take out the prawn from the fridge\n(3) Take out the butter from the fridge\n(4) Cook the prawn\n(5) Place the cooked prawn on the plate\n(6) Place the butter on the plate",
         "code": "def act(robot,env,camera):\n    # Subtask 1: Open the fridge\n    fridge = registry(env,\"fridge_dszchb_0\")\n    open(robot, fridge)\n    donothing(env)\n",
         "inventory": "None",
         "obj_2": [

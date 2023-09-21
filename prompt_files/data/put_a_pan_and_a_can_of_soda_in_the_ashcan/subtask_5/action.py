@@ -5,6 +5,7 @@ import omnigibson as og
 from action_list import * 
 from action_utils import *
 def act(robot,env,camera):
-    # Subtask 1: Register the pan and the can of soda.
-    pan = registry(env, "pan")
-    can_of_soda = registry(env, "can_of_soda")
+    # Subtask 5: Move the robot to the trash can
+    trash_can_85 = registry(env,"trash_can_85")
+    MoveBot(env, robot, trash_can_85, camera)
+    donothing(env)

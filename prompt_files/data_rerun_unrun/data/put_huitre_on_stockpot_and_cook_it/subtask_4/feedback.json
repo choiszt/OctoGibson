@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the fridge\n(2) Take the oyster out of the fridge\n(3) Find the stockpot\n(4) Put the oyster on the stockpot\n(5) Cook the oyster",
+    "code": "def act(robot,env,camera):\n    # Subtask 4: Put the oyster on the stockpot\n    # Assuming the stockpot is on the countertop\n    stockpot = registry(env,\"countertop_tpuwys_1\")\n    oyster = registry(env,\"oyster_201\")\n    put_ontop(robot, oyster, stockpot)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

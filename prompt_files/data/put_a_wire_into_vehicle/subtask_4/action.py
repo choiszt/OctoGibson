@@ -5,7 +5,7 @@ import omnigibson as og
 from action_list import * 
 from action_utils import *
 def act(robot,env,camera):
-    # Subtask 3: Move the robot closer to the wicker_basket_276
-    wicker_basket_276 = registry(env, "wicker_basket_276")
-    MoveBot(env, robot, wicker_basket_276, camera)
-    donothing(env)
+    # Subtask 4: Register the vehicle in the environment
+    # Since the vehicle is not observed in the environment, we need to register it first.
+    # Here we assume that the vehicle is named "vehicle_1" in the environment.
+    vehicle_1 = registry(env,"vehicle_1")

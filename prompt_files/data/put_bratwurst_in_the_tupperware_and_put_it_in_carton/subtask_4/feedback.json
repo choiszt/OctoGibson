@@ -1,6 +1,6 @@
 {
-    "subtask": "\n(1) Grasp the tupperware from the bottom cabinet.\n(2) Open the fridge.\n(3) Grasp the bratwurst from the fridge.\n(4) Put the bratwurst in the tupperware.\n(5) Put the tupperware with the bratwurst in the carton.",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Grasp the tupperware from the bottom cabinet.\n    tupperware = registry(env,\"tupperware_1234\") # assuming the tupperware is named \"tupperware_1234\"\n    EasyGrasp(robot, tupperware)\n    donothing(env)\n",
+    "subtask": "\n(1) Open the fridge\n(2) Open the bottom cabinet\n(3) Find the tupperware\n(4) Grasp the tupperware\n(5) Grasp the bratwurst\n(6) Put the bratwurst in the tupperware\n(7) Grasp the tupperware with the bratwurst\n(8) Put the tupperware with the bratwurst in the carton",
+    "code": "def act(robot,env,camera):\n    # Subtask 4: Grasp the tupperware\n    # We assume the tupperware is now visible in the environment after opening the bottom cabinet.\n    # We need to register the tupperware first before we can interact with it.\n    tupperware = registry(env, \"tupperware\")\n    EasyGrasp(robot, tupperware)\n    donothing(env)\n",
     "error": "'NoneType' object has no attribute 'get_position'",
     "critic": "fail",
     "reset": true,

@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the fridge\n(2) Open the fridge\n(3) Find and grasp the quail\n(4) Move the robot to the oven\n(5) Open the oven\n(6) Put the quail inside the oven\n(7) Cook the quail",
+    "code": "def act(robot,env,camera):\n    # Subtask 6: Put the quail inside the oven\n    quail = registry(env, \"quail\")\n    oven = registry(env, \"oven_wuinhm_0\")\n    put_inside(robot, quail, oven)\n    donothing(env)\n",
+    "error": "'NoneType' object has no attribute 'set_position'",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

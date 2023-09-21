@@ -1,7 +1,7 @@
 {
     "task": "put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet",
     "0_detect_surroundings": {
-        "mixing_bowl_173": {
+        "daffodil_bulb_170": {
             "ability": [
                 [
                     "heatable",
@@ -13,25 +13,63 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 0.46581296138183415,
-                "theta_deg": -32.00984487107587,
-                "phi_deg": 86.90016520501207
+                "rho": 1.9168483195150228,
+                "theta_deg": 43.477791748774685,
+                "phi_deg": 30.217065598513244
             },
             "orientation_in_bot": [
-                0.017961504212446792,
-                -0.010669987813900465,
-                0.9216536266326827,
-                -0.38745080751148425
+                0.47440240041854814,
+                0.10949880304942025,
+                0.5239670781512178,
+                0.6988639893581149
             ],
             "position_in_world": [
-                -2.7710158824920654,
-                4.458012104034424,
-                0.04634641483426094
+                -3.051548480987549,
+                6.157528400421143,
+                1.6829450130462646
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
+            ],
+            "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance0_detect_surroundings.png"
+        },
+        "top_cabinet_dmwxyl_2": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.1487422546291897,
+                "theta_deg": -161.50158644505777,
+                "phi_deg": 29.13879636678668
+            },
+            "orientation_in_bot": [
+                0.01701659797974924,
+                0.010000220833076544,
+                0.8033573572195876,
+                0.5951700492948594
+            ],
+            "position_in_world": [
+                -4.964286804199219,
+                5.688180923461914,
+                1.8409388065338135
+            ],
+            "bot_in_world": [
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance0_detect_surroundings.png"
         },
@@ -47,15 +85,15 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 2.097107567792406,
-                "theta_deg": 113.79568984355883,
-                "phi_deg": 36.501841611134516
+                "rho": 1.9109393874658738,
+                "theta_deg": 41.50294556634187,
+                "phi_deg": 31.348361513966566
             },
             "orientation_in_bot": [
-                0.007554291576057751,
-                0.019477815443212587,
-                0.22976214747835566,
-                0.9730225603604874
+                0.004898459378646003,
+                0.0191199882670883,
+                0.14395687586130235,
+                0.9893871077776563
             ],
             "position_in_world": [
                 -3.0094560546849998,
@@ -63,13 +101,13 @@
                 1.660315734865
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance0_detect_surroundings.png"
         },
-        "daffodil_bulb_170": {
+        "mixing_bowl_173": {
             "ability": [
                 [
                     "heatable",
@@ -81,74 +119,49 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 0.36881086453207135,
-                "theta_deg": -7.915171337254905,
-                "phi_deg": 2.3264759299992375
+                "rho": 1.9526254085048727,
+                "theta_deg": 43.16454360143235,
+                "phi_deg": 30.125149274420906
             },
             "orientation_in_bot": [
-                0.4883883748184328,
-                0.4757973187797748,
-                0.32554867331370835,
-                0.6550662318329893
+                -0.0093083998433706,
+                0.017404828793482457,
+                -0.5624139786595576,
+                0.8266201922499548
             ],
             "position_in_world": [
-                -3.0126659870147705,
-                4.854389190673828,
-                0.37225276231765747
+                -3.036689281463623,
+                6.160168647766113,
+                1.7159620523452759
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance0_detect_surroundings.png"
         },
-        "top_cabinet_dmwxyl_2": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
+        "scene_graph": [
+            [
+                "daffodil_bulb_170",
+                "inside",
+                "mixing_bowl_173"
             ],
-            "position_in_bot": {
-                "rho": 2.8075327793062193,
-                "theta_deg": -176.13084631194616,
-                "phi_deg": 46.773575251868344
-            },
-            "orientation_in_bot": [
-                0.019142219985779467,
-                0.008368285159730694,
-                0.8522214501476166,
-                0.5227639497189862
+            [
+                "countertop_tpuwys_1",
+                "under",
+                "mixing_bowl_173"
             ],
-            "position_in_world": [
-                -4.964286804199219,
-                5.688180923461914,
-                1.8409388065338135
-            ],
-            "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
-            ],
-            "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance0_detect_surroundings.png"
-        },
-        "scene_graph": [],
-        "inventory": [
-            "mixing_bowl_173",
-            "daffodil_bulb_170"
-        ]
+            [
+                "mixing_bowl_173",
+                "ontop",
+                "countertop_tpuwys_1"
+            ]
+        ],
+        "inventory": []
     },
     "1_detect_surroundings": {
-        "mixing_bowl_173": {
+        "daffodil_bulb_170": {
             "ability": [
                 [
                     "heatable",
@@ -160,25 +173,63 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 0.46581296138183415,
-                "theta_deg": -32.00984487107587,
-                "phi_deg": 86.90016520501207
+                "rho": 1.9168483195150228,
+                "theta_deg": 43.477791748774685,
+                "phi_deg": 30.217065598513244
             },
             "orientation_in_bot": [
-                0.017961504212446792,
-                -0.010669987813900465,
-                0.9216536266326827,
-                -0.38745080751148425
+                0.47440240041854814,
+                0.10949880304942025,
+                0.5239670781512178,
+                0.6988639893581149
             ],
             "position_in_world": [
-                -2.7710158824920654,
-                4.458012104034424,
-                0.04634641483426094
+                -3.051548480987549,
+                6.157528400421143,
+                1.6829450130462646
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
+            ],
+            "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance1_detect_surroundings.png"
+        },
+        "top_cabinet_dmwxyl_2": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.1487422546291897,
+                "theta_deg": -161.50158644505777,
+                "phi_deg": 29.13879636678668
+            },
+            "orientation_in_bot": [
+                0.01701659797974924,
+                0.010000220833076544,
+                0.8033573572195876,
+                0.5951700492948594
+            ],
+            "position_in_world": [
+                -4.964286804199219,
+                5.688180923461914,
+                1.8409388065338135
+            ],
+            "bot_in_world": [
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance1_detect_surroundings.png"
         },
@@ -194,15 +245,15 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 2.097107567792406,
-                "theta_deg": 113.79568984355883,
-                "phi_deg": 36.501841611134516
+                "rho": 1.9109393874658738,
+                "theta_deg": 41.50294556634187,
+                "phi_deg": 31.348361513966566
             },
             "orientation_in_bot": [
-                0.007554291576057751,
-                0.019477815443212587,
-                0.22976214747835566,
-                0.9730225603604874
+                0.004898459378646003,
+                0.0191199882670883,
+                0.14395687586130235,
+                0.9893871077776563
             ],
             "position_in_world": [
                 -3.0094560546849998,
@@ -210,13 +261,13 @@
                 1.660315734865
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance1_detect_surroundings.png"
         },
-        "daffodil_bulb_170": {
+        "mixing_bowl_173": {
             "ability": [
                 [
                     "heatable",
@@ -228,74 +279,49 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 0.36881086453207135,
-                "theta_deg": -7.915171337254905,
-                "phi_deg": 2.3264759299992375
+                "rho": 1.9526254085048727,
+                "theta_deg": 43.16454360143235,
+                "phi_deg": 30.125149274420906
             },
             "orientation_in_bot": [
-                0.4883883748184328,
-                0.4757973187797748,
-                0.32554867331370835,
-                0.6550662318329893
+                -0.0093083998433706,
+                0.017404828793482457,
+                -0.5624139786595576,
+                0.8266201922499548
             ],
             "position_in_world": [
-                -3.0126659870147705,
-                4.854389190673828,
-                0.37225276231765747
+                -3.036689281463623,
+                6.160168647766113,
+                1.7159620523452759
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance1_detect_surroundings.png"
         },
-        "top_cabinet_dmwxyl_2": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
+        "scene_graph": [
+            [
+                "daffodil_bulb_170",
+                "inside",
+                "mixing_bowl_173"
             ],
-            "position_in_bot": {
-                "rho": 2.8075327793062193,
-                "theta_deg": -176.13084631194616,
-                "phi_deg": 46.773575251868344
-            },
-            "orientation_in_bot": [
-                0.019142219985779467,
-                0.008368285159730694,
-                0.8522214501476166,
-                0.5227639497189862
+            [
+                "countertop_tpuwys_1",
+                "under",
+                "mixing_bowl_173"
             ],
-            "position_in_world": [
-                -4.964286804199219,
-                5.688180923461914,
-                1.8409388065338135
-            ],
-            "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
-            ],
-            "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance1_detect_surroundings.png"
-        },
-        "scene_graph": [],
-        "inventory": [
-            "mixing_bowl_173",
-            "daffodil_bulb_170"
-        ]
+            [
+                "mixing_bowl_173",
+                "ontop",
+                "countertop_tpuwys_1"
+            ]
+        ],
+        "inventory": []
     },
     "2_detect_surroundings": {
-        "mixing_bowl_173": {
+        "daffodil_bulb_170": {
             "ability": [
                 [
                     "heatable",
@@ -307,25 +333,63 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 0.46581296138183415,
-                "theta_deg": -32.00984487107587,
-                "phi_deg": 86.90016520501207
+                "rho": 1.9168483195150228,
+                "theta_deg": 43.477791748774685,
+                "phi_deg": 30.217065598513244
             },
             "orientation_in_bot": [
-                0.017961504212446792,
-                -0.010669987813900465,
-                0.9216536266326827,
-                -0.38745080751148425
+                0.47440240041854814,
+                0.10949880304942025,
+                0.5239670781512178,
+                0.6988639893581149
             ],
             "position_in_world": [
-                -2.7710158824920654,
-                4.458012104034424,
-                0.04634641483426094
+                -3.051548480987549,
+                6.157528400421143,
+                1.6829450130462646
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
+            ],
+            "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance2_detect_surroundings.png"
+        },
+        "top_cabinet_dmwxyl_2": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.1487422546291897,
+                "theta_deg": -161.50158644505777,
+                "phi_deg": 29.13879636678668
+            },
+            "orientation_in_bot": [
+                0.01701659797974924,
+                0.010000220833076544,
+                0.8033573572195876,
+                0.5951700492948594
+            ],
+            "position_in_world": [
+                -4.964286804199219,
+                5.688180923461914,
+                1.8409388065338135
+            ],
+            "bot_in_world": [
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance2_detect_surroundings.png"
         },
@@ -341,15 +405,15 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 2.097107567792406,
-                "theta_deg": 113.79568984355883,
-                "phi_deg": 36.501841611134516
+                "rho": 1.9109393874658738,
+                "theta_deg": 41.50294556634187,
+                "phi_deg": 31.348361513966566
             },
             "orientation_in_bot": [
-                0.007554291576057751,
-                0.019477815443212587,
-                0.22976214747835566,
-                0.9730225603604874
+                0.004898459378646003,
+                0.0191199882670883,
+                0.14395687586130235,
+                0.9893871077776563
             ],
             "position_in_world": [
                 -3.0094560546849998,
@@ -357,13 +421,13 @@
                 1.660315734865
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance2_detect_surroundings.png"
         },
-        "daffodil_bulb_170": {
+        "mixing_bowl_173": {
             "ability": [
                 [
                     "heatable",
@@ -375,74 +439,49 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 0.36881086453207135,
-                "theta_deg": -7.915171337254905,
-                "phi_deg": 2.3264759299992375
+                "rho": 1.9526254085048727,
+                "theta_deg": 43.16454360143235,
+                "phi_deg": 30.125149274420906
             },
             "orientation_in_bot": [
-                0.4883883748184328,
-                0.4757973187797748,
-                0.32554867331370835,
-                0.6550662318329893
+                -0.0093083998433706,
+                0.017404828793482457,
+                -0.5624139786595576,
+                0.8266201922499548
             ],
             "position_in_world": [
-                -3.0126659870147705,
-                4.854389190673828,
-                0.37225276231765747
+                -3.036689281463623,
+                6.160168647766113,
+                1.7159620523452759
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance2_detect_surroundings.png"
         },
-        "top_cabinet_dmwxyl_2": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
+        "scene_graph": [
+            [
+                "daffodil_bulb_170",
+                "inside",
+                "mixing_bowl_173"
             ],
-            "position_in_bot": {
-                "rho": 2.8075327793062193,
-                "theta_deg": -176.13084631194616,
-                "phi_deg": 46.773575251868344
-            },
-            "orientation_in_bot": [
-                0.019142219985779467,
-                0.008368285159730694,
-                0.8522214501476166,
-                0.5227639497189862
+            [
+                "countertop_tpuwys_1",
+                "under",
+                "mixing_bowl_173"
             ],
-            "position_in_world": [
-                -4.964286804199219,
-                5.688180923461914,
-                1.8409388065338135
-            ],
-            "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
-            ],
-            "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance2_detect_surroundings.png"
-        },
-        "scene_graph": [],
-        "inventory": [
-            "mixing_bowl_173",
-            "daffodil_bulb_170"
-        ]
+            [
+                "mixing_bowl_173",
+                "ontop",
+                "countertop_tpuwys_1"
+            ]
+        ],
+        "inventory": []
     },
     "3_detect_surroundings": {
-        "mixing_bowl_173": {
+        "daffodil_bulb_170": {
             "ability": [
                 [
                     "heatable",
@@ -454,25 +493,63 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 0.46581296138183415,
-                "theta_deg": -32.00984487107587,
-                "phi_deg": 86.90016520501207
+                "rho": 1.9168483195150228,
+                "theta_deg": 43.477791748774685,
+                "phi_deg": 30.217065598513244
             },
             "orientation_in_bot": [
-                0.017961504212446792,
-                -0.010669987813900465,
-                0.9216536266326827,
-                -0.38745080751148425
+                0.47440240041854814,
+                0.10949880304942025,
+                0.5239670781512178,
+                0.6988639893581149
             ],
             "position_in_world": [
-                -2.7710158824920654,
-                4.458012104034424,
-                0.04634641483426094
+                -3.051548480987549,
+                6.157528400421143,
+                1.6829450130462646
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
+            ],
+            "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance3_detect_surroundings.png"
+        },
+        "top_cabinet_dmwxyl_2": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.1487422546291897,
+                "theta_deg": -161.50158644505777,
+                "phi_deg": 29.13879636678668
+            },
+            "orientation_in_bot": [
+                0.01701659797974924,
+                0.010000220833076544,
+                0.8033573572195876,
+                0.5951700492948594
+            ],
+            "position_in_world": [
+                -4.964286804199219,
+                5.688180923461914,
+                1.8409388065338135
+            ],
+            "bot_in_world": [
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance3_detect_surroundings.png"
         },
@@ -488,15 +565,15 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 2.097107567792406,
-                "theta_deg": 113.79568984355883,
-                "phi_deg": 36.501841611134516
+                "rho": 1.9109393874658738,
+                "theta_deg": 41.50294556634187,
+                "phi_deg": 31.348361513966566
             },
             "orientation_in_bot": [
-                0.007554291576057751,
-                0.019477815443212587,
-                0.22976214747835566,
-                0.9730225603604874
+                0.004898459378646003,
+                0.0191199882670883,
+                0.14395687586130235,
+                0.9893871077776563
             ],
             "position_in_world": [
                 -3.0094560546849998,
@@ -504,13 +581,13 @@
                 1.660315734865
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance3_detect_surroundings.png"
         },
-        "daffodil_bulb_170": {
+        "mixing_bowl_173": {
             "ability": [
                 [
                     "heatable",
@@ -522,74 +599,49 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 0.36881086453207135,
-                "theta_deg": -7.915171337254905,
-                "phi_deg": 2.3264759299992375
+                "rho": 1.9526254085048727,
+                "theta_deg": 43.16454360143235,
+                "phi_deg": 30.125149274420906
             },
             "orientation_in_bot": [
-                0.4883883748184328,
-                0.4757973187797748,
-                0.32554867331370835,
-                0.6550662318329893
+                -0.0093083998433706,
+                0.017404828793482457,
+                -0.5624139786595576,
+                0.8266201922499548
             ],
             "position_in_world": [
-                -3.0126659870147705,
-                4.854389190673828,
-                0.37225276231765747
+                -3.036689281463623,
+                6.160168647766113,
+                1.7159620523452759
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance3_detect_surroundings.png"
         },
-        "top_cabinet_dmwxyl_2": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
+        "scene_graph": [
+            [
+                "daffodil_bulb_170",
+                "inside",
+                "mixing_bowl_173"
             ],
-            "position_in_bot": {
-                "rho": 2.8075327793062193,
-                "theta_deg": -176.13084631194616,
-                "phi_deg": 46.773575251868344
-            },
-            "orientation_in_bot": [
-                0.019142219985779467,
-                0.008368285159730694,
-                0.8522214501476166,
-                0.5227639497189862
+            [
+                "countertop_tpuwys_1",
+                "under",
+                "mixing_bowl_173"
             ],
-            "position_in_world": [
-                -4.964286804199219,
-                5.688180923461914,
-                1.8409388065338135
-            ],
-            "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
-            ],
-            "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance3_detect_surroundings.png"
-        },
-        "scene_graph": [],
-        "inventory": [
-            "mixing_bowl_173",
-            "daffodil_bulb_170"
-        ]
+            [
+                "mixing_bowl_173",
+                "ontop",
+                "countertop_tpuwys_1"
+            ]
+        ],
+        "inventory": []
     },
     "4_detect_surroundings": {
-        "mixing_bowl_173": {
+        "daffodil_bulb_170": {
             "ability": [
                 [
                     "heatable",
@@ -601,25 +653,63 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 0.46581296138183415,
-                "theta_deg": -32.00984487107587,
-                "phi_deg": 86.90016520501207
+                "rho": 1.9168483195150228,
+                "theta_deg": 43.477791748774685,
+                "phi_deg": 30.217065598513244
             },
             "orientation_in_bot": [
-                0.017961504212446792,
-                -0.010669987813900465,
-                0.9216536266326827,
-                -0.38745080751148425
+                0.47440240041854814,
+                0.10949880304942025,
+                0.5239670781512178,
+                0.6988639893581149
             ],
             "position_in_world": [
-                -2.7710158824920654,
-                4.458012104034424,
-                0.04634641483426094
+                -3.051548480987549,
+                6.157528400421143,
+                1.6829450130462646
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
+            ],
+            "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance4_detect_surroundings.png"
+        },
+        "top_cabinet_dmwxyl_2": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.1487422546291897,
+                "theta_deg": -161.50158644505777,
+                "phi_deg": 29.13879636678668
+            },
+            "orientation_in_bot": [
+                0.01701659797974924,
+                0.010000220833076544,
+                0.8033573572195876,
+                0.5951700492948594
+            ],
+            "position_in_world": [
+                -4.964286804199219,
+                5.688180923461914,
+                1.8409388065338135
+            ],
+            "bot_in_world": [
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance4_detect_surroundings.png"
         },
@@ -635,15 +725,15 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 2.097107567792406,
-                "theta_deg": 113.79568984355883,
-                "phi_deg": 36.501841611134516
+                "rho": 1.9109393874658738,
+                "theta_deg": 41.50294556634187,
+                "phi_deg": 31.348361513966566
             },
             "orientation_in_bot": [
-                0.007554291576057751,
-                0.019477815443212587,
-                0.22976214747835566,
-                0.9730225603604874
+                0.004898459378646003,
+                0.0191199882670883,
+                0.14395687586130235,
+                0.9893871077776563
             ],
             "position_in_world": [
                 -3.0094560546849998,
@@ -651,13 +741,13 @@
                 1.660315734865
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance4_detect_surroundings.png"
         },
-        "daffodil_bulb_170": {
+        "mixing_bowl_173": {
             "ability": [
                 [
                     "heatable",
@@ -669,74 +759,49 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 0.36881086453207135,
-                "theta_deg": -7.915171337254905,
-                "phi_deg": 2.3264759299992375
+                "rho": 1.9526254085048727,
+                "theta_deg": 43.16454360143235,
+                "phi_deg": 30.125149274420906
             },
             "orientation_in_bot": [
-                0.4883883748184328,
-                0.4757973187797748,
-                0.32554867331370835,
-                0.6550662318329893
+                -0.0093083998433706,
+                0.017404828793482457,
+                -0.5624139786595576,
+                0.8266201922499548
             ],
             "position_in_world": [
-                -3.0126659870147705,
-                4.854389190673828,
-                0.37225276231765747
+                -3.036689281463623,
+                6.160168647766113,
+                1.7159620523452759
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance4_detect_surroundings.png"
         },
-        "top_cabinet_dmwxyl_2": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
+        "scene_graph": [
+            [
+                "daffodil_bulb_170",
+                "inside",
+                "mixing_bowl_173"
             ],
-            "position_in_bot": {
-                "rho": 2.8075327793062193,
-                "theta_deg": -176.13084631194616,
-                "phi_deg": 46.773575251868344
-            },
-            "orientation_in_bot": [
-                0.019142219985779467,
-                0.008368285159730694,
-                0.8522214501476166,
-                0.5227639497189862
+            [
+                "countertop_tpuwys_1",
+                "under",
+                "mixing_bowl_173"
             ],
-            "position_in_world": [
-                -4.964286804199219,
-                5.688180923461914,
-                1.8409388065338135
-            ],
-            "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
-            ],
-            "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance4_detect_surroundings.png"
-        },
-        "scene_graph": [],
-        "inventory": [
-            "mixing_bowl_173",
-            "daffodil_bulb_170"
-        ]
+            [
+                "mixing_bowl_173",
+                "ontop",
+                "countertop_tpuwys_1"
+            ]
+        ],
+        "inventory": []
     },
     "5_detect_surroundings": {
-        "mixing_bowl_173": {
+        "daffodil_bulb_170": {
             "ability": [
                 [
                     "heatable",
@@ -748,25 +813,63 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 0.46581296138183415,
-                "theta_deg": -32.00984487107587,
-                "phi_deg": 86.90016520501207
+                "rho": 1.9168483195150228,
+                "theta_deg": 43.477791748774685,
+                "phi_deg": 30.217065598513244
             },
             "orientation_in_bot": [
-                0.017961504212446792,
-                -0.010669987813900465,
-                0.9216536266326827,
-                -0.38745080751148425
+                0.47440240041854814,
+                0.10949880304942025,
+                0.5239670781512178,
+                0.6988639893581149
             ],
             "position_in_world": [
-                -2.7710158824920654,
-                4.458012104034424,
-                0.04634641483426094
+                -3.051548480987549,
+                6.157528400421143,
+                1.6829450130462646
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
+            ],
+            "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance5_detect_surroundings.png"
+        },
+        "top_cabinet_dmwxyl_2": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.1487422546291897,
+                "theta_deg": -161.50158644505777,
+                "phi_deg": 29.13879636678668
+            },
+            "orientation_in_bot": [
+                0.01701659797974924,
+                0.010000220833076544,
+                0.8033573572195876,
+                0.5951700492948594
+            ],
+            "position_in_world": [
+                -4.964286804199219,
+                5.688180923461914,
+                1.8409388065338135
+            ],
+            "bot_in_world": [
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance5_detect_surroundings.png"
         },
@@ -782,15 +885,15 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 2.097107567792406,
-                "theta_deg": 113.79568984355883,
-                "phi_deg": 36.501841611134516
+                "rho": 1.9109393874658738,
+                "theta_deg": 41.50294556634187,
+                "phi_deg": 31.348361513966566
             },
             "orientation_in_bot": [
-                0.007554291576057751,
-                0.019477815443212587,
-                0.22976214747835566,
-                0.9730225603604874
+                0.004898459378646003,
+                0.0191199882670883,
+                0.14395687586130235,
+                0.9893871077776563
             ],
             "position_in_world": [
                 -3.0094560546849998,
@@ -798,13 +901,13 @@
                 1.660315734865
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance5_detect_surroundings.png"
         },
-        "daffodil_bulb_170": {
+        "mixing_bowl_173": {
             "ability": [
                 [
                     "heatable",
@@ -816,74 +919,49 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 0.36881086453207135,
-                "theta_deg": -7.915171337254905,
-                "phi_deg": 2.3264759299992375
+                "rho": 1.9526254085048727,
+                "theta_deg": 43.16454360143235,
+                "phi_deg": 30.125149274420906
             },
             "orientation_in_bot": [
-                0.4883883748184328,
-                0.4757973187797748,
-                0.32554867331370835,
-                0.6550662318329893
+                -0.0093083998433706,
+                0.017404828793482457,
+                -0.5624139786595576,
+                0.8266201922499548
             ],
             "position_in_world": [
-                -3.0126659870147705,
-                4.854389190673828,
-                0.37225276231765747
+                -3.036689281463623,
+                6.160168647766113,
+                1.7159620523452759
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance5_detect_surroundings.png"
         },
-        "top_cabinet_dmwxyl_2": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
+        "scene_graph": [
+            [
+                "daffodil_bulb_170",
+                "inside",
+                "mixing_bowl_173"
             ],
-            "position_in_bot": {
-                "rho": 2.8075327793062193,
-                "theta_deg": -176.13084631194616,
-                "phi_deg": 46.773575251868344
-            },
-            "orientation_in_bot": [
-                0.019142219985779467,
-                0.008368285159730694,
-                0.8522214501476166,
-                0.5227639497189862
+            [
+                "countertop_tpuwys_1",
+                "under",
+                "mixing_bowl_173"
             ],
-            "position_in_world": [
-                -4.964286804199219,
-                5.688180923461914,
-                1.8409388065338135
-            ],
-            "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
-            ],
-            "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance5_detect_surroundings.png"
-        },
-        "scene_graph": [],
-        "inventory": [
-            "mixing_bowl_173",
-            "daffodil_bulb_170"
-        ]
+            [
+                "mixing_bowl_173",
+                "ontop",
+                "countertop_tpuwys_1"
+            ]
+        ],
+        "inventory": []
     },
     "6_detect_surroundings": {
-        "mixing_bowl_173": {
+        "daffodil_bulb_170": {
             "ability": [
                 [
                     "heatable",
@@ -895,25 +973,63 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 0.46581296138183415,
-                "theta_deg": -32.00984487107587,
-                "phi_deg": 86.90016520501207
+                "rho": 1.9168483195150228,
+                "theta_deg": 43.477791748774685,
+                "phi_deg": 30.217065598513244
             },
             "orientation_in_bot": [
-                0.017961504212446792,
-                -0.010669987813900465,
-                0.9216536266326827,
-                -0.38745080751148425
+                0.47440240041854814,
+                0.10949880304942025,
+                0.5239670781512178,
+                0.6988639893581149
             ],
             "position_in_world": [
-                -2.7710158824920654,
-                4.458012104034424,
-                0.04634641483426094
+                -3.051548480987549,
+                6.157528400421143,
+                1.6829450130462646
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
+            ],
+            "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance6_detect_surroundings.png"
+        },
+        "top_cabinet_dmwxyl_2": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.1487422546291897,
+                "theta_deg": -161.50158644505777,
+                "phi_deg": 29.13879636678668
+            },
+            "orientation_in_bot": [
+                0.01701659797974924,
+                0.010000220833076544,
+                0.8033573572195876,
+                0.5951700492948594
+            ],
+            "position_in_world": [
+                -4.964286804199219,
+                5.688180923461914,
+                1.8409388065338135
+            ],
+            "bot_in_world": [
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance6_detect_surroundings.png"
         },
@@ -929,15 +1045,15 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 2.097107567792406,
-                "theta_deg": 113.79568984355883,
-                "phi_deg": 36.501841611134516
+                "rho": 1.9109393874658738,
+                "theta_deg": 41.50294556634187,
+                "phi_deg": 31.348361513966566
             },
             "orientation_in_bot": [
-                0.007554291576057751,
-                0.019477815443212587,
-                0.22976214747835566,
-                0.9730225603604874
+                0.004898459378646003,
+                0.0191199882670883,
+                0.14395687586130235,
+                0.9893871077776563
             ],
             "position_in_world": [
                 -3.0094560546849998,
@@ -945,13 +1061,13 @@
                 1.660315734865
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance6_detect_surroundings.png"
         },
-        "daffodil_bulb_170": {
+        "mixing_bowl_173": {
             "ability": [
                 [
                     "heatable",
@@ -963,74 +1079,49 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 0.36881086453207135,
-                "theta_deg": -7.915171337254905,
-                "phi_deg": 2.3264759299992375
+                "rho": 1.9526254085048727,
+                "theta_deg": 43.16454360143235,
+                "phi_deg": 30.125149274420906
             },
             "orientation_in_bot": [
-                0.4883883748184328,
-                0.4757973187797748,
-                0.32554867331370835,
-                0.6550662318329893
+                -0.0093083998433706,
+                0.017404828793482457,
+                -0.5624139786595576,
+                0.8266201922499548
             ],
             "position_in_world": [
-                -3.0126659870147705,
-                4.854389190673828,
-                0.37225276231765747
+                -3.036689281463623,
+                6.160168647766113,
+                1.7159620523452759
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance6_detect_surroundings.png"
         },
-        "top_cabinet_dmwxyl_2": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
+        "scene_graph": [
+            [
+                "daffodil_bulb_170",
+                "inside",
+                "mixing_bowl_173"
             ],
-            "position_in_bot": {
-                "rho": 2.8075327793062193,
-                "theta_deg": -176.13084631194616,
-                "phi_deg": 46.773575251868344
-            },
-            "orientation_in_bot": [
-                0.019142219985779467,
-                0.008368285159730694,
-                0.8522214501476166,
-                0.5227639497189862
+            [
+                "countertop_tpuwys_1",
+                "under",
+                "mixing_bowl_173"
             ],
-            "position_in_world": [
-                -4.964286804199219,
-                5.688180923461914,
-                1.8409388065338135
-            ],
-            "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
-            ],
-            "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance6_detect_surroundings.png"
-        },
-        "scene_graph": [],
-        "inventory": [
-            "mixing_bowl_173",
-            "daffodil_bulb_170"
-        ]
+            [
+                "mixing_bowl_173",
+                "ontop",
+                "countertop_tpuwys_1"
+            ]
+        ],
+        "inventory": []
     },
     "7_detect_surroundings": {
-        "mixing_bowl_173": {
+        "daffodil_bulb_170": {
             "ability": [
                 [
                     "heatable",
@@ -1042,25 +1133,63 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 0.46581296138183415,
-                "theta_deg": -32.00984487107587,
-                "phi_deg": 86.90016520501207
+                "rho": 1.9168483195150228,
+                "theta_deg": 43.477791748774685,
+                "phi_deg": 30.217065598513244
             },
             "orientation_in_bot": [
-                0.017961504212446792,
-                -0.010669987813900465,
-                0.9216536266326827,
-                -0.38745080751148425
+                0.47440240041854814,
+                0.10949880304942025,
+                0.5239670781512178,
+                0.6988639893581149
             ],
             "position_in_world": [
-                -2.7710158824920654,
-                4.458012104034424,
-                0.04634641483426094
+                -3.051548480987549,
+                6.157528400421143,
+                1.6829450130462646
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
+            ],
+            "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance7_detect_surroundings.png"
+        },
+        "top_cabinet_dmwxyl_2": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.1487422546291897,
+                "theta_deg": -161.50158644505777,
+                "phi_deg": 29.13879636678668
+            },
+            "orientation_in_bot": [
+                0.01701659797974924,
+                0.010000220833076544,
+                0.8033573572195876,
+                0.5951700492948594
+            ],
+            "position_in_world": [
+                -4.964286804199219,
+                5.688180923461914,
+                1.8409388065338135
+            ],
+            "bot_in_world": [
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance7_detect_surroundings.png"
         },
@@ -1076,15 +1205,15 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 2.097107567792406,
-                "theta_deg": 113.79568984355883,
-                "phi_deg": 36.501841611134516
+                "rho": 1.9109393874658738,
+                "theta_deg": 41.50294556634187,
+                "phi_deg": 31.348361513966566
             },
             "orientation_in_bot": [
-                0.007554291576057751,
-                0.019477815443212587,
-                0.22976214747835566,
-                0.9730225603604874
+                0.004898459378646003,
+                0.0191199882670883,
+                0.14395687586130235,
+                0.9893871077776563
             ],
             "position_in_world": [
                 -3.0094560546849998,
@@ -1092,13 +1221,13 @@
                 1.660315734865
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance7_detect_surroundings.png"
         },
-        "daffodil_bulb_170": {
+        "mixing_bowl_173": {
             "ability": [
                 [
                     "heatable",
@@ -1110,74 +1239,49 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 0.36881086453207135,
-                "theta_deg": -7.915171337254905,
-                "phi_deg": 2.3264759299992375
+                "rho": 1.9526254085048727,
+                "theta_deg": 43.16454360143235,
+                "phi_deg": 30.125149274420906
             },
             "orientation_in_bot": [
-                0.4883883748184328,
-                0.4757973187797748,
-                0.32554867331370835,
-                0.6550662318329893
+                -0.0093083998433706,
+                0.017404828793482457,
+                -0.5624139786595576,
+                0.8266201922499548
             ],
             "position_in_world": [
-                -3.0126659870147705,
-                4.854389190673828,
-                0.37225276231765747
+                -3.036689281463623,
+                6.160168647766113,
+                1.7159620523452759
             ],
             "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
+                -3.850930690765381,
+                5.695388317108154,
+                0.003146752715110779
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance7_detect_surroundings.png"
         },
-        "top_cabinet_dmwxyl_2": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
+        "scene_graph": [
+            [
+                "daffodil_bulb_170",
+                "inside",
+                "mixing_bowl_173"
             ],
-            "position_in_bot": {
-                "rho": 2.8075327793062193,
-                "theta_deg": -176.13084631194616,
-                "phi_deg": 46.773575251868344
-            },
-            "orientation_in_bot": [
-                0.019142219985779467,
-                0.008368285159730694,
-                0.8522214501476166,
-                0.5227639497189862
+            [
+                "countertop_tpuwys_1",
+                "under",
+                "mixing_bowl_173"
             ],
-            "position_in_world": [
-                -4.964286804199219,
-                5.688180923461914,
-                1.8409388065338135
-            ],
-            "bot_in_world": [
-                -3.0123064517974854,
-                4.854143142700195,
-                0.0034421533346176147
-            ],
-            "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance7_detect_surroundings.png"
-        },
-        "scene_graph": [],
-        "inventory": [
-            "mixing_bowl_173",
-            "daffodil_bulb_170"
-        ]
+            [
+                "mixing_bowl_173",
+                "ontop",
+                "countertop_tpuwys_1"
+            ]
+        ],
+        "inventory": []
     },
     "8_BEV_surroundings": {
-        "mixing_bowl_173": {
+        "daffodil_bulb_170": {
             "ability": [
                 [
                     "heatable",
@@ -1189,25 +1293,63 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 0.4658170170311687,
-                "theta_deg": -32.01122543913642,
-                "phi_deg": 86.90058878174796
+                "rho": 1.9168479020310232,
+                "theta_deg": 43.47731325474142,
+                "phi_deg": 30.217170193339566
             },
             "orientation_in_bot": [
-                0.01796246014094885,
-                -0.010673938038681052,
-                0.9216575159759873,
-                -0.3874414024306179
+                0.4744024634591444,
+                0.10949790945095461,
+                0.5239641075613358,
+                0.6988663137376264
             ],
             "position_in_world": [
-                -2.7710158824920654,
-                4.458012104034424,
-                0.04634641483426094
+                -3.051548480987549,
+                6.157528400421143,
+                1.6829450130462646
             ],
             "bot_in_world": [
-                -3.0123071670532227,
-                4.854147434234619,
-                0.0034418106079101562
+                -3.85093092918396,
+                5.695390224456787,
+                0.0031468868255615234
+            ],
+            "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance8_BEV_surroundings.png"
+        },
+        "top_cabinet_dmwxyl_2": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.1487420846363166,
+                "theta_deg": -161.50205006832198,
+                "phi_deg": 29.138699175776736
+            },
+            "orientation_in_bot": [
+                0.017016541422972258,
+                0.01000123264503098,
+                0.8033551282013934,
+                0.5951730426154253
+            ],
+            "position_in_world": [
+                -4.964286804199219,
+                5.688180923461914,
+                1.8409388065338135
+            ],
+            "bot_in_world": [
+                -3.85093092918396,
+                5.695390224456787,
+                0.0031468868255615234
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance8_BEV_surroundings.png"
         },
@@ -1223,15 +1365,15 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 2.09710520848395,
-                "theta_deg": 113.79431967402296,
-                "phi_deg": 36.501310908562154
+                "rho": 1.9109389922924567,
+                "theta_deg": 41.50247336348605,
+                "phi_deg": 31.34846676416679
             },
             "orientation_in_bot": [
-                0.007558029320199466,
-                0.019479411250573234,
-                0.22975222852082555,
-                0.9730248415224765
+                0.004897701183847599,
+                0.01912066122172343,
+                0.1439531751035127,
+                0.9893876369831873
             ],
             "position_in_world": [
                 -3.0094560546849998,
@@ -1239,13 +1381,13 @@
                 1.660315734865
             ],
             "bot_in_world": [
-                -3.0123071670532227,
-                4.854147434234619,
-                0.0034418106079101562
+                -3.85093092918396,
+                5.695390224456787,
+                0.0031468868255615234
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance8_BEV_surroundings.png"
         },
-        "daffodil_bulb_170": {
+        "mixing_bowl_173": {
             "ability": [
                 [
                     "heatable",
@@ -1257,74 +1399,49 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 0.36881120329808864,
-                "theta_deg": -7.9359245977871895,
-                "phi_deg": 2.3272706138375163
+                "rho": 1.9526249979511687,
+                "theta_deg": 43.164067905848086,
+                "phi_deg": 30.1252541848447
             },
             "orientation_in_bot": [
-                0.4883960439837508,
-                0.47579292645137483,
-                0.32554222909541286,
-                0.6550669068388729
+                -0.00930941313522821,
+                0.017404812906941156,
+                -0.5624170594725747,
+                0.8266180850483338
             ],
             "position_in_world": [
-                -3.0126659870147705,
-                4.854389190673828,
-                0.37225276231765747
+                -3.036689281463623,
+                6.160168647766113,
+                1.7159620523452759
             ],
             "bot_in_world": [
-                -3.0123071670532227,
-                4.854147434234619,
-                0.0034418106079101562
+                -3.85093092918396,
+                5.695390224456787,
+                0.0031468868255615234
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance8_BEV_surroundings.png"
         },
-        "top_cabinet_dmwxyl_2": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
+        "scene_graph": [
+            [
+                "daffodil_bulb_170",
+                "inside",
+                "mixing_bowl_173"
             ],
-            "position_in_bot": {
-                "rho": 2.8075312493253204,
-                "theta_deg": -176.13156979894254,
-                "phi_deg": 46.773284287322625
-            },
-            "orientation_in_bot": [
-                0.019145986115425017,
-                0.008366758604809928,
-                0.8522160770088274,
-                0.5227725955459039
+            [
+                "countertop_tpuwys_1",
+                "under",
+                "mixing_bowl_173"
             ],
-            "position_in_world": [
-                -4.964286804199219,
-                5.688180923461914,
-                1.8409388065338135
-            ],
-            "bot_in_world": [
-                -3.0123071670532227,
-                4.854147434234619,
-                0.0034418106079101562
-            ],
-            "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance8_BEV_surroundings.png"
-        },
-        "scene_graph": [],
-        "inventory": [
-            "mixing_bowl_173",
-            "daffodil_bulb_170"
-        ]
+            [
+                "mixing_bowl_173",
+                "ontop",
+                "countertop_tpuwys_1"
+            ]
+        ],
+        "inventory": []
     },
     "9_BEV_surroundings": {
-        "mixing_bowl_173": {
+        "daffodil_bulb_170": {
             "ability": [
                 [
                     "heatable",
@@ -1336,25 +1453,63 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 0.4658170170311687,
-                "theta_deg": -32.01122543913642,
-                "phi_deg": 86.90058878174796
+                "rho": 1.9168479020310232,
+                "theta_deg": 43.47731325474142,
+                "phi_deg": 30.217170193339566
             },
             "orientation_in_bot": [
-                0.01796246014094885,
-                -0.010673938038681052,
-                0.9216575159759873,
-                -0.3874414024306179
+                0.4744024634591444,
+                0.10949790945095461,
+                0.5239641075613358,
+                0.6988663137376264
             ],
             "position_in_world": [
-                -2.7710158824920654,
-                4.458012104034424,
-                0.04634641483426094
+                -3.051548480987549,
+                6.157528400421143,
+                1.6829450130462646
             ],
             "bot_in_world": [
-                -3.0123071670532227,
-                4.854147434234619,
-                0.0034418106079101562
+                -3.85093092918396,
+                5.695390224456787,
+                0.0031468868255615234
+            ],
+            "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance9_BEV_surroundings.png"
+        },
+        "top_cabinet_dmwxyl_2": {
+            "ability": [
+                [
+                    "openable",
+                    1
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.1487420846363166,
+                "theta_deg": -161.50205006832198,
+                "phi_deg": 29.138699175776736
+            },
+            "orientation_in_bot": [
+                0.017016541422972258,
+                0.01000123264503098,
+                0.8033551282013934,
+                0.5951730426154253
+            ],
+            "position_in_world": [
+                -4.964286804199219,
+                5.688180923461914,
+                1.8409388065338135
+            ],
+            "bot_in_world": [
+                -3.85093092918396,
+                5.695390224456787,
+                0.0031468868255615234
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance9_BEV_surroundings.png"
         },
@@ -1370,15 +1525,15 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 2.09710520848395,
-                "theta_deg": 113.79431967402296,
-                "phi_deg": 36.501310908562154
+                "rho": 1.9109389922924567,
+                "theta_deg": 41.50247336348605,
+                "phi_deg": 31.34846676416679
             },
             "orientation_in_bot": [
-                0.007558029320199466,
-                0.019479411250573234,
-                0.22975222852082555,
-                0.9730248415224765
+                0.004897701183847599,
+                0.01912066122172343,
+                0.1439531751035127,
+                0.9893876369831873
             ],
             "position_in_world": [
                 -3.0094560546849998,
@@ -1386,13 +1541,13 @@
                 1.660315734865
             ],
             "bot_in_world": [
-                -3.0123071670532227,
-                4.854147434234619,
-                0.0034418106079101562
+                -3.85093092918396,
+                5.695390224456787,
+                0.0031468868255615234
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance9_BEV_surroundings.png"
         },
-        "daffodil_bulb_170": {
+        "mixing_bowl_173": {
             "ability": [
                 [
                     "heatable",
@@ -1404,70 +1559,45 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 0.36881120329808864,
-                "theta_deg": -7.9359245977871895,
-                "phi_deg": 2.3272706138375163
+                "rho": 1.9526249979511687,
+                "theta_deg": 43.164067905848086,
+                "phi_deg": 30.1252541848447
             },
             "orientation_in_bot": [
-                0.4883960439837508,
-                0.47579292645137483,
-                0.32554222909541286,
-                0.6550669068388729
+                -0.00930941313522821,
+                0.017404812906941156,
+                -0.5624170594725747,
+                0.8266180850483338
             ],
             "position_in_world": [
-                -3.0126659870147705,
-                4.854389190673828,
-                0.37225276231765747
+                -3.036689281463623,
+                6.160168647766113,
+                1.7159620523452759
             ],
             "bot_in_world": [
-                -3.0123071670532227,
-                4.854147434234619,
-                0.0034418106079101562
+                -3.85093092918396,
+                5.695390224456787,
+                0.0031468868255615234
             ],
             "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance9_BEV_surroundings.png"
         },
-        "top_cabinet_dmwxyl_2": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
+        "scene_graph": [
+            [
+                "daffodil_bulb_170",
+                "inside",
+                "mixing_bowl_173"
             ],
-            "position_in_bot": {
-                "rho": 2.8075312493253204,
-                "theta_deg": -176.13156979894254,
-                "phi_deg": 46.773284287322625
-            },
-            "orientation_in_bot": [
-                0.019145986115425017,
-                0.008366758604809928,
-                0.8522160770088274,
-                0.5227725955459039
+            [
+                "countertop_tpuwys_1",
+                "under",
+                "mixing_bowl_173"
             ],
-            "position_in_world": [
-                -4.964286804199219,
-                5.688180923461914,
-                1.8409388065338135
-            ],
-            "bot_in_world": [
-                -3.0123071670532227,
-                4.854147434234619,
-                0.0034418106079101562
-            ],
-            "path": "./prompt_files/data/put_a_bulb_in_the_bowl_and_put_the_bowl_in_the_cabinet/subtask_8/seg_instance9_BEV_surroundings.png"
-        },
-        "scene_graph": [],
-        "inventory": [
-            "mixing_bowl_173",
-            "daffodil_bulb_170"
-        ]
+            [
+                "mixing_bowl_173",
+                "ontop",
+                "countertop_tpuwys_1"
+            ]
+        ],
+        "inventory": []
     }
 }

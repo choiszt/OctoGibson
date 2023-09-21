@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Take a bath towel out of the clothes dryer.\n(2) Unfold the bath towel.\n(3) Fold the bath towel.\n(4) Put the folded bath towel into the hamper.",
+    "code": "def act(robot,env,camera):\n    # Subtask 2: Unfold the bath towel.\n    bath_towel_192 = registry(env, \"bath_towel_192\")\n    unfold(robot, bath_towel_192)\n    donothing(env)\n",
+    "error": "State unfoldable of object bath_towel_192 is not 0\nState foldable of object bath_towel_192 is not 1\n",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

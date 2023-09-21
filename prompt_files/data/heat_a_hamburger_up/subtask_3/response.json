@@ -1,0 +1,16 @@
+{
+    "response": {
+        "explain": " The previous action code successfully executed the subtask of taking the hamburger out of the fridge. The hamburger is now in the robot's inventory. The next step is to put the hamburger in the microwave.",
+        "subtask": "\n(1) Open the microwave\n(2) Put the hamburger in the microwave\n(3) Close the microwave\n(4) Heat the hamburger up in the microwave",
+        "code": "def act(robot,env,camera):\n    # Subtask 1: Open the microwave\n    microwave = registry(env,\"microwave_bfbeeb_0\")\n    open(robot, microwave)\n    donothing(env)\n",
+        "inventory": "hamburger_85",
+        "obj_2": [
+            [
+                "microwave_bfbeeb_0",
+                "openable",
+                "1"
+            ]
+        ],
+        "obj_3": []
+    }
+}

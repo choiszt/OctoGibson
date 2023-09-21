@@ -1,5 +1,5 @@
 {
-    "subtask": "\n(1) Grasp the tortilla from the plate.\n(2) Heat the tortilla.\n(3) Fold the tortilla.\n(4) Put the folded tortilla back on the plate.",
+    "subtask": "\n(1) Grasp the tortilla.\n(2) Cook the tortilla.\n(3) Fold the tortilla.\n(4) Put the tortilla back on the plate.",
     "code": "def act(robot, env, camera):\n    # Subtask 3: Fold the tortilla\n    tortilla_189 = registry(env, \"tortilla_189\")\n    fold(robot, tortilla_189)\n    donothing(env)\n",
     "error": "Wrong state or operation ('foldable', 1)",
     "critic": "fail",

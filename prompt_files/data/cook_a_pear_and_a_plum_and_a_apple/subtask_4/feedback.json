@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Grasp the pear.\n(2) Cook the pear.\n(3) Grasp the apple.\n(4) Put the pear on the countertop.\n(5) Cook the apple.\n(6) Find and grasp the plum.\n(7) Cook the plum.",
+    "code": "def act(robot,env,camera):\n    # Subtask 4: Put the pear on the countertop\n    pear_86 = registry(env,\"pear_86\")\n    countertop_tpuwys_2 = registry(env,\"countertop_tpuwys_2\")\n    put_ontop(robot, pear_86, countertop_tpuwys_2)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

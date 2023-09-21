@@ -1,8 +1,12 @@
 {
     "task": "cook_mustard",
     "0_detect_surroundings": {
-        "countertop_tpuwys_1": {
+        "stove_igwqpj_0": {
             "ability": [
+                [
+                    "togglable",
+                    0
+                ],
                 [
                     "heatable",
                     0
@@ -13,20 +17,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.4226703998278973,
-                "theta_deg": 168.23836685314154,
-                "phi_deg": 45.225917988710634
+                "rho": 1.144314136085717,
+                "theta_deg": 33.1674191737731,
+                "phi_deg": 68.74606439207967
             },
             "orientation_in_bot": [
-                0.051228265713739105,
-                0.014728059303030595,
-                0.6727042540452766,
-                0.7379889807107671
+                0.025858925815529465,
+                0.04661078209327449,
+                -0.04510711875459775,
+                0.9975590703241483
             ],
             "position_in_world": [
-                6.584995117189999,
-                12.459234375000001,
-                0.910315490725
+                7.110574245452881,
+                10.571810722351074,
+                0.475970059633255
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -69,7 +73,7 @@
             ],
             "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance0_detect_surroundings.png"
         },
-        "saucepan_205": {
+        "countertop_tpuwys_1": {
             "ability": [
                 [
                     "heatable",
@@ -81,20 +85,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.1561309422908232,
-                "theta_deg": 168.54813338276415,
-                "phi_deg": 59.24508931556639
+                "rho": 1.4226703998278973,
+                "theta_deg": 168.23836685314154,
+                "phi_deg": 45.225917988710634
             },
             "orientation_in_bot": [
-                0.04340214855494036,
-                0.014108691388104147,
-                0.5851204358591415,
-                0.8096612093142035
+                0.051228265713739105,
+                0.014728059303030595,
+                0.6727042540452766,
+                0.7379889807107671
             ],
             "position_in_world": [
-                6.558470249176025,
-                12.404412269592285,
-                0.5036893486976624
+                6.584995117189999,
+                12.459234375000001,
+                0.910315490725
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -133,6 +137,40 @@
                 6.564576625823975,
                 12.528535842895508,
                 0.47521352767944336
+            ],
+            "bot_in_world": [
+                6.426440715789795,
+                11.364933013916016,
+                0.015130385756492615
+            ],
+            "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance0_detect_surroundings.png"
+        },
+        "saucepan_205": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1561309422908232,
+                "theta_deg": 168.54813338276415,
+                "phi_deg": 59.24508931556639
+            },
+            "orientation_in_bot": [
+                0.04340214855494036,
+                0.014108691388104147,
+                0.5851204358591415,
+                0.8096612093142035
+            ],
+            "position_in_world": [
+                6.558470249176025,
+                12.404412269592285,
+                0.5036893486976624
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -183,59 +221,11 @@
             ],
             "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance0_detect_surroundings.png"
         },
-        "stove_igwqpj_0": {
-            "ability": [
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.144314136085717,
-                "theta_deg": 33.1674191737731,
-                "phi_deg": 68.74606439207967
-            },
-            "orientation_in_bot": [
-                0.025858925815529465,
-                0.04661078209327449,
-                -0.04510711875459775,
-                0.9975590703241483
-            ],
-            "position_in_world": [
-                7.110574245452881,
-                10.571810722351074,
-                0.475970059633255
-            ],
-            "bot_in_world": [
-                6.426440715789795,
-                11.364933013916016,
-                0.015130385756492615
-            ],
-            "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance0_detect_surroundings.png"
-        },
         "scene_graph": [
             [
                 "mixing_bowl_204",
                 "ontop",
                 "countertop_tpuwys_1"
-            ],
-            [
-                "saucepan_205",
-                "under",
-                "countertop_tpuwys_1"
-            ],
-            [
-                "saucepan_205",
-                "inside",
-                "bottom_cabinet_no_top_qohxjq_0"
             ],
             [
                 "bottom_cabinet_no_top_qohxjq_0",
@@ -248,21 +238,35 @@
                 "saucepan_205"
             ],
             [
-                "mustard_leaf_201",
-                "ontop",
+                "saucepan_205",
+                "under",
                 "countertop_tpuwys_1"
+            ],
+            [
+                "saucepan_205",
+                "inside",
+                "bottom_cabinet_no_top_qohxjq_0"
             ],
             [
                 "mustard_leaf_201",
                 "inside",
                 "mixing_bowl_204"
+            ],
+            [
+                "mustard_leaf_201",
+                "ontop",
+                "countertop_tpuwys_1"
             ]
         ],
         "inventory": []
     },
     "1_detect_surroundings": {
-        "countertop_tpuwys_1": {
+        "stove_igwqpj_0": {
             "ability": [
+                [
+                    "togglable",
+                    0
+                ],
                 [
                     "heatable",
                     0
@@ -273,20 +277,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.4226703998278973,
-                "theta_deg": 168.23836685314154,
-                "phi_deg": 45.225917988710634
+                "rho": 1.144314136085717,
+                "theta_deg": 33.1674191737731,
+                "phi_deg": 68.74606439207967
             },
             "orientation_in_bot": [
-                0.051228265713739105,
-                0.014728059303030595,
-                0.6727042540452766,
-                0.7379889807107671
+                0.025858925815529465,
+                0.04661078209327449,
+                -0.04510711875459775,
+                0.9975590703241483
             ],
             "position_in_world": [
-                6.584995117189999,
-                12.459234375000001,
-                0.910315490725
+                7.110574245452881,
+                10.571810722351074,
+                0.475970059633255
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -329,7 +333,7 @@
             ],
             "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance1_detect_surroundings.png"
         },
-        "saucepan_205": {
+        "countertop_tpuwys_1": {
             "ability": [
                 [
                     "heatable",
@@ -341,20 +345,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.1561309422908232,
-                "theta_deg": 168.54813338276415,
-                "phi_deg": 59.24508931556639
+                "rho": 1.4226703998278973,
+                "theta_deg": 168.23836685314154,
+                "phi_deg": 45.225917988710634
             },
             "orientation_in_bot": [
-                0.04340214855494036,
-                0.014108691388104147,
-                0.5851204358591415,
-                0.8096612093142035
+                0.051228265713739105,
+                0.014728059303030595,
+                0.6727042540452766,
+                0.7379889807107671
             ],
             "position_in_world": [
-                6.558470249176025,
-                12.404412269592285,
-                0.5036893486976624
+                6.584995117189999,
+                12.459234375000001,
+                0.910315490725
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -393,6 +397,40 @@
                 6.564576625823975,
                 12.528535842895508,
                 0.47521352767944336
+            ],
+            "bot_in_world": [
+                6.426440715789795,
+                11.364933013916016,
+                0.015130385756492615
+            ],
+            "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance1_detect_surroundings.png"
+        },
+        "saucepan_205": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1561309422908232,
+                "theta_deg": 168.54813338276415,
+                "phi_deg": 59.24508931556639
+            },
+            "orientation_in_bot": [
+                0.04340214855494036,
+                0.014108691388104147,
+                0.5851204358591415,
+                0.8096612093142035
+            ],
+            "position_in_world": [
+                6.558470249176025,
+                12.404412269592285,
+                0.5036893486976624
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -443,59 +481,11 @@
             ],
             "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance1_detect_surroundings.png"
         },
-        "stove_igwqpj_0": {
-            "ability": [
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.144314136085717,
-                "theta_deg": 33.1674191737731,
-                "phi_deg": 68.74606439207967
-            },
-            "orientation_in_bot": [
-                0.025858925815529465,
-                0.04661078209327449,
-                -0.04510711875459775,
-                0.9975590703241483
-            ],
-            "position_in_world": [
-                7.110574245452881,
-                10.571810722351074,
-                0.475970059633255
-            ],
-            "bot_in_world": [
-                6.426440715789795,
-                11.364933013916016,
-                0.015130385756492615
-            ],
-            "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance1_detect_surroundings.png"
-        },
         "scene_graph": [
             [
                 "mixing_bowl_204",
                 "ontop",
                 "countertop_tpuwys_1"
-            ],
-            [
-                "saucepan_205",
-                "under",
-                "countertop_tpuwys_1"
-            ],
-            [
-                "saucepan_205",
-                "inside",
-                "bottom_cabinet_no_top_qohxjq_0"
             ],
             [
                 "bottom_cabinet_no_top_qohxjq_0",
@@ -508,21 +498,35 @@
                 "saucepan_205"
             ],
             [
-                "mustard_leaf_201",
-                "ontop",
+                "saucepan_205",
+                "under",
                 "countertop_tpuwys_1"
+            ],
+            [
+                "saucepan_205",
+                "inside",
+                "bottom_cabinet_no_top_qohxjq_0"
             ],
             [
                 "mustard_leaf_201",
                 "inside",
                 "mixing_bowl_204"
+            ],
+            [
+                "mustard_leaf_201",
+                "ontop",
+                "countertop_tpuwys_1"
             ]
         ],
         "inventory": []
     },
     "2_detect_surroundings": {
-        "countertop_tpuwys_1": {
+        "stove_igwqpj_0": {
             "ability": [
+                [
+                    "togglable",
+                    0
+                ],
                 [
                     "heatable",
                     0
@@ -533,20 +537,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.4226703998278973,
-                "theta_deg": 168.23836685314154,
-                "phi_deg": 45.225917988710634
+                "rho": 1.144314136085717,
+                "theta_deg": 33.1674191737731,
+                "phi_deg": 68.74606439207967
             },
             "orientation_in_bot": [
-                0.051228265713739105,
-                0.014728059303030595,
-                0.6727042540452766,
-                0.7379889807107671
+                0.025858925815529465,
+                0.04661078209327449,
+                -0.04510711875459775,
+                0.9975590703241483
             ],
             "position_in_world": [
-                6.584995117189999,
-                12.459234375000001,
-                0.910315490725
+                7.110574245452881,
+                10.571810722351074,
+                0.475970059633255
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -589,7 +593,7 @@
             ],
             "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance2_detect_surroundings.png"
         },
-        "saucepan_205": {
+        "countertop_tpuwys_1": {
             "ability": [
                 [
                     "heatable",
@@ -601,20 +605,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.1561309422908232,
-                "theta_deg": 168.54813338276415,
-                "phi_deg": 59.24508931556639
+                "rho": 1.4226703998278973,
+                "theta_deg": 168.23836685314154,
+                "phi_deg": 45.225917988710634
             },
             "orientation_in_bot": [
-                0.04340214855494036,
-                0.014108691388104147,
-                0.5851204358591415,
-                0.8096612093142035
+                0.051228265713739105,
+                0.014728059303030595,
+                0.6727042540452766,
+                0.7379889807107671
             ],
             "position_in_world": [
-                6.558470249176025,
-                12.404412269592285,
-                0.5036893486976624
+                6.584995117189999,
+                12.459234375000001,
+                0.910315490725
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -653,6 +657,40 @@
                 6.564576625823975,
                 12.528535842895508,
                 0.47521352767944336
+            ],
+            "bot_in_world": [
+                6.426440715789795,
+                11.364933013916016,
+                0.015130385756492615
+            ],
+            "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance2_detect_surroundings.png"
+        },
+        "saucepan_205": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1561309422908232,
+                "theta_deg": 168.54813338276415,
+                "phi_deg": 59.24508931556639
+            },
+            "orientation_in_bot": [
+                0.04340214855494036,
+                0.014108691388104147,
+                0.5851204358591415,
+                0.8096612093142035
+            ],
+            "position_in_world": [
+                6.558470249176025,
+                12.404412269592285,
+                0.5036893486976624
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -703,59 +741,11 @@
             ],
             "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance2_detect_surroundings.png"
         },
-        "stove_igwqpj_0": {
-            "ability": [
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.144314136085717,
-                "theta_deg": 33.1674191737731,
-                "phi_deg": 68.74606439207967
-            },
-            "orientation_in_bot": [
-                0.025858925815529465,
-                0.04661078209327449,
-                -0.04510711875459775,
-                0.9975590703241483
-            ],
-            "position_in_world": [
-                7.110574245452881,
-                10.571810722351074,
-                0.475970059633255
-            ],
-            "bot_in_world": [
-                6.426440715789795,
-                11.364933013916016,
-                0.015130385756492615
-            ],
-            "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance2_detect_surroundings.png"
-        },
         "scene_graph": [
             [
                 "mixing_bowl_204",
                 "ontop",
                 "countertop_tpuwys_1"
-            ],
-            [
-                "saucepan_205",
-                "under",
-                "countertop_tpuwys_1"
-            ],
-            [
-                "saucepan_205",
-                "inside",
-                "bottom_cabinet_no_top_qohxjq_0"
             ],
             [
                 "bottom_cabinet_no_top_qohxjq_0",
@@ -768,21 +758,35 @@
                 "saucepan_205"
             ],
             [
-                "mustard_leaf_201",
-                "ontop",
+                "saucepan_205",
+                "under",
                 "countertop_tpuwys_1"
+            ],
+            [
+                "saucepan_205",
+                "inside",
+                "bottom_cabinet_no_top_qohxjq_0"
             ],
             [
                 "mustard_leaf_201",
                 "inside",
                 "mixing_bowl_204"
+            ],
+            [
+                "mustard_leaf_201",
+                "ontop",
+                "countertop_tpuwys_1"
             ]
         ],
         "inventory": []
     },
     "3_detect_surroundings": {
-        "countertop_tpuwys_1": {
+        "stove_igwqpj_0": {
             "ability": [
+                [
+                    "togglable",
+                    0
+                ],
                 [
                     "heatable",
                     0
@@ -793,20 +797,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.4226703998278973,
-                "theta_deg": 168.23836685314154,
-                "phi_deg": 45.225917988710634
+                "rho": 1.144314136085717,
+                "theta_deg": 33.1674191737731,
+                "phi_deg": 68.74606439207967
             },
             "orientation_in_bot": [
-                0.051228265713739105,
-                0.014728059303030595,
-                0.6727042540452766,
-                0.7379889807107671
+                0.025858925815529465,
+                0.04661078209327449,
+                -0.04510711875459775,
+                0.9975590703241483
             ],
             "position_in_world": [
-                6.584995117189999,
-                12.459234375000001,
-                0.910315490725
+                7.110574245452881,
+                10.571810722351074,
+                0.475970059633255
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -849,7 +853,7 @@
             ],
             "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance3_detect_surroundings.png"
         },
-        "saucepan_205": {
+        "countertop_tpuwys_1": {
             "ability": [
                 [
                     "heatable",
@@ -861,20 +865,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.1561309422908232,
-                "theta_deg": 168.54813338276415,
-                "phi_deg": 59.24508931556639
+                "rho": 1.4226703998278973,
+                "theta_deg": 168.23836685314154,
+                "phi_deg": 45.225917988710634
             },
             "orientation_in_bot": [
-                0.04340214855494036,
-                0.014108691388104147,
-                0.5851204358591415,
-                0.8096612093142035
+                0.051228265713739105,
+                0.014728059303030595,
+                0.6727042540452766,
+                0.7379889807107671
             ],
             "position_in_world": [
-                6.558470249176025,
-                12.404412269592285,
-                0.5036893486976624
+                6.584995117189999,
+                12.459234375000001,
+                0.910315490725
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -913,6 +917,40 @@
                 6.564576625823975,
                 12.528535842895508,
                 0.47521352767944336
+            ],
+            "bot_in_world": [
+                6.426440715789795,
+                11.364933013916016,
+                0.015130385756492615
+            ],
+            "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance3_detect_surroundings.png"
+        },
+        "saucepan_205": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1561309422908232,
+                "theta_deg": 168.54813338276415,
+                "phi_deg": 59.24508931556639
+            },
+            "orientation_in_bot": [
+                0.04340214855494036,
+                0.014108691388104147,
+                0.5851204358591415,
+                0.8096612093142035
+            ],
+            "position_in_world": [
+                6.558470249176025,
+                12.404412269592285,
+                0.5036893486976624
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -963,59 +1001,11 @@
             ],
             "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance3_detect_surroundings.png"
         },
-        "stove_igwqpj_0": {
-            "ability": [
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.144314136085717,
-                "theta_deg": 33.1674191737731,
-                "phi_deg": 68.74606439207967
-            },
-            "orientation_in_bot": [
-                0.025858925815529465,
-                0.04661078209327449,
-                -0.04510711875459775,
-                0.9975590703241483
-            ],
-            "position_in_world": [
-                7.110574245452881,
-                10.571810722351074,
-                0.475970059633255
-            ],
-            "bot_in_world": [
-                6.426440715789795,
-                11.364933013916016,
-                0.015130385756492615
-            ],
-            "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance3_detect_surroundings.png"
-        },
         "scene_graph": [
             [
                 "mixing_bowl_204",
                 "ontop",
                 "countertop_tpuwys_1"
-            ],
-            [
-                "saucepan_205",
-                "under",
-                "countertop_tpuwys_1"
-            ],
-            [
-                "saucepan_205",
-                "inside",
-                "bottom_cabinet_no_top_qohxjq_0"
             ],
             [
                 "bottom_cabinet_no_top_qohxjq_0",
@@ -1028,21 +1018,35 @@
                 "saucepan_205"
             ],
             [
-                "mustard_leaf_201",
-                "ontop",
+                "saucepan_205",
+                "under",
                 "countertop_tpuwys_1"
+            ],
+            [
+                "saucepan_205",
+                "inside",
+                "bottom_cabinet_no_top_qohxjq_0"
             ],
             [
                 "mustard_leaf_201",
                 "inside",
                 "mixing_bowl_204"
+            ],
+            [
+                "mustard_leaf_201",
+                "ontop",
+                "countertop_tpuwys_1"
             ]
         ],
         "inventory": []
     },
     "4_detect_surroundings": {
-        "countertop_tpuwys_1": {
+        "stove_igwqpj_0": {
             "ability": [
+                [
+                    "togglable",
+                    0
+                ],
                 [
                     "heatable",
                     0
@@ -1053,20 +1057,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.4226703998278973,
-                "theta_deg": 168.23836685314154,
-                "phi_deg": 45.225917988710634
+                "rho": 1.144314136085717,
+                "theta_deg": 33.1674191737731,
+                "phi_deg": 68.74606439207967
             },
             "orientation_in_bot": [
-                0.051228265713739105,
-                0.014728059303030595,
-                0.6727042540452766,
-                0.7379889807107671
+                0.025858925815529465,
+                0.04661078209327449,
+                -0.04510711875459775,
+                0.9975590703241483
             ],
             "position_in_world": [
-                6.584995117189999,
-                12.459234375000001,
-                0.910315490725
+                7.110574245452881,
+                10.571810722351074,
+                0.475970059633255
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -1109,7 +1113,7 @@
             ],
             "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance4_detect_surroundings.png"
         },
-        "saucepan_205": {
+        "countertop_tpuwys_1": {
             "ability": [
                 [
                     "heatable",
@@ -1121,20 +1125,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.1561309422908232,
-                "theta_deg": 168.54813338276415,
-                "phi_deg": 59.24508931556639
+                "rho": 1.4226703998278973,
+                "theta_deg": 168.23836685314154,
+                "phi_deg": 45.225917988710634
             },
             "orientation_in_bot": [
-                0.04340214855494036,
-                0.014108691388104147,
-                0.5851204358591415,
-                0.8096612093142035
+                0.051228265713739105,
+                0.014728059303030595,
+                0.6727042540452766,
+                0.7379889807107671
             ],
             "position_in_world": [
-                6.558470249176025,
-                12.404412269592285,
-                0.5036893486976624
+                6.584995117189999,
+                12.459234375000001,
+                0.910315490725
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -1173,6 +1177,40 @@
                 6.564576625823975,
                 12.528535842895508,
                 0.47521352767944336
+            ],
+            "bot_in_world": [
+                6.426440715789795,
+                11.364933013916016,
+                0.015130385756492615
+            ],
+            "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance4_detect_surroundings.png"
+        },
+        "saucepan_205": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1561309422908232,
+                "theta_deg": 168.54813338276415,
+                "phi_deg": 59.24508931556639
+            },
+            "orientation_in_bot": [
+                0.04340214855494036,
+                0.014108691388104147,
+                0.5851204358591415,
+                0.8096612093142035
+            ],
+            "position_in_world": [
+                6.558470249176025,
+                12.404412269592285,
+                0.5036893486976624
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -1223,59 +1261,11 @@
             ],
             "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance4_detect_surroundings.png"
         },
-        "stove_igwqpj_0": {
-            "ability": [
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.144314136085717,
-                "theta_deg": 33.1674191737731,
-                "phi_deg": 68.74606439207967
-            },
-            "orientation_in_bot": [
-                0.025858925815529465,
-                0.04661078209327449,
-                -0.04510711875459775,
-                0.9975590703241483
-            ],
-            "position_in_world": [
-                7.110574245452881,
-                10.571810722351074,
-                0.475970059633255
-            ],
-            "bot_in_world": [
-                6.426440715789795,
-                11.364933013916016,
-                0.015130385756492615
-            ],
-            "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance4_detect_surroundings.png"
-        },
         "scene_graph": [
             [
                 "mixing_bowl_204",
                 "ontop",
                 "countertop_tpuwys_1"
-            ],
-            [
-                "saucepan_205",
-                "under",
-                "countertop_tpuwys_1"
-            ],
-            [
-                "saucepan_205",
-                "inside",
-                "bottom_cabinet_no_top_qohxjq_0"
             ],
             [
                 "bottom_cabinet_no_top_qohxjq_0",
@@ -1288,21 +1278,35 @@
                 "saucepan_205"
             ],
             [
-                "mustard_leaf_201",
-                "ontop",
+                "saucepan_205",
+                "under",
                 "countertop_tpuwys_1"
+            ],
+            [
+                "saucepan_205",
+                "inside",
+                "bottom_cabinet_no_top_qohxjq_0"
             ],
             [
                 "mustard_leaf_201",
                 "inside",
                 "mixing_bowl_204"
+            ],
+            [
+                "mustard_leaf_201",
+                "ontop",
+                "countertop_tpuwys_1"
             ]
         ],
         "inventory": []
     },
     "5_detect_surroundings": {
-        "countertop_tpuwys_1": {
+        "stove_igwqpj_0": {
             "ability": [
+                [
+                    "togglable",
+                    0
+                ],
                 [
                     "heatable",
                     0
@@ -1313,20 +1317,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.4226703998278973,
-                "theta_deg": 168.23836685314154,
-                "phi_deg": 45.225917988710634
+                "rho": 1.144314136085717,
+                "theta_deg": 33.1674191737731,
+                "phi_deg": 68.74606439207967
             },
             "orientation_in_bot": [
-                0.051228265713739105,
-                0.014728059303030595,
-                0.6727042540452766,
-                0.7379889807107671
+                0.025858925815529465,
+                0.04661078209327449,
+                -0.04510711875459775,
+                0.9975590703241483
             ],
             "position_in_world": [
-                6.584995117189999,
-                12.459234375000001,
-                0.910315490725
+                7.110574245452881,
+                10.571810722351074,
+                0.475970059633255
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -1369,7 +1373,7 @@
             ],
             "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance5_detect_surroundings.png"
         },
-        "saucepan_205": {
+        "countertop_tpuwys_1": {
             "ability": [
                 [
                     "heatable",
@@ -1381,20 +1385,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.1561309422908232,
-                "theta_deg": 168.54813338276415,
-                "phi_deg": 59.24508931556639
+                "rho": 1.4226703998278973,
+                "theta_deg": 168.23836685314154,
+                "phi_deg": 45.225917988710634
             },
             "orientation_in_bot": [
-                0.04340214855494036,
-                0.014108691388104147,
-                0.5851204358591415,
-                0.8096612093142035
+                0.051228265713739105,
+                0.014728059303030595,
+                0.6727042540452766,
+                0.7379889807107671
             ],
             "position_in_world": [
-                6.558470249176025,
-                12.404412269592285,
-                0.5036893486976624
+                6.584995117189999,
+                12.459234375000001,
+                0.910315490725
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -1433,6 +1437,40 @@
                 6.564576625823975,
                 12.528535842895508,
                 0.47521352767944336
+            ],
+            "bot_in_world": [
+                6.426440715789795,
+                11.364933013916016,
+                0.015130385756492615
+            ],
+            "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance5_detect_surroundings.png"
+        },
+        "saucepan_205": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1561309422908232,
+                "theta_deg": 168.54813338276415,
+                "phi_deg": 59.24508931556639
+            },
+            "orientation_in_bot": [
+                0.04340214855494036,
+                0.014108691388104147,
+                0.5851204358591415,
+                0.8096612093142035
+            ],
+            "position_in_world": [
+                6.558470249176025,
+                12.404412269592285,
+                0.5036893486976624
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -1483,59 +1521,11 @@
             ],
             "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance5_detect_surroundings.png"
         },
-        "stove_igwqpj_0": {
-            "ability": [
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.144314136085717,
-                "theta_deg": 33.1674191737731,
-                "phi_deg": 68.74606439207967
-            },
-            "orientation_in_bot": [
-                0.025858925815529465,
-                0.04661078209327449,
-                -0.04510711875459775,
-                0.9975590703241483
-            ],
-            "position_in_world": [
-                7.110574245452881,
-                10.571810722351074,
-                0.475970059633255
-            ],
-            "bot_in_world": [
-                6.426440715789795,
-                11.364933013916016,
-                0.015130385756492615
-            ],
-            "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance5_detect_surroundings.png"
-        },
         "scene_graph": [
             [
                 "mixing_bowl_204",
                 "ontop",
                 "countertop_tpuwys_1"
-            ],
-            [
-                "saucepan_205",
-                "under",
-                "countertop_tpuwys_1"
-            ],
-            [
-                "saucepan_205",
-                "inside",
-                "bottom_cabinet_no_top_qohxjq_0"
             ],
             [
                 "bottom_cabinet_no_top_qohxjq_0",
@@ -1548,21 +1538,35 @@
                 "saucepan_205"
             ],
             [
-                "mustard_leaf_201",
-                "ontop",
+                "saucepan_205",
+                "under",
                 "countertop_tpuwys_1"
+            ],
+            [
+                "saucepan_205",
+                "inside",
+                "bottom_cabinet_no_top_qohxjq_0"
             ],
             [
                 "mustard_leaf_201",
                 "inside",
                 "mixing_bowl_204"
+            ],
+            [
+                "mustard_leaf_201",
+                "ontop",
+                "countertop_tpuwys_1"
             ]
         ],
         "inventory": []
     },
     "6_detect_surroundings": {
-        "countertop_tpuwys_1": {
+        "stove_igwqpj_0": {
             "ability": [
+                [
+                    "togglable",
+                    0
+                ],
                 [
                     "heatable",
                     0
@@ -1573,20 +1577,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.4226703998278973,
-                "theta_deg": 168.23836685314154,
-                "phi_deg": 45.225917988710634
+                "rho": 1.144314136085717,
+                "theta_deg": 33.1674191737731,
+                "phi_deg": 68.74606439207967
             },
             "orientation_in_bot": [
-                0.051228265713739105,
-                0.014728059303030595,
-                0.6727042540452766,
-                0.7379889807107671
+                0.025858925815529465,
+                0.04661078209327449,
+                -0.04510711875459775,
+                0.9975590703241483
             ],
             "position_in_world": [
-                6.584995117189999,
-                12.459234375000001,
-                0.910315490725
+                7.110574245452881,
+                10.571810722351074,
+                0.475970059633255
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -1629,7 +1633,7 @@
             ],
             "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance6_detect_surroundings.png"
         },
-        "saucepan_205": {
+        "countertop_tpuwys_1": {
             "ability": [
                 [
                     "heatable",
@@ -1641,20 +1645,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.1561309422908232,
-                "theta_deg": 168.54813338276415,
-                "phi_deg": 59.24508931556639
+                "rho": 1.4226703998278973,
+                "theta_deg": 168.23836685314154,
+                "phi_deg": 45.225917988710634
             },
             "orientation_in_bot": [
-                0.04340214855494036,
-                0.014108691388104147,
-                0.5851204358591415,
-                0.8096612093142035
+                0.051228265713739105,
+                0.014728059303030595,
+                0.6727042540452766,
+                0.7379889807107671
             ],
             "position_in_world": [
-                6.558470249176025,
-                12.404412269592285,
-                0.5036893486976624
+                6.584995117189999,
+                12.459234375000001,
+                0.910315490725
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -1693,6 +1697,40 @@
                 6.564576625823975,
                 12.528535842895508,
                 0.47521352767944336
+            ],
+            "bot_in_world": [
+                6.426440715789795,
+                11.364933013916016,
+                0.015130385756492615
+            ],
+            "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance6_detect_surroundings.png"
+        },
+        "saucepan_205": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1561309422908232,
+                "theta_deg": 168.54813338276415,
+                "phi_deg": 59.24508931556639
+            },
+            "orientation_in_bot": [
+                0.04340214855494036,
+                0.014108691388104147,
+                0.5851204358591415,
+                0.8096612093142035
+            ],
+            "position_in_world": [
+                6.558470249176025,
+                12.404412269592285,
+                0.5036893486976624
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -1743,59 +1781,11 @@
             ],
             "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance6_detect_surroundings.png"
         },
-        "stove_igwqpj_0": {
-            "ability": [
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.144314136085717,
-                "theta_deg": 33.1674191737731,
-                "phi_deg": 68.74606439207967
-            },
-            "orientation_in_bot": [
-                0.025858925815529465,
-                0.04661078209327449,
-                -0.04510711875459775,
-                0.9975590703241483
-            ],
-            "position_in_world": [
-                7.110574245452881,
-                10.571810722351074,
-                0.475970059633255
-            ],
-            "bot_in_world": [
-                6.426440715789795,
-                11.364933013916016,
-                0.015130385756492615
-            ],
-            "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance6_detect_surroundings.png"
-        },
         "scene_graph": [
             [
                 "mixing_bowl_204",
                 "ontop",
                 "countertop_tpuwys_1"
-            ],
-            [
-                "saucepan_205",
-                "under",
-                "countertop_tpuwys_1"
-            ],
-            [
-                "saucepan_205",
-                "inside",
-                "bottom_cabinet_no_top_qohxjq_0"
             ],
             [
                 "bottom_cabinet_no_top_qohxjq_0",
@@ -1808,21 +1798,35 @@
                 "saucepan_205"
             ],
             [
-                "mustard_leaf_201",
-                "ontop",
+                "saucepan_205",
+                "under",
                 "countertop_tpuwys_1"
+            ],
+            [
+                "saucepan_205",
+                "inside",
+                "bottom_cabinet_no_top_qohxjq_0"
             ],
             [
                 "mustard_leaf_201",
                 "inside",
                 "mixing_bowl_204"
+            ],
+            [
+                "mustard_leaf_201",
+                "ontop",
+                "countertop_tpuwys_1"
             ]
         ],
         "inventory": []
     },
     "7_detect_surroundings": {
-        "countertop_tpuwys_1": {
+        "stove_igwqpj_0": {
             "ability": [
+                [
+                    "togglable",
+                    0
+                ],
                 [
                     "heatable",
                     0
@@ -1833,20 +1837,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.4226703998278973,
-                "theta_deg": 168.23836685314154,
-                "phi_deg": 45.225917988710634
+                "rho": 1.144314136085717,
+                "theta_deg": 33.1674191737731,
+                "phi_deg": 68.74606439207967
             },
             "orientation_in_bot": [
-                0.051228265713739105,
-                0.014728059303030595,
-                0.6727042540452766,
-                0.7379889807107671
+                0.025858925815529465,
+                0.04661078209327449,
+                -0.04510711875459775,
+                0.9975590703241483
             ],
             "position_in_world": [
-                6.584995117189999,
-                12.459234375000001,
-                0.910315490725
+                7.110574245452881,
+                10.571810722351074,
+                0.475970059633255
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -1889,7 +1893,7 @@
             ],
             "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance7_detect_surroundings.png"
         },
-        "saucepan_205": {
+        "countertop_tpuwys_1": {
             "ability": [
                 [
                     "heatable",
@@ -1901,20 +1905,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.1561309422908232,
-                "theta_deg": 168.54813338276415,
-                "phi_deg": 59.24508931556639
+                "rho": 1.4226703998278973,
+                "theta_deg": 168.23836685314154,
+                "phi_deg": 45.225917988710634
             },
             "orientation_in_bot": [
-                0.04340214855494036,
-                0.014108691388104147,
-                0.5851204358591415,
-                0.8096612093142035
+                0.051228265713739105,
+                0.014728059303030595,
+                0.6727042540452766,
+                0.7379889807107671
             ],
             "position_in_world": [
-                6.558470249176025,
-                12.404412269592285,
-                0.5036893486976624
+                6.584995117189999,
+                12.459234375000001,
+                0.910315490725
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -1953,6 +1957,40 @@
                 6.564576625823975,
                 12.528535842895508,
                 0.47521352767944336
+            ],
+            "bot_in_world": [
+                6.426440715789795,
+                11.364933013916016,
+                0.015130385756492615
+            ],
+            "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance7_detect_surroundings.png"
+        },
+        "saucepan_205": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1561309422908232,
+                "theta_deg": 168.54813338276415,
+                "phi_deg": 59.24508931556639
+            },
+            "orientation_in_bot": [
+                0.04340214855494036,
+                0.014108691388104147,
+                0.5851204358591415,
+                0.8096612093142035
+            ],
+            "position_in_world": [
+                6.558470249176025,
+                12.404412269592285,
+                0.5036893486976624
             ],
             "bot_in_world": [
                 6.426440715789795,
@@ -2003,59 +2041,11 @@
             ],
             "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance7_detect_surroundings.png"
         },
-        "stove_igwqpj_0": {
-            "ability": [
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.144314136085717,
-                "theta_deg": 33.1674191737731,
-                "phi_deg": 68.74606439207967
-            },
-            "orientation_in_bot": [
-                0.025858925815529465,
-                0.04661078209327449,
-                -0.04510711875459775,
-                0.9975590703241483
-            ],
-            "position_in_world": [
-                7.110574245452881,
-                10.571810722351074,
-                0.475970059633255
-            ],
-            "bot_in_world": [
-                6.426440715789795,
-                11.364933013916016,
-                0.015130385756492615
-            ],
-            "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance7_detect_surroundings.png"
-        },
         "scene_graph": [
             [
                 "mixing_bowl_204",
                 "ontop",
                 "countertop_tpuwys_1"
-            ],
-            [
-                "saucepan_205",
-                "under",
-                "countertop_tpuwys_1"
-            ],
-            [
-                "saucepan_205",
-                "inside",
-                "bottom_cabinet_no_top_qohxjq_0"
             ],
             [
                 "bottom_cabinet_no_top_qohxjq_0",
@@ -2068,21 +2058,35 @@
                 "saucepan_205"
             ],
             [
-                "mustard_leaf_201",
-                "ontop",
+                "saucepan_205",
+                "under",
                 "countertop_tpuwys_1"
+            ],
+            [
+                "saucepan_205",
+                "inside",
+                "bottom_cabinet_no_top_qohxjq_0"
             ],
             [
                 "mustard_leaf_201",
                 "inside",
                 "mixing_bowl_204"
+            ],
+            [
+                "mustard_leaf_201",
+                "ontop",
+                "countertop_tpuwys_1"
             ]
         ],
         "inventory": []
     },
     "8_BEV_surroundings": {
-        "countertop_tpuwys_1": {
+        "stove_igwqpj_0": {
             "ability": [
+                [
+                    "togglable",
+                    0
+                ],
                 [
                     "heatable",
                     0
@@ -2093,20 +2097,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.4275884556624272,
-                "theta_deg": 165.6296773381576,
-                "phi_deg": 47.93569440248176
+                "rho": 1.1497219573432842,
+                "theta_deg": 34.34882786415132,
+                "phi_deg": 68.01071872031727
             },
             "orientation_in_bot": [
-                0.017331241231633064,
-                0.01686297244526762,
-                0.6711643090845634,
-                0.7409141235316827
+                0.00035673266859968203,
+                0.0241785665554676,
+                -0.04826337808916155,
+                0.998541894963125
             ],
             "position_in_world": [
-                6.584995117189999,
-                12.459234375000001,
-                0.910315490725
+                7.110574245452881,
+                10.571810722351074,
+                0.475970059633255
             ],
             "bot_in_world": [
                 6.426021575927734,
@@ -2149,7 +2153,7 @@
             ],
             "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance8_BEV_surroundings.png"
         },
-        "saucepan_205": {
+        "countertop_tpuwys_1": {
             "ability": [
                 [
                     "heatable",
@@ -2161,20 +2165,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.1588186221411982,
-                "theta_deg": 166.84129053804105,
-                "phi_deg": 61.79557777936035
+                "rho": 1.4275884556624272,
+                "theta_deg": 165.6296773381576,
+                "phi_deg": 47.93569440248176
             },
             "orientation_in_bot": [
-                0.009455926987805927,
-                0.012412806652866499,
-                0.5833032637609433,
-                0.8121045561758851
+                0.017331241231633064,
+                0.01686297244526762,
+                0.6711643090845634,
+                0.7409141235316827
             ],
             "position_in_world": [
-                6.558470249176025,
-                12.404412269592285,
-                0.5036893486976624
+                6.584995117189999,
+                12.459234375000001,
+                0.910315490725
             ],
             "bot_in_world": [
                 6.426021575927734,
@@ -2213,6 +2217,40 @@
                 6.564576625823975,
                 12.528535842895508,
                 0.47521352767944336
+            ],
+            "bot_in_world": [
+                6.426021575927734,
+                11.366641998291016,
+                0.005341336131095886
+            ],
+            "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance8_BEV_surroundings.png"
+        },
+        "saucepan_205": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1588186221411982,
+                "theta_deg": 166.84129053804105,
+                "phi_deg": 61.79557777936035
+            },
+            "orientation_in_bot": [
+                0.009455926987805927,
+                0.012412806652866499,
+                0.5833032637609433,
+                0.8121045561758851
+            ],
+            "position_in_world": [
+                6.558470249176025,
+                12.404412269592285,
+                0.5036893486976624
             ],
             "bot_in_world": [
                 6.426021575927734,
@@ -2263,59 +2301,11 @@
             ],
             "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance8_BEV_surroundings.png"
         },
-        "stove_igwqpj_0": {
-            "ability": [
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.1497219573432842,
-                "theta_deg": 34.34882786415132,
-                "phi_deg": 68.01071872031727
-            },
-            "orientation_in_bot": [
-                0.00035673266859968203,
-                0.0241785665554676,
-                -0.04826337808916155,
-                0.998541894963125
-            ],
-            "position_in_world": [
-                7.110574245452881,
-                10.571810722351074,
-                0.475970059633255
-            ],
-            "bot_in_world": [
-                6.426021575927734,
-                11.366641998291016,
-                0.005341336131095886
-            ],
-            "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance8_BEV_surroundings.png"
-        },
         "scene_graph": [
             [
                 "mixing_bowl_204",
                 "ontop",
                 "countertop_tpuwys_1"
-            ],
-            [
-                "saucepan_205",
-                "under",
-                "countertop_tpuwys_1"
-            ],
-            [
-                "saucepan_205",
-                "inside",
-                "bottom_cabinet_no_top_qohxjq_0"
             ],
             [
                 "bottom_cabinet_no_top_qohxjq_0",
@@ -2328,21 +2318,35 @@
                 "saucepan_205"
             ],
             [
-                "mustard_leaf_201",
-                "ontop",
+                "saucepan_205",
+                "under",
                 "countertop_tpuwys_1"
+            ],
+            [
+                "saucepan_205",
+                "inside",
+                "bottom_cabinet_no_top_qohxjq_0"
             ],
             [
                 "mustard_leaf_201",
                 "inside",
                 "mixing_bowl_204"
+            ],
+            [
+                "mustard_leaf_201",
+                "ontop",
+                "countertop_tpuwys_1"
             ]
         ],
         "inventory": []
     },
     "9_BEV_surroundings": {
-        "countertop_tpuwys_1": {
+        "stove_igwqpj_0": {
             "ability": [
+                [
+                    "togglable",
+                    0
+                ],
                 [
                     "heatable",
                     0
@@ -2353,20 +2357,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.4275884556624272,
-                "theta_deg": 165.6296773381576,
-                "phi_deg": 47.93569440248176
+                "rho": 1.1497219573432842,
+                "theta_deg": 34.34882786415132,
+                "phi_deg": 68.01071872031727
             },
             "orientation_in_bot": [
-                0.017331241231633064,
-                0.01686297244526762,
-                0.6711643090845634,
-                0.7409141235316827
+                0.00035673266859968203,
+                0.0241785665554676,
+                -0.04826337808916155,
+                0.998541894963125
             ],
             "position_in_world": [
-                6.584995117189999,
-                12.459234375000001,
-                0.910315490725
+                7.110574245452881,
+                10.571810722351074,
+                0.475970059633255
             ],
             "bot_in_world": [
                 6.426021575927734,
@@ -2409,7 +2413,7 @@
             ],
             "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance9_BEV_surroundings.png"
         },
-        "saucepan_205": {
+        "countertop_tpuwys_1": {
             "ability": [
                 [
                     "heatable",
@@ -2421,20 +2425,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 1.1588186221411982,
-                "theta_deg": 166.84129053804105,
-                "phi_deg": 61.79557777936035
+                "rho": 1.4275884556624272,
+                "theta_deg": 165.6296773381576,
+                "phi_deg": 47.93569440248176
             },
             "orientation_in_bot": [
-                0.009455926987805927,
-                0.012412806652866499,
-                0.5833032637609433,
-                0.8121045561758851
+                0.017331241231633064,
+                0.01686297244526762,
+                0.6711643090845634,
+                0.7409141235316827
             ],
             "position_in_world": [
-                6.558470249176025,
-                12.404412269592285,
-                0.5036893486976624
+                6.584995117189999,
+                12.459234375000001,
+                0.910315490725
             ],
             "bot_in_world": [
                 6.426021575927734,
@@ -2473,6 +2477,40 @@
                 6.564576625823975,
                 12.528535842895508,
                 0.47521352767944336
+            ],
+            "bot_in_world": [
+                6.426021575927734,
+                11.366641998291016,
+                0.005341336131095886
+            ],
+            "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance9_BEV_surroundings.png"
+        },
+        "saucepan_205": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.1588186221411982,
+                "theta_deg": 166.84129053804105,
+                "phi_deg": 61.79557777936035
+            },
+            "orientation_in_bot": [
+                0.009455926987805927,
+                0.012412806652866499,
+                0.5833032637609433,
+                0.8121045561758851
+            ],
+            "position_in_world": [
+                6.558470249176025,
+                12.404412269592285,
+                0.5036893486976624
             ],
             "bot_in_world": [
                 6.426021575927734,
@@ -2523,59 +2561,11 @@
             ],
             "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance9_BEV_surroundings.png"
         },
-        "stove_igwqpj_0": {
-            "ability": [
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.1497219573432842,
-                "theta_deg": 34.34882786415132,
-                "phi_deg": 68.01071872031727
-            },
-            "orientation_in_bot": [
-                0.00035673266859968203,
-                0.0241785665554676,
-                -0.04826337808916155,
-                0.998541894963125
-            ],
-            "position_in_world": [
-                7.110574245452881,
-                10.571810722351074,
-                0.475970059633255
-            ],
-            "bot_in_world": [
-                6.426021575927734,
-                11.366641998291016,
-                0.005341336131095886
-            ],
-            "path": "./prompt_files/data/cook_mustard/subtask_2/seg_instance9_BEV_surroundings.png"
-        },
         "scene_graph": [
             [
                 "mixing_bowl_204",
                 "ontop",
                 "countertop_tpuwys_1"
-            ],
-            [
-                "saucepan_205",
-                "under",
-                "countertop_tpuwys_1"
-            ],
-            [
-                "saucepan_205",
-                "inside",
-                "bottom_cabinet_no_top_qohxjq_0"
             ],
             [
                 "bottom_cabinet_no_top_qohxjq_0",
@@ -2588,14 +2578,24 @@
                 "saucepan_205"
             ],
             [
-                "mustard_leaf_201",
-                "ontop",
+                "saucepan_205",
+                "under",
                 "countertop_tpuwys_1"
+            ],
+            [
+                "saucepan_205",
+                "inside",
+                "bottom_cabinet_no_top_qohxjq_0"
             ],
             [
                 "mustard_leaf_201",
                 "inside",
                 "mixing_bowl_204"
+            ],
+            [
+                "mustard_leaf_201",
+                "ontop",
+                "countertop_tpuwys_1"
             ]
         ],
         "inventory": []

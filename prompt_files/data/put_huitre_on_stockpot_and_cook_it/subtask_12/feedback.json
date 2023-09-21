@@ -1,6 +1,6 @@
 {
-    "subtask": "\n(1) Move to the oyster\n(2) Grasp the oyster\n(3) Move to the countertop\n(4) Put the oyster on the countertop\n(5) Cook the oyster",
-    "code": "def act(robot,env,camera):\n    # Subtask 3: Move to the countertop\n    countertop = registry(env,\"countertop_tpuwys_1\")\n    MoveBot(env, robot, countertop, camera)\n    donothing(env)\n",
+    "subtask": "\n(1) Move the robot to the stove.\n(2) Grasp the oyster from the stove.\n(3) Find and move to a countertop.\n(4) Put the oyster on the countertop.\n(5) Find and move to a stockpot.\n(6) Grasp the stockpot.\n(7) Move back to the countertop.\n(8) Put the stockpot on the countertop.\n(9) Put the oyster inside the stockpot.\n(10) Move back to the stove.\n(11) Put the stockpot on the stove.\n(12) Cook the oyster.",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Find and move to a countertop\n    countertop = registry(env, \"countertop_tpuwys_1\")\n    MoveBot(env, robot, countertop, camera)\n    donothing(env)\n",
     "error": "",
     "critic": "succeed",
     "reset": false,

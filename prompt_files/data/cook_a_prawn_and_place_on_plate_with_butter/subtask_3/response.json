@@ -1,9 +1,9 @@
 {
     "response": {
-        "explain": " The previous action code successfully executed the subtask of taking the prawn from the fridge. The prawn is now in the robot's inventory. The next step is to take the butter from the fridge.",
-        "subtask": "\n(1) Open the fridge\n(2) Take the prawn from the fridge\n(3) Take the butter from the fridge\n(4) Cook the prawn on the stove\n(5) Place the cooked prawn on the plate\n(6) Place the butter on the plate",
-        "code": "def act(robot,env,camera):\n    # Subtask 3: Take the butter from the fridge\n    butter = registry(env,\"butter_208\")\n    EasyGrasp(robot, butter)\n    donothing(env)\n",
-        "inventory": "shrimp_201,butter_208",
+        "explain": " The previous action code successfully executed the subtask of taking out the prawn from the fridge. The robot now has the prawn in its inventory. The next step is to take out the butter from the fridge.",
+        "subtask": "\n(1) Open the fridge\n(2) Take out the prawn from the fridge\n(3) Take out the butter from the fridge\n(4) Cook the prawn\n(5) Place the cooked prawn on the plate\n(6) Place the butter on the plate",
+        "code": "def act(robot,env,camera):\n    # Subtask 3: Take out the butter from the fridge\n    butter = registry(env,\"butter_208\")\n    EasyGrasp(robot, butter)\n    donothing(env)\n",
+        "inventory": "butter_208,shrimp_201",
         "obj_2": [],
         "obj_3": [
             [
@@ -13,10 +13,10 @@
                 "0"
             ],
             [
-                "butter_208",
+                "shrimp_201",
                 "inside",
-                "robot",
-                "1"
+                "fridge_dszchb_0",
+                "0"
             ]
         ]
     }

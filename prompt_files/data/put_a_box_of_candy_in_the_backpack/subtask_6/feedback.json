@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register the box of candy and the backpack.\n(2) Open the backpack.\n(3) Put the box of candy in the backpack.",
+    "code": "def act(robot,env,camera):\n  # Subtask 2: Open the backpack\n  open(robot, backpack_82)\n  donothing(env)\n",
+    "error": "name 'backpack_82' is not defined",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

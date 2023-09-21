@@ -1,8 +1,8 @@
 {
     "response": {
-        "explain": " The previous action was successful and there was no error. The oven is now closed with the lasagna inside. The next step is to turn on the oven to heat the lasagna.",
-        "subtask": "\n(1) Register the lasagna\n(2) Open the oven\n(3) Put the lasagna inside the oven\n(4) Close the oven\n(5) Turn on the oven",
-        "code": "def act(robot,env,camera):\n    # Subtask 5: Turn on the oven\n    oven_wuinhm_0 = registry(env,\"oven_wuinhm_0\")\n    toggle_on(robot, oven_wuinhm_0)\n    donothing(env)\n",
+        "explain": " The previous action code successfully closed the oven. The next step is to turn on the oven.",
+        "subtask": "\n(1) Open the fridge\n(2) Grasp the lasagna from the fridge\n(3) Close the fridge\n(4) Move to the oven\n(5) Open the oven\n(6) Put the lasagna in the oven\n(7) Close the oven\n(8) Turn on the oven",
+        "code": "def act(robot,env,camera):\n    # Subtask 8: Turn on the oven\n    oven = registry(env,\"oven_wuinhm_0\")\n    toggle_on(robot, oven)\n    donothing(env)\n",
         "inventory": "None",
         "obj_2": [
             [
@@ -11,13 +11,6 @@
                 "1"
             ]
         ],
-        "obj_3": [
-            [
-                "lasagna_85",
-                "inside",
-                "oven_wuinhm_0",
-                "1"
-            ]
-        ]
+        "obj_3": []
     }
 }

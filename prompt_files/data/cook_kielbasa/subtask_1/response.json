@@ -1,16 +1,10 @@
 {
     "response": {
-        "explain": " Since this is the first step, there is no previous error or missing steps. The task is to cook kielbasa, but the kielbasa is not observed in the environment. It might be inside the fridge. So, the first step is to open the fridge.",
-        "subtask": "\n(1) Move the robot to the fridge.\n(2) Open the fridge.",
-        "code": "def act(robot,env,camera):\n    # Subtask 1: Move the robot to the fridge\n    fridge = registry(env, \"fridge_xyejdx_0\")\n    MoveBot(env, robot, fridge, camera)\n    donothing(env)\n    # Subtask 2: Open the fridge\n    open(robot, fridge)\n    donothing(env)\n",
+        "explain": " Since this is the first step, there is no previous action or error to explain. The task is to cook kielbasa, but the kielbasa is not observed in the environment. It might be inside the fridge. The first step should be to move to the fridge and open it.",
+        "subtask": "\n(1) Move to the fridge.\n(2) Open the fridge.",
+        "code": "def act(robot,env,camera):\n    # Subtask 1: Move to the fridge\n    fridge = registry(env, \"fridge_xyejdx_0\")\n    MoveBot(env, robot, fridge, camera)\n    donothing(env)\n",
         "inventory": "None",
-        "obj_2": [
-            [
-                "fridge_xyejdx_0",
-                "openable",
-                "1"
-            ]
-        ],
+        "obj_2": [],
         "obj_3": [
             [
                 "robot",

@@ -1,0 +1,29 @@
+{
+    "response": {
+        "explain": " The previous action code successfully closed the oven. Now, the next step is to turn on the oven to cook the kale.",
+        "subtask": "\n(1) Open the oven\n(2) Grasp the kale\n(3) Put the kale into the saucepot\n(4) Put the saucepot into the oven\n(5) Close the oven\n(6) Turn on the oven to cook the kale",
+        "code": "def act(robot,env,camera):\n    # Subtask 6: Turn on the oven to cook the kale\n    oven = registry(env,\"oven_wuinhm_0\")\n    toggle_on(robot, oven)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [
+            [
+                "oven_wuinhm_0",
+                "togglable",
+                "1"
+            ]
+        ],
+        "obj_3": [
+            [
+                "kale_85",
+                "inside",
+                "oven_wuinhm_0",
+                "1"
+            ],
+            [
+                "saucepot_87",
+                "inside",
+                "oven_wuinhm_0",
+                "1"
+            ]
+        ]
+    }
+}

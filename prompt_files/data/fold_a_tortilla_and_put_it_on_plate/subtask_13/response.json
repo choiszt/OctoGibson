@@ -1,10 +1,15 @@
 {
     "response": {
-        "explain": " The previous action code has successfully heated the tortilla. Now, we need to fold the tortilla as per the next subtask.",
-        "subtask": "\n(1) Grasp the tortilla from the plate.\n(2) Heat the tortilla.\n(3) Fold the tortilla.\n(4) Put the folded tortilla back on the plate.",
-        "code": "def act(robot, env, camera):\n    # Subtask 3: Fold the tortilla\n    tortilla_189 = registry(env, \"tortilla_189\")\n    fold(robot, tortilla_189)\n    donothing(env)\n",
+        "explain": " The execution error indicates that the tortilla is not foldable, which is because it has not been cooked yet. The previous action was to heat the tortilla, but the tortilla needs to be cooked to become foldable. Therefore, the next step should be to cook the tortilla.",
+        "subtask": "\n(1) Grasp the tortilla.\n(2) Heat the tortilla.\n(3) Cook the tortilla.\n(4) Fold the tortilla.\n(5) Put the tortilla back on the plate.",
+        "code": "def act(robot, env, camera):\n    # Subtask 3: Cook the tortilla\n    tortilla_189 = registry(env, \"tortilla_189\")\n    cook(robot, tortilla_189)\n    donothing(env)\n",
         "inventory": "tortilla_189",
         "obj_2": [
+            [
+                "tortilla_189",
+                "cookable",
+                "0"
+            ],
             [
                 "tortilla_189",
                 "foldable",

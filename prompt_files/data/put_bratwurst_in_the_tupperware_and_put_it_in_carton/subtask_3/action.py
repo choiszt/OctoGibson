@@ -5,7 +5,7 @@ import omnigibson as og
 from action_list import * 
 from action_utils import *
 def act(robot,env,camera):
-    # Subtask 1: Open the bottom cabinet to find the tupperware.
-    bottom_cabinet = registry(env,"bottom_cabinet_no_top_vzzafs_0")
-    open(robot, bottom_cabinet)
+    # Subtask 3: Find the tupperware
+    # Since the tupperware is not observed in the environment, we assume it's inside the opened bottom cabinet.
+    # We need to wait for the system to capture the new state after opening the bottom cabinet.
     donothing(env)

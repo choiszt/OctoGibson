@@ -7,6 +7,6 @@ from action_utils import *
 def act(robot,env,camera):
     # Subtask 3: Put the ham hocks in the stockpot
     stockpot = registry(env, "stockpot_81")
-    ham_hock = registry(env, "ham_hock_82")
-    put_ontop(robot, ham_hock, stockpot)
+    ham_hocks = registry(env, "ham_hock_82")
+    put_ontop(robot, ham_hocks, stockpot)
     donothing(env)

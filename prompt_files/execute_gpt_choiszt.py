@@ -107,12 +107,12 @@ def gpt_process(save_path, openai_api_key):
             break
 
 api_key="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"
-with open("/shared/liushuai/OmniGibson/EVLM_Task/new913.json","r")as f:
+with open("/shared/liushuai/OmniGibson/prompt_files/919TODO/failed_todo.json","r")as f:
     task=json.load(f)
-i=4
+i=8
 EVLM_name=sorted(list(task))[i]
 task_name=task[EVLM_name]['task_name']
-gpt_name=task[EVLM_name]['gpt_task']
+gpt_name=task[EVLM_name]['detailed_name']
 scene=task[EVLM_name]['env']
 print(i)
 print(f"EVLM:{EVLM_name}")

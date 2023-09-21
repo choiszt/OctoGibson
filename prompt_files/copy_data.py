@@ -149,3 +149,15 @@ for ele in dyh_failed.keys():
 
     with open("/shared/liushuai/OmniGibson/prompt_files/failed_merged.json","w")as f:
         f.write(json.dumps(errordict))
+
+result={}    
+with open("/shared/liushuai/OmniGibson/EVLM_Task/all_400.json","r")as f:
+    data=json.load(f)
+with open("/shared/liushuai/OmniGibson/prompt_files/919TODO/all_failed.json","r")as f:
+    cho=json.load(f)
+with open("/shared/liushuai/OmniGibson/prompt_files/919TODO/failed_todo.json","a+")as f:
+    for ele in data.keys():
+        if data[ele]['detailed_name'] in cho.keys():
+            result.update({ele:data[ele]})
+
+    f.write(json.dumps(result))

@@ -32,10 +32,10 @@ def parse_args():
 def sim_process(args):
     try:    
         idx = args.idx
-        with open('/shared/liushuai/OmniGibson/EVLM_Task/917rerun.json') as f: #TODO change the path
+        with open('/shared/liushuai/OmniGibson/prompt_files/919TODO/failed_todo.json') as f: #TODO change the path
             data = json.load(f)
         EVLM_name=sorted(list(data))[idx]
-        if "train" in data[EVLM_name]['split']:
+        if "train" in data[EVLM_name]['split'] or "" in data[EVLM_name]['split']:
             task_name=data[EVLM_name]['task_name']
             gpt_name=data[EVLM_name]['detailed_name']
             # scene=data[EVLM_name]['env']
@@ -65,10 +65,10 @@ def sim_process(args):
             except:
                 og.log.info("Loading Environment Error!!!")
                 og.log.info(task_name, scene_name)
-                with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","r")as f:
+                with open("/shared/liushuai/OmniGibson/prompt_files/919TODO/failed_task.json","r")as f:
                     finished_task = json.load(f)
                     finished_task[gpt_task_name] = "error"
-                with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","w")as f:
+                with open("/shared/liushuai/OmniGibson/prompt_files/919TODO/failed_task.json","w")as f:
                     f.write(json.dumps(finished_task))  
                 return 0
             
@@ -114,10 +114,10 @@ def sim_process(args):
                         error = answer
                         critic = 'fail'
                         reset = False
-                        with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","r")as f:
+                        with open("/shared/liushuai/OmniGibson/prompt_files/919TODO/failed_task.json","r")as f:
                             finished_task = json.load(f)
                             finished_task[gpt_task_name] = "failed"
-                        with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","w")as f:
+                        with open("/shared/liushuai/OmniGibson/prompt_files/919TODO/failed_task.json","w")as f:
                             f.write(json.dumps(finished_task))
                         eu.save_feedback(feedback_path, subtask, code, error, critic, reset, main_succeed)
                         env.close()
@@ -135,7 +135,7 @@ def sim_process(args):
                         import action
                         time.sleep(1)
                         try:
-                            reload(action)
+                            reload(action) #add a key to record 
                             time.sleep(2)
                             action.act(robot,env,camera)
                             og.log.info("act...")
@@ -222,10 +222,10 @@ def sim_process(args):
                                 signal.append(0)
                     if 0 not in signal:
                         main_succeed = True
-                        with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","r")as f:
+                        with open("/shared/liushuai/OmniGibson/prompt_files/919TODO/failed_task.json","r")as f:
                             finished_task = json.load(f)
                             finished_task[gpt_task_name] = "succeed"
-                        with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","w")as f:
+                        with open("/shared/liushuai/OmniGibson/prompt_files/919TODO/failed_task.json","w")as f:
                             f.write(json.dumps(finished_task))                        
                         og.log.info(f"finish {task_name}!!!!! congrats!!!!!")
                         eu.save_feedback(feedback_path, subtask, code, error, critic, reset, main_succeed)
@@ -250,19 +250,19 @@ def sim_process(args):
                 if subtask_iter>14:
                     #write json
                     og.log.info(f"already attempt {subtask_iter} time, it is too long!")
-                    with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","r")as f:
+                    with open("/shared/liushuai/OmniGibson/prompt_files/919TODO/failed_task.json","r")as f:
                         finished_task = json.load(f)
                         finished_task[gpt_task_name] = "failed"
-                    with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","w")as f:
+                    with open("/shared/liushuai/OmniGibson/prompt_files/919TODO/failed_task.json","w")as f:
                         f.write(json.dumps(finished_task))    
                     env.close()        
                     return 0
     except:
         og.log.info(f"loop failed")
-        with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","r")as f:
+        with open("/shared/liushuai/OmniGibson/prompt_files/919TODO/failed_task.json","r")as f:
             finished_task = json.load(f)
             finished_task[gpt_task_name] = "error"
-        with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","w")as f:
+        with open("/shared/liushuai/OmniGibson/prompt_files/919TODO/failed_task.json","w")as f:
             f.write(json.dumps(finished_task)) 
         return 0
 

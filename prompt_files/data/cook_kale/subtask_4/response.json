@@ -1,17 +1,16 @@
 {
     "response": {
-        "explain": " The previous action was successful and the fridge was closed. The next step is to move the robot to the countertop where the saucepot is located.",
-        "subtask": "\n(1) Open the fridge\n(2) Take the kale out of the fridge\n(3) Close the fridge\n(4) Move to the countertop\n(5) Take the saucepot from the countertop\n(6) Put the kale in the saucepot\n(7) Cook the kale in the saucepot using the oven",
-        "code": "def act(robot,env,camera):\n    # Subtask 4: Move to the countertop\n    countertop = registry(env, \"countertop_tpuwys_1\")\n    MoveBot(env, robot, countertop, camera)\n    donothing(env)\n",
-        "inventory": "kale_85",
-        "obj_2": [],
-        "obj_3": [
+        "explain": " The previous action code successfully put the kale into the saucepot. The next step is to put the saucepot into the oven. However, the oven is currently closed, so we need to open the oven first.",
+        "subtask": "\n(1) Open the oven\n(2) Put the saucepot into the oven\n(3) Turn on the oven to cook the kale",
+        "code": "def act(robot,env,camera):\n    # Subtask 1: Open the oven\n    oven = registry(env,\"oven_wuinhm_0\")\n    open(robot, oven)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [
             [
-                "robot",
-                "nextto",
-                "countertop_tpuwys_1",
+                "oven_wuinhm_0",
+                "openable",
                 "1"
             ]
-        ]
+        ],
+        "obj_3": []
     }
 }

@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the microwave\n(2) Close the microwave\n(3) Heat the hamburger up in the microwave",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Heat the hamburger up in the microwave\n    microwave = registry(env,\"microwave_bfbeeb_0\")\n    heat(robot, microwave)\n    donothing(env)\n",
+    "error": "State togglable of object microwave_bfbeeb_0 is not 1\nState heatable of object hamburger_85 is not 1\n",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

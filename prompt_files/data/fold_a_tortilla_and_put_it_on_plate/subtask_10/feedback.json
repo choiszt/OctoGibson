@@ -1,7 +1,7 @@
 {
-    "subtask": "\n(1) Grasp the tortilla from the plate.\n(2) Heat the tortilla.\n(3) Unfold the tortilla.\n(4) Fold the tortilla.\n(5) Put the folded tortilla back on the plate.",
-    "code": "def act(robot, env, camera):\n    # Subtask 3: Unfold the tortilla\n    tortilla_189 = registry(env, \"tortilla_189\")\n    unfold(robot, tortilla_189)\n    donothing(env)\n",
-    "error": "State unfoldable of object tortilla_189 is not 0\n",
+    "subtask": "\n(1) Grasp the tortilla.\n(2) Heat the tortilla.\n(3) Cook the tortilla.\n(4) Fold the tortilla.\n(5) Put the tortilla back on the plate.",
+    "code": "def act(robot, env, camera):\n    # Subtask 2: Heat the tortilla\n    tortilla_189 = registry(env, \"tortilla_189\")\n    heat(robot, tortilla_189)\n    donothing(env)\n",
+    "error": "State heatable of object tortilla_189 is not 0\nState foldable of object tortilla_189 is not 1\n",
     "critic": "fail",
     "reset": true,
     "main_succeed": false

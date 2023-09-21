@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Grasp the leaf from the board.\n(2) Put the leaf in the trash can.\n(3) Grasp the board.\n(4) Put the board on the floor.",
+    "code": "def act(robot, env, camera):\n    # Subtask 4: Put the board on the floor\n    board_275 = registry(env, \"board_275\")\n    put_ontop(robot, board_275, \"floor\")\n    donothing(env)\n",
+    "error": "'str' object has no attribute 'get_position'",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

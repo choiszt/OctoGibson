@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the clothes dryer.\n(2) Open the clothes dryer.\n(3) Take a bath towel out of the clothes dryer.\n(4) Check if the bath towel is foldable.\n(5) If the bath towel is not foldable, unfold it.\n(6) Fold the bath towel.\n(7) Move the robot to the hamper.\n(8) Put the folded bath towel into the hamper.",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Move the robot to the clothes dryer.\n    clothes_dryer = registry(env, \"clothes_dryer_zlmnfg_0\")\n    MoveBot(env, robot, clothes_dryer, camera)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

@@ -1,0 +1,28 @@
+{
+    "response": {
+        "explain": " The previous action code has successfully turned on the oven. Now, we need to wait for the lasagna to be cooked. ",
+        "subtask": "\n(1) Open the oven\n(2) Grasp the lasagna\n(3) Put the lasagna inside the oven\n(4) Turn on the oven\n(5) Wait for the lasagna to be cooked",
+        "code": "def act(robot,env,camera):\n    # Subtask 5: Wait for the lasagna to be cooked\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [
+            [
+                "lasagna_85",
+                "cookable",
+                "1"
+            ],
+            [
+                "oven_wuinhm_0",
+                "togglable",
+                "1"
+            ]
+        ],
+        "obj_3": [
+            [
+                "lasagna_85",
+                "inside",
+                "oven_wuinhm_0",
+                "1"
+            ]
+        ]
+    }
+}

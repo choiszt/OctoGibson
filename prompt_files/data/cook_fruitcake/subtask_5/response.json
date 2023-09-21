@@ -1,13 +1,13 @@
 {
     "response": {
-        "explain": " The execution error indicates that the oven is not open. The robot cannot move to the baking sheet because the fruitcake is still inside the closed oven. The robot needs to open the oven and take out the fruitcake before moving to the baking sheet.",
-        "subtask": "\n(1) Move the robot to the oven.\n(2) Open the oven.\n(3) Take the fruitcake out of the oven.\n(4) Move the robot to the baking sheet.\n(5) Put the fruitcake on the baking sheet.\n(6) Move the robot back to the oven.\n(7) Put the baking sheet with the fruitcake into the oven.\n(8) Close the oven.\n(9) Turn on the oven.",
-        "code": "def act(robot,env,camera):\n    # Subtask 2: Open the oven\n    oven_wuinhm_0 = registry(env,\"oven_wuinhm_0\")\n    open(robot, oven_wuinhm_0)\n    donothing(env)\n",
+        "explain": " The previous action code successfully opened the oven. The next step is to turn on the oven.",
+        "subtask": "\n(1) Move the robot to the oven.\n(2) Open the oven.\n(3) Turn on the oven.\n(4) Cook the fruitcake.",
+        "code": "def act(robot,env,camera):\n    # Subtask 3: Turn on the oven\n    oven_wuinhm_0 = registry(env,\"oven_wuinhm_0\")\n    toggle_on(robot, oven_wuinhm_0)\n    donothing(env)\n",
         "inventory": "None",
         "obj_2": [
             [
                 "oven_wuinhm_0",
-                "openable",
+                "togglable",
                 "1"
             ]
         ],

@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the bottom cabinet.\n(2) Grasp a bread slice from the bottom cabinet.\n(3) Put the bread slice in the toaster.\n(4) Turn on the toaster.",
+    "code": "def act(robot,env,camera):\n    # Subtask 2: Grasp a bread slice from the bottom cabinet\n    bread_slice = registry(env, \"bread_slice_87\")\n    EasyGrasp(robot, bread_slice)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

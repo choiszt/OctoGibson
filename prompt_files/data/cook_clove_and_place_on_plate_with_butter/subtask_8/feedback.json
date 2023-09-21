@@ -1,8 +1,8 @@
 {
-    "subtask": "\n(1) Open the fridge\n(2) Take out the garlic clove\n(3) Prepare the garlic clove\n(4) Turn on the stove\n(5) Cook the garlic clove\n(6) Take out the butter\n(7) Place the cooked garlic clove and butter on the plate",
-    "code": "def act(robot,env,camera):\n    # Subtask 5: Cook the garlic clove\n    garlic_clove = registry(env,\"garlic_clove_209\")\n    cook(robot, garlic_clove)\n    donothing(env)\n",
-    "error": "Cannot cook! robot is not within four meters of <omnigibson.objects.dataset_object.DatasetObject object at 0x7fce52fae110>",
-    "critic": "fail",
-    "reset": true,
+    "subtask": "\n(1) Open the fridge\n(2) Take out the garlic clove\n(3) Put the garlic clove on the stove\n(4) Cook the garlic clove\n(5) Put the cooked garlic clove on the countertop\n(6) Take out the butter\n(7) Put the cooked garlic clove and butter on the plate",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Put the garlic clove on the stove\n    garlic_clove_209 = registry(env,\"garlic_clove_209\")\n    stove_igwqpj_0 = registry(env,\"stove_igwqpj_0\")\n    put_ontop(robot, garlic_clove_209, stove_igwqpj_0)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
     "main_succeed": false
 }

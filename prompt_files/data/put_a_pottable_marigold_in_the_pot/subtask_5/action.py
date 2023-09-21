@@ -4,4 +4,4 @@ import yaml
 import omnigibson as og
 from action_list import * 
 from action_utils import *
-# No further code is required as the task has been completed.
+# No further code is needed as the task has been completed.

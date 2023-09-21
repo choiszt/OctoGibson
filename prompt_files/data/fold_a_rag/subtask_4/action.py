@@ -5,10 +5,8 @@ import omnigibson as og
 from action_list import * 
 from action_utils import *
 def act(robot,env,camera):
-    # Subtask 2: Take out the rag from the clothes dryer.
-    rag = registry(env, "rag_194")
-    clothes_dryer = registry(env, "clothes_dryer_zlmnfg_0")
-    open(robot, clothes_dryer)
-    donothing(env)
-    EasyGrasp(robot, rag)
-    donothing(env)
+    # Subtask 3: Check if the rag is foldable
+    rag_194 = registry(env,"rag_194")
+    if rag_194['foldable'] == 1:
+        fold(robot, rag_194)
+        donothing(env)

@@ -5,7 +5,7 @@ import omnigibson as og
 from action_list import * 
 from action_utils import *
 def act(robot,env,camera):
-    # Subtask 2: Fold the bath towel
-    bath_towel_191 = registry(env, "bath_towel_191")
-    fold(robot, bath_towel_191)
+    # Subtask 3: Fold the bath towel.
+    bath_towel = registry(env,"bath_towel_192")
+    fold(robot, bath_towel)
     donothing(env)

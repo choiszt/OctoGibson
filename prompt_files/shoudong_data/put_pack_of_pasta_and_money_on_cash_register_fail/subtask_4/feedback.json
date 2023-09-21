@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move to the grocery shelf.\n(2) Grasp the pack of pasta.\n(3) Move to the shopping cart.\n(4) Grasp the money.\n(5) Move to the checkout counter.\n(6) Put the pack of pasta on the cash register.\n(7) Put the money on the cash register.",
+    "code": "def act(robot,env,camera):\n    # Subtask 2: Grasp the pack of pasta.\n    pack_of_pasta_146 = registry(env,\"pack_of_pasta_146\")\n    EasyGrasp(robot, pack_of_pasta_146)\n    donothing(env)\n",
+    "error": "Cannot Grasp! robot is not within four meters of <omnigibson.objects.dataset_object.DatasetObject object at 0x7f2ab10949d0>",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

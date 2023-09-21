@@ -1,0 +1,23 @@
+{
+    "response": {
+        "explain": " The previous action code has successfully put the bread slice on the toaster. The next step is to turn on the toaster to cook the bread slice.",
+        "subtask": "\n(1) Open the bottom cabinet.\n(2) Grasp a bread slice from the bottom cabinet.\n(3) Put the bread slice in the toaster.\n(4) Turn on the toaster.",
+        "code": "def act(robot,env,camera):\n    # Subtask 4: Turn on the toaster\n    toaster = registry(env, \"toaster_85\")\n    toggle_on(robot, toaster)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [
+            [
+                "toaster_85",
+                "togglable",
+                "1"
+            ]
+        ],
+        "obj_3": [
+            [
+                "bread_slice_87",
+                "ontop",
+                "toaster_85",
+                "1"
+            ]
+        ]
+    }
+}

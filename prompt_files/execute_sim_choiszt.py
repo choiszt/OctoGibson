@@ -44,9 +44,9 @@ def sim_process(task_name, scene_name, save_path,EVLM_name):
             if os.path.exists(os.path.join(save_path, f"subtask_{subtask_iter}")):
                 break
         sub_save_path = os.path.join(save_path, f"subtask_{subtask_iter}")
-        with open ("/shared/liushuai/OmniGibson/EVLM_Task/new913.json","r")as f:
+        with open ("/shared/liushuai/OmniGibson/prompt_files/919TODO/failed_todo.json","r")as f:
             a=json.load(f)
-            gpt_task_name=a[EVLM_name]['gpt_task']
+            gpt_task_name=a[EVLM_name]['detailed_name']
             removed_item=a[EVLM_name]['removed_item']
         init_pipeline(env, robot, camera,task_name=str(gpt_task_name), file_name=sub_save_path,removed_items=removed_item)
         response_path = os.path.join(sub_save_path, 'response.json')
@@ -124,7 +124,7 @@ def sim_process(task_name, scene_name, save_path,EVLM_name):
             for obj in target_states['obj_3']:
                 if obj[0]=="robot" or obj[2]=='robot':
                     continue
-                value = eu.verify_obj_3(env,obj[0], obj[1], obj[2],obj[3])
+                value = eu.verify_obj_3(env,obj[0], obj[1], obj[2],obj[3],f"./prompt_files/data/{gpt_task_name}/subtask_{subtask_iter}/action.py")
                 if not value:
                     error += f"{obj[0]} is not {obj[1]} {obj[2]}\n"            
             if len(error) == 0:
@@ -159,7 +159,7 @@ def sim_process(task_name, scene_name, save_path,EVLM_name):
         #TODO choiszt need to add rename
         #verify the whole task
         if critic == 'succeed':
-            with open("/shared/liushuai/OmniGibson/EVLM_Task/new913.json","r")as f:
+            with open("/shared/liushuai/OmniGibson/prompt_files/919TODO/failed_todo.json","r")as f:
                 goal=json.load(f)
             signal=False
             target=goal[EVLM_name]['target_states']
@@ -201,13 +201,13 @@ def sim_process(task_name, scene_name, save_path,EVLM_name):
             break
                         
 
-with open("/shared/liushuai/OmniGibson/EVLM_Task/new913.json","r")as f:
+with open("/shared/liushuai/OmniGibson/prompt_files/919TODO/failed_todo.json","r")as f:
     task=json.load(f)
 
-i=4
+i=8
 EVLM_name=sorted(list(task))[i]
 task_name=task[EVLM_name]['task_name']
-gpt_name=task[EVLM_name]['gpt_task']
+gpt_name=task[EVLM_name]['detailed_name']
 scene=task[EVLM_name]['env']
 print(i)
 print(f"EVLM:{EVLM_name}")

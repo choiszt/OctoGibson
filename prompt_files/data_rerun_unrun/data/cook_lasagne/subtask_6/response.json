@@ -1,0 +1,33 @@
+{
+    "response": {
+        "explain": " The previous action code has successfully turned on the oven. The lasagna is already inside the oven, so the next step is to cook the lasagna.",
+        "subtask": "\n(1) Open the oven\n(2) Pick up the lasagna\n(3) Put the lasagna in the oven\n(4) Close the oven\n(5) Turn on the oven\n(6) Cook the lasagna",
+        "code": "def act(robot,env,camera):\n    # Subtask 6: Cook the lasagna\n    lasagna = registry(env, \"lasagna_85\")\n    cook(robot, lasagna)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [
+            [
+                "lasagna_85",
+                "cookable",
+                "1"
+            ],
+            [
+                "oven_wuinhm_0",
+                "togglable",
+                "1"
+            ],
+            [
+                "oven_wuinhm_0",
+                "openable",
+                "0"
+            ]
+        ],
+        "obj_3": [
+            [
+                "oven_wuinhm_0",
+                "inside",
+                "lasagna_85",
+                "1"
+            ]
+        ]
+    }
+}

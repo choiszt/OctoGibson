@@ -1,0 +1,31 @@
+{
+    "response": {
+        "explain": " The previous action code has successfully executed the subtask of grasping the pear from the countertop. Now, the robot has both the pear and the bowl in its inventory. The next step is to cook the pear.",
+        "subtask": "\n(1) Grasp the pear.\n(2) Cook the pear.\n(3) Grasp the apple.\n(4) Put the pear on the countertop.\n(5) Find and grasp a bowl.\n(6) Put the apple in the bowl.\n(7) Grasp the apple from the bowl.\n(8) Cook the apple.\n(9) Put the cooked apple back into the bowl.\n(10) Grasp the pear from the countertop.\n(11) Cook the pear.",
+        "code": "def act(robot,env,camera):\n    # Subtask 11: Cook the pear\n    pear_86 = registry(env,\"pear_86\")\n    cook(robot, pear_86)\n    donothing(env)\n",
+        "inventory": "'bowl_88','pear_86'",
+        "obj_2": [
+            [
+                "pear_86",
+                "cookable",
+                "1"
+            ],
+            [
+                "bowl_88",
+                "heatable",
+                "0"
+            ],
+            [
+                "apple_87",
+                "cookable",
+                "1"
+            ],
+            [
+                "countertop_tpuwys_2",
+                "heatable",
+                "0"
+            ]
+        ],
+        "obj_3": []
+    }
+}

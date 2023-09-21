@@ -5,7 +5,7 @@ import omnigibson as og
 from action_list import * 
 from action_utils import *
 def act(robot,env,camera):
-    # Subtask 2: Unfold the bath towel.
-    bath_towel_192 = registry(env, "bath_towel_192")
-    unfold(robot, bath_towel_192)
+    # Subtask 2: Take out a bath towel from the clothes dryer.
+    bath_towel = registry(env, "bath_towel_192")
+    EasyGrasp(robot, bath_towel)
     donothing(env)

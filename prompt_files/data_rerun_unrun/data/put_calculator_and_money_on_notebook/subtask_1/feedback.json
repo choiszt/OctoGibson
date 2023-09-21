@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move to the grocery_shelf_prtqlw_1.\n(2) Grasp the calculator from the grocery_shelf_prtqlw_1.\n(3) Grasp the notebook from the grocery_shelf_prtqlw_1.\n(4) Move to the shopping_cart_kmgltg_1.\n(5) Grasp the money from the shopping_cart_kmgltg_1.\n(6) Put the calculator on the notebook.\n(7) Put the money on the notebook.",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Move to the grocery_shelf_prtqlw_1\n    grocery_shelf_prtqlw_1 = registry(env, \"grocery_shelf_prtqlw_1\")\n    MoveBot(env, robot, grocery_shelf_prtqlw_1, camera)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

@@ -1,0 +1,2023 @@
+{
+    "task": "put_kabob_in_the_tupperware_and_put_it_in_the_fridge",
+    "0_detect_surroundings": {
+        "plate_88": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.932994095685558,
+                "theta_deg": -11.01430715773655,
+                "phi_deg": 31.895925098155367
+            },
+            "orientation_in_bot": [
+                -0.48809543551000567,
+                0.49621373017547227,
+                0.21473718460671362,
+                0.6851443069651996
+            ],
+            "position_in_world": [
+                0.11563151329755783,
+                -2.330687999725342,
+                0.7583624720573425
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance0_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.4825600513340569,
+                "theta_deg": 53.07793437414975,
+                "phi_deg": 157.1136081169349
+            },
+            "orientation_in_bot": [
+                0.6894655944861646,
+                -0.156957973218779,
+                0.19677476511071507,
+                -0.6791767667393485
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance0_detect_surroundings.png"
+        },
+        "breakfast_table_idnnmz_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.8954863407487643,
+                "theta_deg": -15.380093185211118,
+                "phi_deg": 31.321095990609074
+            },
+            "orientation_in_bot": [
+                0.6972874829118143,
+                -0.11742788436982639,
+                0.23514513527432274,
+                -0.6668640217493769
+            ],
+            "position_in_world": [
+                0.10349150002002716,
+                -2.3147478103637695,
+                0.6342785954475403
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance0_detect_surroundings.png"
+        },
+        "tupperware_91": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1740399271473496,
+                "theta_deg": -40.471946076208326,
+                "phi_deg": 19.916173199479445
+            },
+            "orientation_in_bot": [
+                -0.561668949029966,
+                0.4295667609353059,
+                0.10361833510831067,
+                0.699473823830817
+            ],
+            "position_in_world": [
+                -0.26953551173210144,
+                -2.8480241298675537,
+                0.06492345780134201
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance0_detect_surroundings.png"
+        },
+        "kabob_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    1
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1720024721799147,
+                "theta_deg": -40.60578736962634,
+                "phi_deg": 19.923449693026452
+            },
+            "orientation_in_bot": [
+                0.32477250523420104,
+                -0.24991832931435648,
+                -0.1865952129911276,
+                0.8928862609568016
+            ],
+            "position_in_world": [
+                -0.2704682946205139,
+                -2.846022129058838,
+                0.06251247972249985
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance0_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "breakfast_table_idnnmz_0",
+                "under",
+                "plate_88"
+            ],
+            [
+                "tupperware_91",
+                "under",
+                "kabob_85"
+            ],
+            [
+                "kabob_85",
+                "inside",
+                "tupperware_91"
+            ]
+        ],
+        "inventory": []
+    },
+    "1_detect_surroundings": {
+        "plate_88": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.932994095685558,
+                "theta_deg": -11.01430715773655,
+                "phi_deg": 31.895925098155367
+            },
+            "orientation_in_bot": [
+                -0.48809543551000567,
+                0.49621373017547227,
+                0.21473718460671362,
+                0.6851443069651996
+            ],
+            "position_in_world": [
+                0.11563151329755783,
+                -2.330687999725342,
+                0.7583624720573425
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance1_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.4825600513340569,
+                "theta_deg": 53.07793437414975,
+                "phi_deg": 157.1136081169349
+            },
+            "orientation_in_bot": [
+                0.6894655944861646,
+                -0.156957973218779,
+                0.19677476511071507,
+                -0.6791767667393485
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance1_detect_surroundings.png"
+        },
+        "breakfast_table_idnnmz_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.8954863407487643,
+                "theta_deg": -15.380093185211118,
+                "phi_deg": 31.321095990609074
+            },
+            "orientation_in_bot": [
+                0.6972874829118143,
+                -0.11742788436982639,
+                0.23514513527432274,
+                -0.6668640217493769
+            ],
+            "position_in_world": [
+                0.10349150002002716,
+                -2.3147478103637695,
+                0.6342785954475403
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance1_detect_surroundings.png"
+        },
+        "tupperware_91": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1740399271473496,
+                "theta_deg": -40.471946076208326,
+                "phi_deg": 19.916173199479445
+            },
+            "orientation_in_bot": [
+                -0.561668949029966,
+                0.4295667609353059,
+                0.10361833510831067,
+                0.699473823830817
+            ],
+            "position_in_world": [
+                -0.26953551173210144,
+                -2.8480241298675537,
+                0.06492345780134201
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance1_detect_surroundings.png"
+        },
+        "kabob_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    1
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1720024721799147,
+                "theta_deg": -40.60578736962634,
+                "phi_deg": 19.923449693026452
+            },
+            "orientation_in_bot": [
+                0.32477250523420104,
+                -0.24991832931435648,
+                -0.1865952129911276,
+                0.8928862609568016
+            ],
+            "position_in_world": [
+                -0.2704682946205139,
+                -2.846022129058838,
+                0.06251247972249985
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance1_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "breakfast_table_idnnmz_0",
+                "under",
+                "plate_88"
+            ],
+            [
+                "tupperware_91",
+                "under",
+                "kabob_85"
+            ],
+            [
+                "kabob_85",
+                "inside",
+                "tupperware_91"
+            ]
+        ],
+        "inventory": []
+    },
+    "2_detect_surroundings": {
+        "plate_88": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.932994095685558,
+                "theta_deg": -11.01430715773655,
+                "phi_deg": 31.895925098155367
+            },
+            "orientation_in_bot": [
+                -0.48809543551000567,
+                0.49621373017547227,
+                0.21473718460671362,
+                0.6851443069651996
+            ],
+            "position_in_world": [
+                0.11563151329755783,
+                -2.330687999725342,
+                0.7583624720573425
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance2_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.4825600513340569,
+                "theta_deg": 53.07793437414975,
+                "phi_deg": 157.1136081169349
+            },
+            "orientation_in_bot": [
+                0.6894655944861646,
+                -0.156957973218779,
+                0.19677476511071507,
+                -0.6791767667393485
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance2_detect_surroundings.png"
+        },
+        "breakfast_table_idnnmz_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.8954863407487643,
+                "theta_deg": -15.380093185211118,
+                "phi_deg": 31.321095990609074
+            },
+            "orientation_in_bot": [
+                0.6972874829118143,
+                -0.11742788436982639,
+                0.23514513527432274,
+                -0.6668640217493769
+            ],
+            "position_in_world": [
+                0.10349150002002716,
+                -2.3147478103637695,
+                0.6342785954475403
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance2_detect_surroundings.png"
+        },
+        "tupperware_91": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1740399271473496,
+                "theta_deg": -40.471946076208326,
+                "phi_deg": 19.916173199479445
+            },
+            "orientation_in_bot": [
+                -0.561668949029966,
+                0.4295667609353059,
+                0.10361833510831067,
+                0.699473823830817
+            ],
+            "position_in_world": [
+                -0.26953551173210144,
+                -2.8480241298675537,
+                0.06492345780134201
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance2_detect_surroundings.png"
+        },
+        "kabob_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    1
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1720024721799147,
+                "theta_deg": -40.60578736962634,
+                "phi_deg": 19.923449693026452
+            },
+            "orientation_in_bot": [
+                0.32477250523420104,
+                -0.24991832931435648,
+                -0.1865952129911276,
+                0.8928862609568016
+            ],
+            "position_in_world": [
+                -0.2704682946205139,
+                -2.846022129058838,
+                0.06251247972249985
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance2_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "breakfast_table_idnnmz_0",
+                "under",
+                "plate_88"
+            ],
+            [
+                "tupperware_91",
+                "under",
+                "kabob_85"
+            ],
+            [
+                "kabob_85",
+                "inside",
+                "tupperware_91"
+            ]
+        ],
+        "inventory": []
+    },
+    "3_detect_surroundings": {
+        "plate_88": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.932994095685558,
+                "theta_deg": -11.01430715773655,
+                "phi_deg": 31.895925098155367
+            },
+            "orientation_in_bot": [
+                -0.48809543551000567,
+                0.49621373017547227,
+                0.21473718460671362,
+                0.6851443069651996
+            ],
+            "position_in_world": [
+                0.11563151329755783,
+                -2.330687999725342,
+                0.7583624720573425
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance3_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.4825600513340569,
+                "theta_deg": 53.07793437414975,
+                "phi_deg": 157.1136081169349
+            },
+            "orientation_in_bot": [
+                0.6894655944861646,
+                -0.156957973218779,
+                0.19677476511071507,
+                -0.6791767667393485
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance3_detect_surroundings.png"
+        },
+        "breakfast_table_idnnmz_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.8954863407487643,
+                "theta_deg": -15.380093185211118,
+                "phi_deg": 31.321095990609074
+            },
+            "orientation_in_bot": [
+                0.6972874829118143,
+                -0.11742788436982639,
+                0.23514513527432274,
+                -0.6668640217493769
+            ],
+            "position_in_world": [
+                0.10349150002002716,
+                -2.3147478103637695,
+                0.6342785954475403
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance3_detect_surroundings.png"
+        },
+        "tupperware_91": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1740399271473496,
+                "theta_deg": -40.471946076208326,
+                "phi_deg": 19.916173199479445
+            },
+            "orientation_in_bot": [
+                -0.561668949029966,
+                0.4295667609353059,
+                0.10361833510831067,
+                0.699473823830817
+            ],
+            "position_in_world": [
+                -0.26953551173210144,
+                -2.8480241298675537,
+                0.06492345780134201
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance3_detect_surroundings.png"
+        },
+        "kabob_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    1
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1720024721799147,
+                "theta_deg": -40.60578736962634,
+                "phi_deg": 19.923449693026452
+            },
+            "orientation_in_bot": [
+                0.32477250523420104,
+                -0.24991832931435648,
+                -0.1865952129911276,
+                0.8928862609568016
+            ],
+            "position_in_world": [
+                -0.2704682946205139,
+                -2.846022129058838,
+                0.06251247972249985
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance3_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "breakfast_table_idnnmz_0",
+                "under",
+                "plate_88"
+            ],
+            [
+                "tupperware_91",
+                "under",
+                "kabob_85"
+            ],
+            [
+                "kabob_85",
+                "inside",
+                "tupperware_91"
+            ]
+        ],
+        "inventory": []
+    },
+    "4_detect_surroundings": {
+        "plate_88": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.932994095685558,
+                "theta_deg": -11.01430715773655,
+                "phi_deg": 31.895925098155367
+            },
+            "orientation_in_bot": [
+                -0.48809543551000567,
+                0.49621373017547227,
+                0.21473718460671362,
+                0.6851443069651996
+            ],
+            "position_in_world": [
+                0.11563151329755783,
+                -2.330687999725342,
+                0.7583624720573425
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance4_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.4825600513340569,
+                "theta_deg": 53.07793437414975,
+                "phi_deg": 157.1136081169349
+            },
+            "orientation_in_bot": [
+                0.6894655944861646,
+                -0.156957973218779,
+                0.19677476511071507,
+                -0.6791767667393485
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance4_detect_surroundings.png"
+        },
+        "breakfast_table_idnnmz_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.8954863407487643,
+                "theta_deg": -15.380093185211118,
+                "phi_deg": 31.321095990609074
+            },
+            "orientation_in_bot": [
+                0.6972874829118143,
+                -0.11742788436982639,
+                0.23514513527432274,
+                -0.6668640217493769
+            ],
+            "position_in_world": [
+                0.10349150002002716,
+                -2.3147478103637695,
+                0.6342785954475403
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance4_detect_surroundings.png"
+        },
+        "tupperware_91": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1740399271473496,
+                "theta_deg": -40.471946076208326,
+                "phi_deg": 19.916173199479445
+            },
+            "orientation_in_bot": [
+                -0.561668949029966,
+                0.4295667609353059,
+                0.10361833510831067,
+                0.699473823830817
+            ],
+            "position_in_world": [
+                -0.26953551173210144,
+                -2.8480241298675537,
+                0.06492345780134201
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance4_detect_surroundings.png"
+        },
+        "kabob_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    1
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1720024721799147,
+                "theta_deg": -40.60578736962634,
+                "phi_deg": 19.923449693026452
+            },
+            "orientation_in_bot": [
+                0.32477250523420104,
+                -0.24991832931435648,
+                -0.1865952129911276,
+                0.8928862609568016
+            ],
+            "position_in_world": [
+                -0.2704682946205139,
+                -2.846022129058838,
+                0.06251247972249985
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance4_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "breakfast_table_idnnmz_0",
+                "under",
+                "plate_88"
+            ],
+            [
+                "tupperware_91",
+                "under",
+                "kabob_85"
+            ],
+            [
+                "kabob_85",
+                "inside",
+                "tupperware_91"
+            ]
+        ],
+        "inventory": []
+    },
+    "5_detect_surroundings": {
+        "plate_88": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.932994095685558,
+                "theta_deg": -11.01430715773655,
+                "phi_deg": 31.895925098155367
+            },
+            "orientation_in_bot": [
+                -0.48809543551000567,
+                0.49621373017547227,
+                0.21473718460671362,
+                0.6851443069651996
+            ],
+            "position_in_world": [
+                0.11563151329755783,
+                -2.330687999725342,
+                0.7583624720573425
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance5_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.4825600513340569,
+                "theta_deg": 53.07793437414975,
+                "phi_deg": 157.1136081169349
+            },
+            "orientation_in_bot": [
+                0.6894655944861646,
+                -0.156957973218779,
+                0.19677476511071507,
+                -0.6791767667393485
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance5_detect_surroundings.png"
+        },
+        "breakfast_table_idnnmz_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.8954863407487643,
+                "theta_deg": -15.380093185211118,
+                "phi_deg": 31.321095990609074
+            },
+            "orientation_in_bot": [
+                0.6972874829118143,
+                -0.11742788436982639,
+                0.23514513527432274,
+                -0.6668640217493769
+            ],
+            "position_in_world": [
+                0.10349150002002716,
+                -2.3147478103637695,
+                0.6342785954475403
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance5_detect_surroundings.png"
+        },
+        "tupperware_91": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1740399271473496,
+                "theta_deg": -40.471946076208326,
+                "phi_deg": 19.916173199479445
+            },
+            "orientation_in_bot": [
+                -0.561668949029966,
+                0.4295667609353059,
+                0.10361833510831067,
+                0.699473823830817
+            ],
+            "position_in_world": [
+                -0.26953551173210144,
+                -2.8480241298675537,
+                0.06492345780134201
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance5_detect_surroundings.png"
+        },
+        "kabob_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    1
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1720024721799147,
+                "theta_deg": -40.60578736962634,
+                "phi_deg": 19.923449693026452
+            },
+            "orientation_in_bot": [
+                0.32477250523420104,
+                -0.24991832931435648,
+                -0.1865952129911276,
+                0.8928862609568016
+            ],
+            "position_in_world": [
+                -0.2704682946205139,
+                -2.846022129058838,
+                0.06251247972249985
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance5_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "breakfast_table_idnnmz_0",
+                "under",
+                "plate_88"
+            ],
+            [
+                "tupperware_91",
+                "under",
+                "kabob_85"
+            ],
+            [
+                "kabob_85",
+                "inside",
+                "tupperware_91"
+            ]
+        ],
+        "inventory": []
+    },
+    "6_detect_surroundings": {
+        "plate_88": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.932994095685558,
+                "theta_deg": -11.01430715773655,
+                "phi_deg": 31.895925098155367
+            },
+            "orientation_in_bot": [
+                -0.48809543551000567,
+                0.49621373017547227,
+                0.21473718460671362,
+                0.6851443069651996
+            ],
+            "position_in_world": [
+                0.11563151329755783,
+                -2.330687999725342,
+                0.7583624720573425
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance6_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.4825600513340569,
+                "theta_deg": 53.07793437414975,
+                "phi_deg": 157.1136081169349
+            },
+            "orientation_in_bot": [
+                0.6894655944861646,
+                -0.156957973218779,
+                0.19677476511071507,
+                -0.6791767667393485
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance6_detect_surroundings.png"
+        },
+        "breakfast_table_idnnmz_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.8954863407487643,
+                "theta_deg": -15.380093185211118,
+                "phi_deg": 31.321095990609074
+            },
+            "orientation_in_bot": [
+                0.6972874829118143,
+                -0.11742788436982639,
+                0.23514513527432274,
+                -0.6668640217493769
+            ],
+            "position_in_world": [
+                0.10349150002002716,
+                -2.3147478103637695,
+                0.6342785954475403
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance6_detect_surroundings.png"
+        },
+        "tupperware_91": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1740399271473496,
+                "theta_deg": -40.471946076208326,
+                "phi_deg": 19.916173199479445
+            },
+            "orientation_in_bot": [
+                -0.561668949029966,
+                0.4295667609353059,
+                0.10361833510831067,
+                0.699473823830817
+            ],
+            "position_in_world": [
+                -0.26953551173210144,
+                -2.8480241298675537,
+                0.06492345780134201
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance6_detect_surroundings.png"
+        },
+        "kabob_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    1
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1720024721799147,
+                "theta_deg": -40.60578736962634,
+                "phi_deg": 19.923449693026452
+            },
+            "orientation_in_bot": [
+                0.32477250523420104,
+                -0.24991832931435648,
+                -0.1865952129911276,
+                0.8928862609568016
+            ],
+            "position_in_world": [
+                -0.2704682946205139,
+                -2.846022129058838,
+                0.06251247972249985
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance6_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "breakfast_table_idnnmz_0",
+                "under",
+                "plate_88"
+            ],
+            [
+                "tupperware_91",
+                "under",
+                "kabob_85"
+            ],
+            [
+                "kabob_85",
+                "inside",
+                "tupperware_91"
+            ]
+        ],
+        "inventory": []
+    },
+    "7_detect_surroundings": {
+        "plate_88": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.932994095685558,
+                "theta_deg": -11.01430715773655,
+                "phi_deg": 31.895925098155367
+            },
+            "orientation_in_bot": [
+                -0.48809543551000567,
+                0.49621373017547227,
+                0.21473718460671362,
+                0.6851443069651996
+            ],
+            "position_in_world": [
+                0.11563151329755783,
+                -2.330687999725342,
+                0.7583624720573425
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance7_detect_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.4825600513340569,
+                "theta_deg": 53.07793437414975,
+                "phi_deg": 157.1136081169349
+            },
+            "orientation_in_bot": [
+                0.6894655944861646,
+                -0.156957973218779,
+                0.19677476511071507,
+                -0.6791767667393485
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance7_detect_surroundings.png"
+        },
+        "breakfast_table_idnnmz_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.8954863407487643,
+                "theta_deg": -15.380093185211118,
+                "phi_deg": 31.321095990609074
+            },
+            "orientation_in_bot": [
+                0.6972874829118143,
+                -0.11742788436982639,
+                0.23514513527432274,
+                -0.6668640217493769
+            ],
+            "position_in_world": [
+                0.10349150002002716,
+                -2.3147478103637695,
+                0.6342785954475403
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance7_detect_surroundings.png"
+        },
+        "tupperware_91": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1740399271473496,
+                "theta_deg": -40.471946076208326,
+                "phi_deg": 19.916173199479445
+            },
+            "orientation_in_bot": [
+                -0.561668949029966,
+                0.4295667609353059,
+                0.10361833510831067,
+                0.699473823830817
+            ],
+            "position_in_world": [
+                -0.26953551173210144,
+                -2.8480241298675537,
+                0.06492345780134201
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance7_detect_surroundings.png"
+        },
+        "kabob_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    1
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1720024721799147,
+                "theta_deg": -40.60578736962634,
+                "phi_deg": 19.923449693026452
+            },
+            "orientation_in_bot": [
+                0.32477250523420104,
+                -0.24991832931435648,
+                -0.1865952129911276,
+                0.8928862609568016
+            ],
+            "position_in_world": [
+                -0.2704682946205139,
+                -2.846022129058838,
+                0.06251247972249985
+            ],
+            "bot_in_world": [
+                -1.5007835626602173,
+                0.06953975558280945,
+                0.2802797853946686
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance7_detect_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "breakfast_table_idnnmz_0",
+                "under",
+                "plate_88"
+            ],
+            [
+                "tupperware_91",
+                "under",
+                "kabob_85"
+            ],
+            [
+                "kabob_85",
+                "inside",
+                "tupperware_91"
+            ]
+        ],
+        "inventory": []
+    },
+    "8_BEV_surroundings": {
+        "plate_88": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.9329950731236774,
+                "theta_deg": -11.014622851948523,
+                "phi_deg": 31.89591129579987
+            },
+            "orientation_in_bot": [
+                -0.48809315609875115,
+                0.4962130559102237,
+                0.21473672975823066,
+                0.6851465616979611
+            ],
+            "position_in_world": [
+                0.11563147604465485,
+                -2.330688238143921,
+                0.7583624720573425
+            ],
+            "bot_in_world": [
+                -1.5007846355438232,
+                0.06953996419906616,
+                0.2802795469760895
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance8_BEV_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.4825599639528289,
+                "theta_deg": 53.077585912581014,
+                "phi_deg": 157.1135401196307
+            },
+            "orientation_in_bot": [
+                0.6894649730194,
+                -0.15695929903605618,
+                0.196776333069064,
+                -0.6791766369431156
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5007846355438232,
+                0.06953996419906616,
+                0.2802795469760895
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance8_BEV_surroundings.png"
+        },
+        "breakfast_table_idnnmz_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.895487140463868,
+                "theta_deg": -15.380411087671307,
+                "phi_deg": 31.32108934182178
+            },
+            "orientation_in_bot": [
+                0.6972869383058447,
+                -0.11742924372245146,
+                0.2351466933019696,
+                -0.6668638024484337
+            ],
+            "position_in_world": [
+                0.10349150002002716,
+                -2.3147478103637695,
+                0.6342785954475403
+            ],
+            "bot_in_world": [
+                -1.5007846355438232,
+                0.06953996419906616,
+                0.2802795469760895
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance8_BEV_surroundings.png"
+        },
+        "tupperware_91": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1740405446490247,
+                "theta_deg": -40.47230460782316,
+                "phi_deg": 19.91618807429928
+            },
+            "orientation_in_bot": [
+                -0.5616678459494141,
+                0.4295677042814746,
+                0.10361683897711157,
+                0.6994743518852424
+            ],
+            "position_in_world": [
+                -0.26953551173210144,
+                -2.8480241298675537,
+                0.06492345780134201
+            ],
+            "bot_in_world": [
+                -1.5007846355438232,
+                0.06953996419906616,
+                0.2802795469760895
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance8_BEV_surroundings.png"
+        },
+        "kabob_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    1
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1720030894515507,
+                "theta_deg": -40.60614571601716,
+                "phi_deg": 19.923464678544782
+            },
+            "orientation_in_bot": [
+                0.32477233611670564,
+                -0.24991920232322656,
+                -0.18659708309214743,
+                0.8928856872998481
+            ],
+            "position_in_world": [
+                -0.2704682946205139,
+                -2.846022129058838,
+                0.06251247972249985
+            ],
+            "bot_in_world": [
+                -1.5007846355438232,
+                0.06953996419906616,
+                0.2802795469760895
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance8_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "breakfast_table_idnnmz_0",
+                "under",
+                "plate_88"
+            ],
+            [
+                "tupperware_91",
+                "under",
+                "kabob_85"
+            ],
+            [
+                "kabob_85",
+                "inside",
+                "tupperware_91"
+            ]
+        ],
+        "inventory": []
+    },
+    "9_BEV_surroundings": {
+        "plate_88": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.9329950731236774,
+                "theta_deg": -11.014622851948523,
+                "phi_deg": 31.89591129579987
+            },
+            "orientation_in_bot": [
+                -0.48809315609875115,
+                0.4962130559102237,
+                0.21473672975823066,
+                0.6851465616979611
+            ],
+            "position_in_world": [
+                0.11563147604465485,
+                -2.330688238143921,
+                0.7583624720573425
+            ],
+            "bot_in_world": [
+                -1.5007846355438232,
+                0.06953996419906616,
+                0.2802795469760895
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance9_BEV_surroundings.png"
+        },
+        "fridge_xyejdx_0": {
+            "ability": [
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.4825599639528289,
+                "theta_deg": 53.077585912581014,
+                "phi_deg": 157.1135401196307
+            },
+            "orientation_in_bot": [
+                0.6894649730194,
+                -0.15695929903605618,
+                0.196776333069064,
+                -0.6791766369431156
+            ],
+            "position_in_world": [
+                -1.5006803274154663,
+                1.4377108812332153,
+                0.8513244390487671
+            ],
+            "bot_in_world": [
+                -1.5007846355438232,
+                0.06953996419906616,
+                0.2802795469760895
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance9_BEV_surroundings.png"
+        },
+        "breakfast_table_idnnmz_0": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.895487140463868,
+                "theta_deg": -15.380411087671307,
+                "phi_deg": 31.32108934182178
+            },
+            "orientation_in_bot": [
+                0.6972869383058447,
+                -0.11742924372245146,
+                0.2351466933019696,
+                -0.6668638024484337
+            ],
+            "position_in_world": [
+                0.10349150002002716,
+                -2.3147478103637695,
+                0.6342785954475403
+            ],
+            "bot_in_world": [
+                -1.5007846355438232,
+                0.06953996419906616,
+                0.2802795469760895
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance9_BEV_surroundings.png"
+        },
+        "tupperware_91": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1740405446490247,
+                "theta_deg": -40.47230460782316,
+                "phi_deg": 19.91618807429928
+            },
+            "orientation_in_bot": [
+                -0.5616678459494141,
+                0.4295677042814746,
+                0.10361683897711157,
+                0.6994743518852424
+            ],
+            "position_in_world": [
+                -0.26953551173210144,
+                -2.8480241298675537,
+                0.06492345780134201
+            ],
+            "bot_in_world": [
+                -1.5007846355438232,
+                0.06953996419906616,
+                0.2802795469760895
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance9_BEV_surroundings.png"
+        },
+        "kabob_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    1
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 3.1720030894515507,
+                "theta_deg": -40.60614571601716,
+                "phi_deg": 19.923464678544782
+            },
+            "orientation_in_bot": [
+                0.32477233611670564,
+                -0.24991920232322656,
+                -0.18659708309214743,
+                0.8928856872998481
+            ],
+            "position_in_world": [
+                -0.2704682946205139,
+                -2.846022129058838,
+                0.06251247972249985
+            ],
+            "bot_in_world": [
+                -1.5007846355438232,
+                0.06953996419906616,
+                0.2802795469760895
+            ],
+            "path": "./prompt_files/data/put_kabob_in_the_tupperware_and_put_it_in_the_fridge/subtask_7/seg_instance9_BEV_surroundings.png"
+        },
+        "scene_graph": [
+            [
+                "breakfast_table_idnnmz_0",
+                "under",
+                "plate_88"
+            ],
+            [
+                "tupperware_91",
+                "under",
+                "kabob_85"
+            ],
+            [
+                "kabob_85",
+                "inside",
+                "tupperware_91"
+            ]
+        ],
+        "inventory": []
+    }
+}

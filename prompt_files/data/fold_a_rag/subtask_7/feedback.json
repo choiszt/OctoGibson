@@ -1,7 +1,7 @@
 {
-    "subtask": "\n(1) Toggle off the clothes dryer.\n(2) Take out the rag from the clothes dryer.\n(3) Fold the rag.",
-    "code": "def act(robot,env,camera):\n    # Subtask 2: Take out the rag from the clothes dryer.\n    rag = registry(env, \"rag_194\")\n    clothes_dryer = registry(env, \"clothes_dryer_zlmnfg_0\")\n    open(robot, clothes_dryer)\n    donothing(env)\n    EasyGrasp(robot, rag)\n    donothing(env)\n    close(robot, clothes_dryer)\n    donothing(env)\n",
-    "error": "<class 'omnigibson.object_states.open.Open'>",
+    "subtask": "\n(1) Check if the rag is foldable.\n(2) If the rag is foldable, fold the rag.",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Check if the rag is foldable.\n    rag_194 = registry(env,\"rag_194\")\n    if ('foldable', 1) in rag_194[1]:\n        # Subtask 2: If the rag is foldable, fold the rag.\n        fold(robot, rag_194)\n        donothing(env)\n",
+    "error": "'DatasetObject' object is not subscriptable",
     "critic": "fail",
     "reset": true,
     "main_succeed": false

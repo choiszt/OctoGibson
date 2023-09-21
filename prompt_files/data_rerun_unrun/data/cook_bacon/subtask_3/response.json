@@ -1,0 +1,23 @@
+{
+    "response": {
+        "explain": " The previous action code successfully executed the subtask of taking the tray out of the fridge, which is now in the robot's inventory. The next step is to take the bacon out of the tray.",
+        "subtask": "\n(1) Open the fridge\n(2) Take the tray out of the fridge\n(3) Take the bacon out of the tray\n(4) Cook the bacon",
+        "code": "def act(robot,env,camera):\n    # Subtask 3: Take the bacon out of the tray\n    bacon = registry(env, \"bacon_150\")\n    EasyGrasp(robot, bacon)\n    donothing(env)\n",
+        "inventory": "bacon_150",
+        "obj_2": [],
+        "obj_3": [
+            [
+                "bacon_150",
+                "inside",
+                "tray_156",
+                "0"
+            ],
+            [
+                "bacon_150",
+                "inside",
+                "robot",
+                "1"
+            ]
+        ]
+    }
+}

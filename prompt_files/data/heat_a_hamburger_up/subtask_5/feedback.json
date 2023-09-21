@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the microwave\n(2) Close the microwave\n(3) Heat the hamburger up in the microwave",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Close the microwave\n    microwave = registry(env,\"microwave_bfbeeb_0\")\n    close(robot, microwave)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

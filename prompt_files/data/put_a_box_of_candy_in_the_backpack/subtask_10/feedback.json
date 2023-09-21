@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register the box of candy and the backpack.\n(2) Check if the box of candy is already inside the backpack.\n(3) If not, put the box of candy in the backpack.",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Register the box of candy and the backpack.\n    box_of_candy_89 = registry(env,\"box_of_candy_89\")\n    backpack_82 = registry(env,\"backpack_82\")\n    \n    # Subtask 2: Check if the box of candy is already inside the backpack.\n    if ('box_of_candy_89', 'inside', 'backpack_82') not in env.relations:\n        # Subtask 3: If not, put the box of candy in the backpack.\n        put_inside(robot, box_of_candy_89, backpack_82)\n        donothing(env)\n",
+    "error": "'Environment' object has no attribute 'relations'",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

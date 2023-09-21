@@ -1,13 +1,13 @@
 {
     "response": {
-        "explain": " The previous action code has successfully moved the robot to the oven without any errors. The next step in the original subtasks is to open the oven.",
-        "subtask": "\n(1) Move the robot to the oven.\n(2) Open the oven.\n(3) Check if the fruitcake is inside the oven.\n(4) Close the oven.\n(5) Turn on the oven.",
-        "code": "def act(robot,env,camera):\n    # Subtask 2: Open the oven\n    oven_wuinhm_0 = registry(env,\"oven_wuinhm_0\")\n    open(robot, oven_wuinhm_0)\n    donothing(env)\n",
+        "explain": " The previous action code successfully moved the robot to the oven. The next step is to turn on the oven. ",
+        "subtask": "\n(1) Move the robot to the oven.\n(2) Turn on the oven.",
+        "code": "def act(robot,env,camera):\n    # Subtask 2: Turn on the oven\n    oven_wuinhm_0 = registry(env,\"oven_wuinhm_0\")\n    toggle_on(robot, oven_wuinhm_0)\n    donothing(env)\n",
         "inventory": "None",
         "obj_2": [
             [
                 "oven_wuinhm_0",
-                "openable",
+                "togglable",
                 "1"
             ]
         ],

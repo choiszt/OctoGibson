@@ -1,0 +1,23 @@
+{
+    "response": {
+        "explain": " Since there is no previous action code or execution error, we are starting from scratch. The task is to put the kabob in the tupperware and then put it in the fridge. The kabob is currently on the plate and not in the robot's inventory. The first step would be to move the robot to the kabob and grasp it.",
+        "subtask": "\n(1) Move the robot to the kabob.\n(2) Grasp the kabob.",
+        "code": "def act(robot,env,camera):\n    # Subtask 1: Move the robot to the kabob\n    kabob_85 = registry(env,\"kabob_85\")\n    MoveBot(env, robot, kabob_85, camera)\n    donothing(env)\n    # Subtask 2: Grasp the kabob\n    EasyGrasp(robot, kabob_85)\n    donothing(env)\n",
+        "inventory": "kabob_85",
+        "obj_2": [],
+        "obj_3": [
+            [
+                "robot",
+                "nextto",
+                "kabob_85",
+                "1"
+            ],
+            [
+                "kabob_85",
+                "inside",
+                "robot",
+                "1"
+            ]
+        ]
+    }
+}

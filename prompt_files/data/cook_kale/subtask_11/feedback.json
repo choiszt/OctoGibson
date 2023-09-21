@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Close the oven\n(2) Turn off the oven",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Close the oven\n    oven_wuinhm_0 = registry(env,\"oven_wuinhm_0\")\n    close(robot, oven_wuinhm_0)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the fridge.\n(2) Take the pork chop out of the fridge.\n(3) Freeze the pork chop.\n(4) Move the robot to the countertop.\n(5) Take a plate from the countertop.\n(6) Put the frozen pork chop on the plate.",
+    "code": "def act(robot,env,camera):\n    # Subtask 2: Take the pork chop out of the fridge\n    pork_chop = registry(env, \"pork_chop_188\")\n    open(robot, \"fridge_dszchb_0\")\n    donothing(env)\n    EasyGrasp(robot, pork_chop)\n    donothing(env)\n",
+    "error": "'str' object has no attribute 'get_position'",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

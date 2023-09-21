@@ -1,8 +1,8 @@
 {
-    "subtask": "\n(1) Move the robot to the trash can.\n(2) Search for the pan.\n(3) Grasp the pan.\n(4) Move the robot to the trash can with the pan.\n(5) Put the pan in the trash can.\n(6) Grasp the can of soda.\n(7) Move the robot to the trash can with the can of soda.\n(8) Put the can of soda in the trash can.",
-    "code": "def act(robot,env,camera):\n    # Subtask 2: Search for the pan.\n    # Since the pan is not observed in the environment, we need to search for it.\n    # Here we assume the pan might be inside the notepad_86, so we will open it.\n    notepad_86 = registry(env,\"notepad_86\")\n    open(robot, notepad_86)\n    donothing(env)\n",
-    "error": "<class 'omnigibson.object_states.open.Open'>",
-    "critic": "fail",
-    "reset": true,
+    "subtask": "\n(1) Move the robot to the trash can.\n(2) Register the trash can.\n(3) Move the robot to the can of soda.\n(4) Register the can of soda.\n(5) Grasp the can of soda.\n(6) Move the robot to the trash can.\n(7) Put the can of soda into the trash can.",
+    "code": "def act(robot,env,camera):\n    # Subtask 5: Grasp the can of soda\n    can_of_soda_89 = registry(env,\"can_of_soda_89\")\n    EasyGrasp(robot, can_of_soda_89)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
     "main_succeed": false
 }

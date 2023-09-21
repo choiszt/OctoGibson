@@ -5,8 +5,7 @@ import omnigibson as og
 from action_list import * 
 from action_utils import *
 def act(robot,env,camera):
-    # Subtask 3: Find the stockpot
-    # Assuming the stockpot is on the countertop
-    countertop = registry(env,"countertop_tpuwys_1")
-    MoveBot(env, robot, countertop, camera)
+    # Subtask 3: Grasp the oyster from the fridge
+    oyster = registry(env, "oyster_201")
+    EasyGrasp(robot, oyster)
     donothing(env)

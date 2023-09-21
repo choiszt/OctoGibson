@@ -5,7 +5,7 @@ import omnigibson as og
 from action_list import * 
 from action_utils import *
 def act(robot,env,camera):
-    # Subtask 1: Open the clothes dryer.
-    clothes_dryer = registry(env, "clothes_dryer_zlmnfg_0")
-    open(robot, clothes_dryer)
+    # Subtask 1: Move the robot to the clothes dryer
+    clothes_dryer_zlmnfg_0 = registry(env,"clothes_dryer_zlmnfg_0")
+    MoveBot(env, robot, clothes_dryer_zlmnfg_0, camera)
     donothing(env)

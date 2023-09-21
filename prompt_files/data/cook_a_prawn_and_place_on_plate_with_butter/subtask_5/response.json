@@ -1,21 +1,17 @@
 {
     "response": {
-        "explain": " The previous action code has successfully turned on the stove. The next step is to cook the prawn on the stove. However, the prawn is already in the robot's inventory, so we don't need to pick it up again. ",
-        "subtask": "\n(1) Open the fridge\n(2) Take the prawn from the fridge\n(3) Take the butter from the fridge\n(4) Turn on the stove\n(5) Cook the prawn on the stove\n(6) Place the cooked prawn on the plate\n(7) Place the butter on the plate",
-        "code": "def act(robot,env,camera):\n    # Subtask 5: Cook the prawn on the stove\n    shrimp = registry(env,\"shrimp_201\")\n    stove = registry(env,\"stove_igwqpj_0\")\n    cook(robot, shrimp)\n    donothing(env)\n",
+        "explain": " The previous action code has successfully cooked the prawn. The next step is to place the cooked prawn on the plate. However, the plate is not within the robot's reach, so the robot needs to move to the plate first.",
+        "subtask": "\n(1) Open the fridge\n(2) Take out the prawn from the fridge\n(3) Take out the butter from the fridge\n(4) Cook the prawn\n(5) Move to the plate\n(6) Place the cooked prawn on the plate\n(7) Place the butter on the plate",
+        "code": "def act(robot,env,camera):\n    # Subtask 5: Move to the plate\n    plate = registry(env,\"plate_215\")\n    MoveBot(env, robot, plate, camera)\n    donothing(env)\n",
         "inventory": "shrimp_201,butter_208",
-        "obj_2": [
+        "obj_2": [],
+        "obj_3": [
             [
-                "shrimp_201",
-                "cookable",
-                "1"
-            ],
-            [
-                "stove_igwqpj_0",
-                "togglable",
+                "robot",
+                "nextto",
+                "plate_215",
                 "1"
             ]
-        ],
-        "obj_3": []
+        ]
     }
 }

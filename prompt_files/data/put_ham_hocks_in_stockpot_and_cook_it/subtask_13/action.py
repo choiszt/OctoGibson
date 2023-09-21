@@ -5,5 +5,8 @@ import omnigibson as og
 from action_list import * 
 from action_utils import *
 def act(robot,env,camera):
-    # Subtask 7: Wait for the ham hocks to be cooked
+    # Subtask 4: Put the ham hocks in the stockpot
+    ham_hock = registry(env, "ham_hock_82")
+    stockpot = registry(env, "stockpot_81")
+    put_inside(robot, ham_hock, stockpot)
     donothing(env)

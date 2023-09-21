@@ -26,11 +26,11 @@ def parse_args():
 def gpt_process(args):
     
     idx = args.idx
-    with open('/shared/liushuai/OmniGibson/EVLM_Task/917rerun.json') as f: #TODO change the path
+    with open('/shared/liushuai/OmniGibson/prompt_files/919TODO/failed_todo.json') as f: #TODO change the path
         data = json.load(f)
     EVLM_name=sorted(list(data))[idx]
     print(data[EVLM_name]['split'])
-    if "train" in data[EVLM_name]['split']:
+    if "train" in data[EVLM_name]['split'] or "" in data[EVLM_name]['split']:
         task_name=data[EVLM_name]['task_name']
         gpt_name=data[EVLM_name]['detailed_name']
         scene=data[EVLM_name]['env']
@@ -56,7 +56,7 @@ def gpt_process(args):
             
             # init pipeline for each subtask
             while True:
-                with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","r")as f:
+                with open("/shared/liushuai/OmniGibson/prompt_files/919TODO/failed_task.json","r")as f:
                     data = json.load(f)
                     if gpt_task_name in data.keys():
                         return 0
@@ -69,7 +69,7 @@ def gpt_process(args):
                     break
             human_info = parse_json.parse_json(path=os.path.join(sub_save_path, "task1.json"))
             
-            with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","r")as f:
+            with open("/shared/liushuai/OmniGibson/prompt_files/919TODO/failed_task.json","r")as f:
                 data = json.load(f)
                 if gpt_task_name in data.keys():
                     return 0
@@ -111,7 +111,7 @@ def gpt_process(args):
 
                 
                 while True:
-                    with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","r")as f:
+                    with open("/shared/liushuai/OmniGibson/prompt_files/919TODO/failed_task.json","r")as f:
                         data = json.load(f)
                         if gpt_task_name in data.keys():
                             return 0               
@@ -124,7 +124,7 @@ def gpt_process(args):
                     if feedbackinfo.st_size > 0:
                         break
                     
-                with open("/shared/liushuai/OmniGibson/prompt_files/finished_task.json","r")as f:
+                with open("/shared/liushuai/OmniGibson/prompt_files/919TODO/failed_task.json","r")as f:
                     data = json.load(f)
                     if gpt_task_name in data.keys():
                         return 0

@@ -1,5 +1,5 @@
 {
-    "subtask": "\n(1) Open the bottom cabinet.\n(2) Grasp a bread slice from the bottom cabinet.\n(3) Put the bread slice in the toaster.\n(4) Turn on the toaster.",
+    "subtask": "\n(1) Open the bottom cabinet.\n(2) Grasp a bread slice.\n(3) Put the bread slice into the toaster.\n(4) Toggle on the toaster to cook the bread slice.",
     "code": "def act(robot,env,camera):\n    # Subtask 1: Open the bottom cabinet\n    bottom_cabinet = registry(env, \"bottom_cabinet_no_top_vzzafs_0\")\n    open(robot, bottom_cabinet)\n    donothing(env)\n",
     "error": "",
     "critic": "succeed",

@@ -1,8 +1,8 @@
 {
-    "subtask": "\n(1) Move the robot closer to the wicker basket that contains the copper wire.\n(2) Grasp the wicker basket that contains the copper wire.\n(3) Explore the environment to find the vehicle.\n(4) Move the robot closer to the vehicle.\n(5) Put the wicker basket (with the copper wire inside) into the vehicle.",
-    "code": "def act(robot,env,camera):\n    # Subtask 3: Continue to explore the environment to find the vehicle.\n    # Since the vehicle is still not observed in the environment, we need to move the robot around to find it.\n    # Here we assume that the vehicle is a large object placed directly on the ground, so we can use the MoveBot function to move the robot.\n    # We also assume that the vehicle's name is \"vehicle_1\". This is a placeholder name and should be replaced with the actual name of the vehicle when it is found.\n    # However, before we can move to the vehicle, we need to find it. Therefore, we will continue to move the robot to a different location in the environment to explore.\n    # We will move the robot to the pocketknife, which is the next closest object to the robot according to the observed objects.\n    pocketknife_278 = registry(env, \"pocketknife_278\")\n    MoveBot(env, robot, pocketknife_278, camera)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
+    "subtask": "\n(1) Move the robot closer to the copper wire.\n(2) Pick up the copper wire.\n(3) Explore the environment to find the vehicle.\n(4) Register the vehicle in the environment.\n(5) Move the robot closer to the vehicle.\n(6) Put the copper wire into the vehicle.",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Explore the environment to find the vehicle.\n    # Since the vehicle was not found in the previous step, we need to explore the environment to find it.\n    # Here we assume that the vehicle is named \"vehicle_1\" in the environment.\n    vehicle_1 = registry(env,\"vehicle_1\")\n    MoveBot(env, robot, vehicle_1, camera)\n    donothing(env)\n",
+    "error": "something went wrong! Please plan again",
+    "critic": "fail",
+    "reset": true,
     "main_succeed": false
 }

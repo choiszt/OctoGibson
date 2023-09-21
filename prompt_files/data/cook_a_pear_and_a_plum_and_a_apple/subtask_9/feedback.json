@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Grasp the pear.\n(2) Cook the pear.\n(3) Grasp the apple.\n(4) Put the pear on the countertop.\n(5) Find and grasp a bowl.\n(6) Put the apple in the bowl.\n(7) Take the apple out of the bowl.\n(8) Cook the apple.",
+    "code": "def act(robot,env,camera):\n    # Subtask 7: Take the apple out of the bowl\n    apple_87 = registry(env,\"apple_87\")\n    bowl_88 = registry(env,\"bowl_88\")\n    put_ontop(robot, apple_87, bowl_88)\n    donothing(env)\n",
+    "error": "list.remove(x): x not in list",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

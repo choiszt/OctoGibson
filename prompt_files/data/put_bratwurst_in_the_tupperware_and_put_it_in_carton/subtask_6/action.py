@@ -5,7 +5,8 @@ import omnigibson as og
 from action_list import * 
 from action_utils import *
 def act(robot,env,camera):
-    # Subtask 2: Move the robot closer to the bottom cabinet.
-    bottom_cabinet = registry(env,"bottom_cabinet_no_top_spojpj_0")
-    MoveBot(env, robot, bottom_cabinet, camera)
+    # Subtask 2: Find the tupperware inside the bottom cabinet
+    # We need to register the tupperware first before we can interact with it.
+    tupperware = registry(env, "tupperware")
+    grasp(robot, tupperware)
     donothing(env)

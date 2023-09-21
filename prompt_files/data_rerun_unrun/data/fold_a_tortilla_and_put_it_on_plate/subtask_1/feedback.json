@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Grasp the tortilla from the plate.",
+    "code": "def act(robot, env, camera):\n    # Subtask 1: Grasp the tortilla from the plate\n    tortilla_189 = registry(env, \"tortilla_189\")\n    EasyGrasp(robot, tortilla_189)\n    donothing(env)\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

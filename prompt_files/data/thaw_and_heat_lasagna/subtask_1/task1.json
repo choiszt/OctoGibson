@@ -1,7 +1,7 @@
 {
     "task": "thaw_and_heat_lasagna",
     "0_detect_surroundings": {
-        "countertop_tpuwys_1": {
+        "platter_86": {
             "ability": [
                 [
                     "heatable",
@@ -13,20 +13,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 2.9017156314069474,
-                "theta_deg": 59.19929339756816,
-                "phi_deg": 73.50394708936278
+                "rho": 3.019704974738046,
+                "theta_deg": 58.307392359906906,
+                "phi_deg": 73.7384591526632
             },
             "orientation_in_bot": [
-                0.004841108091417035,
-                0.021512381081681683,
-                0.2237787034244702,
-                0.9743905136167464
+                -0.001529798657629102,
+                0.025185429934239244,
+                -0.0626694018727564,
+                0.9977153401166114
             ],
             "position_in_world": [
-                0.6945550927577002,
-                1.519298889639466,
-                0.8902008019563301
+                0.8155449628829956,
+                1.5459364652633667,
+                0.9161732792854309
             ],
             "bot_in_world": [
                 -1.5960588455200195,
@@ -77,49 +77,7 @@
             ],
             "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance0_detect_surroundings.png"
         },
-        "oven_wuinhm_0": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 2.038212619697119,
-                "theta_deg": 75.89684325865481,
-                "phi_deg": 76.41796821433303
-            },
-            "orientation_in_bot": [
-                0.004825871179709429,
-                0.021515815823459745,
-                0.22308867474917268,
-                0.9745487283022156
-            ],
-            "position_in_world": [
-                -0.34276917576789856,
-                1.5018638372421265,
-                0.5036253333091736
-            ],
-            "bot_in_world": [
-                -1.5960588455200195,
-                -0.02579319104552269,
-                0.0037854760885238647
-            ],
-            "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance0_detect_surroundings.png"
-        },
-        "platter_86": {
+        "countertop_tpuwys_1": {
             "ability": [
                 [
                     "heatable",
@@ -131,20 +89,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 3.019704974738046,
-                "theta_deg": 58.307392359906906,
-                "phi_deg": 73.7384591526632
+                "rho": 2.9017156314069474,
+                "theta_deg": 59.19929339756816,
+                "phi_deg": 73.50394708936278
             },
             "orientation_in_bot": [
-                -0.001529798657629102,
-                0.025185429934239244,
-                -0.0626694018727564,
-                0.9977153401166114
+                0.004841108091417035,
+                0.021512381081681683,
+                0.2237787034244702,
+                0.9743905136167464
             ],
             "position_in_world": [
-                0.8155449628829956,
-                1.5459364652633667,
-                0.9161732792854309
+                0.6945550927577002,
+                1.519298889639466,
+                0.8902008019563301
             ],
             "bot_in_world": [
                 -1.5960588455200195,
@@ -195,6 +153,48 @@
             ],
             "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance0_detect_surroundings.png"
         },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.038212619697119,
+                "theta_deg": 75.89684325865481,
+                "phi_deg": 76.41796821433303
+            },
+            "orientation_in_bot": [
+                0.004825871179709429,
+                0.021515815823459745,
+                0.22308867474917268,
+                0.9745487283022156
+            ],
+            "position_in_world": [
+                -0.34276917576789856,
+                1.5018638372421265,
+                0.5036253333091736
+            ],
+            "bot_in_world": [
+                -1.5960588455200195,
+                -0.02579319104552269,
+                0.0037854760885238647
+            ],
+            "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance0_detect_surroundings.png"
+        },
         "fridge_xyejdx_0": {
             "ability": [
                 [
@@ -235,9 +235,9 @@
         },
         "scene_graph": [
             [
-                "countertop_tpuwys_1",
-                "under",
-                "platter_86"
+                "platter_86",
+                "ontop",
+                "countertop_tpuwys_1"
             ],
             [
                 "lasagna_85",
@@ -245,9 +245,9 @@
                 "fridge_xyejdx_0"
             ],
             [
-                "platter_86",
-                "ontop",
-                "countertop_tpuwys_1"
+                "countertop_tpuwys_1",
+                "under",
+                "platter_86"
             ],
             [
                 "casserole_87",
@@ -258,7 +258,7 @@
         "inventory": []
     },
     "1_detect_surroundings": {
-        "countertop_tpuwys_1": {
+        "platter_86": {
             "ability": [
                 [
                     "heatable",
@@ -270,20 +270,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 2.9017156314069474,
-                "theta_deg": 59.19929339756816,
-                "phi_deg": 73.50394708936278
+                "rho": 3.019704974738046,
+                "theta_deg": 58.307392359906906,
+                "phi_deg": 73.7384591526632
             },
             "orientation_in_bot": [
-                0.004841108091417035,
-                0.021512381081681683,
-                0.2237787034244702,
-                0.9743905136167464
+                -0.001529798657629102,
+                0.025185429934239244,
+                -0.0626694018727564,
+                0.9977153401166114
             ],
             "position_in_world": [
-                0.6945550927577002,
-                1.519298889639466,
-                0.8902008019563301
+                0.8155449628829956,
+                1.5459364652633667,
+                0.9161732792854309
             ],
             "bot_in_world": [
                 -1.5960588455200195,
@@ -334,49 +334,7 @@
             ],
             "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance1_detect_surroundings.png"
         },
-        "oven_wuinhm_0": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 2.038212619697119,
-                "theta_deg": 75.89684325865481,
-                "phi_deg": 76.41796821433303
-            },
-            "orientation_in_bot": [
-                0.004825871179709429,
-                0.021515815823459745,
-                0.22308867474917268,
-                0.9745487283022156
-            ],
-            "position_in_world": [
-                -0.34276917576789856,
-                1.5018638372421265,
-                0.5036253333091736
-            ],
-            "bot_in_world": [
-                -1.5960588455200195,
-                -0.02579319104552269,
-                0.0037854760885238647
-            ],
-            "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance1_detect_surroundings.png"
-        },
-        "platter_86": {
+        "countertop_tpuwys_1": {
             "ability": [
                 [
                     "heatable",
@@ -388,20 +346,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 3.019704974738046,
-                "theta_deg": 58.307392359906906,
-                "phi_deg": 73.7384591526632
+                "rho": 2.9017156314069474,
+                "theta_deg": 59.19929339756816,
+                "phi_deg": 73.50394708936278
             },
             "orientation_in_bot": [
-                -0.001529798657629102,
-                0.025185429934239244,
-                -0.0626694018727564,
-                0.9977153401166114
+                0.004841108091417035,
+                0.021512381081681683,
+                0.2237787034244702,
+                0.9743905136167464
             ],
             "position_in_world": [
-                0.8155449628829956,
-                1.5459364652633667,
-                0.9161732792854309
+                0.6945550927577002,
+                1.519298889639466,
+                0.8902008019563301
             ],
             "bot_in_world": [
                 -1.5960588455200195,
@@ -452,6 +410,48 @@
             ],
             "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance1_detect_surroundings.png"
         },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.038212619697119,
+                "theta_deg": 75.89684325865481,
+                "phi_deg": 76.41796821433303
+            },
+            "orientation_in_bot": [
+                0.004825871179709429,
+                0.021515815823459745,
+                0.22308867474917268,
+                0.9745487283022156
+            ],
+            "position_in_world": [
+                -0.34276917576789856,
+                1.5018638372421265,
+                0.5036253333091736
+            ],
+            "bot_in_world": [
+                -1.5960588455200195,
+                -0.02579319104552269,
+                0.0037854760885238647
+            ],
+            "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance1_detect_surroundings.png"
+        },
         "fridge_xyejdx_0": {
             "ability": [
                 [
@@ -492,9 +492,9 @@
         },
         "scene_graph": [
             [
-                "countertop_tpuwys_1",
-                "under",
-                "platter_86"
+                "platter_86",
+                "ontop",
+                "countertop_tpuwys_1"
             ],
             [
                 "lasagna_85",
@@ -502,9 +502,9 @@
                 "fridge_xyejdx_0"
             ],
             [
-                "platter_86",
-                "ontop",
-                "countertop_tpuwys_1"
+                "countertop_tpuwys_1",
+                "under",
+                "platter_86"
             ],
             [
                 "casserole_87",
@@ -515,7 +515,7 @@
         "inventory": []
     },
     "2_detect_surroundings": {
-        "countertop_tpuwys_1": {
+        "platter_86": {
             "ability": [
                 [
                     "heatable",
@@ -527,20 +527,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 2.9017156314069474,
-                "theta_deg": 59.19929339756816,
-                "phi_deg": 73.50394708936278
+                "rho": 3.019704974738046,
+                "theta_deg": 58.307392359906906,
+                "phi_deg": 73.7384591526632
             },
             "orientation_in_bot": [
-                0.004841108091417035,
-                0.021512381081681683,
-                0.2237787034244702,
-                0.9743905136167464
+                -0.001529798657629102,
+                0.025185429934239244,
+                -0.0626694018727564,
+                0.9977153401166114
             ],
             "position_in_world": [
-                0.6945550927577002,
-                1.519298889639466,
-                0.8902008019563301
+                0.8155449628829956,
+                1.5459364652633667,
+                0.9161732792854309
             ],
             "bot_in_world": [
                 -1.5960588455200195,
@@ -591,49 +591,7 @@
             ],
             "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance2_detect_surroundings.png"
         },
-        "oven_wuinhm_0": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 2.038212619697119,
-                "theta_deg": 75.89684325865481,
-                "phi_deg": 76.41796821433303
-            },
-            "orientation_in_bot": [
-                0.004825871179709429,
-                0.021515815823459745,
-                0.22308867474917268,
-                0.9745487283022156
-            ],
-            "position_in_world": [
-                -0.34276917576789856,
-                1.5018638372421265,
-                0.5036253333091736
-            ],
-            "bot_in_world": [
-                -1.5960588455200195,
-                -0.02579319104552269,
-                0.0037854760885238647
-            ],
-            "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance2_detect_surroundings.png"
-        },
-        "platter_86": {
+        "countertop_tpuwys_1": {
             "ability": [
                 [
                     "heatable",
@@ -645,20 +603,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 3.019704974738046,
-                "theta_deg": 58.307392359906906,
-                "phi_deg": 73.7384591526632
+                "rho": 2.9017156314069474,
+                "theta_deg": 59.19929339756816,
+                "phi_deg": 73.50394708936278
             },
             "orientation_in_bot": [
-                -0.001529798657629102,
-                0.025185429934239244,
-                -0.0626694018727564,
-                0.9977153401166114
+                0.004841108091417035,
+                0.021512381081681683,
+                0.2237787034244702,
+                0.9743905136167464
             ],
             "position_in_world": [
-                0.8155449628829956,
-                1.5459364652633667,
-                0.9161732792854309
+                0.6945550927577002,
+                1.519298889639466,
+                0.8902008019563301
             ],
             "bot_in_world": [
                 -1.5960588455200195,
@@ -709,6 +667,48 @@
             ],
             "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance2_detect_surroundings.png"
         },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.038212619697119,
+                "theta_deg": 75.89684325865481,
+                "phi_deg": 76.41796821433303
+            },
+            "orientation_in_bot": [
+                0.004825871179709429,
+                0.021515815823459745,
+                0.22308867474917268,
+                0.9745487283022156
+            ],
+            "position_in_world": [
+                -0.34276917576789856,
+                1.5018638372421265,
+                0.5036253333091736
+            ],
+            "bot_in_world": [
+                -1.5960588455200195,
+                -0.02579319104552269,
+                0.0037854760885238647
+            ],
+            "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance2_detect_surroundings.png"
+        },
         "fridge_xyejdx_0": {
             "ability": [
                 [
@@ -749,9 +749,9 @@
         },
         "scene_graph": [
             [
-                "countertop_tpuwys_1",
-                "under",
-                "platter_86"
+                "platter_86",
+                "ontop",
+                "countertop_tpuwys_1"
             ],
             [
                 "lasagna_85",
@@ -759,9 +759,9 @@
                 "fridge_xyejdx_0"
             ],
             [
-                "platter_86",
-                "ontop",
-                "countertop_tpuwys_1"
+                "countertop_tpuwys_1",
+                "under",
+                "platter_86"
             ],
             [
                 "casserole_87",
@@ -772,7 +772,7 @@
         "inventory": []
     },
     "3_detect_surroundings": {
-        "countertop_tpuwys_1": {
+        "platter_86": {
             "ability": [
                 [
                     "heatable",
@@ -784,20 +784,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 2.9017156314069474,
-                "theta_deg": 59.19929339756816,
-                "phi_deg": 73.50394708936278
+                "rho": 3.019704974738046,
+                "theta_deg": 58.307392359906906,
+                "phi_deg": 73.7384591526632
             },
             "orientation_in_bot": [
-                0.004841108091417035,
-                0.021512381081681683,
-                0.2237787034244702,
-                0.9743905136167464
+                -0.001529798657629102,
+                0.025185429934239244,
+                -0.0626694018727564,
+                0.9977153401166114
             ],
             "position_in_world": [
-                0.6945550927577002,
-                1.519298889639466,
-                0.8902008019563301
+                0.8155449628829956,
+                1.5459364652633667,
+                0.9161732792854309
             ],
             "bot_in_world": [
                 -1.5960588455200195,
@@ -848,49 +848,7 @@
             ],
             "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance3_detect_surroundings.png"
         },
-        "oven_wuinhm_0": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 2.038212619697119,
-                "theta_deg": 75.89684325865481,
-                "phi_deg": 76.41796821433303
-            },
-            "orientation_in_bot": [
-                0.004825871179709429,
-                0.021515815823459745,
-                0.22308867474917268,
-                0.9745487283022156
-            ],
-            "position_in_world": [
-                -0.34276917576789856,
-                1.5018638372421265,
-                0.5036253333091736
-            ],
-            "bot_in_world": [
-                -1.5960588455200195,
-                -0.02579319104552269,
-                0.0037854760885238647
-            ],
-            "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance3_detect_surroundings.png"
-        },
-        "platter_86": {
+        "countertop_tpuwys_1": {
             "ability": [
                 [
                     "heatable",
@@ -902,20 +860,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 3.019704974738046,
-                "theta_deg": 58.307392359906906,
-                "phi_deg": 73.7384591526632
+                "rho": 2.9017156314069474,
+                "theta_deg": 59.19929339756816,
+                "phi_deg": 73.50394708936278
             },
             "orientation_in_bot": [
-                -0.001529798657629102,
-                0.025185429934239244,
-                -0.0626694018727564,
-                0.9977153401166114
+                0.004841108091417035,
+                0.021512381081681683,
+                0.2237787034244702,
+                0.9743905136167464
             ],
             "position_in_world": [
-                0.8155449628829956,
-                1.5459364652633667,
-                0.9161732792854309
+                0.6945550927577002,
+                1.519298889639466,
+                0.8902008019563301
             ],
             "bot_in_world": [
                 -1.5960588455200195,
@@ -966,6 +924,48 @@
             ],
             "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance3_detect_surroundings.png"
         },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.038212619697119,
+                "theta_deg": 75.89684325865481,
+                "phi_deg": 76.41796821433303
+            },
+            "orientation_in_bot": [
+                0.004825871179709429,
+                0.021515815823459745,
+                0.22308867474917268,
+                0.9745487283022156
+            ],
+            "position_in_world": [
+                -0.34276917576789856,
+                1.5018638372421265,
+                0.5036253333091736
+            ],
+            "bot_in_world": [
+                -1.5960588455200195,
+                -0.02579319104552269,
+                0.0037854760885238647
+            ],
+            "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance3_detect_surroundings.png"
+        },
         "fridge_xyejdx_0": {
             "ability": [
                 [
@@ -1006,9 +1006,9 @@
         },
         "scene_graph": [
             [
-                "countertop_tpuwys_1",
-                "under",
-                "platter_86"
+                "platter_86",
+                "ontop",
+                "countertop_tpuwys_1"
             ],
             [
                 "lasagna_85",
@@ -1016,9 +1016,9 @@
                 "fridge_xyejdx_0"
             ],
             [
-                "platter_86",
-                "ontop",
-                "countertop_tpuwys_1"
+                "countertop_tpuwys_1",
+                "under",
+                "platter_86"
             ],
             [
                 "casserole_87",
@@ -1029,7 +1029,7 @@
         "inventory": []
     },
     "4_detect_surroundings": {
-        "countertop_tpuwys_1": {
+        "platter_86": {
             "ability": [
                 [
                     "heatable",
@@ -1041,20 +1041,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 2.9017156314069474,
-                "theta_deg": 59.19929339756816,
-                "phi_deg": 73.50394708936278
+                "rho": 3.019704974738046,
+                "theta_deg": 58.307392359906906,
+                "phi_deg": 73.7384591526632
             },
             "orientation_in_bot": [
-                0.004841108091417035,
-                0.021512381081681683,
-                0.2237787034244702,
-                0.9743905136167464
+                -0.001529798657629102,
+                0.025185429934239244,
+                -0.0626694018727564,
+                0.9977153401166114
             ],
             "position_in_world": [
-                0.6945550927577002,
-                1.519298889639466,
-                0.8902008019563301
+                0.8155449628829956,
+                1.5459364652633667,
+                0.9161732792854309
             ],
             "bot_in_world": [
                 -1.5960588455200195,
@@ -1105,49 +1105,7 @@
             ],
             "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance4_detect_surroundings.png"
         },
-        "oven_wuinhm_0": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 2.038212619697119,
-                "theta_deg": 75.89684325865481,
-                "phi_deg": 76.41796821433303
-            },
-            "orientation_in_bot": [
-                0.004825871179709429,
-                0.021515815823459745,
-                0.22308867474917268,
-                0.9745487283022156
-            ],
-            "position_in_world": [
-                -0.34276917576789856,
-                1.5018638372421265,
-                0.5036253333091736
-            ],
-            "bot_in_world": [
-                -1.5960588455200195,
-                -0.02579319104552269,
-                0.0037854760885238647
-            ],
-            "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance4_detect_surroundings.png"
-        },
-        "platter_86": {
+        "countertop_tpuwys_1": {
             "ability": [
                 [
                     "heatable",
@@ -1159,20 +1117,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 3.019704974738046,
-                "theta_deg": 58.307392359906906,
-                "phi_deg": 73.7384591526632
+                "rho": 2.9017156314069474,
+                "theta_deg": 59.19929339756816,
+                "phi_deg": 73.50394708936278
             },
             "orientation_in_bot": [
-                -0.001529798657629102,
-                0.025185429934239244,
-                -0.0626694018727564,
-                0.9977153401166114
+                0.004841108091417035,
+                0.021512381081681683,
+                0.2237787034244702,
+                0.9743905136167464
             ],
             "position_in_world": [
-                0.8155449628829956,
-                1.5459364652633667,
-                0.9161732792854309
+                0.6945550927577002,
+                1.519298889639466,
+                0.8902008019563301
             ],
             "bot_in_world": [
                 -1.5960588455200195,
@@ -1223,6 +1181,48 @@
             ],
             "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance4_detect_surroundings.png"
         },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.038212619697119,
+                "theta_deg": 75.89684325865481,
+                "phi_deg": 76.41796821433303
+            },
+            "orientation_in_bot": [
+                0.004825871179709429,
+                0.021515815823459745,
+                0.22308867474917268,
+                0.9745487283022156
+            ],
+            "position_in_world": [
+                -0.34276917576789856,
+                1.5018638372421265,
+                0.5036253333091736
+            ],
+            "bot_in_world": [
+                -1.5960588455200195,
+                -0.02579319104552269,
+                0.0037854760885238647
+            ],
+            "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance4_detect_surroundings.png"
+        },
         "fridge_xyejdx_0": {
             "ability": [
                 [
@@ -1263,9 +1263,9 @@
         },
         "scene_graph": [
             [
-                "countertop_tpuwys_1",
-                "under",
-                "platter_86"
+                "platter_86",
+                "ontop",
+                "countertop_tpuwys_1"
             ],
             [
                 "lasagna_85",
@@ -1273,9 +1273,9 @@
                 "fridge_xyejdx_0"
             ],
             [
-                "platter_86",
-                "ontop",
-                "countertop_tpuwys_1"
+                "countertop_tpuwys_1",
+                "under",
+                "platter_86"
             ],
             [
                 "casserole_87",
@@ -1286,7 +1286,7 @@
         "inventory": []
     },
     "5_detect_surroundings": {
-        "countertop_tpuwys_1": {
+        "platter_86": {
             "ability": [
                 [
                     "heatable",
@@ -1298,20 +1298,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 2.9017156314069474,
-                "theta_deg": 59.19929339756816,
-                "phi_deg": 73.50394708936278
+                "rho": 3.019704974738046,
+                "theta_deg": 58.307392359906906,
+                "phi_deg": 73.7384591526632
             },
             "orientation_in_bot": [
-                0.004841108091417035,
-                0.021512381081681683,
-                0.2237787034244702,
-                0.9743905136167464
+                -0.001529798657629102,
+                0.025185429934239244,
+                -0.0626694018727564,
+                0.9977153401166114
             ],
             "position_in_world": [
-                0.6945550927577002,
-                1.519298889639466,
-                0.8902008019563301
+                0.8155449628829956,
+                1.5459364652633667,
+                0.9161732792854309
             ],
             "bot_in_world": [
                 -1.5960588455200195,
@@ -1362,49 +1362,7 @@
             ],
             "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance5_detect_surroundings.png"
         },
-        "oven_wuinhm_0": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 2.038212619697119,
-                "theta_deg": 75.89684325865481,
-                "phi_deg": 76.41796821433303
-            },
-            "orientation_in_bot": [
-                0.004825871179709429,
-                0.021515815823459745,
-                0.22308867474917268,
-                0.9745487283022156
-            ],
-            "position_in_world": [
-                -0.34276917576789856,
-                1.5018638372421265,
-                0.5036253333091736
-            ],
-            "bot_in_world": [
-                -1.5960588455200195,
-                -0.02579319104552269,
-                0.0037854760885238647
-            ],
-            "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance5_detect_surroundings.png"
-        },
-        "platter_86": {
+        "countertop_tpuwys_1": {
             "ability": [
                 [
                     "heatable",
@@ -1416,20 +1374,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 3.019704974738046,
-                "theta_deg": 58.307392359906906,
-                "phi_deg": 73.7384591526632
+                "rho": 2.9017156314069474,
+                "theta_deg": 59.19929339756816,
+                "phi_deg": 73.50394708936278
             },
             "orientation_in_bot": [
-                -0.001529798657629102,
-                0.025185429934239244,
-                -0.0626694018727564,
-                0.9977153401166114
+                0.004841108091417035,
+                0.021512381081681683,
+                0.2237787034244702,
+                0.9743905136167464
             ],
             "position_in_world": [
-                0.8155449628829956,
-                1.5459364652633667,
-                0.9161732792854309
+                0.6945550927577002,
+                1.519298889639466,
+                0.8902008019563301
             ],
             "bot_in_world": [
                 -1.5960588455200195,
@@ -1480,6 +1438,48 @@
             ],
             "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance5_detect_surroundings.png"
         },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.038212619697119,
+                "theta_deg": 75.89684325865481,
+                "phi_deg": 76.41796821433303
+            },
+            "orientation_in_bot": [
+                0.004825871179709429,
+                0.021515815823459745,
+                0.22308867474917268,
+                0.9745487283022156
+            ],
+            "position_in_world": [
+                -0.34276917576789856,
+                1.5018638372421265,
+                0.5036253333091736
+            ],
+            "bot_in_world": [
+                -1.5960588455200195,
+                -0.02579319104552269,
+                0.0037854760885238647
+            ],
+            "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance5_detect_surroundings.png"
+        },
         "fridge_xyejdx_0": {
             "ability": [
                 [
@@ -1520,9 +1520,9 @@
         },
         "scene_graph": [
             [
-                "countertop_tpuwys_1",
-                "under",
-                "platter_86"
+                "platter_86",
+                "ontop",
+                "countertop_tpuwys_1"
             ],
             [
                 "lasagna_85",
@@ -1530,9 +1530,9 @@
                 "fridge_xyejdx_0"
             ],
             [
-                "platter_86",
-                "ontop",
-                "countertop_tpuwys_1"
+                "countertop_tpuwys_1",
+                "under",
+                "platter_86"
             ],
             [
                 "casserole_87",
@@ -1543,7 +1543,7 @@
         "inventory": []
     },
     "6_detect_surroundings": {
-        "countertop_tpuwys_1": {
+        "platter_86": {
             "ability": [
                 [
                     "heatable",
@@ -1555,20 +1555,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 2.9017156314069474,
-                "theta_deg": 59.19929339756816,
-                "phi_deg": 73.50394708936278
+                "rho": 3.019704974738046,
+                "theta_deg": 58.307392359906906,
+                "phi_deg": 73.7384591526632
             },
             "orientation_in_bot": [
-                0.004841108091417035,
-                0.021512381081681683,
-                0.2237787034244702,
-                0.9743905136167464
+                -0.001529798657629102,
+                0.025185429934239244,
+                -0.0626694018727564,
+                0.9977153401166114
             ],
             "position_in_world": [
-                0.6945550927577002,
-                1.519298889639466,
-                0.8902008019563301
+                0.8155449628829956,
+                1.5459364652633667,
+                0.9161732792854309
             ],
             "bot_in_world": [
                 -1.5960588455200195,
@@ -1619,49 +1619,7 @@
             ],
             "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance6_detect_surroundings.png"
         },
-        "oven_wuinhm_0": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 2.038212619697119,
-                "theta_deg": 75.89684325865481,
-                "phi_deg": 76.41796821433303
-            },
-            "orientation_in_bot": [
-                0.004825871179709429,
-                0.021515815823459745,
-                0.22308867474917268,
-                0.9745487283022156
-            ],
-            "position_in_world": [
-                -0.34276917576789856,
-                1.5018638372421265,
-                0.5036253333091736
-            ],
-            "bot_in_world": [
-                -1.5960588455200195,
-                -0.02579319104552269,
-                0.0037854760885238647
-            ],
-            "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance6_detect_surroundings.png"
-        },
-        "platter_86": {
+        "countertop_tpuwys_1": {
             "ability": [
                 [
                     "heatable",
@@ -1673,20 +1631,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 3.019704974738046,
-                "theta_deg": 58.307392359906906,
-                "phi_deg": 73.7384591526632
+                "rho": 2.9017156314069474,
+                "theta_deg": 59.19929339756816,
+                "phi_deg": 73.50394708936278
             },
             "orientation_in_bot": [
-                -0.001529798657629102,
-                0.025185429934239244,
-                -0.0626694018727564,
-                0.9977153401166114
+                0.004841108091417035,
+                0.021512381081681683,
+                0.2237787034244702,
+                0.9743905136167464
             ],
             "position_in_world": [
-                0.8155449628829956,
-                1.5459364652633667,
-                0.9161732792854309
+                0.6945550927577002,
+                1.519298889639466,
+                0.8902008019563301
             ],
             "bot_in_world": [
                 -1.5960588455200195,
@@ -1737,6 +1695,48 @@
             ],
             "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance6_detect_surroundings.png"
         },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.038212619697119,
+                "theta_deg": 75.89684325865481,
+                "phi_deg": 76.41796821433303
+            },
+            "orientation_in_bot": [
+                0.004825871179709429,
+                0.021515815823459745,
+                0.22308867474917268,
+                0.9745487283022156
+            ],
+            "position_in_world": [
+                -0.34276917576789856,
+                1.5018638372421265,
+                0.5036253333091736
+            ],
+            "bot_in_world": [
+                -1.5960588455200195,
+                -0.02579319104552269,
+                0.0037854760885238647
+            ],
+            "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance6_detect_surroundings.png"
+        },
         "fridge_xyejdx_0": {
             "ability": [
                 [
@@ -1777,9 +1777,9 @@
         },
         "scene_graph": [
             [
-                "countertop_tpuwys_1",
-                "under",
-                "platter_86"
+                "platter_86",
+                "ontop",
+                "countertop_tpuwys_1"
             ],
             [
                 "lasagna_85",
@@ -1787,9 +1787,9 @@
                 "fridge_xyejdx_0"
             ],
             [
-                "platter_86",
-                "ontop",
-                "countertop_tpuwys_1"
+                "countertop_tpuwys_1",
+                "under",
+                "platter_86"
             ],
             [
                 "casserole_87",
@@ -1800,7 +1800,7 @@
         "inventory": []
     },
     "7_detect_surroundings": {
-        "countertop_tpuwys_1": {
+        "platter_86": {
             "ability": [
                 [
                     "heatable",
@@ -1812,20 +1812,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 2.9017156314069474,
-                "theta_deg": 59.19929339756816,
-                "phi_deg": 73.50394708936278
+                "rho": 3.019704974738046,
+                "theta_deg": 58.307392359906906,
+                "phi_deg": 73.7384591526632
             },
             "orientation_in_bot": [
-                0.004841108091417035,
-                0.021512381081681683,
-                0.2237787034244702,
-                0.9743905136167464
+                -0.001529798657629102,
+                0.025185429934239244,
+                -0.0626694018727564,
+                0.9977153401166114
             ],
             "position_in_world": [
-                0.6945550927577002,
-                1.519298889639466,
-                0.8902008019563301
+                0.8155449628829956,
+                1.5459364652633667,
+                0.9161732792854309
             ],
             "bot_in_world": [
                 -1.5960588455200195,
@@ -1876,49 +1876,7 @@
             ],
             "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance7_detect_surroundings.png"
         },
-        "oven_wuinhm_0": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 2.038212619697119,
-                "theta_deg": 75.89684325865481,
-                "phi_deg": 76.41796821433303
-            },
-            "orientation_in_bot": [
-                0.004825871179709429,
-                0.021515815823459745,
-                0.22308867474917268,
-                0.9745487283022156
-            ],
-            "position_in_world": [
-                -0.34276917576789856,
-                1.5018638372421265,
-                0.5036253333091736
-            ],
-            "bot_in_world": [
-                -1.5960588455200195,
-                -0.02579319104552269,
-                0.0037854760885238647
-            ],
-            "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance7_detect_surroundings.png"
-        },
-        "platter_86": {
+        "countertop_tpuwys_1": {
             "ability": [
                 [
                     "heatable",
@@ -1930,20 +1888,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 3.019704974738046,
-                "theta_deg": 58.307392359906906,
-                "phi_deg": 73.7384591526632
+                "rho": 2.9017156314069474,
+                "theta_deg": 59.19929339756816,
+                "phi_deg": 73.50394708936278
             },
             "orientation_in_bot": [
-                -0.001529798657629102,
-                0.025185429934239244,
-                -0.0626694018727564,
-                0.9977153401166114
+                0.004841108091417035,
+                0.021512381081681683,
+                0.2237787034244702,
+                0.9743905136167464
             ],
             "position_in_world": [
-                0.8155449628829956,
-                1.5459364652633667,
-                0.9161732792854309
+                0.6945550927577002,
+                1.519298889639466,
+                0.8902008019563301
             ],
             "bot_in_world": [
                 -1.5960588455200195,
@@ -1994,6 +1952,48 @@
             ],
             "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance7_detect_surroundings.png"
         },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.038212619697119,
+                "theta_deg": 75.89684325865481,
+                "phi_deg": 76.41796821433303
+            },
+            "orientation_in_bot": [
+                0.004825871179709429,
+                0.021515815823459745,
+                0.22308867474917268,
+                0.9745487283022156
+            ],
+            "position_in_world": [
+                -0.34276917576789856,
+                1.5018638372421265,
+                0.5036253333091736
+            ],
+            "bot_in_world": [
+                -1.5960588455200195,
+                -0.02579319104552269,
+                0.0037854760885238647
+            ],
+            "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance7_detect_surroundings.png"
+        },
         "fridge_xyejdx_0": {
             "ability": [
                 [
@@ -2034,9 +2034,9 @@
         },
         "scene_graph": [
             [
-                "countertop_tpuwys_1",
-                "under",
-                "platter_86"
+                "platter_86",
+                "ontop",
+                "countertop_tpuwys_1"
             ],
             [
                 "lasagna_85",
@@ -2044,9 +2044,9 @@
                 "fridge_xyejdx_0"
             ],
             [
-                "platter_86",
-                "ontop",
-                "countertop_tpuwys_1"
+                "countertop_tpuwys_1",
+                "under",
+                "platter_86"
             ],
             [
                 "casserole_87",
@@ -2057,7 +2057,7 @@
         "inventory": []
     },
     "8_BEV_surroundings": {
-        "countertop_tpuwys_1": {
+        "platter_86": {
             "ability": [
                 [
                     "heatable",
@@ -2069,20 +2069,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 2.9017146881439446,
-                "theta_deg": 59.198971997212105,
-                "phi_deg": 73.5037201592748
+                "rho": 3.01970403867871,
+                "theta_deg": 58.307068911334646,
+                "phi_deg": 73.73822958916054
             },
             "orientation_in_bot": [
-                0.004841354649574758,
-                0.021509791170532342,
-                0.22377554324232973,
-                0.97439129533035
+                -0.0015288150778906453,
+                0.025183017590605053,
+                -0.06267265622662263,
+                0.9977151980956231
             ],
             "position_in_world": [
-                0.6945550927577002,
-                1.519298889639466,
-                0.8902008019563301
+                0.8155449628829956,
+                1.5459364652633667,
+                0.9161732792854309
             ],
             "bot_in_world": [
                 -1.5960580110549927,
@@ -2133,49 +2133,7 @@
             ],
             "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance8_BEV_surroundings.png"
         },
-        "oven_wuinhm_0": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 2.038211598670254,
-                "theta_deg": 75.89653208171276,
-                "phi_deg": 76.41780536868275
-            },
-            "orientation_in_bot": [
-                0.004826119571895845,
-                0.021513226087610013,
-                0.22308551400219517,
-                0.9745495077806758
-            ],
-            "position_in_world": [
-                -0.34276917576789856,
-                1.5018638372421265,
-                0.5036253333091736
-            ],
-            "bot_in_world": [
-                -1.5960580110549927,
-                -0.025792373344302177,
-                0.003785371780395508
-            ],
-            "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance8_BEV_surroundings.png"
-        },
-        "platter_86": {
+        "countertop_tpuwys_1": {
             "ability": [
                 [
                     "heatable",
@@ -2187,20 +2145,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 3.01970403867871,
-                "theta_deg": 58.307068911334646,
-                "phi_deg": 73.73822958916054
+                "rho": 2.9017146881439446,
+                "theta_deg": 59.198971997212105,
+                "phi_deg": 73.5037201592748
             },
             "orientation_in_bot": [
-                -0.0015288150778906453,
-                0.025183017590605053,
-                -0.06267265622662263,
-                0.9977151980956231
+                0.004841354649574758,
+                0.021509791170532342,
+                0.22377554324232973,
+                0.97439129533035
             ],
             "position_in_world": [
-                0.8155449628829956,
-                1.5459364652633667,
-                0.9161732792854309
+                0.6945550927577002,
+                1.519298889639466,
+                0.8902008019563301
             ],
             "bot_in_world": [
                 -1.5960580110549927,
@@ -2251,6 +2209,48 @@
             ],
             "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance8_BEV_surroundings.png"
         },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.038211598670254,
+                "theta_deg": 75.89653208171276,
+                "phi_deg": 76.41780536868275
+            },
+            "orientation_in_bot": [
+                0.004826119571895845,
+                0.021513226087610013,
+                0.22308551400219517,
+                0.9745495077806758
+            ],
+            "position_in_world": [
+                -0.34276917576789856,
+                1.5018638372421265,
+                0.5036253333091736
+            ],
+            "bot_in_world": [
+                -1.5960580110549927,
+                -0.025792373344302177,
+                0.003785371780395508
+            ],
+            "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
         "fridge_xyejdx_0": {
             "ability": [
                 [
@@ -2291,9 +2291,9 @@
         },
         "scene_graph": [
             [
-                "countertop_tpuwys_1",
-                "under",
-                "platter_86"
+                "platter_86",
+                "ontop",
+                "countertop_tpuwys_1"
             ],
             [
                 "lasagna_85",
@@ -2301,9 +2301,9 @@
                 "fridge_xyejdx_0"
             ],
             [
-                "platter_86",
-                "ontop",
-                "countertop_tpuwys_1"
+                "countertop_tpuwys_1",
+                "under",
+                "platter_86"
             ],
             [
                 "casserole_87",
@@ -2314,7 +2314,7 @@
         "inventory": []
     },
     "9_BEV_surroundings": {
-        "countertop_tpuwys_1": {
+        "platter_86": {
             "ability": [
                 [
                     "heatable",
@@ -2326,20 +2326,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 2.9017146881439446,
-                "theta_deg": 59.198971997212105,
-                "phi_deg": 73.5037201592748
+                "rho": 3.01970403867871,
+                "theta_deg": 58.307068911334646,
+                "phi_deg": 73.73822958916054
             },
             "orientation_in_bot": [
-                0.004841354649574758,
-                0.021509791170532342,
-                0.22377554324232973,
-                0.97439129533035
+                -0.0015288150778906453,
+                0.025183017590605053,
+                -0.06267265622662263,
+                0.9977151980956231
             ],
             "position_in_world": [
-                0.6945550927577002,
-                1.519298889639466,
-                0.8902008019563301
+                0.8155449628829956,
+                1.5459364652633667,
+                0.9161732792854309
             ],
             "bot_in_world": [
                 -1.5960580110549927,
@@ -2390,49 +2390,7 @@
             ],
             "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance9_BEV_surroundings.png"
         },
-        "oven_wuinhm_0": {
-            "ability": [
-                [
-                    "openable",
-                    0
-                ],
-                [
-                    "togglable",
-                    0
-                ],
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 2.038211598670254,
-                "theta_deg": 75.89653208171276,
-                "phi_deg": 76.41780536868275
-            },
-            "orientation_in_bot": [
-                0.004826119571895845,
-                0.021513226087610013,
-                0.22308551400219517,
-                0.9745495077806758
-            ],
-            "position_in_world": [
-                -0.34276917576789856,
-                1.5018638372421265,
-                0.5036253333091736
-            ],
-            "bot_in_world": [
-                -1.5960580110549927,
-                -0.025792373344302177,
-                0.003785371780395508
-            ],
-            "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance9_BEV_surroundings.png"
-        },
-        "platter_86": {
+        "countertop_tpuwys_1": {
             "ability": [
                 [
                     "heatable",
@@ -2444,20 +2402,20 @@
                 ]
             ],
             "position_in_bot": {
-                "rho": 3.01970403867871,
-                "theta_deg": 58.307068911334646,
-                "phi_deg": 73.73822958916054
+                "rho": 2.9017146881439446,
+                "theta_deg": 59.198971997212105,
+                "phi_deg": 73.5037201592748
             },
             "orientation_in_bot": [
-                -0.0015288150778906453,
-                0.025183017590605053,
-                -0.06267265622662263,
-                0.9977151980956231
+                0.004841354649574758,
+                0.021509791170532342,
+                0.22377554324232973,
+                0.97439129533035
             ],
             "position_in_world": [
-                0.8155449628829956,
-                1.5459364652633667,
-                0.9161732792854309
+                0.6945550927577002,
+                1.519298889639466,
+                0.8902008019563301
             ],
             "bot_in_world": [
                 -1.5960580110549927,
@@ -2508,6 +2466,48 @@
             ],
             "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance9_BEV_surroundings.png"
         },
+        "oven_wuinhm_0": {
+            "ability": [
+                [
+                    "togglable",
+                    0
+                ],
+                [
+                    "openable",
+                    0
+                ],
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 2.038211598670254,
+                "theta_deg": 75.89653208171276,
+                "phi_deg": 76.41780536868275
+            },
+            "orientation_in_bot": [
+                0.004826119571895845,
+                0.021513226087610013,
+                0.22308551400219517,
+                0.9745495077806758
+            ],
+            "position_in_world": [
+                -0.34276917576789856,
+                1.5018638372421265,
+                0.5036253333091736
+            ],
+            "bot_in_world": [
+                -1.5960580110549927,
+                -0.025792373344302177,
+                0.003785371780395508
+            ],
+            "path": "./prompt_files/data/thaw_and_heat_lasagna/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
         "fridge_xyejdx_0": {
             "ability": [
                 [
@@ -2548,9 +2548,9 @@
         },
         "scene_graph": [
             [
-                "countertop_tpuwys_1",
-                "under",
-                "platter_86"
+                "platter_86",
+                "ontop",
+                "countertop_tpuwys_1"
             ],
             [
                 "lasagna_85",
@@ -2558,9 +2558,9 @@
                 "fridge_xyejdx_0"
             ],
             [
-                "platter_86",
-                "ontop",
-                "countertop_tpuwys_1"
+                "countertop_tpuwys_1",
+                "under",
+                "platter_86"
             ],
             [
                 "casserole_87",

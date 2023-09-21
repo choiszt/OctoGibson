@@ -6,6 +6,6 @@ from action_list import *
 from action_utils import *
 def act(robot,env,camera):
     # Subtask 1: Open the fridge
-    fridge_xyejdx_0 = registry(env,"fridge_xyejdx_0")
-    open(robot, fridge_xyejdx_0)
+    fridge = registry(env,"fridge_xyejdx_0")
+    open(robot, fridge)
     donothing(env)

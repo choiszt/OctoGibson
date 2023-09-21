@@ -6,6 +6,6 @@ from action_list import *
 from action_utils import *
 def act(robot,env,camera):
     # Subtask 2: Take the kale out of the fridge
-    kale = registry(env, "kale_85")
+    kale = registry(env,"kale_85")
     EasyGrasp(robot, kale)
     donothing(env)

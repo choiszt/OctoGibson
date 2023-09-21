@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Take out the bacon from the fridge.\n(2) Put the bacon on the griddle.\n(3) Turn on the stove to cook the bacon.",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Turn on the stove to cook the bacon.\n    stove = registry(env, \"stove_rgpphy_0\")\n    toggle_on(robot, stove)\n    donothing(env)\n",
+    "error": "State heatable of object bacon_150 is not 1\nState cookable of object bacon_150 is not 1\n",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

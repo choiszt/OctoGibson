@@ -8,4 +8,3 @@ def act(robot,env,camera):
     # Subtask 1: Move the robot to the oven
     oven_wuinhm_0 = registry(env,"oven_wuinhm_0")
     MoveBot(env, robot, oven_wuinhm_0, camera)
-    donothing(env)

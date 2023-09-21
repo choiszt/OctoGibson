@@ -1,8 +1,8 @@
 {
-    "subtask": "\n(1) Open the bottom cabinet.\n(2) Grasp a bread slice from the bottom cabinet.\n(3) Put the bread slice in the toaster.\n(4) Turn on the toaster.",
-    "code": "def act(robot,env,camera):\n    # Subtask 4: Turn on the toaster\n    toaster = registry(env, \"toaster_85\")\n    toggle_on(robot, toaster)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
+    "subtask": "\n(1) Open the bottom cabinet.\n(2) Grasp a bread slice.\n(3) Put the bread slice into the toaster.\n(4) Toggle on the toaster to cook the bread slice.",
+    "code": "def act(robot,env,camera):\n    # Subtask 4: Toggle on the toaster to cook the bread slice\n    toaster = registry(env, \"toaster_85\")\n    toggle_on(robot, toaster)\n    donothing(env)\n",
+    "error": "State cookable of object bread_slice_86 is not 1\n",
+    "critic": "fail",
+    "reset": true,
     "main_succeed": false
 }

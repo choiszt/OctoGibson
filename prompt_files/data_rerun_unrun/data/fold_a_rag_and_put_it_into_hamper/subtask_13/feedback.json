@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register the rag and the hamper.\n(2) Grasp the rag.\n(3) Unfold the rag.\n(4) Fold the rag.\n(5) Move to the hamper.\n(6) Put the folded rag into the hamper.",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Unfold the rag\n    rag_194 = registry(env,\"rag_194\")\n    unfold(robot, rag_194)\n    donothing(env)\n",
+    "error": "State unfoldable of object rag_194 is not 0\nState foldable of object rag_194 is not 1\n",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

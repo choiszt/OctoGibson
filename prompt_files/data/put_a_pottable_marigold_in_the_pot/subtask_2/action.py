@@ -6,6 +6,6 @@ from action_list import *
 from action_utils import *
 def act(robot,env,camera):
     # Subtask 2: Grasp the pottable marigold
-    pottable_marigold_275 = registry(env,"pottable_marigold_275")
-    EasyGrasp(robot, pottable_marigold_275)
+    pottable_marigold = registry(env, "pottable_marigold_275")
+    EasyGrasp(robot, pottable_marigold)
     donothing(env)

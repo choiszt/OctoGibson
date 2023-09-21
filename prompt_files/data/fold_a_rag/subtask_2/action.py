@@ -5,7 +5,7 @@ import omnigibson as og
 from action_list import * 
 from action_utils import *
 def act(robot,env,camera):
-    # Subtask 1: Toggle on the clothes dryer.
-    clothes_dryer = registry(env, "clothes_dryer_zlmnfg_0")
-    toggle_on(robot, clothes_dryer)
+    # Subtask 2: Take the rag out of the clothes dryer
+    rag_194 = registry(env,"rag_194")
+    EasyGrasp(robot, rag_194)
     donothing(env)

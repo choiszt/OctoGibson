@@ -7,6 +7,8 @@ from action_utils import *
 def act(robot,env,camera):
     # Subtask 3: Explore the environment to find the vehicle
     # Since the vehicle is not observed in the environment, we need to explore the environment to find it.
-    # Here we assume that the function explore_environment can help the robot to explore the environment and find the vehicle.
-    explore_environment(robot, env, camera)
+    # Here we assume that the vehicle is a large object placed directly on the ground, so we can move the robot to it.
+    # We also assume that the vehicle is named "vehicle_1" in the environment.
+    vehicle_1 = registry(env,"vehicle_1")
+    MoveBot(env, robot, vehicle_1, camera)
     donothing(env)

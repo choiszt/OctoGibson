@@ -1,7 +1,7 @@
 {
-    "subtask": "\n(1) Open the fridge\n(2) Take out the garlic clove\n(3) Cook the garlic clove\n(4) Take out the butter\n(5) Place the cooked garlic clove and butter on the plate",
-    "code": "def act(robot,env,camera):\n    # Subtask 3: Cook the garlic clove\n    stove = registry(env,\"stove_igwqpj_0\")\n    MoveBot(env, robot, stove, camera)\n    donothing(env)\n    cook(robot, garlic_clove)\n    donothing(env)\n",
-    "error": "name 'garlic_clove' is not defined",
+    "subtask": "\n(1) Open the fridge\n(2) Take out the garlic clove\n(3) Cook the garlic clove\n(4) Take out the butter\n(5) Put the cooked garlic clove and butter on the plate",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Cook the garlic clove\n    stove = registry(env,\"stove_igwqpj_0\")\n    MoveBot(env, robot, stove, camera)\n    donothing(env)\n    cook(robot, garlic_clove_209)\n    donothing(env)\n",
+    "error": "name 'garlic_clove_209' is not defined",
     "critic": "fail",
     "reset": true,
     "main_succeed": false

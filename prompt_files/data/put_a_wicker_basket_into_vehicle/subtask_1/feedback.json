@@ -1,8 +1,8 @@
 {
-    "subtask": "\n(1) Move the robot to the wicker basket.\n(2) Grasp the wicker basket.\n(3) Find the vehicle.\n(4) Move the robot to the vehicle.\n(5) Put the wicker basket into the vehicle.",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Move the robot to the wicker basket\n    wicker_basket_276 = registry(env,\"wicker_basket_276\")\n    MoveBot(env, robot, wicker_basket_276, camera)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
+    "subtask": "\n(1) Move the robot to find the vehicle.",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Move the robot to find the vehicle.\n    vehicle = registry(env, \"vehicle\")\n    MoveBot(env, robot, vehicle, camera)\n    donothing(env)\n",
+    "error": "something went wrong! Please plan again",
+    "critic": "fail",
+    "reset": true,
     "main_succeed": false
 }

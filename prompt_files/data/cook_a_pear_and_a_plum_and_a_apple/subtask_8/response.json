@@ -1,0 +1,23 @@
+{
+    "response": {
+        "explain": " The previous action was successful and the apple is now inside the bowl. The next step is to cook the bowl with the apple inside.",
+        "subtask": "\n(1) Grasp the pear.\n(2) Cook the pear.\n(3) Grasp the apple.\n(4) Put the pear on the countertop.\n(5) Find and grasp a bowl.\n(6) Put the apple in the bowl.\n(7) Cook the bowl with the apple inside.",
+        "code": "def act(robot,env,camera):\n    # Subtask 7: Cook the bowl with the apple inside\n    bowl_88 = registry(env,\"bowl_88\")\n    cook(robot, bowl_88)\n    donothing(env)\n",
+        "inventory": "None",
+        "obj_2": [
+            [
+                "bowl_88",
+                "cookable",
+                "1"
+            ]
+        ],
+        "obj_3": [
+            [
+                "apple_87",
+                "inside",
+                "bowl_88",
+                "1"
+            ]
+        ]
+    }
+}

@@ -9,5 +9,5 @@ def act(robot,env,camera):
     stove = registry(env,"stove_igwqpj_0")
     MoveBot(env, robot, stove, camera)
     donothing(env)
-    cook(robot, garlic_clove)
+    cook(robot, garlic_clove_209)
     donothing(env)

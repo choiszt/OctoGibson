@@ -5,8 +5,7 @@ import omnigibson as og
 from action_list import * 
 from action_utils import *
 def act(robot,env,camera):
-    # Subtask 3: Put the daffodil bulb in the mixing bowl
+    # Subtask 5: Grasp the bowl
     mixing_bowl_173 = registry(env,"mixing_bowl_173")
-    daffodil_bulb_170 = registry(env,"daffodil_bulb_170")
-    put_ontop(robot, daffodil_bulb_170, mixing_bowl_173)
+    EasyGrasp(robot, mixing_bowl_173)
     donothing(env)
