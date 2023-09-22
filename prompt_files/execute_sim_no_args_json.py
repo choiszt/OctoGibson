@@ -135,7 +135,7 @@ def sim_process(args):
                         import action
                         time.sleep(1)
                         try:
-                            reload(action) #add a key to record 
+                            reload(action) #add a key to record the code whether is correct 
                             time.sleep(2)
                             action.act(robot,env,camera)
                             og.log.info("act...")

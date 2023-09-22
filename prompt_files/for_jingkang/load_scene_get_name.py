@@ -4,19 +4,15 @@ import yaml
 
 import omnigibson as og
 from omnigibson.macros import gm
-from omnigibson.utils.ui_utils import choose_from_options
 
-
+gm.USE_GPU_DYNAMICS = True
+# gm.ENABLE_FLATCACHE = True
+gm.ENABLE_OBJECT_STATES = True
+# gm.ENABLE_TRANSITION_RULES = False
 # import prompt_files.action as action
 from importlib import reload
-import importlib
-import env_utils_sim as eu 
-from initial_pipeline import *
 import time
-from bddl_verification import *
-import sys;sys.path.append("/shared/liushuai/OmniGibson")
 import bddl
-from verify_taskgoal import *
 import argparse
 
 def parse_args():
@@ -44,7 +40,7 @@ def sim_process(args):
     with open('/shared/liushuai/OmniGibson/EVLM_Task/all.json') as f: #TODO change the path
         data = json.load(f)
     EVLM_name=sorted(list(data))[idx]
-    if "val" in data[EVLM_name]['split']:
+    if "train" in data[EVLM_name]['split']:
         task_name=data[EVLM_name]['task_name']
         gpt_name=data[EVLM_name]['detailed_name']
         # scene=data[EVLM_name]['env']
