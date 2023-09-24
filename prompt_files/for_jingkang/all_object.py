@@ -56,8 +56,12 @@ with open("/shared/liushuai/OmniGibson/prompt_files/for_jingkang/wiped_object.js
 
 
 for ele in sim_object.keys():
-    templist=[]
-    for obj in sim_object[ele]:
-        if obj in all_object[ele]:
-            templist.append(obj)
-    filtered_dict.update({ele:templist})
+    try:
+        for obj in sim_object[ele]:
+            if obj not in wiped_dict[ele]:
+                wiped_dict[ele].append(obj)
+    except:
+        pass
+
+with open("/shared/liushuai/OmniGibson/prompt_files/for_jingkang/wiped+scene.json","w")as f:
+    f.write(json.dumps(wiped_dict))

@@ -149,6 +149,8 @@ class Camera():
         self.OG_results=self._decomposed()
         self.blacklist=["walls","electric_switch","floors","ceilings","window"]
         self.task=TASK
+        self.PSG_relation={}
+
     
 
     def _getallobject(self):
@@ -217,6 +219,7 @@ class Camera():
                     self.instancemap.append({f"{self.FILENAME}/"+query_name + f'{iter}.png':obs_dict[query_name][0]})
                     segimg = segmentation_to_rgb(obs_dict[query_name][0], N=256)
                     instancemap = obs_dict[query_name][1]
+                    
                     for item in instancemap:
                         # bbox_3ds=obs_dict['bbox_3d']
                         bbox_2ds=obs_dict["bbox_2d_loose"] #
@@ -239,7 +242,8 @@ class Camera():
                     # Depth, nothing to do here
                     pass
                 if modality == "seg_instance":
-                    rgbimg = cv2.cvtColor(segimg, cv2.COLOR_BGR2RGB)
+                    # rgbimg = cv2.cvtColor(segimg, cv2.COLOR_BGR2RGB)
+                    rgbimg=obs_dict[query_name][0].astype('uint8')
                 elif modality == "rgb":
                     rgbimg = cv2.cvtColor(obs_dict[query_name], cv2.COLOR_BGR2RGB)
                 else:
@@ -249,7 +253,7 @@ class Camera():
                     if modality== "rgb":
                         cv2.imwrite(query_name + str(file_name) + '.png', rgbimg)
                 else:
-                    if modality== "rgb":
+                    if modality== "rgb" or modality=="seg_instance":
                         path=os.path.dirname(f"{self.FILENAME}/"+query_name + f'{iter}.png')
                         if not os.path.exists(path):
                             os.makedirs(path)
@@ -279,6 +283,54 @@ class Camera():
         print("now begin to parse segmentation data")
         return self.nowwehave
     
+    def parse_all_SG(self,objects):
+        pairs=[]
+        SG=[]
+        for i in range(len(objects)):
+            for j in range(len(objects)):
+                cnt=0
+                if(objects[i]!=objects[j]):
+                    pairs.append((objects[i],objects[j]))
+                    
+        for pair in pairs:
+            obj0=self.env.scene.object_registry("name",pair[0])
+            obj1=self.env.scene.object_registry("name",pair[1])
+            try:
+                is_inside=obj0.states[object_states.Inside].get_value(obj1)
+                if is_inside:
+                    SG.append((obj0._name,"inside",obj1._name))
+            except:
+                pass
+            try:
+                is_nextto=obj0.states[object_states.NextTo].get_value(obj1)
+                if is_nextto:
+                    SG.append((obj0._name,"nextto",obj1._name))                
+            except:
+                pass            
+            try:
+                is_ontop=obj0.states[object_states.OnTop].get_value(obj1)
+                if is_ontop:
+                    SG.append((obj0._name,"ontop",obj1._name))                   
+            except:
+                pass        
+            try:
+                is_overlaid=obj0.states[object_states.Overlaid].get_value(obj1)
+                if is_overlaid:
+                    SG.append((obj0._name,"overlaid",obj1._name))                   
+            except:
+                pass        
+            try:
+                is_under=obj0.states[object_states.Under].get_value(obj1)
+                if is_under:
+                    SG.append((obj0._name,"under",obj1._name))                   
+            except:
+                pass
+        temp_SG=SG.copy()
+        for (obj1,prep,obj2) in SG:
+            if (obj2,prep,obj1) in temp_SG:
+                temp_SG.remove((obj1,prep,obj2))
+        return {"scene_graph_for_train":SG}
+
     def parseSG(self,objects):
         pairs=[]
         SG=[]
@@ -377,6 +429,8 @@ class Camera():
         for ele in sub_nowwehave:
             picpath=list(ele.keys())[0]
             objects=list(ele.values())[0]
+            scene_graph_for_train=self.parse_all_SG(objects)
+            self.PSG_relation.update({picpath:list(scene_graph_for_train.values())[0]})
             intersect_objects=list(set(self.OG_results)-set(blacklist)) #TODO
             action=picpath.split("/")[-1][12:-4]
             scene_graph=self.parseSG(intersect_objects) #TODO
@@ -422,8 +476,11 @@ class Camera():
         return self.result_json
 
     def writejson(self):
-        with open(f"./{self.FILENAME}/task1.json","w")as f:
+        with open(f"{self.FILENAME}/task1.json","w")as f:
             f.write(json.dumps(self.result_json, indent=4))
+
+        with open(f"{self.FILENAME}/psg_relation.json","w")as f:
+            f.write(json.dumps(self.PSG_relation))
 
     def collectdata(self):
         seglists=self.seglist

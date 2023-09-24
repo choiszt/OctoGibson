@@ -9,14 +9,14 @@ import json
 #ADD "--/log/level=error --/log/fileLogLevel=error --/log/outputStreamLevel=error"
 # Configure macros for maximum performance
 gm.USE_GPU_DYNAMICS = True
-# gm.ENABLE_FLATCACHE = True
+# gm.ENABLE_FLATCACHE = False
 gm.ENABLE_OBJECT_STATES = True
 # gm.ENABLE_TRANSITION_RULES = False
 # from omni_base.prompt_files.robot_action import *
 from robot_action import *
 import yaml
 
-def init_pipeline(env, robot, camera, task_name, file_name=None, removed_items=None):
+def init_pipeline(env, robot, camera, task_name, file_name=None, removed_items=None): 
     iter=0
     cam=Camera(robot=env.robots[0],camera=camera,env=env,filename=file_name,TASK=task_name, removed_items=removed_items)
     robot=ROBOT(env.robots[0],env)
