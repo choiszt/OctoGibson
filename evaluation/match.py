@@ -5,8 +5,8 @@ import json
 
 def embed(words):
     # Initialize the BERT tokenizer and model
-    tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
-    model = BertModel.from_pretrained("bert-base-uncased")
+    tokenizer = BertTokenizer.from_pretrained("/shared/liushuai/OmniGibson/bert_model")
+    model = BertModel.from_pretrained("/shared/liushuai/OmniGibson/bert_model")
 
     # Initialize an empty list to store word embeddings
     word_embeddings = []
@@ -66,9 +66,9 @@ def change_code(code, idx):
     
 
 if __name__ == "__main__":
-    # otter_word = ["meat_abcd_150"]
-    # sim_word = ["electrical_fridge_abcd", "bacon", "fridge_abcd"]
-    # match(otter_word, sim_word)
+    otter_word = ["fridge"]
+    sim_word = ["electrical_fridge_abcd", "bacon", "fridge_abcd"]
+    match(otter_word, sim_word)
     # with open('./action.py', 'r') as f:
     #     code = f.read()
     #     change_code(code, 1)

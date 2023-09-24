@@ -4,7 +4,7 @@ import yaml
 import time
 
 # import omnigibson as og
-import sys;sys.path.append("/mnt/ve_share/test/omnigibson/prompt_files")
+import sys;sys.path.append("/shared/liushuai/OmniGibson/prompt_files")
 # from robot_action import *
 import parse_json
 import query_new as query
@@ -27,11 +27,11 @@ def parse_args():
 def gpt_process(args):
     
     idx = args.idx
-    with open('/home/cooyes/Desktop/liushuai/omnigibson/EVLM_Task/choiszt_todo.json') as f: #TODO change the path
+    with open('./EVLM_Task/all_val.json') as f: #TODO change the path
         data = json.load(f)
     EVLM_name=sorted(list(data))[idx]
     print(data[EVLM_name]['split'])
-    if "train" in data[EVLM_name]['split']:
+    if "val" in data[EVLM_name]['split'] or "" in data[EVLM_name]['split']:
         task_name=data[EVLM_name]['task_name']
         gpt_name=data[EVLM_name]['detailed_name']
         scene=data[EVLM_name]['env']
@@ -41,7 +41,7 @@ def gpt_process(args):
         print(f"detailed_name:{gpt_name}")
         task_data = data[EVLM_name]
         gpt_task_name = task_data['detailed_name']
-        save_path = eu.f_mkdir(os.path.join('./data', gpt_task_name))
+        save_path = eu.f_mkdir(os.path.join('./evaluation/data', gpt_task_name))
         # main task loop
         
         main_task_flag = False
@@ -57,7 +57,7 @@ def gpt_process(args):
             
             # init pipeline for each subtask
             while True:
-                with open("/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/finished_task.json","r")as f:
+                with open("./evaluation/finished_task.json","r")as f:
                     data = json.load(f)
                     if gpt_task_name in data.keys():
                         return 0
@@ -70,7 +70,7 @@ def gpt_process(args):
                     break
             human_info = parse_json.parse_json(path=os.path.join(sub_save_path, "task1.json"))
             
-            with open("/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/finished_task.json","r")as f:
+            with open("./evaluation/finished_task.json","r")as f:
                 data = json.load(f)
                 if gpt_task_name in data.keys():
                     return 0
@@ -88,7 +88,7 @@ def gpt_process(args):
                 print("start query")
                 succuss = True
                 
-                image_list = [os.path.join(sub_save_path, f'rgb{i}_detect_surroudings.png') for i in range(4)]
+                image_list = [os.path.join(sub_save_path, f'rgb{i}_detect_surroundings.png') for i in range(4)]
                 while succuss:
                     try:
                         response=otter_request(content, image_list)
@@ -114,7 +114,7 @@ def gpt_process(args):
 
                 
                 while True:
-                    with open("/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/finished_task.json","r")as f:
+                    with open("./evaluation/finished_task.json","r")as f:
                         data = json.load(f)
                         if gpt_task_name in data.keys():
                             return 0               
@@ -127,7 +127,7 @@ def gpt_process(args):
                     if feedbackinfo.st_size > 0:
                         break
                     
-                with open("/home/cooyes/Desktop/liushuai/omnigibson/prompt_files/finished_task.json","r")as f:
+                with open("./evaluation/finished_task.json","r")as f:
                     data = json.load(f)
                     if gpt_task_name in data.keys():
                         return 0

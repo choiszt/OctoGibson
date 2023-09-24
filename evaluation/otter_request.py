@@ -8,15 +8,14 @@ def image_to_base64(image_path):
 
 def otter_request(content, image_list):
     # Define the URL and headers
-    url = "http://214.2.254.234:5002/app/otter"
+    url = "http://172.21.25.95:5432/app/otter"
     headers = {
         "Content-Type": "application/json"
     }
-
     data_payload = {
         "content": [
             {
-                "prompt": content,
+                "prompt": "Inventory: None\nTask Goal: installing_a_fax_machine\nOriginal Subtasks: None\nPrevious Action Code: No code\nExecution error: No error\nNow, please output Explain, Subtasks (revise if necessary), Code that completing the next subtask, and Target States, according to the instruction above. Remember you can only use the functions provided above and pay attention to the response format.",
                 "images": {
                     'image0': image_to_base64(image_list[0]),
                     'image1': image_to_base64(image_list[1]),
@@ -35,5 +34,7 @@ def otter_request(content, image_list):
 
 if __name__ == "__main__":
     content = ''
-    image_list = []
-    otter_request()
+    image_list=[]
+    for i in range(4):
+        image_list.append(f"/shared/liushuai/OmniGibson/prompt_files/data/cook_bacon/subtask_1/rgb{i}_detect_surroundings.png")
+    otter_request(content='1',image_list=image_list)
