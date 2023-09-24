@@ -8,7 +8,8 @@ from langchain.prompts import SystemMessagePromptTemplate
 from langchain.schema import AIMessage, HumanMessage, SystemMessage
 import env_utils_gpt as u
 import openai
-
+import json
+from match import *
 class Query:
     def __init__(
         self,
@@ -115,9 +116,9 @@ class Query:
             
         return HumanMessage(content=message)
 
-    def process_ai_message(self, message):
+    def process_ai_message(self, message,EVLM_key):
         # assert isinstance(message, AIMessage)
-
+        message=message.replace('{"result":',"").replace("}",'')
         processed_message = message
         # with open('./answer.txt', 'w') as f:
         #     f.write(processed_message)
@@ -154,34 +155,38 @@ class Query:
                 subtask_str = subtask_str.replace('\n\n', '')
             
             #CODE
-            code_str = code.split('```python\n')[1].split('```')[0]
-            
+            # code_str = code.split('```python\n')[1].split('```')[0]
+            code_str=code.replace("Code:\n","").replace("\\","").split("Inv")[0]
+            with open("/shared/liushuai/OmniGibson/prompt_files/for_jingkang/wiped+scene.json","r")as f:
+                all_obj=json.load(f)
+            SIM_obj=all_obj[EVLM_key]
+            match("hello",SIM_obj)
             #TARGET            
-            inv = target.split('Inventory:')[1]
-            inv = inv.split('\n')[0]
-            inv_str = inv.replace(' ', '')
-            obj_states_2 = []
-            obj_states_3 = []
+            # inv = target.split('Inventory:')[1]
+            # inv = inv.split('\n')[0]
+            # inv_str = inv.replace(' ', '')
+            # obj_states_2 = []
+            # obj_states_3 = []
             
-            objects = target.split('Information:')[1]
-            objects = objects.split('\n')
-            for obj in objects:
-                obj = obj.split(')')[-1]
-                obj_list = obj.split(',')
-                for i in range(len(obj_list)):
-                    obj_list[i] = obj_list[i].replace(' ', '')
-                if len(obj_list) == 3:
-                    obj_states_2.append(obj_list)
-                elif len(obj_list) == 4: 
-                    obj_states_3.append(obj_list)
+            # objects = target.split('Information:')[1]
+            # objects = objects.split('\n')
+            # for obj in objects:
+            #     obj = obj.split(')')[-1]
+            #     obj_list = obj.split(',')
+            #     for i in range(len(obj_list)):
+            #         obj_list[i] = obj_list[i].replace(' ', '')
+            #     if len(obj_list) == 3:
+            #         obj_states_2.append(obj_list)
+            #     elif len(obj_list) == 4: 
+            #         obj_states_3.append(obj_list)
                     
             return {
                 "explain": explain_str,
                 "subtask": subtask_str,
                 "code": code_str,
-                "inventory": inv_str,
-                "obj_2": obj_states_2, 
-                "obj_3": obj_states_3,
+                "inventory": None,
+                "obj_2": None, 
+                "obj_3": None,
             }
             # except Exception as e:
             #     retry -= 1

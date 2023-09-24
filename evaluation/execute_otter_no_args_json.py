@@ -112,7 +112,7 @@ def gpt_process(args):
                     response=f.read()
                 try:
                     response=response.replace("\\n","\n")
-                    answer = gpt_query.process_ai_message(response)
+                    answer = gpt_query.process_ai_message(response,EVLM_name)
                 except Exception as e:
                     answer = str(e)
                     print(answer)
