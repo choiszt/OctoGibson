@@ -92,7 +92,7 @@ def gpt_process(args):
                 image_list = [os.path.join(sub_save_path, f'rgb{i}_detect_surroundings.png') for i in range(8)]
                 for i in [os.path.join(sub_save_path, f'rgb{i}_BEV_surroundings.png') for i in range(8,10)]:
                     image_list.append(i)
-                if False:
+                if True:
                     while succuss:
                         try:
                             response=otter_request(content, image_list)
@@ -108,18 +108,19 @@ def gpt_process(args):
                                 response = {"error_message": str(e)}
                                 print(response)
                 ##just for test:
-                with open("/shared/liushuai/OmniGibson/evaluation/1.txt",'r')as f:
-                    response=f.read()
+                # with open("/shared/liushuai/OmniGibson/evaluation/1.txt",'r')as f:
+                #     response=f.read()
                 try:
                     response=response.replace("\\n","\n")
-                    answer = gpt_query.process_ai_message(response,EVLM_name)
+                    answer = gpt_query.process_ai_message(sub_save_path,response,EVLM_name)
                 except Exception as e:
                     answer = str(e)
                     print(answer)
                     
                 eu.save_response(sub_save_path, answer)
 
-                
+                while True:
+                    continue
                 while True:
                     with open("./evaluation/finished_task.json","r")as f:
                         data = json.load(f)

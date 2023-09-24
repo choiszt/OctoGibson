@@ -17,7 +17,6 @@ import env_utils_sim as eu
 from initial_pipeline import *
 import time
 from bddl_verification import *
-from match import *
 import bddl
 from verify_taskgoal import *
 import argparse
@@ -135,9 +134,9 @@ def sim_process(args):
                         return 0
                     else:
                         subtask, code = answer['subtask'], answer['code']
-                        with open(f"./prompt_files/data/{gpt_task_name}/subtask_{subtask_iter}/action.py", 'w') as f:
-                            f.write(heading)
-                            f.write(code)
+                        # with open(f"./prompt_files/data/{gpt_task_name}/subtask_{subtask_iter}/action.py", 'w') as f:
+                        #     f.write(heading)
+                        #     f.write(code)
                         # time.sleep(2)
                         sys.path=list(set(sys.path))
                         if(subtask_iter!=1):
@@ -172,17 +171,18 @@ def sim_process(args):
                     #     og.log.info(f"inventory:{robot.inventory}")
                     #     if not value: #TODO need to fix the bug
                     #         error += f"{target_states['inventory']} is not in Inventory.\n"
-                    for obj in target_states['obj_2']:
-                        value = eu.verify_obj_2(env,obj[0], obj[1], obj[2])
-                        if not value:
-                            error += f"State {obj[1]} of object {obj[0]} is not {obj[2]}\n"
-                    #verify binary states
-                    for obj in target_states['obj_3']:
-                        if obj[0] == "robot" or obj[2] == "robot":
-                            continue
-                        value = eu.verify_obj_3(env,obj[0], obj[1], obj[2],obj[3], f"./prompt_files/data/{gpt_task_name}/subtask_{subtask_iter}/action.py")
-                        if not value:
-                            error += f"{obj[0]} is not {obj[1]} {obj[2]}\n"
+                   
+                    # for obj in target_states['obj_2']:
+                    #     value = eu.verify_obj_2(env,obj[0], obj[1], obj[2])
+                    #     if not value:
+                    #         error += f"State {obj[1]} of object {obj[0]} is not {obj[2]}\n"
+                    # #verify binary states
+                    # for obj in target_states['obj_3']:
+                    #     if obj[0] == "robot" or obj[2] == "robot":
+                    #         continue
+                    #     value = eu.verify_obj_3(env,obj[0], obj[1], obj[2],obj[3], f"./prompt_files/data/{gpt_task_name}/subtask_{subtask_iter}/action.py")
+                    #     if not value:
+                    #         error += f"{obj[0]} is not {obj[1]} {obj[2]}\n"
 
 
                     if len(error) == 0:

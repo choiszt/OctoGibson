@@ -10,6 +10,7 @@ import env_utils_gpt as u
 import openai
 import json
 from match import *
+from auto_correct import auto_correct 
 class Query:
     def __init__(
         self,
@@ -116,8 +117,9 @@ class Query:
             
         return HumanMessage(content=message)
 
-    def process_ai_message(self, message,EVLM_key):
+    def process_ai_message(self,sub_save_path, message,EVLM_key):
         # assert isinstance(message, AIMessage)
+        path=sub_save_path
         message=message.replace('{"result":',"").replace("}",'')
         processed_message = message
         # with open('./answer.txt', 'w') as f:
@@ -157,10 +159,46 @@ class Query:
             #CODE
             # code_str = code.split('```python\n')[1].split('```')[0]
             code_str=code.replace("Code:\n","").replace("\\","").split("Inv")[0]
+            with open(os.path.join(path,"tempaction.py"),"w")as f:
+                f.write(code_str)
+            auto_correct(os.path.join(path,"tempaction.py"),os.path.join(path,"tempaction_correct.py"))
             with open("/shared/liushuai/OmniGibson/prompt_files/for_jingkang/wiped+scene.json","r")as f:
                 all_obj=json.load(f)
             SIM_obj=all_obj[EVLM_key]
-            match("hello",SIM_obj)
+            if 'robot0' in SIM_obj:
+                SIM_obj.remove("robot0")
+            def extract_registry_values(code):
+                # Match either "content" or 'content'
+                pattern = r'registry\(env,[\s]*["\'](.*?)["\'][\s]*\)'
+                return re.findall(pattern, code)
+
+            def replace_registry_values(code, original_values, new_values):
+                value_map = dict(zip(original_values, new_values))
+                def repl(match):
+                    content = match.group(1)
+                    replaced_content = value_map.get(content, content)
+                    # 返回修改后的registry调用
+                    return 'registry(env, "{}")'.format(replaced_content)
+                pattern = r'registry\(env,[\s]*["\'](.*?)["\'][\s]*\)'
+                return re.sub(pattern, repl, code)
+
+            with open(os.path.join(path,"tempaction_correct.py"),"r")as f:
+                correct_code=f.read()
+
+            code_list=extract_registry_values(correct_code)
+            import difflib
+            def closest_match(target, options):
+                return difflib.get_close_matches(target, options, n=1, cutoff=0)[0]
+            new_values=[]
+            for target in code_list:
+                new_values.append(closest_match(target,SIM_obj))
+            # new_values=match(code_list,SIM_obj)
+            final_code=replace_registry_values(correct_code,code_list,new_values)
+            heading="import os \nimport json\nimport yaml\nimport omnigibson as og\nfrom action_list import * \nfrom action_utils import *\n"
+            with open(os.path.join(path,"action.py"),"w")as f:
+                f.write(heading)
+                f.write(final_code)
+
             #TARGET            
             # inv = target.split('Inventory:')[1]
             # inv = inv.split('\n')[0]
