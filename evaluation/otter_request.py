@@ -15,12 +15,19 @@ def otter_request(content, image_list):
     data_payload = {
         "content": [
             {
-                "prompt": "Inventory: None\nTask Goal: installing_a_fax_machine\nOriginal Subtasks: None\nPrevious Action Code: No code\nExecution error: No error\nNow, please output Explain, Subtasks (revise if necessary), Code that completing the next subtask, and Target States, according to the instruction above. Remember you can only use the functions provided above and pay attention to the response format.",
+                "prompt": content,
                 "images": {
                     'image0': image_to_base64(image_list[0]),
                     'image1': image_to_base64(image_list[1]),
                     'image2': image_to_base64(image_list[2]),
                     'image3': image_to_base64(image_list[3]),
+                    'image4': image_to_base64(image_list[4]),
+                    'image5': image_to_base64(image_list[5]),
+                    'image6': image_to_base64(image_list[6]),
+                    'image7': image_to_base64(image_list[7]),
+                    'image8': image_to_base64(image_list[8]),
+                    'image9': image_to_base64(image_list[9]),
+
                     }
             }
         ],
@@ -35,6 +42,6 @@ def otter_request(content, image_list):
 if __name__ == "__main__":
     content = ''
     image_list=[]
-    for i in range(4):
+    for i in range(8):
         image_list.append(f"/shared/liushuai/OmniGibson/prompt_files/data/cook_bacon/subtask_1/rgb{i}_detect_surroundings.png")
     otter_request(content='1',image_list=image_list)

@@ -27,11 +27,12 @@ def parse_args():
 def gpt_process(args):
     
     idx = args.idx
-    with open('./EVLM_Task/all_val.json') as f: #TODO change the path
+    with open('./EVLM_Task/all_400.json') as f: #TODO change the path
         data = json.load(f)
     EVLM_name=sorted(list(data))[idx]
     print(data[EVLM_name]['split'])
-    if "val" in data[EVLM_name]['split'] or "" in data[EVLM_name]['split']:
+    EVLM_name="cook_bacon"
+    if "train" in data[EVLM_name]['split'] or "" in data[EVLM_name]['split']:
         task_name=data[EVLM_name]['task_name']
         gpt_name=data[EVLM_name]['detailed_name']
         scene=data[EVLM_name]['env']
@@ -41,7 +42,7 @@ def gpt_process(args):
         print(f"detailed_name:{gpt_name}")
         task_data = data[EVLM_name]
         gpt_task_name = task_data['detailed_name']
-        save_path = eu.f_mkdir(os.path.join('./evaluation/data', gpt_task_name))
+        save_path = eu.f_mkdir(os.path.join('/shared/liushuai/OmniGibson/prompt_files/data', gpt_task_name))
         # main task loop
         
         main_task_flag = False
@@ -78,17 +79,19 @@ def gpt_process(args):
             # subtask loop, when a subtask is finished, close the loop
             while True:
                 system_message = gpt_query.render_system_message()
-                human_message = gpt_query.render_human_message(
+                human_message = gpt_query.render_otter_message(
                     scene_graph=human_info[0], object=human_info[1],
                     inventory=human_info[2], task=human_info[3] 
                 )
                 all_messages = [system_message, human_message]
-                content=system_message.content+"\n\n"+human_message.content
+                content=human_message.content
                 eu.save_input(sub_save_path, human_message.content)
                 print("start query")
                 succuss = True
                 
-                image_list = [os.path.join(sub_save_path, f'rgb{i}_detect_surroundings.png') for i in range(4)]
+                image_list = [os.path.join(sub_save_path, f'rgb{i}_detect_surroundings.png') for i in range(8)]
+                for i in [os.path.join(sub_save_path, f'rgb{i}_BEV_surroundings.png') for i in range(8,10)]:
+                    image_list.append(i)
                 while succuss:
                     try:
                         response=otter_request(content, image_list)

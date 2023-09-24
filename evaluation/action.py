@@ -1,0 +1,2 @@
+def act(robot,env,camera):\n    # Subtask 1: Move therobot to thejar of peash.\n    jar_of_peash_91 = registry(env,"jar_ of_ peach_91")
+    MoveBot(env, robot, jar_ofthepeach, camera)\n    donothing(env)\n
