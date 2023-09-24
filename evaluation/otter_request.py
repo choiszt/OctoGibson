@@ -1,14 +1,28 @@
 import requests
 import json
 import base64
+from io import BytesIO
+from PIL import Image
+def encode_image_to_base64(image_path):
+    # 打开图像
+    with Image.open(image_path) as img:
+        # 调整图像大小为224x224
+        img_resized = img.resize((224, 224))
 
+        # 保存调整大小的图像到一个字节缓冲区
+        buffered = BytesIO()
+        img_resized.save(buffered, format="JPEG")
+
+        # 将字节缓冲区内容转换为Base64
+        return base64.b64encode(buffered.getvalue()).decode('utf-8')
 def image_to_base64(image_path):
     with open(image_path, "rb") as image_file:
+        image_file=image_file.resize((224,224))
         return base64.b64encode(image_file.read()).decode('utf-8')
 
 def otter_request(content, image_list):
     # Define the URL and headers
-    url = "http://172.21.25.95:5432/app/otter"
+    url = "http://172.21.25.95:5433/app/otter"
     headers = {
         "Content-Type": "application/json"
     }
@@ -17,16 +31,16 @@ def otter_request(content, image_list):
             {
                 "prompt": content,
                 "images": {
-                    'image0': image_to_base64(image_list[0]),
-                    'image1': image_to_base64(image_list[1]),
-                    'image2': image_to_base64(image_list[2]),
-                    'image3': image_to_base64(image_list[3]),
-                    'image4': image_to_base64(image_list[4]),
-                    'image5': image_to_base64(image_list[5]),
-                    'image6': image_to_base64(image_list[6]),
-                    'image7': image_to_base64(image_list[7]),
-                    'image8': image_to_base64(image_list[8]),
-                    'image9': image_to_base64(image_list[9]),
+                    'image0': encode_image_to_base64(image_list[0]),
+                    'image1': encode_image_to_base64(image_list[1]),
+                    'image2': encode_image_to_base64(image_list[2]),
+                    'image3': encode_image_to_base64(image_list[3]),
+                    'image4': encode_image_to_base64(image_list[4]),
+                    'image5': encode_image_to_base64(image_list[5]),
+                    'image6': encode_image_to_base64(image_list[6]),
+                    'image7': encode_image_to_base64(image_list[7]),
+                    'image8': encode_image_to_base64(image_list[8]),
+                    'image9': encode_image_to_base64(image_list[9]),
 
                     }
             }
@@ -37,7 +51,7 @@ def otter_request(content, image_list):
     # Make the POST request
     response = requests.post(url, headers=headers, data=json.dumps(data_payload))
     print(response.text)
-    return response.text["result"]
+    return response.text
 
 if __name__ == "__main__":
     content = ''

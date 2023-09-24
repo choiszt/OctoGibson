@@ -7,7 +7,7 @@ import time
 import sys;sys.path.append("/shared/liushuai/OmniGibson/prompt_files")
 # from robot_action import *
 import parse_json
-import query_new as query
+import otter_query as query
 from imp import reload
 import env_utils_gpt as eu 
 import openai
@@ -27,12 +27,12 @@ def parse_args():
 def gpt_process(args):
     
     idx = args.idx
-    with open('./EVLM_Task/all_400.json') as f: #TODO change the path
+    with open('./EVLM_Task/all_val.json') as f: #TODO change the path
         data = json.load(f)
     EVLM_name=sorted(list(data))[idx]
     print(data[EVLM_name]['split'])
-    EVLM_name="cook_bacon"
-    if "train" in data[EVLM_name]['split'] or "" in data[EVLM_name]['split']:
+
+    if "val" in data[EVLM_name]['split'] or "" in data[EVLM_name]['split']:
         task_name=data[EVLM_name]['task_name']
         gpt_name=data[EVLM_name]['detailed_name']
         scene=data[EVLM_name]['env']
@@ -42,7 +42,7 @@ def gpt_process(args):
         print(f"detailed_name:{gpt_name}")
         task_data = data[EVLM_name]
         gpt_task_name = task_data['detailed_name']
-        save_path = eu.f_mkdir(os.path.join('/shared/liushuai/OmniGibson/prompt_files/data', gpt_task_name))
+        save_path = eu.f_mkdir(os.path.join('/shared/liushuai/OmniGibson/evaluation/data', gpt_task_name))
         # main task loop
         
         main_task_flag = False
@@ -92,22 +92,26 @@ def gpt_process(args):
                 image_list = [os.path.join(sub_save_path, f'rgb{i}_detect_surroundings.png') for i in range(8)]
                 for i in [os.path.join(sub_save_path, f'rgb{i}_BEV_surroundings.png') for i in range(8,10)]:
                     image_list.append(i)
-                while succuss:
-                    try:
-                        response=otter_request(content, image_list)
-                        succuss = False
-                    except Exception as e:
-                        print(f"Error: {e}")
-                        if "exceeded" in str(e):
-                            print("Sleeping for 3 seconds")
-                            succuss = True
-                            time.sleep(3)
-                        else:
-                            succuss = True
-                            response = {"error_message": str(e)}
-                            print(response)
-                
+                if False:
+                    while succuss:
+                        try:
+                            response=otter_request(content, image_list)
+                            succuss = False
+                        except Exception as e:
+                            print(f"Error: {e}")
+                            if "exceeded" in str(e):
+                                print("Sleeping for 3 seconds")
+                                succuss = True
+                                time.sleep(3)
+                            else:
+                                succuss = True
+                                response = {"error_message": str(e)}
+                                print(response)
+                ##just for test:
+                with open("/shared/liushuai/OmniGibson/evaluation/1.txt",'r')as f:
+                    response=f.read()
                 try:
+                    response=response.replace("\\n","\n")
                     answer = gpt_query.process_ai_message(response)
                 except Exception as e:
                     answer = str(e)
