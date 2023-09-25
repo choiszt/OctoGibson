@@ -1,0 +1,1365 @@
+{
+    "put_a_candle_in_the_basket": {
+        "task_name": "assembling_gift_baskets",
+        "gpt_task": "put_a_candle_in_the_basket",
+        "detailed_name": "put_a_candle_in_the_basket",
+        "removed_item": [
+            "wicker_basket.n.01_2",
+            "wicker_basket.n.01_3",
+            "wicker_basket.n.01_4",
+            "candle.n.01_2",
+            "candle.n.01_3",
+            "candle.n.01_4",
+            "cookie.n.01_2",
+            "cookie.n.01_3",
+            "cookie.n.01_4",
+            "swiss_cheese.n.01_2",
+            "swiss_cheese.n.01_3",
+            "swiss_cheese.n.01_4",
+            "bow.n.08_2",
+            "bow.n.08_3",
+            "bow.n.08_4"
+        ],
+        "target_states": [
+            [
+                "candle.n.01_1",
+                "inside",
+                "wicker_basket.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_0_int"
+    },
+    "put_a_bow_in_the_basket": {
+        "task_name": "assembling_gift_baskets",
+        "gpt_task": "prepare_something_to_wear_in_the_wedding_into_the_basket",
+        "detailed_name": "put_a_bow_in_the_basket",
+        "removed_item": [
+            "wicker_basket.n.01_2",
+            "wicker_basket.n.01_3",
+            "wicker_basket.n.01_4",
+            "candle.n.01_2",
+            "candle.n.01_3",
+            "candle.n.01_4",
+            "cookie.n.01_2",
+            "cookie.n.01_3",
+            "cookie.n.01_4",
+            "swiss_cheese.n.01_2",
+            "swiss_cheese.n.01_3",
+            "swiss_cheese.n.01_4",
+            "bow.n.08_2",
+            "bow.n.08_3",
+            "bow.n.08_4"
+        ],
+        "target_states": [
+            [
+                "bow.n.08_1",
+                "inside",
+                "wicker_basket.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_0_int"
+    },
+    "put_a_cookie_in_the_basket": {
+        "task_name": "assembling_gift_baskets",
+        "gpt_task": "put_a_cookie_in_the_basket",
+        "detailed_name": "put_a_cookie_in_the_basket",
+        "removed_item": [
+            "wicker_basket.n.01_2",
+            "wicker_basket.n.01_3",
+            "wicker_basket.n.01_4",
+            "candle.n.01_2",
+            "candle.n.01_3",
+            "candle.n.01_4",
+            "cookie.n.01_2",
+            "cookie.n.01_3",
+            "cookie.n.01_4",
+            "swiss_cheese.n.01_2",
+            "swiss_cheese.n.01_3",
+            "swiss_cheese.n.01_4",
+            "bow.n.08_2",
+            "bow.n.08_3",
+            "bow.n.08_4"
+        ],
+        "target_states": [
+            [
+                "cookie.n.01_1",
+                "inside",
+                "wicker_basket.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_0_int"
+    },
+    "put_two_books_in_the_carton": {
+        "task_name": "boxing_books_up_for_storage",
+        "gpt_task": "put_two_books_in_the_carton",
+        "detailed_name": "put_two_books_in_the_carton",
+        "removed_item": [
+            "book.n.02_3",
+            "book.n.02_4",
+            "book.n.02_5",
+            "book.n.02_6",
+            "book.n.02_7"
+        ],
+        "target_states": [
+            [
+                "book.n.02_1",
+                "inside",
+                "carton.n.02_1",
+                "1"
+            ],
+            [
+                "book.n.02_2",
+                "inside",
+                "carton.n.02_1",
+                "1"
+            ]
+        ],
+        "env": "Beechwood_0_int"
+    },
+    "put_money_and_air_conditioner_on_checkout_desk": {
+        "task_name": "buy_a_air_conditioner",
+        "gpt_task": "put_money_and_air_conditioner_on_checkout_desk",
+        "detailed_name": "put_money_and_air_conditioner_on_checkout_desk",
+        "removed_item": [
+            "NA"
+        ],
+        "target_states": [
+            [
+                "money.n.01_1",
+                "ontop",
+                "checkout.n.03_1",
+                "1"
+            ],
+            [
+                "air_conditioner.n.01_1",
+                "ontop",
+                "checkout.n.03_1",
+                "1"
+            ]
+        ],
+        "env": "grocery_store_cafe"
+    },
+    "put_can_of_dog_food_and_money_on_checkout_desk": {
+        "task_name": "buy_dog_food",
+        "gpt_task": "buy_dog_food",
+        "detailed_name": "put_can_of_dog_food_and_money_on_checkout_desk",
+        "removed_item": [
+            "NA"
+        ],
+        "target_states": [
+            [
+                "can__of__dog_food.n.01_1",
+                "ontop",
+                "checkout.n.03_1",
+                "1"
+            ],
+            [
+                "money.n.01_1",
+                "ontop",
+                "checkout.n.03_1",
+                "1"
+            ]
+        ],
+        "env": "grocery_store_cafe"
+    },
+    "put_canned_food_on_checkout_desk": {
+        "task_name": "buy_food_for_camping",
+        "gpt_task": "put_canned_food_on_checkout_desk",
+        "detailed_name": "put_canned_food_on_checkout_desk",
+        "removed_item": [
+            "water_bottle.n.01_2",
+            "bottle__of__soda.n.01_2",
+            "cookie.n.01_2",
+            "hotdog.n.02_2",
+            "money.n.01_2",
+            "money.n.01_3",
+            "money.n.01_4"
+        ],
+        "target_states": [
+            [
+                "canned_food.n.01_1",
+                "ontop",
+                "checkout.n.03_1",
+                "1"
+            ]
+        ],
+        "env": "grocery_store_cafe"
+    },
+    "put_sack_on_checkout_desk": {
+        "task_name": "buy_rechargeable_batteries",
+        "gpt_task": "buy_sack",
+        "detailed_name": "put_sack_on_checkout_desk",
+        "removed_item": [
+            "battery.n.02_2",
+            "money.n.01_2money.n.01_3"
+        ],
+        "target_states": [
+            [
+                "sack.n.01_1",
+                "inside",
+                "shopping_cart.n.01_1",
+                "1"
+            ],
+            [
+                "money.n.01_1",
+                "inside",
+                "cash_register.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "grocery_store_cafe"
+    },
+    "put_peach_into_jar_and_close_jar_and_put_jar_into_cabinet": {
+        "task_name": "can_fruit",
+        "gpt_task": "can_a_peach_for_storage_in_cabinet",
+        "detailed_name": "put_peach_into_jar_and_close_jar_and_put_jar_into_cabinet",
+        "removed_item": [
+            "water.n.06_1",
+            "stockpot.n.01_1",
+            "peach.n.03_2",
+            "peach.n.03_3",
+            "peach.n.03_4"
+        ],
+        "target_states": [
+            [
+                ""
+            ]
+        ],
+        "env": "Ihlen_1_int"
+    },
+    "put_peach_into_jar_and_close_it_and_put_into_cabinet": {
+        "task_name": "can_fruit",
+        "gpt_task": "put_peach_into_jar_and_seal_it_in_cabinet",
+        "detailed_name": "put_peach_into_jar_and_close_it_and_put_into_cabinet",
+        "removed_item": [
+            "water.n.06_1",
+            "stockpot.n.01_1",
+            "peach.n.03_2",
+            "peach.n.03_3",
+            "peach.n.03_4"
+        ],
+        "target_states": [
+            [
+                "mason_jar.n.01_1",
+                "inside",
+                "cabinet.n.01_1",
+                "1"
+            ],
+            [
+                "peach.n.03_1",
+                "inside",
+                "mason_jar.n.01_1",
+                "1"
+            ],
+            [
+                "mason_jar.n.01_1",
+                "openable",
+                "0"
+            ]
+        ],
+        "env": "Ihlen_1_int"
+    },
+    "put_peach_into_jar_and_seal_it": {
+        "task_name": "can_fruit",
+        "gpt_task": "put_peach_into_jar_and_seal_it",
+        "detailed_name": "put_peach_into_jar_and_seal_it",
+        "removed_item": [
+            "water.n.06_1",
+            "stockpot.n.01_1",
+            "peach.n.03_2",
+            "peach.n.03_3",
+            "peach.n.03_4"
+        ],
+        "target_states": [
+            [
+                "peach.n.03_1",
+                "inside",
+                "mason_jar.n.01_1",
+                "1"
+            ],
+            [
+                "mason_jar.n.01_1",
+                "openable",
+                "0"
+            ]
+        ],
+        "env": "Ihlen_1_int"
+    },
+    "put_the_lid_on_the_jar": {
+        "task_name": "can_syrup",
+        "gpt_task": "use_something_to_seal_a_jar",
+        "detailed_name": "put_the_lid_on_the_jar",
+        "removed_item": [
+            "lid.n.02_2",
+            "lid.n.02_3",
+            "mason_jar.n.01_2",
+            "mason_jar.n.01_3",
+            "stockpot.n.01_1",
+            "maple_syrup.n.01_1"
+        ],
+        "target_states": [
+            [
+                "lid.n.02_1",
+                "ontop",
+                "mason_jar.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Merom_1_int"
+    },
+    "close_the_jar_and_put_it_in_the_fridge": {
+        "task_name": "canning_food",
+        "gpt_task": "seal_the_jar_and_put_it_in_the_fridge",
+        "detailed_name": "close_the_jar_and_put_it_in_the_fridge",
+        "removed_item": [
+            "steak.n.01_1",
+            "diced__steak.n.01_1",
+            "pineapple.n.02_1",
+            "diced__pineapple.n.01_1",
+            "mason_jar.n.01_2",
+            "carving_knife.n.01_1"
+        ],
+        "target_states": [
+            [
+                "mason_jar.n.01_1",
+                "inside",
+                "cabinet.n.01_1",
+                "1"
+            ],
+            [
+                "mason_jar.n.01_1",
+                "openable",
+                "0"
+            ]
+        ],
+        "env": "Ihlen_1_int"
+    },
+    "put_a_kettle_on_the_sink": {
+        "task_name": "clean_an_electric_kettle",
+        "gpt_task": "clean_an_electric_kettle_on_sink",
+        "detailed_name": "put_a_kettle_on_the_sink",
+        "removed_item": [
+            "liquid_soap.n.01_1",
+            "liquid_soap__bottle.n.01_1",
+            "scrub_brush.n.01_1",
+            "stain.n.01_1",
+            "tea.n.01_1",
+            "water.n.06_1"
+        ],
+        "target_states": [
+            [
+                "kettle.n.01_1",
+                "ontop",
+                "sink.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Beechwood_0_int"
+    },
+    "put_broken_glass_inside_a_recycling_bin": {
+        "task_name": "clean_up_broken_glass",
+        "gpt_task": "clean_up_broken_glass",
+        "detailed_name": "put_broken_glass_inside_a_recycling_bin",
+        "removed_item": [
+            "broom.n.01_1",
+            "dustpan.n.02_1"
+        ],
+        "target_states": [
+            [
+                "broken__glass.n.01_1",
+                "inside",
+                "recycling_bin.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_1_int"
+    },
+    "put_a_rag_inside_a_bucket": {
+        "task_name": "cleaning_bathrooms",
+        "gpt_task": "cleaning_a_bathroom",
+        "detailed_name": "put_a_rag_inside_a_bucket",
+        "removed_item": [
+            "stain.n.01_1",
+            "sink.n.01_1",
+            "bathtub.n.01_1",
+            "toilet.n.02_1",
+            "bar_soap.n.01_1",
+            "scrub_brush.n.01_1"
+        ],
+        "target_states": [
+            [
+                "rag.n.01_1",
+                "inside",
+                "bucket.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_1_int"
+    },
+    "put_a_plate_on_top_of_sink": {
+        "task_name": "clearing_table_after_dinner",
+        "gpt_task": "clearing_a_plate",
+        "detailed_name": "put_a_plate_on_top_of_sink",
+        "removed_item": [
+            "plate.n.04_1",
+            "tupperware.n.01_2",
+            "water.n.06_1",
+            "breakfast_table.n.01_1"
+        ],
+        "target_states": [
+            [
+                "plate.n.04_1",
+                "inside",
+                "sink.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Beechwood_0_int"
+    },
+    "cook_a_duck_and_a_clove": {
+        "task_name": "cook_a_duck",
+        "gpt_task": "cook_a_duck_and_a_clove",
+        "detailed_name": "cook_a_duck_and_a_clove",
+        "removed_item": [
+            "wine_sauce__bottle.n.01_1",
+            "clove.n.03_2",
+            "wine_sauce.n.01_1",
+            "clove.n.03_3",
+            "saucepot.n.01_1",
+            "clove.n.03_4"
+        ],
+        "target_states": [
+            [
+                "duck.n.03_1",
+                "cookable",
+                "1"
+            ],
+            [
+                "clove.n.03_1",
+                "cookable",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_1_int"
+    },
+    "cook_mustard": {
+        "task_name": "cook_mustard_greens",
+        "gpt_task": "cook_mustard",
+        "detailed_name": "cook_mustard",
+        "removed_item": [
+            "mustard.n.03_2",
+            "mustard.n.03_3",
+            "water.n.06_1",
+            "",
+            "sink.n.01_1"
+        ],
+        "target_states": [
+            [
+                "mustard.n.03_1",
+                "cookable",
+                "1"
+            ]
+        ],
+        "env": "Wainscott_0_int"
+    },
+    "cook_a_turkey_leg": {
+        "task_name": "cook_turkey_drumsticks",
+        "gpt_task": "cook_a_turkey_leg",
+        "detailed_name": "cook_a_turkey_leg",
+        "removed_item": [
+            "turkey_leg.n.01_2",
+            "casserole.n.02_1",
+            "thyme.n.02_1",
+            "thyme__shaker.n.01_1",
+            "salt.n.02_1",
+            "salt__shaker.n.01_1",
+            "black_pepper.n.02_1",
+            "pepper__shaker.n.01_1",
+            "meat_thermometer.n.01_1"
+        ],
+        "target_states": [
+            [
+                "turkey_leg.n.01_1",
+                "cookable",
+                "1"
+            ]
+        ],
+        "env": "Benevolence_1_int"
+    },
+    "cook_broccoli": {
+        "task_name": "cook_vegetables",
+        "gpt_task": "cook_a_vegetable_resembling_a_small_tree",
+        "detailed_name": "cook_broccoli",
+        "removed_item": [
+            "olive_oil__bottle.n.01_1",
+            "olive_oil.n.01_1",
+            "casserole.n.02_1",
+            "parmesan.n.01_1",
+            "parmesan__shaker.n.01_1",
+            ""
+        ],
+        "target_states": [
+            [
+                "broccoli.n.02_1",
+                "cookable",
+                "1"
+            ]
+        ],
+        "env": "Merom_1_int"
+    },
+    "put_a_racket_in_the_shelf": {
+        "task_name": "de_clutter_your_garage",
+        "gpt_task": "put_a_racket_in_the_shelf",
+        "detailed_name": "put_a_racket_in_the_shelf",
+        "removed_item": [
+            "ski.n.01_2"
+        ],
+        "target_states": [
+            [
+                "tennis_racket.n.01_1",
+                "inside",
+                "shelf.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_0_int"
+    },
+    "defrost_chicken": {
+        "task_name": "defrost_meat",
+        "gpt_task": "defrost_chicken",
+        "detailed_name": "defrost_chicken",
+        "removed_item": [
+            "NA"
+        ],
+        "target_states": [
+            [
+                "chicken.n.01_1",
+                "freezable",
+                "0"
+            ]
+        ],
+        "env": "Beechwood_0_int"
+    },
+    "toggle_on_a_fax_machine_and_put_on_table": {
+        "task_name": "installing_a_fax_machine",
+        "gpt_task": "installing_a_fax_machine",
+        "detailed_name": "toggle_on_a_fax_machine_and_put_on_table",
+        "removed_item": [
+            "NA"
+        ],
+        "target_states": [
+            [
+                "facsimile.n.02_1",
+                "toggleable",
+                "1"
+            ],
+            [
+                "facsimile.n.02_1",
+                "ontop",
+                "table.n.02_1",
+                "1"
+            ]
+        ],
+        "env": "Beechwood_0_int"
+    },
+    "turn_on_an_alarm_and_put_the_togged_alarm_on_table": {
+        "task_name": "installing_alarms",
+        "gpt_task": "installing_alarms",
+        "detailed_name": "turn_on_an_alarm_and_put_the_togged_alarm_on_table",
+        "removed_item": [
+            "alarm.n.02_2",
+            "table.n.02_2"
+        ],
+        "target_states": [
+            [
+                "alarm.n.02_1",
+                "toggleable",
+                "1"
+            ],
+            [
+                "alarm.n.02_1",
+                "ontop",
+                "table.n.02_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_0_int"
+    },
+    "put_a_inhaler_on_the_backpack": {
+        "task_name": "make_a_car_emergency_kit",
+        "gpt_task": "pack_an_inhaler",
+        "detailed_name": "put_a_inhaler_on_the_backpack",
+        "removed_item": [
+            "NA"
+        ],
+        "target_states": [
+            [
+                "inhaler.n.01_1",
+                "ontop",
+                "backpack.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_0_int"
+    },
+    "put_a_bottle_of_liquid_soap_in_the_carton": {
+        "task_name": "make_a_military_care_package",
+        "gpt_task": "put_a_bottle_of_liquid_soap_in_the_carton",
+        "detailed_name": "put_a_bottle_of_liquid_soap_in_the_carton",
+        "removed_item": [
+            "NA"
+        ],
+        "target_states": [
+            [
+                "bottle__of__liquid_soap.n.01_1",
+                "inside",
+                "carton.n.02_1",
+                "1"
+            ]
+        ],
+        "env": "Beechwood_0_int"
+    },
+    "put_a_toast_on_plate_and_put_it_on_table": {
+        "task_name": "make_cinnamon_toast",
+        "gpt_task": "prepare_a_toast_for_breakfast",
+        "detailed_name": "put_a_toast_on_plate_and_put_it_on_table",
+        "removed_item": [
+            "NA"
+        ],
+        "target_states": [
+            [
+                "french_toast.n.01_1",
+                "ontop",
+                "plate.n.04_1",
+                "1"
+            ],
+            [
+                "plate.n.04_1",
+                "ontop",
+                "breakfast_table.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Beechwood_0_int"
+    },
+    "put_a_pillow_on_the_bed": {
+        "task_name": "setting_up_bedroom_for_guest",
+        "gpt_task": "put_a_pillow_on_the_bed",
+        "detailed_name": "put_a_pillow_on_the_bed",
+        "removed_item": [
+            "blanket.n.01_1"
+        ],
+        "target_states": [
+            [
+                "pillow.n.01_1",
+                "ontop",
+                "bed.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Beechwood_1_int"
+    },
+    "open_a_door": {
+        "task_name": "opening_doors",
+        "gpt_task": "open_a_door",
+        "detailed_name": "open_a_door",
+        "removed_item": [
+            "door.n.01_2"
+        ],
+        "target_states": [
+            [
+                "door.n.01_1",
+                "openable",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_0_int"
+    },
+    "put_a_calculator_in_the_backpack": {
+        "task_name": "organizing_school_stuff",
+        "gpt_task": "pack_a_calculator",
+        "detailed_name": "put_a_calculator_in_the_backpack",
+        "removed_item": [
+            "NA"
+        ],
+        "target_states": [
+            [
+                "calculator.n.02_1",
+                "inside",
+                "backpack.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Benevolence_2_int"
+    },
+    "put_a_notbook_in_the_backpack": {
+        "task_name": "prepare_an_emergency_school_kit",
+        "gpt_task": "pack_a_notbook",
+        "detailed_name": "put_a_notbook_in_the_backpack",
+        "removed_item": [
+            "NA"
+        ],
+        "target_states": [
+            [
+                "backpack.n.01_1",
+                "openable",
+                "0"
+            ],
+            [
+                "notebook.n.01_1",
+                "inside",
+                "backpack.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Benevolence_2_int"
+    },
+    "put_a_plate_in_the_cabinet": {
+        "task_name": "putting_dishes_away_after_cleaning",
+        "gpt_task": "put_a_plate_in_the_cabinet",
+        "detailed_name": "put_a_plate_in_the_cabinet",
+        "removed_item": [
+            "plate.n.04_2",
+            "plate.n.04_3",
+            "plate.n.04_4",
+            "plate.n.04_5",
+            "plate.n.04_6",
+            "plate.n.04_7",
+            "plate.n.04_8",
+            "countertop.n.01_2"
+        ],
+        "target_states": [
+            [
+                "plate.n.04_1",
+                "inside",
+                "cabinet.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Benevolence_1_int"
+    },
+    "put_a_shoe_and_a_sandal_on_the_shelf": {
+        "task_name": "putting_shoes_on_rack",
+        "gpt_task": "put_a_shoe_and_a_sandal_on_the_shelf",
+        "detailed_name": "put_a_shoe_and_a_sandal_on_the_shelf",
+        "removed_item": [
+            "gym_shoe.n.01_2",
+            "sandal.n.01_2"
+        ],
+        "target_states": [
+            [
+                "sandal.n.01_1",
+                "ontop",
+                "shelf.n.01_1",
+                "1"
+            ],
+            [
+                "gym_shoe.n.01_1",
+                "ontop",
+                "shelf.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_0_int"
+    },
+    "put_a_cup_of_yogurt_in_the_refrigerator": {
+        "task_name": "putting_shopping_away",
+        "gpt_task": "put_a_cup_of_yogurt_in_the_refrigerator",
+        "detailed_name": "put_a_cup_of_yogurt_in_the_refrigerator",
+        "removed_item": [
+            "NA"
+        ],
+        "target_states": [
+            [
+                "cup__of__yogurt.n.01_1",
+                "inside",
+                "electric_refrigerator.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Benevolence_1_int"
+    },
+    "arranging_a_toaster_oven_and_a_wooden_spoon_inside_a_cabinet": {
+        "task_name": "rearranging_kitchen_furniture",
+        "gpt_task": "arranging_a_toaster_oven_and_a_wooden_spoon_inside_a_cabinet",
+        "detailed_name": "arranging_a_toaster_oven_and_a_wooden_spoon_inside_a_cabinet",
+        "removed_item": [
+            "countertop.n.01_1",
+            "table.n.02_1"
+        ],
+        "target_states": [
+            [
+                "toaster_oven.n.01_1",
+                "inside",
+                "cabinet.n.01_1",
+                "1"
+            ],
+            [
+                "wooden_spoon.n.02_1",
+                "inside",
+                "cabinet.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_1_int"
+    },
+    "put_a_plate_and_a_tablefork_in_the_dishwasher": {
+        "task_name": "rinsing_dishes",
+        "gpt_task": "wash_a_plate_and_a_tablefork_with_machine",
+        "detailed_name": "put_a_plate_and_a_tablefork_in_the_dishwasher",
+        "removed_item": [
+            "breadcrumb.n.01_1",
+            "sink.n.01_1",
+            "water.n.06_1"
+        ],
+        "target_states": [
+            [
+                "plate.n.04_1",
+                "inside",
+                "dishwasher.n.01_1",
+                "1"
+            ],
+            [
+                "tablefork.n.01_1",
+                "inside",
+                "dishwasher.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_1_int"
+    },
+    "put_pebble_in_tank_and_close_it": {
+        "task_name": "setup_a_fish_tank",
+        "gpt_task": "put_pebble_in_tank_and_close_it",
+        "detailed_name": "put_pebble_in_tank_and_close_it",
+        "removed_item": [
+            "bucket.n.01_1",
+            "water.n.06_1"
+        ],
+        "target_states": [
+            [
+                "tank.n.02_1",
+                "openable",
+                "0"
+            ],
+            [
+                "pebble.n.01_1",
+                "inside",
+                "tank.n.02_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_0_int"
+    },
+    "close_a_tank": {
+        "task_name": "setup_a_fish_tank",
+        "gpt_task": "close_a_tank",
+        "detailed_name": "close_a_tank",
+        "removed_item": [
+            "bucket.n.01_1",
+            "water.n.06_1"
+        ],
+        "target_states": [
+            [
+                "tank.n.02_1",
+                "openable",
+                "0"
+            ]
+        ],
+        "env": "Ihlen_0_int"
+    },
+    "put_a_brownie_in_the_tupperware_and_put_it_in_the_refrigerator": {
+        "task_name": "store_brownies",
+        "gpt_task": "store_brownies",
+        "detailed_name": "put_a_brownie_in_the_tupperware_and_put_it_in_the_refrigerator",
+        "removed_item": [
+            "brownie.n.03_2",
+            "brownie.n.03_3",
+            "brownie.n.03_4",
+            "brownie.n.03_5",
+            "tray.n.01_1"
+        ],
+        "target_states": [
+            [
+                "brownie.n.03_1",
+                "inside",
+                "tupperware.n.01_1",
+                "1"
+            ],
+            [
+                "tupperware.n.01_1",
+                "inside",
+                "electric_refrigerator.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_1_int"
+    },
+    "put_firewood_on_the_table": {
+        "task_name": "store_firewood",
+        "gpt_task": "put_a_firewood_on_table",
+        "detailed_name": "put_firewood_on_the_table",
+        "removed_item": [
+            "firewood.n.01_2",
+            "firewood.n.01_3"
+        ],
+        "target_states": [
+            [
+                "firewood.n.01_1",
+                "ontop",
+                "table.n.02_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_0_int"
+    },
+    "put_a_bottle_of_vodka_in_the_cabinet": {
+        "task_name": "store_vodka",
+        "gpt_task": "put_a_bottle_of_vodka_in_the_cabinet",
+        "detailed_name": "put_a_bottle_of_vodka_in_the_cabinet",
+        "removed_item": [
+            "bottle__of__vodka.n.01_2"
+        ],
+        "target_states": [
+            [
+                "bottle__of__vodka.n.01_1",
+                "inside",
+                "cabinet.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_1_int"
+    },
+    "put_a_mason_jar_in_the_cabinet": {
+        "task_name": "store_whole_grains",
+        "gpt_task": "put_a_mason_jar_in_the_cabinet",
+        "detailed_name": "put_a_mason_jar_in_the_cabinet",
+        "removed_item": [
+            "NA"
+        ],
+        "target_states": [
+            [
+                "mason_jar.n.01_1",
+                "inside",
+                "cabinet.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_1_int"
+    },
+    "put_a_box_of_oatmeal_and_a_chip_in_the_cabinet": {
+        "task_name": "storing_food",
+        "gpt_task": "storing_a_box_of_oatmeal_and_a_chip_inside_a_cabinet",
+        "detailed_name": "put_a_box_of_oatmeal_and_a_chip_in_the_cabinet",
+        "removed_item": [
+            "bottle__of__olive_oil.n.01_1bottle__of__olive_oil.n.01_2",
+            "jar__of__sugar.n.01_1jar__of__sugar.n.01_2",
+            "box__of__oatmeal.n.01_2",
+            "chip.n.04_2"
+        ],
+        "target_states": [
+            [
+                "box__of__oatmeal.n.01_1",
+                "inside",
+                "cabinet.n.01_1",
+                "1"
+            ],
+            [
+                "chip.n.04_1",
+                "inside",
+                "cabinet.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_1_int"
+    },
+    "thaw_a_olive": {
+        "task_name": "thawing_frozen_food",
+        "gpt_task": "thaw_a_olive",
+        "detailed_name": "thaw_a_olive",
+        "removed_item": [
+            "fish.n.02_2",
+            "fish.n.02_3",
+            "fish.n.02_4",
+            "sink.n.01_1"
+        ],
+        "target_states": [
+            [
+                "olive.n.04_1",
+                "freezable",
+                "0"
+            ]
+        ],
+        "env": "Ihlen_1_int"
+    },
+    "put_a_pot_plant_on_the_bale": {
+        "task_name": "tidying_living_room",
+        "gpt_task": "put_a_pot_plant_on_the_bale",
+        "detailed_name": "put_a_pot_plant_on_the_bale",
+        "removed_item": [
+            "NA"
+        ],
+        "target_states": [
+            [
+                "pot_plant.n.01_1",
+                "ontop",
+                "coffee_table.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_0_int"
+    },
+    "put_a_letter_in_the_shelf": {
+        "task_name": "tidying_living_room",
+        "gpt_task": "put_a_letter_in_the_shelf",
+        "detailed_name": "put_a_letter_in_the_shelf",
+        "removed_item": [
+            "NA"
+        ],
+        "target_states": [
+            [
+                "letter.n.01_1",
+                "inside",
+                "shelf.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_0_int"
+    },
+    "heat_and_cook_a_bap": {
+        "task_name": "toast_buns",
+        "gpt_task": "heat_and_cook_a_bap",
+        "detailed_name": "heat_and_cook_a_bap",
+        "removed_item": [
+            "bap.n.01_2",
+            "bap.n.01_3",
+            "bap.n.01_4",
+            "toaster.n.02_1"
+        ],
+        "target_states": [
+            [
+                "bap.n.01_1",
+                "heatable",
+                "1"
+            ],
+            [
+                "bap.n.01_1",
+                "cookable",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_1_int"
+    },
+    "put_a_white_bread_in_the_cabinet": {
+        "task_name": "unloading_groceries",
+        "gpt_task": "unload_a_white_bread",
+        "detailed_name": "put_a_white_bread_in_the_cabinet",
+        "removed_item": [
+            "NA"
+        ],
+        "target_states": [
+            [
+                "white_bread.n.01_1",
+                "inside",
+                "cabinet.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Benevolence_1_int"
+    },
+    "put_a_car_on_floor": {
+        "task_name": "vacuuming_vehicles",
+        "gpt_task": "park_a_car_on_the_floor",
+        "detailed_name": "put_a_car_on_floor",
+        "removed_item": [
+            "vacuum.n.04_1",
+            "dust.n.01_1"
+        ],
+        "target_states": [
+            [
+                "car.n.01_1",
+                "ontop",
+                "floor.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_0_int"
+    },
+    "toggle_on_a_fax_machine": {
+        "task_name": "installing_a_fax_machine",
+        "gpt_task": "installing_a_fax_machine",
+        "detailed_name": "toggle_on_a_fax_machine",
+        "removed_item": [
+            "NA"
+        ],
+        "target_states": [
+            [
+                "facsimile.n.02_1",
+                "toggleable",
+                "1"
+            ]
+        ],
+        "env": "Beechwood_0_int"
+    },
+    "open_the_refrigerator": {
+        "task_name": "putting_shopping_away",
+        "gpt_task": "put_a_cup_of_yogurt_in_the_refrigerator",
+        "detailed_name": "open_the_refrigerator",
+        "removed_item": [
+            "NA"
+        ],
+        "target_states": [
+            [
+                "electric_refrigerator.n.01_1",
+                "openable",
+                "1"
+            ]
+        ],
+        "env": "Benevolence_1_int"
+    },
+    "turn_on_an_alarm": {
+        "task_name": "installing_alarms",
+        "gpt_task": "installing_alarms",
+        "detailed_name": "turn_on_an_alarm",
+        "removed_item": [
+            "alarm.n.02_2",
+            "table.n.02_2"
+        ],
+        "target_states": [
+            [
+                "alarm.n.02_1",
+                "toggleable",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_0_int"
+    },
+    "open_the_suitcase": {
+        "task_name": "packing_books_into_car",
+        "gpt_task": "packing_a_book_into_a_car",
+        "detailed_name": "open_the_suitcase",
+        "removed_item": [
+            "driveway.n.01_1",
+            "book.n.02_2",
+            "book.n.02_3"
+        ],
+        "target_states": [
+            [
+                "bag.n.06_1",
+                "openable",
+                "1"
+            ]
+        ],
+        "env": "Pomaria_0_garden"
+    },
+    "cook_a_carrot": {
+        "task_name": "cook_carrots",
+        "gpt_task": "cook_a_carrot",
+        "detailed_name": "cook_a_carrot",
+        "removed_item": [
+            "carrot.n.03_4",
+            "carrot.n.03_2",
+            "carrot.n.03_5",
+            "carrot.n.03_3",
+            "carrot.n.03_6"
+        ],
+        "target_states": [
+            [
+                "carrot.n.03_1",
+                "inside",
+                "saucepot.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Merom_1_int"
+    },
+    "open_the_tank": {
+        "task_name": "setup_a_fish_tank",
+        "gpt_task": "close_a_tank",
+        "detailed_name": "open_the_tank",
+        "removed_item": [
+            "bucket.n.01_1",
+            "water.n.06_1"
+        ],
+        "target_states": [
+            [
+                "tank.n.02_1",
+                "openable",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_0_int"
+    },
+    "put_money_on_checkout_desk": {
+        "task_name": "buy_dog_food",
+        "gpt_task": "buy_dog_food",
+        "detailed_name": "put_money_on_checkout_desk",
+        "removed_item": [
+            "NA"
+        ],
+        "target_states": [
+            [
+                ""
+            ],
+            [
+                "money.n.01_1",
+                "ontop",
+                "checkout.n.03_1",
+                "1"
+            ]
+        ],
+        "env": "grocery_store_cafe"
+    },
+    "freeze_the_olive": {
+        "task_name": "thawing_frozen_food",
+        "gpt_task": "thaw_a_olive",
+        "detailed_name": "freeze_the_olive",
+        "removed_item": [
+            "fish.n.02_2",
+            "fish.n.02_3",
+            "fish.n.02_4",
+            "sink.n.01_1"
+        ],
+        "target_states": [
+            [
+                "olive.n.04_1",
+                "freezable",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_1_int"
+    },
+    "close_the_door": {
+        "task_name": "opening_doors",
+        "gpt_task": "open_a_door",
+        "detailed_name": "close_the_door",
+        "removed_item": [
+            "door.n.01_2"
+        ],
+        "target_states": [
+            [
+                "door.n.01_1",
+                "openable",
+                "0"
+            ]
+        ],
+        "env": "Ihlen_0_int"
+    },
+    "put_the_toast_on_table": {
+        "task_name": "make_cinnamon_toast",
+        "gpt_task": "prepare_a_toast_for_breakfast",
+        "detailed_name": "put_the_toast_on_table",
+        "removed_item": [
+            "NA"
+        ],
+        "target_states": [
+            [
+                "french_toast.n.01_1",
+                "ontop",
+                "breakfast_table.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Beechwood_0_int"
+    },
+    "put_a_plate_in_the_dishwasher": {
+        "task_name": "rinsing_dishes",
+        "gpt_task": "wash_a_plate_and_a_tablefork_with_machine",
+        "detailed_name": "put_a_plate_in_the_dishwasher",
+        "removed_item": [
+            "breadcrumb.n.01_1",
+            "sink.n.01_1",
+            "water.n.06_1"
+        ],
+        "target_states": [
+            [
+                "plate.n.04_1",
+                "inside",
+                "dishwasher.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_1_int"
+    },
+    "approach_the_cabinet": {
+        "task_name": "rearranging_kitchen_furniture",
+        "gpt_task": "arranging_a_toaster_oven_and_a_wooden_spoon_inside_a_cabinet",
+        "detailed_name": "approach_the_cabinet",
+        "removed_item": [
+            "countertop.n.01_1",
+            "table.n.02_1"
+        ],
+        "target_states": [
+            [
+                "agent.n.01_1",
+                "nextto",
+                "cabinet.n.01_1",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_1_int"
+    },
+    "close_the_jar": {
+        "task_name": "can_fruit",
+        "gpt_task": "put_peach_into_jar_and_seal_it_in_cabinet",
+        "detailed_name": "close_the_jar",
+        "removed_item": [
+            "water.n.06_1",
+            "stockpot.n.01_1",
+            "peach.n.03_2",
+            "peach.n.03_3",
+            "peach.n.03_4"
+        ],
+        "target_states": [
+            [
+                ""
+            ],
+            [
+                "mason_jar.n.01_1",
+                "openable",
+                "0"
+            ]
+        ],
+        "env": "Ihlen_1_int"
+    },
+    "open_the_backpack": {
+        "task_name": "prepare_an_emergency_school_kit",
+        "gpt_task": "pack_a_notbook",
+        "detailed_name": "open_the_backpack",
+        "removed_item": [
+            "NA"
+        ],
+        "target_states": [
+            [
+                "backpack.n.01_1",
+                "openable",
+                "1"
+            ]
+        ],
+        "env": "Benevolence_2_int"
+    },
+    "open_the_bucket": {
+        "task_name": "cleaning_bathrooms",
+        "gpt_task": "cleaning_a_bathroom",
+        "detailed_name": "open_the_bucket",
+        "removed_item": [
+            "stain.n.01_1",
+            "sink.n.01_1",
+            "bathtub.n.01_1",
+            "toilet.n.02_1",
+            "bar_soap.n.01_1",
+            "scrub_brush.n.01_1"
+        ],
+        "target_states": [
+            [
+                "bucket.n.01_1",
+                "openable",
+                "1"
+            ]
+        ],
+        "env": "Ihlen_1_int"
+    }
+}

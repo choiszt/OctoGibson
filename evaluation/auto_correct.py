@@ -10,10 +10,15 @@ def auto_correct(source_path,target_path):
     # Replace variables with dots
     def replace_dotted_vars(match):
         return match.group(1).replace('.', '')
+    source_code = re.sub(r'def act', 'def___act___', source_code)
 
+    # 然后进行您的其他替换
     source_code = re.sub(r'\b([\w\.]+)\b', replace_dotted_vars, source_code)
     source_code = re.sub(r'(\w) (\d+)', r'\1\2', source_code)
     source_code = re.sub(r'(\w) (\w)', r'\1\2', source_code)
+
+    # 最后恢复`def act`
+    source_code = source_code.replace('def___act___', 'def act')
 
 
     # Function to find the closest match in a list

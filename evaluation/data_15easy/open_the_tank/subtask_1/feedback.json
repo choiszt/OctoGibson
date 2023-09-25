@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot tot the tank\n(2) Grasp the wrenge\n(3) Open the tank using the wrenege\n",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Move therobot to thestank\n    stank = registry(env, \"tank_88\")\n    MoveBot(env (robot), tank, camera)\n    donothing(env)\n\n",
+    "error": "open() missing 1 required positional argument: 'obj'",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

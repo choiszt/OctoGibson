@@ -27,19 +27,20 @@ def parse_args():
 def gpt_process(args):
     
     idx = args.idx
-    with open('./EVLM_Task/all_val.json') as f: #TODO change the path
+    with open('./EVLM_Task/val_15task.json') as f: #TODO change the path
         data = json.load(f)
     EVLM_name=sorted(list(data))[idx]
-    print(data[EVLM_name]['split'])
+    # print(data[EVLM_name]['split'])
 
-    if "val" in data[EVLM_name]['split'] or "" in data[EVLM_name]['split']:
+    if True:
         task_name=data[EVLM_name]['task_name']
-        gpt_name=data[EVLM_name]['detailed_name']
+        detailed_name=data[EVLM_name]['detailed_name']
+        # gpt_name=data[EVLM_name]['gpt_task']
         scene=data[EVLM_name]['env']
         print(idx)
         print(f"EVLM:{EVLM_name}")
         print(f"task_name:{task_name}")
-        print(f"detailed_name:{gpt_name}")
+        print(f"detailed_name:{detailed_name}")
         task_data = data[EVLM_name]
         gpt_task_name = task_data['detailed_name']
         save_path = eu.f_mkdir(os.path.join('/shared/liushuai/OmniGibson/evaluation/data', gpt_task_name))
@@ -94,33 +95,41 @@ def gpt_process(args):
                     image_list.append(i)
                 if True:
                     while succuss:
-                        try:
-                            response=otter_request(content, image_list)
-                            succuss = False
-                        except Exception as e:
-                            print(f"Error: {e}")
-                            if "exceeded" in str(e):
-                                print("Sleeping for 3 seconds")
-                                succuss = True
-                                time.sleep(3)
-                            else:
-                                succuss = True
-                                response = {"error_message": str(e)}
-                                print(response)
+                        for i in range(20):
+                            try:
+                                print(f"try:{i}")
+                                response=otter_request(content, image_list)
+                                response=response.replace("\\n","\n")
+                                answer = gpt_query.process_ai_message(sub_save_path,response,EVLM_name)
+                                #if parsed succuessfully:
+                                succuss = False
+                                break
+                            except Exception as e:
+                                answer = str(e)
+                                print(answer)
+                                succuss = False
+                            # except Exception as e:
+                            #     print(f"Error: {e}")
+                            #     if "exceeded" in str(e):
+                            #         print("Sleeping for 3 seconds")
+                            #         succuss = True
+                            #         time.sleep(3)
+                            #     else:
+                            #         succuss = True
+                            #         response = {"error_message": str(e)}
+                            #         print(response)
                 ##just for test:
                 # with open("/shared/liushuai/OmniGibson/evaluation/1.txt",'r')as f:
                 #     response=f.read()
-                try:
-                    response=response.replace("\\n","\n")
-                    answer = gpt_query.process_ai_message(sub_save_path,response,EVLM_name)
-                except Exception as e:
-                    answer = str(e)
-                    print(answer)
+                # try:
+                #     response=response.replace("\\n","\n")
+                #     answer = gpt_query.process_ai_message(sub_save_path,response,EVLM_name)
+                # except Exception as e:
+                #     answer = str(e)
+                #     print(answer)
                     
                 eu.save_response(sub_save_path, answer)
 
-                while True:
-                    continue
                 while True:
                     with open("./evaluation/finished_task.json","r")as f:
                         data = json.load(f)

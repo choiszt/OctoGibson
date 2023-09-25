@@ -1,0 +1,8 @@
+{
+    "subtask": "\n( 1) Register Thecheckoutscounter(2)\n(3) Move to theshoppingcart(4) Grasp themoney(5) Register(6) Move back to the checkoutscounter.\n(7) Put themoney on thecheckoutcounter.\n ",
+    "code": "def act(rotbot,env,camera):\n        #Subtask 3: Move to Themoney\n        money = env,\"money_142\",\"Themoney_143\"\n        MoveBot(env, robot, money, camera)\n        donothing(env)\n\n",
+    "error": "something went wrong! Please plan again",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

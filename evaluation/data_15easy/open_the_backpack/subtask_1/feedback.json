@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the suitcase.\n(2) Grasp the suitcase (not the backpack).\n(3) Move robot to backpack.\n",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Move the operator to the suitcase\n    suitcase_276 = registry(env,\"suitcase-276\")\n    MoveBot(env, robot, suitcase_276, camera)\n    donothing(env)\n\n",
+    "error": "something went wrong! Please plan again",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

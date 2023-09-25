@@ -6,9 +6,8 @@ import omnigibson as og
 
 from omnigibson.macros import gm
 gm.USE_GPU_DYNAMICS = True
-# gm.ENABLE_FLATCACHE = False
+# gm.ENABLE_FLATCACHE = True
 gm.ENABLE_OBJECT_STATES = True
-from omnigibson.utils.ui_utils import choose_from_options
 from robot_action import *
 # import prompt_files.action as action
 from importlib import reload
@@ -34,10 +33,10 @@ def parse_args():
 def sim_process(args):
     try:    
         idx = args.idx
-        with open('./EVLM_Task/all_val.json') as f: #TODO change the path
+        with open('./EVLM_Task/val_15task.json') as f: #TODO change the path
             data = json.load(f)
         EVLM_name=sorted(list(data))[idx]
-        if "val" in data[EVLM_name]['split'] or "" in data[EVLM_name]['split']:
+        if  True:
             task_name=data[EVLM_name]['task_name']
             gpt_name=data[EVLM_name]['detailed_name']
             # scene=data[EVLM_name]['env']
@@ -140,8 +139,8 @@ def sim_process(args):
                         # time.sleep(2)
                         sys.path=list(set(sys.path))
                         if(subtask_iter!=1):
-                            sys.path.remove(f"./prompt_files/data/{gpt_task_name}/subtask_{subtask_iter-1}")
-                        sys.path.append(f"./prompt_files/data/{gpt_task_name}/subtask_{subtask_iter}")
+                            sys.path.remove(f"./evaluation/data/{gpt_task_name}/subtask_{subtask_iter-1}")
+                        sys.path.append(f"./evaluation/data/{gpt_task_name}/subtask_{subtask_iter}")
                         import action
                         time.sleep(1)
                         try:
@@ -250,7 +249,7 @@ def sim_process(args):
                 if reset: #
                     if subtask_iter!=1:
                         for iter_num in range(1,subtask_iter):
-                            path=f"./prompt_files/data/{gpt_task_name}/subtask_{iter_num}"
+                            path=f"./evaluation/data/{gpt_task_name}/subtask_{iter_num}"
                             with open(os.path.join(path,"feedback.json"))as f:
                                 tmp_feedback=json.load(f)
                             if tmp_feedback['critic']=='succeed':

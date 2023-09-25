@@ -1,0 +1,8 @@
+{
+    "subtask": "\n( 1) Registerthecheckoutcounter( 2),\n ( 2) Grasp themoney (3), \n ( 3) Put themoneyonthecheckout counter(2)?\n",
+    "code": "def act(rotbot,env,camera):\n    #Subtask 3: Put themonetonthe checkout counter(0)\n    checkoutdesk = environment, \"checkout-counter-sckdal_0\"\n    money = env, \"money_142,\"'money_143'\n    put_ontop(root, money, checkoutdesk)\n\n",
+    "error": "toggle_on() takes 2 positional arguments but 3 were given",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

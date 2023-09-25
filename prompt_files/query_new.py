@@ -82,6 +82,39 @@ class Query:
             
         return HumanMessage(content=message)
     
+    def render_otter_message(
+        self, inventory="", object="", scene_graph="", task="" 
+    ):
+
+        message = ""    
+
+        if inventory=="[]":
+            message += f"Inventory: None\n"
+        elif inventory:
+            message += f"Inventory: {inventory[2:-2]}\n"
+
+
+        message += f"Task Goal: {task}\n"
+        
+        if len(self.history_info['subtask']) > 0:
+            message += f"Original Subtasks: {self.history_info['subtask']}\n"
+        else:
+            message += f"Original Subtasks: None\n"
+
+        if len(self.history_info['code']) > 0:
+            message += f"Previous Action Code: {self.history_info['code']}\n"
+            if len(self.history_info['error']) > 0:
+                message += f"Execution Error: {self.history_info['error']}\n"
+            else:
+                message += f"Execution Error: No error\n"  
+        elif len(self.history_info['code']) == 0: 
+            message += f"Previous Action Code: No code\n"
+            message += f"Execution error: No error\n"  
+        
+        message += "Now, please output Explain, Subtasks (revise if necessary), Code that completing the next subtask, and Target States, according to the instruction above. Remember you can only use the functions provided above and pay attention to the response format."
+            
+        return HumanMessage(content=message)
+
     def process_ai_message(self, message):
         # assert isinstance(message, AIMessage)
 

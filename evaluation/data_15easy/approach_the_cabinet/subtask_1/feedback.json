@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the cabinet\n(2) Open the cabinet \n(3) Put the robot's inventory inside the cabinet \n(4) Close the cabinet as per the original subtasks\n",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Move the Robinson to the cabinets\n    top_cabinets_dmwxyl_2 = registry(env,\"top_case_cabanette_dmxxyl_1\")\n    MoveBot(env, robot, top_cabsins, camera)\n\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": true
+}

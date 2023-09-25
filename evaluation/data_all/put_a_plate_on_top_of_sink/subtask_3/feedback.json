@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register all the objects\n(2) Grasp the plate\n(3) Put the plate on top of the sink\n(4) Grap the pizza\n (5) Putthe pizza on topof the sink as well\n",
+    "code": "def act(robot,env,camera):\n                # Subtask 1: Register all The objects\n                plate_88 = registry( \"plate\")\n                pizza90 = registry ( \"pizzas\")\n\n",
+    "error": "registry() missing 1 required positional argument: 'obj_name'",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

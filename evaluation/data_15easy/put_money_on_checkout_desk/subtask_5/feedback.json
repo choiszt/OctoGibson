@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register the camera,                  (2) Move the robot to the checkout floor,                 ((3) Put money on the checkout counter. \n",
+    "code": "def act(robot, env, money):\n                 # Subtask 1: Register thecamera,\n                 camera = registry(env, \"camera\")\n                 MoveBot(env.gsckdal.0, camera, money );\n                 donothing(env)\n\n",
+    "error": "MoveBot() missing 1 required positional argument: 'camera'",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}
