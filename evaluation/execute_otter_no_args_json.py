@@ -27,23 +27,22 @@ def parse_args():
 def gpt_process(args):
     
     idx = args.idx
-    with open('./EVLM_Task/val_15task.json') as f: #TODO change the path
+    with open('./EVLM_Task/val_34task.json') as f: #TODO change the path
         data = json.load(f)
     EVLM_name=sorted(list(data))[idx]
     # print(data[EVLM_name]['split'])
 
     if True:
         task_name=data[EVLM_name]['task_name']
-        detailed_name=data[EVLM_name]['detailed_name']
+        # detailed_name=data[EVLM_name]['detailed_name']
         # gpt_name=data[EVLM_name]['gpt_task']
         scene=data[EVLM_name]['env']
         print(idx)
         print(f"EVLM:{EVLM_name}")
         print(f"task_name:{task_name}")
-        print(f"detailed_name:{detailed_name}")
+        # print(f"detailed_name:{detailed_name}")
         task_data = data[EVLM_name]
-        gpt_task_name = task_data['detailed_name']
-        save_path = eu.f_mkdir(os.path.join('/shared/liushuai/OmniGibson/evaluation/data', gpt_task_name))
+        save_path = eu.f_mkdir(os.path.join('/shared/liushuai/OmniGibson/evaluation/data', EVLM_name))
         # main task loop
         
         main_task_flag = False
@@ -51,7 +50,6 @@ def gpt_process(args):
         gpt_query = query.Query()
         for i in range(1, 15):
             eu.f_mkdir(os.path.join(save_path, f"subtask_{i}"))
-        
         while True:
 
             # make the directory
@@ -61,7 +59,7 @@ def gpt_process(args):
             while True:
                 with open("./evaluation/finished_task.json","r")as f:
                     data = json.load(f)
-                    if gpt_task_name in data.keys():
+                    if EVLM_name in data.keys():
                         return 0
                 if os.path.exists(os.path.join(sub_save_path, 'task1.json')): #TODO align with "task1"
                     break   
@@ -74,7 +72,7 @@ def gpt_process(args):
             
             with open("./evaluation/finished_task.json","r")as f:
                 data = json.load(f)
-                if gpt_task_name in data.keys():
+                if EVLM_name in data.keys():
                     return 0
             
             # subtask loop, when a subtask is finished, close the loop
@@ -133,7 +131,7 @@ def gpt_process(args):
                 while True:
                     with open("./evaluation/finished_task.json","r")as f:
                         data = json.load(f)
-                        if gpt_task_name in data.keys():
+                        if EVLM_name in data.keys():
                             return 0               
                     if os.path.exists(os.path.join(sub_save_path, 'feedback.json')):
                         break
@@ -146,7 +144,7 @@ def gpt_process(args):
                     
                 with open("./evaluation/finished_task.json","r")as f:
                     data = json.load(f)
-                    if gpt_task_name in data.keys():
+                    if EVLM_name in data.keys():
                         return 0
 
                 with open(os.path.join(sub_save_path, 'feedback.json')) as f:

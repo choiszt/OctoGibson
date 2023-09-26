@@ -33,22 +33,22 @@ def parse_args():
 def sim_process(args):
     try:    
         idx = args.idx
-        with open('./EVLM_Task/val_15task.json') as f: #TODO change the path
+        with open('./EVLM_Task/val_34task.json') as f: #TODO change the path
             data = json.load(f)
         EVLM_name=sorted(list(data))[idx]
         if  True:
             task_name=data[EVLM_name]['task_name']
-            gpt_name=data[EVLM_name]['detailed_name']
+            # gpt_name=data[EVLM_name]['detailed_name']
+
             # scene=data[EVLM_name]['env']
             og.log.info(idx)
             og.log.info(f"EVLM:{EVLM_name}")
             og.log.info(f"task_name:{task_name}")
-            og.log.info(f"detailed_name:{gpt_name}")
+            # og.log.info(f"detailed_name:{gpt_name}")
             task_data = data[EVLM_name]
             task_name = task_data['task_name']
-            gpt_task_name = task_data['detailed_name']
             scene_name = task_data['env']
-            save_path = eu.f_mkdir(os.path.join('./evaluation/data', gpt_task_name))
+            save_path = eu.f_mkdir(os.path.join('./evaluation/data', EVLM_name))
             main_target_states = task_data['target_states']
             og.log.info(main_target_states)
             removed_items = task_data['removed_item']
@@ -68,7 +68,7 @@ def sim_process(args):
                 og.log.info(task_name, scene_name)
                 with open("./evaluation/failed_task.json","r")as f:
                     finished_task = json.load(f)
-                    finished_task[gpt_task_name] = "error"
+                    finished_task[EVLM_name] = "error"
                 with open("./evaluation/failed_task.json","w")as f:
                     f.write(json.dumps(finished_task))  
                 return 0
@@ -98,7 +98,7 @@ def sim_process(args):
                     if os.path.exists(os.path.join(save_path, f"subtask_{subtask_iter}")):
                         break
                 sub_save_path = os.path.join(save_path, f"subtask_{subtask_iter}")
-                init_pipeline(env, robot, camera,task_name=str(gpt_task_name), file_name=sub_save_path, removed_items=removed_items)
+                init_pipeline(env, robot, camera,task_name=str(EVLM_name), file_name=sub_save_path, removed_items=removed_items)
                 response_path = os.path.join(sub_save_path, 'response.json')
                 feedback_path = os.path.join(sub_save_path, 'feedback.json')
                 
@@ -125,7 +125,7 @@ def sim_process(args):
                         reset = False
                         with open("./evaluation/failed_task.json","r")as f:
                             finished_task = json.load(f)
-                            finished_task[gpt_task_name] = "failed"
+                            finished_task[EVLM_name] = "failed"
                         with open("./evaluation/failed_task.json","w")as f:
                             f.write(json.dumps(finished_task))
                         eu.save_feedback(feedback_path, subtask, code, error, critic, reset, main_succeed)
@@ -133,14 +133,14 @@ def sim_process(args):
                         return 0
                     else:
                         subtask, code = answer['subtask'], answer['code']
-                        # with open(f"./prompt_files/data/{gpt_task_name}/subtask_{subtask_iter}/action.py", 'w') as f:
+                        # with open(f"./prompt_files/data/{EVLM_name}/subtask_{subtask_iter}/action.py", 'w') as f:
                         #     f.write(heading)
                         #     f.write(code)
                         # time.sleep(2)
                         sys.path=list(set(sys.path))
                         if(subtask_iter!=1):
-                            sys.path.remove(f"./evaluation/data/{gpt_task_name}/subtask_{subtask_iter-1}")
-                        sys.path.append(f"./evaluation/data/{gpt_task_name}/subtask_{subtask_iter}")
+                            sys.path.remove(f"./evaluation/data/{EVLM_name}/subtask_{subtask_iter-1}")
+                        sys.path.append(f"./evaluation/data/{EVLM_name}/subtask_{subtask_iter}")
                         import action
                         time.sleep(1)
                         try:
@@ -179,7 +179,7 @@ def sim_process(args):
                     # for obj in target_states['obj_3']:
                     #     if obj[0] == "robot" or obj[2] == "robot":
                     #         continue
-                    #     value = eu.verify_obj_3(env,obj[0], obj[1], obj[2],obj[3], f"./prompt_files/data/{gpt_task_name}/subtask_{subtask_iter}/action.py")
+                    #     value = eu.verify_obj_3(env,obj[0], obj[1], obj[2],obj[3], f"./prompt_files/data/{EVLM_name}/subtask_{subtask_iter}/action.py")
                     #     if not value:
                     #         error += f"{obj[0]} is not {obj[1]} {obj[2]}\n"
 
@@ -234,7 +234,7 @@ def sim_process(args):
                         main_succeed = True
                         with open("./evaluation/failed_task.json","r")as f:
                             finished_task = json.load(f)
-                            finished_task[gpt_task_name] = "succeed"
+                            finished_task[EVLM_name] = "succeed"
                         with open("./evaluation/failed_task.json","w")as f:
                             f.write(json.dumps(finished_task))                        
                         og.log.info(f"finish {task_name}!!!!! congrats!!!!!")
@@ -249,20 +249,20 @@ def sim_process(args):
                 if reset: #
                     if subtask_iter!=1:
                         for iter_num in range(1,subtask_iter):
-                            path=f"./evaluation/data/{gpt_task_name}/subtask_{iter_num}"
+                            path=f"./evaluation/data/{EVLM_name}/subtask_{iter_num}"
                             with open(os.path.join(path,"feedback.json"))as f:
                                 tmp_feedback=json.load(f)
                             if tmp_feedback['critic']=='succeed':
                                 time.sleep(1)
-                                module=importlib.import_module(f"data.{gpt_task_name}.subtask_{iter_num}.action")
-                                og.log.info(f"data.{gpt_task_name}.subtask_{iter_num}.action retrieve")
+                                module=importlib.import_module(f"data.{EVLM_name}.subtask_{iter_num}.action")
+                                og.log.info(f"data.{EVLM_name}.subtask_{iter_num}.action retrieve")
                                 module.act(robot,env,camera)   
                 if subtask_iter>14:
                     #write json
                     og.log.info(f"already attempt {subtask_iter} time, it is too long!")
                     with open("./evaluation/failed_task.json","r")as f:
                         finished_task = json.load(f)
-                        finished_task[gpt_task_name] = "failed"
+                        finished_task[EVLM_name] = "failed"
                     with open("./evaluation/failed_task.json","w")as f:
                         f.write(json.dumps(finished_task))    
                     env.close()        
@@ -272,7 +272,7 @@ def sim_process(args):
         og.log.info(f"loop failed")
         with open("./evaluation/failed_task.json","r")as f:
             finished_task = json.load(f)
-            finished_task[gpt_task_name] = "error"
+            finished_task[EVLM_name] = "error"
         with open("./evaluation/failed_task.json","w")as f:
             f.write(json.dumps(finished_task)) 
         return 0

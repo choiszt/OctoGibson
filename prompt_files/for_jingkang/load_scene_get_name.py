@@ -37,10 +37,10 @@ def _decomposed(self): #decomposed all the object in the env at the very beginni
 
 def sim_process(args):   
     idx = args.idx
-    with open('/shared/liushuai/OmniGibson/EVLM_Task/all.json') as f: #TODO change the path
+    with open('/shared/liushuai/OmniGibson/EVLM_Task/val_36task.json') as f: #TODO change the path
         data = json.load(f)
     EVLM_name=sorted(list(data))[idx]
-    if "train" in data[EVLM_name]['split']:
+    if True:
         task_name=data[EVLM_name]['task_name']
         gpt_name=data[EVLM_name]['detailed_name']
         # scene=data[EVLM_name]['env']
@@ -73,27 +73,27 @@ def sim_process(args):
                     if ele not in removed_items:
                         OG_results.append(OG_dict[ele])
 
-            with open("/shared/liushuai/OmniGibson/prompt_files/from_jingkang/scene_object.json","r")as f:
+            with open("/shared/liushuai/OmniGibson/prompt_files/for_jingkang/36_scene_object.json","r")as f:
                 scene_object=json.load(f)
                 scene_object[EVLM_name]=OG_results
-            with open("/shared/liushuai/OmniGibson/prompt_files/from_jingkang/scene_object.json","w")as f:
+            with open("/shared/liushuai/OmniGibson/prompt_files/for_jingkang/36_scene_object.json","w")as f:
                 f.write(json.dumps(scene_object))
         except:
             og.log.info("Loading Environment Error!!!")
             og.log.info(task_name, scene_name)
-            with open("/shared/liushuai/OmniGibson/prompt_files/from_jingkang/val_task.json","r")as f:
+            with open("/shared/liushuai/OmniGibson/prompt_files/for_jingkang/val_task.json","r")as f:
                 finished_task = json.load(f)
                 finished_task[gpt_task_name] = "error"
-            with open("/shared/liushuai/OmniGibson/prompt_files/from_jingkang/val_task.json","w")as f:
+            with open("/shared/liushuai/OmniGibson/prompt_files/for_jingkang/val_task.json","w")as f:
                 f.write(json.dumps(finished_task))  
             return 0
     return 0
     # except:
     #     og.log.info(f"loop failed")
-    #     with open("/shared/liushuai/OmniGibson/prompt_files/from_jingkang/val_task.json","r")as f:
+    #     with open("/shared/liushuai/OmniGibson/prompt_files/for_jingkang/val_task.json","r")as f:
     #         finished_task = json.load(f)
     #         finished_task[gpt_task_name] = "error"
-    #     with open("/shared/liushuai/OmniGibson/prompt_files/from_jingkang/val_task.json","w")as f:
+    #     with open("/shared/liushuai/OmniGibson/prompt_files/for_jingkang/val_task.json","w")as f:
     #         f.write(json.dumps(finished_task)) 
     #     return 0
 

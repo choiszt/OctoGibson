@@ -17,12 +17,29 @@ def get_allobject():
         allobject.update({ele:list(object['objects_info']['init_info'].keys())})
     with open("/shared/liushuai/OmniGibson/prompt_files/for_jingkang/all_object.json","w")as f:
         f.write(json.dumps(allobject))
+def get_34object():
+    with open("/shared/liushuai/OmniGibson/EVLM_Task/val_34task.json","r")as f:
+        task=json.load(f)
+        print(len(task))
+    allobject={}
+    for ele in sorted(task.keys()):
+        scene_name=task[ele]['env']
+        bddl_name=task[ele]['task_name']
+        jsonpath=f"{scene_name}_task_{bddl_name}_0_0_template.json"
+        targetpath=f"/home/liushuai/.conda/envs/omni/lib/python3.7/site-packages/omnigibson-0.2.0-py3.7.egg/omnigibson/data/og_dataset/scenes/{scene_name}/json/{jsonpath}"
 
+        detailed_name=task[ele]['detailed_name']
 
-with open("/shared/liushuai/OmniGibson/prompt_files/for_jingkang/all_object.json",'r')as f:
+        with open(targetpath,"r")as f:
+            object=json.load(f)
+        allobject.update({ele:list(object['objects_info']['init_info'].keys())})
+    with open("/shared/liushuai/OmniGibson/prompt_files/for_jingkang/val_34task_object.json","w")as f:
+        f.write(json.dumps(allobject))
+
+with open("/shared/liushuai/OmniGibson/prompt_files/for_jingkang/val_34task_object.json",'r')as f:
     all_object=json.load(f)
 
-with open("/shared/liushuai/OmniGibson/prompt_files/for_jingkang/scene_object.json","r")as f:
+with open("/shared/liushuai/OmniGibson/prompt_files/for_jingkang/34_scene_object.json","r")as f:
     sim_object=json.load(f)
 
 filtered_dict={}
@@ -50,18 +67,15 @@ for ele in all_object.keys():
             json_list.append(obj)
             wiped_dict.update({ele:json_list})
 
-with open("/shared/liushuai/OmniGibson/prompt_files/for_jingkang/wiped_object.json","w")as f:
-    f.write(json.dumps(wiped_dict))       
+# with open("/shared/liushuai/OmniGibson/prompt_files/for_jingkang/wiped_object.json","w")as f:
+#     f.write(json.dumps(wiped_dict))       
 
 
 
 for ele in sim_object.keys():
-    try:
-        for obj in sim_object[ele]:
-            if obj not in wiped_dict[ele]:
-                wiped_dict[ele].append(obj)
-    except:
-        pass
-
+    for obj in sim_object[ele]:
+        if obj not in wiped_dict[ele]:
+            wiped_dict[ele].append(obj)
+            
 with open("/shared/liushuai/OmniGibson/prompt_files/for_jingkang/wiped+scene.json","w")as f:
     f.write(json.dumps(wiped_dict))
