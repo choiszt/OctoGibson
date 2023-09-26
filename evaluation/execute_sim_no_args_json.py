@@ -257,7 +257,7 @@ def sim_process(args):
                                 module=importlib.import_module(f"data.{EVLM_name}.subtask_{iter_num}.action")
                                 og.log.info(f"data.{EVLM_name}.subtask_{iter_num}.action retrieve")
                                 module.act(robot,env,camera)   
-                if subtask_iter>14:
+                if subtask_iter>6:
                     #write json
                     og.log.info(f"already attempt {subtask_iter} time, it is too long!")
                     with open("./evaluation/failed_task.json","r")as f:
