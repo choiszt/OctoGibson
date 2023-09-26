@@ -48,7 +48,7 @@ def gpt_process(args):
         main_task_flag = False
         subtask_iter = 1
         gpt_query = query.Query()
-        for i in range(1, 6):
+        for i in range(1, 7):
             eu.f_mkdir(os.path.join(save_path, f"subtask_{i}"))
         while True:
 
@@ -171,7 +171,7 @@ def gpt_process(args):
             subtask_iter += 1
             
             #write json
-            if subtask_iter>6:
+            if subtask_iter>8:
                 print(f"already attempt {subtask_iter} time, it is too long!")
                 return 0
 

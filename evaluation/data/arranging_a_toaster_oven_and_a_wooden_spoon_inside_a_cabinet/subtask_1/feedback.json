@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move the robot to the toasteroven.\n(2) Grasp the tosteroven. \\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\n(3) Move awnet to the bottom_cabinet_no_top_vzzafs_0.\n3) Open the bottom-cabinate.\n4) Put the tostove inside the bottom cabinet.\n5) Gramp the wooden spoon.\n6) Putthe wooden spoon in the bottomcabine.\n",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Move the Robot to the Toasteroven\n    toasteroven_188 = registry(env,\"toaster oven_188\")\n    MoveBot(env, robot, toasterove_188, camera)\n    donothing(env)\n\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": true
-}
