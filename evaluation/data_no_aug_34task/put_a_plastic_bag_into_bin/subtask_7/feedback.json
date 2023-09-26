@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register the robot and the trashcan\n(2) Move the robot to the plastic bag\n(3) Grasp the plastic.\n(4) Moveback to the recyclery bin.\n4) Putthe plastic bag into the recycling bin\n",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Register the recycling\n    plastic_recycling = registry(task_group,\"plastic_basket_281\")\n\n",
+    "error": "local variable 'plastic_recycling' referenced before assignment",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

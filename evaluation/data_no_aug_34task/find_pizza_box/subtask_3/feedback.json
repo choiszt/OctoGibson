@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot To the oven\n(2) Grasp the baking box (the pizza box)from the oven).\n(3) Move to Thedistance to TheCakebox.\n(4) Open thecake box (Anotherpizz)\n(5) Grash the oven, which is currently closed.\n",
+    "code": "def act(rowbot,env,camera):\n    # Subtask 2: Grasp The baking box(the pizza) From the oven:\n    baking_box_87 = registry(env,\" baking_box___87\")\n    EasyGrasp(robot, baking_sheet_87)\n    donothing(env)\n  \n\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

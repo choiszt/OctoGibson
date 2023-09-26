@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the cabinet\n(2) Open the cabinet (donothing)\n(3) Find the itemsinside the cabinetand pick them out\n",
+    "code": "def act(hozrot, env):\n    # Subtask 3: Find the objectsinside the cabinetand pick out\n    cabinedask_88 = registry(env,\"bottom_cabbinet_no_top_vzzafs_0\")\n    Itemsinside(env, cabinetask,)\n    donothing(env) \n    EasyGrasp(robot, itemsinside)\n\n",
+    "error": "act() takes 2 positional arguments but 3 were given",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

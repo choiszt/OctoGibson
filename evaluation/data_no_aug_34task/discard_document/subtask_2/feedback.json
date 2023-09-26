@@ -1,0 +1,8 @@
+{
+    "subtask": "\n( 1) Grase the document,\n( 2) Move the robot To the cutting Recycling bin\n (3) put the document In the recycling can\n",
+    "code": "def act(task,robot):\n        # SubTask 2: Move the Robot To the Cutting Recyclage bin\n        cutting_recycling_bin = registry (env, 'cutting_repcycling-bin_188')\n        MoveBot(env.env, robot, cutting_recycle_bin, camera)\n        donothing (env)\n\n",
+    "error": "duplicate argument 'robot' in function definition (action.py, line 9)",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

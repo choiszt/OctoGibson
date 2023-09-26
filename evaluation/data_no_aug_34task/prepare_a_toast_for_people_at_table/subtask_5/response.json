@@ -1,0 +1,10 @@
+{
+    "response": {
+        "explain": " The previous action code successfully opened the fridge. The next step is to find the toast inside the fridge and take it out.",
+        "subtask": "\n(1) Move Front of fridge.\n(2) Open fridge. \n (3) Find the toaster inside the refrigerator.\n",
+        "code": "def act(rotbot, env.1, camera.1 ):\n    # Subtask 3: Find the Toaster inside refrigerator\n    toast = registry(env, \"toaster_85\")\n    MoveBot(env.0, toaster_81, camera.0)\n    donothing(env)\n\n",
+        "inventory": null,
+        "obj_2": null,
+        "obj_3": null
+    }
+}

@@ -1,0 +1,3 @@
+{
+    "input": "Inventory: None\nTask Goal: prepare_a_toast_for_people_at_table\nOriginal Subtasks: \n(1) Move from the counter top.\n(2) Grasp a slice on the butter bread. Put the cheese in the slice.\n\nPrevious Action Code: def act(rob,env,bread_85):\n        # Subtask 1: Move from a counter top\n        countertop = registry(env, \"countertop_tpuwys_2\")\n        MoveBot(env.0, robot, countertop, camera)\n        donothing(env)\n\n\nExecution Error: duplicate argument 'env' in function definition (action.py, line 9)\nNow, please output Explain, Subtasks (revise if necessary), Code that completing the next subtask, and Target States, according to the instruction above. Remember you can only use the functions provided above and pay attention to the response format."
+}

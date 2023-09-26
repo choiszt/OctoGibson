@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(0) Register the case_188\n(11) Move a robot to a case\n (12) Open a case \n (13) Take a bookout from a case_189\n(14) Put The robotto the car_275\n(15) Openthe car_277\n(16) Putthe bookinto The car_278\n",
+    "code": "def act(rosbot, env, camera):\n     # Subcase 0: Register the car and a book\n     book = registry (env, 'book_190')\n     car = registry (\"car_275\")\n\n",
+    "error": "registry() missing 1 required positional argument: 'obj_name'",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

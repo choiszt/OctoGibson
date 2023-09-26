@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(2) Open the door\n(4) Take out the contents of the fridge\n",
+    "code": "def act(robot,env):\n  # Subtier 2: Open the doorway\n  door = registry (env, 'door_xyezr_0')\n  open(roBot, door)\n  donothing(env)\n\n",
+    "error": "act() takes 2 positional arguments but 3 were given",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register the 'rotbot'\n(2) Move the robot to the plastic_baquet_278 \n(3) Grasp the plastic(_bowl)_275\n(4) Move The robot_to the_recycle(basket)_bin_279\n(5) put The_baset into The(cycle)_binary)\n",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Register the \"rotbot\"\n    rotbot = registry(task_goal,\"rotbot\")\n    \n    donothing (env)\n\n \n",
+    "error": "'VisionSensor' object has no attribute 'scene'",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

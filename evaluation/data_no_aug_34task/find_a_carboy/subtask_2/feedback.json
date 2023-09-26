@@ -1,0 +1,8 @@
+{
+    "subtask": "\n( 1) Move To The Reagents bottle (Reverse_basket)\n( 2) Grip the reagent (pot) (reagon_pot)\nMove back to The original location\n",
+    "code": "def act(brobot, env, camera):\n  # Subask 2: Grasp The Reag(pot) Pot\n  reagent pot = registry (env, \"'reagentpot_192'\")\n  EasyGrasp(broot, reagent pot)\n  donothing(env)\n\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

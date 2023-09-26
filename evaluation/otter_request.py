@@ -20,6 +20,25 @@ def image_to_base64(image_path):
         image_file=image_file.resize((224,224))
         return base64.b64encode(image_file.read()).decode('utf-8')
 
+def code_llamarequest(content,image_list):
+    url = "http://172.21.25.95:5435/app/otter"
+    headers = {
+        "Content-Type": "application/json"
+    }
+    data_payload = {
+        "content": [
+            {
+                "prompt": content,
+            }
+        ],
+        "token": "sk-ICLRBESTPAPERAWARDOCTOPUS"
+    }
+
+    # Make the POST request
+    response = requests.post(url, headers=headers, data=json.dumps(data_payload))
+    print(response.text)
+    return response.text
+
 def otter_request(content, image_list):
     # Define the URL and headers
     url = "http://172.21.25.95:5433/app/otter"

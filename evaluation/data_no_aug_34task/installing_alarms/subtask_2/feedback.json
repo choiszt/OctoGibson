@@ -1,0 +1,8 @@
+{
+    "subtask": "\n( 1) Register the alarm and the ground\n( 2) Move a robot to a ground\n (3) Grape the alarm\n( 4) Move to the front of the alarmcondition\n(5) Putthe alarmcondition.\n",
+    "code": "def act(rotbot, env, camera):\n  # Subtopic 1: Register thealarms and theground\n  alarm = registry(env,\"alarm\")\n  ground = registry(\"ground\")\n\n",
+    "error": "registry() missing 1 required positional argument: 'obj_name'",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

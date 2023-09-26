@@ -11,7 +11,7 @@ import otter_query as query
 from imp import reload
 import env_utils_gpt as eu 
 import openai
-from otter_request import otter_request
+from otter_request import otter_request,code_llamarequest
 # from gpt_request import gpt_request
 from gpt_request_azure import gpt_request
 import argparse
@@ -96,6 +96,8 @@ def gpt_process(args):
                         signal=True
                         for i in range(20):
                             try:
+                                if i==19:
+                                    return 0
                                 print(f"try:{i}")
                                 response=otter_request(content, image_list)
                                 response=response.replace("\\n","\n")
@@ -131,8 +133,8 @@ def gpt_process(args):
                     
                 eu.save_response(sub_save_path, answer)
                 if signal==False:
-                    break
-                
+                    return 0
+
                 while True:
                     with open("./evaluation/finished_task.json","r")as f:
                         data = json.load(f)
