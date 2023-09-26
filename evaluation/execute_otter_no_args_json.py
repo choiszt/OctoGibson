@@ -93,7 +93,8 @@ def gpt_process(args):
                     image_list.append(i)
                 if True:
                     while succuss:
-                        for i in range(10):
+                        signal=True
+                        for i in range(20):
                             try:
                                 print(f"try:{i}")
                                 response=otter_request(content, image_list)
@@ -101,11 +102,13 @@ def gpt_process(args):
                                 answer = gpt_query.process_ai_message(sub_save_path,response,EVLM_name)
                                 #if parsed succuessfully:
                                 succuss = False
+                                signal=True
                                 break
                             except Exception as e:
                                 answer = str(e)
                                 print(answer)
                                 succuss = False
+                                signal=False
                             # except Exception as e:
                             #     print(f"Error: {e}")
                             #     if "exceeded" in str(e):
@@ -127,7 +130,9 @@ def gpt_process(args):
                 #     print(answer)
                     
                 eu.save_response(sub_save_path, answer)
-
+                if signal==False:
+                    break
+                
                 while True:
                     with open("./evaluation/finished_task.json","r")as f:
                         data = json.load(f)
