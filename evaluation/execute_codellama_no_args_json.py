@@ -96,11 +96,11 @@ def gpt_process(args):
                         for i in range(20):
                             try:
                                 if i==19:
-                                    return 0
+                                    return 0                        
                                 print(f"try:{i}")
                                 response=code_llamarequest(content, image_list)
                                 response=response.replace("\\n","\n")
-                                answer = gpt_query.process_ai_message(sub_save_path,response,EVLM_name)
+                                answer = gpt_query.process_ai_message_no_fixed_code(sub_save_path,response,EVLM_name)
                                 #if parsed succuessfully:
                                 succuss = False
                                 signal=True

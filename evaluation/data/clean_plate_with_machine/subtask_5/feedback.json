@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Grasp the plate.\n(2) Move to the machine.\n(3) Put the plate into the machine.\n",
-    "code": "def act(robot,env,camera):\n    # Subtask 3: Put the plate into the machine\n    plate_170 = registry(env,\"plate_170\")\n    unfold(robot, plate_170)\n    donothing(env)\n\n",
-    "error": "Wrong state or operation ('unfoldable', 1)",
-    "critic": "fail",
-    "reset": true,
-    "main_succeed": false
-}

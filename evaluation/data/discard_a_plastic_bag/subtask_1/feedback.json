@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Open the clothes dryer.\n(2) Take out the plastic bag from the clothes dryer.\n",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Open the clothes dryer.\n    clothes_dryer = registry(env, \"clothes_dryer_zlmnfg_0\")\n    open(robot, clothes_dryer)\n    donothing(env)\n\n",
+    "error": "Cannot open! robot is not within four meters of <omnigibson.objects.dataset_object.DatasetObject object at 0x7efca0594c90>",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

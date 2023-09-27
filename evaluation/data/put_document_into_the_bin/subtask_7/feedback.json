@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Grasp the document.\n(2) Move to the bin.\n(3) Put the document into the bin.\n",
+    "code": "def act(robot,env,camera):\n    # Subtask 3: Put the document into the bin.\n    legal_document_189 = registry(env,\"legal_document_189\")\n    recycling_bin_188 = registry(env,\"recycling_bin_188\")\n    put_inside(robot, legal_document_189, recycling_bin_188)\n    donothing(env)\n\n",
+    "error": "unfold() takes 2 positional arguments but 3 were given",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

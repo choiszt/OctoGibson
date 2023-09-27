@@ -159,15 +159,19 @@ class Query:
             
         return HumanMessage(content=message)
 
-    def process_ai_message(self, message):
+    def process_ai_message_no_fixed_code(self,sub_save_path, message,EVLM_key):
         # assert isinstance(message, AIMessage)
-
+        path=sub_save_path
+        message=message.replace('{"result":',"").replace("}",'')
         processed_message = message
         # with open('./answer.txt', 'w') as f:
         #     f.write(processed_message)
         retry = 1
         error = None
-        classes = ["Explain:", "Subtasks:", "Code:", "Target States:"]
+        if "Subtasks:" in message:
+            classes = ["Explain:", "Subtasks:", "Code:", "Target States:"]
+        if "Subtask:" in message:
+            classes = ["Explain:", "Subtask:", "Code:", "Target States:"]
         idxs = []
         for c in classes:
             m = processed_message.find(c)
@@ -187,12 +191,21 @@ class Query:
             explain_str = explain_str.replace('\n\n', '')
             
             #SUBTASK
-            subtask_str = subtask.split('Subtasks:')[1]
-            subtask_str = subtask_str.replace('\n\n', '')
+            if "Subtask:" in message:
+                subtask_str = subtask.split('Subtask:')[1]
+                subtask_str = subtask_str.replace('\n\n', '')
+            else:
+                subtask_str = subtask.split('Subtasks:')[1]
+                subtask_str = subtask_str.replace('\n\n', '')
             
             #CODE
-            code_str = code.split('```python\n')[1].split('```')[0]
-            
+            # code_str = code.split('```python\n')[1].split('```')[0]
+            code_str=code.replace("Code:\n","").replace("\\","").split("Inv")[0]
+            heading="import os \nimport json\nimport yaml\nimport omnigibson as og\nfrom action_list import * \nfrom action_utils import *\n"
+            with open(os.path.join(path,"action.py"),"w")as f:
+                f.write(heading)
+                f.write(code_str)
+
             #TARGET            
             inv = target.split('Inventory:')[1]
             inv = inv.split('\n')[0]

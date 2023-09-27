@@ -1,0 +1,13 @@
+import os 
+import json
+import yaml
+import omnigibson as og
+from action_list import * 
+from action_utils import *
+
+
+def act(robot, env, camera):
+    shopping_cart = registry(env, "shopping_cart_kmgltg_1")
+    chocolates = registry(env, "box_of_chocolates_143")
+    unfold(robot, chocolates, shopping_cart)
+    donothing(env)
