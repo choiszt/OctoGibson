@@ -1,0 +1,558 @@
+[INFO] [omnigibson] ---------- Starting OmniGibson ----------
+[Warning] [omni.isaac.kit.simulation_app] Modules: ['omnigibson', 'omnigibson.macros', 'omni', 'omni.kit.app._impl.telemetry_helpers'] were loaded before SimulationApp was started and might not be loaded correctly.
+[Warning] [omni.isaac.kit.simulation_app] Please check to make sure no extra omniverse or pxr modules are imported before the call to SimulationApp(...)
+[Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+[0.150s] [ext: omni.stats-0.0.0] startup
+[0.169s] [ext: omni.rtx.shadercache-1.0.0] startup
+[0.172s] [ext: omni.assets.plugins-0.0.0] startup
+[0.172s] [ext: omni.gpu_foundation-0.0.0] startup
+[0.178s] [ext: carb.windowing.plugins-1.0.0] startup
+[0.182s] [ext: omni.kit.renderer.init-0.0.0] startup
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 470.199.2     | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 3060          | Yes: 0 |     | 12534   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2504      | bb7bb85a.. |
+|---------------------------------------------------------------------------------------------|
+| 1   | NVIDIA GeForce RTX 3060          |        |     | 12534   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2504      | 94d1d45f.. |
+|=============================================================================================|
+| OS: Linux OpenOOD, Version: 6.2.0-33-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101004 (1.21.1.4)
+| Processor: 12th Gen Intel(R) Core(TM) i7-12700KF | Cores: Unknown | Logical: 20
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 128618 | Free Memory: 120846
+| Total Page/Swap (MB): 2047 | Free Page/Swap: 2047
+|---------------------------------------------------------------------------------------------|
+[0.759s] [ext: omni.kit.pipapi-0.0.0] startup
+[0.762s] [ext: omni.kit.pip_archive-0.0.0] startup
+[0.772s] [ext: omni.kit.loop-isaac-1.0.0] startup
+[0.773s] [ext: omni.kit.async_engine-0.0.0] startup
+[0.774s] [ext: omni.kit.test-0.0.0] startup
+[0.875s] [ext: omni.usd.config-1.0.0] startup
+[0.878s] [ext: omni.usd.libs-1.0.0] startup
+[0.998s] [ext: omni.isaac.core_archive-2.0.1] startup
+[1.081s] [ext: omni.pip.torch-1_13_0-0.1.4] startup
+[1.084s] [ext: omni.isaac.ml_archive-1.1.0] startup
+[1.143s] [ext: omni.client-0.1.1] startup
+[1.150s] [ext: omni.appwindow-1.0.1] startup
+[1.154s] [ext: omni.kit.renderer.core-0.0.0] startup
+[1.424s] [ext: omni.kit.renderer.capture-0.0.0] startup
+[1.426s] [ext: omni.kit.renderer.imgui-0.0.0] startup
+[1.475s] [ext: carb.audio-0.1.0] startup
+[1.477s] [ext: omni.ui-2.12.23] startup
+[1.485s] [ext: omni.uiaudio-1.0.0] startup
+[1.486s] [ext: omni.kit.mainwindow-1.0.0] startup
+[1.488s] [ext: omni.kit.uiapp-0.0.0] startup
+[1.488s] [ext: omni.usd.schema.physics-1.0.0] startup
+[1.522s] [ext: omni.usd.schema.omniscripting-1.0.0] startup
+[1.528s] [ext: omni.usd.schema.audio-0.0.0] startup
+[1.533s] [ext: omni.usd.schema.semantics-0.0.0] startup
+[1.542s] [ext: omni.usd.schema.anim-0.0.0] startup
+[1.595s] [ext: omni.usd.schema.omnigraph-1.0.0] startup
+[1.602s] [ext: omni.usd.schema.geospatial-0.0.0] startup
+[1.610s] [ext: omni.usd.core-1.0.0] startup
+[1.612s] [ext: omni.gpucompute.plugins-0.0.0] startup
+[1.612s] [ext: omni.timeline-1.0.5] startup
+[1.614s] [ext: omni.kit.audiodeviceenum-1.0.0] startup
+[1.616s] [ext: omni.hydra.usdrt_delegate-4.1.1] startup
+[1.627s] [ext: omni.kit.window.popup_dialog-2.0.15] startup
+[1.632s] [ext: omni.kit.actions.core-1.0.0] startup
+[1.634s] [ext: omni.kit.widget.nucleus_connector-1.0.2] startup
+[1.637s] [ext: omni.kit.commands-1.4.5] startup
+[1.640s] [ext: omni.hydra.scene_delegate-0.3.0] startup
+[1.644s] [ext: omni.usd-1.6.23] startup
+[1.678s] [ext: omni.kit.asset_converter-1.2.39] startup
+[1.689s] [ext: omni.usd.schema.physx-0.0.0] startup
+[1.732s] [ext: omni.usd.schema.isaac-1.0.0] startup
+[1.746s] [ext: omni.usd.schema.forcefield-0.0.0] startup
+[1.752s] [ext: omni.kit.collaboration.channel_manager-1.0.9] startup
+[1.754s] [ext: omni.inspect-1.0.1] startup
+[1.758s] [ext: omni.kit.menu.utils-1.4.7] startup
+[1.766s] [ext: omni.kit.usd.layers-2.0.10] startup
+[1.771s] [ext: omni.graph.core-2.64.7] startup
+[1.774s] [ext: omni.iray.libs-0.0.0] startup
+[1.776s] [ext: omni.kit.primitive.mesh-1.0.6] startup
+[1.779s] [ext: omni.volume-0.1.0] startup
+[1.781s] [ext: omni.mdl.neuraylib-0.1.0] startup
+[1.783s] [ext: omni.kit.stage_templates-1.1.11] startup
+[1.785s] [ext: omni.graph.tools-1.17.0] startup
+[1.797s] [ext: omni.hydra.rtx-0.1.0] startup
+[1.801s] [ext: omni.kit.usd_undo-0.1.1] startup
+[1.803s] [ext: omni.ui.scene-1.5.17] startup
+[1.807s] [ext: omni.graph-1.50.1] startup
+[1.833s] [ext: omni.debugdraw-0.1.1] startup
+[1.837s] [ext: omni.hydra.engine.stats-1.0.0] startup
+[1.841s] [ext: omni.kit.search_core-1.0.1] startup
+[1.843s] [ext: omni.kit.widget.path_field-2.0.4] startup
+[1.843s] [ext: omni.kit.widget.versioning-1.3.8] startup
+[1.844s] [ext: omni.kit.widget.filebrowser-2.3.8] startup
+[1.856s] [ext: omni.kit.widget.browser_bar-2.0.4] startup
+[1.856s] [ext: omni.kit.notification_manager-1.0.4] startup
+[1.862s] [ext: omni.kvdb-0.0.0] startup
+[1.864s] [ext: omni.kit.window.filepicker-2.7.8] startup
+OmniAssetFileFormat
+[1.903s] [ext: omni.kit.viewport.registry-104.0.2] startup
+[1.905s] [ext: omni.kit.window.file_importer-1.0.8] startup
+[1.906s] [ext: omni.hydra.pxr-1.1.2] startup
+[1.909s] [ext: omni.mdl-0.1.0] startup
+[1.921s] [ext: omni.kit.clipboard-1.0.0] startup
+[1.922s] [ext: omni.activity.core-1.0.1] startup
+[1.925s] [ext: omni.kit.hydra_texture-1.0.11] startup
+[1.930s] [ext: omni.kit.material.library-1.3.21] startup
+[1.934s] [ext: omni.kit.menu.create-1.0.8] startup
+[1.935s] [ext: omni.kit.window.drop_support-1.0.1] startup
+[1.935s] [ext: omni.kit.widget.viewport-104.1.15] startup
+[1.936s] [ext: omni.kit.viewport.legacy_gizmos-1.0.8] startup
+[1.939s] [ext: omni.kit.context_menu-1.5.10] startup
+[1.941s] [ext: omni.kit.viewport.window-104.1.18] startup
+[1.960s] [ext: omni.localcache-0.0.0] startup
+[1.963s] [ext: omni.kit.window.viewport-0.0.0] startup
+[2.705s] [ext: omni.convexdecomposition-104.1.6-5.1] startup
+[2.708s] [ext: omni.kit.viewport.utility-1.0.12] startup
+[2.708s] [ext: omni.kit.window.file_exporter-1.0.10] startup
+[2.709s] [ext: omni.ui_query-1.1.1] startup
+[2.713s] [ext: omni.kit.window.file-1.3.30] startup
+[2.715s] [ext: omni.kit.window.content_browser_registry-0.0.1] startup
+[2.716s] [ext: omni.kit.ui_test-1.2.9] startup
+[2.747s] [ext: omni.kit.window.property-1.8.2] startup
+[2.748s] [ext: omni.kit.window.content_browser-2.6.5] startup
+[2.760s] [ext: omni.kit.widget.stage-2.7.18] startup
+[2.763s] [ext: omni.usdphysics-104.1.6-5.1] startup
+[2.765s] [ext: omni.kit.property.usd-3.18.12] startup
+[2.771s] [ext: omni.physx-104.1.6-5.1] startup
+[2.798s] [ext: omni.kit.widget.settings-1.0.1] startup
+[2.799s] [ext: omni.kit.widget.graph-1.5.3] startup
+[2.822s] [ext: omni.kit.widget.text_editor-1.0.2] startup
+[2.823s] [ext: omni.kit.window.preferences-1.3.7] startup
+[2.848s] [ext: omni.kit.window.extensions-1.1.1] startup
+[2.852s] [ext: omni.kit.widget.prompt-1.0.4] startup
+[2.852s] [ext: omni.physics.tensors-0.1.0] startup
+[2.858s] [ext: omni.graph.ui-1.24.1] startup
+[2.878s] [ext: omni.isaac.version-1.0.0] startup
+[2.879s] [ext: omni.physx.tensors-0.1.0] startup
+[2.884s] [ext: omni.graph.action-1.31.0] startup
+[2.889s] [ext: omni.kit.numpy.common-0.1.0] startup
+[2.891s] [ext: omni.kit.graph.delegate.default-1.0.18] startup
+[2.893s] [ext: omni.kit.widget.searchfield-1.0.8] startup
+[2.893s] [ext: omni.isaac.dynamic_control-1.2.2] startup
+[2.899s] [ext: omni.kit.manipulator.viewport-104.0.7] startup
+[2.899s] [ext: omni.kit.graph.editor.core-1.4.7] startup
+[2.900s] [ext: omni.isaac.core-1.42.0] startup
+[3.501s] [ext: omni.graph.visualization.nodes-2.0.0] startup
+[3.505s] [ext: omni.kit.graph.widget.variables-2.0.4] startup
+[3.506s] [ext: omni.isaac.ui-0.4.3] startup
+[3.507s] [ext: omni.isaac.isaac_sensor-2.0.0] startup
+[3.507s] [ext: omni.isaac.surface_gripper-0.3.2] startup
+[3.510s] [ext: omni.kit.graph.usd.commands-1.2.0] startup
+[3.510s] [ext: omni.kit.graph.delegate.modern-1.6.4] startup
+[3.511s] [ext: omni.isaac.manipulators-1.1.0] startup
+[3.512s] [ext: omni.graph.window.core-1.41.0] startup
+[3.520s] [ext: omni.isaac.mjcf-0.3.0] startup
+[3.526s] [ext: omni.graph.window.generic-1.3.10] startup
+[3.526s] [ext: omni.kit.widget.spinner-1.0.4] startup
+[3.527s] [ext: omni.kit.window.cursor-1.1.1] startup
+[3.528s] [ext: omni.isaac.lula-1.2.1] startup
+[3.537s] [ext: omni.graph.nodes-1.48.3] startup
+[3.545s] [ext: omni.kit.viewport.menubar.core-104.4.1] startup
+[3.559s] [ext: omni.isaac.motion_planning-0.2.1] startup
+[3.566s] [ext: omni.kit.widget.zoombar-1.0.4] startup
+[3.566s] [ext: omni.syntheticdata-0.2.4] startup
+[3.580s] [ext: omni.isaac.motion_generation-4.5.5] startup
+[3.582s] [ext: omni.kit.browser.core-2.2.1] startup
+[3.586s] [ext: omni.isaac.synthetic_utils-0.4.2] startup
+[3.590s] [ext: omni.isaac.universal_robots-0.3.1] startup
+[3.590s] [ext: omni.kit.browser.folder.core-1.7.1] startup
+[3.592s] [ext: omni.isaac.urdf-0.5.4] startup
+[3.609s] [ext: omni.isaac.utils-0.2.3] startup
+[3.612s] [ext: omni.kit.browser.sample-1.2.4] startup
+[3.613s] [ext: omni.graph.scriptnode-0.9.3] startup
+[3.615s] [ext: omni.command.usd-1.0.1] startup
+[3.617s] [ext: omni.warp-0.6.1] startup
+[3.787s] [ext: omni.kit.widget.live_session_management-1.1.3] startup
+[3.788s] [ext: omni.kit.hotkeys.core-1.0.8] startup
+[3.792s] [ext: omni.replicator.core-1.6.4] startup
+[3.890s] [ext: omni.kit.widget.highlight_label-1.0.0] startup
+[3.891s] [ext: omni.kit.widget.layers-1.6.9] startup
+[3.897s] [ext: omni.isaac.core_nodes-0.21.0] startup
+[3.905s] [ext: omni.kit.actions.window-1.1.0] startup
+[3.908s] [ext: omni.isaac.debug_draw-0.2.2] startup
+[3.911s] [ext: omni.kit.property.layer-1.1.3] startup
+[3.913s] [ext: omni.isaac.wheeled_robots-0.6.1] startup
+[3.922s] [ext: omni.kit.hotkeys.window-1.1.3] startup
+[3.925s] [ext: omni.isaac.occupancy_map-0.2.6] startup
+[3.933s] [ext: omni.kit.property.audio-1.0.6] startup
+[3.934s] [ext: omni.kit.property.camera-1.0.3] startup
+[3.935s] [ext: omni.kit.property.geometry-1.2.2] startup
+[3.937s] [ext: omni.kit.widget.stage_icons-1.0.2] startup
+[3.938s] [ext: omni.kit.property.light-1.0.6] startup
+[3.938s] [ext: omni.kit.property.material-1.8.16] startup
+[3.940s] [ext: omni.hydra.scene_api-0.1.1] startup
+[3.945s] [ext: omni.kit.window.stage-2.3.11] startup
+[3.947s] [ext: omni.kit.property.render-1.1.0] startup
+[3.947s] [ext: omni.kit.property.skel-1.0.1] startup
+[3.948s] [ext: omni.kit.property.transform-1.3.4] startup
+[3.950s] [ext: omni.kit.menu.stage-1.2.1] startup
+[3.950s] [ext: omni.kit.manipulator.transform-104.6.11] startup
+[3.952s] [ext: omni.kit.profiler.window-2.0.4] startup
+[4.090s] [ext: omni.kit.property.bundle-1.2.6] startup
+[4.091s] [ext: omni.kit.manipulator.selector-1.0.1] startup
+[4.091s] [ext: omni.kit.manipulator.tool.snap-1.2.2] startup
+[4.095s] [ext: omni.kit.window.toolbar-1.3.3] startup
+[4.099s] [ext: omni.kit.property.isaac-0.1.1] startup
+[4.100s] [ext: omni.kit.stage_column.payload-1.0.8] startup
+[4.101s] [ext: omni.kit.manipulator.camera-104.0.22] startup
+[4.101s] [ext: omni.kit.manipulator.prim-104.10.5] startup
+[4.104s] [ext: omni.kit.manipulator.selection-104.0.6] startup
+[4.104s] [ext: omni.kit.viewport.menubar.camera-104.1.7] startup
+[4.107s] [ext: omni.kit.viewport.menubar.render-104.0.19] startup
+[4.108s] [ext: omni.kit.viewport.menubar.display-104.1.11] startup
+[4.109s] [ext: omni.physx.commands-104.1.6-5.1] startup
+[4.113s] [ext: omni.kit.viewport.menubar.settings-104.3.4] startup
+[4.115s] [ext: omni.rtx.window.settings-0.6.2] startup
+[4.119s] [ext: omni.kit.stage_column.variant-1.0.9] startup
+[4.120s] [ext: omni.physx.ui-104.1.6-5.1] startup
+[4.235s] [ext: omni.kit.viewport.bundle-104.0.2] startup
+[4.235s] [ext: omni.hydra.pxr.settings-1.0.3] startup
+[4.236s] [ext: omni.kit.viewport.menubar.lighting-104.0.8] startup
+[4.237s] [ext: omni.kit.property.physx-0.1.0] startup
+[4.269s] [ext: omni.physx.demos-104.1.6-5.1] startup
+[4.272s] [ext: omni.kit.viewport.pxr-104.0.1] startup
+[4.272s] [ext: omni.kit.viewport.ready-1.0.2] startup
+[4.273s] [ext: omni.kit.viewport.rtx-104.0.0] startup
+[4.273s] [ext: omni.physx.camera-104.1.6-5.1] startup
+[4.278s] [ext: omni.kit.selection-0.1.0] startup
+[4.279s] [ext: omni.physx.cct-104.1.6-5.1] startup
+[4.511s] [ext: omni.physx.supportui-104.1.6-5.1] startup
+[4.569s] [ext: omni.kit.widget.live-2.0.3] startup
+[4.570s] [ext: omni.physx.vehicle-104.1.6-5.1] startup
+[4.579s] [ext: omni.kit.menu.edit-1.1.5] startup
+[4.580s] [ext: omni.kit.window.commands-0.2.4] startup
+[4.581s] [ext: omni.kit.window.console-0.2.3] startup
+[4.586s] [ext: omni.physx.bundle-104.1.6-5.1] startup
+[4.586s] [ext: omni.graph.bundle.action-1.3.0] startup
+[4.586s] [ext: omni.isaac.range_sensor-0.7.0] startup
+[4.603s] [ext: omni.kit.window.script_editor-1.6.4] startup
+[4.609s] [ext: omni.kit.window.status_bar-0.1.5] startup
+[4.611s] [ext: omni.kit.window.title-1.1.2] startup
+[4.612s] [ext: omni.replicator.composer-1.2.2] startup
+[4.613s] [ext: omni.replicator.isaac-1.7.3] startup
+[4.623s] [ext: omni.isaac.kit-1.2.1] startup
+[4.623s] [ext: omni.isaac.sensor-5.3.1] startup
+[4.669s] [ext: omni.isaac.franka-0.4.0] startup
+[4.669s] [ext: omni.resourcemonitor-1.0.0] startup
+[4.675s] [ext: omni.rtx.settings.core-0.[INFO] [omnigibson] ---------- Welcome to OmniGibson! ----------
+[INFO] [omnigibson] 20
+[INFO] [omnigibson] EVLM:put_a_leaf_in_the_ashcan
+[INFO] [omnigibson] task_name:sweeping_outside_entrance
+[INFO] [omnigibson] detailed_name:put_a_leaf_in_the_ashcan
+[INFO] [omnigibson] [['entire_leaf.n.01_1', 'inside', 'ashcan.n.01_1', '1']]
+[INFO] [omnigibson] {'env': {'initial_pos_z_offset': 0.1}, 'render': {'viewer_width': 1280, 'viewer_height': 720}, 'scene': {'type': 'InteractiveTraversableScene', 'scene_model': 'house_double_floor_lower', 'trav_map_resolution': 0.1, 'trav_map_erosion': 2, 'trav_map_with_objects': True, 'build_graph': True, 'num_waypoints': 1, 'waypoint_resolution': 0.2, 'not_load_object_categories': ['ceilings', 'electric_switch', 'window', 'ceilings', 'walls'], 'load_room_types': None, 'load_room_instances': None, 'seg_map_resolution': 0.1, 'scene_source': 'OG', 'include_robots': True}, 'robots': [{'type': 'Fetch', 'obs_modalities': ['scan', 'rgb', 'depth'], 'scale': 1.0, 'self_collision': False, 'action_normalize': True, 'action_type': 'continuous', 'grasping_mode': 'physical', 'rigid_trunk': False, 'default_trunk_offset': 0.365, 'default_arm_pose': 'diagonal30', 'reset_joint_pos': 'tuck', 'visible_only': True, 'visible': False, 'controller_config': {'base': {'name': 'DifferentialDriveController'}, 'arm_0': {'name': 'InverseKinematicsController', 'kv': 2.0}, 'gripper_0': {'name': 'MultiFingerGripperController', 'mode': 'binary'}, 'camera': {'name': 'JointController', 'use_delta_commands': False}}}], 'objects': [], 'task': {'type': 'BehaviorTask', 'activity_name': 'sweeping_outside_entrance', 'activity_definition_id': 0, 'activity_instance_id': 0, 'predefined_problem': None, 'online_object_sampling': False, 'debug_object_sampling': None, 'highlight_task_relevant_objects': False, 'termination_config': {'max_steps': 500}, 'reward_config': {'r_potential': 1.0}}}
+[INFO] [omnigibson.utils.asset_utils] Scene name: house_double_floor_lower
+[INFO] [omnigibson.scenes.traversable_scene] TraversableScene model: house_double_floor_lower
+[INFO] [omnigibson.objects.object_base] Loaded skybox at /World/skybox
+[INFO] [omnigibson.maps.traversable_map] Loading traversable graph
+[INFO] [omnigibson.objects.object_base] Loaded dust_template at /World/dust/template
+[INFO] [omnigibson.objects.object_base] Loaded bush_cwsigt_0 at /World/bush_cwsigt_0
+[INFO] [omnigibson.objects.object_base] Loaded bush_cwsigt_1 at /World/bush_cwsigt_1
+[INFO] [omnigibson.objects.object_base] Loaded bush_cwsigt_10 at /World/bush_cwsigt_10
+[INFO] [omnigibson.objects.object_base] Loaded bush_cwsigt_11 at /World/bush_cwsigt_11
+[INFO] [omnigibson.objects.object_base] Loaded bush_cwsigt_12 at /World/bush_cwsigt_12
+[INFO] [omnigibson.objects.object_base] Loaded bush_cwsigt_13 at /World/bush_cwsigt_13
+[INFO] [omnigibson.objects.object_base] Loaded bush_cwsigt_14 at /World/bush_cwsigt_14
+[INFO] [omnigibson.objects.object_base] Loaded bush_cwsigt_2 at /World/bush_cwsigt_2
+[INFO] [omnigibson.objects.object_base] Loaded bush_cwsigt_3 at /World/bush_cwsigt_3
+[INFO] [omnigibson.objects.object_base] Loaded bush_cwsigt_4 at /World/bush_cwsigt_4
+[INFO] [omnigibson.objects.object_base] Loaded bush_cwsigt_5 at /World/bush_cwsigt_5
+[INFO] [omnigibson.objects.object_base] Loaded bush_cwsigt_6 at /World/bush_cwsigt_6
+[INFO] [omnigibson.objects.object_base] Loaded bush_cwsigt_7 at /World/bush_cwsigt_7
+[INFO] [omnigibson.objects.object_base] Loaded bush_cwsigt_8 at /World/bush_cwsigt_8
+[INFO] [omnigibson.objects.object_base] Loaded bush_cwsigt_9 at /World/bush_cwsigt_9
+[INFO] [omnigibson.objects.object_base] Loaded bush_ebuvur_0 at /World/bush_ebuvur_0
+[INFO] [omnigibson.objects.object_base] Loaded bush_ebuvur_1 at /World/bush_ebuvur_1
+[INFO] [omnigibson.objects.object_base] Loaded bush_ebuvur_2 at /World/bush_ebuvur_2
+[INFO] [omnigibson.objects.object_base] Loaded bush_ebuvur_3 at /World/bush_ebuvur_3
+[INFO] [omnigibson.objects.object_base] Loaded bush_ebuvur_4 at /World/bush_ebuvur_4
+[INFO] [omnigibson.objects.object_base] Loaded bush_frqici_0 at /World/bush_frqici_0
+[INFO] [omnigibson.objects.object_base] Loaded bush_frqici_1 at /World/bush_frqici_1
+[INFO] [omnigibson.objects.object_base] Loaded bush_frqici_2 at /World/bush_frqici_2
+[INFO] [omnigibson.objects.object_base] Loaded bush_frqici_3 at /World/bush_frqici_3
+[INFO] [omnigibson.objects.object_base] Loaded bush_frqici_4 at /World/bush_frqici_4
+[INFO] [omnigibson.objects.object_base] Loaded bush_kjakgd_0 at /World/bush_kjakgd_0
+[INFO] [omnigibson.objects.object_base] Loaded bush_kjakgd_1 at /World/bush_kjakgd_1
+[INFO] [omnigibson.objects.object_base] Loaded bush_knspbi_0 at /World/bush_knspbi_0
+[INFO] [omnigibson.objects.object_base] Loaded bush_knspbi_1 at /World/bush_knspbi_1
+[INFO] [omnigibson.objects.object_base] Loaded bush_knspbi_2 at /World/bush_knspbi_2
+[INFO] [omnigibson.objects.object_base] Loaded bush_knspbi_3 at /World/bush_knspbi_3
+[INFO] [omnigibson.objects.object_base] Loaded bush_knspbi_4 at /World/bush_knspbi_4
+[INFO] [omnigibson.objects.object_base] Loaded bush_knspbi_5 at /World/bush_knspbi_5
+[INFO] [omnigibson.objects.object_base] Loaded bush_kyghri_0 at /World/bush_kyghri_0
+[INFO] [omnigibson.objects.object_base] Loaded bush_kyghri_1 at /World/bush_kyghri_1
+[INFO] [omnigibson.objects.object_base] Loaded bush_kyghri_2 at /World/bush_kyghri_2
+[INFO] [omnigibson.objects.object_base] Loaded bush_kyghri_3 at /World/bush_kyghri_3
+[INFO] [omnigibson.objects.object_base] Loaded bush_kyghri_4 at /World/bush_kyghri_4
+[INFO] [omnigibson.objects.object_base] Loaded bush_kyghri_5 at /World/bush_kyghri_5
+[INFO] [omnigibson.objects.object_base] Loaded bush_kyghri_6 at /World/bush_kyghri_6
+[INFO] [omnigibson.objects.object_base] Loaded bush_kyghri_7 at /World/bush_kyghri_7
+[INFO] [omnigibson.objects.object_base] Loaded bush_kyghri_8 at /World/bush_kyghri_8
+[INFO] [omnigibson.objects.object_base] Loaded bush_lfyqkj_0 at /World/bush_lfyqkj_0
+[INFO] [omnigibson.objects.object_base] Loaded bush_lfyqkj_1 at /World/bush_lfyqkj_1
+[INFO] [omnigibson.objects.object_base] Loaded bush_lfyqkj_2 at /World/bush_lfyqkj_2
+[INFO] [omnigibson.objects.object_base] Loaded bush_lfyqkj_3 at /World/bush_lfyqkj_3
+[INFO] [omnigibson.objects.object_base] Loaded bush_lfyqkj_4 at /World/bush_lfyqkj_4
+[INFO] [omnigibson.objects.object_base] Loaded bush_lfyqkj_5 at /World/bush_lfyqkj_5
+[INFO] [omnigibson.objects.object_base] Loaded bush_lfyqkj_6 at /World/bush_lfyqkj_6
+[INFO] [omnigibson.objects.object_base] Loaded bush_oedeqi_0 at /World/bush_oedeqi_0
+[INFO] [omnigibson.objects.object_base] Loaded bush_oedeqi_1 at /World/bush_oedeqi_1
+[INFO] [omnigibson.objects.object_base] Loaded bush_oedeqi_2 at /World/bush_oedeqi_2
+[INFO] [omnigibson.objects.object_base] Loaded bush_pjhpwk_0 at /World/bush_pjhpwk_0
+[INFO] [omnigibson.objects.object_base] Loaded bush_pjhpwk_1 at /World/bush_pjhpwk_1
+[INFO] [omnigibson.objects.object_base] Loaded bush_pjhpwk_2 at /World/bush_pjhpwk_2
+[INFO] [omnigibson.objects.object_base] Loaded bush_pjhpwk_3 at /World/bush_pjhpwk_3
+[INFO] [omnigibson.objects.object_base] Loaded bush_pjhpwk_4 at /World/bush_pjhpwk_4
+[INFO] [omnigibson.objects.object_base] Loaded bush_pjhpwk_5 at /World/bush_pjhpwk_5
+[INFO] [omnigibson.objects.object_base] Loaded bush_xsqlhv_0 at /World/bush_xsqlhv_0
+[INFO] [omnigibson.objects.object_base] Loaded bush_xsqlhv_1 at /World/bush_xsqlhv_1
+[INFO] [omnigibson.objects.object_base] Loaded bush_xsqlhv_2 at /World/bush_xsqlhv_2
+[INFO] [omnigibson.objects.object_base] Loaded bush_xsqlhv_3 at /World/bush_xsqlhv_3
+[INFO] [omnigibson.objects.object_base] Loaded bush_yhjhta_0 at /World/bush_yhjhta_0
+[INFO] [omnigibson.objects.object_base] Loaded bush_yhjhta_1 at /World/bush_yhjhta_1
+[INFO] [omnigibson.objects.object_base] Loaded bush_yhjhta_2 at /World/bush_yhjhta_2
+[INFO] [omnigibson.objects.object_base] Loaded bush_yhjhta_3 at /World/bush_yhjhta_3
+[INFO] [omnigibson.objects.object_base] Loaded bush_yhjhta_4 at /World/bush_yhjhta_4
+[INFO] [omnigibson.objects.object_base] Loaded bush_yhjhta_5 at /World/bush_yhjhta_5
+[INFO] [omnigibson.objects.object_base] Loaded bush_yhjhta_6 at /World/bush_yhjhta_6
+[INFO] [omnigibson.objects.object_base] Loaded car_supuws_0 at /World/car_supuws_0
+[INFO] [omnigibson.objects.object_base] Loaded tree_dyymaq_0 at /World/tree_dyymaq_0
+[INFO] [omnigibson.objects.object_base] Loaded tree_dyymaq_1 at /World/tree_dyymaq_1
+[INFO] [omnigibson.objects.object_base] Loaded tree_dyymaq_2 at /World/tree_dyymaq_2
+[INFO] [omnigibson.objects.object_base] Loaded tree_flkzbo_0 at /World/tree_flkzbo_0
+[INFO] [omnigibson.objects.object_base] Loaded tree_flkzbo_1 at /World/tree_flkzbo_1
+[INFO] [omnigibson.objects.object_base] Loaded tree_flkzbo_2 at /World/tree_flkzbo_2
+[INFO] [omnigibson.objects.object_base] Loaded tree_gmzozb_0 at /World/tree_gmzozb_0
+[INFO] [omnigibson.objects.object_base] Loaded tree_gmzozb_1 at /World/tree_gmzozb_1
+[INFO] [omnigibson.objects.object_base] Loaded tree_gmzozb_2 at /World/tree_gmzozb_2
+[INFO] [omnigibson.objects.object_base] Loaded tree_gmzozb_3 at /World/tree_gmzozb_3
+[INFO] [omnigibson.objects.object_base] Loaded tree_gmzozb_4 at /World/tree_gmzozb_4
+[INFO] [omnigibson.objects.object_base] Loaded tree_rrhqpw_0 at /World/tree_rrhqpw_0
+[INFO] [omnigibson.objects.object_base] Loaded tree_rrhqpw_1 at /World/tree_rrhqpw_1
+[INFO] [omnigibson.objects.object_base] Loaded tree_rrhqpw_2 at /World/tree_rrhqpw_2
+[INFO] [omnigibson.objects.object_base] Loaded tree_rrhqpw_3 at /World/tree_rrhqpw_3
+[INFO] [omnigibson.objects.object_base] Loaded tree_rrhqpw_4 at /World/tree_rrhqpw_4
+[INFO] [omnigibson.objects.object_base] Loaded tree_rrhqpw_5 at /World/tree_rrhqpw_5
+[INFO] [omnigibson.objects.object_base] Loaded tree_wtyipq_0 at /World/tree_wtyipq_0
+[INFO] [omnigibson.objects.object_base] Loaded tree_wtyipq_1 at /World/tree_wtyipq_1
+[INFO] [omnigibson.objects.object_base] Loaded tree_wtyipq_2 at /World/tree_wtyipq_2
+[INFO] [omnigibson.objects.object_base] Loaded tree_wtyipq_3 at /World/tree_wtyipq_3
+[INFO] [omnigibson.objects.object_base] Loaded tree_wtyipq_4 at /World/tree_wtyipq_4
+[INFO] [omnigibson.objects.object_base] Loaded tree_wtyipq_5 at /World/tree_wtyipq_5
+[INFO] [omnigibson.objects.object_base] Loaded tree_wtyipq_6 at /World/tree_wtyipq_6
+[INFO] [omnigibson.objects.object_base] Loaded tree_wtyipq_7 at /World/tree_wtyipq_7
+[INFO] [omnigibson.objects.object_base] Loaded tree_wtyipq_8 at /World/tree_wtyipq_8
+[WARNING] [omnigibson.objects.stateful_object] State Open is incompatible with obj bottom_cabinet_byvbuc_0. Reason: No relevant joints for Open state found for object bottom_cabinet_byvbuc_0
+[INFO] [omnigibson.objects.object_base] Loaded bottom_cabinet_byvbuc_0 at /World/bottom_cabinet_byvbuc_0
+[WARNING] [omnigibson.objects.stateful_object] State Open is incompatible with obj bottom_cabinet_tjextj_0. Reason: No relevant joints for Open state found for object bottom_cabinet_tjextj_0
+[INFO] [omnigibson.objects.object_base] Loaded bottom_cabinet_tjextj_0 at /World/bottom_cabinet_tjextj_0
+[WARNING] [omnigibson.objects.stateful_object] State ContainedParticles is incompatible with obj bowl_gwhcty_0. Reason: LinkBasedStateMixin ContainedParticles requires metalink with prefix container for obj bowl_gwhcty_0 but none was found! To get valid compatible object models, please use omnigibson.utils.asset_utils.get_all_object_category_models_with_abilities(...)
+[WARNING] [omnigibson.objects.stateful_object] State Contains is incompatible with obj bowl_gwhcty_0. Reason: Missing required dependency state ContainedParticles
+[WARNING] [omnigibson.objects.stateful_object] State Filled is incompatible with obj bowl_gwhcty_0. Reason: Missing required dependency state ContainedParticles
+[INFO] [omnigibson.objects.object_base] Loaded bowl_gwhcty_0 at /World/bowl_gwhcty_0
+[INFO] [omnigibson.objects.object_base] Loaded flower_qokboq_0 at /World/flower_qokboq_0
+[INFO] [omnigibson.objects.object_base] Loaded shelf_vanltx_0 at /World/shelf_vanltx_0
+[INFO] [omnigibson.objects.object_base] Loaded stove_mdanhg_0 at /World/stove_mdanhg_0
+[INFO] [omnigibson.objects.object_base] Loaded breakfast_table_xftrki_0 at /World/breakfast_table_xftrki_0
+[INFO] [omnigibson.objects.object_base] Loaded coffee_table_koagbh_0 at /World/coffee_table_koagbh_0
+[INFO] [omnigibson.objects.object_base] Loaded garden_chair_cottya_0 at /World/garden_chair_cottya_0
+[INFO] [omnigibson.objects.object_base] Loaded garden_chair_cottya_1 at /World/garden_chair_cottya_1
+[INFO] [omnigibson.objects.object_base] Loaded garden_chair_cottya_2 at /World/garden_chair_cottya_2
+[INFO] [omnigibson.objects.object_base] Loaded garden_chair_lraplz_0 at /World/garden_chair_lraplz_0
+[WARNING] [omnigibson.objects.stateful_object] State Open is incompatible with obj grill_sxfjac_0. Reason: No relevant joints for Open state found for object grill_sxfjac_0
+[INFO] [omnigibson.objects.object_base] Loaded grill_sxfjac_0 at /World/grill_sxfjac_0
+[INFO] [omnigibson.objects.object_base] Loaded mirror_wwkuuf_0 at /World/mirror_wwkuuf_0
+[INFO] [omnigibson.objects.object_base] Loaded ottoman_wxodip_0 at /World/ottoman_wxodip_0
+[INFO] [omnigibson.objects.object_base] Loaded sofa_frlxgz_0 at /World/sofa_frlxgz_0
+[WARNING] [omnigibson.objects.stateful_object] State ContainedParticles is incompatible with obj washer_ziomqg_0. Reason: LinkBasedStateMixin ContainedParticles requires metalink with prefix container for obj washer_ziomqg_0 but none was found! To get valid compatible object models, please use omnigibson.utils.asset_utils.get_all_object_category_models_with_abilities(...)
+[WARNING] [omnigibson.objects.stateful_object] State Contains is incompatible with obj washer_ziomqg_0. Reason: Missing required dependency state ContainedParticles
+[WARNING] [omnigibson.objects.stateful_object] State Filled is incompatible with obj washer_ziomqg_0. Reason: Missing required dependency state ContainedParticles
+[INFO] [omnigibson.objects.object_base] Loaded washer_ziomqg_0 at /World/washer_ziomqg_0
+[INFO] [omnigibson.objects.object_base] Loaded armchair_hgunnf_0 at /World/armchair_hgunnf_0
+[INFO] [omnigibson.objects.object_base] Loaded armchair_hgunnf_1 at /World/armchair_hgunnf_1
+[INFO] [omnigibson.objects.object_base] Loaded armchair_uofiqj_0 at /World/armchair_uofiqj_0
+[INFO] [omnigibson.objects.object_base] Loaded armchair_uofiqj_1 at /World/armchair_uofiqj_1
+[INFO] [omnigibson.objects.object_base] Loaded armchair_zdhnyg_0 at /World/armchair_zdhnyg_0
+[INFO] [omnigibson.objects.object_base] Loaded armchair_zdhnyg_1 at /World/armchair_zdhnyg_1
+[INFO] [omnigibson.objects.object_base] Loaded background_vtfqjb_0 at /World/background_vtfqjb_0
+[INFO] [omnigibson.objects.object_base] Loaded bidet_lcyvov_0 at /World/bidet_lcyvov_0
+[WARNING] [omnigibson.objects.stateful_object] State Open is incompatible with obj blender_xnjqix_0. Reason: No relevant joints for Open state found for object blender_xnjqix_0
+[INFO] [omnigibson.objects.object_base] Loaded blender_xnjqix_0 at /World/blender_xnjqix_0
+[INFO] [omnigibson.objects.object_base] Loaded bottom_cabinet_rhdbzv_0 at /World/bottom_cabinet_rhdbzv_0
+[WARNING] [omnigibson.objects.stateful_object] State Open is incompatible with obj bottom_cabinet_todoxz_0. Reason: No relevant joints for Open state found for object bottom_cabinet_todoxz_0
+[INFO] [omnigibson.objects.object_base] Loaded bottom_cabinet_todoxz_0 at /World/bottom_cabinet_todoxz_0
+[INFO] [omnigibson.objects.object_base] Loaded door_bexenl_0 at /World/door_bexenl_0
+[INFO] [omnigibson.objects.object_base] Loaded door_bexenl_1 at /World/door_bexenl_1
+[INFO] [omnigibson.objects.object_base] Loaded door_vudhlc_0 at /World/door_vudhlc_0
+[INFO] [omnigibson.objects.object_base] Loaded door_vudhlc_1 at /World/door_vudhlc_1
+[INFO] [omnigibson.objects.object_base] Loaded door_vudhlc_2 at /World/door_vudhlc_2
+[INFO] [omnigibson.objects.object_base] Loaded door_vudhlc_3 at /World/door_vudhlc_3
+[INFO] [omnigibson.objects.object_base] Loaded door_vudhlc_4 at /World/door_vudhlc_4
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pawfmw_0 at /World/downlight_pawfmw_0
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pawfmw_1 at /World/downlight_pawfmw_1
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pawfmw_10 at /World/downlight_pawfmw_10
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pawfmw_11 at /World/downlight_pawfmw_11
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pawfmw_12 at /World/downlight_pawfmw_12
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pawfmw_13 at /World/downlight_pawfmw_13
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pawfmw_14 at /World/downlight_pawfmw_14
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pawfmw_15 at /World/downlight_pawfmw_15
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pawfmw_16 at /World/downlight_pawfmw_16
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pawfmw_17 at /World/downlight_pawfmw_17
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pawfmw_2 at /World/downlight_pawfmw_2
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pawfmw_3 at /World/downlight_pawfmw_3
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pawfmw_4 at /World/downlight_pawfmw_4
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pawfmw_5 at /World/downlight_pawfmw_5
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pawfmw_6 at /World/downlight_pawfmw_6
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pawfmw_7 at /World/downlight_pawfmw_7
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pawfmw_8 at /World/downlight_pawfmw_8
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pawfmw_9 at /World/downlight_pawfmw_9
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pxrmnt_0 at /World/downlight_pxrmnt_0
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pxrmnt_1 at /World/downlight_pxrmnt_1
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pxrmnt_2 at /World/downlight_pxrmnt_2
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pxrmnt_3 at /World/downlight_pxrmnt_3
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pxrmnt_4 at /World/downlight_pxrmnt_4
+[INFO] [omnigibson.objects.object_base] Loaded downlight_pxrmnt_5 at /World/downlight_pxrmnt_5
+[INFO] [omnigibson.objects.object_base] Loaded driveway_qbxmgb_0 at /World/driveway_qbxmgb_0
+[INFO] [omnigibson.objects.object_base] Loaded rail_fence_owbrvb_0 at /World/rail_fence_owbrvb_0
+[INFO] [omnigibson.objects.object_base] Loaded rail_fence_owbrvb_1 at /World/rail_fence_owbrvb_1
+[INFO] [omnigibson.objects.object_base] Loaded rail_fence_owbrvb_2 at /World/rail_fence_owbrvb_2
+[INFO] [omnigibson.objects.object_base] Loaded rail_fence_owbrvb_3 at /World/rail_fence_owbrvb_3
+[INFO] [omnigibson.objects.object_base] Loaded rail_fence_owbrvb_4 at /World/rail_fence_owbrvb_4
+[INFO] [omnigibson.objects.object_base] Loaded floors_adimyi_0 at /World/floors_adimyi_0
+[INFO] [omnigibson.objects.object_base] Loaded floors_csxnnw_0 at /World/floors_csxnnw_0
+[INFO] [omnigibson.objects.object_base] Loaded floors_ewbqsp_0 at /World/floors_ewbqsp_0
+[INFO] [omnigibson.objects.object_base] Loaded floors_ghetev_0 at /World/floors_ghetev_0
+[INFO] [omnigibson.objects.object_base] Loaded floors_nmnycd_0 at /World/floors_nmnycd_0
+[INFO] [omnigibson.objects.object_base] Loaded floors_qwzkxn_0 at /World/floors_qwzkxn_0
+[INFO] [omnigibson.objects.object_base] Loaded floors_rhwsaa_0 at /World/floors_rhwsaa_0
+[INFO] [omnigibson.objects.object_base] Loaded floors_uddigl_0 at /World/floors_uddigl_0
+[INFO] [omnigibson.objects.object_base] Loaded floors_xqgwla_0 at /World/floors_xqgwla_0
+[INFO] [omnigibson.objects.object_base] Loaded flower_ldkhmx_0 at /World/flower_ldkhmx_0
+[INFO] [omnigibson.objects.object_base] Loaded flower_tfvsai_0 at /World/flower_tfvsai_0
+[INFO] [omnigibson.objects.object_base] Loaded garden_light_qyfrwj_0 at /World/garden_light_qyfrwj_0
+[INFO] [omnigibson.objects.object_base] Loaded garden_light_qyfrwj_1 at /World/garden_light_qyfrwj_1
+[INFO] [omnigibson.objects.object_base] Loaded garden_light_qyfrwj_2 at /World/garden_light_qyfrwj_2
+[INFO] [omnigibson.objects.object_base] Loaded garden_light_qyfrwj_3 at /World/garden_light_qyfrwj_3
+[INFO] [omnigibson.objects.object_base] Loaded garden_light_qyfrwj_4 at /World/garden_light_qyfrwj_4
+[INFO] [omnigibson.objects.object_base] Loaded garden_light_qyfrwj_5 at /World/garden_light_qyfrwj_5
+[INFO] [omnigibson.objects.object_base] Loaded garden_light_qyfrwj_6 at /World/garden_light_qyfrwj_6
+[INFO] [omnigibson.objects.object_base] Loaded garden_light_qyfrwj_7 at /World/garden_light_qyfrwj_7
+[INFO] [omnigibson.objects.object_base] Loaded garden_light_qyfrwj_8 at /World/garden_light_qyfrwj_8
+[WARNING] [omnigibson.objects.stateful_object] State Open is incompatible with obj hall_tree_daxzaw_0. Reason: No relevant joints for Open state found for object hall_tree_daxzaw_0
+[INFO] [omnigibson.objects.object_base] Loaded hall_tree_daxzaw_0 at /World/hall_tree_daxzaw_0
+[WARNING] [omnigibson.objects.stateful_object] State Open is incompatible with obj hall_tree_upkvgr_0. Reason: No relevant joints for Open state found for object hall_tree_upkvgr_0
+[INFO] [omnigibson.objects.object_base] Loaded hall_tree_upkvgr_0 at /World/hall_tree_upkvgr_0
+[INFO] [omnigibson.objects.object_base] Loaded hook_akwlam_0 at /World/hook_akwlam_0
+[INFO] [omnigibson.objects.object_base] Loaded lawn_ogzsvf_0 at /World/lawn_ogzsvf_0
+[INFO] [omnigibson.objects.object_base] Loaded mirror_edxfnt_0 at /World/mirror_edxfnt_0
+[INFO] [omnigibson.objects.object_base] Loaded motion_sensor_aecflf_0 at /World/motion_sensor_aecflf_0
+[WARNING] [omnigibson.objects.stateful_object] State Open is incompatible with obj oven_insidq_0. Reason: No relevant joints for Open state found for object oven_insidq_0
+[INFO] [omnigibson.objects.object_base] Loaded oven_insidq_0 at /World/oven_insidq_0
+[INFO] [omnigibson.objects.object_base] Loaded picture_ggajdz_0 at /World/picture_ggajdz_0
+[INFO] [omnigibson.objects.object_base] Loaded picture_hffaxw_0 at /World/picture_hffaxw_0
+[INFO] [omnigibson.objects.object_base] Loaded picture_jnecmu_0 at /World/picture_jnecmu_0
+[INFO] [omnigibson.objects.object_base] Loaded picture_oshvew_0 at /World/picture_oshvew_0
+[INFO] [omnigibson.objects.object_base] Loaded picture_qlkknu_0 at /World/picture_qlkknu_0
+[INFO] [omnigibson.objects.object_base] Loaded picture_qlsyco_0 at /World/picture_qlsyco_0
+[INFO] [omnigibson.objects.object_base] Loaded picture_tveyoh_0 at /World/picture_tveyoh_0
+[INFO] [omnigibson.objects.object_base] Loaded picture_yzbpie_0 at /World/picture_yzbpie_0
+[INFO] [omnigibson.objects.object_base] Loaded playground_xdlcdi_0 at /World/playground_xdlcdi_0
+[INFO] [omnigibson.objects.object_base] Loaded range_hood_xvdfpp_0 at /World/range_hood_xvdfpp_0
+[INFO] [omnigibson.objects.object_base] Loaded room_light_eqbjaz_0 at /World/room_light_eqbjaz_0
+[INFO] [omnigibson.objects.object_base] Loaded room_light_kiuayi_0 at /World/room_light_kiuayi_0
+[INFO] [omnigibson.objects.object_base] Loaded room_light_ltnnrc_0 at /World/room_light_ltnnrc_0
+[INFO] [omnigibson.objects.object_base] Loaded room_light_ltnnrc_1 at /World/room_light_ltnnrc_1
+[INFO] [omnigibson.objects.object_base] Loaded poster_hgonwj_0 at /World/poster_hgonwj_0
+[INFO] [omnigibson.objects.object_base] Loaded poster_rypeha_0 at /World/poster_rypeha_0
+[INFO] [omnigibson.objects.object_base] Loaded poster_xzsmxq_0 at /World/poster_xzsmxq_0
+[INFO] [omnigibson.objects.object_base] Loaded sink_egwapq_0 at /World/sink_egwapq_0
+[INFO] [omnigibson.objects.object_base] Loaded sink_hecjnt_0 at /World/sink_hecjnt_0
+[INFO] [omnigibson.objects.object_base] Loaded stairs_tikozn_0 at /World/stairs_tikozn_0
+[INFO] [omnigibson.objects.object_base] Loaded swing_yzhrgz_0 at /World/swing_yzhrgz_0
+[INFO] [omnigibson.objects.object_base] Loaded toilet_essgie_0 at /World/toilet_essgie_0
+[WARNING] [omnigibson.objects.stateful_object] State Open is incompatible with obj top_cabinet_tynnnw_0. Reason: No relevant joints for Open state found for object top_cabinet_tynnnw_0
+[INFO] [omnigibson.objects.object_base] Loaded top_cabinet_tynnnw_0 at /World/top_cabinet_tynnnw_0
+[INFO] [omnigibson.objects.object_base] Loaded wall_mounted_light_mbhxbg_0 at /World/wall_mounted_light_mbhxbg_0
+[INFO] [omnigibson.objects.object_base] Loaded wall_mounted_tv_dxyfxf_0 at /World/wall_mounted_tv_dxyfxf_0
+[INFO] [omnigibson.objects.object_base] Loaded wall_socket_nujxel_0 at /World/wall_socket_nujxel_0
+[WARNING] [omnigibson.prims.rigid_prim] Got invalid (non-volume) collision mesh: robot0:estop_link:collisions
+[WARNING] [omnigibson.prims.rigid_prim] Got invalid (non-volume) collision mesh: robot0:laser_link:collisions
+[WARNING] [omnigibson.prims.rigid_prim] Got invalid (non-volume) collision mesh: robot0:torso_lift_link:collisions
+[INFO] [omnigibson.objects.object_base] Loaded robot0 at /World/robot0
+[INFO] [omnigibson.objects.controllable_object] Control frequency is None - being set to default of 1 / render_timestep: 60.0000
+[INFO] [omnigibson.objects.object_base] Loaded trash_can_276 at /World/trash_can_276
+[INFO] [omnigibson.objects.object_base] Loaded leaf_277 at /World/leaf_277
+[INFO] [omnigibson.objects.object_base] Loaded leaf_278 at /World/leaf_278
+[INFO] [omnigibson.objects.object_base] Loaded leaf_279 at /World/leaf_279
+[INFO] [omnigibson.objects.object_base] Loaded valentine_wreath_280 at /World/valentine_wreath_280
+[INFO] [omnigibson.objects.object_base] Loaded broom_281 at /World/broom_281
+5.8] startup
+[4.678s] [ext: semantics.schema.editor-0.3.2] startup
+[4.681s] [ext: omni.kit.menu.file-1.1.3] startup
+[4.682s] [ext: omni.isaac.quadruped-1.2.2] startup
+[4.772s] [ext: omni.isaac.cortex-0.2.10] startup
+[4.772s] [ext: omni.graph.window.action-1.4.0] startup
+[4.773s] [ext: omni.kit.window.stats-0.1.2] startup
+[4.774s] [ext: omni.isaac.sim.python-2022.2.0] startup
+[4.775s] Simulation App Starting
+[6.250s] app ready
+[6.382s] Simulation App Startup Complete
+[6.390s] [ext: omni.usd.schema.flow-104.1.6] startup
+[6.390s] [ext: omni.vdb_timesample_editor-0.1.4] startup
+[6.393s] [ext: omni.slangnode-104.1.9] startup
+[6.397s] [ext: omni.flowusd-104.1.9] startup
+[6.466s] [ext: omni.scene.visualization.core-104.2.2] startup
+[6.474s] [ext: omni.ramp-104.1.3] startup
+[6.477s] [ext: omni.particle.system.core-104.7.18] startup
+[6.486s] [ext: omni.particle.system.ui-104.4.12] startup
+[6.529s] [ext: omni.graph.window.particle.system-104.5.2] startup
+[6.549s] [ext: omni.particle.system.bundle-104.2.24] startup
+[WARNING] [omnigibson.utils.registry_utils] Object 'water' is not in the state dict to load from. Skip loading its state.
+[INFO] [omnigibson.simulator] Imported scene.
+[WARNING] [omnigibson.utils.registry_utils] Object 'water' is not in the state dict to load from. Skip loading its state.
+Starting kit application with the following args:  ['/home/liushuai/.local/share/ov/pkg/isaac_sim-2022.2.0/exts/omni.isaac.kit/omni/isaac/kit/simulation_app.py', '/home/liushuai/.local/share/ov/pkg/isaac_sim-2022.2.0/apps/omni.isaac.sim.python.kit', '--/app/tokens/exe-path=/home/liushuai/.local/share/ov/pkg/isaac_sim-2022.2.0/kit', '--/persistent/app/viewport/displayOptions=3094', '--/rtx/materialDb/syncLoads=True', '--/rtx/hydra/materialSyncLoads=True--/omni.kit.plugin/syncUsdLoads=True', '--/app/renderer/resolution/width=1280', '--/app/renderer/resolution/height=720', '--/app/window/width=1440', '--/app/window/height=900', '--/renderer/multiGpu/enabled=False', '--/app/fastShutdown=True', '--ext-folder', '/home/liushuai/.local/share/ov/pkg/isaac_sim-2022.2.0/exts', '--ext-folder', '/home/liushuai/.local/share/ov/pkg/isaac_sim-2022.2.0/apps', '--/physics/cudaDevice=0', '--portable']
+Passing the following args to the base kit application:  ['20', '--/log/level=error', '--/log/fileLogLevel=error', '--/log/outputStreamLevel=error']
+Warp 0.6.1 initialized:
+   CUDA Toolkit: 11.5, Driver: 11.4
+   Devices:
+     "cpu"    | x86_64
+     "cuda:0" | NVIDIA GeForce RTX 3060 (sm_86)
+     "cuda:1" | NVIDIA GeForce RTX 3060 (sm_86)
+   Kernel cache: /home/liushuai/.cache/warp/0.6.1
+[6.319s] RTX ready
+[6.319s] RTX ready
+
+                   ____________
+                  /          / \
+                 /          / /__
+                /          / /  /\
+               /__________/ /__/  \
+               \   _____  \ \__\  /
+                \  \  / \  \ \_/ /
+                 \  \/___\  \   /
+                  \__________\_/  
+       ___                  _  ____ _ _                     
+      / _ \ _ __ ___  _ __ (_)/ ___(_) |__  ___  ___  _ __  
+     | | | | '_ ` _ \| '_ \| | |  _| | '_ \/ __|/ _ \| '_ \ 
+     | |_| | | | | | | | | | | |_| | | |_) \__ \ (_) | | | |
+      \___/|_| |_| |_|_| |_|_|\____|_|_.__/|___/\___/|_| |_|
+
+[<bddl.condition_evaluation.HEAD object at 0x7f084adc2a10>, <bddl.condition_evaluation.HEAD object at 0x7f070fb26690>, <bddl.condition_evaluation.HEAD object at 0x7f084adc85d0>, <bddl.condition_evaluation.HEAD object at 0x7f084adc82d0>, <bddl.condition_evaluation.HEAD object at 0x7efa26113410>, <bddl.condition_evaluation.HEAD object at 0x7ef8fb48c6d0>, <bddl.condition_evaluation.HEAD object at 0x7ef8fb48cd90>, <bddl.condition_evaluation.HEAD object at 0x7ef8fb48cd50>] [<bddl.condition_evaluation.HEAD object at 0x7f084adc1390>, <bddl.condition_evaluation.HEAD object at 0x7ef8fb48cc90>, <bddl.condition_evaluation.HEAD object at 0x7ef8fb48c5d0>] [[<bddl.condition_evaluation.HEAD object at 0x7ef8fb48c7d0>, <bddl.condition_evaluation.HEAD object at 0x7ef8fb48cb90>, <bddl.condition_evaluation.HEAD object at 0x7ef8fb48c150>, <bddl.condition_evaluation.HEAD object at 0x7ef8fb48c950>, <bddl.condition_evaluation.HEAD object at 0x7ef8fb48c910>]]
+2023-09-26 07:51:07 [49,714ms] [Error] [omni.kit.manipulator.prim.model] Traceback (most recent call last):
+  File "/home/liushuai/.local/share/ov/pkg/isaac_sim-2022.2.0/kit/extscore/omni.kit.manipulator.prim/omni/kit/manipulator/prim/model.py", line 1492, in _update_transform_from_prims_async
+    pivot_prim_path = self._pivot_prim.GetPath()
+AttributeError: 'NoneType' object has no attribute 'GetPath'
+
+[INFO] [omnigibson] ---------- Shutting Down OmniGibson ----------
+[54.892s] Simulation App Shutting Down
