@@ -1,7 +1,6 @@
 def act(robot,env,camera):
-    # Subtask 4: Put the carrot into the saucepot
-    carrot_151 = registry(env,"carrot_151")
-    saucepot_170 = registry(env,"saucepot_170")
-    put_inside(robot, carrot_151, saucepot_170)
+    # Subtask 1: Move the Robot to the Carrot
+    carrot = registry(env, "carrot", "151")
+    MoveBot(env, robot, carrot, camera)
     donothing(env)
 

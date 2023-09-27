@@ -1,7 +1,6 @@
 
 
-def act(robot, env, camera):
-    beet = registry(env, 'beet_277')
-    wicker_basket = registry(env, 'wicker_basket_276')
-    unfold(robot, beet, wicker_basket)
+def act(robot, env):
+    beebeep3 = registry(env, 'beebeeb3')
+    EasyGrasp(robot, beebeep3)
     donothing(env)

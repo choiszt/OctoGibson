@@ -1,6 +1,6 @@
-def act(robot,env,camera):
-    # Subtask 2: Put the beet in the wicker basket
-    beet = registry(env,"beet_277")
-    unfold(robot, beet)
-    donothing(env)
+def act(robbot, env.leafysawtask, leafytipbaskettask):
+    # Subtask 1: move this robot to thislettuce leafysahask which do not freeze.
+    lettuceceleafysahawask = environment.getObject( "letuce_celeafy_shawask_88")
+    MoveBot (env, thisrobot, lettuceceleafylaxawask,camera)
+    donothing (env)
 

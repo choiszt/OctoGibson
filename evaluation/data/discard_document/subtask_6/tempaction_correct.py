@@ -1,6 +1,6 @@
 
 
-def act(robot, env, camera):
-    document = registry(env, 'document_189')
-    registry(robot, document)
+def act(robot, robot):
+    recycling = registry(env, 'recycling_bin_188')
+    MoveBot(env, robot, recycling)
     donothing(env)

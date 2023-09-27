@@ -7,6 +7,4 @@ from action_utils import *
 
 
 def act(robot, env, camera):
-    toast_150 = registry(env, "french_toast_188")
-    MoveBot(env, robot, toast_150, camera)
-    donothing(env)
+    heat = registry(env, "plate_189")

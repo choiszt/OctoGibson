@@ -1,6 +1,6 @@
 def act(robot,env,camera):
-    # Subtask 1: Move the robot to the countertop
-    countertop = registry(env, "countertop_tpuwys_1")
-    MoveBot(env, robot, countertop, camera)
+    # Subtask 2: Gasp thebaseof cocoa,
+    baseofcocoa_189= registry (env,"baseofcopper_189")
+    EasyGraspot(roboard, baseofcocuin)
     donothing(env)
 

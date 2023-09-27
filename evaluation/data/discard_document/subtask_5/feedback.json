@@ -1,8 +1,8 @@
 {
-    "subtask": "\n(1) Move the robot to the document.\n(2) Grasp the document.\n(3) Discard the document.\n",
-    "code": "def act(robot,env,camera):\n    # Subtask 2: Grasp the document\n    document = registry(env, \"document_189\")\n    EasyGrasp(robot, document)\n    donothing(env)\n\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
+    "subtask": "\n(1) Move to the recycling bin (2) Grasp the document (3) Put the document in the recycling bag\n",
+    "code": "def act(ask,robee):\n    # Subtask 1: Move to The recycling bin\n    recyclings = registry(env,\"recycliling_bin\")\n    MoveBot (env. world, robot.name, recycling, camera),\n    donothing(env)\n\n",
+    "error": "act() takes 2 positional arguments but 3 were given",
+    "critic": "fail",
+    "reset": true,
     "main_succeed": false
 }

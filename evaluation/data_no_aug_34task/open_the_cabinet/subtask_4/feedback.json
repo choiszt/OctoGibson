@@ -1,8 +1,0 @@
-{
-    "subtask": "\n( 1) Movethe robot tothe cabinet\n (2) Graspthe cabinetask\n (3) Openthe cabinet (using the cabinetask)\n (4) Findthe objectsinsidethe cabinetandpick them out (usingthe cabinetack)\n",
-    "code": "def act(robo, env, cabinet):\n  # Subcase 2: Grasp the cabinetasket\n  cabinethandle_84 = registry (env,\"cabinenethandler_84\")\n  EasyGraspprobot(env.env, cabinethandel_84)\n  donothing (env)\n\n",
-    "error": "'Environment' object has no attribute 'get_position'",
-    "critic": "fail",
-    "reset": true,
-    "main_succeed": false
-}

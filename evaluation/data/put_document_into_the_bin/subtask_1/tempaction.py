@@ -1,6 +1,6 @@
 def act(robot,env,camera):
-    # Subtask 1: Grasp the document.
-    document_189 = registry(env,"document_189")
-    EasyGrasp(robot, document_189)
+    # Subtask 1: Grasp The Document
+    document = registry(env, "document_276")
+    EasyGrasp(roBot, document)
     donothing(env)
 

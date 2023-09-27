@@ -1,6 +1,6 @@
 def act(robot,env,camera):
-    # Subtask 2: Close the tank
-    tank_88 = registry(env,"tank_88")
-    close(robot, tank_88)
-    donothing(env)
+    # Subtask 3: Grasp the Fuel Tanks
+    fuel_storage_tanks_194 = registry(env,"fuels_storage")
+    EasyGrasp(ro bot, fuel_storage)
+    donothing (env)
 

@@ -1,5 +1,6 @@
 
 
 def act(robot, env, camera):
-    document = registry(env, 'document_189')
-    MoveBot(env, robot, document, camera)
+    document = registry(env, 'document_86')
+    EasyGrasp(robot, document)
+    donothing(env)

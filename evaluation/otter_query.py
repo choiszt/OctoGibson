@@ -206,32 +206,32 @@ class Query:
                 f.write(heading)
                 f.write(code_str)
 
-            #TARGET            
-            inv = target.split('Inventory:')[1]
-            inv = inv.split('\n')[0]
-            inv_str = inv.replace(' ', '')
-            obj_states_2 = []
-            obj_states_3 = []
+            # #TARGET            
+            # inv = target.split('Inventory:')[1]
+            # inv = inv.split('\n')[0]
+            # inv_str = inv.replace(' ', '')
+            # obj_states_2 = []
+            # obj_states_3 = []
             
-            objects = target.split('Information:')[1]
-            objects = objects.split('\n')
-            for obj in objects:
-                obj = obj.split(')')[-1]
-                obj_list = obj.split(',')
-                for i in range(len(obj_list)):
-                    obj_list[i] = obj_list[i].replace(' ', '')
-                if len(obj_list) == 3:
-                    obj_states_2.append(obj_list)
-                elif len(obj_list) == 4: 
-                    obj_states_3.append(obj_list)
+            # objects = target.split('Information:')[1]
+            # objects = objects.split('\n')
+            # for obj in objects:
+            #     obj = obj.split(')')[-1]
+            #     obj_list = obj.split(',')
+            #     for i in range(len(obj_list)):
+            #         obj_list[i] = obj_list[i].replace(' ', '')
+            #     if len(obj_list) == 3:
+            #         obj_states_2.append(obj_list)
+            #     elif len(obj_list) == 4: 
+            #         obj_states_3.append(obj_list)
                     
             return {
                 "explain": explain_str,
                 "subtask": subtask_str,
                 "code": code_str,
-                "inventory": inv_str,
-                "obj_2": obj_states_2, 
-                "obj_3": obj_states_3,
+                "inventory": None,
+                "obj_2": None, 
+                "obj_3": None,
             }
             # except Exception as e:
             #     retry -= 1

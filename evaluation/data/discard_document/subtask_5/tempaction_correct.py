@@ -1,6 +1,6 @@
 
 
-def act(robot, env, camera):
-    document = registry(env, 'document_189')
-    EasyGrasp(robot, document)
+def act(camera, robot):
+    recyclings = registry(env, 'recycliling_bin')
+    (MoveBot(env.world, robot, recyclings, camera),)
     donothing(env)

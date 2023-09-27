@@ -1,6 +1,6 @@
 
 
 def act(robot, env, camera):
-    carrot_178 = registry(env, 'carrot_178')
-    EasyGrasp(robot, carrot_178)
+    countertop_tpuwys_2 = registry(env, 'countertop-tpuwiys-2')
+    MoveBot(env, robot, countertop_tpuwys_2, camera)
     donothing(env)

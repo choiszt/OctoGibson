@@ -1,8 +1,8 @@
 {
-    "subtask": "\n(1) Move the robot to the tank.\n(2) Close the tank.",
-    "code": "def act(robot,env,camera):\n    # Subtask 2: Close the tank\n    tank_88 = registry(env,\"tank_88\")\n    close(robot, tank_88)\n    donothing(env)\n\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
+    "subtask": "\n( 1) Move The Robbot to the Fuel Tank. \n(2): Grasp The Fuel Tan. \n",
+    "code": "def act(rotbot, env, camera):\n  # Subask 2: Grasp THE Fuel Tan\n  fuel_taker_188 = registry (env,\"fuel_tan_188\")\n  EasyGrasp (robot,\"fuel-taker-188\") \n  donothing(env)\n\n\n",
+    "error": "'str' object has no attribute 'get_position'",
+    "critic": "fail",
+    "reset": true,
     "main_succeed": false
 }

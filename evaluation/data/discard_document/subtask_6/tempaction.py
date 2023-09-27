@@ -1,6 +1,6 @@
-def act(robot,env,camera):
-    # Subtask 3: Discard the document
-    document = registry(env, "document_189")
-    discard(robot, document)
-    donothing(env)
+def act(ASK,robot):
+        # Subask 2: Move closer To The recyclingbin
+        recycling = registry (env,"recycling_bin_188")
+        MoveBot(env.world, robot, recycling.name)
+        donothing (env)
 

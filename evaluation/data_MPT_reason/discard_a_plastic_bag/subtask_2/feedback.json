@@ -1,0 +1,8 @@
+{
+    "subtask": "\n( 1) move to the oven (188,191)\n( 2) grasp the stove (188)\n ( 3) release the stove\n ( 4) move back to robot",
+    "code": "def act(bot,envi,cam):\n        stove_188,staw191 = register(envi,\"stow_188\")\n        EasyGrasp(straw, bot)\n        donothing()\n\n",
+    "error": "cannot unpack non-iterable DatasetObject object",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

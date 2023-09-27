@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot towards the cabinet.\n(2) Open the cabinet?.\n(3) Grasp the tostler oven.\n (4) Move to the countertop where the spoon is located.\n5) Grasp the spoon.\n6) Move back to the robot.\n7) Put the spoon inside the tosteroven.\n8) Putthe tostleoven inside the cabinets.\n",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Move The Robot Towards The Cabinet\n    Cabinet_qohxjq_0 = registry(env,\"cabet_1_openable_0\")\n    MoveBot(env, robot, Cabinet_quohxjq_0, camera)\n    donothing(env)\n\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": true
+}

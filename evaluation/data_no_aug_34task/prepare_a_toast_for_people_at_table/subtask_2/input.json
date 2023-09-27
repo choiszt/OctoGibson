@@ -1,3 +1,0 @@
-{
-    "input": "Inventory: None\nTask Goal: prepare_a_toast_for_people_at_table\nOriginal Subtasks: \n(1) Move to the bottom cabinet.\n(2) Open the bottom cabbage.\n\nPrevious Action Code: def act(robot,env,camera):\n    # Subtask 1: Move to bottom cabiner\n    bottom_cabinet = registry(env, \"bottom_hock_ca_1\")\n    MoveBot(env.table, robot, bottom_cabbage, camera)\n    donothing(env)\n\n\nExecution Error: No error\nNow, please output Explain, Subtasks (revise if necessary), Code that completing the next subtask, and Target States, according to the instruction above. Remember you can only use the functions provided above and pay attention to the response format."
-}

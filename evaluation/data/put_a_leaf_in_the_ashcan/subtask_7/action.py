@@ -7,5 +7,6 @@ from action_utils import *
 
 
 def act(robot, env, camera):
-    unfold(robot, env, camera)
+    toggle_off(env, toggle_off(env, camera))
+    EasyGrasp(robot, camera, env)
     donothing(env)

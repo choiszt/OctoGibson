@@ -1,8 +1,8 @@
 {
     "response": {
-        "explain": " Since there is no previous action code or execution error, we can start planning from scratch. The task goal is to put a cup of yogurt in the refrigerator. The observed objects include a bowl, a cup, and a refrigerator. The cup is within the reachable distance (0.56m), but the refrigerator is too far (1.79m). Therefore, the robot needs to first grasp the cup, then move to the refrigerator, and finally put the cup inside the refrigerator.",
-        "subtask": "\n(1) Grasp the cup.\n(2) Move to the refrigerator.\n(3) Open the refrigerator.\n(4) Put the cup inside the refrigerator.\n",
-        "code": "def act(robot,env,camera):\n    # Subtask 1: Grasp the cup\n    cup_85 = registry(env,\"cup_85\")\n    EasyGrasp(robot, cup_85)\n    donothing(env)\n\n",
+        "explain": " Since there is no previous action code or execution error, we can start planning from scratch. The task goal is to put a cup of yogurt in the refrigerator. From the observed objects and relations, we know that the cup of the yogurt is on the grocery shelf and the refrigerator is a bit far. Therefore, the robot needs to first move to the grocery shelves, grasp the cup, then move to and open the refrigerator, and finally put the cup inside the refrigerator to reach the goal.",
+        "subtask": "\n(1) Move to the bottom grocery shelf.\n(2) Grasp the cupofyogri_87.\nMove to the refrigerator_xyejdx_0.\nOpen the refrigerator \n(3) Put the cupinside the refrigerator\n",
+        "code": "def act(robot,env,camera):\n    # Subtask 1: Move to bottom grocery shelves.\n    bottom_grocery_shelf = registry(env, \"bottom_cycling_groove_86\")\n    MoveBot(env, robot, bottom_groceryshelf, camera)\n    donothing(env)\n\n",
         "inventory": null,
         "obj_2": null,
         "obj_3": null

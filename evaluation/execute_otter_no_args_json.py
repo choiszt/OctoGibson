@@ -96,7 +96,7 @@ def gpt_process(args):
                         signal=True
                         for i in range(20):
                             try:
-                                if i==19:
+                                if i==20:
                                     return 0
                                 print(f"try:{i}")
                                 response=otter_request(content, image_list)
@@ -178,7 +178,7 @@ def gpt_process(args):
             subtask_iter += 1
             
             #write json
-            if subtask_iter>8:
+            if subtask_iter>7:
                 print(f"already attempt {subtask_iter} time, it is too long!")
                 return 0
 

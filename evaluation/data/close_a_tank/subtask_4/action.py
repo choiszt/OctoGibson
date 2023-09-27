@@ -7,6 +7,6 @@ from action_utils import *
 
 
 def act(robot, env, camera):
-    tank_88 = registry(env, "tank_88")
-    close(robot, tank_88)
+    fuel_taker_188 = registry(env, "tank_88")
+    EasyGrasp(robot, 'fuel-taker-188')
     donothing(env)

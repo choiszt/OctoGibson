@@ -1,5 +1,6 @@
 
 
-def act(robot, robot, env, camera):
-    unfold(robot, env, camera)
+def act(robot, env, camera):
+    heat(env, 'leaflet-279')
+    EasyGrasp(robot, camera)
     donothing(env)

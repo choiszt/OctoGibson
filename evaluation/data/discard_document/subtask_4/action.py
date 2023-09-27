@@ -6,7 +6,7 @@ from action_list import *
 from action_utils import *
 
 
-def act(robot, env, camera):
-    document = registry(env, "legal_document_189")
-    MoveBot(env, robot, document, camera)
+def act(robot, robot):
+    recycling_bin = registry(env, "recycling_bin_188")
+    MoveBot(env, robot, recycling_bin, camera)
     donothing(env)

@@ -1,6 +1,6 @@
 {
-    "subtask": "\n(1) Move the robot to the document.\n(2) Grasp the document.\n(3) Discard the document.\n",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Move the robot to the document\n    document = registry(env, \"document_189\")\n    MoveBot(env, robot, document, camera)\n\n",
+    "subtask": "\n(1) Grasp the document\n(2) Move to the recycling recycling bin\n(3) Put the document in the recycling trash can\n",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Grasp The Document\n    document = registry(env, \"document_86\")\n    EasyGrasp(roBot, document)\n    donothing(env)\n\n",
     "error": "",
     "critic": "succeed",
     "reset": false,

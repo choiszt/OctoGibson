@@ -41,7 +41,7 @@ def code_llamarequest(content,image_list):
 
 def otter_request(content, image_list):
     # Define the URL and headers
-    url = "http://172.21.25.95:5433/app/otter"
+    url = "http://172.21.25.95:5440/app/otter"
     headers = {
         "Content-Type": "application/json"
     }

@@ -6,7 +6,8 @@ from action_list import *
 from action_utils import *
 
 
-def act(robot, env, camera):
-    bottom_cabinet_nddvba_0 = registry(env, "bottom_cabinet_qacthv_0")
-    MoveBot(env, robot, bottom_cabinet_nddvba_0, camera)
+def act(robot, env):
+    cabinedask_88 = registry(env, "bottom_cabinet_no_top_qudfwe_0")
+    registry(env, cabinedask_88)
     donothing(env)
+    EasyGrasp(robot, env)

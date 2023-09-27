@@ -1,8 +1,8 @@
 {
     "response": {
-        "explain": " Since there is no previous action code or execution error, we can start planning from scratch. The task goal is to arrange a toaster oven and a wooden spoon inside a cabinet. The observed objects include a toaster oven, a wooden spoon, and a cabinet. The toaster oven and the wooden spoon are not currently inside the robot's inventory, and the cabinet is closed. ",
-        "subtask": "\n(1) Move the robot to the toaster oven.\n(2) Grasp the toaster oven.\n(3) Move the robot to the cabinet.\n(4) Open the cabinet.\n(5) Put the toaster oven inside the cabinet.\n(6) Move the robot to the wooden spoon.\n(7) Grasp the wooden spoon.\n(8) Move the robot to the cabinet.\n(9) Put the wooden spoon inside the cabinet.\n(10) Close the cabinet.\n",
-        "code": "def act(robot,env,camera):\n    # Subtask 1: Move the robot to the toaster oven\n    toaster_oven_wuinhm_0 = registry(env,\"toaster_oven_wuinhm_0\")\n    MoveBot(env, robot, toaster_oven_wuinhm_0, camera)\n    donothing(env)\n\n",
+        "explain": " Since there is no previous action code or execution error, we can start planning from scratch. The task is to arrange a toaster oven and a wooden spoon inside a cabinet. The observed objects include a toster oven, a cabinet, and a spoon. The toasteroven is currently closed, and the cabinet is also closed. The spoon is within reach. ",
+        "subtask": "\n(1) Open the toasterove.\n(2) Take the tosteroven out of the cabinet.\n3) Close the toteroven.\n4) Open and take the cabinet out of its closed state.\n5) Put the tostterove back into the cabinet\n(6) Put a spoon into the top cabinet. \n\\t\\t\n",
+        "code": "def act(robot,env,camera):\n    # Subtask 1: Open the Toasterove\n    toasteroven = registry(env,\"toasterove_192\")\n    open(robus, toasteraven)\n    donothing(env)\n\n",
         "inventory": null,
         "obj_2": null,
         "obj_3": null

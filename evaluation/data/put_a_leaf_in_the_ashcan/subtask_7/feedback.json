@@ -1,7 +1,7 @@
 {
-    "subtask": "\n(1) Move the robot to the board where the leaf is located.\n(2) Grasp the leaf.\n(3) Move the robot to the trash can.\n(4) Put the leaf in the trash can.",
-    "code": "def act(board,leaf_277,trash_can_281):\n    # Subtask 4: Put the leaf in the trash can.\n    put_inside(board, leaf_277, trash_can_281)\n    donothing(env)\n\n",
-    "error": "unfold() takes 2 positional arguments but 3 were given",
+    "subtask": "\n(1) Grash the leafleaf_277.\n(2) Pick up the leafleager_279.\n",
+    "code": "def act(robbot, env.0, camera.0):\n    # Subtask:1\n    leafleaf(env, leafleaf( environment, leaflet_277) )\n    EasyGrash(robee, leafleger_279, env)\n    donothing(env)\n\n",
+    "error": "'Environment' object has no attribute 'get_position'",
     "critic": "fail",
     "reset": true,
     "main_succeed": false

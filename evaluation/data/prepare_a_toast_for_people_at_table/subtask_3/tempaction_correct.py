@@ -1,6 +1,6 @@
 
 
 def act(robot, env, camera):
-    toast_150 = registry(env, 'toast_150')
-    EasyGrasp(robot, toast_150)
+    fridge = registry(env, 'fridge_xyejdx_0')
+    MoveBot(env, robot, fridge, camera)
     donothing(env)

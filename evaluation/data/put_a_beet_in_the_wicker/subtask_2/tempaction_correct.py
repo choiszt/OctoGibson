@@ -1,6 +1,6 @@
 
 
 def act(robot, env, camera):
-    beet_275 = registry(env, 'beet_275')
-    EasyGrasp(robot, beet_275)
+    beet3 = registry(env, 'beet')
+    EasyGrasp(robot, beet3)
     donothing(env)

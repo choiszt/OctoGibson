@@ -1,6 +1,6 @@
 
 
-def act(robot, env, camera):
-    fridge_xyejdx_0 = registry(env, 'fridge_xyejdx_0')
-    open(robot, fridge_xyejdx_0)
+def act(robot, env):
+    fridge = registry(env, 'fridge_xyejdx_0')
+    MoveBot(camera, robot, fridge, camera)
     donothing(env)

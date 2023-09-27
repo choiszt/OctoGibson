@@ -7,6 +7,6 @@ from action_utils import *
 
 
 def act(robot, env, camera):
-    wicker_basket = registry(env, "wicker_basket_278")
-    MoveBot(env, robot, wicker_basket, camera)
+    leafylawwn = registry(env, "breakfast_table_idnnmz_0")
+    MoveBot(env, robot, leafylawwn, camera)
     donothing(env)

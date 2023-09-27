@@ -6,7 +6,5 @@ from action_list import *
 from action_utils import *
 
 
-def act(robot, env, camera):
-    document = registry(env, "legal_document_189")
-    EasyGrasp(robot, document)
-    donothing(env)
+def act(camera, robot):
+    top_cabinet = registry(env, "top_cabinet_dmwxyl_0")

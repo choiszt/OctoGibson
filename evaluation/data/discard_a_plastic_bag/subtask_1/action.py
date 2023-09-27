@@ -7,6 +7,6 @@ from action_utils import *
 
 
 def act(robot, env, camera):
-    clothes_dryer = registry(env, "tree_dyymaq_0")
-    open(robot, clothes_dryer)
+    clothes_dryer_zlmnfg_0 = registry(env, "flower_mylblj_0")
+    MoveBot(env, robot, clothes_dryer_zlmnfg_0, camera)
     donothing(env)

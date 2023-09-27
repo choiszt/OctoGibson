@@ -7,5 +7,6 @@ from action_utils import *
 
 
 def act(robot, env, camera):
-    board_275 = registry(env, "leaf_277")
-    MoveBot(env, robot, board_275, camera)
+    leaf_279 = registry(env, "leaf_277")
+    MoveBot(env, robot, leaf_279, camera)
+    donothing(env)

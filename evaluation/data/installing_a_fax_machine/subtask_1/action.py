@@ -7,6 +7,6 @@ from action_utils import *
 
 
 def act(robot, env, camera):
-    modem_279 = registry(env, "oven_wuinhm_0")
-    MoveBot(env, robot, modem_279, camera)
+    waxpaper_191 = registry(env, "carpet_ctclvd_0")
+    MoveBot(env, robot, waxpaper_191, camera)
     donothing(env)

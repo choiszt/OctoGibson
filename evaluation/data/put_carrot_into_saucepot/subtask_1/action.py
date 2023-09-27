@@ -7,6 +7,6 @@ from action_utils import *
 
 
 def act(robot, env, camera):
-    carrot_178 = registry(env, "carrot_151")
-    MoveBot(env, robot, carrot_178, camera)
+    fridge = registry(env, "fridge_xyejdx_0")
+    open(robot, fridge)
     donothing(env)

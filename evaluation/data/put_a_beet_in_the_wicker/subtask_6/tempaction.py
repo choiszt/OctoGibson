@@ -1,7 +1,6 @@
-def act(robot,env,camera):
-    # Subtask 2: Put the beet in the wicker basket
-    beet = registry(env,"beet_277")
-    wicker_basket = registry(env,"wicker_basket_276")
-    put_inside(robot, beet, wicker_basket)
-    donothing(env)
+def act(robbot, env, leafysowask):
+        # Subask 1: Move the roastrobot to the lettuceleafyshawask
+        lettuceleafyswask = env.get_object( "lettuce_leafysow_ask")
+        MoveBot(env, robot, lettuceleafyask, camera)
+        donothing(env)
 

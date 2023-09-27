@@ -1,6 +1,6 @@
 
 
 def act(robot, env, camera):
-    tank_88 = registry(env, 'tank_88')
-    close(robot, tank_88)
+    fuel_storage_tanks_194 = registry(env, 'fuels_storage')
+    EasyGrasp(robot, fuel_storage_tanks_194)
     donothing(env)

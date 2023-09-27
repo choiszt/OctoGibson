@@ -7,6 +7,6 @@ from action_utils import *
 
 
 def act(robot, env, camera):
-    beet_275 = registry(env, "beet_277")
-    EasyGrasp(robot, beet_275)
+    beet3 = registry(env, "beet_277")
+    EasyGrasp(robot, beet3)
     donothing(env)

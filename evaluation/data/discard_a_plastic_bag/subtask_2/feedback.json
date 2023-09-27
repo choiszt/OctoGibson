@@ -1,8 +1,8 @@
 {
-    "subtask": "\n(1) Move the robot to the clothes dryer.\n(2) Open the clothes dryer.\n(3) Take out the plastic bag from the clothes dryer.",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Move the robot to the clothes dryer.\n    clothes_dryer = registry(env, \"clothes_dryer_zlmnfg_0\")\n    MoveBot(env, robot, clothes_dryer, camera)\n    donothing(env)\n\n",
-    "error": "",
-    "critic": "succeed",
+    "subtask": "",
+    "code": "",
+    "error": "Invalid response format!",
+    "critic": "fail",
     "reset": false,
     "main_succeed": false
 }

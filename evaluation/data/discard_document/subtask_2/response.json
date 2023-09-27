@@ -1,8 +1,8 @@
 {
     "response": {
-        "explain": " The previous action code successfully moved the robot to the document without any errors. The next step is to grasp the document.",
-        "subtask": "\n(1) Move the robot to the document.\n(2) Grasp the document.\n(3) Discard the document.",
-        "code": "def act(robot,env,camera):\n    # Subtask 2: Grasp the document\n    document = registry(env, \"document_189\")\n    EasyGrasp(robot, document)\n    donothing(env)\n\n",
+        "explain": " The previous action code has successfully executed the first subtask of grasping the document. The robot now has the document open in its inventory. The next step is to move the robot to the cutting recycling bin.",
+        "subtask": "\n( 1) Grase the document,\n( 2) Move the robot To the cutting Recycling bin\n (3) put the document In the recycling can\n",
+        "code": "def act(task,robot):\n        # SubTask 2: Move the Robot To the Cutting Recyclage bin\n        cutting_recycling_bin = registry (env, 'cutting_repcycling-bin_188')\n        MoveBot(env.env, robot, cutting_recycle_bin, camera)\n        donothing (env)\n\n",
         "inventory": null,
         "obj_2": null,
         "obj_3": null

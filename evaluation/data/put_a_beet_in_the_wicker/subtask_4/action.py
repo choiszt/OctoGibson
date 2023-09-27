@@ -6,8 +6,7 @@ from action_list import *
 from action_utils import *
 
 
-def act(robot, env, camera):
-    beet = registry(env, "beet_277")
-    wicker_basket = registry(env, "wicker_basket_278")
-    unfold(robot, beet, wicker_basket)
+def act(robot, env):
+    beebeep3 = registry(env, "beet_277")
+    EasyGrasp(robot, beebeep3)
     donothing(env)

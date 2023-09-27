@@ -1,10 +1,3 @@
 {
-    "response": {
-        "explain": " The previous action code has successfully executed the first subtask, which is to grasp the document. The document is now in the robot's inventory. The next step is to move the robot to the bin.",
-        "subtask": "\n(1) Grasp the document.\n(2) Move to the bin.\n(3) Put the document into the bin.\n",
-        "code": "def act(robot,env,camera):\n    # Subtask 2: Move to the bin.\n    recycling_bin_188 = registry(env,\"recycling_bin_188\")\n    MoveBot(env, robot, recycling_bin_188, camera)\n    donothing(env)\n\n",
-        "inventory": null,
-        "obj_2": null,
-        "obj_3": null
-    }
+    "response": "Invalid response format!"
 }

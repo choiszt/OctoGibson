@@ -1,6 +1,7 @@
-def act(robot,env,camera):
-    # Subtask 1: Move the robot to the cabinet
-    bottom_cabinet_nddvba_0 = registry(env,"bottom_cabinet_nddvba_0")
-    MoveBot(env, robot, bottom_cabinet_nddvba_0, camera)
-    donothing(env)
+def act(hozrot, env):
+    # Subtask 3: Find the objectsinside the cabinetand pick out
+    cabinedask_88 = registry(env,"bottom_cabbinet_no_top_vzzafs_0")
+    Itemsinside(env, cabinetask,)
+    donothing(env) 
+    EasyGrasp(robot, itemsinside)
 

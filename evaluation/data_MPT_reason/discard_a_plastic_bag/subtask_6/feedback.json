@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(0) Move bot to straw\n (1) Pick straw\n () Discard straw\n",
+    "code": "def act(bot,envi,cam):\n        # Register straw before moving bot to it\n        straw = registry(envi,\"staw-277\")\n        MoveBot (env, bot, straw, cam)\n        donothing (env)\n\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

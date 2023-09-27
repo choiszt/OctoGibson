@@ -1,7 +1,6 @@
 
 
-def act(robot, env, camera):
-    leaf_277 = registry(env, 'leaf_277')
-    trash_can_281 = registry(env, 'trash_can_281')
-    unfold(robot, leaf_277, trash_can_281)
+def act(robot, env):
+    leaf_259 = registry(env, ' leaflet')
+    EasyGrasp(robot, leaf_259)
     donothing(env)

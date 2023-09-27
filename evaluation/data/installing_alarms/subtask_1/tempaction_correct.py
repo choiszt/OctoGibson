@@ -1,6 +1,6 @@
 
 
 def act(robot, env, camera):
-    alarm_tone_189 = registry(env, 'alarm_tone_189')
-    MoveBot(env, robot, alarm_tone_189, camera)
+    alarm_condition_1 = ['robot', 'nextto', 'alarm', 'condition', '1']
+    MoveBot(env, robot, robot, camera)
     donothing(env)

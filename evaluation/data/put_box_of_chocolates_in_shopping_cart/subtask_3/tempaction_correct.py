@@ -1,6 +1,6 @@
 
 
 def act(robot, env, camera):
-    countertop = registry(env, 'countertop_tpuwys_1')
-    MoveBot(env, robot, countertop, camera)
+    baseofcocoa_189 = registry(env, 'baseofcopper_189')
+    EasyGrasp(robot, baseofcocoa_189)
     donothing(env)

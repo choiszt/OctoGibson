@@ -1,6 +1,5 @@
-def act(robot,env,camera):
-    # Subtask 2: Open the fridge
-    fridge = registry(env, "fridge_xyejdx_0")
-    open(robot, fridge)
-    donothing(env)
+def act(stepping_bot, env, camera):
+  # Subask 1: Register the fridger and therobot
+  fridge= registry( env, " fridge_xyeydx_000")
+  robot = registry (env, "'robot'")
 

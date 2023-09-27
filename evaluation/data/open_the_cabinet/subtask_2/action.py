@@ -7,6 +7,6 @@ from action_utils import *
 
 
 def act(robot, env, camera):
-    bottom_cabinet_nddvba_0 = registry(env, "bottom_cabinet_qacthv_0")
-    open(robot, bottom_cabinet_nddvba_0)
+    cabinerask_98 = registry(env, "top_cabinet_dmwxyl_0")
+    open(robot, cabinerask_98)
     donothing(env)

@@ -1,6 +1,5 @@
 
 
 def act(robot, env, camera):
-    fridge = registry(env, 'fridge_xyejdx_0')
-    open(robot, fridge)
-    donothing(env)
+    fridge = registry(env, ' fridge_xyeydx_000')
+    robot = registry(env, "'robot'")

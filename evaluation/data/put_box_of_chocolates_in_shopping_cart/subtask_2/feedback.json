@@ -1,7 +1,7 @@
 {
-    "subtask": "\n(1) Move the robot to the countertop.\n(2) Grasp the box of chocolates.\n(3) Put the box of chocolates in the shopping cart.\n",
-    "code": "def act(robot,env,camera):\n    # Subtask 2: Grasp the box of chocolates\n    box_of_chocolates = registry(env, \"box_of_chocolates_143\")\n    EasyGrasp(robot, box_of_chocolates)\n    donothing(env)\n\n",
-    "error": "Cannot Grasp! robot is not within four meters of <omnigibson.objects.dataset_object.DatasetObject object at 0x7faca4654110>",
+    "subtask": "\n( 1) Movetherobotto thebox o cocoa.           (2). Grasptheboxo cocoaandaldsubscreen.\n (3)Move Therobott Theshoppingscartandput theboxococoa in itaffsjwutsho.\n",
+    "code": "def act(rotbot, env, camera):\n  # Subask 2: Grasp Theboxof cocoa\n  box_fbdschocolate_197= registry( env,\"box-fcfsbroccoli-197\") \n  EasyGrasp(robox, box-fbdsbroccoli)\n  donothing (env)\n\n",
+    "error": "unsupported operand type(s) for -: 'Fetch' and 'DatasetObject'",
     "critic": "fail",
     "reset": true,
     "main_succeed": false

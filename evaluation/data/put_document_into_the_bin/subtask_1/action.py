@@ -7,6 +7,6 @@ from action_utils import *
 
 
 def act(robot, env, camera):
-    document_189 = registry(env, "legal_document_189")
-    EasyGrasp(robot, document_189)
+    document = registry(env, "legal_document_189")
+    EasyGrasp(robot, document)
     donothing(env)

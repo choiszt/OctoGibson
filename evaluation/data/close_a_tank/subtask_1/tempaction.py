@@ -1,9 +1,5 @@
 def act(robot,env,camera):
-    # Subtask 1: Move the robot to the tank
-    tank_88 = registry(env,"tank_88")
-    MoveBot(env, robot, tank_88, camera)
-    donothing(env)
-    # Subtask 2: Close the tank
-    close(robot, tank_88)
-    donothing(env)
+    # Subtask 1: Move the agent to thebowl(tak)
+    bowl_195 = registry(env,"bowl-195")
+    MoveBot(env, robot, bowl_195, camera)
 

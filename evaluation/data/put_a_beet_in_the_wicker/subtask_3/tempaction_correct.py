@@ -1,6 +1,6 @@
 
 
 def act(robot, env, camera):
-    wicker_basket = registry(env, 'wicker_basket')
-    MoveBot(env, robot, wicker_basket, camera)
+    leafylawwn = registry(env, 'leafylashwn')
+    MoveBot(env, robot, leafylawwn, camera)
     donothing(env)

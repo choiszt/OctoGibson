@@ -1,6 +1,6 @@
-def act(robot,env,camera):
-    # Subtask 2: Grasp the box of chocolates
-    box_of_chocolates = registry(env, "box_of_chocolates_143")
-    EasyGrasp(robot, box_of_chocolates)
-    donothing(env)
+def act(rotbot, env, camera):
+  # Subask 2: Grasp Theboxof cocoa
+  box_fbdschocolate_197= registry( env,"box-fcfsbroccoli-197") 
+  EasyGrasp(robox, box-fbdsbroccoli)
+  donothing (env)
 

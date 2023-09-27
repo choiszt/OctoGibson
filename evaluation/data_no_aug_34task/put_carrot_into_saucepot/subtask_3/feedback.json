@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move to the refrigerator.\n(2) Open the refrigerator\n(3) Take the carrot from the refrigerator into the pan\n(4) Move back to the countertops\n(5) Put the carrot in the saucepan\n",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Move to The refrigerator\n    fridge = registry(env, \"fridge_xyejdx_0\")\n    MoveBot(env.get_camera, fridge, camera)\n    donothing(env)\n\n",
-    "error": "MoveBot() missing 1 required positional argument: 'camera'",
-    "critic": "fail",
-    "reset": true,
-    "main_succeed": false
-}

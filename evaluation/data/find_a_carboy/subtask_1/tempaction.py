@@ -1,6 +1,5 @@
 def act(robot,env,camera):
-    # Subtask 1: Open the bottom cabinet
-    bottom_cabinet = registry(env, "bottom_cabinet_no_top_qudfwe_0")
-    open(robot, bottom_cabinet)
-    donothing(env)
+    # Subtask 1: Move to The Reagent bottle (Reagent_Bottle)
+    reagent = registry(env, "reagent-bottles_189")
+    MoveBot(env.env, robot, reagent, camera)
 

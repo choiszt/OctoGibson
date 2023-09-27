@@ -7,6 +7,6 @@ from action_utils import *
 
 
 def act(robot, env, camera):
-    toast_150 = registry(env, "french_toast_188")
-    EasyGrasp(robot, toast_150)
+    fridge = registry(env, "fridge_dszchb_0")
+    MoveBot(env, robot, fridge, camera)
     donothing(env)

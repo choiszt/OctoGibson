@@ -1,82 +1,6 @@
 {
     "task": "find_pizza_box",
     "0_detect_surroundings": {
-        "pizza_box_86": {
-            "ability": [
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.7360728497039142,
-                "theta_deg": 155.61056467230438,
-                "phi_deg": 54.366303268731734
-            },
-            "orientation_in_bot": [
-                -0.008293741407895856,
-                -0.005584942891435312,
-                0.06860345573964508,
-                0.9975938994034281
-            ],
-            "position_in_world": [
-                -1.3117083311080933,
-                1.5246628522872925,
-                1.0543421506881714
-            ],
-            "bot_in_world": [
-                -1.541031837463379,
-                0.16049312055110931,
-                0.005342364311218262
-            ],
-            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance0_detect_surroundings.png"
-        },
-        "pizza_85": {
-            "ability": [
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ],
-                [
-                    "burnable",
-                    0
-                ],
-                [
-                    "cookable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.6354052937483146,
-                "theta_deg": 170.4503295819915,
-                "phi_deg": 55.10343419600079
-            },
-            "orientation_in_bot": [
-                0.034116351269806125,
-                -0.024013982405832402,
-                0.5580200718706916,
-                0.8287780176950132
-            ],
-            "position_in_world": [
-                -1.6692566871643066,
-                1.4698237180709839,
-                0.9768165946006775
-            ],
-            "bot_in_world": [
-                -1.541031837463379,
-                0.16049312055110931,
-                0.005342364311218262
-            ],
-            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance0_detect_surroundings.png"
-        },
         "trash_can_87": {
             "ability": [
                 [
@@ -149,16 +73,87 @@
             ],
             "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance0_detect_surroundings.png"
         },
+        "pizza_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6354052937483146,
+                "theta_deg": 170.4503295819915,
+                "phi_deg": 55.10343419600079
+            },
+            "orientation_in_bot": [
+                0.034116351269806125,
+                -0.024013982405832402,
+                0.5580200718706916,
+                0.8287780176950132
+            ],
+            "position_in_world": [
+                -1.6692566871643066,
+                1.4698237180709839,
+                0.9768165946006775
+            ],
+            "bot_in_world": [
+                -1.541031837463379,
+                0.16049312055110931,
+                0.005342364311218262
+            ],
+            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance0_detect_surroundings.png"
+        },
+        "pizza_box_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.7360728497039142,
+                "theta_deg": 155.61056467230438,
+                "phi_deg": 54.366303268731734
+            },
+            "orientation_in_bot": [
+                -0.008293741407895856,
+                -0.005584942891435312,
+                0.06860345573964508,
+                0.9975938994034281
+            ],
+            "position_in_world": [
+                -1.3117083311080933,
+                1.5246628522872925,
+                1.0543421506881714
+            ],
+            "bot_in_world": [
+                -1.541031837463379,
+                0.16049312055110931,
+                0.005342364311218262
+            ],
+            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance0_detect_surroundings.png"
+        },
         "scene_graph": [
             [
-                "pizza_box_86",
-                "inside",
-                "fridge_xyejdx_0"
-            ],
-            [
-                "pizza_85",
-                "inside",
-                "fridge_xyejdx_0"
+                "fridge_xyejdx_0",
+                "under",
+                "pizza_85"
             ],
             [
                 "fridge_xyejdx_0",
@@ -166,90 +161,19 @@
                 "pizza_box_86"
             ],
             [
-                "fridge_xyejdx_0",
-                "under",
-                "pizza_85"
+                "pizza_85",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "pizza_box_86",
+                "inside",
+                "fridge_xyejdx_0"
             ]
         ],
         "inventory": []
     },
     "1_detect_surroundings": {
-        "pizza_box_86": {
-            "ability": [
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.7360728497039142,
-                "theta_deg": 155.61056467230438,
-                "phi_deg": 54.366303268731734
-            },
-            "orientation_in_bot": [
-                -0.008293741407895856,
-                -0.005584942891435312,
-                0.06860345573964508,
-                0.9975938994034281
-            ],
-            "position_in_world": [
-                -1.3117083311080933,
-                1.5246628522872925,
-                1.0543421506881714
-            ],
-            "bot_in_world": [
-                -1.541031837463379,
-                0.16049312055110931,
-                0.005342364311218262
-            ],
-            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance1_detect_surroundings.png"
-        },
-        "pizza_85": {
-            "ability": [
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ],
-                [
-                    "burnable",
-                    0
-                ],
-                [
-                    "cookable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.6354052937483146,
-                "theta_deg": 170.4503295819915,
-                "phi_deg": 55.10343419600079
-            },
-            "orientation_in_bot": [
-                0.034116351269806125,
-                -0.024013982405832402,
-                0.5580200718706916,
-                0.8287780176950132
-            ],
-            "position_in_world": [
-                -1.6692566871643066,
-                1.4698237180709839,
-                0.9768165946006775
-            ],
-            "bot_in_world": [
-                -1.541031837463379,
-                0.16049312055110931,
-                0.005342364311218262
-            ],
-            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance1_detect_surroundings.png"
-        },
         "trash_can_87": {
             "ability": [
                 [
@@ -322,16 +246,87 @@
             ],
             "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance1_detect_surroundings.png"
         },
+        "pizza_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6354052937483146,
+                "theta_deg": 170.4503295819915,
+                "phi_deg": 55.10343419600079
+            },
+            "orientation_in_bot": [
+                0.034116351269806125,
+                -0.024013982405832402,
+                0.5580200718706916,
+                0.8287780176950132
+            ],
+            "position_in_world": [
+                -1.6692566871643066,
+                1.4698237180709839,
+                0.9768165946006775
+            ],
+            "bot_in_world": [
+                -1.541031837463379,
+                0.16049312055110931,
+                0.005342364311218262
+            ],
+            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance1_detect_surroundings.png"
+        },
+        "pizza_box_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.7360728497039142,
+                "theta_deg": 155.61056467230438,
+                "phi_deg": 54.366303268731734
+            },
+            "orientation_in_bot": [
+                -0.008293741407895856,
+                -0.005584942891435312,
+                0.06860345573964508,
+                0.9975938994034281
+            ],
+            "position_in_world": [
+                -1.3117083311080933,
+                1.5246628522872925,
+                1.0543421506881714
+            ],
+            "bot_in_world": [
+                -1.541031837463379,
+                0.16049312055110931,
+                0.005342364311218262
+            ],
+            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance1_detect_surroundings.png"
+        },
         "scene_graph": [
             [
-                "pizza_box_86",
-                "inside",
-                "fridge_xyejdx_0"
-            ],
-            [
-                "pizza_85",
-                "inside",
-                "fridge_xyejdx_0"
+                "fridge_xyejdx_0",
+                "under",
+                "pizza_85"
             ],
             [
                 "fridge_xyejdx_0",
@@ -339,90 +334,19 @@
                 "pizza_box_86"
             ],
             [
-                "fridge_xyejdx_0",
-                "under",
-                "pizza_85"
+                "pizza_85",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "pizza_box_86",
+                "inside",
+                "fridge_xyejdx_0"
             ]
         ],
         "inventory": []
     },
     "2_detect_surroundings": {
-        "pizza_box_86": {
-            "ability": [
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.7360728497039142,
-                "theta_deg": 155.61056467230438,
-                "phi_deg": 54.366303268731734
-            },
-            "orientation_in_bot": [
-                -0.008293741407895856,
-                -0.005584942891435312,
-                0.06860345573964508,
-                0.9975938994034281
-            ],
-            "position_in_world": [
-                -1.3117083311080933,
-                1.5246628522872925,
-                1.0543421506881714
-            ],
-            "bot_in_world": [
-                -1.541031837463379,
-                0.16049312055110931,
-                0.005342364311218262
-            ],
-            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance2_detect_surroundings.png"
-        },
-        "pizza_85": {
-            "ability": [
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ],
-                [
-                    "burnable",
-                    0
-                ],
-                [
-                    "cookable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.6354052937483146,
-                "theta_deg": 170.4503295819915,
-                "phi_deg": 55.10343419600079
-            },
-            "orientation_in_bot": [
-                0.034116351269806125,
-                -0.024013982405832402,
-                0.5580200718706916,
-                0.8287780176950132
-            ],
-            "position_in_world": [
-                -1.6692566871643066,
-                1.4698237180709839,
-                0.9768165946006775
-            ],
-            "bot_in_world": [
-                -1.541031837463379,
-                0.16049312055110931,
-                0.005342364311218262
-            ],
-            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance2_detect_surroundings.png"
-        },
         "trash_can_87": {
             "ability": [
                 [
@@ -495,16 +419,87 @@
             ],
             "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance2_detect_surroundings.png"
         },
+        "pizza_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6354052937483146,
+                "theta_deg": 170.4503295819915,
+                "phi_deg": 55.10343419600079
+            },
+            "orientation_in_bot": [
+                0.034116351269806125,
+                -0.024013982405832402,
+                0.5580200718706916,
+                0.8287780176950132
+            ],
+            "position_in_world": [
+                -1.6692566871643066,
+                1.4698237180709839,
+                0.9768165946006775
+            ],
+            "bot_in_world": [
+                -1.541031837463379,
+                0.16049312055110931,
+                0.005342364311218262
+            ],
+            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance2_detect_surroundings.png"
+        },
+        "pizza_box_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.7360728497039142,
+                "theta_deg": 155.61056467230438,
+                "phi_deg": 54.366303268731734
+            },
+            "orientation_in_bot": [
+                -0.008293741407895856,
+                -0.005584942891435312,
+                0.06860345573964508,
+                0.9975938994034281
+            ],
+            "position_in_world": [
+                -1.3117083311080933,
+                1.5246628522872925,
+                1.0543421506881714
+            ],
+            "bot_in_world": [
+                -1.541031837463379,
+                0.16049312055110931,
+                0.005342364311218262
+            ],
+            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance2_detect_surroundings.png"
+        },
         "scene_graph": [
             [
-                "pizza_box_86",
-                "inside",
-                "fridge_xyejdx_0"
-            ],
-            [
-                "pizza_85",
-                "inside",
-                "fridge_xyejdx_0"
+                "fridge_xyejdx_0",
+                "under",
+                "pizza_85"
             ],
             [
                 "fridge_xyejdx_0",
@@ -512,90 +507,19 @@
                 "pizza_box_86"
             ],
             [
-                "fridge_xyejdx_0",
-                "under",
-                "pizza_85"
+                "pizza_85",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "pizza_box_86",
+                "inside",
+                "fridge_xyejdx_0"
             ]
         ],
         "inventory": []
     },
     "3_detect_surroundings": {
-        "pizza_box_86": {
-            "ability": [
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.7360728497039142,
-                "theta_deg": 155.61056467230438,
-                "phi_deg": 54.366303268731734
-            },
-            "orientation_in_bot": [
-                -0.008293741407895856,
-                -0.005584942891435312,
-                0.06860345573964508,
-                0.9975938994034281
-            ],
-            "position_in_world": [
-                -1.3117083311080933,
-                1.5246628522872925,
-                1.0543421506881714
-            ],
-            "bot_in_world": [
-                -1.541031837463379,
-                0.16049312055110931,
-                0.005342364311218262
-            ],
-            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance3_detect_surroundings.png"
-        },
-        "pizza_85": {
-            "ability": [
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ],
-                [
-                    "burnable",
-                    0
-                ],
-                [
-                    "cookable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.6354052937483146,
-                "theta_deg": 170.4503295819915,
-                "phi_deg": 55.10343419600079
-            },
-            "orientation_in_bot": [
-                0.034116351269806125,
-                -0.024013982405832402,
-                0.5580200718706916,
-                0.8287780176950132
-            ],
-            "position_in_world": [
-                -1.6692566871643066,
-                1.4698237180709839,
-                0.9768165946006775
-            ],
-            "bot_in_world": [
-                -1.541031837463379,
-                0.16049312055110931,
-                0.005342364311218262
-            ],
-            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance3_detect_surroundings.png"
-        },
         "trash_can_87": {
             "ability": [
                 [
@@ -668,16 +592,87 @@
             ],
             "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance3_detect_surroundings.png"
         },
+        "pizza_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6354052937483146,
+                "theta_deg": 170.4503295819915,
+                "phi_deg": 55.10343419600079
+            },
+            "orientation_in_bot": [
+                0.034116351269806125,
+                -0.024013982405832402,
+                0.5580200718706916,
+                0.8287780176950132
+            ],
+            "position_in_world": [
+                -1.6692566871643066,
+                1.4698237180709839,
+                0.9768165946006775
+            ],
+            "bot_in_world": [
+                -1.541031837463379,
+                0.16049312055110931,
+                0.005342364311218262
+            ],
+            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance3_detect_surroundings.png"
+        },
+        "pizza_box_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.7360728497039142,
+                "theta_deg": 155.61056467230438,
+                "phi_deg": 54.366303268731734
+            },
+            "orientation_in_bot": [
+                -0.008293741407895856,
+                -0.005584942891435312,
+                0.06860345573964508,
+                0.9975938994034281
+            ],
+            "position_in_world": [
+                -1.3117083311080933,
+                1.5246628522872925,
+                1.0543421506881714
+            ],
+            "bot_in_world": [
+                -1.541031837463379,
+                0.16049312055110931,
+                0.005342364311218262
+            ],
+            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance3_detect_surroundings.png"
+        },
         "scene_graph": [
             [
-                "pizza_box_86",
-                "inside",
-                "fridge_xyejdx_0"
-            ],
-            [
-                "pizza_85",
-                "inside",
-                "fridge_xyejdx_0"
+                "fridge_xyejdx_0",
+                "under",
+                "pizza_85"
             ],
             [
                 "fridge_xyejdx_0",
@@ -685,90 +680,19 @@
                 "pizza_box_86"
             ],
             [
-                "fridge_xyejdx_0",
-                "under",
-                "pizza_85"
+                "pizza_85",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "pizza_box_86",
+                "inside",
+                "fridge_xyejdx_0"
             ]
         ],
         "inventory": []
     },
     "4_detect_surroundings": {
-        "pizza_box_86": {
-            "ability": [
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.7360728497039142,
-                "theta_deg": 155.61056467230438,
-                "phi_deg": 54.366303268731734
-            },
-            "orientation_in_bot": [
-                -0.008293741407895856,
-                -0.005584942891435312,
-                0.06860345573964508,
-                0.9975938994034281
-            ],
-            "position_in_world": [
-                -1.3117083311080933,
-                1.5246628522872925,
-                1.0543421506881714
-            ],
-            "bot_in_world": [
-                -1.541031837463379,
-                0.16049312055110931,
-                0.005342364311218262
-            ],
-            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance4_detect_surroundings.png"
-        },
-        "pizza_85": {
-            "ability": [
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ],
-                [
-                    "burnable",
-                    0
-                ],
-                [
-                    "cookable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.6354052937483146,
-                "theta_deg": 170.4503295819915,
-                "phi_deg": 55.10343419600079
-            },
-            "orientation_in_bot": [
-                0.034116351269806125,
-                -0.024013982405832402,
-                0.5580200718706916,
-                0.8287780176950132
-            ],
-            "position_in_world": [
-                -1.6692566871643066,
-                1.4698237180709839,
-                0.9768165946006775
-            ],
-            "bot_in_world": [
-                -1.541031837463379,
-                0.16049312055110931,
-                0.005342364311218262
-            ],
-            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance4_detect_surroundings.png"
-        },
         "trash_can_87": {
             "ability": [
                 [
@@ -841,16 +765,87 @@
             ],
             "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance4_detect_surroundings.png"
         },
+        "pizza_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6354052937483146,
+                "theta_deg": 170.4503295819915,
+                "phi_deg": 55.10343419600079
+            },
+            "orientation_in_bot": [
+                0.034116351269806125,
+                -0.024013982405832402,
+                0.5580200718706916,
+                0.8287780176950132
+            ],
+            "position_in_world": [
+                -1.6692566871643066,
+                1.4698237180709839,
+                0.9768165946006775
+            ],
+            "bot_in_world": [
+                -1.541031837463379,
+                0.16049312055110931,
+                0.005342364311218262
+            ],
+            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance4_detect_surroundings.png"
+        },
+        "pizza_box_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.7360728497039142,
+                "theta_deg": 155.61056467230438,
+                "phi_deg": 54.366303268731734
+            },
+            "orientation_in_bot": [
+                -0.008293741407895856,
+                -0.005584942891435312,
+                0.06860345573964508,
+                0.9975938994034281
+            ],
+            "position_in_world": [
+                -1.3117083311080933,
+                1.5246628522872925,
+                1.0543421506881714
+            ],
+            "bot_in_world": [
+                -1.541031837463379,
+                0.16049312055110931,
+                0.005342364311218262
+            ],
+            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance4_detect_surroundings.png"
+        },
         "scene_graph": [
             [
-                "pizza_box_86",
-                "inside",
-                "fridge_xyejdx_0"
-            ],
-            [
-                "pizza_85",
-                "inside",
-                "fridge_xyejdx_0"
+                "fridge_xyejdx_0",
+                "under",
+                "pizza_85"
             ],
             [
                 "fridge_xyejdx_0",
@@ -858,90 +853,19 @@
                 "pizza_box_86"
             ],
             [
-                "fridge_xyejdx_0",
-                "under",
-                "pizza_85"
+                "pizza_85",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "pizza_box_86",
+                "inside",
+                "fridge_xyejdx_0"
             ]
         ],
         "inventory": []
     },
     "5_detect_surroundings": {
-        "pizza_box_86": {
-            "ability": [
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.7360728497039142,
-                "theta_deg": 155.61056467230438,
-                "phi_deg": 54.366303268731734
-            },
-            "orientation_in_bot": [
-                -0.008293741407895856,
-                -0.005584942891435312,
-                0.06860345573964508,
-                0.9975938994034281
-            ],
-            "position_in_world": [
-                -1.3117083311080933,
-                1.5246628522872925,
-                1.0543421506881714
-            ],
-            "bot_in_world": [
-                -1.541031837463379,
-                0.16049312055110931,
-                0.005342364311218262
-            ],
-            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance5_detect_surroundings.png"
-        },
-        "pizza_85": {
-            "ability": [
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ],
-                [
-                    "burnable",
-                    0
-                ],
-                [
-                    "cookable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.6354052937483146,
-                "theta_deg": 170.4503295819915,
-                "phi_deg": 55.10343419600079
-            },
-            "orientation_in_bot": [
-                0.034116351269806125,
-                -0.024013982405832402,
-                0.5580200718706916,
-                0.8287780176950132
-            ],
-            "position_in_world": [
-                -1.6692566871643066,
-                1.4698237180709839,
-                0.9768165946006775
-            ],
-            "bot_in_world": [
-                -1.541031837463379,
-                0.16049312055110931,
-                0.005342364311218262
-            ],
-            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance5_detect_surroundings.png"
-        },
         "trash_can_87": {
             "ability": [
                 [
@@ -1014,16 +938,87 @@
             ],
             "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance5_detect_surroundings.png"
         },
+        "pizza_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6354052937483146,
+                "theta_deg": 170.4503295819915,
+                "phi_deg": 55.10343419600079
+            },
+            "orientation_in_bot": [
+                0.034116351269806125,
+                -0.024013982405832402,
+                0.5580200718706916,
+                0.8287780176950132
+            ],
+            "position_in_world": [
+                -1.6692566871643066,
+                1.4698237180709839,
+                0.9768165946006775
+            ],
+            "bot_in_world": [
+                -1.541031837463379,
+                0.16049312055110931,
+                0.005342364311218262
+            ],
+            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance5_detect_surroundings.png"
+        },
+        "pizza_box_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.7360728497039142,
+                "theta_deg": 155.61056467230438,
+                "phi_deg": 54.366303268731734
+            },
+            "orientation_in_bot": [
+                -0.008293741407895856,
+                -0.005584942891435312,
+                0.06860345573964508,
+                0.9975938994034281
+            ],
+            "position_in_world": [
+                -1.3117083311080933,
+                1.5246628522872925,
+                1.0543421506881714
+            ],
+            "bot_in_world": [
+                -1.541031837463379,
+                0.16049312055110931,
+                0.005342364311218262
+            ],
+            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance5_detect_surroundings.png"
+        },
         "scene_graph": [
             [
-                "pizza_box_86",
-                "inside",
-                "fridge_xyejdx_0"
-            ],
-            [
-                "pizza_85",
-                "inside",
-                "fridge_xyejdx_0"
+                "fridge_xyejdx_0",
+                "under",
+                "pizza_85"
             ],
             [
                 "fridge_xyejdx_0",
@@ -1031,90 +1026,19 @@
                 "pizza_box_86"
             ],
             [
-                "fridge_xyejdx_0",
-                "under",
-                "pizza_85"
+                "pizza_85",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "pizza_box_86",
+                "inside",
+                "fridge_xyejdx_0"
             ]
         ],
         "inventory": []
     },
     "6_detect_surroundings": {
-        "pizza_box_86": {
-            "ability": [
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.7360728497039142,
-                "theta_deg": 155.61056467230438,
-                "phi_deg": 54.366303268731734
-            },
-            "orientation_in_bot": [
-                -0.008293741407895856,
-                -0.005584942891435312,
-                0.06860345573964508,
-                0.9975938994034281
-            ],
-            "position_in_world": [
-                -1.3117083311080933,
-                1.5246628522872925,
-                1.0543421506881714
-            ],
-            "bot_in_world": [
-                -1.541031837463379,
-                0.16049312055110931,
-                0.005342364311218262
-            ],
-            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance6_detect_surroundings.png"
-        },
-        "pizza_85": {
-            "ability": [
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ],
-                [
-                    "burnable",
-                    0
-                ],
-                [
-                    "cookable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.6354052937483146,
-                "theta_deg": 170.4503295819915,
-                "phi_deg": 55.10343419600079
-            },
-            "orientation_in_bot": [
-                0.034116351269806125,
-                -0.024013982405832402,
-                0.5580200718706916,
-                0.8287780176950132
-            ],
-            "position_in_world": [
-                -1.6692566871643066,
-                1.4698237180709839,
-                0.9768165946006775
-            ],
-            "bot_in_world": [
-                -1.541031837463379,
-                0.16049312055110931,
-                0.005342364311218262
-            ],
-            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance6_detect_surroundings.png"
-        },
         "trash_can_87": {
             "ability": [
                 [
@@ -1187,16 +1111,87 @@
             ],
             "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance6_detect_surroundings.png"
         },
+        "pizza_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6354052937483146,
+                "theta_deg": 170.4503295819915,
+                "phi_deg": 55.10343419600079
+            },
+            "orientation_in_bot": [
+                0.034116351269806125,
+                -0.024013982405832402,
+                0.5580200718706916,
+                0.8287780176950132
+            ],
+            "position_in_world": [
+                -1.6692566871643066,
+                1.4698237180709839,
+                0.9768165946006775
+            ],
+            "bot_in_world": [
+                -1.541031837463379,
+                0.16049312055110931,
+                0.005342364311218262
+            ],
+            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance6_detect_surroundings.png"
+        },
+        "pizza_box_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.7360728497039142,
+                "theta_deg": 155.61056467230438,
+                "phi_deg": 54.366303268731734
+            },
+            "orientation_in_bot": [
+                -0.008293741407895856,
+                -0.005584942891435312,
+                0.06860345573964508,
+                0.9975938994034281
+            ],
+            "position_in_world": [
+                -1.3117083311080933,
+                1.5246628522872925,
+                1.0543421506881714
+            ],
+            "bot_in_world": [
+                -1.541031837463379,
+                0.16049312055110931,
+                0.005342364311218262
+            ],
+            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance6_detect_surroundings.png"
+        },
         "scene_graph": [
             [
-                "pizza_box_86",
-                "inside",
-                "fridge_xyejdx_0"
-            ],
-            [
-                "pizza_85",
-                "inside",
-                "fridge_xyejdx_0"
+                "fridge_xyejdx_0",
+                "under",
+                "pizza_85"
             ],
             [
                 "fridge_xyejdx_0",
@@ -1204,90 +1199,19 @@
                 "pizza_box_86"
             ],
             [
-                "fridge_xyejdx_0",
-                "under",
-                "pizza_85"
+                "pizza_85",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "pizza_box_86",
+                "inside",
+                "fridge_xyejdx_0"
             ]
         ],
         "inventory": []
     },
     "7_detect_surroundings": {
-        "pizza_box_86": {
-            "ability": [
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.7360728497039142,
-                "theta_deg": 155.61056467230438,
-                "phi_deg": 54.366303268731734
-            },
-            "orientation_in_bot": [
-                -0.008293741407895856,
-                -0.005584942891435312,
-                0.06860345573964508,
-                0.9975938994034281
-            ],
-            "position_in_world": [
-                -1.3117083311080933,
-                1.5246628522872925,
-                1.0543421506881714
-            ],
-            "bot_in_world": [
-                -1.541031837463379,
-                0.16049312055110931,
-                0.005342364311218262
-            ],
-            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance7_detect_surroundings.png"
-        },
-        "pizza_85": {
-            "ability": [
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ],
-                [
-                    "burnable",
-                    0
-                ],
-                [
-                    "cookable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.6354052937483146,
-                "theta_deg": 170.4503295819915,
-                "phi_deg": 55.10343419600079
-            },
-            "orientation_in_bot": [
-                0.034116351269806125,
-                -0.024013982405832402,
-                0.5580200718706916,
-                0.8287780176950132
-            ],
-            "position_in_world": [
-                -1.6692566871643066,
-                1.4698237180709839,
-                0.9768165946006775
-            ],
-            "bot_in_world": [
-                -1.541031837463379,
-                0.16049312055110931,
-                0.005342364311218262
-            ],
-            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance7_detect_surroundings.png"
-        },
         "trash_can_87": {
             "ability": [
                 [
@@ -1360,16 +1284,87 @@
             ],
             "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance7_detect_surroundings.png"
         },
+        "pizza_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6354052937483146,
+                "theta_deg": 170.4503295819915,
+                "phi_deg": 55.10343419600079
+            },
+            "orientation_in_bot": [
+                0.034116351269806125,
+                -0.024013982405832402,
+                0.5580200718706916,
+                0.8287780176950132
+            ],
+            "position_in_world": [
+                -1.6692566871643066,
+                1.4698237180709839,
+                0.9768165946006775
+            ],
+            "bot_in_world": [
+                -1.541031837463379,
+                0.16049312055110931,
+                0.005342364311218262
+            ],
+            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance7_detect_surroundings.png"
+        },
+        "pizza_box_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.7360728497039142,
+                "theta_deg": 155.61056467230438,
+                "phi_deg": 54.366303268731734
+            },
+            "orientation_in_bot": [
+                -0.008293741407895856,
+                -0.005584942891435312,
+                0.06860345573964508,
+                0.9975938994034281
+            ],
+            "position_in_world": [
+                -1.3117083311080933,
+                1.5246628522872925,
+                1.0543421506881714
+            ],
+            "bot_in_world": [
+                -1.541031837463379,
+                0.16049312055110931,
+                0.005342364311218262
+            ],
+            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance7_detect_surroundings.png"
+        },
         "scene_graph": [
             [
-                "pizza_box_86",
-                "inside",
-                "fridge_xyejdx_0"
-            ],
-            [
-                "pizza_85",
-                "inside",
-                "fridge_xyejdx_0"
+                "fridge_xyejdx_0",
+                "under",
+                "pizza_85"
             ],
             [
                 "fridge_xyejdx_0",
@@ -1377,90 +1372,19 @@
                 "pizza_box_86"
             ],
             [
-                "fridge_xyejdx_0",
-                "under",
-                "pizza_85"
+                "pizza_85",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "pizza_box_86",
+                "inside",
+                "fridge_xyejdx_0"
             ]
         ],
         "inventory": []
     },
     "8_BEV_surroundings": {
-        "pizza_box_86": {
-            "ability": [
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.736123502306831,
-                "theta_deg": 156.07867782034816,
-                "phi_deg": 54.375661016593355
-            },
-            "orientation_in_bot": [
-                -0.009957291765641347,
-                -0.004561629610638135,
-                0.07383638626980618,
-                0.99721022454576
-            ],
-            "position_in_world": [
-                -1.3116964101791382,
-                1.5246607065200806,
-                1.0543359518051147
-            ],
-            "bot_in_world": [
-                -1.5402356386184692,
-                0.15985803306102753,
-                0.005904644727706909
-            ],
-            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance8_BEV_surroundings.png"
-        },
-        "pizza_85": {
-            "ability": [
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ],
-                [
-                    "burnable",
-                    0
-                ],
-                [
-                    "cookable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.6381113766858777,
-                "theta_deg": 170.91810261560272,
-                "phi_deg": 55.11866134790857
-            },
-            "orientation_in_bot": [
-                0.03341198283916754,
-                -0.02217494033287833,
-                0.566447247107925,
-                0.8231217574987565
-            ],
-            "position_in_world": [
-                -1.6693320274353027,
-                1.4728246927261353,
-                0.976915180683136
-            ],
-            "bot_in_world": [
-                -1.5402356386184692,
-                0.15985803306102753,
-                0.005904644727706909
-            ],
-            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance8_BEV_surroundings.png"
-        },
         "trash_can_87": {
             "ability": [
                 [
@@ -1533,16 +1457,87 @@
             ],
             "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance8_BEV_surroundings.png"
         },
+        "pizza_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6381113766858777,
+                "theta_deg": 170.91810261560272,
+                "phi_deg": 55.11866134790857
+            },
+            "orientation_in_bot": [
+                0.03341198283916754,
+                -0.02217494033287833,
+                0.566447247107925,
+                0.8231217574987565
+            ],
+            "position_in_world": [
+                -1.6693320274353027,
+                1.4728246927261353,
+                0.976915180683136
+            ],
+            "bot_in_world": [
+                -1.5402356386184692,
+                0.15985803306102753,
+                0.005904644727706909
+            ],
+            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
+        "pizza_box_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.736123502306831,
+                "theta_deg": 156.07867782034816,
+                "phi_deg": 54.375661016593355
+            },
+            "orientation_in_bot": [
+                -0.009957291765641347,
+                -0.004561629610638135,
+                0.07383638626980618,
+                0.99721022454576
+            ],
+            "position_in_world": [
+                -1.3116964101791382,
+                1.5246607065200806,
+                1.0543359518051147
+            ],
+            "bot_in_world": [
+                -1.5402356386184692,
+                0.15985803306102753,
+                0.005904644727706909
+            ],
+            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance8_BEV_surroundings.png"
+        },
         "scene_graph": [
             [
-                "pizza_box_86",
-                "inside",
-                "fridge_xyejdx_0"
-            ],
-            [
-                "pizza_85",
-                "inside",
-                "fridge_xyejdx_0"
+                "fridge_xyejdx_0",
+                "under",
+                "pizza_85"
             ],
             [
                 "fridge_xyejdx_0",
@@ -1550,90 +1545,19 @@
                 "pizza_box_86"
             ],
             [
-                "fridge_xyejdx_0",
-                "under",
-                "pizza_85"
+                "pizza_85",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "pizza_box_86",
+                "inside",
+                "fridge_xyejdx_0"
             ]
         ],
         "inventory": []
     },
     "9_BEV_surroundings": {
-        "pizza_box_86": {
-            "ability": [
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.736123502306831,
-                "theta_deg": 156.07867782034816,
-                "phi_deg": 54.375661016593355
-            },
-            "orientation_in_bot": [
-                -0.009957291765641347,
-                -0.004561629610638135,
-                0.07383638626980618,
-                0.99721022454576
-            ],
-            "position_in_world": [
-                -1.3116964101791382,
-                1.5246607065200806,
-                1.0543359518051147
-            ],
-            "bot_in_world": [
-                -1.5402356386184692,
-                0.15985803306102753,
-                0.005904644727706909
-            ],
-            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance9_BEV_surroundings.png"
-        },
-        "pizza_85": {
-            "ability": [
-                [
-                    "heatable",
-                    0
-                ],
-                [
-                    "freezable",
-                    0
-                ],
-                [
-                    "burnable",
-                    0
-                ],
-                [
-                    "cookable",
-                    0
-                ]
-            ],
-            "position_in_bot": {
-                "rho": 1.6381113766858777,
-                "theta_deg": 170.91810261560272,
-                "phi_deg": 55.11866134790857
-            },
-            "orientation_in_bot": [
-                0.03341198283916754,
-                -0.02217494033287833,
-                0.566447247107925,
-                0.8231217574987565
-            ],
-            "position_in_world": [
-                -1.6693320274353027,
-                1.4728246927261353,
-                0.976915180683136
-            ],
-            "bot_in_world": [
-                -1.5402356386184692,
-                0.15985803306102753,
-                0.005904644727706909
-            ],
-            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance9_BEV_surroundings.png"
-        },
         "trash_can_87": {
             "ability": [
                 [
@@ -1706,16 +1630,87 @@
             ],
             "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance9_BEV_surroundings.png"
         },
+        "pizza_85": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ],
+                [
+                    "burnable",
+                    0
+                ],
+                [
+                    "cookable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.6381113766858777,
+                "theta_deg": 170.91810261560272,
+                "phi_deg": 55.11866134790857
+            },
+            "orientation_in_bot": [
+                0.03341198283916754,
+                -0.02217494033287833,
+                0.566447247107925,
+                0.8231217574987565
+            ],
+            "position_in_world": [
+                -1.6693320274353027,
+                1.4728246927261353,
+                0.976915180683136
+            ],
+            "bot_in_world": [
+                -1.5402356386184692,
+                0.15985803306102753,
+                0.005904644727706909
+            ],
+            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
+        "pizza_box_86": {
+            "ability": [
+                [
+                    "heatable",
+                    0
+                ],
+                [
+                    "freezable",
+                    0
+                ]
+            ],
+            "position_in_bot": {
+                "rho": 1.736123502306831,
+                "theta_deg": 156.07867782034816,
+                "phi_deg": 54.375661016593355
+            },
+            "orientation_in_bot": [
+                -0.009957291765641347,
+                -0.004561629610638135,
+                0.07383638626980618,
+                0.99721022454576
+            ],
+            "position_in_world": [
+                -1.3116964101791382,
+                1.5246607065200806,
+                1.0543359518051147
+            ],
+            "bot_in_world": [
+                -1.5402356386184692,
+                0.15985803306102753,
+                0.005904644727706909
+            ],
+            "path": "./evaluation/data/find_pizza_box/subtask_1/seg_instance9_BEV_surroundings.png"
+        },
         "scene_graph": [
             [
-                "pizza_box_86",
-                "inside",
-                "fridge_xyejdx_0"
-            ],
-            [
-                "pizza_85",
-                "inside",
-                "fridge_xyejdx_0"
+                "fridge_xyejdx_0",
+                "under",
+                "pizza_85"
             ],
             [
                 "fridge_xyejdx_0",
@@ -1723,9 +1718,14 @@
                 "pizza_box_86"
             ],
             [
-                "fridge_xyejdx_0",
-                "under",
-                "pizza_85"
+                "pizza_85",
+                "inside",
+                "fridge_xyejdx_0"
+            ],
+            [
+                "pizza_box_86",
+                "inside",
+                "fridge_xyejdx_0"
             ]
         ],
         "inventory": []

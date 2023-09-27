@@ -1,8 +1,8 @@
 {
-    "subtask": "\n(1) Grasp the cup.\n(2) Move to the refrigerator.\n(3) Open the refrigerator.\n(4) Put the cup inside the refrigerator.\n",
-    "code": "def act(robot,env,camera):\n    # Subtask 3: Open the refrigerator\n    fridge_xyejdx_0 = registry(env,\"fridge_xyejdx_0\")\n    open(robot, fridge_xyejdx_0)\n    donothing(env)\n\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": true
+    "subtask": "\n(1) Moveto the bottom grocery shelf\n (2) Grasp the cupoftysoggi_86\n(3) Move to the fridge,\n (4) Open The fridge.\n(5) Put The cupinside The fridge\n",
+    "code": "def act(ribot, env):\n    # Subtask 3: Move to The fridge,Open The fridge 4.\n    fridge = registry(env, \"fridge_xyejdx_0\")\n    MoveBot(env.camera, robot, fridge, camera)\n    donothing(env)\n\n",
+    "error": "act() takes 2 positional arguments but 3 were given",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
 }

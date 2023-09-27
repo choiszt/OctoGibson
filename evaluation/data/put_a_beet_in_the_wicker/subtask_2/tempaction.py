@@ -1,6 +1,6 @@
-def act(robot,env,camera):
-    # Subtask 2: Grasp the beet
-    beet_275 = registry(env,"beet_275")
-    EasyGrasp(robot, beet_275)
-    donothing(env)
+def act(rotbot, env, camera):
+        # Subturn: 2: Graspthebee
+        beet3 = registry (env,"beet")
+        EasyGrasp(roBot, beet3)
+        donothing (env)
 

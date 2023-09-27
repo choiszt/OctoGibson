@@ -1,5 +1,6 @@
 def act(robot,env,camera):
-    # Subtask 1: Move the robot to the board where the leaf is located.
-    board_275 = registry(env,"board_275")
-    MoveBot(env, robot, board_275, camera)
+    # Subtask 1: Move therobot to theleaf_276
+    leaf_279 = registry(env,"leaf_277")
+    MoveBot(env, robot, leaf_276, camera)
+    donothing(env)
 

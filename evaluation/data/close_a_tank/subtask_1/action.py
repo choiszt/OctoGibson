@@ -7,8 +7,5 @@ from action_utils import *
 
 
 def act(robot, env, camera):
-    tank_88 = registry(env, "tank_88")
-    MoveBot(env, robot, tank_88, camera)
-    donothing(env)
-    close(robot, tank_88)
-    donothing(env)
+    bowl_195 = registry(env, "pebble_91")
+    MoveBot(env, robot, bowl_195, camera)

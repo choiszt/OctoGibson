@@ -7,6 +7,6 @@ from action_utils import *
 
 
 def act(robot, env, camera):
-    carrot_178 = registry(env, "carrot_151")
-    EasyGrasp(robot, carrot_178)
+    countertop_tpuwys_2 = registry(env, "stove_rgpphy_0")
+    MoveBot(env, robot, countertop_tpuwys_2, camera)
     donothing(env)

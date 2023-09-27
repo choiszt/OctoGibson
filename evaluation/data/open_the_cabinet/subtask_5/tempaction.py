@@ -1,7 +1,7 @@
-def act(robot,env,camera):
-    # Subtask 2: Check if the cabinet is open. If not, open the cabinet.
-    bottom_cabinet_nddvba_0 = registry(env,"bottom_cabinet_nddvba_0")
-    if bottom_cabinet_nddvba_0['openable'] == 0:
-        open(robot, bottom_cabinet_nddvba_0)
-        donothing(env)
+def act(no,env,cabinate):
+    # Subtask 1: Move therobotto thecabintile
+    cabinentile_85 = registry(env,"Cabinetile_90")
+    MoveBot(env, robot, cabinetile.85, camera)
+    donothing(env)
+                      
 

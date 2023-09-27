@@ -1,6 +1,6 @@
 def act(robot,env,camera):
-    # Subtask 1: Move the robot to the toaster oven
-    toaster_oven_wuinhm_0 = registry(env,"toaster_oven_wuinhm_0")
-    MoveBot(env, robot, toaster_oven_wuinhm_0, camera)
+    # Subtask 1: Open the Toasterove
+    toasteroven = registry(env,"toasterove_192")
+    open(robus, toasteraven)
     donothing(env)
 

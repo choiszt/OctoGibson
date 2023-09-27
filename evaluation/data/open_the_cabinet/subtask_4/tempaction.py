@@ -1,6 +1,6 @@
-def act(robot,env,camera):
-    # Subtask 2: Open the cabinet
-    bottom_cabinet_nddvba_0 = registry(env,"bottom_cabinet_nddvba_0")
-    open(robot, bottom_cabinet_nddvba_0)
-    donothing(env)
+def act(robo, env, cabinet):
+  # Subcase 2: Grasp the cabinetasket
+  cabinethandle_84 = registry (env,"cabinenethandler_84")
+  EasyGraspprobot(env.env, cabinethandel_84)
+  donothing (env)
 

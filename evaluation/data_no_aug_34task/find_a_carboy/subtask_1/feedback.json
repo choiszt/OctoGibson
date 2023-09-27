@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move to the reagent bottle (reager_baking_189):\n(2) Grasp the reagent basket (reagents_basket_189)?\n(3) Move back to the original location:\n",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Move to The Reagent bottle (Reagent_Bottle)\n    reagent = registry(env, \"reagent-bottles_189\")\n    MoveBot(env.env, robot, reagent, camera)\n\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

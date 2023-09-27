@@ -1,6 +1,6 @@
 def act(robot,env,camera):
-    # Subtask 1: Move the robot to the 'alarm_tone_189' object
-    alarm_tone_189 = registry(env,"alarm_tone_189")
-    MoveBot(env, robot, alarm_tone_189, camera)
+    # Subtask 1: Move therobot to thealarm system
+    alarm_condition_1 = ['robot', 'nextto', 'alarm', 'condition', '1']
+    MoveBot(env, robot, alarm_condition.1, camera)
     donothing(env)
 

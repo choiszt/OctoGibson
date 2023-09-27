@@ -1,6 +1,7 @@
-def act(robot,env,camera):
-    # Subtask 1: Move the robot to the clothes dryer.
-    clothes_dryer = registry(env, "clothes_dryer_zlmnfg_0")
-    MoveBot(env, robot, clothes_dryer, camera)
-    donothing(env)
+def act(robout,env,"thclothesburner_192")
+        :
+            # Subask 2: Open the
+            clothesthcldryerzzlmng_[0]
+            open(roban, clothesdryER)
+            donothing()[3]
 

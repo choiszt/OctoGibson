@@ -1,8 +1,8 @@
 {
-    "subtask": "\n(1) Move the robot to the cabinet.\n(2) Open the cabinet.",
-    "code": "def act(robot,env,camera):\n    # Subtask 2: Open the cabinet\n    bottom_cabinet_nddvba_0 = registry(env,\"bottom_cabinet_nddvba_0\")\n    open(robot, bottom_cabinet_nddvba_0)\n    donothing(env)\n\n",
-    "error": "the bottom_cabinet_qacthv_0 has been opened! Please pay attention to the states of Observed Objects!!",
-    "critic": "fail",
-    "reset": true,
+    "subtask": "\n( 1) Move The robot to The cabinet\n (2) open The cabinet (Donothing) ",
+    "code": "def act(robbot, env, camera):\n        # Subask 2: Open The cabinet \n        cabinerask_98 = registry (env,\"cabinetask_1998\")\n        open(robinbot, cabinerask)\n        donothing (env)\n                \n\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
     "main_succeed": false
 }

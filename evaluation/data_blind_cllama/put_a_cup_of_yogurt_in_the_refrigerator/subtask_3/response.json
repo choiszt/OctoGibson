@@ -1,0 +1,10 @@
+{
+    "response": {
+        "explain": " The previous action code successfully moved the robot to the refrigerator. The next step is to open the refrigerator.",
+        "subtask": "\n(1) Grasp the cup.\n(2) Move to the refrigerator.\n(3) Open the refrigerator.\n(4) Put the cup inside the refrigerator.\n",
+        "code": "def act(robot,env,camera):\n    # Subtask 3: Open the refrigerator\n    fridge_xyejdx_0 = registry(env,\"fridge_xyejdx_0\")\n    open(robot, fridge_xyejdx_0)\n    donothing(env)\n\n",
+        "inventory": null,
+        "obj_2": null,
+        "obj_3": null
+    }
+}

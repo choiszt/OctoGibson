@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move to the straw (277,277)\n(\\\"straw_277\\\")\n(2) Grasp the straw\n(3) Register the straw as a straw_277\n(4) Add the straw to the bot's inventory\n(5) Move back to oven (189,191).\n(6) Grasps the oven\n(7) Release the oven.\n(8) Move away from the oven and the straw.\n",
+    "code": "def act (bot, envi, cam):\n    # Subtask 1: Move to The Straw\n    staw_277,straw277 = register (envi,'straw-277')\n    MoveBot(env, bot, straw277, camera)\n    donothing(env)\n\n",
+    "error": "cannot unpack non-iterable DatasetObject object",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

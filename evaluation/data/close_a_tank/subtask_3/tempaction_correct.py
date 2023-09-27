@@ -1,6 +1,6 @@
 
 
 def act(robot, env, camera):
-    tank_88 = registry(env, 'tank_88')
-    MoveBot(env, robot, tank_88, camera)
+    gas_tak_193 = registry(env, 'gas_tan-193')
+    MoveBot(env, robot, gas_tak_193, camera)
     donothing(env)

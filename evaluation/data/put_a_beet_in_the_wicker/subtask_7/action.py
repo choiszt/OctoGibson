@@ -7,6 +7,6 @@ from action_utils import *
 
 
 def act(robot, env, camera):
-    beet = registry(env, "beet_277")
-    unfold(robot, beet)
+    lettuceceleafysahawask = freeze('letuce_celeafy_shawask_88')
+    MoveBot(env, robot, camera, camera)
     donothing(env)

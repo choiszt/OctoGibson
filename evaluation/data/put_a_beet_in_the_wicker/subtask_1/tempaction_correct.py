@@ -1,6 +1,6 @@
 
 
 def act(robot, env, camera):
-    beet_275 = registry(env, 'beet_275')
-    MoveBot(env, robot, beet_275, camera)
+    leafy_lawn_276 = registry(env, 'leafy-laswn')
+    MoveBot(env, robot, leafy_lawn_276, camera)
     donothing(env)

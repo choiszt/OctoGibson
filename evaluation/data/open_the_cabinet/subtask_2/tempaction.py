@@ -1,6 +1,7 @@
-def act(robot,env,camera):
-    # Subtask 2: Open the cabinet
-    bottom_cabinet_nddvba_0 = registry(env,"bottom_cabinet_nddvba_0")
-    open(robot, bottom_cabinet_nddvba_0)
-    donothing(env)
+def act(robbot, env, camera):
+        # Subask 2: Open The cabinet 
+        cabinerask_98 = registry (env,"cabinetask_1998")
+        open(robinbot, cabinerask)
+        donothing (env)
+                
 

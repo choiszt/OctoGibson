@@ -6,8 +6,7 @@ from action_list import *
 from action_utils import *
 
 
-def act(robot, env, camera):
-    leaf_277 = registry(env, "leaf_277")
-    trash_can_281 = registry(env, "trash_can_276")
-    unfold(robot, leaf_277, trash_can_281)
+def act(robot, env):
+    heat(env, 'leaflet_275')
+    MoveBot(env, robot, camera, camera)
     donothing(env)

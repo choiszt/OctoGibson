@@ -1,6 +1,6 @@
 
 
 def act(robot, env, camera):
-    cup_85 = registry(env, 'cup_85')
-    EasyGrasp(robot, cup_85)
+    bottom_grocery_shelf = registry(env, 'bottom_cycling_groove_86')
+    MoveBot(env, robot, bottom_grocery_shelf, camera)
     donothing(env)

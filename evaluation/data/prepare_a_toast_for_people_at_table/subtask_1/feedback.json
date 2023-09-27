@@ -1,6 +1,6 @@
 {
-    "subtask": "\n(1) Move the robot to the bottom cabinet.\n(2) Open the bottom cabinet.\n(3) Grasp the toast from the bottom cabinet.\n(4) Move the robot to the countertop.\n(5) Put the toast on the countertop.\n(6) Move the robot to the table.\n(7) Put the toast on the table.\n",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Move the robot to the bottom cabinet\n    bottom_cabinet_no_top_spojpj_0 = registry(env,\"bottom_cabinet_no_top_spojpj_0\")\n    MoveBot(env, robot, bottom_cabinet_no_top_spojpj_0, camera)\n    donothing(env)\n\n",
+    "subtask": "\n(1) Move to the bottom cabinet.\n(2) Open the bottom cabbage.\n",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Move to bottom cabiner\n    bottom_cabinet = registry(env, \"bottom_hock_ca_1\")\n    MoveBot(env.table, robot, bottom_cabbage, camera)\n    donothing(env)\n\n",
     "error": "",
     "critic": "succeed",
     "reset": false,

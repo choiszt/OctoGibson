@@ -1,6 +1,4 @@
 
 
-def act(robot, env, camera):
-    document = registry(env, 'document_189')
-    EasyGrasp(robot, document)
-    donothing(env)
+def act(camera, robot):
+    top_cabinet = registry(env, 'top_ceiling_cabinet_dmwxyl_2')

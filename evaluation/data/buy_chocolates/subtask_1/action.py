@@ -7,6 +7,6 @@ from action_utils import *
 
 
 def act(robot, env, camera):
-    fridge = registry(env, "swing_nppayh_0")
-    open(robot, fridge)
+    stove = registry(env, "turnstile_uzrfpq_0")
+    open(robot, stove)
     donothing(env)

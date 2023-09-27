@@ -1,8 +1,5 @@
 
 
 def act(robot, env, camera):
-    tank_88 = registry(env, 'tank_88')
-    MoveBot(env, robot, tank_88, camera)
-    donothing(env)
-    close(robot, tank_88)
-    donothing(env)
+    bowl_195 = registry(env, 'bowl-195')
+    MoveBot(env, robot, bowl_195, camera)

@@ -1,6 +1,6 @@
 
 
-def act(robot, env, camera):
-    bottom_cabinet_nddvba_0 = registry(env, 'bottom_cabinet_nddvba_0')
-    open(robot, bottom_cabinet_nddvba_0)
+def act(robot, env, cabinethandle_84):
+    cabinethandle_84 = registry(env, 'cabinenethandler_84')
+    EasyGrasp(env, cabinethandle_84)
     donothing(env)

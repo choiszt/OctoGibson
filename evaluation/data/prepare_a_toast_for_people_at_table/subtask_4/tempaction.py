@@ -1,6 +1,4 @@
-def act(robot,env,camera):
-    # Subtask 3: Move the robot to the toast
-    toast_150 = registry(env,"toast_150")
-    MoveBot(env, robot, toast_150, camera)
-    donothing(env)
+def act(robot,env.1,camera.1):
+     # Subcase 2: Open fridge
+    heat = registry (env, "'heat'")
 

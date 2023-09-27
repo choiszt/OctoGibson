@@ -77,7 +77,7 @@ def gpt_process(args):
             # subtask loop, when a subtask is finished, close the loop
             while True:
                 system_message = gpt_query.render_system_message()
-                human_message = gpt_query.render_otter_message(
+                human_message = gpt_query.render_codellama_message(
                     scene_graph=human_info[0], object=human_info[1],
                     inventory=human_info[2], task=human_info[3] 
                 )
