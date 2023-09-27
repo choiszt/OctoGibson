@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Grasp the pear.\n(2) Cook the pear.\n(3) Grasp the apple.\n(4) Put the pear on the countertop.\n(5) Cook the apple.\n(6) Find and grasp the plum.\n(7) Cook the plum.",
-    "code": "def act(robot,env,camera):\n    # Subtask 5: Cook the apple\n    apple_87 = registry(env,\"apple_87\")\n    cook(robot, apple_87)\n    donothing(env)\n",
-    "error": "State heatable of object apple_87 is not 1\nState burnable of object apple_87 is not 1\n",
-    "critic": "fail",
-    "reset": true,
-    "main_succeed": false
-}

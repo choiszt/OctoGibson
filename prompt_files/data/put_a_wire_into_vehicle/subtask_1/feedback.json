@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move the robot closer to the copper wire.",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Move the robot closer to the copper wire\n    copper_wire_282 = registry(env,\"copper_wire_282\")\n    MoveBot(env, robot, copper_wire_282, camera)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

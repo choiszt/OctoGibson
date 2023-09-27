@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Take out the bacon from the fridge.\n(2) Put the bacon on the griddle.\n(3) Heat the griddle to cook the bacon.",
-    "code": "def act(robot,env,camera):\n    # Subtask 2: Put the bacon on the griddle.\n    bacon = registry(env, \"bacon_150\")\n    griddle = registry(env, \"griddle_157\")\n    put_ontop(robot, bacon, griddle)\n    donothing(env)\n",
-    "error": "list.remove(x): x not in list",
-    "critic": "fail",
-    "reset": true,
-    "main_succeed": false
-}

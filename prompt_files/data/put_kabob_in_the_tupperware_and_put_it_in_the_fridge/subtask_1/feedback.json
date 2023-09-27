@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move to the plate.\n(2) Grasp the plate.\n(3) Move to the breakfast table.\n(4) Put the plate on the breakfast table.",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Move to the plate\n    plate_88 = registry(env,\"plate_88\")\n    MoveBot(env, robot, plate_88, camera)\n    donothing(env)\n    \n    # Subtask 2: Grasp the plate\n    EasyGrasp(robot, plate_88)\n    donothing(env)\n    \n    # Subtask 3: Move to the breakfast table\n    breakfast_table_idnnmz_0 = registry(env,\"breakfast_table_idnnmz_0\")\n    MoveBot(env, robot, breakfast_table_idnnmz_0, camera)\n    donothing(env)\n    \n    # Subtask 4: Put the plate on the breakfast table\n    put_ontop(robot, plate_88, breakfast_table_idnnmz_0)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

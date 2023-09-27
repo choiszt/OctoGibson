@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move the robot to the bottom cabinet.\n(2) Look inside the bottom cabinet to find the teaspoon and the bowl.\n(3) Grasp the teaspoon.\n(4) Grasp the bowl.\n(5) Put the teaspoon in the bowl.",
-    "code": "def act(robot,env,camera):\n    # Subtask 3: Grasp the teaspoon\n    teaspoon = registry(env, \"teaspoon\")\n    EasyGrasp(robot, teaspoon)\n    donothing(env)\n",
-    "error": "'NoneType' object has no attribute 'get_position'",
-    "critic": "fail",
-    "reset": true,
-    "main_succeed": false
-}

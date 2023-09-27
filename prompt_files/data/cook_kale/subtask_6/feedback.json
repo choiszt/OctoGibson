@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Open the oven\n(2) Grasp the kale\n(3) Put the kale into the saucepot\n(4) Put the saucepot into the oven\n(5) Close the oven\n(6) Turn on the oven to cook the kale",
-    "code": "def act(robot,env,camera):\n    # Subtask 3: Put the kale into the saucepot\n    kale = registry(env,\"kale_85\")\n    saucepot = registry(env,\"saucepot_87\")\n    EasyGrasp(robot, kale)\n    donothing(env)\n    put_inside(robot, kale, saucepot)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

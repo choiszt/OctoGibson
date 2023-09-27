@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move the robot to the stove.\n(2) Grasp the oyster from the stove.\n(3) Find and move to a countertop.\n(4) Put the oyster on the countertop.\n(5) Find and move to the fridge.\n(6) Open the fridge.\n(7) Check if the stockpot is inside the fridge.\n(8) Grasp the stockpot.\n(9) Move back to the countertop.\n(10) Put the stockpot on the countertop.\n(11) Put the oyster inside the stockpot.\n(12) Move back to the stove.\n(13) Put the stockpot on the stove.\n(14) Cook the oyster.",
-    "code": "def act(robot,env,camera):\n    # Subtask 5: Find and move to the fridge\n    fridge = registry(env, \"fridge_dszchb_0\")\n    MoveBot(env, robot, fridge, camera)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

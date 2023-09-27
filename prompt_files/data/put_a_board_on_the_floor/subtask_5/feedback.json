@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Grasp the leaf from the board.\n(2) Drop the leaf on the floor.\n(3) Grasp the board.\n(4) Put the board on the floor.",
-    "code": "def act(robot, env, camera):\n    # Subtask 2: Drop the leaf on the floor\n    leaf_276 = registry(env, \"leaf_276\")\n    drop(robot, leaf_276)\n    donothing(env)\n",
-    "error": "name 'drop' is not defined",
-    "critic": "fail",
-    "reset": true,
-    "main_succeed": false
-}

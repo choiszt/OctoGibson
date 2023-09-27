@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move to the calculator.\n(2) Grasp the calculator.\n(3) Move to the notebook.\n(4) Put the calculator on the notebook.\n(5) Move to the money.\n(6) Grasp the money.\n(7) Move to the notebook.\n(8) Put the money on the notebook.",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Move to the calculator\n    calculator_145 = registry(env,\"calculator_145\")\n    MoveBot(env, robot, calculator_145, camera)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

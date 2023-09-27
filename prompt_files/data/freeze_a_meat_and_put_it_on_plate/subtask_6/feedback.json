@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move the robot to the fridge.\n(2) Take the pork chop out of the fridge.\n(3) Freeze the pork chop.\n(4) Move the robot to the countertop.\n(5) Take a plate from the countertop.\n(6) Put the frozen pork chop on the plate.",
-    "code": "def act(robot,env,camera):\n    # Subtask 4: Move the robot to the countertop\n    countertop = registry(env, \"countertop_tpuwys_6\")\n    MoveBot(env, robot, countertop, camera)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

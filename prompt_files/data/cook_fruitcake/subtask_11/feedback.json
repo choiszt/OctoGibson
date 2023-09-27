@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move the robot to the oven.\n(2) Take the fruitcake out of the oven.\n(3) Cook the fruitcake.\n(4) Turn off the oven.",
-    "code": "def act(robot,env,camera):\n    # Subtask 3: Cook the fruitcake\n    fruitcake_188 = registry(env,\"fruitcake_188\")\n    cook(robot, fruitcake_188)\n    donothing(env)\n",
-    "error": "State cookable of object fruitcake_188 is not 0\n",
-    "critic": "fail",
-    "reset": true,
-    "main_succeed": false
-}

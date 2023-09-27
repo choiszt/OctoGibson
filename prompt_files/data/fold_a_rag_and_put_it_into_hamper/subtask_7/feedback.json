@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Turn on the clothes dryer.\n(2) Grasp the rag.\n(3) Move to the hamper.\n(4) Put the rag into the hamper.",
-    "code": "def act(robot,env,camera):\n    # Subtask 4: Put the rag into the hamper\n    rag = registry(env, \"rag_194\")\n    hamper = registry(env, \"hamper_188\")\n    put_ontop(robot, rag, hamper)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

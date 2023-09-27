@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Grasp the pear.\n(2) Cook the pear.\n(3) Grasp the apple.\n(4) Cook the apple.\n(5) Find and grasp the plum.\n(6) Cook the plum.",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Grasp the pear\n    pear_86 = registry(env,\"pear_86\")\n    EasyGrasp(robot, pear_86)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

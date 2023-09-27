@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move to the fridge\n(2) Open the fridge\n(3) Take out the prawn from the fridge\n(4) Take out the butter from the fridge\n(5) Move to the stove\n(6) Cook the prawn\n(7) Move to the plate\n(8) Place the cooked prawn on the plate\n(9) Place the butter on the plate",
-    "code": "def act(robot,env,camera):\n    # Subtask 3: Take out the prawn from the fridge\n    shrimp = registry(env,\"shrimp_201\")\n    EasyGrasp(robot, shrimp)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

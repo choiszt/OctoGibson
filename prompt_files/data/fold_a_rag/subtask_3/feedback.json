@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move the robot to the clothes dryer.\n(2) Take the rag out of the clothes dryer.\n(3) Fold the rag.",
-    "code": "def act(robot,env,camera):\n    # Subtask 3: Fold the rag\n    rag_194 = registry(env,\"rag_194\")\n    fold(robot, rag_194)\n    donothing(env)\n",
-    "error": "Wrong state or operation ('foldable', 1)",
-    "critic": "fail",
-    "reset": true,
-    "main_succeed": false
-}

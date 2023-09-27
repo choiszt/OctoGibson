@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move the robot to the wallet.\n(2) Grasp the wallet.\n(3) Move the robot to the backpack.\n(4) Put the wallet inside the backpack.",
-    "code": "def act(robot,env,camera):\n    # Subtask 2: Grasp the wallet\n    wallet_87 = registry(env,\"wallet_87\")\n    EasyGrasp(robot, wallet_87)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

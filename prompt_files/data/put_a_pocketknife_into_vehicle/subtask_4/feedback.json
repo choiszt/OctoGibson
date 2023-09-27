@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Find the pocketknife.\n(2) Grasp the pocketknife.\n(3) Find the wicker basket.\n(4) Put the pocketknife into the wicker basket.",
-    "code": "def act(robot,env,camera):\n    # Subtask 3: Find the wicker basket.\n    wicker_basket_276 = registry(env, \"wicker_basket_276\")\n    MoveBot(env, robot, wicker_basket_276, camera)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

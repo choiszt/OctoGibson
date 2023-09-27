@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move the robot closer to the copper wire.\n(2) Pick up the copper wire.",
-    "code": "def act(robot,env,camera):\n    # Subtask 2: Pick up the copper wire\n    copper_wire_282 = registry(env,\"copper_wire_282\")\n    EasyGrasp(robot, copper_wire_282)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

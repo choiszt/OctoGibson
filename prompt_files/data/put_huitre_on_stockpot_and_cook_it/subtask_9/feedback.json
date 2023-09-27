@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move the robot to the fridge.\n(2) Open the fridge.\n(3) Grasp the oyster from the fridge.\n(4) Move the robot to the stove.\n(5) Put the oyster on the stove.\n(6) Cook the oyster.",
-    "code": "def act(robot,env,camera):\n    # Subtask 6: Cook the oyster\n    stove = registry(env, \"stove_igwqpj_0\")\n    cook(robot, stove)\n    donothing(env)\n",
-    "error": "Wrong state or operation ('cookable', 1)",
-    "critic": "fail",
-    "reset": true,
-    "main_succeed": false
-}

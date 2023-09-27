@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Take out the bacon from the fridge.\n(2) Put the bacon on the griddle.\n(3) Turn on the stove to cook the bacon.",
-    "code": "def act(robot,env,camera):\n    # Subtask 2: Put the bacon on the griddle.\n    griddle = registry(env, \"griddle_157\")\n    bacon = registry(env, \"bacon_150\")\n    put_ontop(robot, bacon, griddle)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

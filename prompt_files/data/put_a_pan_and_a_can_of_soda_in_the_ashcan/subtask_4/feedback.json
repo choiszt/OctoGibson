@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Register the trash can.\n(2) Move the robot to the can of soda.\n(3) Register the can of soda.\n(4) Grasp the can of soda.\n(5) Move the robot to the trash can.\n(6) Put the can of soda into the trash can.",
-    "code": "def act(robot,env,camera):\n    # Subtask 6: Put the can of soda into the trash can\n    can_of_soda_89 = registry(env,\"can_of_soda_89\")\n    trash_can_85 = registry(env,\"trash_can_85\")\n    put_inside(robot, can_of_soda_89, trash_can_85)\n    donothing(env)\n",
-    "error": "Cannot Put Inside! robot is not within four meters of <omnigibson.objects.dataset_object.DatasetObject object at 0x7f9c5d512ad0>",
-    "critic": "fail",
-    "reset": true,
-    "main_succeed": false
-}

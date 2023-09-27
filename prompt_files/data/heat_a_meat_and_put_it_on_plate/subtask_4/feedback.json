@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Take the meat out of the fridge\n(2) Heat the meat\n(3) Put the heated meat on the plate",
-    "code": "def act(robot,env,camera):\n    # Subtask 2: Heat the meat\n    pork_chop = registry(env,\"pork_chop_188\")\n    oven = registry(env,\"oven_wuinhm_0\")\n    MoveBot(env, robot, oven, camera)\n    donothing(env)\n    put_inside(robot, pork_chop, oven)\n    donothing(env)\n    toggle_on(robot, oven)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

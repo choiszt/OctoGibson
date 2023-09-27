@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Grasp the pickle from the fridge.\n(2) Move to the breakfast table.\n(3) Put the pickle on the breakfast table.\n(4) Grasp the table knife from the breakfast table.\n(5) Put the table knife on the breakfast table.",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Grasp the pickle from the fridge\n    pickle = registry(env, \"pickle_88\")\n    EasyGrasp(robot, pickle)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move the robot to the camera.\n(2) Grasp the camera.\n(3) Move the robot to the tripod.\n(4) Put the camera on the tripod.",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Move the robot to the camera\n    digital_camera_183 = registry(env,\"digital_camera_183\")\n    camera_tripod_184 = registry(env,\"camera_tripod_184\")\n    MoveBot(env, robot, digital_camera_183, camera)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Grasp the tortilla.\n(2) Fold the tortilla.\n(3) Put the tortilla back on the plate.",
-    "code": "def act(robot, env, camera):\n    # Subtask 2: Fold the tortilla\n    tortilla_189 = registry(env, \"tortilla_189\")\n    fold(robot, tortilla_189)\n    donothing(env)\n",
-    "error": "Wrong state or operation ('foldable', 1)",
-    "critic": "fail",
-    "reset": true,
-    "main_succeed": false
-}

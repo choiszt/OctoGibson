@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Open the bottom cabinet.\n(2) Grasp a bread slice.\n(3) Move to the toaster.\n(4) Put the bread slice into the toaster.\n(5) Toggle on the toaster to cook the bread slice.",
-    "code": "def act(robot,env,camera):\n    # Subtask 4: Put the bread slice into the toaster\n    bread_slice = registry(env, \"bread_slice_86\")\n    toaster = registry(env, \"toaster_85\")\n    put_inside(robot, bread_slice, toaster)\n    donothing(env)\n",
-    "error": "Cannot Put Inside! robot is not within four meters of <omnigibson.objects.dataset_object.DatasetObject object at 0x7fbfa7f87fd0>",
-    "critic": "fail",
-    "reset": true,
-    "main_succeed": false
-}

@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Grasp the tortilla.\n(2) Cook the tortilla.\n(3) Fold the tortilla.\n(4) Put the tortilla back on the plate.",
-    "code": "def act(robot, env, camera):\n    # Subtask 2: Cook the tortilla\n    tortilla_189 = registry(env, \"tortilla_189\")\n    cook(robot, tortilla_189)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

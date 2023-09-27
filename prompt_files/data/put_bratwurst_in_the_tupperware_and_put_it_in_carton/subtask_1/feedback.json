@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Open the fridge\n(2) Find the tupperware\n(3) Grasp the bratwurst\n(4) Put the bratwurst in the tupperware\n(5) Grasp the tupperware with the bratwurst\n(6) Put the tupperware with the bratwurst in the carton",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Open the fridge\n    fridge = registry(env,\"fridge_xyejdx_0\")\n    open(robot, fridge)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

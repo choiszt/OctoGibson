@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Open the clothes dryer.\n(2) Grasp the rag.\n(3) Fold the rag.\n(4) Move to the hamper.\n(5) Put the rag into the hamper.",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Open the clothes dryer\n    clothes_dryer = registry(env, \"clothes_dryer_zlmnfg_0\")\n    open(robot, clothes_dryer)\n    donothing(env)\n",
-    "error": "<class 'omnigibson.object_states.open.Open'>",
-    "critic": "fail",
-    "reset": true,
-    "main_succeed": false
-}

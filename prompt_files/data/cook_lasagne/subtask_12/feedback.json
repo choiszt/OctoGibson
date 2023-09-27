@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Open the oven\n(2) Grasp the lasagna\n(3) Put the lasagna inside the oven\n(4) Turn on the oven\n(5) Wait for the lasagna to be cooked",
-    "code": "def act(robot,env,camera):\n    # Subtask 4: Turn on the oven\n    oven_wuinhm_0 = registry(env,\"oven_wuinhm_0\")\n    toggle_on(robot,oven_wuinhm_0)\n    donothing(env)\n",
-    "error": "State cookable of object lasagna_85 is not 1\n",
-    "critic": "fail",
-    "reset": true,
-    "main_succeed": false
-}

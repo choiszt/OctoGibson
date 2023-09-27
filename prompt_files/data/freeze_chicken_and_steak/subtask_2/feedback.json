@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Open the bottom cabinet.\n(2) Take out the chicken from the bottom cabinet.\n(3) Put the chicken in the fridge.\n(4) Take out the steak from the bottom cabinet.\n(5) Put the steak in the fridge.\n(6) Close the fridge.",
-    "code": "def act(robot,env,camera):\n    # Subtask 2: Take out the chicken from the bottom cabinet\n    chicken = registry(env, \"chicken_176\")\n    EasyGrasp(robot, chicken)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}

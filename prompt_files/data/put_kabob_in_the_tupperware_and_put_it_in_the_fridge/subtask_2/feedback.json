@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Move to the kabob.\n(2) Grasp the kabob.\n(3) Move to the tupperware.\n(4) Put the kabob in the tupperware.\n(5) Move to the fridge.\n(6) Open the fridge.\n(7) Put the tupperware in the fridge.\n(8) Close the fridge.",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Move to the kabob\n    kabob_85 = registry(env,\"kabob_85\")\n    MoveBot(env, robot, kabob_85, camera)\n    donothing(env)\n",
-    "error": "",
-    "critic": "succeed",
-    "reset": false,
-    "main_succeed": false
-}
