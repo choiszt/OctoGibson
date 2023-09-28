@@ -279,7 +279,13 @@ class Query:
             
             #CODE
             # code_str = code.split('```python\n')[1].split('```')[0]
-            code_str=code.replace("Code:\n","").replace("\\","").split("Inv")[0]
+            processed_string = code.replace('\\n', '\n')
+            processed_string = processed_string.replace('\\', '')
+            index = processed_string.find('def')         
+            code_str = processed_string[index:].split("Inv")[0]   
+            newline_index = code_str.find('\n')
+            code_str = 'def act(robot,env,camera):' + code_str[newline_index:]
+            # code_str=code.replace("Code:\n","").replace("\\","").split("Inv")[0]
             with open(os.path.join(path,"tempaction.py"),"w")as f:
                 f.write(code_str)
             auto_correct(os.path.join(path,"tempaction.py"),os.path.join(path,"tempaction_correct.py"))
