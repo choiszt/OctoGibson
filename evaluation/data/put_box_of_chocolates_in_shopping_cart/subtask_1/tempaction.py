@@ -1,6 +1,4 @@
 def act(robot,env,camera):
-    # Subtask 1: Move therobot to thebox of cocoa
-    box_fcfschoc_197 = registry(env,"box_Fcfschocol_197")
-    MoveBot(env, robot, box_fcftschoc, camera)
     donothing(env)
+    move_bot(env, robot, grocery_store_sckdal_0, cart_driveable_nlsen_1, camera)
 

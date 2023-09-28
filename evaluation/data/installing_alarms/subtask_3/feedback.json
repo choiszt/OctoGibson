@@ -1,8 +1,0 @@
-{
-    "subtask": "\n(1) Register an alarm and a ground.\n(2) Move the robot to the ground. \n ( 3) Grasp the alarm.\n (4) Move front of an alarmcondition to put it.\n",
-    "code": "def act(robot,env,camera):\n    # Subtask 2: Move therobot to theground \n    ground = environment(env, \"ground\")\n    MoveBot(env.env, robot, ground, camera)\n    donothing(env)\n\n",
-    "error": "MoveBot() missing 2 required positional arguments: 'obj' and 'camera'",
-    "critic": "fail",
-    "reset": true,
-    "main_succeed": false
-}

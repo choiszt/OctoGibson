@@ -33,7 +33,7 @@ def parse_args():
 def sim_process(args):
     try:    
         idx = args.idx
-        with open('./EVLM_Task/val_34task.json') as f: #TODO change the path
+        with open('./EVLM_Task/val_21tasksmall.json') as f: #TODO change the path
             data = json.load(f)
         EVLM_name=sorted(list(data))[idx]
         if  True:
@@ -155,7 +155,7 @@ def sim_process(args):
                             robot.visible_only=True
                             subtask = subtask
                             code = code
-                            error = error
+                            error = '' #0928 changed
                             critic = 'fail'
                             reset = True
                             break
@@ -257,7 +257,7 @@ def sim_process(args):
                                 module=importlib.import_module(f"data.{EVLM_name}.subtask_{iter_num}.action")
                                 og.log.info(f"data.{EVLM_name}.subtask_{iter_num}.action retrieve")
                                 module.act(robot,env,camera)   
-                if subtask_iter>7:
+                if subtask_iter>6:
                     #write json
                     og.log.info(f"already attempt {subtask_iter} time, it is too long!")
                     with open("./evaluation/failed_task.json","r")as f:

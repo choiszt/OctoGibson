@@ -1,8 +1,8 @@
 {
-    "subtask": "\n(3) Movetherobotto theleafontop_276ashcan_277\n(4) Put theleaf leafleaf)176) into theroBot'sInventory)183)\n",
-    "code": "def act(robbot, env, camera):\n        # Subask 3: Movetherobbottotheleafonttop_276 ashcan_279\n        leaf_275 = registry (env,\" leaf_279\")\n        MoveBot (env, bot, leafs_275, camera),\n        donothing (env)\n\n",
+    "subtask": "\n( 1) Movethe robot to thleaf. ( 2) Graspthe leaf?. ( 3) Movethhe robot tothreash can. ( 4) Putthe leaf intothe trashcan?.\n",
+    "code": "def act(robot,env,camera):\n     # Subtask 2: Graspthe leaf?\n     leaf_285 = registration(enviroiment,\"leafl_285\")\n     EasyGrasp(robt,leaf_286)\n     donothing (envirotment)\n\n",
     "error": "",
-    "critic": "succeed",
-    "reset": false,
+    "critic": "fail",
+    "reset": true,
     "main_succeed": false
 }

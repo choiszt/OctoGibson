@@ -1,6 +1,6 @@
 {
-    "subtask": "\n(1) Move the robot to theleaf_276.\n(2) Grasp theleafleaf_176.\n",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Move therobot to theleaf_276\n    leaf_279 = registry(env,\"leaf_277\")\n    MoveBot(env, robot, leaf_276, camera)\n    donothing(env)\n\n",
+    "subtask": "\n(1) Move the robot to the leaf.\n(2) Grasp the leaf?.\n(3) Movethe robot tothe trash can.\n (4) Put the leaf inthe trashcan.\n",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Move therobot to theleaf\n    leaf_275 = registry(env,\"leaf_275\")\n    MoveBot(env, robot, leaf_275, camera)\n    donothing(env)\n\n",
     "error": "",
     "critic": "succeed",
     "reset": false,

@@ -27,7 +27,7 @@ def parse_args():
 def gpt_process(args):
     
     idx = args.idx
-    with open('./EVLM_Task/val_34task.json') as f: #TODO change the path
+    with open('./EVLM_Task/val_21tasksmall.json') as f: #TODO change the path
         data = json.load(f)
     EVLM_name=sorted(list(data))[idx]
     # print(data[EVLM_name]['split'])
@@ -57,7 +57,7 @@ def gpt_process(args):
             
             # init pipeline for each subtask
             while True:
-                with open("./evaluation/finished_task.json","r")as f:
+                with open("./evaluation/failed_task.json","r")as f:
                     data = json.load(f)
                     if EVLM_name in data.keys():
                         return 0
@@ -70,7 +70,7 @@ def gpt_process(args):
                     break
             human_info = parse_json.parse_json(path=os.path.join(sub_save_path, "task1.json"))
             
-            with open("./evaluation/finished_task.json","r")as f:
+            with open("./evaluation/failed_task.json","r")as f:
                 data = json.load(f)
                 if EVLM_name in data.keys():
                     return 0
@@ -136,7 +136,7 @@ def gpt_process(args):
                     return 0
 
                 while True:
-                    with open("./evaluation/finished_task.json","r")as f:
+                    with open("./evaluation/failed_task.json","r")as f:
                         data = json.load(f)
                         if EVLM_name in data.keys():
                             return 0               
@@ -149,7 +149,7 @@ def gpt_process(args):
                     if feedbackinfo.st_size > 0:
                         break
                     
-                with open("./evaluation/finished_task.json","r")as f:
+                with open("./evaluation/failed_task.json","r")as f:
                     data = json.load(f)
                     if EVLM_name in data.keys():
                         return 0
@@ -160,16 +160,16 @@ def gpt_process(args):
                 main_task_flag = data['main_succeed']      
                 if data['critic'] == 'succeed':
                     print('Task succeed!')
-                    gpt_query.record_history(subtask=data['subtask'], code=data['code'], error=data['error'])
+                    gpt_query.record_history(subtask=data['subtask'], code=data['code'], error='')
 
                     break
                 else:
 
                     if data['reset']:
-                        gpt_query.record_history(subtask=answer['subtask'], code=answer['code'], error=data['error'])
+                        gpt_query.record_history(subtask=answer['subtask'], code=answer['code'], error='')
                         break
                     else:
-                        gpt_query.record_history(subtask=answer['subtask'], code=answer['code'], error=data['error'])
+                        gpt_query.record_history(subtask=answer['subtask'], code=answer['code'], error='')
                         break
             
 
@@ -178,7 +178,7 @@ def gpt_process(args):
             subtask_iter += 1
             
             #write json
-            if subtask_iter>7:
+            if subtask_iter>6:
                 print(f"already attempt {subtask_iter} time, it is too long!")
                 return 0
 

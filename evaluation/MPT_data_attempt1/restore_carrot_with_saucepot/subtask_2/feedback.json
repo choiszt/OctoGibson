@@ -1,0 +1,8 @@
+{
+    "subtask": "\n( 1) Open The fridge\n (2) Move to the fridge.\n (3) Grasp the carrot from the fridge,\n (4) Move To the saucepot.\n(5) Put The carrot into the saucepott.\n",
+    "code": "def act(rotbot, env, camera):\n        # Subask 2: Move to The fridge. \n        fridge= registry( env, \"carrot-151\")\n        MoveBot( environment, robot, fridge, camera)\n\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

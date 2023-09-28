@@ -7,6 +7,6 @@ from action_utils import *
 
 
 def act(robot, env, camera):
-    countertop_tpuwys_2 = registry(env, "stove_rgpphy_0")
-    MoveBot(env, robot, countertop_tpuwys_2, camera)
+    fridgesub = registry(env, "fridge_xyejdx_0")
+    open(robot, fridgesub)
     donothing(env)

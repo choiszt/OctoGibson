@@ -26,7 +26,7 @@ from action_utils import *
 
 OBJECT_TAXONOMY = ObjectTaxonomy()
 
-def EasyGrasp(robot, obj, dis_threshold=4.0):
+def EasyGrasp(robot, obj, dis_threshold=100.0):
     #Grasp the robot within the distance threshold
     robot_pos = robot.get_position()
     obj_pose = obj.get_position()
@@ -56,7 +56,7 @@ def MoveBot(env, robot,obj,camera):
             raise Exception(f"please first register them!")
         raise Exception("something went wrong! Please plan again")
 
-def EasyDrop(robot,obj1, obj2, dis_threshold=4.0):  
+def EasyDrop(robot,obj1, obj2, dis_threshold=100.0):  
     # Drop the objects within robot's hands
     obj1_pos = obj1.get_position()
     obj2_pos = obj2.get_position()
@@ -88,7 +88,7 @@ def cook(robot, obj):
     bot_pose = robot.get_position()
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
-    if dis > 4.0:
+    if dis > 100.0:
         raise Exception(f"Cannot cook! robot is not within four meters of {obj}")
     change_states(obj, 'cookable', 1)
 
@@ -96,7 +96,7 @@ def burn(robot, obj):
     bot_pose = robot.get_position()
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
-    if dis > 4.0:
+    if dis > 100.0:
         raise Exception(f"Cannot burn! robot is not within four meters of {obj}")
     change_states(obj, 'burnable', 1)
 
@@ -104,7 +104,7 @@ def freeze(robot, obj):
     bot_pose = robot.get_position()
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
-    if dis > 4.0:
+    if dis > 100.0:
         raise Exception(f"Cannot freeze! robot is not within four meters of {obj}")
     change_states(obj, 'freezable', 1)
 
@@ -112,7 +112,7 @@ def heat(robot, obj):
     bot_pose = robot.get_position()
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
-    if dis > 4.0:
+    if dis > 100.0:
         raise Exception(f"Cannot heat! robot is not within four meters of {obj}")
     change_states(obj, 'heatable', 1)
 
@@ -120,7 +120,7 @@ def open(robot, obj):
     bot_pose = robot.get_position()
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
-    if dis > 4.0:
+    if dis > 100.0:
         raise Exception(f"Cannot open! robot is not within four meters of {obj}")
     if obj.states[omnigibson.object_states.open.Open].get_value()==True:
         raise Exception(f"the {obj._name} has been opened! Please pay attention to the states of Observed Objects!!")
@@ -130,7 +130,7 @@ def close(robot, obj):
     bot_pose = robot.get_position()
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
-    if dis > 4.0:
+    if dis > 100.0:
         raise Exception(f"Cannot close! robot is not within four meters of {obj}")
     change_states(obj, 'openable', 0)
 
@@ -138,7 +138,7 @@ def fold(robot, obj):
     bot_pose = robot.get_position()
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
-    if dis > 4.0:
+    if dis > 100.0:
         raise Exception(f"Cannot fold! robot is not within four meters of {obj}")
     change_states(obj, 'foldable', 1)
 
@@ -146,7 +146,7 @@ def unfold(robot, obj):
     bot_pose = robot.get_position()
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
-    if dis > 4.0:
+    if dis > 100.0:
         raise Exception(f"Cannot unfold! robot is not within four meters of {obj}")
     change_states(obj, 'unfoldable', 1)
 
@@ -154,7 +154,7 @@ def toggle_on(robot, obj):
     bot_pose = robot.get_position()
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
-    if dis > 4.0:
+    if dis > 100.0:
         raise Exception(f"Cannot toggle on! robot is not within four meters of {obj}")
     change_states(obj, 'togglable', 1)
 
@@ -162,11 +162,11 @@ def toggle_off(robot, obj):
     bot_pose = robot.get_position()
     obj_pose = obj.get_position()
     dis = cal_dis(bot_pose, obj_pose)
-    if dis > 4.0:
+    if dis > 100.0:
         raise Exception(f"Cannot toggle off! robot is not within four meters of {obj}")
     change_states(obj, 'togglable', 0)
     
-def put_inside(robot, obj1, obj2, dis_threshold=4.0):
+def put_inside(robot, obj1, obj2, dis_threshold=100.0):
     """
     put obj1 inside obj2
     """
@@ -178,7 +178,7 @@ def put_inside(robot, obj1, obj2, dis_threshold=4.0):
         print(f"the robot put {obj1._name} inside {obj2._name},now we have:{robot.inventory}")
     else:
         raise Exception(f"Cannot Put Inside! robot is not within four meters of {obj2}")
-def put_ontop(robot, obj1, obj2, dis_threshold=4.0):
+def put_ontop(robot, obj1, obj2, dis_threshold=100.0):
     """
     put obj1 ontop obj2
     """

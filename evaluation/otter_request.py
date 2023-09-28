@@ -21,7 +21,7 @@ def image_to_base64(image_path):
         return base64.b64encode(image_file.read()).decode('utf-8')
 
 def code_llamarequest(content,image_list):
-    url = "http://172.21.25.95:5437/app/otter"
+    url = "http://172.21.25.95:5441/app/otter"
     headers = {
         "Content-Type": "application/json"
     }
@@ -41,7 +41,7 @@ def code_llamarequest(content,image_list):
 
 def otter_request(content, image_list):
     # Define the URL and headers
-    url = "http://172.21.25.95:5440/app/otter"
+    url = "http://172.21.25.95:5441/app/otter"
     headers = {
         "Content-Type": "application/json"
     }
@@ -60,7 +60,6 @@ def otter_request(content, image_list):
                     'image7': encode_image_to_base64(image_list[7]),
                     'image8': encode_image_to_base64(image_list[8]),
                     'image9': encode_image_to_base64(image_list[9]),
-
                     }
             }
         ],

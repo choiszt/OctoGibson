@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Register, move, and saucepot (oven).\n(2) Open the oven, put the saucepit on top, and close the oven after grasping the carrots.\n",
+    "code": "def act(robot,env,camera):\n    # Subtask 2: Open the Oven, Put the Saucepot on Top, and Close the Ooven after Grasping the Carrots\n    oven = registry(env, \"oven_wuinhm_0\")\n    open( robot, oven)\n    donothing(env)\n\n",
+    "error": "<class 'omnigibson.object_states.open.Open'>",
+    "critic": "fail",
+    "reset": true,
+    "main_succeed": false
+}

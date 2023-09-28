@@ -1,7 +1,6 @@
 
 
-def act(robot, env):
-    leaf_279 = registry(env, 'leaf_281')
-    MoveBot(env, robot, leaf_279, camera)
+def act(robot, env, camera):
+    trash_can_279 = registry('trshc_279')
+    MoveBot(env, robot, camera, camera)
     donothing(env)
-leaf_279

@@ -1,6 +1,6 @@
 {
-    "subtask": "\n(1) Move the robot to the countertops.\n(2) Grasp the carrot.\n",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Move therobot to thecountertops\n    countertop_tpuwys_2 = registry(env,\"countertop-tpuwiys-2\")\n    MoveBot(env, robot, countertop_tgdsyte_0, camera)\n    donothing(env)\n\n",
+    "subtask": "\n( 1) Moveto the refrigerator\n( 2) Openthe fridge\n ( 3) Graspthe carrot fromthe fridge \n ( 4) Movetothe saucepan\n ( 5) Putthe carrot insidethe saucepan",
+    "code": "def act(robot,env,camera):\n        # Subtask 2: Open the fridges\n        fridgesub = registry (env,\"fridgexyejdax_0\", \"openable\")\n        open(roott, fridgersub)\n        donothing (env)\n\n",
     "error": "",
     "critic": "succeed",
     "reset": false,

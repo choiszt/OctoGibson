@@ -1,7 +1,6 @@
-def act(brobot, env):
-    # Subtask 1: Move therostbot totheleafleaf_276
-    leaf_279 = registry(env,"leaf_281")
-    MoveBot(env, robot, leaf_209, camera)
-    donothing(env)
-_
+def act(robot,env,camera):
+    # Subtask 3: Moveherotto threashcan.
+    trash_can_279 = registration("trshc_279")
+    MoveBot(envirotment, robota, trshcan_278, cameraa)
+    donothing(envia)
 

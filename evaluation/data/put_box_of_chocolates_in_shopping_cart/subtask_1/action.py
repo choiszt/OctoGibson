@@ -7,6 +7,5 @@ from action_utils import *
 
 
 def act(robot, env, camera):
-    box_fcfschoc_197 = registry(env, "box_of_chocolates_143")
-    MoveBot(env, robot, box_fcfschoc_197, camera)
     donothing(env)
+    MoveBot(env, robot, camera, camera, camera)

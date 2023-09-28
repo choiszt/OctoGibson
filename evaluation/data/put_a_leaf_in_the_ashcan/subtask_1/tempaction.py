@@ -1,6 +1,6 @@
 def act(robot,env,camera):
-    # Subtask 1: Move therobot to theleaf_276
-    leaf_279 = registry(env,"leaf_277")
-    MoveBot(env, robot, leaf_276, camera)
+    # Subtask 1: Move therobot to theleaf
+    leaf_275 = registry(env,"leaf_275")
+    MoveBot(env, robot, leaf_275, camera)
     donothing(env)
 

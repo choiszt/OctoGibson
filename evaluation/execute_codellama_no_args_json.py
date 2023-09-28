@@ -56,7 +56,7 @@ def gpt_process(args):
             
             # init pipeline for each subtask
             while True:
-                with open("./evaluation/finished_task.json","r")as f:
+                with open("./evaluation/failed_task.json","r")as f:
                     data = json.load(f)
                     if EVLM_name in data.keys():
                         return 0
@@ -69,7 +69,7 @@ def gpt_process(args):
                     break
             human_info = parse_json.all_SG_parse_json(path=os.path.join(sub_save_path, "task1.json"))
             
-            with open("./evaluation/finished_task.json","r")as f:
+            with open("./evaluation/failed_task.json","r")as f:
                 data = json.load(f)
                 if EVLM_name in data.keys():
                     return 0
@@ -134,7 +134,7 @@ def gpt_process(args):
                 if signal==False:
                     return 0
                 while True:
-                    with open("./evaluation/finished_task.json","r")as f:
+                    with open("./evaluation/failed_task.json","r")as f:
                         data = json.load(f)
                         if EVLM_name in data.keys():
                             return 0               
@@ -147,7 +147,7 @@ def gpt_process(args):
                     if feedbackinfo.st_size > 0:
                         break
                     
-                with open("./evaluation/finished_task.json","r")as f:
+                with open("./evaluation/failed_task.json","r")as f:
                     data = json.load(f)
                     if EVLM_name in data.keys():
                         return 0
@@ -176,7 +176,7 @@ def gpt_process(args):
             subtask_iter += 1
             
             #write json
-            if subtask_iter>8:
+            if subtask_iter>6:
                 print(f"already attempt {subtask_iter} time, it is too long!")
                 return 0
 

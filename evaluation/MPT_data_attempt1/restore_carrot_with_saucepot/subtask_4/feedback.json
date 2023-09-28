@@ -1,0 +1,8 @@
+{
+    "subtask": "\n( 1) Register and move the robot to the carrot in the fridge.\n( 2) Grasp the carrot from the fridge, which is now in the robot's inventory.\n",
+    "code": "def act(robot, env, camera):\n        # Subtopask 1: Register and Move the Robot to the Carrot in the Fridge\n        carrot = registry (env, 'carrot')\n        MoveBot ( env, robot, carrot, camera)\n        donothing (env)\n\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}

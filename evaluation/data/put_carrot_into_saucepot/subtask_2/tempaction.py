@@ -1,6 +1,6 @@
 def act(robot,env,camera):
-    # Subtask 1: Move therobot to thecountertops
-    countertop_tpuwys_2 = registry(env,"countertop-tpuwiys-2")
-    MoveBot(env, robot, countertop_tgdsyte_0, camera)
-    donothing(env)
+        # Subtask 2: Open the fridges
+        fridgesub = registry (env,"fridgexyejdax_0", "openable")
+        open(roott, fridgersub)
+        donothing (env)
 

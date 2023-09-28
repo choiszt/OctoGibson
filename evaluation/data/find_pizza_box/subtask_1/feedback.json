@@ -1,8 +1,8 @@
 {
-    "subtask": "\n(1) Move the robot to the oven.\n(2) Open the oven\n(3) Grasp the baking box (the pizza box)\n(4) Move robot to close distance to the cake box\n(5) Open cake box(another pizza box?)\n(6) Check if the baking baking box is the correct pizza box\n",
-    "code": "def act(robot,env,camera):\n    # Subtask 1: Move the Robot to the Oven\n    oven_wuinhm_0 = registry(env,\"oven_ wuinhm 0\")\n    MoveBot(env, robot, oven_wuinshm_ 0, camera)\n    donothing(env)\n\n",
+    "subtask": "\n(1) Open the fridge\n(2) Check if the cheese is fresh\n(3) Close the oven\n(4) Check the oven for freshness\n(5) Open and close the cabinet\n(6) Move to the countertop\n(7) Grasp the box of pizza\n",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Open the Fridge\n    fridge = registry(env, \"fridge_xyejdx_0\")\n    open(rbot, fridge)\n    donothing(env)\n\n",
     "error": "",
     "critic": "succeed",
     "reset": false,
-    "main_succeed": false
+    "main_succeed": true
 }

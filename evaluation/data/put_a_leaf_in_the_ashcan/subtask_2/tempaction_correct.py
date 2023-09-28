@@ -1,6 +1,6 @@
 
 
 def act(robot, env, camera):
-    leaf_275 = registry(env, ' leaf_279')
-    (MoveBot(env, robot, leaf_275, camera),)
+    leaf_285 = registry(env, 'leafl_285')
+    EasyGrasp(robot, env)
     donothing(env)

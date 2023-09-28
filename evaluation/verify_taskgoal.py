@@ -2,7 +2,7 @@ import omnigibson as og
 from omnigibson import object_states
 reverse=lambda states:{value:key for key,value in states.items()}
 unary_states={object_states.Cooked:"cookable",object_states.Burnt:"burnable",object_states.Frozen:"freezable",object_states.Heated:"heatable",
-object_states.Open:"openable",object_states.ToggledOn:"togglable",object_states.Folded:"foldable",object_states.Unfolded:"unfoldable"}
+object_states.Open:"openable",object_states.ToggledOn:"toggleable",object_states.Folded:"foldable",object_states.Unfolded:"unfoldable"}
 binary__states={
     object_states.Inside: "inside",
     object_states.NextTo: "nextto",

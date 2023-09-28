@@ -1,0 +1,8 @@
+{
+    "subtask": "\n(1) Move the robot to the board where the leaf is located.\n(2) Grasp the leaf as per the first subtask.\n",
+    "code": "def act(robot,env,camera):\n    # Subtask 1: Move The Robot To The Board Where The Leaf is Located.\n    board_275 = registry(env,\"board_276\")\n    MoveBot(env, robot, board_275, camera)\n    donothing(env)\n\n",
+    "error": "",
+    "critic": "succeed",
+    "reset": false,
+    "main_succeed": false
+}
